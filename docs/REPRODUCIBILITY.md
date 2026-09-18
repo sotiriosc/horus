@@ -1,5 +1,24 @@
 # Reproducibility
 
+## Public release installation status
+
+Core commands and experiment commands were rerun successfully in the recorded
+development environment. Dependency resolution was also exercised offline in a
+virtual environment that inherited already-installed system packages. A truly
+independent clean-machine download and installation has not been completed.
+Accordingly: **Clean-machine installation not yet independently verified.**
+
+The independent-authorization commands require only Python's standard library,
+Icarus Verilog, and the RTL in this repository:
+
+```sh
+make independent-commit
+make independent-commit-followup
+```
+
+Mapped resource reproduction additionally requires Yosys/ABC and a separately
+installed compatible Sky130 liberty file; the PDK is not redistributed.
+
 Tested platform: Linux/WSL2, Python 3.10.12; GNU Make 4.3; Icarus Verilog/vvp 11.0; Yosys 0.9 (1979e0b) with ABC. The CPU tests do not require a GPU, GCC, PyTorch, Transformers, or Datasets.
 
 | Dependency group | Tested direct versions |

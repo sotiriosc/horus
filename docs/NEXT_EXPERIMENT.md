@@ -1,5 +1,11 @@
 # Proposed minimal experiment: bounded independent commit checking
 
+> **Historical status:** this document is the proposal written against the
+> verified baseline. The experiment was implemented later as a distinct
+> milestone. See `experiments/bounded_commit/` and
+> `research/bounded-independent-authorization-results.md`. The proposal text is
+> retained so the implementation is not read retrospectively into the baseline.
+
 **Not implemented or run.** Test whether two bounded local checks plus preserved source evidence can complete a small corrective transaction. This tests a necessary local mechanism, not general recursive self-improvement or absence of every global dependency.
 
 Use one existing `horus_block_skpr_repair` instance and a two-entry downstream quarantine buffer. Keep its internal `commit_valid` meaning unchanged: it proposes an output. Add a separate acceptance signal at the downstream boundary; internal commit is not external authorization.

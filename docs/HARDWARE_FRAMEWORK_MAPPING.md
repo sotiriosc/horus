@@ -1,5 +1,11 @@
 # Hardware-to-framework mapping — public-safe draft
 
+> **Development note:** this mapping identified independent downstream
+> authorization as missing from the verified baseline. A later bounded
+> experiment implemented and tested that one primitive. The complete Explorer /
+> Map / Measure / Memory / Recovery framework remains proposed; see
+> `research/ROADMAP.md` and the separate public result document.
+
 **Status: analysis and proposed experiments.** The correspondence is strongest for bounded numerical measurement, local state, and transactional replay. An arithmetic fabric, a finite-state controller, and a routing topology do not by themselves constitute an explorer or a world model. No complete five-part self-correction framework is implemented.
 
 ## Forward mapping
