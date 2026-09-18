@@ -35,9 +35,16 @@ capabilities of the original hardware baseline.
 12. Its protected single-channel campaign passed, while the separately scored
     common-mode control caused three false commits. That negative result defines
     the next diversity/trust problem.
+13. Base framework v2 froze an explicit nine-node process registry and a
+    low-bandwidth witness C before implementation.
+14. Its 57-run campaign blocked identical wrong A+B evidence whenever C
+    disagreed, with zero protected false accepts or false rejects.
+15. Identical A+B+C corruption and deliberately false registry facts each
+    caused 3/3 oracle-detected false commits. These preserved negative controls
+    define the next registry/witness trust problem.
 
 The Git history mirrors this sequence: baseline, public research context,
 experiment implementation, measured results and reproduction guidance, then
-the separately pre-registered software frameworks and their scoped results.
+the separately pre-registered v0-v2 software frameworks and their scoped results.
 The original private research repository and its history are not part of this
 repository.

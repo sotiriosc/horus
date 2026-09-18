@@ -7,7 +7,7 @@
     "experiment results, broader-fault follow-up, and reproduction guidance",
     "pre-registered bounded Explorer/Map/Measure/Memory/Recovery software framework",
     "cross-source observation-boundary implementation and measured results",
-    "frozen evidence-process provenance and orthogonal-witness experiment"
+    "evidence-process provenance and orthogonal-witness implementation and measured results"
   ],
   "files": [
     {
@@ -27,13 +27,13 @@
     },
     {
       "path": "Makefile",
-      "bytes": 800,
-      "sha256": "4962d93c0df266216ab660b17ac8d1b7d799d31b25a84dddf12f0e9e9e368857"
+      "bytes": 912,
+      "sha256": "6181a66688451423ab6ddb431d3232313c38c8c6b4a14060de1b3f156a6244e9"
     },
     {
       "path": "README.md",
-      "bytes": 9875,
-      "sha256": "e5cb89d9f317d4c48fd51a866001ed4ffdc98e4658bbef0c91f12535e2739c96"
+      "bytes": 11444,
+      "sha256": "ee60a11f20a7d6dfecbd5258563a4fb742f55fac0ee403cbc4965c7afa7d11f5"
     },
     {
       "path": "docs/EVIDENCE.md",
@@ -42,8 +42,8 @@
     },
     {
       "path": "docs/HARDWARE_FRAMEWORK_MAPPING.md",
-      "bytes": 10414,
-      "sha256": "1ade647c06995d1472dfab5674815533bd07f3a6f8fcd733f7195e01761218f7"
+      "bytes": 14416,
+      "sha256": "178636cc32ef7f6eccd44670da742fbd7859f1201285bfea649c1482bbddea29"
     },
     {
       "path": "docs/NEXT_EXPERIMENT.md",
@@ -57,13 +57,13 @@
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
-      "bytes": 3997,
-      "sha256": "8e35f3b4fe1cb0f622f99a4efb271a6220f51c4f2001b29bcad89a22828989b4"
+      "bytes": 4316,
+      "sha256": "0fab8461c5f76f5036fd4a87420795eb90fafb9f665f11881187bb40f4dc1031"
     },
     {
       "path": "docs/RESULTS.md",
-      "bytes": 2997,
-      "sha256": "4a917bd8784ccc4cf6ee84407c45df024a6861a258121ef40b7ec3665790b165"
+      "bytes": 3224,
+      "sha256": "bde103a8b306330507d1dfda3ab2cc4e0e64ed81a5abe8db3a56461b75a961f7"
     },
     {
       "path": "docs/SCALE_TRACKING.md",
@@ -164,6 +164,56 @@
       "path": "experiments/base_framework_v1/types.py",
       "bytes": 808,
       "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
+    },
+    {
+      "path": "experiments/base_framework_v2/README.md",
+      "bytes": 1154,
+      "sha256": "9d2aa6a7a6d37ee73c142c5492d4229660f3d719e6789b7915a061f5afb62221"
+    },
+    {
+      "path": "experiments/base_framework_v2/__init__.py",
+      "bytes": 64,
+      "sha256": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50"
+    },
+    {
+      "path": "experiments/base_framework_v2/campaign.py",
+      "bytes": 15995,
+      "sha256": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c"
+    },
+    {
+      "path": "experiments/base_framework_v2/framework.py",
+      "bytes": 11780,
+      "sha256": "c31478ce311a63d947f6f2de6b966e3b215e415c9d07c5e602dce015ebdfb45c"
+    },
+    {
+      "path": "experiments/base_framework_v2/registry.py",
+      "bytes": 3606,
+      "sha256": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774"
+    },
+    {
+      "path": "experiments/base_framework_v2/results.json",
+      "bytes": 2972,
+      "sha256": "1444df02ecf339d12aa3aeac844f2735748f95b57e598842e79d06ada96a7c3d"
+    },
+    {
+      "path": "experiments/base_framework_v2/run.py",
+      "bytes": 1849,
+      "sha256": "60170a2340b1495d76630661feff7fdcf193b9283231cc72aafc3aa292ec722c"
+    },
+    {
+      "path": "experiments/base_framework_v2/test_framework.py",
+      "bytes": 5573,
+      "sha256": "71287adcc3336cf7f14d375ef9b507e21b2b5ea25c6f51dc4bf0d8db0a2cc80f"
+    },
+    {
+      "path": "experiments/base_framework_v2/types.py",
+      "bytes": 825,
+      "sha256": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d"
+    },
+    {
+      "path": "experiments/base_framework_v2/witness_c.py",
+      "bytes": 1538,
+      "sha256": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
     },
     {
       "path": "experiments/bounded_commit/FOLLOWUP.md",
@@ -272,13 +322,13 @@
     },
     {
       "path": "research/DEVELOPMENT_HISTORY.md",
-      "bytes": 2613,
-      "sha256": "eb819e23e59ff9674489829b5450f4830ac6ca0778ff96aa5accede935c67016"
+      "bytes": 3088,
+      "sha256": "53c5d9412230cdf110fbc69481cd59d34f0a144fafdc85cfb2761ce17bd77e9c"
     },
     {
       "path": "research/ROADMAP.md",
-      "bytes": 6165,
-      "sha256": "61ff618ddc26d219f182f2a77511b82e18b7af3c0c43bb7ab5e5f0dbc3f54d15"
+      "bytes": 6571,
+      "sha256": "10e3f90b936ad67821ed08c0269392a20497931d64d96be679296382da6567c7"
     },
     {
       "path": "research/base-framework-v0-preregistration.md",
@@ -304,6 +354,11 @@
       "path": "research/base-framework-v2-preregistration.md",
       "bytes": 11663,
       "sha256": "0c8739c23efe2e8c465d2189a2cdf1aff60f04622a4a91468958d1dbbee0b7c7"
+    },
+    {
+      "path": "research/base-framework-v2-results.md",
+      "bytes": 10491,
+      "sha256": "c9e2d8cd97e768bf8d9875ab8870b43412c27686b36d56c11811de4776850272"
     },
     {
       "path": "research/baseline-regression-comparison.md",
@@ -958,7 +1013,7 @@
   "excluded_categories": [
     "private history, implementations, reports, prompts, tests, and research notes",
     "model weights, language corpora, caches, raw logs, mapped netlists, and PDK files",
-    "generated run artifacts other than the two approved compact experiment summaries",
+    "generated run artifacts other than the three approved compact experiment summaries",
     "Git metadata from every predecessor repository"
   ]
 }

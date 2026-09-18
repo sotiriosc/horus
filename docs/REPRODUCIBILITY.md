@@ -36,6 +36,16 @@ It runs 10 unit tests and 69 scenario runs. Its external hidden-oracle audit is
 part of the command, and its compact summary is
 `experiments/base_framework_v1/results.json`.
 
+The v2 evidence-provenance experiment uses only Python's standard library:
+
+```sh
+make base-framework-v2
+```
+
+It runs 13 unit tests and 57 scenario runs. Detailed package, registry-path,
+and hidden-oracle evidence is written outside the repository; the compact
+summary is `experiments/base_framework_v2/results.json`.
+
 Mapped resource reproduction additionally requires Yosys/ABC and a separately
 installed compatible Sky130 liberty file; the PDK is not redistributed.
 

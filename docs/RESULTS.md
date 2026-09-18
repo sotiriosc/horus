@@ -19,6 +19,7 @@ Status vocabulary: **IMPLEMENTED** describes code; **OBSERVED** describes execut
 | Independent authorization | 4,200 protected transactions and 2,700 broader-fault transactions; zero protected false accepts | `make independent-commit && make independent-commit-followup` |
 | Base framework v0 | 12 unit tests and 42 clean/failure scenario runs; zero protected false accepts, false rejects, or duplicate authorizations | `make base-framework-v0` |
 | Base framework v1 | 10 unit tests and 69 scenarios; zero protected false accepts/false rejects, plus 3 explicitly out-of-model common-mode false accepts | `make base-framework-v1` |
+| Base framework v2 | 13 unit tests and 57 scenarios; zero protected false accepts/false rejects; 12/12 A+B common-corruption rounds blocked; 3 A+B+C and 3 corrupt-registry trust-root false accepts | `make base-framework-v2` |
 
 These observations are specific to the code, seeds, tolerances, tools and library described in [reproducibility](REPRODUCIBILITY.md). Area measurements are pre-timing; they do not establish dynamic power, clock rate or full-system efficiency.
 

@@ -1,4 +1,45 @@
-# Hardware-to-framework mapping after base framework v1
+# Hardware-to-framework mapping after base framework v2
+
+## V2 evidence-package boundary
+
+Base framework v2 is IMPLEMENTED in bounded software. Every v2 RTL item below
+is PROPOSED; none was implemented, synthesized, timed, placed, or optimized.
+
+| V2 function | Existing Horus primitive | Possible RTL primitive | New required state | Authority boundary | Evidence boundary |
+|---|---|---|---|---|---|
+| Process registry | Static configuration and protected-record descriptors | Nine-entry read-only dependency ROM with version | 9 fixed nodes; process, parent, domain, type, role | Supplies facts only; cannot authorize | Must be protected from candidate writes and version-bound |
+| Source-pair validator | Bounded identity/numerical checker | A/B provenance and equality comparator | Two full receipts per round | Produces pair-valid input only | Registered ports, epoch, transaction, sequence, observation IDs |
+| Witness generator/interface | World-side consequence/status interface | Separate four-bit transition-relation adapter | One code plus identity per round | Produces data only | Must not derive from A/B or repaired candidate |
+| Witness checker | Small integer specification comparator | Encode A/B claim and compare four-bit C | One comparison result | Cannot authorize alone | Binds C to exact epoch, transaction, sequence, and process |
+| Package assembler | Quarantine/association buffers | Three-slot A/B/C join keyed by transaction | 3 items; 1 active package | Withholds inherited v1 interface until complete | Retains two observation IDs, witness ID, path triple, registry version |
+| Declared separation validator | Identity/fault-domain checking pattern | Small ancestor/domain walk or precomputed compatibility matrix | Fixed nine-node relation state | Supplies separation grant only | Rejects registered shared/derived paths; cannot find undeclared causes |
+| Quarantine | Existing two-entry quarantine | One-package quarantine record | 1 transaction | Blocks Map/Memory/continuation | Preserves the complete disputed package identity |
+| Re-observation controller | Replay FSM/backpressure | One retry-used bit and sequence increment | 1 retry; 2 rounds | Requests fresh evidence only | Same transaction/action with fresh sequence and item identities |
+| Authorization gate | Protected-source commit gate | Join of package, Measure, state, Memory, and continuation grants | 8 package decisions aligned with 8 pair/Memory records | Sole complete-package admission to commit path | Atomic identity-preserving package/pair/Memory rotation |
+
+```text
+registered A ─┐
+registered B ─┼→ package assembler → provenance + declared-separation gate ─┐
+witness C ────┘                                                            │
+registry ROM ───────────────────────────────────────────────────────────────┘
+                    disagreement → quarantine → one re-observation → stop
+                                               │ authorized package
+                                               ▼
+                              unchanged v1 Measure/state/Memory gates
+                                               │
+                                      atomic commit/continue
+```
+
+The four-bit witness is smaller than a full third receipt, but its independence
+is architectural, not implied by width. The package trace is observational and
+may later be packed or exported. The active transaction identity, registry
+version, required receipts, witness relation, and decision grants cannot be
+sampled away without changing the tested authorization predicate.
+
+The two negative controls define the hardware trust boundary. Identical wrong
+A+B+C relations passed in 3/3 runs, and a false registry passed derived B/C in
+3/3 runs. Physical implementation would need separately tested protection for
+the registry and witness path before claiming more than declared separation.
 
 ## V1 cross-source observation boundary
 

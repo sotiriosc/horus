@@ -92,15 +92,22 @@ provenance, delayed evidence, false independence, and common-mode corruption.
 All protected single-channel criteria passed. Identical A/B corruption caused
 three out-of-model false commits detected by the hidden oracle.
 
-## Stage 7 — Establish diversity and registration evidence
+## Stage 7 — Establish process provenance and an orthogonal relation
 
-Keep two sources and the same world. Test what evidence can justify a declared
-fault-domain separation, how registration itself is protected, and whether an
-orthogonal renewed interaction can challenge agreeing source evidence. Do not
-treat Map prediction as automatically true and do not add a third source merely
-to outvote the first two.
+**Completed in v2.** The experiment kept two full sources and the same world,
+added a fixed process-dependency registry and a smaller independent witness,
+and required a complete package before the inherited gates. Correct C blocked
+the tested identical A+B corruption. Identical A+B+C corruption and a false
+registry each produced three oracle-detected false accepts.
 
-## Stage 8 — Optimize only after trust-boundary validation
+## Stage 8 — Challenge registry and witness trust roots
+
+Keep the world and policy fixed. Test a protected or renewed way to expose a
+false dependency edge or a shared A/B/C cause. Preserve proposal/authorization
+separation and use the v2 trust-root failures as mandatory negative controls.
+Do not add another vote as a substitute for evidence independence.
+
+## Stage 9 — Optimize only after trust-boundary validation
 
 After the minimal loop survives its predeclared controls and falsification
 tests, investigate smaller protected records, hashes or fingerprints, reduced
@@ -109,6 +116,6 @@ and scaling. Any optimization must re-run the independence and descendant-
 evidence controls. It must not remove the protected evidence or merge proposal
 and authorization merely to reduce measured area.
 
-This roadmap records a completed bounded software experiment and proposes its
-next trust-boundary test. It does not claim a general Explorer, world model,
-recursive self-improvement, general safety, or universal fault tolerance.
+This roadmap records completed v0-v2 bounded software experiments and proposes
+their next trust-boundary test. It does not claim a general Explorer, world
+model, recursive self-improvement, general safety, or universal fault tolerance.

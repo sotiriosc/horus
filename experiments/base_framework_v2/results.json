@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "claim": "SUPPORTED UNDER TESTED CONDITIONS: a bounded five-component framework required provenance-matched evidence from declared distinct production paths plus an independently generated orthogonal witness, and blocked the tested identical A+B corruption while C remained correct.",
+  "parent_v1_commit": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+  "implementation_commit": "1166285",
+  "seeds": [1, 2, 3],
+  "verification": {"unit_tests_run": 13, "unit_test_failures": 0, "unit_test_errors": 0},
+  "bounds": {
+    "world_states": 4, "actions": 3, "main_sources": 2, "witnesses": 1,
+    "registry_nodes": 9, "evidence_items_per_round": 3,
+    "observation_rounds": 2, "reobservations": 1,
+    "pending_transactions": 1, "memory_records": 8,
+    "pair_decisions": 8, "package_decisions": 8,
+    "recovery_attempts": 1, "episode_transitions": 12,
+    "epochs_per_scenario": 2, "package_trace_records": 24,
+    "inherited_trace_records": 24
+  },
+  "totals": {
+    "scenario_runs": 57,
+    "package_authorizations": 84,
+    "protected_false_accepts": 0,
+    "externally_observed_false_rejects": 0,
+    "duplicate_authorizations": 0,
+    "ab_disagreements": 6,
+    "witness_disagreements": 15,
+    "reobservations": 33,
+    "successful_transient_recoveries": 9,
+    "persistent_disagreement_rejections": 24,
+    "process_separation_rejections": 12,
+    "candidate_derived_rejections": 6,
+    "stale_provenance_rejections": 6,
+    "process_identity_rejections": 6,
+    "duplicate_witness_rejections": 6,
+    "ab_common_mode_attempts": 18,
+    "ab_common_mode_blocks": 12,
+    "abc_common_mode_false_accepts": 3,
+    "registry_corruption_false_accepts": 3,
+    "invalid_recovery_rejections": 3,
+    "memory_corruptions_detected": 3,
+    "measurement_corruptions_detected": 3,
+    "memory_behavior_changes": 3,
+    "max_memory_records": 8,
+    "max_pair_decisions": 8,
+    "max_package_decisions": 8,
+    "max_package_items": 3,
+    "max_package_trace_records": 24,
+    "max_inherited_trace_records": 24,
+    "max_registry_nodes": 9
+  },
+  "trust_root_controls": {
+    "abc_identical_common_corruption": "3/3 OUT_OF_MODEL_TRUST_ROOT_FALSE_ACCEPT",
+    "corrupted_registry": "3/3 OUT_OF_MODEL_TRUST_ROOT_FALSE_ACCEPT"
+  },
+  "source_sha256": {
+    "experiments/base_framework_v1/source_a.py": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e",
+    "experiments/base_framework_v1/source_b.py": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9",
+    "experiments/base_framework_v2/campaign.py": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c",
+    "experiments/base_framework_v2/framework.py": "c31478ce311a63d947f6f2de6b966e3b215e415c9d07c5e602dce015ebdfb45c",
+    "experiments/base_framework_v2/registry.py": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774",
+    "experiments/base_framework_v2/witness_c.py": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+  }
+}

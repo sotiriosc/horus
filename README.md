@@ -12,17 +12,17 @@ production-qualified processor or a general safety system.
 width-preserving MACs, tiles, routing, scale tracking, selected block
 detection/repair paths, reference models, and a fail-closed public test runner.
 
-**Experimental:** bounded independent authorization, a five-component software
-base framework, and a cross-source extension with two separately implemented
-observation channels, one bounded re-observation, explicit provenance, and
-history-dependent action selection.
+**Experimental:** bounded independent authorization and a five-component
+software framework through v2. The latest version joins two full observations
+with a smaller orthogonal witness and validates their declared production paths
+against a fixed process registry before allowing the existing commit gates.
 
-**Observed limitation:** identically corrupted A/B observations caused three
-out-of-model false accepts detected only by the hidden test oracle.
+**Observed limitation:** v2 blocked identical wrong A+B evidence while witness C
+remained correct, but identical wrong A+B+C evidence and a deliberately false
+registry each caused 3/3 out-of-model false accepts detected by the test oracle.
 
-**Proposed:** test source diversity, registration integrity, and fault-domain
-establishment while keeping the world and source count fixed. Hardware cost
-optimization remains deferred.
+**Proposed:** challenge registry integrity and shared A/B/C causes while keeping
+the world and policy fixed. Hardware cost optimization remains deferred.
 
 ## Hardware baseline
 
@@ -119,6 +119,7 @@ make independent-commit
 make independent-commit-followup
 make base-framework-v0
 make base-framework-v1
+make base-framework-v2
 ```
 
 Optional baseline numerical experiments require the packages in
@@ -188,6 +189,27 @@ the false commits. See the [v1 preregistration](research/base-framework-v1-prere
 [result report](research/base-framework-v1-results.md), and updated
 [hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md).
 
+## Base framework v2 evidence provenance
+
+V2 retains the exact v1 world, sources, policy, and five-component loop. A
+nine-node immutable registry now describes declared process dependencies, and
+an independently implemented four-bit witness supplies a different relation to
+the same transition. A complete A+B+C package must pass provenance, agreement,
+role, registry-version, and declared process-separation checks before reaching
+the inherited Measure, state, Recovery, Memory, and continuation gates.
+
+Across 57 runs, all protected criteria passed: zero protected false accepts,
+zero false rejects, zero duplicate authorizations, 9/9 transient recoveries,
+and 12/12 blocks of the tested identical A+B corruptions. Authorized Memory
+preserved the `ADVANCE → HOLD` behavior in all three clean episodes.
+
+Two separately scored controls exposed the remaining trust roots. Identical
+wrong A+B+C evidence committed falsely in 3/3 runs, and a deliberately corrupt
+registry that hid derived paths also caused 3/3 false commits. See the
+[v2 preregistration](research/base-framework-v2-preregistration.md),
+[results](research/base-framework-v2-results.md), and
+[hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md).
+
 ## Limitations
 
 - Results apply to fixed seeds, bounded schedules, explicit configurations, and
@@ -209,6 +231,9 @@ the false commits. See the [v1 preregistration](research/base-framework-v1-prere
   self-improvement, general semantic correctness, or proof of safety.
 - Distinct source names, ports, and fault-domain labels do not prove actual
   causal independence. V1's common-mode control produced false accepts.
+- V2 validates only dependencies declared in its trusted registry. It cannot
+  discover an omitted edge or a shared corruption of A, B, and C; both trusted
+  registry integrity and the witness production path remain assumptions.
 
 Project source is licensed under [CERN-OHL-S-2.0](LICENSE). Third-party tools,
 PDK files, and datasets keep their own licenses and are not redistributed. See
