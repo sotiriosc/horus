@@ -1,5 +1,5 @@
 PYTHON ?= python3
-.PHONY: test experiments synthesis check-all skpr_sim independent-commit independent-commit-followup base-framework-v0 base-framework-v1
+.PHONY: test experiments synthesis check-all skpr_sim independent-commit independent-commit-followup base-framework-v0 base-framework-v1 base-framework-v2
 
 test:
 	$(PYTHON) scripts/run_checks.py core
@@ -27,3 +27,6 @@ base-framework-v0:
 
 base-framework-v1:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) -m experiments.base_framework_v1.run
+
+base-framework-v2:
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) -m experiments.base_framework_v2.run
