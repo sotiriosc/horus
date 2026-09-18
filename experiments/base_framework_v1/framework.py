@@ -337,6 +337,7 @@ class CrossSourceFramework:
         self.measure_auditor = MeasureAuditor()
         self.state_authorizer = CrossSourceStateAuthorizer()
         self.pending: Optional[PendingTransaction] = None
+        self._prediction_at_begin: Optional[Prediction] = None
         self._requires_package = False  # enabled only by the v2 coordinator
         self._package_grant = None
         self.continuation_authorized = True
@@ -435,6 +436,7 @@ class CrossSourceFramework:
         if action not in ACTION_ORDER:
             return self._reject("Explorer proposal rejected", executed=False)
         prediction = self.map.predict(action, self.epoch, transaction_id)
+        self._prediction_at_begin = prediction
         self.pending = PendingTransaction(
             self.epoch, transaction_id, action, self.map.current.state,
             self.map.current.version, prediction,
@@ -566,17 +568,20 @@ class CrossSourceFramework:
                 return self._reject("mandatory package authorization required", executed=True)
         if self.pending is None:
             raise RuntimeError("no pending transaction")
-        expected = self.measure_auditor.expected(self.pending.prediction, decision)
+        prediction = self._prediction_at_begin
+        if prediction is None:
+            raise RuntimeError("missing pre-outcome prediction")
+        expected = self.measure_auditor.expected(prediction, decision)
         measurement = Measurement(
             decision.epoch, decision.transaction_id, decision.pair_decision_id,
             not expected if wrong_measure else expected,
         )
-        if not self.measure_auditor.verify(measurement, self.pending.prediction, decision):
+        if not self.measure_auditor.verify(measurement, prediction, decision):
             self.metrics["measurement_corruptions_detected"] += 1
-            corrected = Recovery().measurement(self.pending.prediction, decision)
+            corrected = Recovery().measurement(prediction, decision)
             if wrong_measure_recovery:
                 corrected = replace(corrected, matches=not corrected.matches)
-            if not self.measure_auditor.verify(corrected, self.pending.prediction, decision):
+            if not self.measure_auditor.verify(corrected, prediction, decision):
                 self.metrics["invalid_recovery_rejections"] += 1
                 return self._reject("Measure recovery rejected", executed=True)
             measurement = corrected
