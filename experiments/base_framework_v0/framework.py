@@ -20,6 +20,8 @@ MEMORY_LIMIT = 8
 TRACE_LIMIT = 16
 EPISODE_LIMIT = 12
 RECOVERY_ATTEMPT_LIMIT = 1
+EPOCH_LIMIT = 2
+AUTHORIZATION_RECORD_LIMIT = EPISODE_LIMIT * 2
 
 
 class AuthorityState(str, Enum):
@@ -322,7 +324,7 @@ class ActionAuthority:
 
 class StateAuthorizer:
     def __init__(self) -> None:
-        self.authorized_keys: set[tuple[int, int, int, str]] = set()
+        self.authorized_keys: set[tuple[int, int, int]] = set()
 
     @staticmethod
     def _matches(candidate: StateCandidate, evidence: Any, expected_value: int) -> bool:
@@ -340,9 +342,11 @@ class StateAuthorizer:
             return False
         if not self._matches(candidate, evidence, expected_value):
             return False
-        key = (candidate.epoch, candidate.transaction_id, candidate.observation_id, purpose)
+        key = (candidate.epoch, candidate.transaction_id, candidate.observation_id)
         if key in self.authorized_keys:
             raise RuntimeError("duplicate authorization")
+        if len(self.authorized_keys) >= AUTHORIZATION_RECORD_LIMIT:
+            raise RuntimeError("authorization record bound exceeded")
         self.authorized_keys.add(key)
         return True
 
@@ -432,6 +436,7 @@ class BaseFramework:
     def __init__(self, environment: Any, epoch: int = 1) -> None:
         self.environment = environment
         self.epoch = epoch
+        self.epochs_started = 1
         self.next_transaction_id = 1
         self.episode_steps = 0
         self.explorer = Explorer()
@@ -465,10 +470,14 @@ class BaseFramework:
     def start_epoch(self, epoch: int) -> None:
         if epoch == self.epoch:
             raise ValueError("epoch must change")
+        if self.epochs_started >= EPOCH_LIMIT:
+            raise RuntimeError("epoch bound exceeded")
         self.epoch = epoch
+        self.epochs_started += 1
         self.next_transaction_id = 1
         self.episode_steps = 0
         self.map = MapModel(self.environment.state, epoch)
+        self.state_authorizer = StateAuthorizer()
         self.continuation_authorized = True
 
     def _trace(self, transaction_id: int, action: Optional[str], status: AuthorityState, detail: str, continued: bool) -> None:
@@ -736,3 +745,7 @@ class BaseFramework:
             raise AssertionError("quarantine bound exceeded")
         if len(self.trace.records) > TRACE_LIMIT or self.episode_steps > EPISODE_LIMIT:
             raise AssertionError("trace or episode bound exceeded")
+        if len(self.state_authorizer.authorized_keys) > AUTHORIZATION_RECORD_LIMIT:
+            raise AssertionError("authorization record bound exceeded")
+        if self.epochs_started > EPOCH_LIMIT:
+            raise AssertionError("epoch bound exceeded")

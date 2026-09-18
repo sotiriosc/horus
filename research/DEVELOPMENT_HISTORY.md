@@ -25,9 +25,14 @@ capabilities of the original hardware baseline.
 8. A cost, trace, and provenance follow-up measured standalone synthesis
    probes, verified lossless trace packing from 96 to 63 bits, and documented
    the assumptions under which the local provenance tuple is sufficient.
+9. Base framework v0 froze five-component contracts and falsification criteria,
+   then implemented the smallest bounded software loop connecting Explorer,
+   Map, Measure, Memory, and Recovery.
+10. Its 42 clean/failure scenario runs passed under the declared trust model;
+    the prior RTL source and measured result files remained unchanged.
 
 The Git history mirrors this sequence: baseline, public research context,
-experiment implementation, then measured results and reproduction guidance.
+experiment implementation, measured results and reproduction guidance, then
+the separately pre-registered software base framework.
 The original private research repository and its history are not part of this
 repository.
-

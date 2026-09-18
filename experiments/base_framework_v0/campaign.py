@@ -11,7 +11,9 @@ import tempfile
 
 from experiments.base_framework_v0.environment import BoundedWorld
 from experiments.base_framework_v0.framework import (
+    AUTHORIZATION_RECORD_LIMIT,
     BaseFramework,
+    EPOCH_LIMIT,
     EPISODE_LIMIT,
     MEMORY_LIMIT,
 )
@@ -75,7 +77,7 @@ def assert_authorized_history(system: BaseFramework) -> None:
     ]
     if len(memory_keys) != len(set(memory_keys)):
         raise AssertionError("duplicate committed transaction identity")
-    authorization_transactions = [key[:3] for key in system.state_authorizer.authorized_keys]
+    authorization_transactions = list(system.state_authorizer.authorized_keys)
     if len(authorization_transactions) != len(set(authorization_transactions)):
         raise AssertionError("duplicate state authorization for a transaction")
 
@@ -245,6 +247,8 @@ def execute_campaign() -> dict:
             "recovery_attempts": 1,
             "trace_records": 16,
             "episode_transitions": EPISODE_LIMIT,
+            "epochs_per_scenario": EPOCH_LIMIT,
+            "authorization_records_per_epoch": AUTHORIZATION_RECORD_LIMIT,
         },
         "totals": totals,
         "scenarios": scenarios,

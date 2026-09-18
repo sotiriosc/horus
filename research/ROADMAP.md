@@ -1,10 +1,9 @@
-# Research roadmap: minimal grounded correction loop
+# Research roadmap: bounded correction loop
 
-The next major objective is functional validation of a minimal closed
-Explorer / Map / Measure / Memory / Recovery framework. Hardware area
-optimization is deferred until the contracts, architecture, and behavior are
-tested. The bounded independent-authorization experiment is a local primitive
-available at the Measure/Recovery boundary; it is not the complete framework.
+**Current status:** Stages 1–5 were implemented and passed in base framework v0
+under the declared bounded conditions. The frozen contracts are in
+`base-framework-v0-preregistration.md`; observed results are in
+`base-framework-v0-results.md`. Hardware area optimization remains deferred.
 
 ## Stage 1 — Define minimal contracts
 
@@ -18,9 +17,8 @@ For every component, freeze these fields before implementation:
 | Memory | Authorized outcome, provenance tuple, prior record | Bounded committed record set | Addressable consequence history | Outcome plus origin, epoch, and authorization result | Store only independently authorized records | Corrupt record, identity mismatch, or unbounded growth | Memory controller accepts only gated commits |
 | Recovery | Localized failure, protected evidence, bounded candidates | Retry/quarantine state | Repair proposal or explicit rejection | Protected source record and recovery trace | Independent identity and numerical/contract check | Invalid repair, exhausted retry, timeout, or circular evidence | Separate authorization signal controls continuation |
 
-These are starting contracts. Their precise widths, state transitions, trust
-assumptions, and falsification thresholds must be predeclared for the chosen
-environment.
+These starting contracts were specialized and frozen for the four-state v0
+environment before implementation.
 
 ## Stage 2 — Build the smallest closed loop
 
@@ -86,7 +84,15 @@ The framework experiment fails if any predeclared condition occurs, including:
 Preserve negative results and metric defects. Safe rejection is not recovery,
 and detection is not authorization.
 
-## Stage 6 — Optimize only after functional validation
+## Stage 6 — Test the trusted evidence boundary
+
+Keep the v0 world, policy, bounds, and public results fixed. Add a second
+independently implemented observation channel, then inject faults into the
+currently trusted protected receipt, source label, and authorizer inputs.
+Predeclare disagreement, stop, and recovery rules. This tests common-mode risk
+without increasing agent scope.
+
+## Stage 7 — Optimize only after trust-boundary validation
 
 After the minimal loop survives its predeclared controls and falsification
 tests, investigate smaller protected records, hashes or fingerprints, reduced
@@ -95,6 +101,6 @@ and scaling. Any optimization must re-run the independence and descendant-
 evidence controls. It must not remove the protected evidence or merge proposal
 and authorization merely to reduce measured area.
 
-This roadmap proposes a bounded research experiment. It does not claim a
-complete Explorer, world model, general recursive self-improvement, general
-safety, or universal fault tolerance.
+This roadmap records a completed bounded software experiment and proposes its
+next trust-boundary test. It does not claim a general Explorer, world model,
+recursive self-improvement, general safety, or universal fault tolerance.

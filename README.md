@@ -13,14 +13,14 @@ width-preserving MACs, tiles, routing, scale tracking, selected block
 detection/repair paths, reference models, and a fail-closed public test runner.
 
 **Experimental:** bounded independent authorization around the existing repair
-wrapper. The experiment keeps protected pre-fault evidence, quarantines a
-candidate result, checks identity and numerical content independently, and
-separates an internal commit proposal from downstream authorization.
+wrapper, followed by a software base framework connecting Explorer, Map,
+Measure, Memory, and Recovery. The framework uses a four-state environment,
+bounded protected evidence, explicit provenance and continuation authority, and
+history-dependent action selection.
 
-**Proposed:** a minimal closed Explorer / Map / Measure / Memory / Recovery
-framework. The five-part architecture is not yet fully implemented. The next
-work is functional validation in a tiny bounded environment, described in the
-[roadmap](research/ROADMAP.md), before further area optimization.
+**Proposed:** a second independently implemented observation channel and a
+common-mode fault campaign for the current protected-source/authorizer trust
+boundary. Hardware cost optimization remains deferred.
 
 ## Hardware baseline
 
@@ -115,6 +115,7 @@ python -m pip install -r requirements-test.txt
 make test
 make independent-commit
 make independent-commit-followup
+make base-framework-v0
 ```
 
 Optional baseline numerical experiments require the packages in
@@ -140,9 +141,9 @@ output directory outside the source tree is supplied. See
 [reproducibility details](docs/REPRODUCIBILITY.md) and the
 [experiment report](experiments/bounded_commit/README.md).
 
-## Research direction
+## Base framework v0
 
-The next question is whether a smallest complete bounded loop can connect:
+The implemented bounded software loop connects:
 
 - **Explorer:** chooses from a finite action set;
 - **Map:** maintains a small revisable state;
@@ -151,11 +152,19 @@ The next question is whether a smallest complete bounded loop can connect:
 - **Recovery:** restricts continuation and proposes a correction that is
   independently checked.
 
-The bounded authorization mechanism may serve at the Measure/Recovery boundary.
-It does not supply an Explorer, semantic world model, general provenance graph,
-or complete architecture. The [hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md)
-and [roadmap](research/ROADMAP.md) state the current correspondences, gaps, and
-predeclared failure criteria.
+The clean control completed 12 transitions for each of three identity seeds.
+At state 1, preserved negative consequence changed Explorer's later choice from
+`ADVANCE` to `HOLD`. Across 42 clean/failure scenario runs, the campaign
+observed zero protected false accepts, zero false rejects, and zero duplicate
+authorizations. Twenty-one recoveries were authorized and nine deliberately
+invalid recoveries were rejected. A correlated descendant-reference control
+showed false confidence in all three presentations while the protected path
+rejected their lineage.
+
+See the [pre-registration](research/base-framework-v0-preregistration.md),
+[results](research/base-framework-v0-results.md), [hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md),
+and [Dream-RSI comparison](research/dream-rsi-comparison.md). The earlier RTL
+authorization milestone remains unchanged and separately reproducible.
 
 ## Limitations
 
@@ -173,9 +182,9 @@ predeclared failure criteria.
   power, or physical protection result is claimed.
 - Clean-machine dependency installation has not been independently verified;
   the commands have been exercised in the recorded development environment.
-- The repository does not implement the complete Explorer / Map / Measure /
-  Memory / Recovery framework, general recursive self-improvement, general
-  semantic correctness, or proof of safety.
+- The complete five-component loop exists only as a bounded software research
+  prototype. The repository does not implement a general agent, recursive
+  self-improvement, general semantic correctness, or proof of safety.
 
 Project source is licensed under [CERN-OHL-S-2.0](LICENSE). Third-party tools,
 PDK files, and datasets keep their own licenses and are not redistributed. See

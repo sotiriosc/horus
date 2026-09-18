@@ -16,6 +16,8 @@ Status vocabulary: **IMPLEMENTED** describes code; **OBSERVED** describes execut
 | Block floating point | E0M6 fails tested gradient-fidelity criterion; E0M9 passes with higher multiplier area | `make experiments` |
 | MAC synthesis | Baseline top areas: 4,071.4048 versus 3,702.3008 square micrometres | `make synthesis` |
 | Block multiplier synthesis | Baseline areas: 1,848.0224 and 3,836.1792 square micrometres | `make synthesis` |
+| Independent authorization | 4,200 protected transactions and 2,700 broader-fault transactions; zero protected false accepts | `make independent-commit && make independent-commit-followup` |
+| Base framework v0 | 12 unit tests and 42 clean/failure scenario runs; zero protected false accepts, false rejects, or duplicate authorizations | `make base-framework-v0` |
 
 These observations are specific to the code, seeds, tolerances, tools and library described in [reproducibility](REPRODUCIBILITY.md). Area measurements are pre-timing; they do not establish dynamic power, clock rate or full-system efficiency.
 

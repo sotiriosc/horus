@@ -11,6 +11,7 @@ from experiments.base_framework_v0.environment import BoundedWorld
 from experiments.base_framework_v0.framework import (
     BaseFramework,
     CANDIDATE_DERIVED,
+    Explorer,
     MapModel,
     StateAuthorizer,
     StateCandidate,
@@ -43,6 +44,26 @@ class GroundAndModelTests(unittest.TestCase):
 
 
 class AuthorityBoundaryTests(unittest.TestCase):
+    def test_epoch_and_authorization_identity_are_bounded(self) -> None:
+        world = BoundedWorld()
+        system = BaseFramework(world, epoch=1)
+        snapshot = world.snapshot(1, 1)
+        candidate = StateCandidate(
+            1, 1, snapshot.observation_id, snapshot.source_identity, snapshot.state
+        )
+        self.assertTrue(
+            system.state_authorizer.authorize(
+                candidate, snapshot, snapshot.state, "first-purpose"
+            )
+        )
+        with self.assertRaisesRegex(RuntimeError, "duplicate authorization"):
+            system.state_authorizer.authorize(
+                candidate, snapshot, snapshot.state, "different-purpose"
+            )
+        system.start_epoch(2)
+        with self.assertRaisesRegex(RuntimeError, "epoch bound exceeded"):
+            system.start_epoch(3)
+
     def test_invalid_explorer_proposal_cannot_execute(self) -> None:
         world = BoundedWorld()
         system = BaseFramework(world)
@@ -108,6 +129,7 @@ class ClosedLoopTests(unittest.TestCase):
         self.assertTrue(row["memory_changed_future_behavior"])
         self.assertEqual(row["state1_actions"][0], "ADVANCE")
         self.assertIn("HOLD", row["state1_actions"][1:])
+        self.assertEqual(Explorer().choose(1, []), "ADVANCE")
         self.assertEqual(len(system.memory.records), 8)
         self.assertEqual(len(system.evidence.receipts), 8)
         self.assertEqual(system.memory.evictions, 4)

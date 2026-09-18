@@ -16,6 +16,16 @@ make independent-commit
 make independent-commit-followup
 ```
 
+The base-framework-v0 software experiment uses only Python's standard library:
+
+```sh
+make base-framework-v0
+```
+
+It runs 12 unit tests and 42 predeclared scenario runs, then writes detailed
+evidence to a new directory outside the repository. Its compact checked-in
+summary is `experiments/base_framework_v0/results.json`.
+
 Mapped resource reproduction additionally requires Yosys/ABC and a separately
 installed compatible Sky130 liberty file; the PDK is not redistributed.
 
