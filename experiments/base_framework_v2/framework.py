@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from copy import deepcopy
 from dataclasses import dataclass, replace
 from typing import Any
 
@@ -172,17 +173,45 @@ class EvidenceProvenanceFramework:
         self.package_trace.append((*identity, reason))
         self.max_package_trace = max(self.max_package_trace, len(self.package_trace))
 
-    def _audit_package_ring(self) -> None:
-        if len(self.packages) != len(self.inner.memory.records):
-            raise RuntimeError("package/Memory ring length mismatch")
-        for package, record in zip(self.packages, self.inner.memory.records):
-            if (package.epoch, package.transaction_id) != (record.epoch, record.transaction_id):
-                raise RuntimeError("package/Memory identity mismatch")
+    def _audit_package_ring(self, inner=None, packages=None) -> None:
+        inner = self.inner if inner is None else inner
+        packages = self.packages if packages is None else packages
+        if not (len(packages) == len(inner.memory.records) == len(inner.pairs.decisions)):
+            raise RuntimeError("package/Memory/pair ring length mismatch")
+        seen = set()
+        for package, record, pair in zip(packages, inner.memory.records, inner.pairs.decisions):
+            identity = (record.epoch, record.transaction_id, record.pair_decision_id)
+            if identity in seen or identity != (pair.epoch, pair.transaction_id, pair.pair_decision_id):
+                raise RuntimeError("Memory/pair slot identity mismatch")
+            seen.add(identity)
+            if (
+                (package.epoch, package.transaction_id, package.channel_sequence,
+                 package.observation_a_id, package.observation_b_id)
+                != (pair.epoch, pair.transaction_id, pair.channel_sequence,
+                    pair.observation_a_id, pair.observation_b_id)
+            ):
+                raise RuntimeError("package/pair slot identity mismatch")
 
     def begin_step(self, **kwargs: Any) -> Any:
         self._audit_package_ring()
         self.staged.clear()
-        return self.inner.begin_step(**kwargs)
+        candidate = deepcopy(self.inner)
+        result = candidate.begin_step(**kwargs)
+        if isinstance(result, StepResult):
+            self._publish_control(candidate)
+        else:
+            # Retained Memory repair is validated before it can affect Explorer
+            # or become visible. Epoch values never determine ring order.
+            self._audit_package_ring(candidate, self.packages)
+            self.inner = candidate
+            self.inner.continuation_authorized = False
+        return result
+
+    def _publish_control(self, candidate: CrossSourceFramework) -> None:
+        # Rejection/re-observation may advance control state, never authorized history.
+        for name in ("pending", "continuation_authorized", "metrics", "trace",
+                     "max_trace", "max_pending_receipts"):
+            setattr(self.inner, name, getattr(candidate, name))
 
     def start_epoch(self, epoch: int) -> None:
         self.inner.start_epoch(epoch)
@@ -248,29 +277,39 @@ class EvidenceProvenanceFramework:
             lineage_class=EXTERNAL_OBSERVATION,
             fault_domain=OBSERVATION_B,
         )
-        self.inner._package_grant = (
+        candidate = deepcopy(self.inner)
+        candidate._package_grant = (
             check.package.epoch, check.package.transaction_id,
             check.package.channel_sequence, check.package.observation_a_id,
             check.package.observation_b_id,
         )
-        partial = self.inner.submit_receipt("A", canonical_a)
-        if partial.committed:
-            raise RuntimeError("commit occurred before complete package")
-        oldest = self.packages[0] if len(self.packages) == PACKAGE_LIMIT else None
-        result = self.inner.submit_receipt(
-            "B", canonical_b, common_mode=common_mode,
-            wrong_measure=wrong_measure, candidate_value=candidate_value,
-            failed_recovery=failed_recovery,
-        )
-        self.inner._package_grant = None
-        if result.committed:
-            if oldest is not None:
-                self.packages.pop(0)
-            self.packages.append(check.package)
-            self.max_packages = max(self.max_packages, len(self.packages))
-            self._audit_package_ring()
-        self.staged.clear()
-        return result
+        try:
+            partial = candidate.submit_receipt("A", canonical_a)
+            if partial.committed:
+                raise RuntimeError("commit occurred before complete package")
+            result = candidate.submit_receipt(
+                "B", canonical_b, common_mode=common_mode,
+                wrong_measure=wrong_measure, candidate_value=candidate_value,
+                failed_recovery=failed_recovery,
+            )
+            if result.committed:
+                packages = (self.packages + [check.package])[-PACKAGE_LIMIT:]
+                self._audit_package_ring(candidate, packages)
+                candidate.assert_bounds()
+                # All checks precede publication. No callback/check runs between
+                # these assignments in this single-threaded bounded prototype.
+                candidate._package_grant = None
+                self.inner, self.packages = candidate, packages
+                self.max_packages = max(self.max_packages, len(packages))
+            else:
+                self._publish_control(candidate)
+            return result
+        except Exception:
+            self.inner._reject("transaction validation failed", executed=True)
+            raise
+        finally:
+            candidate._package_grant = None
+            self.staged.clear()
 
     def _fail_package(self, reason: str) -> StepResult:
         metric = {

@@ -392,11 +392,20 @@ class CrossSourceFramework:
         )
 
     def _recover_memory(self, wrong: bool = False) -> bool:
+        original = list(self.memory.records)
         _, corrupt = self.memory.audit(self.pairs)
         if not corrupt:
             return True
         self.metrics["memory_corruptions_detected"] += len(corrupt)
         old = corrupt[0]
+        identity = (old.epoch, old.transaction_id, old.pair_decision_id)
+        slots = [i for i, record in enumerate(original)
+                 if (record.epoch, record.transaction_id, record.pair_decision_id) == identity]
+        if len(slots) != 1 or len(original) != len(self.pairs.decisions):
+            return False
+        paired = self.pairs.decisions[slots[0]]
+        if (paired.epoch, paired.transaction_id, paired.pair_decision_id) != identity:
+            return False
         decision = self.pairs.find(old.epoch, old.transaction_id, old.pair_decision_id)
         if decision is None:
             return False
@@ -406,8 +415,8 @@ class CrossSourceFramework:
         if not self.memory.matches(candidate, decision):
             self.metrics["invalid_recovery_rejections"] += 1
             return False
-        self.memory.records.append(candidate)
-        self.memory.records.sort(key=lambda row: (row.epoch, row.transaction_id))
+        original[slots[0]] = candidate
+        self.memory.records = original
         self.memory.quarantine.clear()
         return True
 
