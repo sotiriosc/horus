@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, replace
 from typing import Any
 
-from experiments.base_framework_v1.framework import CrossSourceFramework, StepResult
+from experiments.base_framework_v1.framework import ACTION_ORDER, CrossSourceFramework, StepResult
 from experiments.base_framework_v1.types import EXTERNAL_OBSERVATION, OBSERVATION_A, OBSERVATION_B
 from experiments.base_framework_v2.registry import ProcessRegistry, normal_registry
 from experiments.base_framework_v2.types import (
@@ -51,6 +51,20 @@ class EvidencePackageAuthorizer:
             return PackageCheck(False, "evidence_type")
         if not isinstance(c, WitnessReceipt):
             return PackageCheck(False, "duplicate_witness")
+        # The relation encoding is meaningful only inside its declared domain.
+        # Reject bool/float aliases as well as out-of-range integer values.
+        for receipt in (a.receipt, b.receipt):
+            if (
+                type(receipt.pre_state) is not int or receipt.pre_state not in range(4)
+                or type(receipt.observed_next_state) is not int
+                or receipt.observed_next_state not in range(4)
+                or receipt.action not in ACTION_ORDER
+                or type(receipt.observed_consequence) is not int
+                or receipt.observed_consequence not in (-1, 0, 1)
+            ):
+                return PackageCheck(False, "numeric_domain")
+        if type(c.relation_code) is not int or c.relation_code not in range(12):
+            return PackageCheck(False, "witness_domain")
         items = (a, b, c)
         process_ids = tuple(item.process_id for item in items)
         for item, (role, evidence_type) in zip(items, self._EXPECTED):
@@ -118,6 +132,7 @@ class EvidenceProvenanceFramework:
         registry: ProcessRegistry | None = None,
     ) -> None:
         self.inner = CrossSourceFramework(initial_state, epoch)
+        self.inner._requires_package = True
         self.registry = registry or normal_registry()
         self.package_authorizer = EvidencePackageAuthorizer()
         self.packages: list[AuthorizedPackage] = []
@@ -137,7 +152,17 @@ class EvidenceProvenanceFramework:
         )}
 
     def __getattr__(self, name: str) -> Any:
-        return getattr(self.inner, name)
+        # Diagnostic data only: never delegate an inherited mutating method.
+        if name in {"map", "memory", "pairs", "pending", "epoch", "explorer",
+                    "trace", "continuation_authorized", "next_transaction_id",
+                    "episode_steps", "epochs_started", "max_trace",
+                    "max_pending_receipts"}:
+            return getattr(self.inner, name)
+        raise AttributeError(name)
+
+    def submit_receipt(self, port: str, receipt: object, **kwargs: Any) -> StepResult:
+        """Explicit fail-closed compatibility ingress; A+B cannot grant v2 authority."""
+        return self.inner._reject("mandatory package authorization required", executed=True)
 
     def _trace(self, reason: str) -> None:
         pending = self.inner.pending
@@ -168,6 +193,8 @@ class EvidenceProvenanceFramework:
     def stage(self, role: str, evidence: object) -> StepResult | None:
         if self.inner.pending is None:
             raise RuntimeError("no pending transaction")
+        if role not in ("source_a", "source_b", "witness"):
+            return self._fail_package("process_identity")
         if role in self.staged:
             return self._fail_package("duplicate_witness" if role == "witness" else "process_identity")
         self.staged[role] = evidence
@@ -221,6 +248,11 @@ class EvidenceProvenanceFramework:
             lineage_class=EXTERNAL_OBSERVATION,
             fault_domain=OBSERVATION_B,
         )
+        self.inner._package_grant = (
+            check.package.epoch, check.package.transaction_id,
+            check.package.channel_sequence, check.package.observation_a_id,
+            check.package.observation_b_id,
+        )
         partial = self.inner.submit_receipt("A", canonical_a)
         if partial.committed:
             raise RuntimeError("commit occurred before complete package")
@@ -230,6 +262,7 @@ class EvidenceProvenanceFramework:
             wrong_measure=wrong_measure, candidate_value=candidate_value,
             failed_recovery=failed_recovery,
         )
+        self.inner._package_grant = None
         if result.committed:
             if oldest is not None:
                 self.packages.pop(0)
