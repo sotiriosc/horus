@@ -1,0 +1,5 @@
+read_verilog ../rtl/blockfp_mul10.v
+synth -top blockfp_mul10
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@
