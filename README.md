@@ -21,8 +21,12 @@ against a fixed process registry before allowing the existing commit gates.
 remained correct, but identical wrong A+B+C evidence and a deliberately false
 registry each caused 3/3 out-of-model false accepts detected by the test oracle.
 
-**Proposed:** challenge registry integrity and shared A/B/C causes while keeping
-the world and policy fixed. Hardware cost optimization remains deferred.
+**Minimum-framework repair 1:** the frozen audit's three enforcement failures
+are repaired. The [repair report](research/minimum-framework-repair-1-results.md)
+records 126/126 protected passes, 109/109 direct checks, retained negative
+controls, and fresh public regressions. The minimum framework is complete for
+the declared bounded scope; architecture development stops here. Hardware cost
+optimization remains deferred.
 
 ## Hardware baseline
 
