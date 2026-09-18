@@ -1,4 +1,46 @@
-# Hardware-to-framework mapping after base framework v0
+# Hardware-to-framework mapping after base framework v1
+
+## V1 cross-source observation boundary
+
+Base framework v1 is IMPLEMENTED in software only. The table maps its new
+observation-boundary functions to existing support and possible RTL. Every new
+RTL item remains PROPOSED; none was synthesized, timed, or area-optimized.
+
+| V1 function | Existing Horus primitive | Possible RTL primitive | New bounded state | Authority boundary | Provenance boundary |
+|---|---|---|---|---|---|
+| Source A | External protected-record input and existing scoreboards | Table-oriented observation adapter on registered port A | One immutable receipt per round | Produces data only | Fixed A port, source ID, epoch, transaction, sequence, observation ID, domain A |
+| Source B | Separately implemented checker/specification pattern | Structurally different conditional observation adapter on registered port B | One immutable receipt per round | Produces data only | Fixed B port and equivalent B-specific identity/domain fields |
+| Pairing | Two-entry quarantine and protected-record association | Two-slot pair buffer keyed by epoch/transaction/sequence | Two receipts; one active transaction | Cannot authorize from one slot | Both registered ports, distinct observation IDs, equal transaction/action/pre-state |
+| Disagreement detector | Comparators in bounded commit gate | Fieldwise next-state/consequence and provenance comparator | One disagreement code | Requests quarantine/re-observation; cannot select a source | Preserves both original receipt identities |
+| Quarantine | Existing bounded commit quarantine storage | One-transaction dual-receipt quarantine | One transaction | Blocks Map/Memory commit and continuation | Exact disputed pair and round identity |
+| Re-observation control | Replay FSM and valid/ready backpressure | One-bit retry-used flag plus sequence increment and stop state | One attempt, two rounds total | May request observations; cannot fabricate or accept them | Same epoch/transaction/action with fresh sequence/observation IDs |
+| Cross-source authorizer | Independent identity/numerical checker pattern | Registered-port, lineage/domain, provenance, and agreement gate | One pair-decision identity; at most 24 authorization identities/epoch | Sole pair authorization grant | Accepts only registered A+B, declared distinct domains, external lineage, exact pair match |
+| Memory commit gate | Protected-source commit gate and bounded storage | Atomic join of pair grant, Measure audit, state grant, and eight-entry paired rings | Eight Memory records + eight pair decisions | Commits only after every grant | Stores pair decision/source identities with authorized consequence |
+
+The runtime path is:
+
+```text
+registered A receipt ─┐
+                      ├→ pair/provenance/independence gate
+registered B receipt ─┘             │
+                           disagreement → one re-observation → stop if unresolved
+                                     │ authorized pair
+                                     ▼
+Map prediction → Measure audit → candidate/quarantine → Recovery proposal
+                                     │
+                          state + Memory authorizers
+                                     │
+                         atomic commit and continuation
+```
+
+The common-mode control demonstrates the boundary of this mapping. Identically
+wrong A and B receipts passed the structural pair gate. During recovery, the
+pair outweighed the disagreeing Map prediction and caused a false commit. Port
+duplication, extra comparators, or metadata alone do not establish genuine
+fault-domain diversity. A hardware implementation must retain this limitation
+until a separate diversity/trust experiment supplies a tested rule.
+
+## V0 five-component mapping
 
 **Status:** the complete five-component loop is IMPLEMENTED in bounded software.
 The independent-authorization primitive is separately IMPLEMENTED in RTL. The

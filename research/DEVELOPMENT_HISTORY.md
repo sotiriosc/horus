@@ -30,9 +30,14 @@ capabilities of the original hardware baseline.
    Map, Measure, Memory, and Recovery.
 10. Its 42 clean/failure scenario runs passed under the declared trust model;
     the prior RTL source and measured result files remained unchanged.
+11. Base framework v1 replaced the single observation boundary with two
+    structurally separate registered channels and one bounded re-observation.
+12. Its protected single-channel campaign passed, while the separately scored
+    common-mode control caused three false commits. That negative result defines
+    the next diversity/trust problem.
 
 The Git history mirrors this sequence: baseline, public research context,
 experiment implementation, measured results and reproduction guidance, then
-the separately pre-registered software base framework.
+the separately pre-registered software frameworks and their scoped results.
 The original private research repository and its history are not part of this
 repository.

@@ -6,7 +6,7 @@
     "bounded independent authorization implementation",
     "experiment results, broader-fault follow-up, and reproduction guidance",
     "pre-registered bounded Explorer/Map/Measure/Memory/Recovery software framework",
-    "frozen cross-source observation-boundary experiment"
+    "cross-source observation-boundary implementation and measured results"
   ],
   "files": [
     {
@@ -26,13 +26,13 @@
     },
     {
       "path": "Makefile",
-      "bytes": 688,
-      "sha256": "db39f650c661e055083b003b2f1d9d0863b1aedac04da3eebe2a217f2d2a8551"
+      "bytes": 800,
+      "sha256": "4962d93c0df266216ab660b17ac8d1b7d799d31b25a84dddf12f0e9e9e368857"
     },
     {
       "path": "README.md",
-      "bytes": 8600,
-      "sha256": "125fb3de5fb2436d65257cfc5e8ae2bc3788c761dcbfd26e109c80547f212515"
+      "bytes": 9875,
+      "sha256": "e5cb89d9f317d4c48fd51a866001ed4ffdc98e4658bbef0c91f12535e2739c96"
     },
     {
       "path": "docs/EVIDENCE.md",
@@ -41,8 +41,8 @@
     },
     {
       "path": "docs/HARDWARE_FRAMEWORK_MAPPING.md",
-      "bytes": 6656,
-      "sha256": "a340975572f0106a8901690bbbaee3d2e5cd445eead9c423f95ef79acd6c911e"
+      "bytes": 10414,
+      "sha256": "1ade647c06995d1472dfab5674815533bd07f3a6f8fcd733f7195e01761218f7"
     },
     {
       "path": "docs/NEXT_EXPERIMENT.md",
@@ -56,13 +56,13 @@
     },
     {
       "path": "docs/REPRODUCIBILITY.md",
-      "bytes": 3714,
-      "sha256": "ccad500af9f9fac75182db60cf2139b7ec37bd9fd2fa5f885d79fe5d58dc87d6"
+      "bytes": 3997,
+      "sha256": "8e35f3b4fe1cb0f622f99a4efb271a6220f51c4f2001b29bcad89a22828989b4"
     },
     {
       "path": "docs/RESULTS.md",
-      "bytes": 2813,
-      "sha256": "6cd68df690135f1c9fa8dd26e05f7db3ac2c92248d10ab6ff78d2e9e7d7736ab"
+      "bytes": 2997,
+      "sha256": "4a917bd8784ccc4cf6ee84407c45df024a6861a258121ef40b7ec3665790b165"
     },
     {
       "path": "docs/SCALE_TRACKING.md",
@@ -108,6 +108,61 @@
       "path": "experiments/base_framework_v0/test_framework.py",
       "bytes": 7404,
       "sha256": "e434e5c4725275754e2f4de7aa25f9e9f3c36637f7666ab0ddf3670ad051c6fe"
+    },
+    {
+      "path": "experiments/base_framework_v1/README.md",
+      "bytes": 1232,
+      "sha256": "11210b4ab854b0d0bd9a7154057ab94e9e915eee9e12e552f4523f6d4030194c"
+    },
+    {
+      "path": "experiments/base_framework_v1/__init__.py",
+      "bytes": 51,
+      "sha256": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2"
+    },
+    {
+      "path": "experiments/base_framework_v1/campaign.py",
+      "bytes": 18621,
+      "sha256": "d15f3ffbd21ad928c7e469b5ae46ce8c89049349cd6d93aecf2a91734a85ef59"
+    },
+    {
+      "path": "experiments/base_framework_v1/framework.py",
+      "bytes": 26056,
+      "sha256": "edbef877e113fa1268cc8a650463ca8e794c9ab626a1227c3d5d6ac250f2c825"
+    },
+    {
+      "path": "experiments/base_framework_v1/hidden_oracle.py",
+      "bytes": 1231,
+      "sha256": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109"
+    },
+    {
+      "path": "experiments/base_framework_v1/results.json",
+      "bytes": 3828,
+      "sha256": "1f9bab743c968f6839a3c002b955085635729442acf27931fd1c37bb15f2ae12"
+    },
+    {
+      "path": "experiments/base_framework_v1/run.py",
+      "bytes": 1709,
+      "sha256": "7e1f15a01edf1c4dc48e385fd5e443b9b04b07c398cd3ee3563209d30d963566"
+    },
+    {
+      "path": "experiments/base_framework_v1/source_a.py",
+      "bytes": 1700,
+      "sha256": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e"
+    },
+    {
+      "path": "experiments/base_framework_v1/source_b.py",
+      "bytes": 1855,
+      "sha256": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9"
+    },
+    {
+      "path": "experiments/base_framework_v1/test_framework.py",
+      "bytes": 5858,
+      "sha256": "fdd3a51fb0eab94473ccba0ad918f8ce4815d87f10d4a27f5bc979137515b652"
+    },
+    {
+      "path": "experiments/base_framework_v1/types.py",
+      "bytes": 808,
+      "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
     },
     {
       "path": "experiments/bounded_commit/FOLLOWUP.md",
@@ -216,13 +271,13 @@
     },
     {
       "path": "research/DEVELOPMENT_HISTORY.md",
-      "bytes": 2245,
-      "sha256": "bcda1fb109fa991ab06ad87804caed1d1988585170c54ca2b77b129b61daf337"
+      "bytes": 2613,
+      "sha256": "eb819e23e59ff9674489829b5450f4830ac6ca0778ff96aa5accede935c67016"
     },
     {
       "path": "research/ROADMAP.md",
-      "bytes": 5726,
-      "sha256": "537fd521d840d544b96fdfa5addf5c0dba40ec644ab260721701c792eac01651"
+      "bytes": 6165,
+      "sha256": "61ff618ddc26d219f182f2a77511b82e18b7af3c0c43bb7ab5e5f0dbc3f54d15"
     },
     {
       "path": "research/base-framework-v0-preregistration.md",
@@ -238,6 +293,11 @@
       "path": "research/base-framework-v1-preregistration.md",
       "bytes": 11656,
       "sha256": "9efcba0537a7ab5fbe0313061f0adcd4dac1170b08314e2d38163b7c92462247"
+    },
+    {
+      "path": "research/base-framework-v1-results.md",
+      "bytes": 12383,
+      "sha256": "b75f5e1b1ce8f2859cfe74ad89091b9201397e5266a3b4029371042a846bc5b0"
     },
     {
       "path": "research/baseline-regression-comparison.md",

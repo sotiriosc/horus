@@ -86,13 +86,21 @@ and detection is not authorization.
 
 ## Stage 6 — Test the trusted evidence boundary
 
-Keep the v0 world, policy, bounds, and public results fixed. Add a second
-independently implemented observation channel, then inject faults into the
-currently trusted protected receipt, source label, and authorizer inputs.
-Predeclare disagreement, stop, and recovery rules. This tests common-mode risk
-without increasing agent scope.
+**Completed in v1.** The experiment kept the v0 world and loop fixed, added two
+separately implemented registered channels, and tested disagreement,
+provenance, delayed evidence, false independence, and common-mode corruption.
+All protected single-channel criteria passed. Identical A/B corruption caused
+three out-of-model false commits detected by the hidden oracle.
 
-## Stage 7 — Optimize only after trust-boundary validation
+## Stage 7 — Establish diversity and registration evidence
+
+Keep two sources and the same world. Test what evidence can justify a declared
+fault-domain separation, how registration itself is protected, and whether an
+orthogonal renewed interaction can challenge agreeing source evidence. Do not
+treat Map prediction as automatically true and do not add a third source merely
+to outvote the first two.
+
+## Stage 8 — Optimize only after trust-boundary validation
 
 After the minimal loop survives its predeclared controls and falsification
 tests, investigate smaller protected records, hashes or fingerprints, reduced

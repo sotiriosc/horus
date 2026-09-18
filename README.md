@@ -12,15 +12,17 @@ production-qualified processor or a general safety system.
 width-preserving MACs, tiles, routing, scale tracking, selected block
 detection/repair paths, reference models, and a fail-closed public test runner.
 
-**Experimental:** bounded independent authorization around the existing repair
-wrapper, followed by a software base framework connecting Explorer, Map,
-Measure, Memory, and Recovery. The framework uses a four-state environment,
-bounded protected evidence, explicit provenance and continuation authority, and
+**Experimental:** bounded independent authorization, a five-component software
+base framework, and a cross-source extension with two separately implemented
+observation channels, one bounded re-observation, explicit provenance, and
 history-dependent action selection.
 
-**Proposed:** a second independently implemented observation channel and a
-common-mode fault campaign for the current protected-source/authorizer trust
-boundary. Hardware cost optimization remains deferred.
+**Observed limitation:** identically corrupted A/B observations caused three
+out-of-model false accepts detected only by the hidden test oracle.
+
+**Proposed:** test source diversity, registration integrity, and fault-domain
+establishment while keeping the world and source count fixed. Hardware cost
+optimization remains deferred.
 
 ## Hardware baseline
 
@@ -116,6 +118,7 @@ make test
 make independent-commit
 make independent-commit-followup
 make base-framework-v0
+make base-framework-v1
 ```
 
 Optional baseline numerical experiments require the packages in
@@ -166,6 +169,25 @@ See the [pre-registration](research/base-framework-v0-preregistration.md),
 and [Dream-RSI comparison](research/dream-rsi-comparison.md). The earlier RTL
 authorization milestone remains unchanged and separately reproducible.
 
+## Base framework v1 cross-source boundary
+
+V1 keeps the v0 world, policy, Map, Measure, Memory bound, and Recovery
+structure. It replaces the single receipt with registered Source A and Source B
+paths. A partial pair cannot commit; disagreement permits one re-observation;
+persistent disagreement stops without choosing a source.
+
+Across 69 scenario runs, the protected single-channel-fault model observed zero
+false accepts, zero false rejects, and zero duplicate authorizations. Twelve
+transient/stale disagreements recovered and 30 persistent evidence failures
+stopped. Cross-source-authorized Memory retained the v0 `ADVANCE → HOLD`
+behavior in all three clean episodes.
+
+The separate common-mode control corrupted A and B identically. The runtime
+accepted all three wrong pairs during recovery, and only the hidden oracle found
+the false commits. See the [v1 preregistration](research/base-framework-v1-preregistration.md),
+[result report](research/base-framework-v1-results.md), and updated
+[hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md).
+
 ## Limitations
 
 - Results apply to fixed seeds, bounded schedules, explicit configurations, and
@@ -185,6 +207,8 @@ authorization milestone remains unchanged and separately reproducible.
 - The complete five-component loop exists only as a bounded software research
   prototype. The repository does not implement a general agent, recursive
   self-improvement, general semantic correctness, or proof of safety.
+- Distinct source names, ports, and fault-domain labels do not prove actual
+  causal independence. V1's common-mode control produced false accepts.
 
 Project source is licensed under [CERN-OHL-S-2.0](LICENSE). Third-party tools,
 PDK files, and datasets keep their own licenses and are not redistributed. See
