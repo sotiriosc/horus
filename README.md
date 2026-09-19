@@ -316,3 +316,15 @@ A/B share the receipt root and are not independent truth measurements. Historica
 regressions and the preserved old failing diagnostic remain unchanged. No new
 model calls were made. [Reproduction and compact evidence](experiments/realized_event_grounding_v0/README.md)
 state the software trust boundary and the untested model-revision question.
+
+### Contradiction revision v1 feasibility
+
+The [complete contradiction fixture](research/model-explorer-contradiction-revision-v1-feasibility-results.md)
+constructed CONTROL and SHIFT H0/H1/H2 through the unchanged realized-event repair.
+All 14 primary transactions committed correctly, including three authenticated
+contradictions, with old history and original predictions preserved. Exact replay
+and historical regressions passed; the old stationary-path failure remains intact.
+Zero model calls were made. This establishes safely constructed contradictory
+histories within the software trust root, not model revision.
+[Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1_feasibility/README.md)
+include chronological previews, provenance checks and the final feasibility criteria.
