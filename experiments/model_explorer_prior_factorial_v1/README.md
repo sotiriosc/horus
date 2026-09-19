@@ -12,6 +12,14 @@ automatic sample extension. Six observations per order cell support only narrow
 descriptive claims. Seeds are matched across surfaces, but mapping and seed are
 not independently crossed.
 
+The completed [report](../../research/model-explorer-prior-factorial-v1-results.md),
+[compact results](results.json), and [verification](verification.json) record all
+216 real calls. RETREAT lexical interference replicated in both positive targets
+and both opaque families. Value stability across the two opaque families and all
+positions passed only for +1>−1. Target C's dominance classification stayed
+unresolved; its O2 option-position effect passed a separate criterion. All requested
+replays/regressions passed. No additional inference was added.
+
 ## Reproduce without new inference
 
 ```bash

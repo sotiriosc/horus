@@ -279,3 +279,16 @@ framework and all earlier results remain unchanged.
 [Reproduction and compact evidence](experiments/model_explorer_semantic_prior_study_v0/README.md)
 cover exact replay and fresh regressions; detailed per-call evidence is retained
 outside the public tree.
+
+### Prior factorial v1
+
+The [prior factorial study](research/model-explorer-prior-factorial-v1-results.md)
+uses 216 real calls to independently cross alias mapping, option order and evidence
+order in three targeted comparisons. RETREAT lexical interference replicated in
+both positive targets and both opaque vocabularies. Verified +1>−1 value following
+was stable across both opaque families and all order cells; stability across every
+representation was not established. Target C remains unresolved under its dominance
+criteria, with a narrower O2 option-position effect supported. Integrity and all
+requested regressions passed; the framework and earlier results remain unchanged.
+[Reproduction and compact evidence](experiments/model_explorer_prior_factorial_v1/README.md)
+retain the frozen criteria and negative findings without expanding the sample.
