@@ -35,6 +35,12 @@ preregistered threshold. [Results and limits](research/model-explorer-integratio
 keep framework integrity separate from model usefulness. No other model role
 was integrated.
 
+**Explorer Memory study v1:** separate matched studies test verified negative
+avoidance and preference for a verified positive alternative, using raw records
+and semantic summaries. [The study report](research/model-explorer-memory-study-v1-results.md)
+records all 224 model calls, the preregistered thresholds, and framework integrity
+checks. The earlier integration result remains unchanged.
+
 ## Hardware baseline
 
 The verified baseline includes reduced-precision arithmetic and formats,
