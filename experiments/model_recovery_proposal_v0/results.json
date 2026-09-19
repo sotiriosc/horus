@@ -1,0 +1,78 @@
+{
+  "summary": {
+    "interface_gate": "BLOCKED_MISSING_PROPOSAL_INTERFACE",
+    "actual_model_calls": 0,
+    "model_usefulness": "UNTESTED",
+    "overall": "MODEL RECOVERY PROPOSAL USEFULNESS NOT ESTABLISHED",
+    "native_authorization_integrity": "PASS",
+    "model_adapter_authorization_integrity": "UNTESTED",
+    "diagnostic_transactions": 32,
+    "primary_semantic_cases": 24,
+    "primary_native_recovery_commits": 16,
+    "primary_incumbent_retained_without_recovery": 8,
+    "genuine_underlying_recovery_fixtures": 8,
+    "non_recovery_hold_fixtures": 4,
+    "primary_recovery_target_states": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "focused_wrong_recovery_rejected": true,
+    "ordinary_candidate_value_ignored": true,
+    "attached_recovery_slot_invocations": 0,
+    "unsupported_callback_rejected": true,
+    "consequence_only_no_recovery_controls": 4,
+    "model_self_certification_controls": "NOT_RUN_INTERFACE_BLOCKED",
+    "malformed_model_candidate_admission": "UNTESTED_NO_INTERFACE",
+    "protected_false_accepts": 0,
+    "receipt_rewrites": 0,
+    "prediction_rewrites": 0,
+    "bound_violations": 0,
+    "maximum_memory": 1,
+    "native_object_attempt_limit": 1,
+    "no_architecture_or_authorization_changes": true
+  },
+  "interface": {
+    "constructor": "(initial_state: 'int' = 0, epoch: 'int' = 1) -> 'None'",
+    "proposal": "(self, decision: 'PairDecision', wrong: 'bool' = False) -> 'StateCandidate'",
+    "submit_receipt": "(self, port: 'str', receipt: 'SourceReceipt', *, wrong_measure: 'bool' = False, wrong_measure_recovery: 'bool' = False, candidate_value: 'Optional[int]' = None, failed_recovery: 'bool' = False, common_mode: 'bool' = False) -> 'StepResult'",
+    "instance_has_recovery_component": false,
+    "inline_state_recovery_constructions": 1,
+    "call": "Recovery().state_candidate(decision, wrong=failed_recovery)",
+    "missing_interface": "No configurable state-Recovery proposer/component/factory at the post-Measure, post-quarantine call site; the coordinator directly constructs native Recovery.",
+    "state_candidate_fields": [
+      "epoch",
+      "transaction_id",
+      "pair_decision_id",
+      "value",
+      "status"
+    ],
+    "existing_recovery_input": "PairDecision and the fixed wrong fault flag; not the latched Prediction"
+  },
+  "budget": {
+    "limit": 1,
+    "first": {
+      "epoch": 1001,
+      "transaction_id": 1,
+      "pair_decision_id": 4299262263552,
+      "value": 1,
+      "status": "RECOVERING"
+    },
+    "attempts_after_first": 1,
+    "second_call_rejected": true,
+    "attempt_counter_after_rejection": 2,
+    "reason": "recovery attempt bound exceeded",
+    "scope": "per Recovery object; counter increments before rejection, not an allowed second proposal"
+  },
+  "observer_noninterference": true,
+  "diagnostic_sha256": "590586cbf50df1940ffe0d0fbaf0127eb80a43186f2515042298be3bce0eb152",
+  "source_sha256": {
+    "experiments/model_recovery_proposal_v0/__init__.py": "da685457358cb70e7bc1f7ffaaa2ad5d20c7ce66ac60c3b40672bc7099bb7d7f",
+    "experiments/model_recovery_proposal_v0/diagnostic.py": "2d8e23e1456114a1e6d00952bb19381401cced473839a8dead976b018a0fd4be",
+    "experiments/model_recovery_proposal_v0/frozen-inputs.json": "dc787e217d281108c2aa594973109c70e572fa68ee1d8ed1d1bdeae3b955eacd",
+    "experiments/model_recovery_proposal_v0/run.py": "cd4e0f74fd189d995c2d3039cb026e5ff266ef7e1f22af71bfabd3ef2fb913fd",
+    "experiments/model_recovery_proposal_v0/test_interface.py": "fa8ba72e71d2d3a496f43d75b222f242fb10be3bef86ce61669e25355130a0d3",
+    "research/model-recovery-proposal-v0-preregistration.md": "156acaa3e436e2761a5510f3daaf40651a480535e5c7e004775d845329d8fd06"
+  }
+}

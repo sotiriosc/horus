@@ -371,3 +371,16 @@ their expected outcomes. The original Map-v0 NOT ESTABLISHED result is unchanged
 no studies were pooled and no persistent/weight-learning claim is made.
 [Reproduction and compact evidence](experiments/model_map_established_prior_revision_v1/README.md)
 retain the complete criteria, component analyses and software trust boundary.
+
+### Recovery proposal v0 interface checkpoint
+
+The [zero-call Recovery checkpoint](research/model-recovery-proposal-v0-results.md)
+stopped at the mandatory interface gate: the frozen coordinator constructs native
+Recovery inline and exposes no configurable proposal source. **Model Recovery
+usefulness is UNTESTED / NOT ESTABLISHED; zero model calls were made.**
+The 32-transaction native diagnostic preserved authorization and atomic rejection,
+with zero protected false accepts. Eight of the 12 world transitions require state
+Recovery; HOLD retains a valid incumbent. Exact diagnostic replay and all 25
+regression commands returned their expected outcomes. No architecture was changed.
+[Reproduction and compact evidence](experiments/model_recovery_proposal_v0/README.md)
+distinguish native integrity from the untested model adapter.
