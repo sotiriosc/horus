@@ -10,15 +10,23 @@ mapping/order schedules, and descriptive thresholds. Normal setup takes five
 authorized transactions per fixture. All offered actions have verified outcomes.
 The sixth decision remains under the unchanged framework's authority.
 
+The completed [report](../../research/model-explorer-semantic-prior-study-v0-results.md)
+and [compact results](results.json) record 288 real calls, integrity PASS, and
+preregistered surface effects favoring opaque labels for +1>0 and +1>−1.
+The 0>−1 effect was not established; opaque responses selected the first option
+in all 36 of those calls. Detailed mappings and transcripts remain outside the
+public repository. [Verification](verification.json) records exact replay and
+fresh regressions, plus explicitly null unexposed joint strata.
+
 ## Reproduction
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest experiments.model_explorer_semantic_prior_study_v0.test_study -v
 PYTHONDONTWRITEBYTECODE=1 python3 -m experiments.model_explorer_semantic_prior_study_v0.run \
-  --replay "$EVIDENCE_DIR/model-calls.jsonl"
+  --replay "$HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl"
 ```
 
-Set `EVIDENCE_DIR` to the retained detailed evidence directory outside the public
+Set `HORUS_SEMANTIC_EVIDENCE` to the retained detailed evidence directory outside the public
 repository. It must contain model-calls.jsonl, steps.jsonl, setup.jsonl,
 controls.jsonl, registered-fixtures-and-prompts.json, and results.json.
 Replay regenerates every authorized fixture and requires byte-identical raw

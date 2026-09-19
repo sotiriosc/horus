@@ -265,3 +265,17 @@ discovery-to-reuse criterion was established. All actions remained allowed;
 uncertain retests and absent contradiction opportunities are reported separately.
 [Reproduction and bounded evidence](experiments/model_explorer_adaptive_episode_v0/README.md)
 include complete episode replay and the documented replay-only serialization fix.
+
+### Semantic-prior study v0
+
+The [semantic-prior study](research/model-explorer-semantic-prior-study-v0-results.md)
+compares original action names with six rotated opaque mappings across 288 real,
+matched, complete-history decisions. Integrity passed. Opaque rendering improved
+selection of verified +1 over 0 and +1 over −1 by the preregistered criteria;
+the 0-over−1 naming effect was not established. RETREAT-best selection was 7/36
+under original names and 32/36 under aliases, while opaque 0-over−1 responses
+always selected the first option. Labels are not assumed neutral. The frozen
+framework and all earlier results remain unchanged.
+[Reproduction and compact evidence](experiments/model_explorer_semantic_prior_study_v0/README.md)
+cover exact replay and fresh regressions; detailed per-call evidence is retained
+outside the public tree.
