@@ -357,3 +357,17 @@ criteria. Predictions remained distinct from receipt-authoritative reality.
 Exact replay and all 20 regression commands returned their expected outcomes.
 [Reproduction and compact evidence](experiments/model_map_proposal_v0/README.md)
 retain the failed prerequisites, state/consequence decomposition and trust boundary.
+
+### Established-prior Map revision v1
+
+The [bounded follow-up](research/model-map-established-prior-revision-v1-results.md)
+uses two authentic old HOLD observations before an external consequence change,
+with the Map adapter, parser, prompt, deterministic Explorer and authority unchanged.
+**ESTABLISHED-PRIOR MAP REVISION REPLICATED**.
+O1: SHIFT P0 exact old 12/12, SHIFT P2 exact new 12/12, favorable P2 pairs 12/12; O2: SHIFT P0 exact old 12/12, SHIFT P2 exact new 12/12, favorable P2 pairs 12/12.
+All 144 registered calls completed: 144 valid and 0 safely rejected,
+with zero protected false accepts. Exact replay and 23 regression commands returned
+their expected outcomes. The original Map-v0 NOT ESTABLISHED result is unchanged;
+no studies were pooled and no persistent/weight-learning claim is made.
+[Reproduction and compact evidence](experiments/model_map_established_prior_revision_v1/README.md)
+retain the complete criteria, component analyses and software trust boundary.
