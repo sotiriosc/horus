@@ -465,3 +465,17 @@ boundaries held; no retry, replacement or additional inference followed. The
 replay and 39 post-campaign validation commands returned expected outcomes.
 [Compact evidence and reproduction](experiments/model_proposal_role_composition_v1/README.md)
 keep the negative live finding separate from the preserved synthetic parent A.
+
+### Composition initial Map schema diagnosis v0
+
+The [zero-call forensic diagnosis](research/composition-initial-map-schema-diagnosis-v0-results.md)
+identifies a **concrete model/parser specification gap**: all nine live Map objects
+return a string consequence, while exact integer types/domains are not explicitly
+stated in the visible contract. Four consequences are bare K2 tokens; five are
+sentences mentioning the target token. Historical non-empty Map prompts contain
+numeric outcome examples and show 286/288 schema compliance, versus 0/9 in the
+empty-history composition calls. This is an association, not a causal explanation.
+Composition-v1 remains C; no prompt, parser, projection or response was changed.
+[Compact findings and reproduction](experiments/composition_initial_map_schema_diagnosis_v0/README.md)
+retain deterministic regeneration and four focused historical replays. No new
+model calls or next experiment.

@@ -1,0 +1,768 @@
+{
+  "all_nine": {
+    "consequence_string": true,
+    "empty_history": true,
+    "exact_keys": true,
+    "next_state_integer_1": true,
+    "numeric_consequence_examples_absent": true,
+    "parser_error": "exact integers required",
+    "single_valid_json": true
+  },
+  "bare_token_counts": {
+    "K2": 4
+  },
+  "bare_token_equal_target": 0,
+  "causal_effect_established": false,
+  "classification": "A \u2014 CONCRETE MODEL/PARSER SPECIFICATION GAP IDENTIFIED",
+  "exclusions": {
+    "bool_fields": 0,
+    "canonical_actions_by_field": 0,
+    "duplicate_keys": 0,
+    "extra_fields": 0,
+    "float_fields": 0,
+    "missing_fields": 0,
+    "multiple_objects": 0,
+    "null_fields": 0,
+    "numeric_string_fields": 0,
+    "prose_outside_json": 0
+  },
+  "executions": 0,
+  "explicit_output_domains": false,
+  "explicit_output_integer_types": false,
+  "family_patterns": {
+    "O1": {
+      "calls": 4,
+      "shapes": {
+        "bare_opaque_token": 4
+      }
+    },
+    "O2": {
+      "calls": 5,
+      "shapes": {
+        "prose_with_target_token": 5
+      }
+    }
+  },
+  "historical": [
+    {
+      "calls": 144,
+      "compliance_by_depth": {
+        "1": {
+          "calls": 48,
+          "valid": 46
+        },
+        "2": {
+          "calls": 48,
+          "valid": 48
+        },
+        "3": {
+          "calls": 48,
+          "valid": 48
+        }
+      },
+      "history_consequence_values": [
+        -1,
+        1
+      ],
+      "history_depths": {
+        "1": 48,
+        "2": 48,
+        "3": 48
+      },
+      "history_next_state_values": [
+        1
+      ],
+      "history_numeric_examples_are_implicit_not_explicit_contract": true,
+      "malformed": 2,
+      "malformed_reasons": {
+        "prediction outside finite domain": 2
+      },
+      "numeric_consequence_example_calls": 144,
+      "numeric_next_state_example_calls": 144,
+      "state_action_scope": "state 1 / HOLD",
+      "strict_parser": "experiments.model_map_proposal_v0.adapter.parse",
+      "study": "Map v0",
+      "system_identical": true,
+      "valid": 142
+    },
+    {
+      "calls": 144,
+      "compliance_by_depth": {
+        "2": {
+          "calls": 48,
+          "valid": 48
+        },
+        "3": {
+          "calls": 48,
+          "valid": 48
+        },
+        "4": {
+          "calls": 48,
+          "valid": 48
+        }
+      },
+      "history_consequence_values": [
+        -1,
+        1
+      ],
+      "history_depths": {
+        "2": 48,
+        "3": 48,
+        "4": 48
+      },
+      "history_next_state_values": [
+        1
+      ],
+      "history_numeric_examples_are_implicit_not_explicit_contract": true,
+      "malformed": 0,
+      "malformed_reasons": {},
+      "numeric_consequence_example_calls": 144,
+      "numeric_next_state_example_calls": 144,
+      "state_action_scope": "state 1 / HOLD",
+      "strict_parser": "experiments.model_map_proposal_v0.adapter.parse",
+      "study": "established-prior Map v1",
+      "system_identical": true,
+      "valid": 144
+    }
+  ],
+  "identical_archived_parser_source_sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494",
+  "input_evidence_sha256": {
+    "composition/metadata.json": "40152f4ce0b3982426c67a2dd3e867b6b6abca56419c6ede1dc4f2df8dbfa048",
+    "composition/model-calls.jsonl": "8cf25b4ffad31d0c9b86d5ebb4c6f9db9f2e205d66ec736596be9789eacfe4f6",
+    "composition/results.json": "8d017a3f3420d8218462ac7f97ddef2a0236f5fe021c6ab4f7e0a6b2b4c081b8",
+    "composition/schedule.json": "6ae18f2f55f966181e4f985b9e0423e68f44458ccea2897484a3b712909bf78a",
+    "composition/steps.jsonl": "1c343f8d486c47c0ffa78f4e4099ebcd98fc1b86dab7ebc475c424bf7ae11bba",
+    "map0/metadata.json": "763c9ed447f69c37e5055e7c2400e1fe5939e90a7bf59d2fd6ff21333e374429",
+    "map0/model-calls.jsonl": "6613f82f49e58464c3addc65b3b55700df887cbc96ec1696e49ebc920c30c94e",
+    "map0/registered-prompts.json": "4f1c0aed7b0a3df04066b9b24f9be1851c917b6878e83dcf7d5834921abbac81",
+    "map0/results.json": "808e1227a50eccf44101a63329cd2686ff7ea7b5333aaa405fcd6af627a4ed05",
+    "map1/metadata.json": "3396c69a601be29a6e5442911d90081e749c25b1fb7e234844d81b156a5e54d4",
+    "map1/model-calls.jsonl": "6c1c343832495a9d0e6b7eac5bfbda05e766d532dc4c85d8e5765f771402c732",
+    "map1/registered-prompts.json": "6061e392f218ce7366a3f84b7119119f860bfcf660af504860c2857c424a631e",
+    "map1/results.json": "71fa9b0c629773832e92cf05fcd89a8f002b70938756221208d34243baf041b4"
+  },
+  "live_Explorer_malformed": 3,
+  "live_Explorer_valid": 9,
+  "live_Map_malformed": 9,
+  "live_Map_valid": 0,
+  "live_calls": {
+    "Explorer": 12,
+    "Map": 9,
+    "Recovery": 0
+  },
+  "malformed_explorer": [
+    {
+      "UNTRIED_present": true,
+      "canonical_actions": [],
+      "episode": 1,
+      "family": "O1",
+      "form": "single_JSON_object",
+      "keys": [
+        "action",
+        "verified_outcomes"
+      ],
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "multiple_aliases": false,
+      "offered_aliases_present": [
+        "K1"
+      ],
+      "seed": 80003,
+      "strict_error": "malformed_or_unknown_label"
+    },
+    {
+      "UNTRIED_present": true,
+      "canonical_actions": [],
+      "episode": 3,
+      "family": "O1",
+      "form": "single_JSON_object",
+      "keys": [
+        "action",
+        "verified_outcomes"
+      ],
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "multiple_aliases": false,
+      "offered_aliases_present": [
+        "K1"
+      ],
+      "seed": 80005,
+      "strict_error": "malformed_or_unknown_label"
+    },
+    {
+      "UNTRIED_present": false,
+      "canonical_actions": [],
+      "episode": 6,
+      "family": "O2",
+      "form": "single_JSON_object",
+      "keys": [
+        "action"
+      ],
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "multiple_aliases": false,
+      "offered_aliases_present": [
+        "Q7"
+      ],
+      "seed": 80002,
+      "strict_error": "malformed_or_unknown_label"
+    }
+  ],
+  "map_cases": [
+    {
+      "action": "ADVANCE",
+      "bare_token": "K2",
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": "HOLD",
+      "call_index": 1,
+      "consequence_shape": "bare_opaque_token",
+      "consequence_type": "str",
+      "episode": 0,
+      "family": "O1",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "K2"
+        ]
+      },
+      "seed": 80003,
+      "strict_error": "exact integers required",
+      "target": "K1",
+      "target_mentioned_in_consequence": false
+    },
+    {
+      "action": "HOLD",
+      "bare_token": "K2",
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": "ADVANCE",
+      "call_index": 4,
+      "consequence_shape": "bare_opaque_token",
+      "consequence_type": "str",
+      "episode": 2,
+      "family": "O1",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "K2"
+        ]
+      },
+      "seed": 80005,
+      "strict_error": "exact integers required",
+      "target": "K1",
+      "target_mentioned_in_consequence": false
+    },
+    {
+      "action": "RETREAT",
+      "bare_token": "K2",
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": "ADVANCE",
+      "call_index": 7,
+      "consequence_shape": "bare_opaque_token",
+      "consequence_type": "str",
+      "episode": 4,
+      "family": "O1",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "K2"
+        ]
+      },
+      "seed": 80007,
+      "strict_error": "exact integers required",
+      "target": "K1",
+      "target_mentioned_in_consequence": false
+    },
+    {
+      "action": "RETREAT",
+      "bare_token": "K2",
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": "HOLD",
+      "call_index": 9,
+      "consequence_shape": "bare_opaque_token",
+      "consequence_type": "str",
+      "episode": 5,
+      "family": "O1",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "K2"
+        ]
+      },
+      "seed": 80008,
+      "strict_error": "exact integers required",
+      "target": "K1",
+      "target_mentioned_in_consequence": false
+    },
+    {
+      "action": "ADVANCE",
+      "bare_token": null,
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": null,
+      "call_index": 12,
+      "consequence_shape": "prose_with_target_token",
+      "consequence_type": "str",
+      "episode": 7,
+      "family": "O2",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "Q7"
+        ]
+      },
+      "seed": 80004,
+      "strict_error": "exact integers required",
+      "target": "Q7",
+      "target_mentioned_in_consequence": true
+    },
+    {
+      "action": "HOLD",
+      "bare_token": null,
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": null,
+      "call_index": 14,
+      "consequence_shape": "prose_with_target_token",
+      "consequence_type": "str",
+      "episode": 8,
+      "family": "O2",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "Q7"
+        ]
+      },
+      "seed": 80005,
+      "strict_error": "exact integers required",
+      "target": "Q7",
+      "target_mentioned_in_consequence": true
+    },
+    {
+      "action": "RETREAT",
+      "bare_token": null,
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": null,
+      "call_index": 16,
+      "consequence_shape": "prose_with_target_token",
+      "consequence_type": "str",
+      "episode": 9,
+      "family": "O2",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "M4"
+        ]
+      },
+      "seed": 80006,
+      "strict_error": "exact integers required",
+      "target": "M4",
+      "target_mentioned_in_consequence": true
+    },
+    {
+      "action": "RETREAT",
+      "bare_token": null,
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": null,
+      "call_index": 18,
+      "consequence_shape": "prose_with_target_token",
+      "consequence_type": "str",
+      "episode": 10,
+      "family": "O2",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "Q7"
+        ]
+      },
+      "seed": 80007,
+      "strict_error": "exact integers required",
+      "target": "Q7",
+      "target_mentioned_in_consequence": true
+    },
+    {
+      "action": "RETREAT",
+      "bare_token": null,
+      "bare_token_equals_target": false,
+      "bare_token_underlying_action": null,
+      "call_index": 20,
+      "consequence_shape": "prose_with_target_token",
+      "consequence_type": "str",
+      "episode": 11,
+      "family": "O2",
+      "json_parses": true,
+      "keys": [
+        "next_state",
+        "consequence"
+      ],
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "next_state_type": "int",
+      "next_state_value": 1,
+      "opaque_tokens": {
+        "consequence": [
+          "Q7"
+        ]
+      },
+      "seed": 80008,
+      "strict_error": "exact integers required",
+      "target": "Q7",
+      "target_mentioned_in_consequence": true
+    }
+  ],
+  "memory_commits": 0,
+  "new_model_calls": 0,
+  "next_state_token_leaks": 0,
+  "parser_contract": [
+    {
+      "evidence": "exactly one JSON object",
+      "parser": "json.loads plus exact dict type",
+      "requirement": "single JSON object",
+      "visible": "explicit"
+    },
+    {
+      "evidence": "containing next_state and consequence",
+      "parser": "exact key-set equality",
+      "requirement": "next_state and consequence present",
+      "visible": "explicit"
+    },
+    {
+      "evidence": "containing is not an explicit exclusive key list",
+      "parser": "exact key-set equality",
+      "requirement": "no extra keys",
+      "visible": "not explicitly stated"
+    },
+    {
+      "evidence": "neither instruction nor empty payload specifies output type",
+      "parser": "type(value) is int",
+      "requirement": "next_state exact integer",
+      "visible": "absent"
+    },
+    {
+      "evidence": "current state 0 is not a domain enumeration",
+      "parser": "next_state in range(4)",
+      "requirement": "next_state in 0,1,2,3",
+      "visible": "absent"
+    },
+    {
+      "evidence": "no consequence rows or type declaration in empty payload",
+      "parser": "type(value) is int",
+      "requirement": "consequence exact integer",
+      "visible": "absent"
+    },
+    {
+      "evidence": "no output-domain enumeration",
+      "parser": "consequence in (-1,0,1)",
+      "requirement": "consequence in -1,0,1",
+      "visible": "absent"
+    },
+    {
+      "evidence": "no explicit output type restriction",
+      "parser": "exact int rejects these JSON values",
+      "requirement": "no bool/float/numeric-string/null fields",
+      "visible": "absent"
+    },
+    {
+      "evidence": "and no explanation",
+      "parser": "outside prose fails JSON decode; fields must be integers",
+      "requirement": "no explanation",
+      "visible": "explicit"
+    },
+    {
+      "evidence": "exactly one JSON object",
+      "parser": "json.loads rejects trailing content",
+      "requirement": "no multiple JSON objects",
+      "visible": "explicit"
+    },
+    {
+      "evidence": "no uniqueness clause",
+      "parser": "object_pairs_hook raises duplicate field",
+      "requirement": "no duplicate keys",
+      "visible": "not explicitly stated"
+    }
+  ],
+  "preserved_live_classification": "C \u2014 NOT ESTABLISHED",
+  "recommendation": {
+    "conceptual_variable": "original visible output schema versus explicit output types/domains",
+    "implemented": false,
+    "matched": [
+      "state",
+      "target action",
+      "empty history",
+      "mapping",
+      "seed",
+      "parser",
+      "model",
+      "sampler"
+    ],
+    "option": 2
+  },
+  "representative_comparison": {
+    "A_composition": {
+      "action": "HOLD",
+      "exact_system": "Predict the next externally realized outcome for the specified action using only the verified chronological outcomes shown. Reply with exactly one JSON object containing next_state and consequence, and no explanation.",
+      "history_length": 0,
+      "history_rows": [],
+      "index": 2,
+      "non_seed_options": {
+        "num_ctx": 2048,
+        "num_predict": 32,
+        "repeat_penalty": 1.1,
+        "temperature": 0.2,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "runtime": {
+        "details": {
+          "families": [
+            "llama"
+          ],
+          "family": "llama",
+          "format": "gguf",
+          "parameter_size": "47B",
+          "quantization_level": "Q4_0"
+        },
+        "model": "dolphin-mixtral:latest",
+        "model_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "server": {
+          "version": "0.1.16"
+        },
+        "stored_default_system": "You are Dolphin, a helpful AI assistant.\n",
+        "stored_parameters": "num_ctx                        4096\nstop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>",
+        "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+        "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+      },
+      "seed": 80005,
+      "serialization": "sorted keys, compact separators",
+      "state": 0,
+      "target": "K1"
+    },
+    "B_Map_v0": {
+      "action": "HOLD",
+      "exact_system": "Predict the next externally realized outcome for the specified action using only the verified chronological outcomes shown. Reply with exactly one JSON object containing next_state and consequence, and no explanation.",
+      "history_length": 1,
+      "history_rows": [
+        {
+          "consequence": 1,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        }
+      ],
+      "index": 24,
+      "non_seed_options": {
+        "num_ctx": 2048,
+        "num_predict": 32,
+        "repeat_penalty": 1.1,
+        "temperature": 0.2,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "runtime": {
+        "details": {
+          "families": [
+            "llama"
+          ],
+          "family": "llama",
+          "format": "gguf",
+          "parameter_size": "47B",
+          "quantization_level": "Q4_0"
+        },
+        "model": "dolphin-mixtral:latest",
+        "model_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "server": {
+          "version": "0.1.16"
+        },
+        "stored_default_system": "You are Dolphin, a helpful AI assistant.\n",
+        "stored_parameters": "num_ctx                        4096\nstop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>",
+        "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+        "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+      },
+      "seed": 50003,
+      "serialization": "sorted keys, compact separators",
+      "state": 1,
+      "target": "K1"
+    },
+    "C_Map_v1": {
+      "action": "HOLD",
+      "exact_system": "Predict the next externally realized outcome for the specified action using only the verified chronological outcomes shown. Reply with exactly one JSON object containing next_state and consequence, and no explanation.",
+      "history_length": 2,
+      "history_rows": [
+        {
+          "consequence": 1,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        },
+        {
+          "consequence": 1,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 2
+        }
+      ],
+      "index": 24,
+      "non_seed_options": {
+        "num_ctx": 2048,
+        "num_predict": 32,
+        "repeat_penalty": 1.1,
+        "temperature": 0.2,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "runtime": {
+        "details": {
+          "families": [
+            "llama"
+          ],
+          "family": "llama",
+          "format": "gguf",
+          "parameter_size": "47B",
+          "quantization_level": "Q4_0"
+        },
+        "model": "dolphin-mixtral:latest",
+        "model_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "server": {
+          "version": "0.1.16"
+        },
+        "stored_default_system": "You are Dolphin, a helpful AI assistant.\n",
+        "stored_parameters": "stop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>\nnum_ctx                        4096",
+        "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+        "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+      },
+      "seed": 60003,
+      "serialization": "sorted keys, compact separators",
+      "state": 1,
+      "target": "K1"
+    }
+  },
+  "secondary": "EMPTY-HISTORY ASSOCIATION OBSERVED",
+  "shape_counts": {
+    "bare_opaque_token": 4,
+    "prose_with_target_token": 5
+  },
+  "target_mentioned": 5,
+  "token_mentions": {
+    "K2": 4,
+    "M4": 1,
+    "Q7": 4
+  },
+  "unknown_is_not_memory": true,
+  "visible_empty_payload_numbers": {
+    "allowed_output_domain": null,
+    "current_state": [
+      0
+    ],
+    "output_consequence_examples": [],
+    "output_next_state_examples": []
+  }
+}
