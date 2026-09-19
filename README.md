@@ -328,3 +328,15 @@ Zero model calls were made. This establishes safely constructed contradictory
 histories within the software trust root, not model revision.
 [Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1_feasibility/README.md)
 include chronological previews, provenance checks and the final feasibility criteria.
+
+### Contradiction revision v1 behavioral study
+
+The [144-call contradiction study](research/model-explorer-contradiction-revision-v1-results.md)
+ran the frozen Explorer-only design through authenticated CONTROL/SHIFT histories.
+O1 met every registered revision criterion. O2 reached 8/12 SHIFT-H2 ADVANCE choices
+and 7/12 favorable matched pairs, below the required 9/12 and 8/12. Overall
+replication was therefore **not established**; no pooling, prompt change or extra
+calls were used. All 144 proposals were valid, with zero protected false accepts
+and old history preserved. Exact replay and historical regressions passed.
+[Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1/README.md)
+retain the family-specific findings and the unchanged software trust boundary.
