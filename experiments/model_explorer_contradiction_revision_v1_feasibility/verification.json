@@ -1,0 +1,199 @@
+{
+  "parent": "ca131869b97dd5c96dd60eb7329f65b1a293246f",
+  "protocol_commit": "90b521f27d19b25719b3f9ec0cd7839ca2d5c02a",
+  "implementation_commit": "5a93936d34b39153cc51ff07256b2611031f4170",
+  "final_classification": "A — CONTRADICTION REVISION FIXTURE FEASIBLE",
+  "actual_model_calls": 0,
+  "parser_controls": 0,
+  "behavioral_revision": "UNTESTED",
+  "framework_and_repair_modified": false,
+  "fixture": {
+    "command": "python3 -m experiments.model_explorer_contradiction_revision_v1_feasibility.run",
+    "exit_code": 0,
+    "primary_transactions": 14,
+    "uninstrumented_validation_transactions": 14,
+    "observer_noninterference": true,
+    "protected_false_accepts": 0,
+    "receipt_mismatch_accepts": 0,
+    "compact_result_sha256": "8d48ebdace9842b1de885a4eaf7824884383a0becbaa5c604f1bac4289cf98fb"
+  },
+  "exact_replay": {
+    "command": "python3 -m experiments.model_explorer_contradiction_revision_v1_feasibility.run --replay $HORUS_FIXTURE_EVIDENCE",
+    "exit_code": 0,
+    "fixture_and_results_byte_identical": true
+  },
+  "final_harness_accounting_note": "Stop-summary errors are not double-counted. Initial and final detailed fixture evidence are byte-identical; both initial runs are privately retained.",
+  "completion_criteria": {
+    "01_control_all_stages": true,
+    "02_shift_all_stages": true,
+    "03_changed_hold_minus_one": true,
+    "04_changed_advance_plus_one": true,
+    "05_old_hold_unchanged": true,
+    "06_old_advance_unchanged": true,
+    "07_all_commits_bind_authentic_receipt": true,
+    "08_zero_protected_false_accepts": true,
+    "09_zero_receipt_mismatch_accepts": true,
+    "10_zero_prediction_rewrites": true,
+    "11_no_contradiction_only_rejection": true,
+    "12_atomicity_preserved_and_repair_attacks_rerun": true,
+    "13_existing_bounds": true,
+    "14_authorized_chronological_projection": true,
+    "15_exact_replay": true,
+    "16_historical_regressions": true
+  },
+  "atomicity": {
+    "new_fixture_rejections": 0,
+    "unchanged_repair_atomic_attack_rejections": 20,
+    "repair_evidence_byte_identical": true
+  },
+  "regressions": [
+    {
+      "command": "python3 -m experiments.model_explorer_prior_factorial_v1.run --replay $HORUS_FACTORIAL_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:16.245558+00:00",
+      "finished_utc": "2026-09-19T05:16:17.913770+00:00",
+      "log_sha256": "7a78a276e3ae1e1f32fa119750e8a957a76424b54ed6482f05e33d8455f0b75b",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:17.914017+00:00",
+      "finished_utc": "2026-09-19T05:16:20.315995+00:00",
+      "log_sha256": "b4fe44313b62647819af16d47799e4b5d82af8be1b1c8aeba861023167ac0e13",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:20.316297+00:00",
+      "finished_utc": "2026-09-19T05:16:20.937035+00:00",
+      "log_sha256": "814bab76bf291d1f49c155d84eb4422886673233b7a275b6e11aa72a0c3ec561",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:20.937299+00:00",
+      "finished_utc": "2026-09-19T05:16:22.629633+00:00",
+      "log_sha256": "0c9fd84a729e55651957a75318d89b8e91eeb4b834c2255897c2daca490ed906",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:22.629909+00:00",
+      "finished_utc": "2026-09-19T05:16:22.854569+00:00",
+      "log_sha256": "a5a124324e3fdc189a18bf9aa92a82344983943c8456b1ca4a3a5090cf8de598",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:22.854828+00:00",
+      "finished_utc": "2026-09-19T05:16:23.233293+00:00",
+      "log_sha256": "6cdf65c2058939f497bfaa58065d6470aff8722a4ce31a965a90e2a148d8b368",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.233557+00:00",
+      "finished_utc": "2026-09-19T05:16:23.284504+00:00",
+      "log_sha256": "620bbcac50daa2a652d2a4e965fab7badf02ab6e366a1eb2eafb2de1fa41e229",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.285412+00:00",
+      "finished_utc": "2026-09-19T05:16:23.349332+00:00",
+      "log_sha256": "47d953c730a145cd28f3abd412dcb3fc2064daee825a00437f8159057aacc160",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.349957+00:00",
+      "finished_utc": "2026-09-19T05:16:23.488004+00:00",
+      "log_sha256": "7c5444e90d1bad11a1ffebd6e19fcd00ab4f0acdac79729a7800c6f18f915c92",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v0.test_preflight -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.488555+00:00",
+      "finished_utc": "2026-09-19T05:16:23.561969+00:00",
+      "log_sha256": "087d9449885d323cb960b33761b003aee8eecae9e99a33e0d8f5a2f73b9d0929",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "started_utc": "2026-09-19T05:16:23.562260+00:00",
+      "finished_utc": "2026-09-19T05:16:23.640952+00:00",
+      "log_sha256": "330afd115c359584888f828c3cea015c8b412f21aa91f79de8fdad483ecc3048",
+      "expected_exit_code": 2
+    },
+    {
+      "command": "python3 -m unittest experiments.realized_event_grounding_v0.test_grounding -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.641218+00:00",
+      "finished_utc": "2026-09-19T05:16:23.690954+00:00",
+      "log_sha256": "8626774166a1042aeea498cdc4458727bef2a963d3314439789c0cf46b2f4fb5",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.691217+00:00",
+      "finished_utc": "2026-09-19T05:16:23.863092+00:00",
+      "log_sha256": "e9905aef69e2101c271bd3b8c43ea6f59c98329d462f022887d914015a01bd81",
+      "expected_exit_code": 0
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run --replay $HORUS_REPAIR_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T05:16:23.863360+00:00",
+      "finished_utc": "2026-09-19T05:16:24.032643+00:00",
+      "log_sha256": "475406cdc206851bfbc686446c220b359be364a1106340956e3a2956a103c4a1",
+      "expected_exit_code": 0
+    }
+  ],
+  "historical_old_diagnostic_exit": 2,
+  "historical_old_false_accepts": 1,
+  "historical_diagnostic_byte_identical": true,
+  "repair_campaign_and_replay_byte_identical": true,
+  "prior_model_transcripts_and_summaries_identical": true,
+  "recorded_model_responses_replayed": 1085,
+  "inherited_files": 304,
+  "inherited_files_identical_except_readme_manifest": 302,
+  "frozen_framework_sources_verified": 23,
+  "additional_frozen_inputs_verified": 14,
+  "public_main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+  "historical_tags": {
+    "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+    "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+    "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+    "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+    "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+  },
+  "inherited_file_changes": [
+    "README.md append only",
+    "PUBLIC_MANIFEST.json inventory refresh"
+  ]
+}

@@ -197,8 +197,7 @@ def run_fixture(instrument=True):
             control_recovery=a["authorization"]["recovery_authorized"], shift_recovery=b["authorization"]["recovery_authorized"],
             control_measure=a["after"]["memory"][-1]["measurement_matches"], shift_measure=b["after"]["memory"][-1]["measurement_matches"]))
     errors = [e for r in rows for e in r["errors"]]
-    if first_failure:
-        errors += first_failure.get("errors", [])
+    # Step failures already occur in rows; do not count the stop summary twice.
     b_errors = {"receipt_origin_or_substitution", "protected_false_accept", "receipt_mismatch_accept",
                 "old_history_rewritten", "prediction_rewritten", "provenance_failure", "authenticated_contradiction_rejected"}
     gate = "B" if b_errors.intersection(errors) else "C" if first_failure else "PASS_PENDING_REPLAY_AND_REGRESSIONS"
