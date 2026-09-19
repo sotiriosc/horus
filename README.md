@@ -292,3 +292,14 @@ criteria, with a narrower O2 option-position effect supported. Integrity and all
 requested regressions passed; the framework and earlier results remain unchanged.
 [Reproduction and compact evidence](experiments/model_explorer_prior_factorial_v1/README.md)
 retain the frozen criteria and negative findings without expanding the sample.
+
+### Contradiction-revision v0 feasibility checkpoint
+
+The [contradiction-revision preflight](research/model-explorer-contradiction-revision-v0-results.md)
+failed before model inference. The first changed state-1 HOLD event realized -1,
+while frozen A/B/C reported +1 and the framework committed +1 to Memory. This
+externally audited false accept makes the requested nonstationarity infeasible
+under the frozen evidence boundary. Real model calls: zero; behavioral revision
+remains untested. No architecture or prior result changed.
+[Diagnostic reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v0/README.md)
+include exact failure replay and fresh preservation regressions.

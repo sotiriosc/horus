@@ -1,5 +1,12 @@
 # Contradiction-revision v0 — mandatory feasibility gate
 
+**Preflight result: INFEASIBLE. Zero model calls.** At the first changed event,
+state-1 HOLD realized −1 while frozen A/B/C reported +1; the framework committed
++1. SHIFT stopped at transaction 4. This was an externally detected false accept,
+not a safe rejection. Model revision remains untested.
+See the [results report](../../research/model-explorer-contradiction-revision-v0-results.md),
+[compact results](results.json), and [verification](verification.json).
+
 The [protocol](../../research/model-explorer-contradiction-revision-v0-preregistration.md)
 requires safe authorization of a changed external consequence before any model
 inference. Only the experiment-side overlay, ordinary-path diagnostic and pure
