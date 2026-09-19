@@ -303,3 +303,16 @@ under the frozen evidence boundary. Real model calls: zero; behavioral revision
 remains untested. No architecture or prior result changed.
 [Diagnostic reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v0/README.md)
 include exact failure replay and fresh preservation regressions.
+
+### Realized-event grounding v0
+
+The [realized-event grounding repair](research/realized-event-grounding-v0-results.md)
+binds authorization to an immutable receipt emitted after external execution.
+Changed HOLD −1 and ADVANCE +1 were authorized while retaining their old records
+and contrary predictions. The bounded campaign passed 105 protected clean
+authorizations and 20 atomic attack rejections with zero protected false accepts;
+a deliberately dishonest trusted root still caused one out-of-model wrong accept.
+A/B share the receipt root and are not independent truth measurements. Historical
+regressions and the preserved old failing diagnostic remain unchanged. No new
+model calls were made. [Reproduction and compact evidence](experiments/realized_event_grounding_v0/README.md)
+state the software trust boundary and the untested model-revision question.
