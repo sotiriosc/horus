@@ -412,3 +412,18 @@ and all 31 regression commands returned expected outcomes. The old interface-v1 
 and Recovery-v0 blocked checkpoints remain unchanged. Zero model calls; no model
 campaign was launched. [Reproduction and verification](experiments/state_recovery_authorizer_status_binding_v1/README.md)
 record the scoped contract, evidence and unchanged software trust boundary.
+
+### Model Recovery proposal v1
+
+The [96-call Recovery-only study](research/model-recovery-proposal-v1-results.md)
+used the unchanged repaired value-only boundary after verified failure.
+**MODEL RECOVERY PROPOSAL USEFULNESS REPLICATED.**
+O1: 48/48 valid, 41/48 receipt-consistent, 0 malformed.
+O2: 48/48 valid, 44/48 receipt-consistent, 0 malformed.
+Recovery authorization integrity **PASS**, with zero protected false accepts.
+The realized next state was visible in verified context; this is bounded proposal
+generation, not hidden-state inference or general Recovery reasoning. Exact replay
+and all 33 regression commands returned expected outcomes. No retries, replacement
+calls, extensions or role combinations occurred. Historical A/C/blocked checkpoints
+remain unchanged. [Reproduction and compact evidence](experiments/model_recovery_proposal_v1/README.md)
+retain family thresholds, target/action/token breakdowns and the software trust boundary.
