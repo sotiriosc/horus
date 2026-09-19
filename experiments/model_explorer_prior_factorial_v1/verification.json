@@ -1,0 +1,114 @@
+{
+  "parent": "de3048ea6061ae6b7b26ac95d3a06441bba9d1b9",
+  "preregistration_commit": "121be1d6a48538a4136175f90cee56cc114ea7d0",
+  "implementation_commit": "9e13eec0aa6ce176e0d9b534cbd60db0525e11ae",
+  "exact_replay": {
+    "exit_code": 0,
+    "model_calls": 216,
+    "measured_steps": 216,
+    "setup_transactions": 1150,
+    "controls": 14,
+    "registered_prompts": 216,
+    "all_evidence_byte_identical": true,
+    "JSON_summary_identical": true,
+    "source_hashes_identical": true,
+    "evidence_sha256": {
+      "model-calls.jsonl": "4f3eb3cd47f4aabd2fabbf3cd1685f3c4b30066c3149641d3c3b5b45d03e101f",
+      "steps.jsonl": "e3161a23d2b255118fe29aa6b261bd6dc092d00c9bca6326ee3615523e0810fa",
+      "setup.jsonl": "de33823bdb0e61c2bc1fbfeaeda4354d195f8aae71a75542cade245d1256157c",
+      "controls.jsonl": "3f094074b5da9981233ead93adbe36d13126659213ac83aa630297d205d2cf0d",
+      "registered-fixtures-and-prompts.json": "b4781385f73737e8d2abe0d895686977979984132c55da00cc00013635655be5"
+    }
+  },
+  "regressions": [
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:52.587165+00:00",
+      "finished_utc": "2026-09-19T04:04:54.967033+00:00",
+      "log_sha256": "b2d3884817fdbec2149de5783bcae2cf6ea38710bed24b30cddf0893ce6ad055"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:54.967273+00:00",
+      "finished_utc": "2026-09-19T04:04:55.604189+00:00",
+      "log_sha256": "f923b14ee42ee929e637fb760c85354c2cc38bf95cf04e23edc2c52150ef25f2"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:55.604509+00:00",
+      "finished_utc": "2026-09-19T04:04:57.291712+00:00",
+      "log_sha256": "2159f4fd3b952820cf659bdf9efdb53b4275fe5c633527ef88eb1f908b605c2e"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:57.291955+00:00",
+      "finished_utc": "2026-09-19T04:04:57.519846+00:00",
+      "log_sha256": "4f66f7f56590a0cffdcca843bda6101869f3c2dba9d9667df189aece6d839733"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:57.520313+00:00",
+      "finished_utc": "2026-09-19T04:04:57.906010+00:00",
+      "log_sha256": "2365fe6fd82f986e093495f9f2643fd84d801bd390a1926b0fb23295b8267fbf"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:57.906216+00:00",
+      "finished_utc": "2026-09-19T04:04:57.961505+00:00",
+      "log_sha256": "4b2a019485a9b833166e8afc8dbdf7700a696c4783cd8057063e6742cfb00a5e"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:57.962080+00:00",
+      "finished_utc": "2026-09-19T04:04:58.029926+00:00",
+      "log_sha256": "781109bea73621e000fbfc999f72a34dcde468d056931dc667ca54da6c67c4cd"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:58.030489+00:00",
+      "finished_utc": "2026-09-19T04:04:58.172162+00:00",
+      "log_sha256": "7fa8ce3ac7a991162df430d06b72da106e54eccc5a2518e1007f00988cbcb790"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_prior_factorial_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:04:58.172708+00:00",
+      "finished_utc": "2026-09-19T04:05:04.252124+00:00",
+      "log_sha256": "749649924525f0e74b6d7a44cdbb138c473805eb98995146187083edacbaa02c"
+    }
+  ],
+  "prior_model_transcripts_and_summaries_identical": true,
+  "inherited_files_identical_before_publication": 269,
+  "frozen_framework_hashes_verified": 23,
+  "no_source_or_preregistration_change_after_inference": true,
+  "full_model_weights_hashed_before_inference": true,
+  "preregistered_calls": 216,
+  "no_extension": true,
+  "public_main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+  "historical_tags": {
+    "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+    "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+    "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+    "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+    "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+  },
+  "observed_live_api_generate_requests": 216,
+  "scripted_annex_validation_transactions_per_cli": 10
+}
