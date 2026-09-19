@@ -439,3 +439,16 @@ Diagnostic replay matched exactly and all 33 historical regression commands
 returned expected outcomes, including preserved negative checkpoints.
 [Reproduction and compact evidence](experiments/model_proposal_role_composition_v0/README.md)
 distinguish this domain blocker from an authority failure.
+
+### Composition input bindings v1
+
+The [zero-call binding checkpoint](research/composition-input-bindings-v1-results.md)
+is **A — COMPOSITION INPUT BINDINGS READY**. Separate Explorer/Map inputs support
+empty experience and all 12 state/action pairs while historical adapters and
+authority remain unchanged. All A–O properties have executed synthetic evidence;
+36 initial transactions and an eight-step episode publish authentic events, and
+12 correct/12 wrong Recovery proposals authorize/reject independently. Exact
+replay, the old blocked composition-v0 checkpoint and historical regressions pass
+with their expected outcomes. No model calls; the live campaign remains unrun.
+[Reproduction and compact evidence](experiments/composition_input_bindings_v1/README.md)
+record the finite scope and unchanged trust boundaries.
