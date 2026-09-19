@@ -15,6 +15,8 @@ def execute(system, source, world, authentic, faults=None, instrument=True):
     errors = []
     if not hasattr(pending,"prediction"):
         after = published(system)
+        try: system.assert_bounds()
+        except (AssertionError,ValueError,RuntimeError): errors.append("bound_violation")
         if before != after or world.oracle.execution_count != executions or source.reader().current() is not None:
             errors.append("malformed_proposal_publication")
         if pending.committed or pending.executed or pending.continued or system.inner.continuation_authorized:
@@ -28,6 +30,8 @@ def execute(system, source, world, authentic, faults=None, instrument=True):
                 packages=len(system.packages),trace=len(system.inner.trace),pending_authentic=0,
                 map_quarantine=len(system.inner.map.quarantine),memory_quarantine=len(system.inner.memory.quarantine)),
             errors=errors)
+    if published(system) != before:
+        errors.append("direct_protected_mutation")
     prediction = asdict(pending.prediction)
     latched = (prediction==asdict(system.inner._prediction_at_begin) and root_absent
                and source.reader().current() is None and world.oracle.execution_count==executions)

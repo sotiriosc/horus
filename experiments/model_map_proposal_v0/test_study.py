@@ -42,4 +42,42 @@ class MapTests(unittest.TestCase):
         self.assertEqual(b.current.state,2)
         self.assertEqual(b.current.version,1)
 
+    def test_registered_history_and_probe(self):
+        from .campaign import registration, probe
+        plan,_=registration()
+        self.assertEqual(len(plan),144)
+        for family in ("O1","O2"):
+            cell=[d for d in plan if d["family"]==family and d["arm"]=="SHIFT" and d["stage"]=="H2"]
+            self.assertEqual(sorted(d["seed"] for d in cell),list(range(50001,50013)))
+            self.assertEqual({m:sum(d["mapping_index"]==m for d in cell) for m in range(6)},dict.fromkeys(range(6),2))
+        d=next(d for d in plan if d["arm"]=="SHIFT" and d["stage"]=="H2")
+        for raw in ('{"next_state":1,"consequence":-1}','{"next_state":0,"consequence":1}','{'):
+            class Synthetic:
+                def generate(self,prompt,seed): return raw,{"synthetic":True}
+            calls=[];row=probe(Synthetic(),d,None,calls.append)
+            self.assertEqual(len(calls),1)
+            self.assertEqual(row["probe"]["errors"],[])
+            self.assertTrue(row["history_retained"])
+            self.assertEqual(row["probe"]["authorization"]["committed"],raw!='{')
+
+    def test_family_thresholds_and_global_validity(self):
+        from .campaign import schedule
+        from .analysis import summarize
+        rows=[]
+        for d in schedule():
+            value=-1 if d["arm"]=="SHIFT" and d["stage"]=="H2" else 1
+            pred=dict(next_state=1,consequence=value)
+            outcome=dict(next_state=1,consequence=1 if d["arm"]=="CONTROL" else -1)
+            rows.append(dict(descriptor=d,valid=True,history_retained=True,evaluator_outcome=outcome,
+                model_call=dict(parsed_prediction=pred),probe=dict(errors=[],latched_before_execution=True,
+                receipt_unchanged=True,metric_delta={},measurement_matches=pred==outcome,
+                authorization=dict(committed=True,recovery_authorized=False),observations=[],
+                bounds=dict(memory=8,pairs=8,packages=8,trace=24,pending_authentic=1,map_quarantine=0,memory_quarantine=0))))
+        self.assertTrue(summarize(rows,[])["overall"].endswith(" REPLICATED"))
+        d=next(r for r in rows if r["descriptor"]["family"]=="O2")
+        d["valid"]=False;d["model_call"]["parsed_prediction"]=None
+        result=summarize(rows,[])
+        self.assertTrue(result["overall"].endswith("NOT ESTABLISHED"))
+        self.assertEqual(result["families"]["O1"]["revision"],"NOT_ESTABLISHED")
+
 if __name__=="__main__": unittest.main()
