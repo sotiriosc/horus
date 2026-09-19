@@ -1,0 +1,108 @@
+{
+  "parent": "4a25129948e7eb57917cefae1af2e3fd0f1235e9",
+  "protocol_commit": "85b36dd235755af4641b233b0f32a74d06fc3af4",
+  "implementation_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+  "preflight_exit_code": 2,
+  "preflight_status": "INFEASIBLE_UNDER_FROZEN_FRAMEWORK",
+  "real_model_calls": 0,
+  "exact_preflight_replay": {
+    "exit_code": 0,
+    "preflight_and_results_byte_identical": true,
+    "framework_transactions": 11,
+    "new_inference": 0
+  },
+  "model_campaign_replay": "NOT_RUN_FEASIBILITY_FAILED",
+  "regressions": [
+    {
+      "command": "python3 -m experiments.model_explorer_prior_factorial_v1.run --replay $HORUS_FACTORIAL_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:41.642082+00:00",
+      "finished_utc": "2026-09-19T04:29:43.311828+00:00",
+      "log_sha256": "7584a40baf2c37b334b1c71d8909dbaaf53ab61c5f80c00f4130c585345a1c2d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:43.312057+00:00",
+      "finished_utc": "2026-09-19T04:29:45.633008+00:00",
+      "log_sha256": "0f803c38801dacf99cf04a2122525e9968547a71daac271cbcd28d9168c8437e"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:45.633262+00:00",
+      "finished_utc": "2026-09-19T04:29:46.251461+00:00",
+      "log_sha256": "2a1d3ef8b372b7c2a25e1f911f2e7896ef0043134defec9d98fbd1492729bb03"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:46.251719+00:00",
+      "finished_utc": "2026-09-19T04:29:47.946390+00:00",
+      "log_sha256": "b2883e2117a9d25aa5e54d55d0705e6884689de391b17c71f05ba24fcd69a796"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:47.946669+00:00",
+      "finished_utc": "2026-09-19T04:29:48.172544+00:00",
+      "log_sha256": "86280031d5b59be891dea7e3f11c8b5d436c575b0b6d7bb8e8c3a2f23013d615"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:48.172791+00:00",
+      "finished_utc": "2026-09-19T04:29:48.550091+00:00",
+      "log_sha256": "d66df0fb743812a49e83f385ef93be4f8847a67e9ac1856e966ad2a031fce0ee"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:48.550329+00:00",
+      "finished_utc": "2026-09-19T04:29:48.600965+00:00",
+      "log_sha256": "47c067d24b676ea41bd89a60a2db38bf65740d0cdc354b32a9ab714c2d2a13bb"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:48.601586+00:00",
+      "finished_utc": "2026-09-19T04:29:48.667779+00:00",
+      "log_sha256": "a4f19a0a745c548a8e4b1e0fd18094a5794bf2a08aaf4a208278fce7b256bf80"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:48.668488+00:00",
+      "finished_utc": "2026-09-19T04:29:48.803206+00:00",
+      "log_sha256": "a14ea80490b025f6cd85cd4cb7b1339cfcde0dbdf8653025d47dbd30f185015f"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v0.test_preflight -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T04:29:48.803778+00:00",
+      "finished_utc": "2026-09-19T04:29:48.876289+00:00",
+      "log_sha256": "b86c49fbe6da9fcac2253ece6c12e72c57e2951863e3dc24538848c332b16a11"
+    }
+  ],
+  "prior_model_transcripts_and_summaries_identical": true,
+  "inherited_files_identical_before_publication": 282,
+  "frozen_framework_sources_verified": 23,
+  "public_main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+  "historical_tags": {
+    "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+    "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+    "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+    "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+    "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+  }
+}
