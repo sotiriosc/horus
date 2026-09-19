@@ -340,3 +340,20 @@ calls were used. All 144 proposals were valid, with zero protected false accepts
 and old history preserved. Exact replay and historical regressions passed.
 [Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1/README.md)
 retain the family-specific findings and the unchanged software trust boundary.
+
+### Representation priors and first model Map proposal
+
+The [representation-prior checkpoint](research/representation-priors-and-neutrality-checkpoint.md)
+preserves the finding that opaque aliases do not establish neutrality, without a
+new Explorer token campaign or any upgrade to earlier claims.
+
+The [first Map-proposal study](research/model-map-proposal-v0-results.md)
+passed its 16-case zero-call boundary gate, then completed exactly 144 real calls:
+142 valid predictions and two safe schema rejections, with zero protected false
+accepts. Both families achieved 12/12 exact SHIFT-H2 predictions and favorable H2
+pairs, but both had 0/12 exact old predictions at SHIFT H0; the all-valid gate also
+failed. **Contradiction-driven Map revision was not established** under the frozen
+criteria. Predictions remained distinct from receipt-authoritative reality.
+Exact replay and all 20 regression commands returned their expected outcomes.
+[Reproduction and compact evidence](experiments/model_map_proposal_v0/README.md)
+retain the failed prerequisites, state/consequence decomposition and trust boundary.
