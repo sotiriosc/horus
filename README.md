@@ -255,3 +255,13 @@ registry that hid derived paths also caused 3/3 false commits. See the
 Project source is licensed under [CERN-OHL-S-2.0](LICENSE). Third-party tools,
 PDK files, and datasets keep their own licenses and are not redistributed. See
 [provenance](docs/PROVENANCE.md) and [retained evidence policy](docs/EVIDENCE.md).
+
+### Adaptive Explorer episode v0
+
+The [adaptive episode study](research/model-explorer-adaptive-episode-v0-results.md)
+ran 24 empty-history episodes and 288 real Explorer proposals through the frozen
+framework. Integrity passed; neither the preregistered exploration effect nor
+discovery-to-reuse criterion was established. All actions remained allowed;
+uncertain retests and absent contradiction opportunities are reported separately.
+[Reproduction and bounded evidence](experiments/model_explorer_adaptive_episode_v0/README.md)
+include complete episode replay and the documented replay-only serialization fix.

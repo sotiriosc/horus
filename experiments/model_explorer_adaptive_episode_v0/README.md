@@ -23,6 +23,14 @@ reconstructed steps, episode analysis, source hashes, and summary. It uses the
 unchanged framework gates and makes no model calls. Synthetic unit tests are
 separate from measured evidence, including tests of contradiction handling.
 
+The first completed-data replay exposed a tuple/list comparison mismatch in its
+final summary assertion. The replay-only fix and added CLI regression test are
+documented in `replay-compatibility.json`, which pins both original and corrected
+source hashes. Original inference artifacts remain unchanged. Replay accepts only
+these exact runner/test differences; behavioral sources and preregistration must
+still match exactly. The full steps and episode analysis were already identical
+before the assertion fix.
+
 For fresh inference, run the registered local model and Ollama version and omit
 `--replay`. The runner checks version, manifest digest, prompt template, and frozen
 framework hashes. `--output` must name a new directory outside the repository.

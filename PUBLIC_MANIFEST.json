@@ -11,7 +11,8 @@
     "minimum-framework completeness audit and preregistered existing-framework stress results",
     "minimum-framework enforcement repair 1 and rerun of frozen completion criteria",
     "Explorer-only local language-model integration with frozen framework and separate integrity/usefulness evaluation",
-    "separate preregistered negative-avoidance and verified-positive Explorer Memory studies with raw and semantic evidence"
+    "separate preregistered negative-avoidance and verified-positive Explorer Memory studies with raw and semantic evidence",
+    "preregistered adaptive Explorer episodes from empty Memory with state-specific retest metrics and preserved frozen framework"
   ],
   "files": [
     {
@@ -35,9 +36,13 @@
       "sha256": "6181a66688451423ab6ddb431d3232313c38c8c6b4a14060de1b3f156a6244e9"
     },
     {
+      "path": "PUBLIC_MANIFEST.json",
+      "basis": "this manifest; recursive self-hash omitted"
+    },
+    {
       "path": "README.md",
-      "bytes": 12536,
-      "sha256": "ac6f9937d2d22a1c34c374ab156f2d424dc49bf9b829444eeaed0e08b37878ac"
+      "bytes": 13149,
+      "sha256": "3ee60651e0ca6a24230ff90cd5ef49673e0930d3b88c14cec902a60fe64544d6"
     },
     {
       "path": "docs/EVIDENCE.md",
@@ -350,6 +355,71 @@
       "sha256": "728786f0e3f6b6622f237986a11b714819abc3662d921a94dfd0a42a1937d3a9"
     },
     {
+      "path": "experiments/model_explorer_adaptive_episode_v0/README.md",
+      "bytes": 3944,
+      "sha256": "fe65e8f97d7a488e15a667638c26bd44840c742b4b320ab31c3688fc7583f2ef"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/__init__.py",
+      "bytes": 62,
+      "sha256": "100fbc23891241e7448f4a9a5d1cb5838dac69bf466dcd9357fac9452e2a5fb2"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/adapter.py",
+      "bytes": 1951,
+      "sha256": "5ff1cf04f278e32f8d99255d131d938006307416a7f684a52be645ce38355085"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/campaign.py",
+      "bytes": 18906,
+      "sha256": "114b7fd06eef068ca16bf50ad6dbf249a52ac7ffeb83600c8219173496ef93c2"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/episode-analysis.json",
+      "bytes": 1199128,
+      "sha256": "4af81221d205e4d05692f3ff85bfcc9a6235e60548f05f9e852e9455020a004a"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/frozen-framework.json",
+      "bytes": 3030,
+      "sha256": "4ea0758bf0fefd2345c6789f378c2ce716984b0124dc230ed62b4a982fd767f2"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "bytes": 842725,
+      "sha256": "de9525f9710f2d9889e21b1df226708eb46f5ff14e0db9ba57c499a73eff3d4f"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/replay-compatibility.json",
+      "bytes": 844,
+      "sha256": "0b6b7b008110519fdafbfb266b818148df7a6a789dda91f8654febe78c063071"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/results.json",
+      "bytes": 112396,
+      "sha256": "e49e773c12db3c5c14a7f5a299e40f2995179fcb691a36d8003ee13358495d14"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/run.py",
+      "bytes": 6550,
+      "sha256": "f225642230055681c58f21decedc69d519d2f2290c7a226a32e49d7c84fd6f78"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/steps.jsonl",
+      "bytes": 4570029,
+      "sha256": "c0151e3c576d4f5308e0354809f994189ad4d1979960fd03b1181bf0ca0987cb"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/test_study.py",
+      "bytes": 7638,
+      "sha256": "d02deb9bff958c0f6db2414bec915a3273bbfd0b7614be00581c455d1f4c0a74"
+    },
+    {
+      "path": "experiments/model_explorer_adaptive_episode_v0/verification.json",
+      "bytes": 4749,
+      "sha256": "3066d4211343666944c10a6a94b8b487718904778d029c95b6b3d5132b239b3a"
+    },
+    {
       "path": "experiments/model_explorer_integration_v0/README.md",
       "bytes": 3301,
       "sha256": "faca769f4af56896e763a2c044e5993fecfb05bcad879e7b05fb62f5cf3d7424"
@@ -563,6 +633,16 @@
       "path": "research/minimum-framework-stress-preregistration.md",
       "bytes": 10932,
       "sha256": "4dc94c10025b7ae411cc45c76c67005e0b5a30d172d6b9cdd02bbec89405bf66"
+    },
+    {
+      "path": "research/model-explorer-adaptive-episode-v0-preregistration.md",
+      "bytes": 13011,
+      "sha256": "92b514d151c7e46c24f76a7b3c1854f89b0e57da0f6d368a96be60b94bd820e1"
+    },
+    {
+      "path": "research/model-explorer-adaptive-episode-v0-results.md",
+      "bytes": 22739,
+      "sha256": "070050fa98e3778a6dd5f60ede402cd1aa1d22a98e69cd60a4402907174e2be1"
     },
     {
       "path": "research/model-explorer-integration-v0-preregistration.md",
@@ -1213,16 +1293,12 @@
       "path": "tests/test_structured_output_controller.py",
       "bytes": 4945,
       "sha256": "18ec8f457fcfe54b96016edc6a395f2816f996a3dbe4745068b6660c9049def3"
-    },
-    {
-      "path": "PUBLIC_MANIFEST.json",
-      "basis": "this manifest; recursive self-hash omitted"
     }
   ],
   "excluded_categories": [
     "private history, implementations, reports, prompts, tests, and research notes",
     "model weights, language corpora, caches, raw logs, mapped netlists, and PDK files",
-    "generated run artifacts other than approved compact experiment and audit summaries",
+    "unreviewed generated archives other than approved bounded public experiment evidence and audit summaries",
     "Git metadata from every predecessor repository"
   ]
 }
