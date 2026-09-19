@@ -111,11 +111,13 @@ ATTACKS = (
 def attack(name):
     system, source, world = setup("ATTACK_" + name)
     history = []
+    setup_rows = []
     for action in ("HOLD", "ADVANCE", "RETREAT"):
-        _, receipt = execute(system, source, world, action)
+        setup_row, receipt = execute(system, source, world, action)
+        setup_rows.append(setup_row)
         history.append(receipt)
     if name == "failed_recovery":
-        execute(system, source, world, "HOLD")
+        setup_rows.append(execute(system, source, world, "HOLD")[0])
     pending = system.begin_step(forced_action="ADVANCE" if name == "failed_recovery" else "HOLD")
     receipt = None
     if name != "pre_execution":
@@ -127,7 +129,7 @@ def attack(name):
         package = evidence(receipt)
     else:
         package = None
-    substitutions = {"wrong_transaction": (0 + 1, pending.transaction_id + 1),
+    substitutions = {"wrong_transaction": (1, pending.transaction_id + 1),
         "wrong_epoch": (0, pending.epoch + 1), "wrong_pre_state": (2, 2),
         "wrong_action": (3, "RETREAT"), "wrong_consequence": (5, 1),
         "wrong_event_id": (6, 99), "wrong_next_state": (4, 2),
@@ -153,7 +155,7 @@ def attack(name):
     before = published(system)
     result = system.submit_package(package, **({"failed_recovery": True} if name == "failed_recovery" else {}))
     after = published(system)
-    row = dict(name=name, authentic_receipt=asdict(receipt) if receipt else None,
+    row = dict(name=name, setup=setup_rows, authentic_receipt=asdict(receipt) if receipt else None,
                payload=asdict(package) if package else None,
                result=asdict(result), before=before, after=after,
                commit_delta=after["commits"] - before["commits"],
@@ -209,7 +211,8 @@ def run_campaign():
     assert empty == "ADVANCE" and chosen == "HOLD"
     memory = dict(state=state, without_history=empty, with_authorized_history=chosen,
                   allowed_actions=["ADVANCE", "HOLD", "RETREAT"], steps=memory_history)
-    protected = first + stationary + bounds + memory_history
+    attack_setup = [row for case in attacks for row in case["setup"]]
+    protected = first + stationary + bounds + memory_history + attack_setup
     assert not any(r["receipt_mismatch_accept"] or r["actual_mismatch_accept"] for r in protected)
     summary = dict(
         campaign="realized-event-grounding-v0", model_calls=0,
@@ -217,7 +220,8 @@ def run_campaign():
         primary_transactions=len(first), new_hold_prediction=1, new_hold_realized=-1,
         new_hold_authorized=-1, new_advance_prediction=-1, new_advance_realized=1,
         new_advance_authorized=1, contradictory_history_preserved=True,
-        protected_clean_authorizations=len(protected), protected_false_accepts=0,
+        protected_clean_authorizations=len(protected), attack_setup_authorizations=len(attack_setup),
+        protected_false_accepts=0,
         protected_receipt_mismatch_accepts=0, prediction_rewrites=0,
         adversarial_cases=len(attacks), adversarial_rejections=len(attacks),
         atomic_rejections=len(attacks), stationary_cases=len(stationary), stationary_passes=len(stationary),
