@@ -452,3 +452,16 @@ replay, the old blocked composition-v0 checkpoint and historical regressions pas
 with their expected outcomes. No model calls; the live campaign remains unrun.
 [Reproduction and compact evidence](experiments/composition_input_bindings_v1/README.md)
 record the finite scope and unchanged trust boundaries.
+
+### Model proposal role composition v1
+
+The [first live composition study](research/model-proposal-role-composition-v1-results.md)
+is **C — NOT ESTABLISHED**: 21 real calls (12 Explorer, 9 Map, 0 Recovery).
+All 12 episodes stopped before their first execution: 3 malformed Explorer
+responses and 9 malformed Map responses. No world events or Memory records were
+produced, so real sequential composition remains untested. The observed parser
+boundaries held; no retry, replacement or additional inference followed. The
+288-context UNKNOWN preflight, 41 post-live synthetic controls, seven-file exact
+replay and 39 post-campaign validation commands returned expected outcomes.
+[Compact evidence and reproduction](experiments/model_proposal_role_composition_v1/README.md)
+keep the negative live finding separate from the preserved synthetic parent A.
