@@ -28,6 +28,13 @@ controls, and fresh public regressions. The minimum framework is complete for
 the declared bounded scope; architecture development stops here. Hardware cost
 optimization remains deferred.
 
+**Explorer-only model integration:** a local language model made 69 valid action
+proposals through the frozen framework with zero observed integrity violations.
+Verified history improved its proposal in only 1/6 matched pairs, below the
+preregistered threshold. [Results and limits](research/model-explorer-integration-v0-results.md)
+keep framework integrity separate from model usefulness. No other model role
+was integrated.
+
 ## Hardware baseline
 
 The verified baseline includes reduced-precision arithmetic and formats,
