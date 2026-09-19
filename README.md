@@ -398,3 +398,17 @@ No model calls were made. Exact replay and all 28 regression commands returned t
 expected outcomes. The old Recovery-v0 checkpoint remains blocked and unchanged.
 [Reproduction and compact evidence](experiments/state_recovery_proposal_interface_v1/README.md)
 retain this unresolved requirement; no model campaign was launched.
+
+### State Recovery authorizer status binding v1
+
+The [separate zero-call status repair](research/state-recovery-authorizer-status-binding-v1-results.md)
+is **A — STATE RECOVERY STATUS BINDING COMPLETE**. In trusted coordinator-owned
+Recovery scope, the authorizer now requires RECOVERING status and delegates all
+remaining checks to the historical implementation. Ordinary PROPOSED transactions
+remain unchanged. The 136-cell enum matrix preserved 16 RECOVERING acceptances and
+rejected all 120 other-status candidates; 25 wrong-status transactions rejected
+atomically. Default and injected interface records matched exactly. Exact replay
+and all 31 regression commands returned expected outcomes. The old interface-v1 C
+and Recovery-v0 blocked checkpoints remain unchanged. Zero model calls; no model
+campaign was launched. [Reproduction and verification](experiments/state_recovery_authorizer_status_binding_v1/README.md)
+record the scoped contract, evidence and unchanged software trust boundary.
