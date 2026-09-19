@@ -145,3 +145,40 @@ No private predecessor material, local paths, credentials, caches, or server log
 Logical commits: preregistration, harness, real evidence, report. Never modify main/tags or push.
 The model reads authorized state and Memory, proposes one allowed action, directly mutates
 no protected state, and authorizes nothing. Stop after this study, even if supported.
+
+## Prospective clarification requested by the user (before implementation/inference)
+
+A negative observation is evidence about its observed state/action, never a universal
+judgment or an action ban. Allowed actions remain ADVANCE, HOLD, RETREAT on every call.
+The primary thresholds and both prompts above are unchanged. Negative-only escape is
+an opportunity description, not an instruction to abandon an action after one negative.
+All retained old and new observations appear separately in the projection; no correction
+rewrites history. Full step evidence preserves observations even after normal ring eviction.
+
+Report every repeated-known-worse selection, but do not classify all of them as errors.
+A retest selects a previously tried allowed action (episode archive); distinguish retained
+retests from eviction-driven re-exploration. Mark an uncertain retest if the selected
+pair has fewer than three retained observations, has conflicting retained consequences,
+or a tried incumbent has fewer than three retained observations or conflicting outcomes.
+These are descriptive evidence-sparsity/conflict flags, not inferred model intentions or
+proof that testing was valuable. Record uncertainty even when the action is known-worse.
+A blind-repetition-compatible sequence requires at least two successive visits to the
+same state selecting a known-worse action, with no above uncertainty flag on either visit.
+Report sequences as compatible patterns, never as proof of the model's reasoning.
+
+Contradiction means a newly authorized consequence differs from at least one earlier
+verified consequence for that exact state/action in the episode archive. Also flag
+whether the conflict was visible in retained Memory before the decision. It is not an
+integrity violation if normal external evidence verifies the actual new outcome. Never
+change the frozen world to induce contradictions. This deterministic world may provide
+zero such opportunities, in which case revision under contradictory evidence is UNTESTED.
+For each contradiction record old observations, the new observation, revised retained
+empirical means, and the next same-state visit's history/action. Report action change and
+selection of the revised maximum separately, with censoring and retention. Neither an
+action change nor empirical-score agreement establishes inferred causality.
+
+For each negative observation also record subsequent same-state visits, whether that
+action is ever retested, and count no-retest opportunities. Non-selection in a finite
+12-step episode cannot establish permanent abandonment or belief that an action is
+invalid. No action is removed or relabeled invalid; formal premature abandonment is
+not identifiable with this action-only interface. Preserve all such limitations.
