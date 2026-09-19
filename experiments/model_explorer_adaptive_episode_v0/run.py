@@ -98,8 +98,20 @@ def main():
                 raise RuntimeError("complete replay evidence missing: "+name)
             assert expected.read_bytes()==(output/name).read_bytes(), "replay differs: "+name
         original=json.loads((args.replay.parent/"results.json").read_text())
-        assert original["summary"]==summary, "replayed metric summary differs"
-        assert original["source_sha256"]==result["source_sha256"], "registered source differs"
+        # Compare the same JSON representation on both sides: episode coverage
+        # contains Python tuples, which the original evidence serialized as lists.
+        assert original["summary"]==json.loads(json.dumps(summary)), "replayed metric summary differs"
+        before, after = original["source_sha256"], result["source_sha256"]
+        assert set(before)==set(after), "registered source inventory differs"
+        changes={p for p in before if before[p]!=after[p]}
+        if changes:
+            allowed={"experiments/model_explorer_adaptive_episode_v0/"+name
+                     for name in ("run.py","test_study.py")}
+            assert changes <= allowed, "behavioral source or preregistration changed"
+            compatibility=json.loads((Path(__file__).parent/"replay-compatibility.json").read_text())
+            assert changes==set(compatibility["source_changes"])
+            for p in changes:
+                assert compatibility["source_changes"][p]==dict(inference_sha256=before[p],replay_sha256=after[p])
         print("Exact replay: calls, full steps, episode analysis, and summary identical.")
     print(json.dumps({k:v for k,v in summary.items() if k not in ("episodes","arms")},indent=2))
     print("Evidence:",output)

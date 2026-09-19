@@ -1,8 +1,12 @@
 """Synthetic tests of admission, prospective metrics, eviction, and exact replay."""
 
 import copy
+import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -67,6 +71,29 @@ class Tests(unittest.TestCase):
             self.assertEqual(replay.index,288)
             replay=Replay(path)
             with self.assertRaises(AssertionError):replay.generate("changed",10101,"A")
+
+    def test_cli_replay_round_trips_serialized_evidence(self):
+        # Exercises the public CLI's final comparisons, including tuple/list
+        # normalization. All responses here are explicitly synthetic, not inference.
+        root=Path(__file__).resolve().parents[2]
+        with tempfile.TemporaryDirectory() as directory:
+            source=Path(directory)/"source";source.mkdir()
+            output=Path(directory)/"replay"
+            public_keys=("descriptor","model_call","authorization","world_event",
+                "original_prediction","violations","projection_verified","bounds","matched_initial_state_verified")
+            (source/"steps.jsonl").write_text("".join(json.dumps(r,sort_keys=True)+"\n" for r in self.rows))
+            (source/"model-calls.jsonl").write_text("".join(json.dumps({k:r[k] for k in public_keys},sort_keys=True)+"\n" for r in self.rows))
+            summary=summarize(self.rows)
+            (source/"episode-analysis.json").write_text(json.dumps(summary["episodes"],indent=2)+"\n")
+            summary["episodes"]=[{k:v for k,v in e.items() if k not in ("repeated_visits","decisions_detail")} for e in summary["episodes"]]
+            paths=list(Path(__file__).parent.glob("*.py"))+[root/"research/model-explorer-adaptive-episode-v0-preregistration.md",Path(__file__).parent/"frozen-framework.json"]
+            expected=dict(summary=summary,source_sha256={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)})
+            (source/"results.json").write_text(json.dumps(expected,indent=2)+"\n")
+            result=subprocess.run([sys.executable,"-m","experiments.model_explorer_adaptive_episode_v0.run",
+                "--replay",str(source/"model-calls.jsonl"),"--output",str(output)],cwd=root,
+                env={**os.environ,"PYTHONDONTWRITEBYTECODE":"1"},capture_output=True,text=True)
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertIn("Exact replay:",result.stdout)
 
     def metric_rows(self, actions_and_outcomes):
         # Counterfactual data only for metric unit tests. Never world/model evidence.
