@@ -384,3 +384,17 @@ Recovery; HOLD retains a valid incumbent. Exact diagnostic replay and all 25
 regression commands returned their expected outcomes. No architecture was changed.
 [Reproduction and compact evidence](experiments/model_recovery_proposal_v0/README.md)
 distinguish native integrity from the untested model adapter.
+
+### State Recovery proposal interface v1
+
+The [separate zero-call interface layer](research/state-recovery-proposal-interface-v1-results.md)
+lets a deterministic external source propose only a bounded replacement-state value.
+Native Recovery owns the attempt and identity/status envelope; the existing authorizer
+and receipt-bound staged publication remain unchanged. All 32 default diagnostic cases
+matched exactly; correct/wrong proposals and malformed/failing sources passed the
+operational checks. **C — NOT ESTABLISHED:** the mandatory low-level wrong-status
+rejection failed in both historical and new unchanged authorizers (8/8 acceptances each).
+No model calls were made. Exact replay and all 28 regression commands returned their
+expected outcomes. The old Recovery-v0 checkpoint remains blocked and unchanged.
+[Reproduction and compact evidence](experiments/state_recovery_proposal_interface_v1/README.md)
+retain this unresolved requirement; no model campaign was launched.
