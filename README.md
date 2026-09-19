@@ -427,3 +427,15 @@ and all 33 regression commands returned expected outcomes. No retries, replaceme
 calls, extensions or role combinations occurred. Historical A/C/blocked checkpoints
 remain unchanged. [Reproduction and compact evidence](experiments/model_recovery_proposal_v1/README.md)
 retain family thresholds, target/action/token breakdowns and the software trust boundary.
+
+### Model proposal role composition v0
+
+The [zero-call composition checkpoint](research/model-proposal-role-composition-v0-results.md)
+is **C — NOT ESTABLISHED**. The unchanged Map adapter only admits state 1 / HOLD;
+all three required state-0 first actions reject safely before execution. Existing
+opaque Explorer projections also reject empty Memory. No model calls or interface
+changes occurred. Full sequential composition and model behavior remain untested.
+Diagnostic replay matched exactly and all 33 historical regression commands
+returned expected outcomes, including preserved negative checkpoints.
+[Reproduction and compact evidence](experiments/model_proposal_role_composition_v0/README.md)
+distinguish this domain blocker from an authority failure.
