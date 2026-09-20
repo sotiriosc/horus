@@ -617,3 +617,17 @@ Older true history and new contradictory outcomes coexist; no measured action
 executes or writes Memory. This concerns stateless proposals, not persistent learning.
 See [frozen thresholds](research/cross-episode-stale-memory-explorer-revision-v1-preregistration.md)
 and [compact results/trajectories](experiments/cross_episode_stale_memory_explorer_revision_v1/results.json).
+
+## Explorer value-aggregation contract v0
+
+The separate [96-call Explorer A/B study](research/explorer-value-aggregation-contract-v0-results.md)
+is **EXPLICIT-MEAN EXPLORER POLICY NOT ESTABLISHED**. Valid responses: 96/96.
+O1: CONTROL B HOLD 12/12; CHANGED A/B RETREAT 2/12 and 4/12; favorable CHANGED pairs 2/12.
+O2: CONTROL B HOLD 12/12; CHANGED A/B RETREAT 0/12 and 2/12; favorable CHANGED pairs 2/12.
+A preserves the original instruction; B explicitly specifies arithmetic mean over
+all verified outcomes. Only the system instruction differs within matched pairs.
+Exact replay and historical preservation passed; no measured action executed.
+The preceding Explorer NOT ESTABLISHED checkpoint remains unchanged.
+This tests an explicitly instructed policy, not spontaneous adaptation or learning.
+See [frozen thresholds](research/explorer-value-aggregation-contract-v0-preregistration.md)
+and [compact results/pairs](experiments/explorer_value_aggregation_contract_v0/results.json).
