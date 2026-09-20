@@ -631,3 +631,15 @@ The preceding Explorer NOT ESTABLISHED checkpoint remains unchanged.
 This tests an explicitly instructed policy, not spontaneous adaptation or learning.
 See [frozen thresholds](research/explorer-value-aggregation-contract-v0-preregistration.md)
 and [compact results/pairs](experiments/explorer_value_aggregation_contract_v0/results.json).
+
+## Map-guided Explorer interface v0
+
+The separate [zero-call architectural study](research/map-guided-explorer-interface-v0-results.md)
+is **A — MAP-GUIDED EXPLORER INTERFACE READY** within its read-only input-binding scope.
+All 18 invariants and 82 deterministic cases passed, including wrong forecasts,
+invalid/missing forecasts, stale rejection and empty-history handling.
+Only finite parsed forecasts enter Explorer; neither role gains truth or authority.
+Exact replay, 75 tests and ten historical replays passed. Both Explorer negatives
+and the Map REPLICATED result remain unchanged. No live model calls or behavior claim.
+See [registration](research/map-guided-explorer-interface-v0-preregistration.md)
+and [compact controls/results](experiments/map_guided_explorer_interface_v0/results.json).
