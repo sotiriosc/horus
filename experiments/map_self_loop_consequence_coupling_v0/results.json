@@ -1,0 +1,898 @@
+{
+  "Explorer_model_calls": 0,
+  "Recovery_model_calls": 0,
+  "authentic_post_prediction_receipts": true,
+  "by_condition": {
+    "M": {
+      "consequence_correct": 4,
+      "consequence_positive": 4,
+      "exact": 4,
+      "n": 4,
+      "next_state_correct": 4,
+      "valid": 4
+    },
+    "S": {
+      "consequence_correct": 0,
+      "consequence_positive": 0,
+      "exact": 0,
+      "n": 4,
+      "next_state_correct": 4,
+      "valid": 4
+    }
+  },
+  "calls": [
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 2
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 0,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99001,
+        "setup_actions": [
+          "HOLD"
+        ],
+        "setup_count": 1
+      },
+      "index": 0,
+      "latched_before_execution": true,
+      "measurement_matches": false,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 2,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c00",
+        "transaction_id": 2
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":0}",
+      "request_sha256": "5b72a94163fa2e4b7a78004a694b6abe54f9d668a66345613511f9634b01080f",
+      "score": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c00",
+          "transaction_id": 1
+        }
+      ],
+      "source_call_sha256": "0362a0587c7e5949fe34ca3bac99e3455bbd15ffb274cd22b24353e55710a831",
+      "source_step_sha256": "4c92ec1ebcf4edcd9ee44ed0fae0d992814d202b254a49cb3ccfe820dc03b0b6",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 1,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "M",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 1,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99001,
+        "setup_actions": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "setup_count": 2
+      },
+      "index": 1,
+      "latched_before_execution": true,
+      "measurement_matches": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c01",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "raw_output": " {\"next_state\": 2, \"consequence\": 1}",
+      "request_sha256": "b328e6684f3b5dcf997d5db1492bf1c61a99859bd9a30ad8d29bc7c1bfcf4c9a",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c01",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 1,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c01",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "1766e3faa50b122da619b35728718dd45269586d3968b31a86e5ed2baefb270f",
+      "source_step_sha256": "fbc6436cf5a66388a526fd0dbf6ee36c69ec66d2637fb1f2759703170066c610",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 1,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "M",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 2,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99001,
+        "setup_actions": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "setup_count": 2
+      },
+      "index": 2,
+      "latched_before_execution": true,
+      "measurement_matches": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c02",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "raw_output": " {\"next_state\": 2, \"consequence\": 1}",
+      "request_sha256": "348416b1017e9f71c2872cc610b8b3d33f66caec21c4d0cd6658874ea8c8ae15",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c02",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 1,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c02",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "63af0ebc8bcb7f636d93f6c9fee19348da415a527164dba7228ebb178733bf2d",
+      "source_step_sha256": "f436206b169ff9803c557fa3a4c716821720a011dd8df5a4ca9d8947f4fe126c",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "M4",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 2
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 3,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99001,
+        "setup_actions": [
+          "HOLD"
+        ],
+        "setup_count": 1
+      },
+      "index": 3,
+      "latched_before_execution": true,
+      "measurement_matches": false,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 2,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c03",
+        "transaction_id": 2
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":0}",
+      "request_sha256": "f1e3e632f05189469bc053f67043a5cb118d470620046307fb2a9017327a142b",
+      "score": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c03",
+          "transaction_id": 1
+        }
+      ],
+      "source_call_sha256": "5557b7b29e8edae2b8955eaff4a7045e741af3d799ef4790a6a87566878da277",
+      "source_step_sha256": "e05c9593c575be8246f1d460e57b4e8c4a68f953e7c97426305c379a76c90df3",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "M4",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 2
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 4,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99002,
+        "setup_actions": [
+          "HOLD"
+        ],
+        "setup_count": 1
+      },
+      "index": 4,
+      "latched_before_execution": true,
+      "measurement_matches": false,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 2,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c04",
+        "transaction_id": 2
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":0}",
+      "request_sha256": "90c1a0ccea01a87968f0aa18cbc4303e03775f9ebba7d39224d2b803829fc85a",
+      "score": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c04",
+          "transaction_id": 1
+        }
+      ],
+      "source_call_sha256": "97d8a4c89df3b355b84eaabc2f50332276b7c47151d53ac17167b3ec11d80b00",
+      "source_step_sha256": "4e20b2d168af13d647dfd28f12a793bdc4c11edf81bb38f40658536a9bd33585",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "M4",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 1,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "M",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 5,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99002,
+        "setup_actions": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "setup_count": 2
+      },
+      "index": 5,
+      "latched_before_execution": true,
+      "measurement_matches": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c05",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "raw_output": " {\"next_state\":2,\"consequence\":1}",
+      "request_sha256": "46071cc3dd6135c59c8cdc63ff5ead02e513e0a5a27076014b7f4ee81fc3a78b",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c05",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 1,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c05",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "c316172442db64f26da6848d98a07a6e1abe41f930303e24e0a0bf8950aaa1c6",
+      "source_step_sha256": "ee308e7100daf6768e5a8c7fed521cd7dd6e28614a7de89d364d3ba6cfbaeb61",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "M4",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 1,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "M",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 6,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99002,
+        "setup_actions": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "setup_count": 2
+      },
+      "index": 6,
+      "latched_before_execution": true,
+      "measurement_matches": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c06",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "raw_output": " {\"next_state\": 2, \"consequence\": 1}",
+      "request_sha256": "330da9631d303c63bf2dc0c046766533f6324ac77ff06ee814468f3aaea320ae",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c06",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 1,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c06",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "a98dfd56beb1f24c5ee350e11c721261b30e9ef49266960f28b5e0f0d181ba78",
+      "source_step_sha256": "eec2eda53c52ee04490a1e88f3c634de4910bc1c7ddc5166b095498879e28a6b",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 2
+      },
+      "authorization": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 7,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99002,
+        "setup_actions": [
+          "HOLD"
+        ],
+        "setup_count": 1
+      },
+      "index": 7,
+      "latched_before_execution": true,
+      "measurement_matches": false,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 2,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c07",
+        "transaction_id": 2
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":0}",
+      "request_sha256": "5464ab6ec6c8ea5ede144f14172a8f6992473bf289f10d21a5a9ce87f7c44345",
+      "score": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "setup_receipts": [
+        {
+          "action": "HOLD",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 1,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_SELF_LOOP_CONSEQUENCE_COUPLING_V0:c07",
+          "transaction_id": 1
+        }
+      ],
+      "source_call_sha256": "42f30e8aaff96f6bea9b09d9a0c0a57f6278f6ba3f8baecd37e646d4046c0b2b",
+      "source_step_sha256": "d24b6ba669f246200864cd176f0f7751b39031437d3fe854b1b893d7b47a312b",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K2",
+          "transaction_id": 1
+        }
+      ]
+    }
+  ],
+  "claim_scope": "Eight real-model one-step predictions with matched one-field history contrast, scored against new original post-latch simulated execution receipts; no internal mechanism claim.",
+  "classification": "A \u2014 SELF-LOOP / CONSEQUENCE COUPLING EFFECT OBSERVED",
+  "classification_status": "FINAL",
+  "complete_trials": 8,
+  "exact_replay_passed": true,
+  "improvements": 4,
+  "integrity_passed": true,
+  "live_score_executions": 8,
+  "live_setup_executions": 12,
+  "live_unique_receipts": 20,
+  "live_world_executions": 20,
+  "matched_pairs": [
+    {
+      "M": 2,
+      "S": 1,
+      "family": "O1",
+      "only_path": "VERIFIED_CHRONOLOGICAL_HISTORY[0].next_state",
+      "passed": true,
+      "seed": 99001,
+      "wire_bytes_different": 1
+    },
+    {
+      "M": 2,
+      "S": 1,
+      "family": "O1",
+      "only_path": "VERIFIED_CHRONOLOGICAL_HISTORY[0].next_state",
+      "passed": true,
+      "seed": 99002,
+      "wire_bytes_different": 1
+    },
+    {
+      "M": 2,
+      "S": 1,
+      "family": "O2",
+      "only_path": "VERIFIED_CHRONOLOGICAL_HISTORY[0].next_state",
+      "passed": true,
+      "seed": 99001,
+      "wire_bytes_different": 1
+    },
+    {
+      "M": 2,
+      "S": 1,
+      "family": "O2",
+      "only_path": "VERIFIED_CHRONOLOGICAL_HISTORY[0].next_state",
+      "passed": true,
+      "seed": 99002,
+      "wire_bytes_different": 1
+    }
+  ],
+  "matched_request_check": true,
+  "native_score_state_recovery_authorizations": 0,
+  "native_setup_state_recovery_authorizations": 4,
+  "pairs": [
+    {
+      "M": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "category": "0 -> 1",
+      "family": "O1",
+      "improvement": true,
+      "regression": false,
+      "seed": 99001
+    },
+    {
+      "M": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "category": "0 -> 1",
+      "family": "O1",
+      "improvement": true,
+      "regression": false,
+      "seed": 99002
+    },
+    {
+      "M": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "category": "0 -> 1",
+      "family": "O2",
+      "improvement": true,
+      "regression": false,
+      "seed": 99001
+    },
+    {
+      "M": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "category": "0 -> 1",
+      "family": "O2",
+      "improvement": true,
+      "regression": false,
+      "seed": 99002
+    }
+  ],
+  "parent": "1b1f75650215a333498e0d7de5ba23dc9db407ec",
+  "prediction_repairs": 0,
+  "real_model_calls": 8,
+  "registered_call_limit": 8,
+  "registration_commit": "aab4ce50dfce7438ca97dde6529b04e8ba47cfb7",
+  "regressions": 0,
+  "replacement_calls": 0,
+  "retries": 0,
+  "scoring_scope": "Actual external simulated HOLD execution after model prediction latch, scored against its original receipt.",
+  "study": "map-self-loop-consequence-coupling-v0",
+  "valid": 8
+}
