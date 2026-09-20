@@ -575,3 +575,18 @@ overall NOT ESTABLISHED result is unchanged. This concerns stateless proposals
 conditioned on authenticated external history, not persistent model learning.
 See the [frozen criteria](research/cross-episode-map-history-depth-v1-preregistration.md)
 and [compact results](experiments/cross_episode_map_history_depth_v1/results.json).
+
+## Cross-episode stale-Memory feasibility v0
+
+The [zero-model feasibility study](research/cross-episode-stale-memory-feasibility-v0-results.md)
+is **A — CROSS-EPISODE STALE-MEMORY FIXTURE FEASIBLE**. After trusted reset,
+authentic new −1 target events coexist with the preserved old +1 observations:
+CONTROL [+1,+1,+1,+1], CHANGED [+1,+1,−1,−1]. P0/P1/P2 are at actual state 0;
+the primary history uses seven records without eviction. Existing native state
+Recovery ran twice in CHANGED and zero in CONTROL, without rewriting predictions,
+receipts or history. Four invalid receipt submissions were rejected; separate
+FIFO controls, exact replay and all seventeen completion gates passed. Zero model
+calls; historical results and authority architecture remain unchanged. This is
+history/provenance feasibility, not a model adaptation result.
+See [preregistration](research/cross-episode-stale-memory-feasibility-v0-preregistration.md)
+and [compact results](experiments/cross_episode_stale_memory_feasibility_v0/results.json).
