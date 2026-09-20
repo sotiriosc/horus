@@ -492,3 +492,16 @@ not prediction accuracy or composition success; composition-v1 remains C.
 [Compact evidence and reproduction](experiments/composition_empty_history_schema_contract_v0/README.md)
 record five-file exact replay and five unchanged historical checkpoints.
 No composition rerun or next experiment followed.
+
+
+### Model proposal role composition v2 — interrupted
+
+The [v2 checkpoint](research/model-proposal-role-composition-v2-results.md) is
+**C — NOT ESTABLISHED** after a reported computer crash removed the temporary live
+evidence directory. The preregistration and frozen implementation survived; exact
+live totals and replay are unavailable. Surviving console output reports at least
+18 calls and seven commits, not a complete auditable campaign. No replacement
+inference was performed. The recovered preflight, bounded controls and historical
+regressions passed, with all previous results unchanged.
+[Compact status and verification](experiments/model_proposal_role_composition_v2/README.md)
+keep missing live evidence distinct from synthetic or historical success.
