@@ -1,0 +1,189 @@
+{
+  "actual": {
+    "action": "ADVANCE",
+    "consequence": 1,
+    "epoch": 1001,
+    "next_state": 1,
+    "pre_state": 0,
+    "transaction_id": 1
+  },
+  "archive_file_sha256": {
+    "journal.jsonl": "aeb98f7e8533a9d12e5b16d7e692a1b9603bd65c8dda62efb2a51940887be342",
+    "model-calls.jsonl": "40ad6993e58887ba3f71a0b1db68885b28c2175b9121c4213919ce40402d3b17",
+    "steps.jsonl": "5272d60de7f6e58aed8f92253412415eef96905a759bb9647d62bbc0c9d5b8bf"
+  },
+  "authorizer": {
+    "accepted": true,
+    "candidate": {
+      "epoch": 1001,
+      "pair_decision_id": 4299262263552,
+      "status": "RECOVERING",
+      "transaction_id": 1,
+      "value": 1
+    },
+    "decision": {
+      "action": "ADVANCE",
+      "channel_sequence": 0,
+      "consequence": 1,
+      "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+      "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+      "epoch": 1001,
+      "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+      "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+      "measurement_matches": false,
+      "next_state": 1,
+      "observation_a_id": 16793993473,
+      "observation_b_id": 16793993474,
+      "pair_decision_id": 4299262263552,
+      "pre_state": 0,
+      "source_a": "SOURCE_A",
+      "source_b": "SOURCE_B",
+      "transaction_id": 1
+    },
+    "state_recovery": true
+  },
+  "campaign": "model_proposal_role_composition_v2_replacement_r1",
+  "decision": 0,
+  "episode": 0,
+  "execution_call_arguments": {
+    "action": "ADVANCE",
+    "epoch": 1001,
+    "transaction_id": 1
+  },
+  "execution_call_evidence": "Arguments reconstructed from retained trusted pending record and inspected boundary.execute call site; profiler records actual world and boundary returns. No separate historical entry-call argument capture exists.",
+  "journal_head_sha256": "0f196a14be69a31cbc4151b6897ae3195778fd1d0f0196b9484fc2b3fce8abee",
+  "journal_sequence": {
+    "AUTHENTIC_RECEIPT": 8,
+    "AUTHORIZER_DECISION": 16,
+    "CANDIDATE_ENVELOPE": 15,
+    "COMMIT_OR_REJECTION": 17,
+    "EXTERNAL_EVENT": 7,
+    "MEASURE_RESULT": 9,
+    "PREDICTION_LATCHED": 6,
+    "RECOVERY_CANDIDATE_ENVELOPE": 14,
+    "RECOVERY_OPPORTUNITY": 10,
+    "TRANSACTION_FINALIZED": 18
+  },
+  "later_call": {
+    "decision": 4,
+    "episode": 0,
+    "index": 12,
+    "journal_intent_sequence": 74,
+    "memory_snapshot_sha256": "5b787608983ed7ce81309771e373f8125e1af0aa88cb149cd96c95eac202f8ee",
+    "request_sha256": "43caeed6afb198f814aba1b8552bab3c65a6b2b2bb91e1b089117827bf5cf6a7",
+    "role": "Map",
+    "visible_history_entry": {
+      "consequence": 1,
+      "next_state": 1,
+      "surface_action": "K1",
+      "transaction_id": 1
+    }
+  },
+  "measure": {
+    "measurement": {
+      "epoch": 1001,
+      "matches": false,
+      "observation_id": 4299262263552,
+      "status": "MEASURED",
+      "transaction_id": 1
+    },
+    "verified": true
+  },
+  "memory_record": {
+    "action": "ADVANCE",
+    "authorization": "AUTHORIZED",
+    "consequence": 1,
+    "epoch": 1001,
+    "measurement_matches": false,
+    "next_state": 1,
+    "observation_a_id": 16793993473,
+    "observation_b_id": 16793993474,
+    "pair_decision_id": 4299262263552,
+    "pre_state": 0,
+    "source_pair": [
+      "SOURCE_A",
+      "SOURCE_B"
+    ],
+    "transaction_id": 1
+  },
+  "model_calls": 0,
+  "original_object_identity": "Retained runtime identity check is true; JSON field/hash verification cannot recreate historical Python identity. Original issuer and recorder remain trusted.",
+  "original_prediction": {
+    "action": "ADVANCE",
+    "consequence": 0,
+    "epoch": 1001,
+    "next_state": 1,
+    "pre_state": 0,
+    "transaction_id": 1
+  },
+  "original_raw_archives_unchanged": true,
+  "package": {
+    "package_id": [
+      "COMPOSITION_V1_HORUS_COMPOSITION_V2_REPLACEMENT_R1:episode=0",
+      1,
+      1001,
+      1
+    ],
+    "pair_decision_id": 4299262263552,
+    "prediction": {
+      "action": "ADVANCE",
+      "consequence": 0,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 0,
+      "transaction_id": 1
+    },
+    "receipt": {
+      "action": "ADVANCE",
+      "epoch": 1001,
+      "event_id": 1,
+      "next_state": 1,
+      "pre_state": 0,
+      "realized_consequence": 1,
+      "source_identity": "COMPOSITION_V1_HORUS_COMPOSITION_V2_REPLACEMENT_R1:episode=0",
+      "transaction_id": 1
+    }
+  },
+  "pair": {
+    "action": "ADVANCE",
+    "channel_sequence": 0,
+    "consequence": 1,
+    "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+    "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+    "epoch": 1001,
+    "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+    "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+    "measurement_matches": false,
+    "next_state": 1,
+    "observation_a_id": 16793993473,
+    "observation_b_id": 16793993474,
+    "pair_decision_id": 4299262263552,
+    "pre_state": 0,
+    "source_a": "SOURCE_A",
+    "source_b": "SOURCE_B",
+    "transaction_id": 1
+  },
+  "parsed_action": "ADVANCE",
+  "parsed_map_prediction": {
+    "consequence": 0,
+    "next_state": 1
+  },
+  "parsed_recovery_value": 1,
+  "passed": true,
+  "receipt": {
+    "action": "ADVANCE",
+    "epoch": 1001,
+    "event_id": 1,
+    "next_state": 1,
+    "pre_state": 0,
+    "realized_consequence": 1,
+    "source_identity": "COMPOSITION_V1_HORUS_COMPOSITION_V2_REPLACEMENT_R1:episode=0",
+    "transaction_id": 1
+  },
+  "retained_journal_records_verified": 1092,
+  "selected_call_indices": [
+    0,
+    1,
+    2
+  ]
+}
