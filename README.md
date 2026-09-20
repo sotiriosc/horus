@@ -529,3 +529,12 @@ predictions remained wrong, and one next-state comparison worsened. Eight eviden
 files replayed byte-identically with zero inference; R1 and prior checkpoints remain
 unchanged. No experimental world execution or Memory writes. This result concerns
 input information visibility, not weights or persistent model learning.
+
+## Cross-episode authenticated Memory boundary v0
+
+The [zero-call boundary feasibility study](research/cross-episode-authenticated-memory-boundary-v0-results.md)
+is **C — NOT ESTABLISHED**. Existing epoch transitions preserve authenticated
+Memory/pairs/packages, chronology, UNKNOWN and ordinary FIFO eviction, but retain
+current state. Fresh construction resets state and discards history. The required
+fresh-state initialization with retained provenance has no existing supported API.
+No core repair or model campaign was started; prior checkpoints remain unchanged.
