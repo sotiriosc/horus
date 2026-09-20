@@ -652,3 +652,13 @@ The registered F/P histories share counts and latest value but differ in order a
 All earlier results remain unchanged. See [preregistration](research/map-temporal-relation-forecast-v0-preregistration.md),
 [all parsed outcomes and frozen gates](experiments/map_temporal_relation_forecast_v0/results.json),
 and [executed verification](experiments/map_temporal_relation_forecast_v0/verification.json).
+
+## Map–Explorer oracle decomposition v0
+
+The [registered proposal-only diagnostic](research/map-explorer-oracle-decomposition-v0-results.md)
+completed 269 real calls: 240 mandatory and 29 eligible conditional calls.
+**PIPELINE NOT FULLY ESTABLISHED**. Forecast ranking, oracle comparison and following-Map
+remain separate decisions; ties intentionally leave conditional slots unissued.
+The prior temporal negative remains unchanged. See [preregistration](research/map-explorer-oracle-decomposition-v0-preregistration.md),
+[compact per-context results](experiments/map_explorer_oracle_decomposition_v0/results.json),
+and [verification](experiments/map_explorer_oracle_decomposition_v0/verification.json).
