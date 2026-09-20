@@ -479,3 +479,16 @@ Composition-v1 remains C; no prompt, parser, projection or response was changed.
 [Compact findings and reproduction](experiments/composition_initial_map_schema_diagnosis_v0/README.md)
 retain deterministic regeneration and four focused historical replays. No new
 model calls or next experiment.
+
+### Composition empty-history schema contract v0
+
+The [18-call paired contract study](research/composition-empty-history-schema-contract-v0-results.md)
+meets its frozen **SCHEMA-CONTRACT EFFECT SUPPORTED** criterion: the original
+instruction yields 0/9 valid outputs, versus 9/9 for an explicit integer/domain
+contract. All nine pairs improve; O1 improves 0/4 → 4/4 and O2 0/5 → 5/5.
+The original contexts, user bytes, seeds, sampler and parser are unchanged.
+No world event executes and no Memory is fabricated. This is schema compliance,
+not prediction accuracy or composition success; composition-v1 remains C.
+[Compact evidence and reproduction](experiments/composition_empty_history_schema_contract_v0/README.md)
+record five-file exact replay and five unchanged historical checkpoints.
+No composition rerun or next experiment followed.
