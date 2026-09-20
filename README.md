@@ -538,3 +538,14 @@ Memory/pairs/packages, chronology, UNKNOWN and ordinary FIFO eviction, but retai
 current state. Fresh construction resets state and discards history. The required
 fresh-state initialization with retained provenance has no existing supported API.
 No core repair or model campaign was started; prior checkpoints remain unchanged.
+
+## Cross-episode initialization boundary v1
+
+The [separate zero-call repair](research/cross-episode-initialization-boundary-v1-results.md)
+is **A — CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE**. A trusted staged boundary
+resets external/current state from 3 to 0 while preserving authenticated history,
+source lifetime and ordinary authority. A separate Map projection exposes epoch
+identity; historical projections stay unchanged. All 24 reset-failure cases were
+atomic; exact replay, six new tests and 49 historical tests passed. The old v0 C
+remains preserved. Atomicity is limited to the in-process simulator; no model
+campaign, main/tag changes or push.
