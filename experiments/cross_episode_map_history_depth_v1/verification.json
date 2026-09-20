@@ -1,0 +1,214 @@
+{
+  "exact_replay": {
+    "all_byte_identical": true,
+    "execution": {
+      "actual_model_calls": 0,
+      "command": [
+        "python3",
+        "-m",
+        "experiments.cross_episode_map_history_depth_v1.run",
+        "--replay",
+        "$DEPTH_ARCHIVE/live",
+        "--output",
+        "$REPLAY_OUTPUT"
+      ],
+      "exit_code": 0,
+      "finished_utc": "2026-09-20T03:00:14.209692+00:00",
+      "log_sha256": "23127725173d2e248fed3b754362a139d34045b79e67597afd50b95bab492b3a",
+      "network_forbidden": true,
+      "started_utc": "2026-09-20T03:00:11.814078+00:00"
+    },
+    "network_forbidden": true,
+    "passed": true,
+    "real_model_calls": 0,
+    "registered_files": 8,
+    "system_snapshots": 12
+  },
+  "historical_preservation": {
+    "actual_model_calls": 0,
+    "executions": [
+      {
+        "actual_model_calls": 0,
+        "check": "init-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_initialization_boundary_v1.run",
+          "--replay",
+          "$INIT_V1",
+          "--output",
+          "$CHECKS/init-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:21.219275+00:00",
+        "log_sha256": "6cad5eae200320d80b437943dcf925a4b759ea177dcab462e32b1c5497ba5b95",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:20.850828+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "transfer-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_model_transfer_v0.run",
+          "--replay",
+          "$TRANSFER_V0",
+          "--output",
+          "$CHECKS/transfer-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:25.139600+00:00",
+        "log_sha256": "3b26b3cb2bb993da85b3d4e6b2ac504d3e5156fbe156e557d1112c9e40a27df9",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:20.851567+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "ablation-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.composition_map_memory_ablation_v0.run",
+          "--source",
+          "$R1_EVIDENCE",
+          "--replay",
+          "$ABLATION_LIVE",
+          "--output",
+          "$CHECKS/ablation-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:25.838827+00:00",
+        "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:20.851787+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "r1-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+          "--replay",
+          "$R1_EVIDENCE",
+          "--baseline",
+          "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+          "--output",
+          "$CHECKS/r1-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:32.255242+00:00",
+        "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:21.219670+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "map-prior-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_map_established_prior_revision_v1.run",
+          "--replay",
+          "$MAP_PRIOR_V1/model-calls.jsonl",
+          "--output",
+          "$CHECKS/map-prior-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:27.223235+00:00",
+        "log_sha256": "94d6cc1f4a9f732c6cfded8f90bd2b64618753275884ca9d20c2061f4445da2b",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:25.140006+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "historical-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_model_transfer_v0.test_study",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+          "experiments.composition_input_bindings_v1.test_bindings",
+          "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+          "experiments.state_recovery_proposal_interface_v1.test_interface",
+          "experiments.realized_event_grounding_v0.test_grounding",
+          "experiments.model_proposal_role_composition_v2.test_study",
+          "experiments.model_map_proposal_v0.test_study",
+          "experiments.model_map_established_prior_revision_v1.test_study",
+          "-v"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T02:53:32.527023+00:00",
+        "log_sha256": "9ec9ffbb6ce5333b3b82e3c3974cb3df638dd00dbd66dfb30c17adb97efb3717",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T02:53:25.839030+00:00",
+        "tests": 55
+      }
+    ],
+    "inherited_substantive_files_byte_identical": 537,
+    "main_tags_prior_refs_unchanged": true,
+    "passed": true,
+    "prior_decisions": {
+      "composition_empty_history_schema_contract_v0": "SCHEMA-CONTRACT EFFECT SUPPORTED",
+      "composition_map_memory_ablation_v0": "AUTHENTIC-HISTORY MAP EFFECT SUPPORTED",
+      "cross_episode_authenticated_memory_boundary_v0": "C \u2014 NOT ESTABLISHED",
+      "cross_episode_initialization_boundary_v1": "A \u2014 CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE",
+      "cross_episode_model_transfer_v0": "CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED",
+      "model_proposal_role_composition_v2_replacement_r1": "A \u2014 MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS"
+    },
+    "private_archive_checksums": {
+      "R1": 288,
+      "ablation": 105,
+      "boundary_v0": 82,
+      "initialization_v1": 88,
+      "map_prior_v1": 114,
+      "transfer_v0": 140
+    }
+  },
+  "independent_audit": {
+    "Explorer": 0,
+    "Map": 36,
+    "Recovery": 0,
+    "all_http_200": true,
+    "all_probes_read_only": true,
+    "ambiguous_calls": [],
+    "calls": 36,
+    "exact_schedule": true,
+    "full_model_bytes_verified_before_first_call": true,
+    "independent_parser_components_contrasts_trajectories": true,
+    "journal_records": 144,
+    "journal_valid": true,
+    "ollama_generate_requests": 36,
+    "only_visible_history_differs": true,
+    "passed": true,
+    "pre_and_post_probe_system_audits": 36,
+    "primary_supported": true,
+    "scoring_receipt_authentic": true,
+    "script_sha256": "01db8d56d11998069b82e01f10ac0e57d637ed6bf84bd9eadedb30d482a3ba0e",
+    "stateless_request_keys": true,
+    "unchanged_options": true,
+    "unique_ids": 36,
+    "zero_event_resets": 24
+  },
+  "passed": true,
+  "preflight": {
+    "actual_model_calls": 0,
+    "completed_utc": "2026-09-20T02:52:22.779714+00:00",
+    "frozen_inputs_sha256": "052beae6ff9818f8fb6ea36c6b06ac35c45ad0f1f2d29f6b211cc745db2cc0f3",
+    "passed": true,
+    "preregistration_commit": "50730a208417e069b1f79f349a09be14ab9b492a",
+    "tests": 18,
+    "tests_log_sha256": "9127c6799efaef404d21fb6cbcc2d78e1f08e06cc6db7ea105d4756fa89a1f2c"
+  },
+  "verification_tooling_correction": {
+    "additional_inference": 0,
+    "correction": "Truncate sub-microsecond digits for the before-inference chronology audit only; original timestamp preserved",
+    "initial_audit_completed": false,
+    "issue": "Python 3.10 datetime.fromisoformat rejected the Ollama nine-digit fractional timestamp",
+    "raw_evidence_changed": false,
+    "scientific_code_changed": false,
+    "thresholds_changed": false
+  }
+}

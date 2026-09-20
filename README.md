@@ -561,3 +561,17 @@ passed, and no model probe changed protected state. The result concerns authenti
 external history supplied to stateless requests; no persistent model learning.
 See the [frozen thresholds](research/cross-episode-model-transfer-v0-preregistration.md)
 and [compact paired results](experiments/cross_episode_model_transfer_v0/results.json).
+
+## Cross-episode Map history depth v1
+
+The [36-call Map-only depth study](research/cross-episode-map-history-depth-v1-results.md)
+is **TWO-OBSERVATION CROSS-EPISODE MAP EFFECT SUPPORTED**.
+Exact predictions were D0 0/12, D1 7/12 and D2 10/12;
+D2-versus-D0 favorable/reverse pairs were 10/0.
+All 36 calls completed once. Exact replay, independent scoring audit and historical
+preservation passed. Authentic one/two-observation histories survived trusted
+fresh-state initialization; probes remained read-only. The prior transfer-v0
+overall NOT ESTABLISHED result is unchanged. This concerns stateless proposals
+conditioned on authenticated external history, not persistent model learning.
+See the [frozen criteria](research/cross-episode-map-history-depth-v1-preregistration.md)
+and [compact results](experiments/cross_episode_map_history_depth_v1/results.json).
