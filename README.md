@@ -549,3 +549,15 @@ identity; historical projections stay unchanged. All 24 reset-failure cases were
 atomic; exact replay, six new tests and 49 historical tests passed. The old v0 C
 remains preserved. Atomicity is limited to the in-process simulator; no model
 campaign, main/tag changes or push.
+
+## Cross-episode model transfer v0
+
+The [48-call paired study](research/cross-episode-model-transfer-v0-results.md)
+is **CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED**.
+Explorer met its frozen rule: CARRY selected ADVANCE 10/12 versus FRESH 5/12.
+Map exact prediction was 3/12 versus 0/12, but its three favorable pairs fell
+below the required four. All calls completed once, exact replay and preservation
+passed, and no model probe changed protected state. The result concerns authenticated
+external history supplied to stateless requests; no persistent model learning.
+See the [frozen thresholds](research/cross-episode-model-transfer-v0-preregistration.md)
+and [compact paired results](experiments/cross_episode_model_transfer_v0/results.json).
