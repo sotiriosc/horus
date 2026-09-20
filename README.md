@@ -662,3 +662,13 @@ remain separate decisions; ties intentionally leave conditional slots unissued.
 The prior temporal negative remains unchanged. See [preregistration](research/map-explorer-oracle-decomposition-v0-preregistration.md),
 [compact per-context results](experiments/map_explorer_oracle_decomposition_v0/results.json),
 and [verification](experiments/map_explorer_oracle_decomposition_v0/verification.json).
+
+## Explorer finite-value comparator v0
+
+The [detached comparator study](research/explorer-finite-value-comparator-v0-results.md)
+completed exactly 144 real Explorer calls with no Map call, world execution or Memory change.
+**ZERO-OVER-NEGATIVE COMPARATOR NOT ESTABLISHED**; independently, **NEXT_STATE IRRELEVANCE NOT ESTABLISHED**.
+The two positive-best controls remain descriptive; prior results are unchanged. See
+[preregistration](research/explorer-finite-value-comparator-v0-preregistration.md),
+[compact results including all 72 matched pairs](experiments/explorer_finite_value_comparator_v0/results.json),
+and [verification](experiments/explorer_finite_value_comparator_v0/verification.json).
