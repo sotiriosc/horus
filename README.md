@@ -590,3 +590,17 @@ calls; historical results and authority architecture remain unchanged. This is
 history/provenance feasibility, not a model adaptation result.
 See [preregistration](research/cross-episode-stale-memory-feasibility-v0-preregistration.md)
 and [compact results](experiments/cross_episode_stale_memory_feasibility_v0/results.json).
+
+## Cross-episode stale-Memory Map revision v1
+
+The [144-call Map-only study](research/cross-episode-stale-memory-map-revision-v1-results.md)
+is **CROSS-EPISODE STALE-MEMORY MAP REVISION REPLICATED**.
+Valid responses: 144/144. O1 CHANGED P0 old / CHANGED P2 new /
+CONTROL P2 old: 12/12/12 of twelve each;
+O2: 12/12/12.
+Both families were evaluated independently against unchanged preregistered gates.
+All calls completed once; exact replay and historical preservation passed.
+Authentic old/new evidence remained present, and measured proposals never executed
+or changed Memory. This concerns stateless proposal behavior, not persistent learning.
+See [frozen thresholds](research/cross-episode-stale-memory-map-revision-v1-preregistration.md)
+and [compact trajectories/results](experiments/cross_episode_stale_memory_map_revision_v1/results.json).
