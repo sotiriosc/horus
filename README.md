@@ -505,3 +505,16 @@ inference was performed. The recovered preflight, bounded controls and historica
 regressions passed, with all previous results unchanged.
 [Compact status and verification](experiments/model_proposal_role_composition_v2/README.md)
 keep missing live evidence distinct from synthetic or historical success.
+
+
+### Composition v2 replacement R1
+
+The [independent replacement checkpoint](research/model-proposal-role-composition-v2-replacement-r1-results.md)
+is **A — MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS**: 164 real calls,
+68 executions and 66 authenticated commits.
+The scientific protocol is unchanged; durable write-ahead call and transaction
+records distinguish intent, response, parsing and finalized state. R1's ten-file
+replay plus Memory snapshots match exactly, and all 41 post-campaign checks return
+expected outcomes. The original interrupted v2 remains C with unavailable live
+evidence; no partial data was pooled. [Compact evidence and reproduction](experiments/model_proposal_role_composition_v2_replacement_r1/README.md)
+separate integrity, predictive accuracy and behavioral metrics. No R2 or push.
