@@ -643,3 +643,12 @@ Exact replay, 75 tests and ten historical replays passed. Both Explorer negative
 and the Map REPLICATED result remain unchanged. No live model calls or behavior claim.
 See [registration](research/map-guided-explorer-interface-v0-preregistration.md)
 and [compact controls/results](experiments/map_guided_explorer_interface_v0/results.json).
+
+## Map temporal-relation forecast v0
+
+The [receipt-scored Map-only study](research/map-temporal-relation-forecast-v0-results.md)
+completed exactly 96 calls. **MAP TEMPORAL-RELATION FORECASTING BEYOND PURE RECENCY NOT ESTABLISHED**.
+The registered F/P histories share counts and latest value but differ in order and seventh realized outcome.
+All earlier results remain unchanged. See [preregistration](research/map-temporal-relation-forecast-v0-preregistration.md),
+[all parsed outcomes and frozen gates](experiments/map_temporal_relation_forecast_v0/results.json),
+and [executed verification](experiments/map_temporal_relation_forecast_v0/verification.json).
