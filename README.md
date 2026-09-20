@@ -518,3 +518,14 @@ replay plus Memory snapshots match exactly, and all 41 post-campaign checks retu
 expected outcomes. The original interrupted v2 remains C with unavailable live
 evidence; no partial data was pooled. [Compact evidence and reproduction](experiments/model_proposal_role_composition_v2_replacement_r1/README.md)
 separate integrity, predictive accuracy and behavioral metrics. No R2 or push.
+
+## Composition Map Memory ablation v0
+
+The separate [42-context paired Map-only study](research/composition-map-memory-ablation-v0-results.md)
+supports the frozen authenticated-history visibility effect: exact predictions
+33/42 with history versus 11/42 withheld, 22 favorable and zero reverse exact
+discordances. Both families passed. All 84 responses were valid; nine history-visible
+predictions remained wrong, and one next-state comparison worsened. Eight evidence
+files replayed byte-identically with zero inference; R1 and prior checkpoints remain
+unchanged. No experimental world execution or Memory writes. This result concerns
+input information visibility, not weights or persistent model learning.

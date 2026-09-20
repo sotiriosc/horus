@@ -1,5 +1,12 @@
 # Composition Map Memory ablation v0
 
+**AUTHENTIC-HISTORY MAP EFFECT SUPPORTED**. Exactly 84 calls; valid H/W 42/42 each.
+Exact H 33/42 versus W 11/42; 22 favorable and zero reverse exact discordances.
+Both families: 11 favorable, zero reverse. Nine H predictions remain wrong; one
+next-state comparison worsens. Exact replay and preservation checks passed.
+See the [results report](../../research/composition-map-memory-ablation-v0-results.md),
+[compact results](results.json) and [actual verification](verification.json).
+
 One prospectively frozen paired Map-only study: 42 preserved R1 contexts × authentic
 history visible (H) / deliberately withheld (W), exactly 84 calls. No world execution,
 Explorer, Recovery, new receipts, Memory writes or weight changes. Withheld does not
