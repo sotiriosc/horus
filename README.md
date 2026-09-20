@@ -604,3 +604,16 @@ Authentic old/new evidence remained present, and measured proposals never execut
 or changed Memory. This concerns stateless proposal behavior, not persistent learning.
 See [frozen thresholds](research/cross-episode-stale-memory-map-revision-v1-preregistration.md)
 and [compact trajectories/results](experiments/cross_episode_stale_memory_map_revision_v1/results.json).
+
+## Cross-episode stale-Memory Explorer revision v1
+
+The [144-call Explorer-only study](research/cross-episode-stale-memory-explorer-revision-v1-results.md)
+is **CROSS-EPISODE STALE-MEMORY EXPLORER REVISION NOT ESTABLISHED**. Valid responses: 144/144.
+O1: CHANGED P0 HOLD 12/12; CHANGED P2 RETREAT 1/12; CONTROL P2 HOLD 12/12.
+O2: CHANGED P0 HOLD 12/12; CHANGED P2 RETREAT 0/12; CONTROL P2 HOLD 12/12.
+Both opaque families use their own unchanged preregistered gates.
+All calls completed once; exact replay and historical preservation passed.
+Older true history and new contradictory outcomes coexist; no measured action
+executes or writes Memory. This concerns stateless proposals, not persistent learning.
+See [frozen thresholds](research/cross-episode-stale-memory-explorer-revision-v1-preregistration.md)
+and [compact results/trajectories](experiments/cross_episode_stale_memory_explorer_revision_v1/results.json).
