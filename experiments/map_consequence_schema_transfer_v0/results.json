@@ -1,0 +1,2594 @@
+{
+  "Explorer_model_calls": 0,
+  "Recovery_model_calls": 0,
+  "authentic_post_response_receipts": true,
+  "breakdown": {
+    "family": {
+      "O1": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 3,
+            "consequence_positive": 3,
+            "exact": 3,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 1,
+        "regressions": 0
+      },
+      "O2": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": 4,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 0,
+        "regressions": 0
+      }
+    },
+    "seed": {
+      "99301": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": 4,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 0,
+        "regressions": 0
+      },
+      "99302": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 3,
+            "consequence_positive": 3,
+            "exact": 3,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 1,
+        "regressions": 0
+      }
+    },
+    "world": {
+      "WA": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 3,
+            "consequence_positive": 3,
+            "exact": 3,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 1,
+        "regressions": 0
+      },
+      "WR": {
+        "by_condition": {
+          "J": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": 4,
+            "n": 4,
+            "next_state_correct": 4,
+            "valid": 4
+          },
+          "S": {
+            "consequence_correct": 4,
+            "consequence_positive": 4,
+            "exact": null,
+            "n": 4,
+            "next_state_correct": null,
+            "valid": 4
+          }
+        },
+        "improvements": 0,
+        "regressions": 0
+      }
+    }
+  },
+  "by_condition": {
+    "J": {
+      "consequence_correct": 7,
+      "consequence_positive": 7,
+      "exact": 7,
+      "n": 8,
+      "next_state_correct": 8,
+      "valid": 8
+    },
+    "S": {
+      "consequence_correct": 8,
+      "consequence_positive": 8,
+      "exact": null,
+      "n": 8,
+      "next_state_correct": null,
+      "valid": 8
+    }
+  },
+  "calls": [
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 0,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 0,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c00",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":1}",
+      "request_sha256": "e8b9f5f42402a3ca9292f9673575864033b2891e17bff7bd4ab5a51b58eb0d94",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c00",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c00",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "1fd230c0cf29379bec217b520cf211f514758514251721cfd1b6175f81655e5b",
+      "source_step_sha256": "eadb7c6905e364cf58515ac6e827c556311444f09c1d97d0ff644f8ad3525c0b",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 1,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 1,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c01",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "d3154b51be295ab25074f827c104ea370aed4aa0d6afff59133def4480363933",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c01",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c01",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "4056d6e67f9f0f8fb56a338ba370b5859ba947ce0a4085df6f2cef7a9ae99cf2",
+      "source_step_sha256": "c95b5eebcff20647efabed2b056b67611bbde40225252ffecc89eacfe7af4e32",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 2,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 2,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c02",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "8813656e311ef76acd48ae1558788ce81d8dd1add0cf5a2783586299349e9061",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c02",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c02",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "2e339018b81b7b66b5e4b846127e62a1a89dc3d7333a3fface4e4f2256c8a4d5",
+      "source_step_sha256": "77f912c8681361308cc080768fe31afb6759ab45553bfe5c260890851a430017",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K3",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 3,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 3,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c03",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\": 2, \"consequence\": 1}",
+      "request_sha256": "1367397362ca4a00974709170a9abd07f577659eae161467664b22a493cb99e0",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c03",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c03",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "c72237a8049737f244aabfd91555c12cbf560112d2ff27d683d929681930d4dc",
+      "source_step_sha256": "045e468b205700a51b6142054ce4f47ad6325c46c91d41e36e6f3c5e97778c82",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K3",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 4,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 4,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c04",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "b4a103f2ccdb6dfc4f9cd19b7b1416d93a2312df3ab68da087d7b36fcae39132",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c04",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c04",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "51c21f5ad9bd870929bb6bf4db04d892714c51f4246e47882508b8e5d03e9f18",
+      "source_step_sha256": "4d0a256c49ef13f7810b1c8a5ef770a9fdbe3c2a1285876610a53230759bbe8a",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "Q7",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 5,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 5,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c05",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":1}",
+      "request_sha256": "d74c4e8c1d8ba5a30bf56dfed1854639e5491e258a5d5caea2ad69671c786a9c",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c05",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c05",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "96875eee9386205cb5c0bd0cc4af7bb66a18e3713cc6b809d1dfc85f5da34111",
+      "source_step_sha256": "064c8408d13b0844e3a1ff4935a3dad962845be3f68871f75aca253400e6054a",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "Q7",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 6,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 6,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c06",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":2,\"consequence\":1}",
+      "request_sha256": "98e6731d70a023fa537413ee26c16f009741495623faa00e632b4dcf827d1700",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c06",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c06",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "7a570800cc1013a05ab87d013ea6b74c9752001630b204e5410d267491fa3c2c",
+      "source_step_sha256": "c8ff9707aca695a431b178e42e339cbdb92e37aedfb08eae9d50337405c4a791",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "Z2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 7,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99301,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 7,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c07",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "b838dd8cf33b25c9b9ff05f8218e005de7e38f1e2804ca21b8635aeabf5de202",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c07",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c07",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "5c57bc08b06a5f154f3c7730834591060292185d99a33ab78855984b5d8eac6c",
+      "source_step_sha256": "2cbec11fb9c7955d274c1019848c7406dca18bc3d416f8ddb2cfb60bb186a73b",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "Z2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 8,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 8,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c08",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "cf2ca839c85065e6c0460bd96d5486c4202948829c381148443a4bd1b226200e",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c08",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c08",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "e5a1cd75f4a1038b61680f7c8ba5e23d997e80ecf9775c16466ec0fcc2586c1a",
+      "source_step_sha256": "1da31c819310e27418792a013b729de64b497c3f1c8ab23e1d1db4b6a9f78828",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "Z2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 9,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 9,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c09",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":2,\"consequence\":1}",
+      "request_sha256": "e3627e64392dcbbf70e7f2484109f59d0b4079b0590190ef572c3066f1c58696",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c09",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c09",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "6696545f125def3a4b34c1ce44838dfa4916bbe651bcee57106f242e20ac055b",
+      "source_step_sha256": "df62f0aae7da304bc7cd716021bf87f6c91c7d5e6cdf2e2a3b38314086d9b8e6",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "Z2",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 10,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 10,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c10",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":1}",
+      "request_sha256": "be7a868c57c291bb94617342863222614767e793adc86d63cbd41bc20d3c4146",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c10",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c10",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "7d8addbe25f983118675a590bcc1682b7ab9e2bbb313d757678a3cd842d44916",
+      "source_step_sha256": "eef3a6aae0a77988cd52e036cada6079e2a000f336a78caeecb10b7c76b4772d",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "Q7",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O2",
+        "history_depth": 1,
+        "index": 11,
+        "mapping": {
+          "M4": "HOLD",
+          "Q7": "ADVANCE",
+          "Z2": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 11,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c11",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "bb4f0a87c8d7d3e02ce900bc3273d86c6be012362013d52ec15a476577991fe2",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c11",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c11",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "67ce462b06f79734acd9e97074bacc01c833b536a73147edb4d70a40a15b7d45",
+      "source_step_sha256": "e8a124036b702ac268391b49dbc57f01be0af37628fbc5a7a46c7101f350741c",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "Q7",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 12,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 12,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c12",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\": 2, \"consequence\": 1}",
+      "request_sha256": "3fabbbc95b6c708998f9cfa9670c088438bc59af811a58cb563ee588c85727b2",
+      "score": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c12",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c12",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "c6239c13655dbb65f4287b0a9b3634e69c273743897d40a4f5f90bef765cc722",
+      "source_step_sha256": "eb79a21940090766ebee1969ec5d8e7b694f4ac105b2dcce92c0084da96852b0",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K3",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "RETREAT",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "RETREAT",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 2,
+        "pre_state": 3,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 13,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "setup_count": 2,
+        "state": 3,
+        "target_action": "RETREAT",
+        "world": "WR"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 13,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "RETREAT",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 3,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c13",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "RETREAT",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 2,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 3,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "f9a60154917097b8c4d2b5cc78e07c66164b01d461fddb13fede1db96c57e0a3",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 2,
+          "pre_state": 3,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c13",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 3,
+          "pre_state": 2,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c13",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "b536111303a01469d20bdd8dad0d0117284ddababa1d8f5691fe3d28c571fa1a",
+      "source_step_sha256": "407cfbb4e9f4c1861e49eec6accd482d13e6a84fb8d32cc3ab4c35d0f7b41ca5",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 2,
+          "surface_action": "K3",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "S",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 14,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 14,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c14",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"consequence\":1}",
+      "request_sha256": "8471f8deaf890c69ce626debdf49f3be6c91b2fc92fb653ba9e77e46cca215ca",
+      "score": {
+        "consequence": true,
+        "exact": null,
+        "next_state": null
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c14",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c14",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "4f9f069acff50e80041c067abb55b6e0112e96a5200c569eaa5e1d9bf26d4265",
+      "source_step_sha256": "387b435d25461d63a5cc5c67a4bddc3c668fb5dbe49919730bfc652730772464",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        }
+      ]
+    },
+    {
+      "actual_execution": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "authorization": {
+        "action": "ADVANCE",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": false,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      "control_measurement_matches": true,
+      "control_prediction": {
+        "action": "ADVANCE",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 0,
+        "transaction_id": 3
+      },
+      "descriptor": {
+        "condition": "J",
+        "family": "O1",
+        "history_depth": 1,
+        "index": 15,
+        "mapping": {
+          "K1": "ADVANCE",
+          "K2": "HOLD",
+          "K3": "RETREAT"
+        },
+        "mapping_index": 0,
+        "seed": 99302,
+        "setup_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "setup_count": 2,
+        "state": 0,
+        "target_action": "ADVANCE",
+        "world": "WA"
+      },
+      "effects": {
+        "external_execute": 0,
+        "measure": 1,
+        "package_admission": 1,
+        "recovery": 0
+      },
+      "index": 15,
+      "navigation_excluded": true,
+      "original_receipt_object_verified": true,
+      "original_score_receipt": {
+        "action": "ADVANCE",
+        "epoch": 1001,
+        "event_id": 3,
+        "next_state": 1,
+        "pre_state": 0,
+        "realized_consequence": 1,
+        "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c15",
+        "transaction_id": 3
+      },
+      "parse_error": null,
+      "parsed": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "probe_detached": true,
+      "probe_publication": false,
+      "published_score_observation": {
+        "action": "ADVANCE",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793993985,
+        "observation_b_id": 16793993986,
+        "pair_decision_id": 4299262264064,
+        "pre_state": 0,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 3
+      },
+      "raw_output": " {\"next_state\":1,\"consequence\":0}",
+      "request_sha256": "bc1a027e948dab05438493e716e1346a3ea8737d7a54e4f57ba6dfcf7e54bb00",
+      "score": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "scored_after_response_and_parse": true,
+      "setup_receipts": [
+        {
+          "action": "ADVANCE",
+          "epoch": 1001,
+          "event_id": 1,
+          "next_state": 1,
+          "pre_state": 0,
+          "realized_consequence": 1,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c15",
+          "transaction_id": 1
+        },
+        {
+          "action": "RETREAT",
+          "epoch": 1001,
+          "event_id": 2,
+          "next_state": 0,
+          "pre_state": 1,
+          "realized_consequence": 0,
+          "source_identity": "HORUS_MAP_CONSEQUENCE_SCHEMA_TRANSFER_V0:c15",
+          "transaction_id": 2
+        }
+      ],
+      "source_call_sha256": "a8d3133abba503ecdf51bccc328d0aacafb0f9f274afb0b991c07b95d975d980",
+      "source_step_sha256": "67281da81307001e0af96dde927df8151bffaad20853ce420158ce01b0c25c69",
+      "visible_history": [
+        {
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "surface_action": "K1",
+          "transaction_id": 1
+        }
+      ]
+    }
+  ],
+  "claim_scope": "Sixteen detached real-model moving-positive forecasts, authentic target history with ordinary return navigation, and original post-response simulated receipts. No protected model prediction publication or internal mechanism claim.",
+  "classification": "C \u2014 NOT ESTABLISHED",
+  "classification_status": "FINAL",
+  "complete_trials": 16,
+  "each_world_S_positive_at_least_three": true,
+  "exact_replay_passed": true,
+  "first_instruction_sentence_identical": true,
+  "fixed_non_model_controls": {
+    "WA": {
+      "consequence": 1,
+      "next_state": 1
+    },
+    "WR": {
+      "consequence": 1,
+      "next_state": 2
+    }
+  },
+  "future_answer_leak_controls": true,
+  "improvements": 1,
+  "integrity_passed": true,
+  "live_navigation_executions": 16,
+  "live_score_executions": 16,
+  "live_setup_executions": 32,
+  "live_target_setup_executions": 16,
+  "live_unique_receipts": 48,
+  "live_world_executions": 48,
+  "matched_pairs": [
+    {
+      "family": "O1",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99301,
+      "task_data_bytes_identical": true,
+      "world": "WA"
+    },
+    {
+      "family": "O1",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99302,
+      "task_data_bytes_identical": true,
+      "world": "WA"
+    },
+    {
+      "family": "O2",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99301,
+      "task_data_bytes_identical": true,
+      "world": "WA"
+    },
+    {
+      "family": "O2",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99302,
+      "task_data_bytes_identical": true,
+      "world": "WA"
+    },
+    {
+      "family": "O1",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99301,
+      "task_data_bytes_identical": true,
+      "world": "WR"
+    },
+    {
+      "family": "O1",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99302,
+      "task_data_bytes_identical": true,
+      "world": "WR"
+    },
+    {
+      "family": "O2",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99301,
+      "task_data_bytes_identical": true,
+      "world": "WR"
+    },
+    {
+      "family": "O2",
+      "first_instruction_sentence_bytes_identical": true,
+      "last_instruction_sentence_bytes_identical": true,
+      "normalized_envelope_bytes_identical": true,
+      "num_predict_both": 32,
+      "only_request_path": "system.response_format_sentence",
+      "passed": true,
+      "seed": 99302,
+      "task_data_bytes_identical": true,
+      "world": "WR"
+    }
+  ],
+  "matched_request_check": true,
+  "model_authorized_publications": 0,
+  "native_score_state_recovery_authorizations": 0,
+  "native_setup_state_recovery_authorizations": 0,
+  "pairs": [
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O1",
+      "improvement": false,
+      "regression": false,
+      "seed": 99301,
+      "world": "WA"
+    },
+    {
+      "J": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "0 -> 1",
+      "family": "O1",
+      "improvement": true,
+      "regression": false,
+      "seed": 99302,
+      "world": "WA"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O2",
+      "improvement": false,
+      "regression": false,
+      "seed": 99301,
+      "world": "WA"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O2",
+      "improvement": false,
+      "regression": false,
+      "seed": 99302,
+      "world": "WA"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O1",
+      "improvement": false,
+      "regression": false,
+      "seed": 99301,
+      "world": "WR"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O1",
+      "improvement": false,
+      "regression": false,
+      "seed": 99302,
+      "world": "WR"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O2",
+      "improvement": false,
+      "regression": false,
+      "seed": 99301,
+      "world": "WR"
+    },
+    {
+      "J": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "S": {
+        "consequence": 1
+      },
+      "category": "1 -> 1",
+      "family": "O2",
+      "improvement": false,
+      "regression": false,
+      "seed": 99302,
+      "world": "WR"
+    }
+  ],
+  "parent": "bf74d7eda79345efa7168ea1551de8b153b68791",
+  "prediction_repairs": 0,
+  "real_model_calls": 16,
+  "registered_call_limit": 16,
+  "registration_commit": "0a5c5adb50fad1bda88c528dfbe98cd399f25c20",
+  "regressions": 0,
+  "replacement_calls": 0,
+  "retries": 0,
+  "scoring_scope": "Detached probes with authentic one-row target histories, scored against new original moving-positive simulated execution receipts after response and parse; ordinary non-model controls drive framework.",
+  "study": "map-consequence-schema-transfer-v0",
+  "valid": 16
+}
