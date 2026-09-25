@@ -337,6 +337,9 @@ class CrossSourceFramework:
         self.measure_auditor = MeasureAuditor()
         self.state_authorizer = CrossSourceStateAuthorizer()
         self.pending: Optional[PendingTransaction] = None
+        self._prediction_at_begin: Optional[Prediction] = None
+        self._requires_package = False  # enabled only by the v2 coordinator
+        self._package_grant = None
         self.continuation_authorized = True
         self.trace: list[TraceRecord] = []
         self.max_trace = 0
@@ -390,11 +393,20 @@ class CrossSourceFramework:
         )
 
     def _recover_memory(self, wrong: bool = False) -> bool:
+        original = list(self.memory.records)
         _, corrupt = self.memory.audit(self.pairs)
         if not corrupt:
             return True
         self.metrics["memory_corruptions_detected"] += len(corrupt)
         old = corrupt[0]
+        identity = (old.epoch, old.transaction_id, old.pair_decision_id)
+        slots = [i for i, record in enumerate(original)
+                 if (record.epoch, record.transaction_id, record.pair_decision_id) == identity]
+        if len(slots) != 1 or len(original) != len(self.pairs.decisions):
+            return False
+        paired = self.pairs.decisions[slots[0]]
+        if (paired.epoch, paired.transaction_id, paired.pair_decision_id) != identity:
+            return False
         decision = self.pairs.find(old.epoch, old.transaction_id, old.pair_decision_id)
         if decision is None:
             return False
@@ -404,8 +416,8 @@ class CrossSourceFramework:
         if not self.memory.matches(candidate, decision):
             self.metrics["invalid_recovery_rejections"] += 1
             return False
-        self.memory.records.append(candidate)
-        self.memory.records.sort(key=lambda row: (row.epoch, row.transaction_id))
+        original[slots[0]] = candidate
+        self.memory.records = original
         self.memory.quarantine.clear()
         return True
 
@@ -424,6 +436,7 @@ class CrossSourceFramework:
         if action not in ACTION_ORDER:
             return self._reject("Explorer proposal rejected", executed=False)
         prediction = self.map.predict(action, self.epoch, transaction_id)
+        self._prediction_at_begin = prediction
         self.pending = PendingTransaction(
             self.epoch, transaction_id, action, self.map.current.state,
             self.map.current.version, prediction,
@@ -478,6 +491,8 @@ class CrossSourceFramework:
         failed_recovery: bool = False,
         common_mode: bool = False,
     ) -> StepResult:
+        if self._requires_package and not self._has_package_grant():
+            return self._reject("mandatory package authorization required", executed=True)
         if self.pending is None:
             raise RuntimeError("no pending transaction")
         if port not in ("A", "B"):
@@ -528,6 +543,15 @@ class CrossSourceFramework:
             failed_recovery=failed_recovery,
         )
 
+    def _has_package_grant(self) -> bool:
+        pending = self.pending
+        return (
+            pending is not None and self._package_grant is not None
+            and self._package_grant[:3] == (
+                pending.epoch, pending.transaction_id, pending.channel_sequence
+            )
+        )
+
     def _complete_pair(
         self,
         decision: PairDecision,
@@ -537,19 +561,27 @@ class CrossSourceFramework:
         candidate_value: Optional[int],
         failed_recovery: bool,
     ) -> StepResult:
+        if self._requires_package:
+            if not self._has_package_grant() or self._package_grant[3:] != (
+                decision.observation_a_id, decision.observation_b_id
+            ):
+                return self._reject("mandatory package authorization required", executed=True)
         if self.pending is None:
             raise RuntimeError("no pending transaction")
-        expected = self.measure_auditor.expected(self.pending.prediction, decision)
+        prediction = self._prediction_at_begin
+        if prediction is None:
+            raise RuntimeError("missing pre-outcome prediction")
+        expected = self.measure_auditor.expected(prediction, decision)
         measurement = Measurement(
             decision.epoch, decision.transaction_id, decision.pair_decision_id,
             not expected if wrong_measure else expected,
         )
-        if not self.measure_auditor.verify(measurement, self.pending.prediction, decision):
+        if not self.measure_auditor.verify(measurement, prediction, decision):
             self.metrics["measurement_corruptions_detected"] += 1
-            corrected = Recovery().measurement(self.pending.prediction, decision)
+            corrected = Recovery().measurement(prediction, decision)
             if wrong_measure_recovery:
                 corrected = replace(corrected, matches=not corrected.matches)
-            if not self.measure_auditor.verify(corrected, self.pending.prediction, decision):
+            if not self.measure_auditor.verify(corrected, prediction, decision):
                 self.metrics["invalid_recovery_rejections"] += 1
                 return self._reject("Measure recovery rejected", executed=True)
             measurement = corrected

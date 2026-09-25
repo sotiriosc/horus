@@ -1,0 +1,1863 @@
+{
+  "baseline_parent": "f44bd60c983c69c6d0efbbeff0bca83351f3ff83",
+  "constructor_contract": "Caller supplies a registered ExternalExecutionBoundary.reader() from the trusted actual execution emitter. Constructor state and epoch are trusted finite driver values. Models receive serialized values only; no core/source/registry handles.",
+  "core_files": [
+    {
+      "imports": [],
+      "last_change_commit": "bde98fbd312bd4db38e26436f0765d7d270d7317",
+      "module": "experiments.base_framework_v0.__init__",
+      "package_initializer": true,
+      "path": "experiments/base_framework_v0/__init__.py",
+      "sha256": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+      "module": "experiments.base_framework_v0.framework",
+      "package_initializer": false,
+      "path": "experiments/base_framework_v0/framework.py",
+      "sha256": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+      "module": "experiments.base_framework_v1.__init__",
+      "package_initializer": true,
+      "path": "experiments/base_framework_v1/__init__.py",
+      "sha256": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2"
+    },
+    {
+      "imports": [
+        "experiments.base_framework_v0.__init__",
+        "experiments.base_framework_v0.framework",
+        "experiments.base_framework_v1.__init__",
+        "experiments.base_framework_v1.types"
+      ],
+      "last_change_commit": "6a8789a48cb64b9fc95b1518c68d65ec58f12ab4",
+      "module": "experiments.base_framework_v1.framework",
+      "package_initializer": false,
+      "path": "experiments/base_framework_v1/framework.py",
+      "sha256": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+      "module": "experiments.base_framework_v1.types",
+      "package_initializer": false,
+      "path": "experiments/base_framework_v1/types.py",
+      "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+      "module": "experiments.realized_event_grounding_v0.__init__",
+      "package_initializer": true,
+      "path": "experiments/realized_event_grounding_v0/__init__.py",
+      "sha256": "8e4af54ea7584f8699d16b9b2a418225aedb88e82abfb3375394a0b5c07dd55c"
+    },
+    {
+      "imports": [
+        "experiments.base_framework_v1.__init__",
+        "experiments.base_framework_v1.framework",
+        "experiments.base_framework_v1.types",
+        "experiments.realized_event_grounding_v0.__init__",
+        "experiments.realized_event_grounding_v0.receipt"
+      ],
+      "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+      "module": "experiments.realized_event_grounding_v0.framework",
+      "package_initializer": false,
+      "path": "experiments/realized_event_grounding_v0/framework.py",
+      "sha256": "fa0c82ee687ab86f679af28cbe13b01f376f1e62081a35c31a91a80970e58422"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+      "module": "experiments.realized_event_grounding_v0.receipt",
+      "package_initializer": false,
+      "path": "experiments/realized_event_grounding_v0/receipt.py",
+      "sha256": "38a5c205811bdb10f8e8cabcddb733505810a41139bc0fa38f4d645648f10316"
+    },
+    {
+      "imports": [
+        "experiments.base_framework_v1.__init__",
+        "experiments.base_framework_v1.framework",
+        "experiments.realized_event_grounding_v0.__init__",
+        "experiments.realized_event_grounding_v0.framework",
+        "experiments.state_recovery_proposal_interface_v1.__init__",
+        "experiments.state_recovery_proposal_interface_v1.framework"
+      ],
+      "last_change_commit": "099fce13e5dbbadfd262bc82ccebc8e6c8cb0a89",
+      "module": "experiments.state_recovery_authorizer_status_binding_v1.framework",
+      "package_initializer": false,
+      "path": "experiments/state_recovery_authorizer_status_binding_v1/framework.py",
+      "sha256": "2ab6ba4b1f374f91cc49e367e11f7c656cbc80ccc905f7721c326346f9552936"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+      "module": "experiments.state_recovery_proposal_interface_v1.__init__",
+      "package_initializer": true,
+      "path": "experiments/state_recovery_proposal_interface_v1/__init__.py",
+      "sha256": "893fae816256bbfd260602b9b7f74e71bbbba537565f24c89de461d3c641bf2d"
+    },
+    {
+      "imports": [
+        "experiments.base_framework_v1.__init__",
+        "experiments.base_framework_v1.framework",
+        "experiments.realized_event_grounding_v0.__init__",
+        "experiments.realized_event_grounding_v0.framework"
+      ],
+      "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+      "module": "experiments.state_recovery_proposal_interface_v1.framework",
+      "package_initializer": false,
+      "path": "experiments/state_recovery_proposal_interface_v1/framework.py",
+      "sha256": "bc20be1297be3aa5464877d0b13b69010abdaed60cdae5c8604933b256bda2e9"
+    }
+  ],
+  "entry_point": "experiments.state_recovery_authorizer_status_binding_v1.framework.StatusBoundFramework",
+  "finite_proposal_and_unknown_projection_files": [
+    {
+      "imports": [
+        "experiments.base_framework_v0.__init__",
+        "experiments.base_framework_v0.framework",
+        "experiments.model_explorer_semantic_prior_study_v0.__init__",
+        "experiments.model_explorer_semantic_prior_study_v0.adapter",
+        "experiments.model_map_proposal_v0.__init__",
+        "experiments.model_map_proposal_v0.adapter"
+      ],
+      "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+      "module": "experiments.composition_input_bindings_v1.adapters",
+      "package_initializer": false,
+      "path": "experiments/composition_input_bindings_v1/adapters.py",
+      "sha256": "71240f58ca5b444f9f34465828324909748c169de3009386977e02544acc1d5f"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+      "module": "experiments.model_explorer_integration_v0.__init__",
+      "package_initializer": true,
+      "path": "experiments/model_explorer_integration_v0/__init__.py",
+      "sha256": "ac6d0d8f4a61e8e4df1da8255119e6144df383d331cc279ae2b0bc6d7d11d5dd"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+      "module": "experiments.model_explorer_integration_v0.adapter",
+      "package_initializer": false,
+      "path": "experiments/model_explorer_integration_v0/adapter.py",
+      "sha256": "6e70252a6c2e022e66e373ceca15db6e48772c2f72e4b1b0556f0b5fe762dc64"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+      "module": "experiments.model_explorer_semantic_prior_study_v0.__init__",
+      "package_initializer": true,
+      "path": "experiments/model_explorer_semantic_prior_study_v0/__init__.py",
+      "sha256": "1ec84c7530412dcded93e2a64d4e9083301d79e20db3fd95dba85d3006272b94"
+    },
+    {
+      "imports": [
+        "experiments.model_explorer_integration_v0.__init__",
+        "experiments.model_explorer_integration_v0.adapter"
+      ],
+      "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+      "module": "experiments.model_explorer_semantic_prior_study_v0.adapter",
+      "package_initializer": false,
+      "path": "experiments/model_explorer_semantic_prior_study_v0/adapter.py",
+      "sha256": "ed7cd588b22960b5c61c720a0cca7d46e9dddc71ab6659d4b9c085c206fc6831"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+      "module": "experiments.model_map_proposal_v0.__init__",
+      "package_initializer": true,
+      "path": "experiments/model_map_proposal_v0/__init__.py",
+      "sha256": "17695ef737bfd20ecbd38626c28080fe1d4c23d998c15b4dca4995957a8b3af2"
+    },
+    {
+      "imports": [
+        "experiments.base_framework_v0.__init__",
+        "experiments.base_framework_v0.framework"
+      ],
+      "last_change_commit": "80643ad19b79b83a58f7dc4f716caf9bed31f53e",
+      "module": "experiments.model_map_proposal_v0.adapter",
+      "package_initializer": false,
+      "path": "experiments/model_map_proposal_v0/adapter.py",
+      "sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494"
+    },
+    {
+      "imports": [],
+      "last_change_commit": "943549fb561bf6954ca4955bb3fb6adff1799858",
+      "module": "experiments.model_recovery_proposal_v1.adapter",
+      "package_initializer": false,
+      "path": "experiments/model_recovery_proposal_v1/adapter.py",
+      "sha256": "13a699ff25bbbec75af7f00c50b072c87eed686a68bf72ae21d0568b59e7e266"
+    }
+  ],
+  "forbidden_reality_authorities": [
+    "experiments.base_framework_v1.source_a",
+    "experiments.base_framework_v1.source_b",
+    "experiments.base_framework_v2.campaign",
+    "experiments.base_framework_v2.framework",
+    "experiments.base_framework_v2.witness_c"
+  ],
+  "optional_profile_files": {
+    "cross_episode_initialization": [
+      {
+        "imports": [],
+        "last_change_commit": "bde98fbd312bd4db38e26436f0765d7d270d7317",
+        "module": "experiments.base_framework_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v0/__init__.py",
+        "sha256": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+        "module": "experiments.base_framework_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v0/framework.py",
+        "sha256": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v1/__init__.py",
+        "sha256": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "6a8789a48cb64b9fc95b1518c68d65ec58f12ab4",
+        "module": "experiments.base_framework_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/framework.py",
+        "sha256": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.hidden_oracle",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/hidden_oracle.py",
+        "sha256": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.types",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/types.py",
+        "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_input_bindings_v1/__init__.py",
+        "sha256": "da5a54233a9a31d9ce169002cd5e860f557f82aef3c8cc2b3a3d4533225b553a"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter"
+        ],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.adapters",
+        "package_initializer": false,
+        "path": "experiments/composition_input_bindings_v1/adapters.py",
+        "sha256": "71240f58ca5b444f9f34465828324909748c169de3009386977e02544acc1d5f"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/cross_episode_initialization_boundary_v1/__init__.py",
+        "sha256": "f8fdef4a1084ba2b677f4f4f30bc25089ac8e83d544b3ddff04b7cf50ba9a5bd"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.projection",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.receipt",
+          "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+          "experiments.state_recovery_authorizer_status_binding_v1.framework"
+        ],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.boundary",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_initialization_boundary_v1/boundary.py",
+        "sha256": "4609c4d0f6f225fc99573093ef54b8a032575b04e7a6e14804483070720ccab9"
+      },
+      {
+        "imports": [
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters"
+        ],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.projection",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_initialization_boundary_v1/projection.py",
+        "sha256": "840f74684cbaec6ca8c6c3e4adb37da22f82cb0e360966c69c1d4b28e51333cb"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_contradiction_revision_v0/__init__.py",
+        "sha256": "dedd62744003b937a2248d05288acceaaaeae6c02133ec51827fa4b3be3fa9b2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle"
+        ],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.overlay",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v0/overlay.py",
+        "sha256": "db3f9b34e6f293807d622f350a6069c09ddbfb7bc36c21fae5671902f4784848"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_integration_v0/__init__.py",
+        "sha256": "ac6d0d8f4a61e8e4df1da8255119e6144df383d331cc279ae2b0bc6d7d11d5dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_integration_v0/adapter.py",
+        "sha256": "6e70252a6c2e022e66e373ceca15db6e48772c2f72e4b1b0556f0b5fe762dc64"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/__init__.py",
+        "sha256": "1ec84c7530412dcded93e2a64d4e9083301d79e20db3fd95dba85d3006272b94"
+      },
+      {
+        "imports": [
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.adapter"
+        ],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/adapter.py",
+        "sha256": "ed7cd588b22960b5c61c720a0cca7d46e9dddc71ab6659d4b9c085c206fc6831"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+        "module": "experiments.model_map_proposal_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_map_proposal_v0/__init__.py",
+        "sha256": "17695ef737bfd20ecbd38626c28080fe1d4c23d998c15b4dca4995957a8b3af2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework"
+        ],
+        "last_change_commit": "80643ad19b79b83a58f7dc4f716caf9bed31f53e",
+        "module": "experiments.model_map_proposal_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_map_proposal_v0/adapter.py",
+        "sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/realized_event_grounding_v0/__init__.py",
+        "sha256": "8e4af54ea7584f8699d16b9b2a418225aedb88e82abfb3375394a0b5c07dd55c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.overlay",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "3aaae707c1abc42461cd84f57ebd0d6b1b66fde9",
+        "module": "experiments.realized_event_grounding_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/campaign.py",
+        "sha256": "903e0c2b117ced5b9bc57492a3aaddb1a16a02df9acb816b25747145e72a593c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.types",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/framework.py",
+        "sha256": "fa0c82ee687ab86f679af28cbe13b01f376f1e62081a35c31a91a80970e58422"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.receipt",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/receipt.py",
+        "sha256": "38a5c205811bdb10f8e8cabcddb733505810a41139bc0fa38f4d645648f10316"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "2f93db624c535d28f534194aad55e755edc1dee8",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/__init__.py",
+        "sha256": "9469114e7476a358be138b9327dd135af59d073638ed7472c0830a294ff962c0"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.state_recovery_proposal_interface_v1.__init__",
+          "experiments.state_recovery_proposal_interface_v1.framework"
+        ],
+        "last_change_commit": "099fce13e5dbbadfd262bc82ccebc8e6c8cb0a89",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/framework.py",
+        "sha256": "2ab6ba4b1f374f91cc49e367e11f7c656cbc80ccc905f7721c326346f9552936"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_proposal_interface_v1/__init__.py",
+        "sha256": "893fae816256bbfd260602b9b7f74e71bbbba537565f24c89de461d3c641bf2d"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_proposal_interface_v1/framework.py",
+        "sha256": "bc20be1297be3aa5464877d0b13b69010abdaed60cdae5c8604933b256bda2e9"
+      }
+    ],
+    "read_only_Map_guided_proposals": [
+      {
+        "imports": [],
+        "last_change_commit": "bde98fbd312bd4db38e26436f0765d7d270d7317",
+        "module": "experiments.base_framework_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v0/__init__.py",
+        "sha256": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+        "module": "experiments.base_framework_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v0/framework.py",
+        "sha256": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v1/__init__.py",
+        "sha256": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "6a8789a48cb64b9fc95b1518c68d65ec58f12ab4",
+        "module": "experiments.base_framework_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/framework.py",
+        "sha256": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.hidden_oracle",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/hidden_oracle.py",
+        "sha256": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.source_a",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/source_a.py",
+        "sha256": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.source_b",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/source_b.py",
+        "sha256": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.types",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/types.py",
+        "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v2/__init__.py",
+        "sha256": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.base_framework_v1.source_a",
+          "experiments.base_framework_v1.source_b",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.framework",
+          "experiments.base_framework_v2.registry",
+          "experiments.base_framework_v2.types",
+          "experiments.base_framework_v2.witness_c"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.campaign",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/campaign.py",
+        "sha256": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.types",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.registry",
+          "experiments.base_framework_v2.types",
+          "experiments.base_framework_v2.witness_c"
+        ],
+        "last_change_commit": "3cf1f9362eacc60dd840345d6b7418fb0de8f407",
+        "module": "experiments.base_framework_v2.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/framework.py",
+        "sha256": "fd0b9882b06e5c6db5cc5478a603d072579ada110e4acdd92162174b8294a244"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.registry",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/registry.py",
+        "sha256": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.types",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/types.py",
+        "sha256": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.types"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.witness_c",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/witness_c.py",
+        "sha256": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "c2e7d6a6429d6aed21aec05d5f434a796244af5b",
+        "module": "experiments.composition_empty_history_schema_contract_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_empty_history_schema_contract_v0/__init__.py",
+        "sha256": "eb288e7ccef6a53750037eac58533c19230dab821e3b0b0bf04db5dd30e4770d"
+      },
+      {
+        "imports": [
+          "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+          "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter"
+        ],
+        "last_change_commit": "c2e7d6a6429d6aed21aec05d5f434a796244af5b",
+        "module": "experiments.composition_empty_history_schema_contract_v0.protocol",
+        "package_initializer": false,
+        "path": "experiments/composition_empty_history_schema_contract_v0/protocol.py",
+        "sha256": "0f80504a17f61ddd0c394b198370c8b28703c9c5c1f39854d5b387f5cb4770db"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "7b74ebc011cad5fb9a443477a6ce25dac912edac",
+        "module": "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_initial_map_schema_diagnosis_v0/__init__.py",
+        "sha256": "4187b3b06738d610209b749e58864950770a4fc5bd3630e27149f8db96c74dc2"
+      },
+      {
+        "imports": [
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_proposal_role_composition_v1.__init__",
+          "experiments.model_proposal_role_composition_v1.protocol"
+        ],
+        "last_change_commit": "7b74ebc011cad5fb9a443477a6ce25dac912edac",
+        "module": "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+        "package_initializer": false,
+        "path": "experiments/composition_initial_map_schema_diagnosis_v0/diagnose.py",
+        "sha256": "24ef13468f6f6563abc3c2c2cd5293792e74ba027d5f0a3836080aa348b0e8b8"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_input_bindings_v1/__init__.py",
+        "sha256": "da5a54233a9a31d9ce169002cd5e860f557f82aef3c8cc2b3a3d4533225b553a"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter"
+        ],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.adapters",
+        "package_initializer": false,
+        "path": "experiments/composition_input_bindings_v1/adapters.py",
+        "sha256": "71240f58ca5b444f9f34465828324909748c169de3009386977e02544acc1d5f"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/cross_episode_initialization_boundary_v1/__init__.py",
+        "sha256": "f8fdef4a1084ba2b677f4f4f30bc25089ac8e83d544b3ddff04b7cf50ba9a5bd"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.projection",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.receipt",
+          "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+          "experiments.state_recovery_authorizer_status_binding_v1.framework"
+        ],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.boundary",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_initialization_boundary_v1/boundary.py",
+        "sha256": "4609c4d0f6f225fc99573093ef54b8a032575b04e7a6e14804483070720ccab9"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters",
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.boundary",
+          "experiments.cross_episode_initialization_boundary_v1.projection",
+          "experiments.model_map_established_prior_revision_v1.__init__",
+          "experiments.model_map_established_prior_revision_v1.fixture",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.campaign",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_initialization_boundary_v1/campaign.py",
+        "sha256": "1ab9a5933a53623b477fdf7df2cc705a8d11577e0a14f0c764a76735f67e7618"
+      },
+      {
+        "imports": [
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters"
+        ],
+        "last_change_commit": "7829158e28d029572bfd91338d272a0301501251",
+        "module": "experiments.cross_episode_initialization_boundary_v1.projection",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_initialization_boundary_v1/projection.py",
+        "sha256": "840f74684cbaec6ca8c6c3e4adb37da22f82cb0e360966c69c1d4b28e51333cb"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "2338e1ac32893772a35a702e458da5fd7b955259",
+        "module": "experiments.cross_episode_stale_memory_feasibility_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/cross_episode_stale_memory_feasibility_v0/__init__.py",
+        "sha256": "f7b4128128ab8a707e21f3872d01c6c62e3911e92895d378f35889a0fa6bebb1"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.campaign",
+          "experiments.cross_episode_initialization_boundary_v1.projection",
+          "experiments.cross_episode_stale_memory_feasibility_v0.__init__",
+          "experiments.cross_episode_stale_memory_feasibility_v0.fixture",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+          "experiments.model_proposal_role_composition_v2.__init__",
+          "experiments.model_proposal_role_composition_v2.protocol",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.__init__",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.durable",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "2338e1ac32893772a35a702e458da5fd7b955259",
+        "module": "experiments.cross_episode_stale_memory_feasibility_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_stale_memory_feasibility_v0/campaign.py",
+        "sha256": "48f88d117c7b591ea34ce0db96bd5fe1e0ea296200833cc6cd9b1586f744eb4b"
+      },
+      {
+        "imports": [
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.boundary"
+        ],
+        "last_change_commit": "2338e1ac32893772a35a702e458da5fd7b955259",
+        "module": "experiments.cross_episode_stale_memory_feasibility_v0.fixture",
+        "package_initializer": false,
+        "path": "experiments/cross_episode_stale_memory_feasibility_v0/fixture.py",
+        "sha256": "493f9d84202b41ff812be2fa766d65adaadd97b65773a5b7bc3ad5a99ac5f9f9"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters",
+          "experiments.cross_episode_initialization_boundary_v1.__init__",
+          "experiments.cross_episode_initialization_boundary_v1.projection",
+          "experiments.cross_episode_stale_memory_feasibility_v0.__init__",
+          "experiments.cross_episode_stale_memory_feasibility_v0.campaign",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_proposal_role_composition_v2.__init__",
+          "experiments.model_proposal_role_composition_v2.protocol",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign"
+        ],
+        "last_change_commit": "d07a377c40224fe21e9698791cf1dfb7730a10e8",
+        "module": "experiments.map_guided_explorer_interface_v0.interface",
+        "package_initializer": false,
+        "path": "experiments/map_guided_explorer_interface_v0/interface.py",
+        "sha256": "74d652fad2e1250dd77022c1978ccaa62437b76b8533c78c0e062b00fbab8f61"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_contradiction_revision_v0/__init__.py",
+        "sha256": "dedd62744003b937a2248d05288acceaaaeae6c02133ec51827fa4b3be3fa9b2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle"
+        ],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.overlay",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v0/overlay.py",
+        "sha256": "db3f9b34e6f293807d622f350a6069c09ddbfb7bc36c21fae5671902f4784848"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.campaign",
+          "experiments.base_framework_v2.framework",
+          "experiments.base_framework_v2.witness_c",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.overlay",
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.campaign"
+        ],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.preflight",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v0/preflight.py",
+        "sha256": "27be575f9018f1bc35f11129b5eca79ff2d9063c7755869008e8d3953a96845c"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5a93936d34b39153cc51ff07256b2611031f4170",
+        "module": "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_contradiction_revision_v1_feasibility/__init__.py",
+        "sha256": "c2f9299d4ddd85165935fe0a40b2cd14c5f7aa27302199f7d034a598b68fd2c9"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.preflight",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "557bd898dd7e4bbe8fdb836a4aa9c35ace3879f9",
+        "module": "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v1_feasibility/fixture.py",
+        "sha256": "6d46306cc7afa725fcedae52ac0382b4d42f72a4fa88b723b3446ad83aa47c45"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_integration_v0/__init__.py",
+        "sha256": "ac6d0d8f4a61e8e4df1da8255119e6144df383d331cc279ae2b0bc6d7d11d5dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_integration_v0/adapter.py",
+        "sha256": "6e70252a6c2e022e66e373ceca15db6e48772c2f72e4b1b0556f0b5fe762dc64"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.campaign",
+          "experiments.base_framework_v2.framework",
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.adapter"
+        ],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_integration_v0/campaign.py",
+        "sha256": "46fffac1be31ac44ef26e59ba0574593195dae699c4994efc7ce1afb877ff98f"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/__init__.py",
+        "sha256": "1ec84c7530412dcded93e2a64d4e9083301d79e20db3fd95dba85d3006272b94"
+      },
+      {
+        "imports": [
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.adapter"
+        ],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/adapter.py",
+        "sha256": "ed7cd588b22960b5c61c720a0cca7d46e9dddc71ab6659d4b9c085c206fc6831"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5e4283e439b037a8aa91603757f1a64fd448367b",
+        "module": "experiments.model_map_established_prior_revision_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_map_established_prior_revision_v1/__init__.py",
+        "sha256": "7ce78e7b87172c8cef0b902a5f2205c33055337da0495423e811c69cf088a46a"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_map_proposal_v0.boundary",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "5e4283e439b037a8aa91603757f1a64fd448367b",
+        "module": "experiments.model_map_established_prior_revision_v1.fixture",
+        "package_initializer": false,
+        "path": "experiments/model_map_established_prior_revision_v1/fixture.py",
+        "sha256": "349a95e604f9e929cb220c5ca0b1f66480c412c6b85e336acd1d902fd77e0a16"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+        "module": "experiments.model_map_proposal_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_map_proposal_v0/__init__.py",
+        "sha256": "17695ef737bfd20ecbd38626c28080fe1d4c23d998c15b4dca4995957a8b3af2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework"
+        ],
+        "last_change_commit": "80643ad19b79b83a58f7dc4f716caf9bed31f53e",
+        "module": "experiments.model_map_proposal_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_map_proposal_v0/adapter.py",
+        "sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494"
+      },
+      {
+        "imports": [
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+        "module": "experiments.model_map_proposal_v0.boundary",
+        "package_initializer": false,
+        "path": "experiments/model_map_proposal_v0/boundary.py",
+        "sha256": "f7697e1173f84d9e670ed87a1c681535110c41cfdc32ae7a8ea4b8e708ca991a"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9a6c75ccdf2d775055c93cd67149ec0fc2f5f00e",
+        "module": "experiments.model_proposal_role_composition_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_proposal_role_composition_v1/__init__.py",
+        "sha256": "58de7ffc05603c525758741b6383a1b03225ccf75ce0d155ed19ee4bcda354de"
+      },
+      {
+        "imports": [
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_recovery_proposal_v1.__init__",
+          "experiments.model_recovery_proposal_v1.adapter"
+        ],
+        "last_change_commit": "9a6c75ccdf2d775055c93cd67149ec0fc2f5f00e",
+        "module": "experiments.model_proposal_role_composition_v1.protocol",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v1/protocol.py",
+        "sha256": "4a78f2a5ce0de1304001ccab338bb1dd59f4868e7a80c451e7b0a94a3ce5a069"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "c4d241400feb455a3dfcd88af4117ae0c20f66a5",
+        "module": "experiments.model_proposal_role_composition_v2.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_proposal_role_composition_v2/__init__.py",
+        "sha256": "d775359df39a4961080bf4fb1c077cc2d18872738a0452b55107cba48b4de77d"
+      },
+      {
+        "imports": [
+          "experiments.composition_empty_history_schema_contract_v0.__init__",
+          "experiments.composition_empty_history_schema_contract_v0.protocol",
+          "experiments.model_proposal_role_composition_v1.__init__",
+          "experiments.model_proposal_role_composition_v1.protocol"
+        ],
+        "last_change_commit": "c4d241400feb455a3dfcd88af4117ae0c20f66a5",
+        "module": "experiments.model_proposal_role_composition_v2.protocol",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v2/protocol.py",
+        "sha256": "99d8f02e3e3063e91f96200fa8a7dd1b25729bddaf7e5dfbb390ba8dce528132"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "ba6b20f26babb19a51acbc7089f9f5928d2cdab7",
+        "module": "experiments.model_proposal_role_composition_v2_replacement_r1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_proposal_role_composition_v2_replacement_r1/__init__.py",
+        "sha256": "97d39f26a6326d57645691799f479cc77e87d35f48473e013034345df086f2e5"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "ba6b20f26babb19a51acbc7089f9f5928d2cdab7",
+        "module": "experiments.model_proposal_role_composition_v2_replacement_r1.durable",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v2_replacement_r1/durable.py",
+        "sha256": "d572a3b7220e99306b8562c402680c3e8aeeeef7b18bc045235df5dbf7558887"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "943549fb561bf6954ca4955bb3fb6adff1799858",
+        "module": "experiments.model_recovery_proposal_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_recovery_proposal_v1/__init__.py",
+        "sha256": "8f227b1c722352023c401afed7220933e12152b64c4787bbf24dd9a07b4b964e"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "943549fb561bf6954ca4955bb3fb6adff1799858",
+        "module": "experiments.model_recovery_proposal_v1.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_recovery_proposal_v1/adapter.py",
+        "sha256": "13a699ff25bbbec75af7f00c50b072c87eed686a68bf72ae21d0568b59e7e266"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/realized_event_grounding_v0/__init__.py",
+        "sha256": "8e4af54ea7584f8699d16b9b2a418225aedb88e82abfb3375394a0b5c07dd55c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.overlay",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "3aaae707c1abc42461cd84f57ebd0d6b1b66fde9",
+        "module": "experiments.realized_event_grounding_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/campaign.py",
+        "sha256": "903e0c2b117ced5b9bc57492a3aaddb1a16a02df9acb816b25747145e72a593c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.types",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/framework.py",
+        "sha256": "fa0c82ee687ab86f679af28cbe13b01f376f1e62081a35c31a91a80970e58422"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.receipt",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/receipt.py",
+        "sha256": "38a5c205811bdb10f8e8cabcddb733505810a41139bc0fa38f4d645648f10316"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "2f93db624c535d28f534194aad55e755edc1dee8",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/__init__.py",
+        "sha256": "9469114e7476a358be138b9327dd135af59d073638ed7472c0830a294ff962c0"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.state_recovery_proposal_interface_v1.__init__",
+          "experiments.state_recovery_proposal_interface_v1.framework"
+        ],
+        "last_change_commit": "099fce13e5dbbadfd262bc82ccebc8e6c8cb0a89",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/framework.py",
+        "sha256": "2ab6ba4b1f374f91cc49e367e11f7c656cbc80ccc905f7721c326346f9552936"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_proposal_interface_v1/__init__.py",
+        "sha256": "893fae816256bbfd260602b9b7f74e71bbbba537565f24c89de461d3c641bf2d"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_proposal_interface_v1/framework.py",
+        "sha256": "bc20be1297be3aa5464877d0b13b69010abdaed60cdae5c8604933b256bda2e9"
+      }
+    ],
+    "three_role_R1_driver": [
+      {
+        "imports": [],
+        "last_change_commit": "bde98fbd312bd4db38e26436f0765d7d270d7317",
+        "module": "experiments.base_framework_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v0/__init__.py",
+        "sha256": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+        "module": "experiments.base_framework_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v0/framework.py",
+        "sha256": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v1/__init__.py",
+        "sha256": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "6a8789a48cb64b9fc95b1518c68d65ec58f12ab4",
+        "module": "experiments.base_framework_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/framework.py",
+        "sha256": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.hidden_oracle",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/hidden_oracle.py",
+        "sha256": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.source_a",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/source_a.py",
+        "sha256": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.source_b",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/source_b.py",
+        "sha256": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "d502249cc6b983d079813e990cb451a97645a014",
+        "module": "experiments.base_framework_v1.types",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v1/types.py",
+        "sha256": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.__init__",
+        "package_initializer": true,
+        "path": "experiments/base_framework_v2/__init__.py",
+        "sha256": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.base_framework_v1.source_a",
+          "experiments.base_framework_v1.source_b",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.framework",
+          "experiments.base_framework_v2.registry",
+          "experiments.base_framework_v2.types",
+          "experiments.base_framework_v2.witness_c"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.campaign",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/campaign.py",
+        "sha256": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.types",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.registry",
+          "experiments.base_framework_v2.types",
+          "experiments.base_framework_v2.witness_c"
+        ],
+        "last_change_commit": "3cf1f9362eacc60dd840345d6b7418fb0de8f407",
+        "module": "experiments.base_framework_v2.framework",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/framework.py",
+        "sha256": "fd0b9882b06e5c6db5cc5478a603d072579ada110e4acdd92162174b8294a244"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.registry",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/registry.py",
+        "sha256": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.types",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/types.py",
+        "sha256": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.types",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.types"
+        ],
+        "last_change_commit": "116628507d039f7292aa152646782689c7e8c62d",
+        "module": "experiments.base_framework_v2.witness_c",
+        "package_initializer": false,
+        "path": "experiments/base_framework_v2/witness_c.py",
+        "sha256": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "c2e7d6a6429d6aed21aec05d5f434a796244af5b",
+        "module": "experiments.composition_empty_history_schema_contract_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_empty_history_schema_contract_v0/__init__.py",
+        "sha256": "eb288e7ccef6a53750037eac58533c19230dab821e3b0b0bf04db5dd30e4770d"
+      },
+      {
+        "imports": [
+          "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+          "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter"
+        ],
+        "last_change_commit": "c2e7d6a6429d6aed21aec05d5f434a796244af5b",
+        "module": "experiments.composition_empty_history_schema_contract_v0.protocol",
+        "package_initializer": false,
+        "path": "experiments/composition_empty_history_schema_contract_v0/protocol.py",
+        "sha256": "0f80504a17f61ddd0c394b198370c8b28703c9c5c1f39854d5b387f5cb4770db"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "7b74ebc011cad5fb9a443477a6ce25dac912edac",
+        "module": "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_initial_map_schema_diagnosis_v0/__init__.py",
+        "sha256": "4187b3b06738d610209b749e58864950770a4fc5bd3630e27149f8db96c74dc2"
+      },
+      {
+        "imports": [
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_proposal_role_composition_v1.__init__",
+          "experiments.model_proposal_role_composition_v1.protocol"
+        ],
+        "last_change_commit": "7b74ebc011cad5fb9a443477a6ce25dac912edac",
+        "module": "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+        "package_initializer": false,
+        "path": "experiments/composition_initial_map_schema_diagnosis_v0/diagnose.py",
+        "sha256": "24ef13468f6f6563abc3c2c2cd5293792e74ba027d5f0a3836080aa348b0e8b8"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/composition_input_bindings_v1/__init__.py",
+        "sha256": "da5a54233a9a31d9ce169002cd5e860f557f82aef3c8cc2b3a3d4533225b553a"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter"
+        ],
+        "last_change_commit": "9deac537c4fff7bf0d3bc9ea1e71ee849e3afd3b",
+        "module": "experiments.composition_input_bindings_v1.adapters",
+        "package_initializer": false,
+        "path": "experiments/composition_input_bindings_v1/adapters.py",
+        "sha256": "71240f58ca5b444f9f34465828324909748c169de3009386977e02544acc1d5f"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_contradiction_revision_v0/__init__.py",
+        "sha256": "dedd62744003b937a2248d05288acceaaaeae6c02133ec51827fa4b3be3fa9b2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle"
+        ],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.overlay",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v0/overlay.py",
+        "sha256": "db3f9b34e6f293807d622f350a6069c09ddbfb7bc36c21fae5671902f4784848"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.campaign",
+          "experiments.base_framework_v2.framework",
+          "experiments.base_framework_v2.witness_c",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.overlay",
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.campaign"
+        ],
+        "last_change_commit": "f2609c6db3c8f6d9af029f7fcbf70828835c0b18",
+        "module": "experiments.model_explorer_contradiction_revision_v0.preflight",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v0/preflight.py",
+        "sha256": "27be575f9018f1bc35f11129b5eca79ff2d9063c7755869008e8d3953a96845c"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5a93936d34b39153cc51ff07256b2611031f4170",
+        "module": "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_contradiction_revision_v1_feasibility/__init__.py",
+        "sha256": "c2f9299d4ddd85165935fe0a40b2cd14c5f7aa27302199f7d034a598b68fd2c9"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.preflight",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "557bd898dd7e4bbe8fdb836a4aa9c35ace3879f9",
+        "module": "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_contradiction_revision_v1_feasibility/fixture.py",
+        "sha256": "6d46306cc7afa725fcedae52ac0382b4d42f72a4fa88b723b3446ad83aa47c45"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_integration_v0/__init__.py",
+        "sha256": "ac6d0d8f4a61e8e4df1da8255119e6144df383d331cc279ae2b0bc6d7d11d5dd"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_integration_v0/adapter.py",
+        "sha256": "6e70252a6c2e022e66e373ceca15db6e48772c2f72e4b1b0556f0b5fe762dc64"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.base_framework_v2.__init__",
+          "experiments.base_framework_v2.campaign",
+          "experiments.base_framework_v2.framework",
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.adapter"
+        ],
+        "last_change_commit": "35c06abc339f9a33a6f99bfbfbc1ab9090133cd2",
+        "module": "experiments.model_explorer_integration_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_integration_v0/campaign.py",
+        "sha256": "46fffac1be31ac44ef26e59ba0574593195dae699c4994efc7ce1afb877ff98f"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/__init__.py",
+        "sha256": "1ec84c7530412dcded93e2a64d4e9083301d79e20db3fd95dba85d3006272b94"
+      },
+      {
+        "imports": [
+          "experiments.model_explorer_integration_v0.__init__",
+          "experiments.model_explorer_integration_v0.adapter"
+        ],
+        "last_change_commit": "a4cf01c9055d360671b136f4b9754d9c46a29190",
+        "module": "experiments.model_explorer_semantic_prior_study_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_explorer_semantic_prior_study_v0/adapter.py",
+        "sha256": "ed7cd588b22960b5c61c720a0cca7d46e9dddc71ab6659d4b9c085c206fc6831"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+        "module": "experiments.model_map_proposal_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_map_proposal_v0/__init__.py",
+        "sha256": "17695ef737bfd20ecbd38626c28080fe1d4c23d998c15b4dca4995957a8b3af2"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework"
+        ],
+        "last_change_commit": "80643ad19b79b83a58f7dc4f716caf9bed31f53e",
+        "module": "experiments.model_map_proposal_v0.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_map_proposal_v0/adapter.py",
+        "sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494"
+      },
+      {
+        "imports": [
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+          "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "a131b387e9cb4a43012124e76d4ffbd8504246f5",
+        "module": "experiments.model_map_proposal_v0.boundary",
+        "package_initializer": false,
+        "path": "experiments/model_map_proposal_v0/boundary.py",
+        "sha256": "f7697e1173f84d9e670ed87a1c681535110c41cfdc32ae7a8ea4b8e708ca991a"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9a6c75ccdf2d775055c93cd67149ec0fc2f5f00e",
+        "module": "experiments.model_proposal_role_composition_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_proposal_role_composition_v1/__init__.py",
+        "sha256": "58de7ffc05603c525758741b6383a1b03225ccf75ce0d155ed19ee4bcda354de"
+      },
+      {
+        "imports": [
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_recovery_proposal_v1.__init__",
+          "experiments.model_recovery_proposal_v1.adapter"
+        ],
+        "last_change_commit": "9a6c75ccdf2d775055c93cd67149ec0fc2f5f00e",
+        "module": "experiments.model_proposal_role_composition_v1.protocol",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v1/protocol.py",
+        "sha256": "4a78f2a5ce0de1304001ccab338bb1dd59f4868e7a80c451e7b0a94a3ce5a069"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "c4d241400feb455a3dfcd88af4117ae0c20f66a5",
+        "module": "experiments.model_proposal_role_composition_v2.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_proposal_role_composition_v2/__init__.py",
+        "sha256": "d775359df39a4961080bf4fb1c077cc2d18872738a0452b55107cba48b4de77d"
+      },
+      {
+        "imports": [
+          "experiments.composition_empty_history_schema_contract_v0.__init__",
+          "experiments.composition_empty_history_schema_contract_v0.protocol",
+          "experiments.model_proposal_role_composition_v1.__init__",
+          "experiments.model_proposal_role_composition_v1.protocol"
+        ],
+        "last_change_commit": "c4d241400feb455a3dfcd88af4117ae0c20f66a5",
+        "module": "experiments.model_proposal_role_composition_v2.protocol",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v2/protocol.py",
+        "sha256": "99d8f02e3e3063e91f96200fa8a7dd1b25729bddaf7e5dfbb390ba8dce528132"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v0.__init__",
+          "experiments.base_framework_v0.framework",
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.composition_input_bindings_v1.__init__",
+          "experiments.composition_input_bindings_v1.adapters",
+          "experiments.model_explorer_semantic_prior_study_v0.__init__",
+          "experiments.model_explorer_semantic_prior_study_v0.adapter",
+          "experiments.model_map_proposal_v0.__init__",
+          "experiments.model_map_proposal_v0.adapter",
+          "experiments.model_map_proposal_v0.boundary",
+          "experiments.model_proposal_role_composition_v2.__init__",
+          "experiments.model_proposal_role_composition_v2.protocol",
+          "experiments.model_recovery_proposal_v1.__init__",
+          "experiments.model_recovery_proposal_v1.adapter",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.campaign",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt",
+          "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+          "experiments.state_recovery_authorizer_status_binding_v1.framework"
+        ],
+        "last_change_commit": "c4d241400feb455a3dfcd88af4117ae0c20f66a5",
+        "module": "experiments.model_proposal_role_composition_v2.runtime",
+        "package_initializer": false,
+        "path": "experiments/model_proposal_role_composition_v2/runtime.py",
+        "sha256": "8e15cac7aa06000110520df532aa4f8b12b2928fd93c79dc963314d775fd42a2"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "943549fb561bf6954ca4955bb3fb6adff1799858",
+        "module": "experiments.model_recovery_proposal_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/model_recovery_proposal_v1/__init__.py",
+        "sha256": "8f227b1c722352023c401afed7220933e12152b64c4787bbf24dd9a07b4b964e"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "943549fb561bf6954ca4955bb3fb6adff1799858",
+        "module": "experiments.model_recovery_proposal_v1.adapter",
+        "package_initializer": false,
+        "path": "experiments/model_recovery_proposal_v1/adapter.py",
+        "sha256": "13a699ff25bbbec75af7f00c50b072c87eed686a68bf72ae21d0568b59e7e266"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.__init__",
+        "package_initializer": true,
+        "path": "experiments/realized_event_grounding_v0/__init__.py",
+        "sha256": "8e4af54ea7584f8699d16b9b2a418225aedb88e82abfb3375394a0b5c07dd55c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.hidden_oracle",
+          "experiments.model_explorer_contradiction_revision_v0.__init__",
+          "experiments.model_explorer_contradiction_revision_v0.overlay",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "3aaae707c1abc42461cd84f57ebd0d6b1b66fde9",
+        "module": "experiments.realized_event_grounding_v0.campaign",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/campaign.py",
+        "sha256": "903e0c2b117ced5b9bc57492a3aaddb1a16a02df9acb816b25747145e72a593c"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.base_framework_v1.types",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.receipt"
+        ],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.framework",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/framework.py",
+        "sha256": "fa0c82ee687ab86f679af28cbe13b01f376f1e62081a35c31a91a80970e58422"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "9075e9e25cbc46ff6651b0e2946d97571686e68f",
+        "module": "experiments.realized_event_grounding_v0.receipt",
+        "package_initializer": false,
+        "path": "experiments/realized_event_grounding_v0/receipt.py",
+        "sha256": "38a5c205811bdb10f8e8cabcddb733505810a41139bc0fa38f4d645648f10316"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "2f93db624c535d28f534194aad55e755edc1dee8",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/__init__.py",
+        "sha256": "9469114e7476a358be138b9327dd135af59d073638ed7472c0830a294ff962c0"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework",
+          "experiments.state_recovery_proposal_interface_v1.__init__",
+          "experiments.state_recovery_proposal_interface_v1.framework"
+        ],
+        "last_change_commit": "099fce13e5dbbadfd262bc82ccebc8e6c8cb0a89",
+        "module": "experiments.state_recovery_authorizer_status_binding_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_authorizer_status_binding_v1/framework.py",
+        "sha256": "2ab6ba4b1f374f91cc49e367e11f7c656cbc80ccc905f7721c326346f9552936"
+      },
+      {
+        "imports": [],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.__init__",
+        "package_initializer": true,
+        "path": "experiments/state_recovery_proposal_interface_v1/__init__.py",
+        "sha256": "893fae816256bbfd260602b9b7f74e71bbbba537565f24c89de461d3c641bf2d"
+      },
+      {
+        "imports": [
+          "experiments.base_framework_v1.__init__",
+          "experiments.base_framework_v1.framework",
+          "experiments.realized_event_grounding_v0.__init__",
+          "experiments.realized_event_grounding_v0.framework"
+        ],
+        "last_change_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+        "module": "experiments.state_recovery_proposal_interface_v1.framework",
+        "package_initializer": false,
+        "path": "experiments/state_recovery_proposal_interface_v1/framework.py",
+        "sha256": "bc20be1297be3aa5464877d0b13b69010abdaed60cdae5c8604933b256bda2e9"
+      }
+    ]
+  },
+  "optional_profiles": {
+    "cross_episode_initialization": [
+      "experiments.base_framework_v0.__init__",
+      "experiments.base_framework_v0.framework",
+      "experiments.base_framework_v1.__init__",
+      "experiments.base_framework_v1.framework",
+      "experiments.base_framework_v1.hidden_oracle",
+      "experiments.base_framework_v1.types",
+      "experiments.composition_input_bindings_v1.__init__",
+      "experiments.composition_input_bindings_v1.adapters",
+      "experiments.cross_episode_initialization_boundary_v1.__init__",
+      "experiments.cross_episode_initialization_boundary_v1.boundary",
+      "experiments.cross_episode_initialization_boundary_v1.projection",
+      "experiments.model_explorer_contradiction_revision_v0.__init__",
+      "experiments.model_explorer_contradiction_revision_v0.overlay",
+      "experiments.model_explorer_integration_v0.__init__",
+      "experiments.model_explorer_integration_v0.adapter",
+      "experiments.model_explorer_semantic_prior_study_v0.__init__",
+      "experiments.model_explorer_semantic_prior_study_v0.adapter",
+      "experiments.model_map_proposal_v0.__init__",
+      "experiments.model_map_proposal_v0.adapter",
+      "experiments.realized_event_grounding_v0.__init__",
+      "experiments.realized_event_grounding_v0.campaign",
+      "experiments.realized_event_grounding_v0.framework",
+      "experiments.realized_event_grounding_v0.receipt",
+      "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+      "experiments.state_recovery_authorizer_status_binding_v1.framework",
+      "experiments.state_recovery_proposal_interface_v1.__init__",
+      "experiments.state_recovery_proposal_interface_v1.framework"
+    ],
+    "read_only_Map_guided_proposals": [
+      "experiments.base_framework_v0.__init__",
+      "experiments.base_framework_v0.framework",
+      "experiments.base_framework_v1.__init__",
+      "experiments.base_framework_v1.framework",
+      "experiments.base_framework_v1.hidden_oracle",
+      "experiments.base_framework_v1.source_a",
+      "experiments.base_framework_v1.source_b",
+      "experiments.base_framework_v1.types",
+      "experiments.base_framework_v2.__init__",
+      "experiments.base_framework_v2.campaign",
+      "experiments.base_framework_v2.framework",
+      "experiments.base_framework_v2.registry",
+      "experiments.base_framework_v2.types",
+      "experiments.base_framework_v2.witness_c",
+      "experiments.composition_empty_history_schema_contract_v0.__init__",
+      "experiments.composition_empty_history_schema_contract_v0.protocol",
+      "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+      "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+      "experiments.composition_input_bindings_v1.__init__",
+      "experiments.composition_input_bindings_v1.adapters",
+      "experiments.cross_episode_initialization_boundary_v1.__init__",
+      "experiments.cross_episode_initialization_boundary_v1.boundary",
+      "experiments.cross_episode_initialization_boundary_v1.campaign",
+      "experiments.cross_episode_initialization_boundary_v1.projection",
+      "experiments.cross_episode_stale_memory_feasibility_v0.__init__",
+      "experiments.cross_episode_stale_memory_feasibility_v0.campaign",
+      "experiments.cross_episode_stale_memory_feasibility_v0.fixture",
+      "experiments.map_guided_explorer_interface_v0.interface",
+      "experiments.model_explorer_contradiction_revision_v0.__init__",
+      "experiments.model_explorer_contradiction_revision_v0.overlay",
+      "experiments.model_explorer_contradiction_revision_v0.preflight",
+      "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+      "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+      "experiments.model_explorer_integration_v0.__init__",
+      "experiments.model_explorer_integration_v0.adapter",
+      "experiments.model_explorer_integration_v0.campaign",
+      "experiments.model_explorer_semantic_prior_study_v0.__init__",
+      "experiments.model_explorer_semantic_prior_study_v0.adapter",
+      "experiments.model_map_established_prior_revision_v1.__init__",
+      "experiments.model_map_established_prior_revision_v1.fixture",
+      "experiments.model_map_proposal_v0.__init__",
+      "experiments.model_map_proposal_v0.adapter",
+      "experiments.model_map_proposal_v0.boundary",
+      "experiments.model_proposal_role_composition_v1.__init__",
+      "experiments.model_proposal_role_composition_v1.protocol",
+      "experiments.model_proposal_role_composition_v2.__init__",
+      "experiments.model_proposal_role_composition_v2.protocol",
+      "experiments.model_proposal_role_composition_v2_replacement_r1.__init__",
+      "experiments.model_proposal_role_composition_v2_replacement_r1.durable",
+      "experiments.model_recovery_proposal_v1.__init__",
+      "experiments.model_recovery_proposal_v1.adapter",
+      "experiments.realized_event_grounding_v0.__init__",
+      "experiments.realized_event_grounding_v0.campaign",
+      "experiments.realized_event_grounding_v0.framework",
+      "experiments.realized_event_grounding_v0.receipt",
+      "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+      "experiments.state_recovery_authorizer_status_binding_v1.framework",
+      "experiments.state_recovery_proposal_interface_v1.__init__",
+      "experiments.state_recovery_proposal_interface_v1.framework"
+    ],
+    "three_role_R1_driver": [
+      "experiments.base_framework_v0.__init__",
+      "experiments.base_framework_v0.framework",
+      "experiments.base_framework_v1.__init__",
+      "experiments.base_framework_v1.framework",
+      "experiments.base_framework_v1.hidden_oracle",
+      "experiments.base_framework_v1.source_a",
+      "experiments.base_framework_v1.source_b",
+      "experiments.base_framework_v1.types",
+      "experiments.base_framework_v2.__init__",
+      "experiments.base_framework_v2.campaign",
+      "experiments.base_framework_v2.framework",
+      "experiments.base_framework_v2.registry",
+      "experiments.base_framework_v2.types",
+      "experiments.base_framework_v2.witness_c",
+      "experiments.composition_empty_history_schema_contract_v0.__init__",
+      "experiments.composition_empty_history_schema_contract_v0.protocol",
+      "experiments.composition_initial_map_schema_diagnosis_v0.__init__",
+      "experiments.composition_initial_map_schema_diagnosis_v0.diagnose",
+      "experiments.composition_input_bindings_v1.__init__",
+      "experiments.composition_input_bindings_v1.adapters",
+      "experiments.model_explorer_contradiction_revision_v0.__init__",
+      "experiments.model_explorer_contradiction_revision_v0.overlay",
+      "experiments.model_explorer_contradiction_revision_v0.preflight",
+      "experiments.model_explorer_contradiction_revision_v1_feasibility.__init__",
+      "experiments.model_explorer_contradiction_revision_v1_feasibility.fixture",
+      "experiments.model_explorer_integration_v0.__init__",
+      "experiments.model_explorer_integration_v0.adapter",
+      "experiments.model_explorer_integration_v0.campaign",
+      "experiments.model_explorer_semantic_prior_study_v0.__init__",
+      "experiments.model_explorer_semantic_prior_study_v0.adapter",
+      "experiments.model_map_proposal_v0.__init__",
+      "experiments.model_map_proposal_v0.adapter",
+      "experiments.model_map_proposal_v0.boundary",
+      "experiments.model_proposal_role_composition_v1.__init__",
+      "experiments.model_proposal_role_composition_v1.protocol",
+      "experiments.model_proposal_role_composition_v2.__init__",
+      "experiments.model_proposal_role_composition_v2.protocol",
+      "experiments.model_proposal_role_composition_v2.runtime",
+      "experiments.model_recovery_proposal_v1.__init__",
+      "experiments.model_recovery_proposal_v1.adapter",
+      "experiments.realized_event_grounding_v0.__init__",
+      "experiments.realized_event_grounding_v0.campaign",
+      "experiments.realized_event_grounding_v0.framework",
+      "experiments.realized_event_grounding_v0.receipt",
+      "experiments.state_recovery_authorizer_status_binding_v1.__init__",
+      "experiments.state_recovery_authorizer_status_binding_v1.framework",
+      "experiments.state_recovery_proposal_interface_v1.__init__",
+      "experiments.state_recovery_proposal_interface_v1.framework"
+    ]
+  }
+}

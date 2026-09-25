@@ -1,0 +1,385 @@
+{
+  "A": {
+    "setup_steps": 5,
+    "setup_actions": [
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE"
+    ],
+    "authorized_setup_events": [
+      {
+        "epoch": 501,
+        "transaction_id": 1,
+        "pre_state": 0,
+        "action": "ADVANCE",
+        "next_state": 1,
+        "consequence": 1
+      },
+      {
+        "epoch": 501,
+        "transaction_id": 2,
+        "pre_state": 1,
+        "action": "ADVANCE",
+        "next_state": 2,
+        "consequence": -1
+      },
+      {
+        "epoch": 501,
+        "transaction_id": 3,
+        "pre_state": 2,
+        "action": "ADVANCE",
+        "next_state": 3,
+        "consequence": 1
+      },
+      {
+        "epoch": 501,
+        "transaction_id": 4,
+        "pre_state": 3,
+        "action": "ADVANCE",
+        "next_state": 0,
+        "consequence": -1
+      },
+      {
+        "epoch": 501,
+        "transaction_id": 5,
+        "pre_state": 0,
+        "action": "ADVANCE",
+        "next_state": 1,
+        "consequence": 1
+      }
+    ],
+    "raw_relevant_records": [
+      {
+        "epoch": 501,
+        "transaction_id": 2,
+        "pre_state": 1,
+        "action": "ADVANCE",
+        "next_state": 2,
+        "consequence": -1,
+        "pair_decision_id": 2151778615808
+      }
+    ],
+    "prompts": {
+      "raw": {
+        "without_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 5,
+            "epoch": 501,
+            "transaction_id": 6,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "records": [],
+              "UNTRIED": [
+                "ADVANCE",
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":501,\"map_version\":5,\"memory\":{\"UNTRIED\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"records\":[]},\"state\":1,\"transaction_id\":6}"
+        },
+        "with_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 5,
+            "epoch": 501,
+            "transaction_id": 6,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "records": [
+                {
+                  "epoch": 501,
+                  "transaction_id": 2,
+                  "pre_state": 1,
+                  "action": "ADVANCE",
+                  "next_state": 2,
+                  "consequence": -1,
+                  "pair_decision_id": 2151778615808
+                }
+              ],
+              "UNTRIED": [
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":501,\"map_version\":5,\"memory\":{\"UNTRIED\":[\"HOLD\",\"RETREAT\"],\"records\":[{\"action\":\"ADVANCE\",\"consequence\":-1,\"epoch\":501,\"next_state\":2,\"pair_decision_id\":2151778615808,\"pre_state\":1,\"transaction_id\":2}]},\"state\":1,\"transaction_id\":6}"
+        }
+      },
+      "semantic": {
+        "without_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 5,
+            "epoch": 501,
+            "transaction_id": 6,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "VERIFIED_PRIOR_OUTCOMES": [],
+              "UNTRIED": [
+                "ADVANCE",
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":501,\"map_version\":5,\"memory\":{\"UNTRIED\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"VERIFIED_PRIOR_OUTCOMES\":[]},\"state\":1,\"transaction_id\":6}"
+        },
+        "with_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 5,
+            "epoch": 501,
+            "transaction_id": 6,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "VERIFIED_PRIOR_OUTCOMES": [
+                {
+                  "action": "ADVANCE",
+                  "observed_consequences": [
+                    -1
+                  ]
+                }
+              ],
+              "UNTRIED": [
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":501,\"map_version\":5,\"memory\":{\"UNTRIED\":[\"HOLD\",\"RETREAT\"],\"VERIFIED_PRIOR_OUTCOMES\":[{\"action\":\"ADVANCE\",\"observed_consequences\":[-1]}]},\"state\":1,\"transaction_id\":6}"
+        }
+      }
+    }
+  },
+  "B": {
+    "setup_steps": 6,
+    "setup_actions": [
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE",
+      "ADVANCE",
+      "HOLD"
+    ],
+    "authorized_setup_events": [
+      {
+        "epoch": 502,
+        "transaction_id": 1,
+        "pre_state": 0,
+        "action": "ADVANCE",
+        "next_state": 1,
+        "consequence": 1
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 2,
+        "pre_state": 1,
+        "action": "ADVANCE",
+        "next_state": 2,
+        "consequence": -1
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 3,
+        "pre_state": 2,
+        "action": "ADVANCE",
+        "next_state": 3,
+        "consequence": 1
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 4,
+        "pre_state": 3,
+        "action": "ADVANCE",
+        "next_state": 0,
+        "consequence": -1
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 5,
+        "pre_state": 0,
+        "action": "ADVANCE",
+        "next_state": 1,
+        "consequence": 1
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 6,
+        "pre_state": 1,
+        "action": "HOLD",
+        "next_state": 1,
+        "consequence": 1
+      }
+    ],
+    "raw_relevant_records": [
+      {
+        "epoch": 502,
+        "transaction_id": 2,
+        "pre_state": 1,
+        "action": "ADVANCE",
+        "next_state": 2,
+        "consequence": -1,
+        "pair_decision_id": 2156073583104
+      },
+      {
+        "epoch": 502,
+        "transaction_id": 6,
+        "pre_state": 1,
+        "action": "HOLD",
+        "next_state": 1,
+        "consequence": 1,
+        "pair_decision_id": 2156073584128
+      }
+    ],
+    "prompts": {
+      "raw": {
+        "without_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 6,
+            "epoch": 502,
+            "transaction_id": 7,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "records": [],
+              "UNTRIED": [
+                "ADVANCE",
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":502,\"map_version\":6,\"memory\":{\"UNTRIED\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"records\":[]},\"state\":1,\"transaction_id\":7}"
+        },
+        "with_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 6,
+            "epoch": 502,
+            "transaction_id": 7,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "records": [
+                {
+                  "epoch": 502,
+                  "transaction_id": 2,
+                  "pre_state": 1,
+                  "action": "ADVANCE",
+                  "next_state": 2,
+                  "consequence": -1,
+                  "pair_decision_id": 2156073583104
+                },
+                {
+                  "epoch": 502,
+                  "transaction_id": 6,
+                  "pre_state": 1,
+                  "action": "HOLD",
+                  "next_state": 1,
+                  "consequence": 1,
+                  "pair_decision_id": 2156073584128
+                }
+              ],
+              "UNTRIED": [
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":502,\"map_version\":6,\"memory\":{\"UNTRIED\":[\"RETREAT\"],\"records\":[{\"action\":\"ADVANCE\",\"consequence\":-1,\"epoch\":502,\"next_state\":2,\"pair_decision_id\":2156073583104,\"pre_state\":1,\"transaction_id\":2},{\"action\":\"HOLD\",\"consequence\":1,\"epoch\":502,\"next_state\":1,\"pair_decision_id\":2156073584128,\"pre_state\":1,\"transaction_id\":6}]},\"state\":1,\"transaction_id\":7}"
+        }
+      },
+      "semantic": {
+        "without_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 6,
+            "epoch": 502,
+            "transaction_id": 7,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "VERIFIED_PRIOR_OUTCOMES": [],
+              "UNTRIED": [
+                "ADVANCE",
+                "HOLD",
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":502,\"map_version\":6,\"memory\":{\"UNTRIED\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"VERIFIED_PRIOR_OUTCOMES\":[]},\"state\":1,\"transaction_id\":7}"
+        },
+        "with_history": {
+          "system": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+          "payload": {
+            "state": 1,
+            "map_version": 6,
+            "epoch": 502,
+            "transaction_id": 7,
+            "allowed_actions": [
+              "ADVANCE",
+              "HOLD",
+              "RETREAT"
+            ],
+            "memory": {
+              "VERIFIED_PRIOR_OUTCOMES": [
+                {
+                  "action": "ADVANCE",
+                  "observed_consequences": [
+                    -1
+                  ]
+                },
+                {
+                  "action": "HOLD",
+                  "observed_consequences": [
+                    1
+                  ]
+                }
+              ],
+              "UNTRIED": [
+                "RETREAT"
+              ]
+            }
+          },
+          "exact_prompt": "{\"allowed_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"epoch\":502,\"map_version\":6,\"memory\":{\"UNTRIED\":[\"RETREAT\"],\"VERIFIED_PRIOR_OUTCOMES\":[{\"action\":\"ADVANCE\",\"observed_consequences\":[-1]},{\"action\":\"HOLD\",\"observed_consequences\":[1]}]},\"state\":1,\"transaction_id\":7}"
+        }
+      }
+    }
+  }
+}

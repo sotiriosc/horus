@@ -1,0 +1,285 @@
+{
+  "summary": {
+    "campaign_gate": "PASS_PENDING_REPLAY_AND_REGRESSIONS",
+    "first_failure": null,
+    "actual_model_calls": 0,
+    "parser_controls": 0,
+    "behavioral_revision": "UNTESTED",
+    "transactions": 14,
+    "commits": 14,
+    "completed_stages": [
+      "CONTROL/H0",
+      "CONTROL/H1",
+      "CONTROL/H2",
+      "SHIFT/H0",
+      "SHIFT/H1",
+      "SHIFT/H2"
+    ],
+    "histories": {
+      "CONTROL/H0": {
+        "HOLD": [
+          1
+        ],
+        "ADVANCE": [
+          -1
+        ]
+      },
+      "CONTROL/H1": {
+        "HOLD": [
+          1,
+          1
+        ],
+        "ADVANCE": [
+          -1,
+          -1
+        ]
+      },
+      "CONTROL/H2": {
+        "HOLD": [
+          1,
+          1,
+          1
+        ],
+        "ADVANCE": [
+          -1,
+          -1
+        ]
+      },
+      "SHIFT/H0": {
+        "HOLD": [
+          1
+        ],
+        "ADVANCE": [
+          -1
+        ]
+      },
+      "SHIFT/H1": {
+        "HOLD": [
+          1,
+          -1
+        ],
+        "ADVANCE": [
+          -1,
+          1
+        ]
+      },
+      "SHIFT/H2": {
+        "HOLD": [
+          1,
+          -1,
+          -1
+        ],
+        "ADVANCE": [
+          -1,
+          1
+        ]
+      }
+    },
+    "protected_false_accepts": 0,
+    "receipt_mismatch_accepts": 0,
+    "prediction_rewrites": 0,
+    "history_rewrites": 0,
+    "contradiction_opportunities": 3,
+    "contradiction_accepts": 3,
+    "rejection_opportunities": 0,
+    "provenance_stage_checks": 32,
+    "visible_target_provenance_checks": 22,
+    "maxima": {
+      "memory": 7,
+      "pairs": 7,
+      "packages": 7,
+      "pending_authentic": 1,
+      "trace": 21,
+      "map_quarantine": 0,
+      "memory_quarantine": 0
+    },
+    "recovery_authorizations": 1,
+    "identity_matching": [
+      {
+        "transaction_id": 1,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 2,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 3,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 4,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 5,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 6,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      },
+      {
+        "transaction_id": 7,
+        "identity_shape_matches": true,
+        "package_shape_matches": true
+      }
+    ],
+    "arm_metadata": [
+      {
+        "transaction_id": 1,
+        "differing_receipt_fields": [
+          "source_identity"
+        ],
+        "control_map_version": 1,
+        "shift_map_version": 1,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": true
+      },
+      {
+        "transaction_id": 2,
+        "differing_receipt_fields": [
+          "source_identity"
+        ],
+        "control_map_version": 2,
+        "shift_map_version": 2,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": true
+      },
+      {
+        "transaction_id": 3,
+        "differing_receipt_fields": [
+          "source_identity"
+        ],
+        "control_map_version": 3,
+        "shift_map_version": 3,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": true
+      },
+      {
+        "transaction_id": 4,
+        "differing_receipt_fields": [
+          "realized_consequence",
+          "source_identity"
+        ],
+        "control_map_version": 4,
+        "shift_map_version": 4,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": false
+      },
+      {
+        "transaction_id": 5,
+        "differing_receipt_fields": [
+          "realized_consequence",
+          "source_identity"
+        ],
+        "control_map_version": 5,
+        "shift_map_version": 5,
+        "control_recovery": false,
+        "shift_recovery": true,
+        "control_measure": true,
+        "shift_measure": false
+      },
+      {
+        "transaction_id": 6,
+        "differing_receipt_fields": [
+          "source_identity"
+        ],
+        "control_map_version": 6,
+        "shift_map_version": 6,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": true
+      },
+      {
+        "transaction_id": 7,
+        "differing_receipt_fields": [
+          "realized_consequence",
+          "source_identity"
+        ],
+        "control_map_version": 7,
+        "shift_map_version": 7,
+        "control_recovery": false,
+        "shift_recovery": false,
+        "control_measure": true,
+        "shift_measure": false
+      }
+    ],
+    "observer_noninterference_pass": true,
+    "uninstrumented_validation_transactions": 14
+  },
+  "frozen_framework": {
+    "framework_commit": "8ec32c839133df7ddd76448063b5f765c20155da",
+    "source_sha256": {
+      "experiments/base_framework_v0/__init__.py": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29",
+      "experiments/base_framework_v0/campaign.py": "3006d4ec2c08426be578e27dda511bb83d280fd18663cccacd6bd36725434e6b",
+      "experiments/base_framework_v0/environment.py": "8b121bcf2ee1336cec7adb4e44153d1f17da6cad295cc3574b54f77244618eff",
+      "experiments/base_framework_v0/framework.py": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e",
+      "experiments/base_framework_v0/run.py": "da291611142fd7b364f6faffeb79c4563e282b11b4dab906e8524d0daaad7750",
+      "experiments/base_framework_v0/test_framework.py": "e434e5c4725275754e2f4de7aa25f9e9f3c36637f7666ab0ddf3670ad051c6fe",
+      "experiments/base_framework_v1/__init__.py": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2",
+      "experiments/base_framework_v1/campaign.py": "d15f3ffbd21ad928c7e469b5ae46ce8c89049349cd6d93aecf2a91734a85ef59",
+      "experiments/base_framework_v1/framework.py": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572",
+      "experiments/base_framework_v1/hidden_oracle.py": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109",
+      "experiments/base_framework_v1/run.py": "7e1f15a01edf1c4dc48e385fd5e443b9b04b07c398cd3ee3563209d30d963566",
+      "experiments/base_framework_v1/source_a.py": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e",
+      "experiments/base_framework_v1/source_b.py": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9",
+      "experiments/base_framework_v1/test_framework.py": "fdd3a51fb0eab94473ccba0ad918f8ce4815d87f10d4a27f5bc979137515b652",
+      "experiments/base_framework_v1/types.py": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd",
+      "experiments/base_framework_v2/__init__.py": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50",
+      "experiments/base_framework_v2/campaign.py": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c",
+      "experiments/base_framework_v2/framework.py": "fd0b9882b06e5c6db5cc5478a603d072579ada110e4acdd92162174b8294a244",
+      "experiments/base_framework_v2/registry.py": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774",
+      "experiments/base_framework_v2/run.py": "60170a2340b1495d76630661feff7fdcf193b9283231cc72aafc3aa292ec722c",
+      "experiments/base_framework_v2/test_framework.py": "71287adcc3336cf7f14d375ef9b507e21b2b5ea25c6f51dc4bf0d8db0a2cc80f",
+      "experiments/base_framework_v2/types.py": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d",
+      "experiments/base_framework_v2/witness_c.py": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+    },
+    "model": {
+      "name": "dolphin-mixtral:latest",
+      "manifest_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+      "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+    }
+  },
+  "frozen_inputs_sha256": {
+    "experiments/model_explorer_contradiction_revision_v0/overlay.py": "db3f9b34e6f293807d622f350a6069c09ddbfb7bc36c21fae5671902f4784848",
+    "experiments/model_explorer_contradiction_revision_v0/preflight.py": "27be575f9018f1bc35f11129b5eca79ff2d9063c7755869008e8d3953a96845c",
+    "experiments/model_explorer_integration_v0/campaign.py": "46fffac1be31ac44ef26e59ba0574593195dae699c4994efc7ce1afb877ff98f",
+    "experiments/realized_event_grounding_v0/README.md": "afd35f0adecc55fc95bbf0ba16d02f54da6572ce25ab0e03da5caccea930bd2f",
+    "experiments/realized_event_grounding_v0/__init__.py": "8e4af54ea7584f8699d16b9b2a418225aedb88e82abfb3375394a0b5c07dd55c",
+    "experiments/realized_event_grounding_v0/campaign.py": "903e0c2b117ced5b9bc57492a3aaddb1a16a02df9acb816b25747145e72a593c",
+    "experiments/realized_event_grounding_v0/framework.py": "fa0c82ee687ab86f679af28cbe13b01f376f1e62081a35c31a91a80970e58422",
+    "experiments/realized_event_grounding_v0/receipt.py": "38a5c205811bdb10f8e8cabcddb733505810a41139bc0fa38f4d645648f10316",
+    "experiments/realized_event_grounding_v0/results.json": "da152e40884d0544178bb2f14319c2381506ecae596b9fcad7576a29a4ff19d5",
+    "experiments/realized_event_grounding_v0/run.py": "b859b77a78ed10fd182a5a03391b8733724ced3d5fb284234feb44a2cab15ca6",
+    "experiments/realized_event_grounding_v0/test_grounding.py": "da463e77c3b231c2ca52a6339523fd3da8fb45c4af9f5182658b7b187449667d",
+    "experiments/realized_event_grounding_v0/verification.json": "8ab7222a81b4309076fdd3d67c25b410098aa4b87f9bedbbe885f96e7f6f3591",
+    "research/realized-event-grounding-v0-preregistration.md": "a2db30e3c3e7962355460a559257f29495e8a66ccefb4681452a3092d8765af9",
+    "research/realized-event-grounding-v0-results.md": "d079eaf0aa5cfad41f6c77f5df67264ac4b778bbc2d682685023ce2a2a01f87b"
+  },
+  "source_sha256": {
+    "experiments/model_explorer_contradiction_revision_v1_feasibility/__init__.py": "c2f9299d4ddd85165935fe0a40b2cd14c5f7aa27302199f7d034a598b68fd2c9",
+    "experiments/model_explorer_contradiction_revision_v1_feasibility/fixture.py": "6d46306cc7afa725fcedae52ac0382b4d42f72a4fa88b723b3446ad83aa47c45",
+    "experiments/model_explorer_contradiction_revision_v1_feasibility/frozen-inputs.json": "8554893db3ab22c234164bbd62ba935cb0e1c7f177e5973736c11778466d3f4f",
+    "experiments/model_explorer_contradiction_revision_v1_feasibility/run.py": "f8253ab80cbdd0517b2133e346c05813fbc822aaa919ed57c85c8736a41209d2",
+    "research/model-explorer-contradiction-revision-v1-feasibility-preregistration.md": "446007e914accb38b29db55e10c2801926fb57cd76a911d4c6c397ea0ccdf1ed"
+  },
+  "evidence_sha256": {
+    "fixture.json": "93d06de6255b9c12258c1af1eb7886e022c9c4ce9b021ef73c36c8eb0827b8f7"
+  }
+}

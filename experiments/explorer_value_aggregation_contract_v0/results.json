@@ -1,0 +1,2061 @@
+{
+  "Explorer_calls": 96,
+  "Map_calls": 0,
+  "Recovery_model_calls": 0,
+  "classification": "EXPLICIT-MEAN EXPLORER POLICY NOT ESTABLISHED",
+  "completed_calls": 96,
+  "deterministic_setup_events": 768,
+  "evaluator_policies": {
+    "CHANGED": {
+      "histories": {
+        "ADVANCE": [
+          -1
+        ],
+        "HOLD": [
+          1,
+          -1,
+          -1
+        ],
+        "RETREAT": [
+          0,
+          0
+        ]
+      },
+      "means": {
+        "ADVANCE": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "HOLD": {
+          "denominator": 3,
+          "numerator": -1
+        },
+        "RETREAT": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "target_surface": "K3",
+      "unique_target": "RETREAT"
+    },
+    "CONTROL": {
+      "histories": {
+        "ADVANCE": [
+          -1
+        ],
+        "HOLD": [
+          1,
+          1,
+          1
+        ],
+        "RETREAT": [
+          0,
+          0
+        ]
+      },
+      "means": {
+        "ADVANCE": {
+          "denominator": 1,
+          "numerator": -1
+        },
+        "HOLD": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "RETREAT": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "target_surface": "K2",
+      "unique_target": "HOLD"
+    }
+  },
+  "evidence_sha256": {
+    "campaign-state.json": "6108a1ad59bff6a17fa300fe3da6ddf3de6dea02669e992d92b9696fbaf06c85",
+    "contexts.jsonl": "a2ec1755e0ff0f9041e5340354d5ebf17d173d4abbfa0a95e728041a175200a8",
+    "journal.jsonl": "87557618fa8d8a0296f3745ef95454bfb5391fd47ea06f6633d360f4b162f33b",
+    "metadata.json": "e79eca491f32e0e86599fb695f3d84175ae4195105a2ef34524d9979c4118fa6",
+    "metrics.json": "e7e630c2bd313604aadf265824c225e3780952fcc2c85b16298eb65718d3ef23",
+    "model-calls.jsonl": "0291ff654a030dca23c9bbcee5801c8d1d70f7638dff6c25374a76a0aa6b1c08",
+    "pairs.json": "0ed6cee894ba17dd45da6e85b390cf551e302344f2f020d1f1140d163b3b16c7",
+    "requests.jsonl": "bd5c5c00b2b1f0286bd14c5b1f7f829b209590e54c672db0612d8a748f054757"
+  },
+  "families": {
+    "O1": {
+      "cells": {
+        "CHANGED/A": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 2,
+            "HOLD": 8,
+            "RETREAT": 2,
+            "invalid": 0
+          },
+          "mean_policy_correct": 2,
+          "valid": 12
+        },
+        "CHANGED/B": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 8,
+            "RETREAT": 4,
+            "invalid": 0
+          },
+          "mean_policy_correct": 4,
+          "valid": 12
+        },
+        "CONTROL/A": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 12,
+            "RETREAT": 0,
+            "invalid": 0
+          },
+          "mean_policy_correct": 12,
+          "valid": 12
+        },
+        "CONTROL/B": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 12,
+            "RETREAT": 0,
+            "invalid": 0
+          },
+          "mean_policy_correct": 12,
+          "valid": 12
+        }
+      },
+      "criteria": {
+        "B_valid_at_least_23": true,
+        "CHANGED_B_RETREAT_at_least_10": false,
+        "CHANGED_favorable_at_least_8": false,
+        "CHANGED_reverse_at_most_1": true,
+        "CONTROL_B_HOLD_at_least_10": true,
+        "all_B_calls_complete": true,
+        "exact_replay": true,
+        "histories_authentic": true,
+        "model_sampler_parser_integrity": true,
+        "old_and_new_records_unchanged": true
+      },
+      "decision": "EXPLICIT-MEAN EXPLORER POLICY NOT ESTABLISHED",
+      "output_sensitivity": {
+        "CHANGED": {
+          "ADVANCE_to_RETREAT": 2,
+          "same_action": 10
+        },
+        "CONTROL": {
+          "same_action": 12
+        }
+      },
+      "paired": {
+        "CHANGED": {
+          "favorable": 2,
+          "favorable_both_valid": 2,
+          "invalid_in_pair": 0,
+          "reverse": 0,
+          "reverse_both_valid": 0
+        },
+        "CONTROL": {
+          "favorable": 0,
+          "favorable_both_valid": 0,
+          "invalid_in_pair": 0,
+          "reverse": 0,
+          "reverse_both_valid": 0
+        }
+      },
+      "supported": false
+    },
+    "O2": {
+      "cells": {
+        "CHANGED/A": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 12,
+            "RETREAT": 0,
+            "invalid": 0
+          },
+          "mean_policy_correct": 0,
+          "valid": 12
+        },
+        "CHANGED/B": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 10,
+            "RETREAT": 2,
+            "invalid": 0
+          },
+          "mean_policy_correct": 2,
+          "valid": 12
+        },
+        "CONTROL/A": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 12,
+            "RETREAT": 0,
+            "invalid": 0
+          },
+          "mean_policy_correct": 12,
+          "valid": 12
+        },
+        "CONTROL/B": {
+          "calls": 12,
+          "counts": {
+            "ADVANCE": 0,
+            "HOLD": 12,
+            "RETREAT": 0,
+            "invalid": 0
+          },
+          "mean_policy_correct": 12,
+          "valid": 12
+        }
+      },
+      "criteria": {
+        "B_valid_at_least_23": true,
+        "CHANGED_B_RETREAT_at_least_10": false,
+        "CHANGED_favorable_at_least_8": false,
+        "CHANGED_reverse_at_most_1": true,
+        "CONTROL_B_HOLD_at_least_10": true,
+        "all_B_calls_complete": true,
+        "exact_replay": true,
+        "histories_authentic": true,
+        "model_sampler_parser_integrity": true,
+        "old_and_new_records_unchanged": true
+      },
+      "decision": "EXPLICIT-MEAN EXPLORER POLICY NOT ESTABLISHED",
+      "output_sensitivity": {
+        "CHANGED": {
+          "HOLD_to_RETREAT": 2,
+          "same_action": 10
+        },
+        "CONTROL": {
+          "same_action": 12
+        }
+      },
+      "paired": {
+        "CHANGED": {
+          "favorable": 2,
+          "favorable_both_valid": 2,
+          "invalid_in_pair": 0,
+          "reverse": 0,
+          "reverse_both_valid": 0
+        },
+        "CONTROL": {
+          "favorable": 0,
+          "favorable_both_valid": 0,
+          "invalid_in_pair": 0,
+          "reverse": 0,
+          "reverse_both_valid": 0
+        }
+      },
+      "supported": false
+    }
+  },
+  "measured_Memory_commits": 0,
+  "measured_world_executions": 0,
+  "measurement_prediction_mismatches": 96,
+  "model": {
+    "complete_blobs_verified": 5,
+    "format": "GGUF 47B Q4_0",
+    "name": "dolphin-mixtral:latest",
+    "runtime": "Ollama 0.1.16"
+  },
+  "narrow_scope": "Execution of an explicit arithmetic-mean action policy over authenticated P2 Memory; no spontaneous adaptation, persistent learning or model authority.",
+  "native_measurement_Recovery_calls": 0,
+  "native_state_Recovery_calls": 0,
+  "pairs": [
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 0,
+      "seed": 94001,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 0,
+      "seed": 94001,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 1,
+      "seed": 94002,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "ADVANCE",
+          "category": "ADVANCE",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": true,
+      "favorable_both_valid": true,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 1,
+      "seed": 94002,
+      "sensitivity": "ADVANCE_to_RETREAT",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 2,
+      "seed": 94003,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 2,
+      "seed": 94003,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 3,
+      "seed": 94004,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 3,
+      "seed": 94004,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 4,
+      "seed": 94005,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 4,
+      "seed": 94005,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 5,
+      "seed": 94006,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 5,
+      "seed": 94006,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 6,
+      "seed": 94007,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 6,
+      "seed": 94007,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 7,
+      "seed": 94008,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "ADVANCE",
+          "category": "ADVANCE",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": true,
+      "favorable_both_valid": true,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 7,
+      "seed": 94008,
+      "sensitivity": "ADVANCE_to_RETREAT",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 8,
+      "seed": 94009,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 8,
+      "seed": 94009,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 9,
+      "seed": 94010,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 9,
+      "seed": 94010,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K3",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 10,
+      "seed": 94011,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 10,
+      "seed": 94011,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 11,
+      "seed": 94012,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "K2",
+          "valid": true
+        }
+      },
+      "family": "O1",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 11,
+      "seed": 94012,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 0,
+      "seed": 94001,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 0,
+      "seed": 94001,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 1,
+      "seed": 94002,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": true,
+      "favorable_both_valid": true,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 1,
+      "seed": 94002,
+      "sensitivity": "HOLD_to_RETREAT",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 2,
+      "seed": 94003,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 2,
+      "seed": 94003,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 3,
+      "seed": 94004,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 3,
+      "seed": 94004,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 4,
+      "seed": 94005,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 4,
+      "seed": 94005,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 5,
+      "seed": 94006,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 5,
+      "seed": 94006,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 6,
+      "seed": 94007,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 6,
+      "seed": 94007,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 7,
+      "seed": 94008,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "RETREAT",
+          "category": "RETREAT",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": true,
+      "favorable_both_valid": true,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 7,
+      "seed": 94008,
+      "sensitivity": "HOLD_to_RETREAT",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 8,
+      "seed": 94009,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 8,
+      "seed": 94009,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 9,
+      "seed": 94010,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 9,
+      "seed": 94010,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 10,
+      "seed": 94011,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "Z2",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 10,
+      "seed": 94011,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    },
+    {
+      "arm": "CONTROL",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": true,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 11,
+      "seed": 94012,
+      "sensitivity": "same_action",
+      "target": "HOLD"
+    },
+    {
+      "arm": "CHANGED",
+      "conditions": {
+        "A": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        },
+        "B": {
+          "action": "HOLD",
+          "category": "HOLD",
+          "error": null,
+          "mean_policy_correct": false,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "family": "O2",
+      "favorable": false,
+      "favorable_both_valid": false,
+      "invalid_in_pair": false,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "reverse_both_valid": false,
+      "schedule": 11,
+      "seed": 94012,
+      "sensitivity": "same_action",
+      "target": "RETREAT"
+    }
+  ],
+  "parent": "8e7e9905ae346d1c3e9beb0a04b7e9ba0deb1626",
+  "preregistration_commit": "b50a65a7237cb3edbe38ea01787c800cb18ba6c9",
+  "previous_Explorer_negative_unchanged": true,
+  "status": "FINAL",
+  "study": "explorer-value-aggregation-contract-v0",
+  "valid_responses": 96,
+  "verification": {
+    "exact_replay": true,
+    "historical_preservation": true,
+    "independent_audit": true
+  }
+}

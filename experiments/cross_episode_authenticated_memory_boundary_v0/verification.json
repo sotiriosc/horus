@@ -1,0 +1,112 @@
+{
+  "ablation_exact_replay": true,
+  "actual_model_calls": 0,
+  "core_changes": false,
+  "diagnostic_replay_files": 2,
+  "executions": [
+    {
+      "check": "boundary-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.cross_episode_authenticated_memory_boundary_v0.run",
+        "--contradiction-source",
+        "$PRIOR_MAP_SETUP",
+        "--output",
+        "$CHECKS/replay",
+        "--replay",
+        "$CHECKS/diagnostic"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:51:29.624473+00:00",
+      "log_sha256": "29f288de61b807df2ed01daba141bbc0021a00baa19141a41c0754ebb40998d6",
+      "socket_creation_forbidden": true,
+      "started_utc": "2026-09-20T01:51:29.459936+00:00"
+    },
+    {
+      "check": "boundary-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:51:29.722505+00:00",
+      "log_sha256": "65dc7f3efd4fc066ef53175ca63f9b86cb03a1e56c232ce43b58fb3eeeec33c4",
+      "socket_creation_forbidden": true,
+      "started_utc": "2026-09-20T01:51:29.632677+00:00"
+    },
+    {
+      "check": "ablation-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.composition_map_memory_ablation_v0.run",
+        "--source",
+        "$R1_EVIDENCE",
+        "--replay",
+        "$ABLATION_LIVE",
+        "--output",
+        "$CHECKS/ablation-replay"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:51:32.893720+00:00",
+      "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+      "socket_creation_forbidden": true,
+      "started_utc": "2026-09-20T01:51:29.730784+00:00"
+    },
+    {
+      "check": "r1-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+        "--replay",
+        "$R1_EVIDENCE",
+        "--baseline",
+        "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+        "--output",
+        "$CHECKS/r1-replay"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:51:42.475478+00:00",
+      "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+      "socket_creation_forbidden": true,
+      "started_utc": "2026-09-20T01:51:32.902128+00:00"
+    },
+    {
+      "check": "historical-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "experiments.model_proposal_role_composition_v2.test_study",
+        "experiments.realized_event_grounding_v0.test_grounding",
+        "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+        "experiments.composition_input_bindings_v1.test_bindings",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:51:43.863375+00:00",
+      "log_sha256": "bccd857fe2c5735997e0489c2f581fafcd97bf30a2d42f0e1b6593e981d8754b",
+      "socket_creation_forbidden": true,
+      "started_utc": "2026-09-20T01:51:42.483887+00:00"
+    }
+  ],
+  "inherited_substantive_files_byte_identical": 503,
+  "main_tags_prior_refs_unchanged": true,
+  "network_permitted": false,
+  "passed": true,
+  "private_archive_checksum_counts": {
+    "R1": 288,
+    "ablation": 105
+  },
+  "r1_exact_replay": true
+}

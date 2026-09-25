@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "actual_model_calls": 0,
+  "sole_system_change": "Map",
+  "all_inherited_hashes_unchanged": true,
+  "identical_runtime_transport_controls": true,
+  "projection_contexts": 288,
+  "schedule": [
+    {
+      "base_seed": 80001,
+      "episode": 0,
+      "family": "O1",
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0
+    },
+    {
+      "base_seed": 80002,
+      "episode": 1,
+      "family": "O1",
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1
+    },
+    {
+      "base_seed": 80003,
+      "episode": 2,
+      "family": "O1",
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2
+    },
+    {
+      "base_seed": 80004,
+      "episode": 3,
+      "family": "O1",
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3
+    },
+    {
+      "base_seed": 80005,
+      "episode": 4,
+      "family": "O1",
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4
+    },
+    {
+      "base_seed": 80006,
+      "episode": 5,
+      "family": "O1",
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5
+    },
+    {
+      "base_seed": 80001,
+      "episode": 6,
+      "family": "O2",
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0
+    },
+    {
+      "base_seed": 80002,
+      "episode": 7,
+      "family": "O2",
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1
+    },
+    {
+      "base_seed": 80003,
+      "episode": 8,
+      "family": "O2",
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2
+    },
+    {
+      "base_seed": 80004,
+      "episode": 9,
+      "family": "O2",
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3
+    },
+    {
+      "base_seed": 80005,
+      "episode": 10,
+      "family": "O2",
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4
+    },
+    {
+      "base_seed": 80006,
+      "episode": 11,
+      "family": "O2",
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5
+    }
+  ],
+  "role_systems": {
+    "Explorer": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. When evidence is insufficient, you may choose an UNTRIED action to gather information. Reply with exactly one allowed action and no explanation.",
+    "Map": "Predict the next externally realized outcome for the specified action using only the verified chronological outcomes shown. Reply with exactly one JSON object with exactly two fields: next_state must be an integer in {0,1,2,3}, and consequence must be an integer in {-1,0,1}. Do not include any other fields or explanation.",
+    "Recovery": "Propose the replacement state using only the verified Recovery context shown. Reply with exactly one JSON object containing replacement_state and no explanation."
+  },
+  "role_options": {
+    "Explorer": {
+      "num_ctx": 2048,
+      "num_predict": 16,
+      "repeat_penalty": 1.1,
+      "temperature": 0.2,
+      "top_k": 40,
+      "top_p": 0.9
+    },
+    "Map": {
+      "num_ctx": 2048,
+      "num_predict": 32,
+      "repeat_penalty": 1.1,
+      "temperature": 0.2,
+      "top_k": 40,
+      "top_p": 0.9
+    },
+    "Recovery": {
+      "num_ctx": 2048,
+      "num_predict": 32,
+      "repeat_penalty": 1.1,
+      "temperature": 0.2,
+      "top_k": 40,
+      "top_p": 0.9
+    }
+  },
+  "initial_context_count": 12,
+  "private_preflight_sha256": "4689e41a7563838b8780793eb31d77d92a7b77c7c1a3c8e5009a9de0531fe44a"
+}

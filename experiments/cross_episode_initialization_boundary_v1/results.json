@@ -1,0 +1,239 @@
+{
+  "Explorer_schema_changed": false,
+  "Map_new_record_fields": [
+    "epoch",
+    "transaction_id",
+    "surface_action",
+    "next_state",
+    "consequence"
+  ],
+  "actual_model_calls": 0,
+  "after_state": 0,
+  "authorizer_limit_controls": 2,
+  "before_state": 3,
+  "bounds": {
+    "authorizations_per_epoch": 24,
+    "epochs": 2,
+    "memory": 8,
+    "packages": 8,
+    "pairs": 8,
+    "pending_authentic": 1,
+    "source_lifetime": 24,
+    "trace": 24
+  },
+  "classification": "A \u2014 CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE",
+  "contradiction_scope": "Separate authenticated representation control reuses historical Map-prior HoldWorld; its existing switch occurs before initialization. Primary fixture is stationary; no transfer/model-performance claim.",
+  "core_files_changed": false,
+  "details_sha256": "2bf9576d8c8a9de9c21b38466723ef95c504dc566e9af45f0b42daccaa276f97",
+  "eligible_classification": "A \u2014 CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE",
+  "evicted_identity": [
+    1001,
+    1,
+    4299262263552
+  ],
+  "failure_cases": 24,
+  "failure_cases_atomic": 24,
+  "historical_adapters_changed": false,
+  "network_attempts": 0,
+  "ninth_commit": true,
+  "ordinary_evictions": 1,
+  "parent": "b2306c917cfd8cdfc89d272e8f72fa1f01927605",
+  "primary_new_commits": 4,
+  "primary_old_commits": 4,
+  "prior_v0_result": "C \u2014 NOT ESTABLISHED",
+  "receipt_rejections": 4,
+  "requirements": {
+    "authorizer_reset_safe": true,
+    "bounds_unchanged": true,
+    "chronological_append": true,
+    "epoch_visible_Map_identity": true,
+    "exact_replay": true,
+    "explicit_new_epoch": true,
+    "external_authorized_synchronized": true,
+    "failure_atomicity": true,
+    "historical_regressions": true,
+    "history_rings_unchanged": true,
+    "identities_unique": true,
+    "known_pairs_not_UNKNOWN": true,
+    "no_model_reset_capability": true,
+    "nonzero_to_registered_state": true,
+    "ordinary_ninth_eviction": true,
+    "provenance_traceable": true,
+    "untouched_pairs_UNKNOWN": true,
+    "zero_realized_events_at_reset": true
+  },
+  "same_source_lifetime": true,
+  "source_event_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "status": "FINAL",
+  "study": "cross-episode-initialization-boundary-v1",
+  "verification": {
+    "ablation_exact_replay": true,
+    "actual_model_calls": 0,
+    "executions": [
+      {
+        "check": "new-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_initialization_boundary_v1.run",
+          "--output",
+          "$CHECKS/replay",
+          "--replay",
+          "$CHECKS/campaign"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:12:44.451301+00:00",
+        "log_sha256": "6cad5eae200320d80b437943dcf925a4b759ea177dcab462e32b1c5497ba5b95",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:44.166320+00:00"
+      },
+      {
+        "check": "new-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_initialization_boundary_v1.test_boundary",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:12:44.663467+00:00",
+        "log_sha256": "c7a9df8555a2ae4e4f2d31b773b7083f6638d4172a55774041e60d29c1a7acf7",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:44.459699+00:00",
+        "test_count": 6
+      },
+      {
+        "check": "prior-v0-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.run",
+          "--contradiction-source",
+          "$PRIOR_MAP_SETUP",
+          "--output",
+          "$CHECKS/prior-v0-replay",
+          "--replay",
+          "$BOUNDARY_V0"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:12:44.842601+00:00",
+        "log_sha256": "29f288de61b807df2ed01daba141bbc0021a00baa19141a41c0754ebb40998d6",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:44.672249+00:00"
+      },
+      {
+        "check": "ablation-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.composition_map_memory_ablation_v0.run",
+          "--source",
+          "$R1_EVIDENCE",
+          "--replay",
+          "$ABLATION_LIVE",
+          "--output",
+          "$CHECKS/ablation-replay"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:12:47.951197+00:00",
+        "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:44.851104+00:00"
+      },
+      {
+        "check": "r1-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+          "--replay",
+          "$R1_EVIDENCE",
+          "--baseline",
+          "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+          "--output",
+          "$CHECKS/r1-replay"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:12:58.074290+00:00",
+        "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:47.959545+00:00"
+      },
+      {
+        "check": "historical-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+          "experiments.composition_input_bindings_v1.test_bindings",
+          "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+          "experiments.state_recovery_proposal_interface_v1.test_interface",
+          "experiments.realized_event_grounding_v0.test_grounding",
+          "experiments.model_proposal_role_composition_v2.test_study",
+          "experiments.model_map_proposal_v0.test_study",
+          "experiments.model_map_established_prior_revision_v1.test_study",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T02:13:04.397500+00:00",
+        "log_sha256": "42595a2937b22d31aa9ac92ee72849f93cbae9c24b886f165a230c1e14880285",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T02:12:58.094557+00:00",
+        "test_count": 49
+      }
+    ],
+    "historical_tests": 49,
+    "independent_audit": {
+      "FIFO_eviction_independently_checked": true,
+      "all_ordinary_checks_use_unchanged_historical_authority": true,
+      "failure_cases_independently_compared": 24,
+      "new_model_calls": 0,
+      "ordinary_preboundary_transactions_byte_equivalent": 4,
+      "passed": true,
+      "primary_receipts_independently_bound": 9,
+      "zero_event_boundary_independently_checked": true
+    },
+    "inherited_substantive_files_byte_identical": 513,
+    "main_tags_prior_refs_unchanged": true,
+    "network_permitted": false,
+    "new_replay_files": 2,
+    "new_tests": 6,
+    "passed": true,
+    "prior_boundary_v0_replay": true,
+    "prior_boundary_v0_still_C": true,
+    "private_archive_checksum_counts": {
+      "R1": 288,
+      "ablation": 105,
+      "boundary_v0": 82
+    },
+    "r1_exact_replay": true
+  },
+  "zero_event_boundary": {
+    "initial_state": 0,
+    "map_version": 0,
+    "memory_observations": 0,
+    "new_epoch": 1002,
+    "packages": 0,
+    "pairs": 0,
+    "realized_events": 0,
+    "receipts": 0
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "composition_empty_history_schema_contract_v0": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "state",
+      "target_action"
+    ]
+  },
+  "composition_map_memory_ablation_v0": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "cross_episode_map_history_depth_v1": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].epoch",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "cross_episode_model_transfer_v0": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].verified_outcomes",
+      "actions[].verified_outcomes[]",
+      "state"
+    ],
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].epoch",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "cross_episode_stale_memory_explorer_revision_v1": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].verified_outcomes[]",
+      "state"
+    ]
+  },
+  "cross_episode_stale_memory_map_revision_v1": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].epoch",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "explorer_finite_value_comparator_v0": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].map_prediction.consequence",
+      "actions[].map_prediction.next_state",
+      "state"
+    ]
+  },
+  "explorer_value_aggregation_contract_v0": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].verified_outcomes[]",
+      "state"
+    ]
+  },
+  "map_explorer_oracle_decomposition_v0": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].map_prediction.consequence",
+      "actions[].map_prediction.next_state",
+      "state"
+    ],
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].epoch",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "map_temporal_relation_forecast_v0": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].epoch",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "model_explorer_adaptive_episode_v0": {
+    "Explorer": [
+      "allowed_actions[]",
+      "epoch",
+      "map_version",
+      "memory.UNTRIED[]",
+      "memory.VERIFIED_PRIOR_OUTCOMES[]",
+      "memory.VERIFIED_PRIOR_OUTCOMES[].action",
+      "memory.VERIFIED_PRIOR_OUTCOMES[].observed_consequences[]",
+      "state",
+      "transaction_id"
+    ]
+  },
+  "model_explorer_contradiction_revision_v1": {
+    "Explorer": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "available_actions[]",
+      "state"
+    ]
+  },
+  "model_explorer_integration_v0": {
+    "Explorer": [
+      "allowed_actions[]",
+      "epoch",
+      "map_version",
+      "memory[]",
+      "memory[].action",
+      "memory[].consequence",
+      "memory[].epoch",
+      "memory[].next_state",
+      "memory[].pair_decision_id",
+      "memory[].pre_state",
+      "memory[].transaction_id",
+      "non_authoritative_context",
+      "state",
+      "transaction_id"
+    ]
+  },
+  "model_explorer_memory_study_v1": {
+    "Explorer": [
+      "allowed_actions[]",
+      "epoch",
+      "map_version",
+      "memory.UNTRIED[]",
+      "memory.VERIFIED_PRIOR_OUTCOMES[]",
+      "memory.VERIFIED_PRIOR_OUTCOMES[].action",
+      "memory.VERIFIED_PRIOR_OUTCOMES[].observed_consequences[]",
+      "memory.records[]",
+      "memory.records[].action",
+      "memory.records[].consequence",
+      "memory.records[].epoch",
+      "memory.records[].next_state",
+      "memory.records[].pair_decision_id",
+      "memory.records[].pre_state",
+      "memory.records[].transaction_id",
+      "state",
+      "transaction_id"
+    ]
+  },
+  "model_explorer_prior_factorial_v1": {
+    "Explorer": [
+      "VERIFIED_PRIOR_OUTCOMES[].observed_consequences[]",
+      "VERIFIED_PRIOR_OUTCOMES[].surface_action",
+      "available_actions[]",
+      "state"
+    ]
+  },
+  "model_explorer_semantic_prior_study_v0": {
+    "Explorer": [
+      "VERIFIED_PRIOR_OUTCOMES[].observed_consequences[]",
+      "VERIFIED_PRIOR_OUTCOMES[].surface_action",
+      "available_actions[]",
+      "state"
+    ]
+  },
+  "model_map_established_prior_revision_v1": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "model_map_proposal_v0": {
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ]
+  },
+  "model_proposal_role_composition_v1": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].verified_outcomes",
+      "state"
+    ],
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "state",
+      "target_action"
+    ]
+  },
+  "model_proposal_role_composition_v2_replacement_r1": {
+    "Explorer": [
+      "actions[].action",
+      "actions[].verified_outcomes",
+      "actions[].verified_outcomes[]",
+      "state"
+    ],
+    "Map": [
+      "VERIFIED_CHRONOLOGICAL_HISTORY[]",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].consequence",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].next_state",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].surface_action",
+      "VERIFIED_CHRONOLOGICAL_HISTORY[].transaction_id",
+      "state",
+      "target_action"
+    ],
+    "Recovery": [
+      "VERIFIED_REALIZED_EVENT.consequence",
+      "VERIFIED_REALIZED_EVENT.next_state",
+      "action",
+      "allowed_replacement_states[]",
+      "measurement_matches",
+      "pre_state"
+    ]
+  },
+  "model_recovery_proposal_v1": {
+    "Recovery": [
+      "VERIFIED_REALIZED_EVENT.consequence",
+      "VERIFIED_REALIZED_EVENT.next_state",
+      "action",
+      "allowed_replacement_states[]",
+      "measurement_matches",
+      "pre_state"
+    ]
+  }
+}

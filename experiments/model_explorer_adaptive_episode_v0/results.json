@@ -1,0 +1,4316 @@
+{
+  "summary": {
+    "framework_integrity": "PASS",
+    "violations": {},
+    "calls": 288,
+    "complete": true,
+    "projection_checks": 288,
+    "matched_initial_checks": 12,
+    "exploration_effect": "NOT_ESTABLISHED",
+    "discovery_to_reuse": "NOT_ESTABLISHED",
+    "mean_coverage_difference": 0.6666666666666666,
+    "B_coverage_wins": 6,
+    "paired_coverage": [
+      {
+        "pair": 1,
+        "A": 4,
+        "B": 5,
+        "B_minus_A": 1
+      },
+      {
+        "pair": 2,
+        "A": 5,
+        "B": 5,
+        "B_minus_A": 0
+      },
+      {
+        "pair": 3,
+        "A": 4,
+        "B": 5,
+        "B_minus_A": 1
+      },
+      {
+        "pair": 4,
+        "A": 5,
+        "B": 5,
+        "B_minus_A": 0
+      },
+      {
+        "pair": 5,
+        "A": 5,
+        "B": 6,
+        "B_minus_A": 1
+      },
+      {
+        "pair": 6,
+        "A": 4,
+        "B": 7,
+        "B_minus_A": 3
+      },
+      {
+        "pair": 7,
+        "A": 5,
+        "B": 4,
+        "B_minus_A": -1
+      },
+      {
+        "pair": 8,
+        "A": 6,
+        "B": 5,
+        "B_minus_A": -1
+      },
+      {
+        "pair": 9,
+        "A": 5,
+        "B": 5,
+        "B_minus_A": 0
+      },
+      {
+        "pair": 10,
+        "A": 4,
+        "B": 5,
+        "B_minus_A": 1
+      },
+      {
+        "pair": 11,
+        "A": 5,
+        "B": 5,
+        "B_minus_A": 0
+      },
+      {
+        "pair": 12,
+        "A": 4,
+        "B": 7,
+        "B_minus_A": 3
+      }
+    ],
+    "arms": {
+      "A": {
+        "episodes": 12,
+        "decisions": 144,
+        "valid": 144,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 144,
+        "coverage": 56,
+        "exploration_count": 57,
+        "authorized_explorations": 57,
+        "exploitation_count": 84,
+        "strict_preference_count": 7,
+        "sole_tried_selection_count": 77,
+        "known_worse_count": 3,
+        "known_worse_opportunities": 10,
+        "retests": 88,
+        "uncertain_retests": 84,
+        "known_worse_uncertain_retests": 3,
+        "eviction_reexplorations": 1,
+        "realized_consequence": 14,
+        "authorized_consequence": 14,
+        "evictions": 48,
+        "mean_coverage": 4.666666666666667,
+        "action_counts": {
+          "ADVANCE": 124,
+          "HOLD": 20,
+          "RETREAT": 0
+        },
+        "discoveries": 5,
+        "rediscoveries": 0,
+        "discovery_reuse": {
+          "successes": 3,
+          "opportunities": 4,
+          "rate": 0.75
+        },
+        "reuse_episodes": 3,
+        "censored_discoveries": 1,
+        "retained_discovery_reuse": {
+          "successes": 3,
+          "opportunities": 4,
+          "rate": 0.75
+        },
+        "stabilization": {
+          "successes": 3,
+          "opportunities": 4,
+          "rate": 0.75
+        },
+        "stabilization_retained_opportunities": 4,
+        "negative_only_escape": {
+          "successes": 2,
+          "opportunities": 35,
+          "rate": 0.05714285714285714
+        },
+        "negative_only_censored": 19,
+        "all_negative_escape": {
+          "successes": 2,
+          "opportunities": 39,
+          "rate": 0.05128205128205128
+        },
+        "negative_outcomes": 60,
+        "negative_retested": 36,
+        "negative_with_revisits": 39,
+        "negative_no_retest_with_revisits": 3,
+        "blind_repetition_compatible_pairs": 0,
+        "contradictions": 0,
+        "contradictory_revision": {
+          "successes": 0,
+          "opportunities": 0,
+          "rate": null
+        },
+        "contradiction_action_changes": 0,
+        "contradiction_revision_status": "UNTESTED",
+        "repeated_visits": 96,
+        "history_and_action_changes": 13
+      },
+      "B": {
+        "episodes": 12,
+        "decisions": 144,
+        "valid": 144,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 144,
+        "coverage": 64,
+        "exploration_count": 69,
+        "authorized_explorations": 69,
+        "exploitation_count": 69,
+        "strict_preference_count": 22,
+        "sole_tried_selection_count": 47,
+        "known_worse_count": 6,
+        "known_worse_opportunities": 28,
+        "retests": 80,
+        "uncertain_retests": 67,
+        "known_worse_uncertain_retests": 6,
+        "eviction_reexplorations": 5,
+        "realized_consequence": 39,
+        "authorized_consequence": 39,
+        "evictions": 48,
+        "mean_coverage": 5.333333333333333,
+        "action_counts": {
+          "ADVANCE": 105,
+          "HOLD": 39,
+          "RETREAT": 0
+        },
+        "discoveries": 12,
+        "rediscoveries": 0,
+        "discovery_reuse": {
+          "successes": 5,
+          "opportunities": 9,
+          "rate": 0.5555555555555556
+        },
+        "reuse_episodes": 9,
+        "censored_discoveries": 3,
+        "retained_discovery_reuse": {
+          "successes": 5,
+          "opportunities": 9,
+          "rate": 0.5555555555555556
+        },
+        "stabilization": {
+          "successes": 18,
+          "opportunities": 26,
+          "rate": 0.6923076923076923
+        },
+        "stabilization_retained_opportunities": 26,
+        "negative_only_escape": {
+          "successes": 10,
+          "opportunities": 25,
+          "rate": 0.4
+        },
+        "negative_only_censored": 11,
+        "all_negative_escape": {
+          "successes": 10,
+          "opportunities": 28,
+          "rate": 0.35714285714285715
+        },
+        "negative_outcomes": 48,
+        "negative_retested": 24,
+        "negative_with_revisits": 28,
+        "negative_no_retest_with_revisits": 4,
+        "blind_repetition_compatible_pairs": 0,
+        "contradictions": 0,
+        "contradictory_revision": {
+          "successes": 0,
+          "opportunities": 0,
+          "rate": null
+        },
+        "contradiction_action_changes": 0,
+        "contradiction_revision_status": "UNTESTED",
+        "repeated_visits": 96,
+        "history_and_action_changes": 35
+      }
+    },
+    "pooled": {
+      "episodes": 24,
+      "decisions": 288,
+      "valid": 288,
+      "malformed": 0,
+      "rejections": 0,
+      "commits": 288,
+      "coverage": 120,
+      "exploration_count": 126,
+      "authorized_explorations": 126,
+      "exploitation_count": 153,
+      "strict_preference_count": 29,
+      "sole_tried_selection_count": 124,
+      "known_worse_count": 9,
+      "known_worse_opportunities": 38,
+      "retests": 168,
+      "uncertain_retests": 151,
+      "known_worse_uncertain_retests": 9,
+      "eviction_reexplorations": 6,
+      "realized_consequence": 53,
+      "authorized_consequence": 53,
+      "evictions": 96,
+      "mean_coverage": 5.0,
+      "action_counts": {
+        "ADVANCE": 229,
+        "HOLD": 59,
+        "RETREAT": 0
+      },
+      "discoveries": 17,
+      "rediscoveries": 0,
+      "discovery_reuse": {
+        "successes": 8,
+        "opportunities": 13,
+        "rate": 0.6153846153846154
+      },
+      "reuse_episodes": 12,
+      "censored_discoveries": 4,
+      "retained_discovery_reuse": {
+        "successes": 8,
+        "opportunities": 13,
+        "rate": 0.6153846153846154
+      },
+      "stabilization": {
+        "successes": 21,
+        "opportunities": 30,
+        "rate": 0.7
+      },
+      "stabilization_retained_opportunities": 30,
+      "negative_only_escape": {
+        "successes": 12,
+        "opportunities": 60,
+        "rate": 0.2
+      },
+      "negative_only_censored": 30,
+      "all_negative_escape": {
+        "successes": 12,
+        "opportunities": 67,
+        "rate": 0.1791044776119403
+      },
+      "negative_outcomes": 108,
+      "negative_retested": 60,
+      "negative_with_revisits": 67,
+      "negative_no_retest_with_revisits": 7,
+      "blind_repetition_compatible_pairs": 0,
+      "contradictions": 0,
+      "contradictory_revision": {
+        "successes": 0,
+        "opportunities": 0,
+        "rate": null
+      },
+      "contradiction_action_changes": 0,
+      "contradiction_revision_status": "UNTESTED",
+      "repeated_visits": 192,
+      "history_and_action_changes": 48
+    },
+    "episodes": [
+      {
+        "pair": 1,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 1,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 8,
+        "exploitation_count": 6,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 6,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 1,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 1,
+        "authorized_consequence": 1,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 8,
+            "consequence": 0,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "reused": false,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 1,
+              "rate": 0.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 2,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 6,
+        "exploitation_count": 5,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 5,
+        "known_worse_count": 2,
+        "known_worse_opportunities": 2,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 2,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 2,
+        "authorized_consequence": 2,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 6,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 7,
+              "action": "ADVANCE",
+              "reused": false,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 2,
+              "rate": 0.0,
+              "retained_opportunities": 2
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 3,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 7,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 7,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 2,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 12,
+        "exploitation_count": 7,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 7,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 1,
+        "authorized_consequence": 1,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 12,
+            "consequence": 0,
+            "next_visit": null,
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 0,
+              "rate": null,
+              "retained_opportunities": 0
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 3,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 3,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 6,
+          "HOLD": 6,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 1.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 6,
+        "authorized_explorations": 6,
+        "first_exploration": 1,
+        "first_discovery": 6,
+        "exploitation_count": 6,
+        "strict_preference_count": 4,
+        "sole_tried_selection_count": 2,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 4,
+        "retests": 7,
+        "uncertain_retests": 4,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 1,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 6,
+        "authorized_consequence": 6,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 6,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 7,
+              "action": "HOLD",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 5,
+              "opportunities": 6,
+              "rate": 0.8333333333333334,
+              "retained_opportunities": 6
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 7,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 4,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 8,
+        "exploitation_count": 6,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 6,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 1,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 1,
+        "authorized_consequence": 1,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 8,
+            "consequence": 0,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "reused": false,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 1,
+              "rate": 0.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 4,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 6,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 6,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 1,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 1,
+        "authorized_consequence": 1,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 7,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 5,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 5,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 7,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 7,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 5,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 5,
+          "HOLD": 7,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9798687566511528,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 6,
+        "authorized_explorations": 6,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 6,
+        "strict_preference_count": 2,
+        "sole_tried_selection_count": 4,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 2,
+        "retests": 7,
+        "uncertain_retests": 3,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 1,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 8,
+        "authorized_consequence": 8,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 7,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 7,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "HOLD",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 5,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 10,
+          "HOLD": 2,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.6500224216483541,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            0,
+            "HOLD"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 6,
+        "states_with_multiple_actions": 2,
+        "exploration_count": 6,
+        "authorized_explorations": 6,
+        "first_exploration": 1,
+        "first_discovery": 9,
+        "exploitation_count": 5,
+        "strict_preference_count": 2,
+        "sole_tried_selection_count": 3,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 3,
+        "retests": 6,
+        "uncertain_retests": 6,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 9,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 9,
+            "consequence": 0,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "reused": false,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 1,
+              "rate": 0.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 7,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 9,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 7,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 7,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 12,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 6,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 5,
+          "HOLD": 7,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9798687566511528,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "HOLD"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 7,
+        "states_with_multiple_actions": 3,
+        "exploration_count": 7,
+        "authorized_explorations": 7,
+        "first_exploration": 1,
+        "first_discovery": 4,
+        "exploitation_count": 5,
+        "strict_preference_count": 2,
+        "sole_tried_selection_count": 3,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 2,
+        "retests": 5,
+        "uncertain_retests": 3,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 6,
+        "authorized_consequence": 6,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 4,
+            "state": 2,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": 1,
+            "next_visit": null,
+            "previous_scores": {
+              "HOLD": 0.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 0,
+              "rate": null,
+              "retained_opportunities": 0
+            }
+          },
+          {
+            "decision": 8,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 8,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 9,
+              "action": "HOLD",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 4,
+              "opportunities": 4,
+              "rate": 1.0,
+              "retained_opportunities": 4
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 5,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 6,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 7,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 10,
+          "HOLD": 2,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.6500224216483541,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "HOLD"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 5,
+        "exploitation_count": 7,
+        "strict_preference_count": 1,
+        "sole_tried_selection_count": 6,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 1,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 5,
+            "state": 2,
+            "action": "ADVANCE",
+            "transaction_id": 5,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "HOLD": 0.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 1,
+              "opportunities": 1,
+              "rate": 1.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 7,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 8,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 7,
+          "HOLD": 5,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9798687566511528,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 7,
+        "authorized_explorations": 7,
+        "first_exploration": 1,
+        "first_discovery": 6,
+        "exploitation_count": 5,
+        "strict_preference_count": 4,
+        "sole_tried_selection_count": 1,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 4,
+        "retests": 7,
+        "uncertain_retests": 5,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 2,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 6,
+        "authorized_consequence": 6,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 6,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 7,
+              "action": "HOLD",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 4,
+              "opportunities": 5,
+              "rate": 0.8,
+              "retained_opportunities": 5
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 6,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 8,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 8,
+          "HOLD": 4,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9182958340544896,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "HOLD"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 6,
+        "states_with_multiple_actions": 2,
+        "exploration_count": 6,
+        "authorized_explorations": 6,
+        "first_exploration": 1,
+        "first_discovery": 6,
+        "exploitation_count": 5,
+        "strict_preference_count": 1,
+        "sole_tried_selection_count": 4,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 2,
+        "retests": 6,
+        "uncertain_retests": 6,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 6,
+            "state": 2,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "HOLD": 0.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 1,
+              "opportunities": 1,
+              "rate": 1.0,
+              "retained_opportunities": 1
+            }
+          },
+          {
+            "decision": 11,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 11,
+            "consequence": 0,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "reused": false,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 1,
+              "rate": 0.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 7,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 7,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 11,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 9,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 9,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 9,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 10,
+          "HOLD": 2,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.6500224216483541,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "HOLD"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 5,
+        "exploitation_count": 7,
+        "strict_preference_count": 1,
+        "sole_tried_selection_count": 6,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 1,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 5,
+            "state": 2,
+            "action": "ADVANCE",
+            "transaction_id": 5,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "HOLD": 0.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 1,
+              "opportunities": 1,
+              "rate": 1.0,
+              "retained_opportunities": 1
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 9,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 11,
+          "HOLD": 1,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.41381685030363374,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": 12,
+        "exploitation_count": 7,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 7,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 1,
+        "authorized_consequence": 1,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "HOLD",
+            "transaction_id": 12,
+            "consequence": 0,
+            "next_visit": null,
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 0,
+              "rate": null,
+              "retained_opportunities": 0
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 10,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 7,
+          "HOLD": 5,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9798687566511528,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 7,
+        "authorized_explorations": 7,
+        "first_exploration": 1,
+        "first_discovery": 6,
+        "exploitation_count": 5,
+        "strict_preference_count": 4,
+        "sole_tried_selection_count": 1,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 4,
+        "retests": 7,
+        "uncertain_retests": 5,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 2,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 6,
+        "authorized_consequence": 6,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 6,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 7,
+              "action": "HOLD",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 4,
+              "opportunities": 5,
+              "rate": 0.8,
+              "retained_opportunities": 5
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 6,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 11,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 11,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 10,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 11,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 9,
+          "HOLD": 3,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.8112781244591328,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 6,
+        "strict_preference_count": 2,
+        "sole_tried_selection_count": 4,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 3,
+        "retests": 7,
+        "uncertain_retests": 7,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 4,
+        "authorized_consequence": 4,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 3,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 3,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 7,
+              "action": "HOLD",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 3,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 5,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 5,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "HOLD",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 10,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 11,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 5,
+          "HOLD": 7,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.9798687566511528,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 5,
+        "states_with_multiple_actions": 1,
+        "exploration_count": 5,
+        "authorized_explorations": 5,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 7,
+        "strict_preference_count": 5,
+        "sole_tried_selection_count": 2,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 5,
+        "retests": 7,
+        "uncertain_retests": 3,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 8,
+        "authorized_consequence": 8,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 3,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 3,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 7,
+              "action": "HOLD",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 6,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 5,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 5,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 12,
+        "condition": "B",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 9,
+          "HOLD": 3,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "RETREAT"
+        ],
+        "entropy_bits": 0.8112781244591328,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "HOLD"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "HOLD"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "HOLD"
+          ]
+        ],
+        "coverage": 7,
+        "states_with_multiple_actions": 3,
+        "exploration_count": 7,
+        "authorized_explorations": 7,
+        "first_exploration": 1,
+        "first_discovery": 4,
+        "exploitation_count": 4,
+        "strict_preference_count": 1,
+        "sole_tried_selection_count": 3,
+        "known_worse_count": 1,
+        "known_worse_opportunities": 2,
+        "retests": 5,
+        "uncertain_retests": 5,
+        "known_worse_uncertain_retests": 1,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 2,
+        "authorized_consequence": 2,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [
+          {
+            "decision": 4,
+            "state": 2,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": 1,
+            "next_visit": {
+              "decision": 9,
+              "action": "ADVANCE",
+              "reused": true,
+              "evidence_retained": true
+            },
+            "previous_scores": {
+              "HOLD": 0.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 1,
+              "opportunities": 1,
+              "rate": 1.0,
+              "retained_opportunities": 1
+            }
+          },
+          {
+            "decision": 12,
+            "state": 1,
+            "action": "HOLD",
+            "transaction_id": 12,
+            "consequence": 1,
+            "next_visit": null,
+            "previous_scores": {
+              "ADVANCE": -1.0
+            },
+            "rediscovery": false,
+            "stabilization": {
+              "successes": 0,
+              "opportunities": 0,
+              "rate": null,
+              "retained_opportunities": 0
+            }
+          }
+        ],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": false
+          },
+          {
+            "decision": 8,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "HOLD",
+              "escaped": true,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": false
+          }
+        ],
+        "contradictions": []
+      },
+      {
+        "pair": 12,
+        "condition": "A",
+        "decisions": 12,
+        "unexecuted_decisions": 0,
+        "valid": 12,
+        "malformed": 0,
+        "rejections": 0,
+        "commits": 12,
+        "actions": {
+          "ADVANCE": 12,
+          "HOLD": 0,
+          "RETREAT": 0
+        },
+        "never_selected": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "entropy_bits": -0.0,
+        "unique_state_actions": [
+          [
+            0,
+            "ADVANCE"
+          ],
+          [
+            1,
+            "ADVANCE"
+          ],
+          [
+            2,
+            "ADVANCE"
+          ],
+          [
+            3,
+            "ADVANCE"
+          ]
+        ],
+        "coverage": 4,
+        "states_with_multiple_actions": 0,
+        "exploration_count": 4,
+        "authorized_explorations": 4,
+        "first_exploration": 1,
+        "first_discovery": null,
+        "exploitation_count": 8,
+        "strict_preference_count": 0,
+        "sole_tried_selection_count": 8,
+        "known_worse_count": 0,
+        "known_worse_opportunities": 0,
+        "retests": 8,
+        "uncertain_retests": 8,
+        "known_worse_uncertain_retests": 0,
+        "eviction_reexplorations": 0,
+        "blind_repetition_compatible": [],
+        "realized_consequence": 0,
+        "authorized_consequence": 0,
+        "memory_growth": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "evictions": 4,
+        "discoveries": [],
+        "negative_outcomes": [
+          {
+            "decision": 2,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 2,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 6,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 4,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 4,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 8,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 2,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 6,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 6,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 10,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 8,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 8,
+            "consequence": -1,
+            "next_visit": {
+              "decision": 12,
+              "action": "ADVANCE",
+              "escaped": false,
+              "evidence_retained": true
+            },
+            "later_visits": 1,
+            "retested": true,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 10,
+            "state": 1,
+            "action": "ADVANCE",
+            "transaction_id": 10,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          },
+          {
+            "decision": 12,
+            "state": 3,
+            "action": "ADVANCE",
+            "transaction_id": 12,
+            "consequence": -1,
+            "next_visit": null,
+            "later_visits": 0,
+            "retested": false,
+            "other_untried": true,
+            "negative_only": true
+          }
+        ],
+        "contradictions": []
+      }
+    ],
+    "maxima": {
+      "memory": 8,
+      "pairs": 8,
+      "packages": 8,
+      "trace": 24,
+      "package_trace": 24,
+      "staged": 0,
+      "map_quarantine": 0,
+      "memory_quarantine": 0
+    }
+  },
+  "model": {
+    "model": "dolphin-mixtral:latest",
+    "systems": {
+      "A": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation.",
+      "B": "Choose an action using verified prior outcomes. Higher observed consequences are preferable. UNTRIED means no verified observation; it does not mean consequence 0. Reply with exactly one allowed action and no explanation. When evidence is insufficient, you may choose an UNTRIED action to gather information."
+    },
+    "options": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "num_predict": 16,
+      "num_ctx": 2048,
+      "repeat_penalty": 1.1
+    },
+    "frozen": {
+      "framework_commit": "8ec32c839133df7ddd76448063b5f765c20155da",
+      "source_sha256": {
+        "experiments/base_framework_v0/__init__.py": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29",
+        "experiments/base_framework_v0/campaign.py": "3006d4ec2c08426be578e27dda511bb83d280fd18663cccacd6bd36725434e6b",
+        "experiments/base_framework_v0/environment.py": "8b121bcf2ee1336cec7adb4e44153d1f17da6cad295cc3574b54f77244618eff",
+        "experiments/base_framework_v0/framework.py": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e",
+        "experiments/base_framework_v0/run.py": "da291611142fd7b364f6faffeb79c4563e282b11b4dab906e8524d0daaad7750",
+        "experiments/base_framework_v0/test_framework.py": "e434e5c4725275754e2f4de7aa25f9e9f3c36637f7666ab0ddf3670ad051c6fe",
+        "experiments/base_framework_v1/__init__.py": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2",
+        "experiments/base_framework_v1/campaign.py": "d15f3ffbd21ad928c7e469b5ae46ce8c89049349cd6d93aecf2a91734a85ef59",
+        "experiments/base_framework_v1/framework.py": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572",
+        "experiments/base_framework_v1/hidden_oracle.py": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109",
+        "experiments/base_framework_v1/run.py": "7e1f15a01edf1c4dc48e385fd5e443b9b04b07c398cd3ee3563209d30d963566",
+        "experiments/base_framework_v1/source_a.py": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e",
+        "experiments/base_framework_v1/source_b.py": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9",
+        "experiments/base_framework_v1/test_framework.py": "fdd3a51fb0eab94473ccba0ad918f8ce4815d87f10d4a27f5bc979137515b652",
+        "experiments/base_framework_v1/types.py": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd",
+        "experiments/base_framework_v2/__init__.py": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50",
+        "experiments/base_framework_v2/campaign.py": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c",
+        "experiments/base_framework_v2/framework.py": "fd0b9882b06e5c6db5cc5478a603d072579ada110e4acdd92162174b8294a244",
+        "experiments/base_framework_v2/registry.py": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774",
+        "experiments/base_framework_v2/run.py": "60170a2340b1495d76630661feff7fdcf193b9283231cc72aafc3aa292ec722c",
+        "experiments/base_framework_v2/test_framework.py": "71287adcc3336cf7f14d375ef9b507e21b2b5ea25c6f51dc4bf0d8db0a2cc80f",
+        "experiments/base_framework_v2/types.py": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d",
+        "experiments/base_framework_v2/witness_c.py": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+      },
+      "model": {
+        "name": "dolphin-mixtral:latest",
+        "manifest_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+      }
+    },
+    "execution": "real_inference",
+    "server": {
+      "version": "0.1.16"
+    },
+    "installed_model": {
+      "name": "dolphin-mixtral:latest",
+      "modified_at": "2023-12-19T01:34:23.169233495-05:00",
+      "size": 26441544856,
+      "digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    },
+    "template": {
+      "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+      "system": "You are Dolphin, a helpful AI assistant.\n",
+      "parameters": "stop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>\nnum_ctx                        4096",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    }
+  },
+  "source_sha256": {
+    "experiments/model_explorer_adaptive_episode_v0/__init__.py": "100fbc23891241e7448f4a9a5d1cb5838dac69bf466dcd9357fac9452e2a5fb2",
+    "experiments/model_explorer_adaptive_episode_v0/adapter.py": "5ff1cf04f278e32f8d99255d131d938006307416a7f684a52be645ce38355085",
+    "experiments/model_explorer_adaptive_episode_v0/campaign.py": "114b7fd06eef068ca16bf50ad6dbf249a52ac7ffeb83600c8219173496ef93c2",
+    "experiments/model_explorer_adaptive_episode_v0/frozen-framework.json": "4ea0758bf0fefd2345c6789f378c2ce716984b0124dc230ed62b4a982fd767f2",
+    "experiments/model_explorer_adaptive_episode_v0/run.py": "9f0ca84e15d7b736c16507894cab43b11095f3af25a1ce4534882115efae851d",
+    "experiments/model_explorer_adaptive_episode_v0/test_study.py": "aa3925627478fda5b076df4f1590fc3bbbead2dd905aef044bf7141095e7b0a0",
+    "research/model-explorer-adaptive-episode-v0-preregistration.md": "92b514d151c7e46c24f76a7b3c1854f89b0e57da0f6d368a96be60b94bd820e1"
+  },
+  "evidence_sha256": {
+    "model-calls.jsonl": "de9525f9710f2d9889e21b1df226708eb46f5ff14e0db9ba57c499a73eff3d4f",
+    "steps.jsonl": "c0151e3c576d4f5308e0354809f994189ad4d1979960fd03b1181bf0ca0987cb",
+    "episode-analysis.json": "4af81221d205e4d05692f3ff85bfcc9a6235e60548f05f9e852e9455020a004a"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "parent": "fbfb027a5c833b5b1d77bffe03fc3e1e8beb9aa7",
+  "preregistration_commit": "397b9cc",
+  "implementation_commit": "a4cf01c",
+  "exact_replay": {
+    "exit_code": 0,
+    "model_calls": 288,
+    "measured_steps": 288,
+    "setup_transactions": 1680,
+    "controls": 48,
+    "registered_prompts": 288,
+    "all_evidence_byte_identical": true,
+    "JSON_summary_identical": true,
+    "source_hashes_identical": true,
+    "evidence_sha256": {
+      "model-calls.jsonl": "d88bef6892ed463a24804f7b866120327a03be0496fd36af935ab1b4912d1535",
+      "steps.jsonl": "53076694fe83d644018cd28dea34ff2cb5006f356e9d079b47dd8984271e21e5",
+      "setup.jsonl": "e7710d0402fbadbe221a4ed5ad837613889b649a5925bab13cdad81663a70c15",
+      "controls.jsonl": "fe0e0d22b6382dc4b39576ba911b76454f9975aa550ee857916edcb35452a50d",
+      "registered-fixtures-and-prompts.json": "11f7ef79aff828b3f3ad74a9e48185bc9400b62cbc88e0a14df81e4b86fd7de6"
+    }
+  },
+  "regressions": [
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:21.344915+00:00",
+      "finished_utc": "2026-09-19T03:22:21.986652+00:00",
+      "log_sha256": "bf449e94ecf9ae72e47fa7a8f51064eb799feb68dcc353ecd34cae1217b798be"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:21.986874+00:00",
+      "finished_utc": "2026-09-19T03:22:23.677409+00:00",
+      "log_sha256": "385692586d538cd36bee307ce181d424c954daf6231a385211f0a0fcf5d1be09"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:23.678039+00:00",
+      "finished_utc": "2026-09-19T03:22:23.902331+00:00",
+      "log_sha256": "06c2aaf41b024463fc570d793ca4dab4a3820267f2d3fa1be9409302d6ded892"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:23.902573+00:00",
+      "finished_utc": "2026-09-19T03:22:24.285142+00:00",
+      "log_sha256": "522630af9af83bda117712883ca1caa68c2d50e26ca71230c90a8c670102ca5d"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:24.285400+00:00",
+      "finished_utc": "2026-09-19T03:22:24.338167+00:00",
+      "log_sha256": "99deaf104037c1b0bce7b29418ccf0bf7b858175b5ac75203813c01e5dd0b780"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:24.338824+00:00",
+      "finished_utc": "2026-09-19T03:22:24.404649+00:00",
+      "log_sha256": "1ca6225af0410a489f47ac82b3caa3e687e7a65c18a8a7a9ebec1bdf82026ec3"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:24.405269+00:00",
+      "finished_utc": "2026-09-19T03:22:24.543123+00:00",
+      "log_sha256": "15983761c108bc194b1623d311e5180dfa2ae5a58b5c7769e91c37464272bb01"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_semantic_prior_study_v0.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "started_utc": "2026-09-19T03:22:24.543662+00:00",
+      "finished_utc": "2026-09-19T03:22:32.581481+00:00",
+      "log_sha256": "f5f9b6a2009deeb939f8ad348ae8537eec26a909d2ea0f9f57c91bbd42687e3f"
+    }
+  ],
+  "prior_model_transcripts_and_summaries_identical": true,
+  "inherited_files_identical_before_publication": 256,
+  "frozen_framework_hashes_verified": 23,
+  "no_source_or_preregistration_change_after_inference": true,
+  "opaque_unexposed_strata": [
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": 1,
+      "position": 1,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": 1,
+      "position": 2,
+      "token": "K1",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": 1,
+      "position": 2,
+      "token": "K2",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": 1,
+      "position": 3,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": 0,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 0,
+      "value": -1,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": 1,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": 0,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": -1,
+      "position": 1,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": -1,
+      "position": 2,
+      "token": "K1",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": -1,
+      "position": 2,
+      "token": "K2",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 1,
+      "value": -1,
+      "position": 3,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": 1,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": 0,
+      "position": 2,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": -1,
+      "position": 1,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": -1,
+      "position": 2,
+      "token": "K1",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": -1,
+      "position": 2,
+      "token": "K2",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    },
+    {
+      "relation": "three_way",
+      "state": 3,
+      "value": -1,
+      "position": 3,
+      "token": "K3",
+      "selected": 0,
+      "opportunities": 0,
+      "rate": null
+    }
+  ],
+  "unexposed_strata_note": "The measured sparse array lists exposed cells only. These explicitly expanded absent combinations have no observations and null selection rates, not imputed zero rates. No measured result changed.",
+  "public_main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+  "historical_tags": {
+    "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+    "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+    "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+    "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+    "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+  }
+}

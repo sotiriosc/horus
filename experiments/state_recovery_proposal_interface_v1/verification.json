@@ -1,0 +1,419 @@
+{
+  "parent": "0ccc3889a4c7efcfa413e476f4994df647f206d5",
+  "protocol_commit": "0d2164180b694587dc86ec2a67208def92524f31",
+  "interface_commit": "5b871819724cd37f3e8a3866ffab6464c325856d",
+  "campaign_commit": "abc13a68518141846a5714efed66b93174011a31",
+  "classification": "C \u2014 NOT ESTABLISHED",
+  "actual_model_calls": 0,
+  "model_usefulness": "UNTESTED",
+  "operational_criteria": [
+    {
+      "criterion": "default_native_behavior_preserved",
+      "passed": true,
+      "evidence": "32 complete case records byte-identical"
+    },
+    {
+      "criterion": "correct_value_reaches_authorizer_and_accepts",
+      "passed": true,
+      "evidence": "8/8 primary plus retained-history success"
+    },
+    {
+      "criterion": "wrong_value_reaches_authorizer_and_rejects",
+      "passed": true,
+      "evidence": "8/8 primary plus retained-history rejection"
+    },
+    {
+      "criterion": "malformed_value_safe_rejection",
+      "passed": true,
+      "evidence": "20 admission/failure controls before authorization"
+    },
+    {
+      "criterion": "source_controls_only_value",
+      "passed": true,
+      "evidence": "scalar API and complete envelope observations"
+    },
+    {
+      "criterion": "trusted_identity_status_budget",
+      "passed": true,
+      "evidence": "native candidate envelope and native attempt owner"
+    },
+    {
+      "criterion": "one_invocation_per_genuine_opportunity",
+      "passed": true,
+      "evidence": "38/38 callbacks on 38 genuine opportunities"
+    },
+    {
+      "criterion": "no_invocation_without_recovery",
+      "passed": true,
+      "evidence": "12 registered controls plus two history-seeding steps"
+    },
+    {
+      "criterion": "proposal_failure_closed",
+      "passed": true,
+      "evidence": "exception/no-return/malformed rejection without fallback"
+    },
+    {
+      "criterion": "rejected_paths_publish_nothing_protected",
+      "passed": true,
+      "evidence": "29/29 injected rejections with equal snapshots"
+    },
+    {
+      "criterion": "receipt_and_prediction_unchanged",
+      "passed": true,
+      "evidence": "all injected/default cases"
+    },
+    {
+      "criterion": "independent_authorizer_unchanged",
+      "passed": true,
+      "evidence": "same class/method plus frozen source hash"
+    },
+    {
+      "criterion": "bounds_unchanged",
+      "passed": true,
+      "evidence": "native constants/methods; every case asserts bounds"
+    },
+    {
+      "criterion": "zero_protected_false_accepts",
+      "passed": true,
+      "evidence": "normal transaction counts; direct wrong-status acceptance reported separately"
+    },
+    {
+      "criterion": "exact_replay",
+      "passed": true,
+      "evidence": "campaign.json and results.json byte-identical"
+    },
+    {
+      "criterion": "historical_regressions",
+      "passed": true,
+      "evidence": "all 25 inherited commands returned expected statuses"
+    }
+  ],
+  "additional_mandatory_control": {
+    "wrong_status_rejection_passed": false,
+    "historical_wrong_status_acceptances": 8,
+    "new_wrong_status_acceptances": 8,
+    "new_acceptances_not_seen_historically": 0,
+    "direct_control_protected_publications": 0,
+    "resolution": "Unchanged authorizer does not check status. No A readiness claim; no verifier change."
+  },
+  "replay": {
+    "files": [
+      "campaign.json",
+      "results.json"
+    ],
+    "byte_identical": true,
+    "campaign_sha256": "5348eb9efc74809c5acbb3d369dd21f913c051ba4f697c10847fe92841274408",
+    "results_sha256": "9a3ebdbab8b37b36f8d1a3079169c2d4e683f6041d235d10f9d2ae239b9b1f8c",
+    "observer_noninterference": true,
+    "historical_diagnostic_canonical_match": true
+  },
+  "regression_commands": 28,
+  "new_unit_tests_passed": 9,
+  "regressions": [
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:00:02.133388+00:00",
+      "finished_utc": "2026-09-19T13:00:02.714296+00:00",
+      "log_sha256": "0f438661afeed5a4b37bcaa0fe6dedeaf01a718d04c4804d9d95a4ac38cca20c"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --replay $HORUS_INTERFACE_CAMPAIGN --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:00:02.714759+00:00",
+      "finished_utc": "2026-09-19T13:00:03.280920+00:00",
+      "log_sha256": "e1726a978ccd93dbca56d85a40d2a3c8db96cfedb01c26eee83c2b7a175036e5"
+    },
+    {
+      "command": "python3 -m unittest experiments.state_recovery_proposal_interface_v1.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:03.281336+00:00",
+      "finished_utc": "2026-09-19T13:00:03.852353+00:00",
+      "log_sha256": "3854d03dd79e8a4068dbd69d44196e2a7dda8d4c35c7339b56cc8af37171955a"
+    },
+    {
+      "command": "python3 -m experiments.model_recovery_proposal_v0.run --replay $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:00:03.852724+00:00",
+      "finished_utc": "2026-09-19T13:00:04.033791+00:00",
+      "log_sha256": "27b52eef37e2a683a4236383ddc0f0a5ca2a6fec9edc5cdca28b689c0dd32b61"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.run --replay $HORUS_MAP_PRIOR_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:04.034172+00:00",
+      "finished_utc": "2026-09-19T13:00:06.131501+00:00",
+      "log_sha256": "94d6cc1f4a9f732c6cfded8f90bd2b64618753275884ca9d20c2061f4445da2b"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.run --replay $HORUS_MAP_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:06.131927+00:00",
+      "finished_utc": "2026-09-19T13:00:10.422948+00:00",
+      "log_sha256": "d367aba2fad8722e87ee7177394c322af90329216d3471805f7f3158769fa91d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1.run --replay $HORUS_CONTRADICTION_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:10.423513+00:00",
+      "finished_utc": "2026-09-19T13:00:14.698009+00:00",
+      "log_sha256": "45d2cf847d34d917f85fe6f49185372e00bb9146b01766242e055ca1b47f3160"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_prior_factorial_v1.run --replay $HORUS_FACTORIAL_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:14.698496+00:00",
+      "finished_utc": "2026-09-19T13:00:14.784293+00:00",
+      "log_sha256": "0ac77cae1cd5d1f63ad17b9c5602644c2dac7e7e3b1f67acc8c3b13b673e9e40"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:14.784722+00:00",
+      "finished_utc": "2026-09-19T13:00:17.414063+00:00",
+      "log_sha256": "5b88f1eaa2c8baa5e20ee72e4665a8c4847541fdc6a5092960562118e467f9b1"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:17.414507+00:00",
+      "finished_utc": "2026-09-19T13:00:18.091198+00:00",
+      "log_sha256": "7952f1a5a02ecc332035d65209ee154a8982bf565fb4278977ad226f5edc7222"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:18.091679+00:00",
+      "finished_utc": "2026-09-19T13:00:19.929813+00:00",
+      "log_sha256": "60d021cc3c210f94d54e32d39ab83fc8846d449b121dd4cb9196e76dd1e96913"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:19.931814+00:00",
+      "finished_utc": "2026-09-19T13:00:20.171775+00:00",
+      "log_sha256": "a7b728954af717325e2b1579be9003b99a65c6af882b42a200863aca968a8422"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.172420+00:00",
+      "finished_utc": "2026-09-19T13:00:20.575560+00:00",
+      "log_sha256": "c286fae4280df0d069f644cc3f15f45fa5636676d7f47dfc3f9febce4e3a25fe"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.575926+00:00",
+      "finished_utc": "2026-09-19T13:00:20.629544+00:00",
+      "log_sha256": "e68191b9b5c3f141167a3e83e79c2a0baae95447ff1f27b2ba1fa1bbe1910d58"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.630569+00:00",
+      "finished_utc": "2026-09-19T13:00:20.694562+00:00",
+      "log_sha256": "6d5cd87b720374a910358314a99ded37000d4358d3cd45e5f32708b461e747db"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.695262+00:00",
+      "finished_utc": "2026-09-19T13:00:20.835325+00:00",
+      "log_sha256": "b90f93b35179a934c10ffcb87216e84a6d45740085aac912bed5b5a3f576cce8"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v0.test_preflight -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.836001+00:00",
+      "finished_utc": "2026-09-19T13:00:20.906354+00:00",
+      "log_sha256": "43c8a4b0674570a6c2b98fb01384760e0757549a81728148e0243264370de603"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:00:20.906815+00:00",
+      "finished_utc": "2026-09-19T13:00:20.982413+00:00",
+      "log_sha256": "d66734ff33737b0b81d6a9a7e10175800d3fa12904adede98f7f7b83fb55b6a1"
+    },
+    {
+      "command": "python3 -m unittest experiments.realized_event_grounding_v0.test_grounding -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:20.983910+00:00",
+      "finished_utc": "2026-09-19T13:00:21.029995+00:00",
+      "log_sha256": "8626774166a1042aeea498cdc4458727bef2a963d3314439789c0cf46b2f4fb5"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:21.030386+00:00",
+      "finished_utc": "2026-09-19T13:00:21.202087+00:00",
+      "log_sha256": "0546ab7c6235a43c24fc27a7549d7d7faa0bbf9be698b0c03a978bf085012988"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run --replay $HORUS_REPAIR_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:21.202736+00:00",
+      "finished_utc": "2026-09-19T13:00:21.377659+00:00",
+      "log_sha256": "fc64bf82c41b8e2c132408613c3d3dd61b2739c7fa7e073abbd8444241467b70"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1_feasibility.run --replay $HORUS_FEASIBILITY_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:21.378093+00:00",
+      "finished_utc": "2026-09-19T13:00:21.508688+00:00",
+      "log_sha256": "abc3366de7468824c6ae4ad9d2680fdf9b799712b9759fdb64a4ddfb531b4633"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:21.509117+00:00",
+      "finished_utc": "2026-09-19T13:00:23.286841+00:00",
+      "log_sha256": "0dd5b23346487a0e4c836f45d56dd8dac904dc086c6638c0b8ee20d04a43c038"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_proposal_v0.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:23.287278+00:00",
+      "finished_utc": "2026-09-19T13:00:25.392608+00:00",
+      "log_sha256": "c2d118a13f995a2c53d1d255d46147e4ec9ee1e4ab5ccc65d99a6ccf0956557a"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.gate --replay $HORUS_MAP_GATE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:25.393038+00:00",
+      "finished_utc": "2026-09-19T13:00:25.720975+00:00",
+      "log_sha256": "5138c77b824ce29540ef5d92507265be6cd80ad3169f655f012161221d6b84d3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_established_prior_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:25.721852+00:00",
+      "finished_utc": "2026-09-19T13:00:28.164532+00:00",
+      "log_sha256": "d6fa9016ec88e6b56e2a2537908dfc79f1f368fbf28e7a6ea8bcac1b35893017"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.preflight --replay $HORUS_MAP_PRIOR_PREFLIGHT",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:28.164987+00:00",
+      "finished_utc": "2026-09-19T13:00:29.111106+00:00",
+      "log_sha256": "f53253db4b48b0d6defa4951d0f4bf446c1645b84f5aa8cf1b05ffad67beb1c3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_recovery_proposal_v0.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:00:29.111576+00:00",
+      "finished_utc": "2026-09-19T13:00:29.267917+00:00",
+      "log_sha256": "60c2b28b37f33927c2e091123c7ffe4f4e24aea6c55632977e853344a7ce4fbb"
+    }
+  ],
+  "additional_historical_byte_comparisons": [
+    "base-framework-v0/results.json",
+    "base-framework-v1/results.json",
+    "base-framework-v2/results.json",
+    "12/compact.json",
+    "12/results.json",
+    "19/campaign.json",
+    "19/results.json"
+  ],
+  "preservation": {
+    "inherited_files": 369,
+    "unchanged_inherited_files": 367,
+    "documentation_updates": [
+      "README.md",
+      "PUBLIC_MANIFEST.json"
+    ],
+    "main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+    "tags": {
+      "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+      "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+      "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+      "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+      "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+    },
+    "old_recovery_checkpoint_still_blocked": true,
+    "no_push": true
+  },
+  "source_review": {
+    "context_fields": [
+      "epoch",
+      "transaction_id",
+      "pair_decision_id",
+      "pre_state",
+      "action",
+      "next_state",
+      "consequence",
+      "measurement_matches"
+    ],
+    "historical_case_body_verified": true,
+    "inherited_atomic_wrapper": true,
+    "native_limit": 1,
+    "proposal_fields": [
+      "replacement_state_value"
+    ],
+    "single_expression_change_verified": true,
+    "unchanged_authorizer": true
+  },
+  "limitations": [
+    "Wrong-status negative control fails in the unchanged historical and new low-level authorizer.",
+    "No real model, prompt, parser or inference transport.",
+    "Value-only API does not sandbox hostile Python in the trusted process.",
+    "Only the bounded fixture set establishes operational behavior; trust-root compromise is outside the normal model."
+  ]
+}

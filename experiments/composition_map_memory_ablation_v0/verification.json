@@ -1,0 +1,144 @@
+{
+  "Map_established_prior_v1_unchanged": true,
+  "ablation_journal_records": 336,
+  "ablation_parsed_call_ids": 84,
+  "ablation_preflight_tests": 5,
+  "all_prior_refs_main_tags_unchanged": true,
+  "ambiguous_calls": 0,
+  "executions": [
+    {
+      "check": "ablation-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.composition_map_memory_ablation_v0.run",
+        "--source",
+        "$R1_EVIDENCE",
+        "--replay",
+        "$CHECKS/live",
+        "--output",
+        "$CHECKS/replay"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:36:32.786028+00:00",
+      "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+      "started_utc": "2026-09-20T01:36:29.631253+00:00"
+    },
+    {
+      "check": "r1-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+        "--replay",
+        "$R1_EVIDENCE",
+        "--baseline",
+        "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+        "--output",
+        "$CHECKS/r1-replay"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:36:52.452936+00:00",
+      "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+      "started_utc": "2026-09-20T01:36:32.794958+00:00"
+    },
+    {
+      "check": "schema-replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.composition_empty_history_schema_contract_v0.run",
+        "--replay",
+        "$SCHEMA_EVIDENCE",
+        "--output",
+        "$CHECKS/schema-replay"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:36:52.665459+00:00",
+      "log_sha256": "553ddc389a15c6359216809b7abef2ad85aef26d9b659d50c9f17cc517f6cfa5",
+      "started_utc": "2026-09-20T01:36:52.461499+00:00"
+    },
+    {
+      "check": "unknown-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "experiments.model_proposal_role_composition_v2.test_study",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:36:52.808034+00:00",
+      "log_sha256": "b0322c50668fbebf82e150ccd541c1437d08b22f3d38f55f923829593a7d432a",
+      "started_utc": "2026-09-20T01:36:52.673759+00:00"
+    },
+    {
+      "check": "post-preflight",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.composition_map_memory_ablation_v0.preflight",
+        "--source",
+        "$R1_EVIDENCE",
+        "--output",
+        "$CHECKS/post-preflight.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "finished_utc": "2026-09-20T01:36:53.404014+00:00",
+      "log_sha256": "78b089da75248f58989c4f3def60ad9a05edddde33d470f85a2c957b6a238512",
+      "started_utc": "2026-09-20T01:36:52.817496+00:00"
+    }
+  ],
+  "independent_raw_record_audit": {
+    "all_endpoint_strata_independently_recounted": true,
+    "all_request_hashes_match_frozen": true,
+    "all_score_receipt_links_match": true,
+    "journal_records": 336,
+    "model_response_counts": {
+      "H": {
+        "consequence": 36,
+        "exact": 33,
+        "next_state": 37,
+        "valid": 42
+      },
+      "W": {
+        "consequence": 21,
+        "exact": 11,
+        "next_state": 20,
+        "valid": 42
+      }
+    },
+    "new_inference": 0,
+    "output_changes": {
+      "both_changed": 12,
+      "consequence_changed_only": 6,
+      "identical": 15,
+      "state_changed_only": 9
+    },
+    "passed": true,
+    "real_calls": 84,
+    "server_generate_200_records": 84,
+    "unique_call_ids": 84,
+    "visibility_W_to_H": {
+      "exact_to_same_exact": 11,
+      "wrong_to_different_wrong": 5,
+      "wrong_to_exact": 22,
+      "wrong_to_same_wrong": 4
+    }
+  },
+  "inherited_substantive_files_byte_identical": 488,
+  "new_inference": 0,
+  "original_interrupted_v2_classification": "C \u2014 NOT ESTABLISHED",
+  "original_r1_archive_files_sha256_verified": 288,
+  "passed": true,
+  "r1_classification": "A \u2014 MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS",
+  "r1_exact_replay": true,
+  "registered_ablation_files_byte_identical": 8,
+  "schema_contract_exact_replay": true,
+  "unchanged_unknown_tests": 5
+}

@@ -2,10 +2,11 @@
 
 from __future__ import annotations
 
+from copy import deepcopy
 from dataclasses import dataclass, replace
 from typing import Any
 
-from experiments.base_framework_v1.framework import CrossSourceFramework, StepResult
+from experiments.base_framework_v1.framework import ACTION_ORDER, CrossSourceFramework, StepResult
 from experiments.base_framework_v1.types import EXTERNAL_OBSERVATION, OBSERVATION_A, OBSERVATION_B
 from experiments.base_framework_v2.registry import ProcessRegistry, normal_registry
 from experiments.base_framework_v2.types import (
@@ -51,6 +52,20 @@ class EvidencePackageAuthorizer:
             return PackageCheck(False, "evidence_type")
         if not isinstance(c, WitnessReceipt):
             return PackageCheck(False, "duplicate_witness")
+        # The relation encoding is meaningful only inside its declared domain.
+        # Reject bool/float aliases as well as out-of-range integer values.
+        for receipt in (a.receipt, b.receipt):
+            if (
+                type(receipt.pre_state) is not int or receipt.pre_state not in range(4)
+                or type(receipt.observed_next_state) is not int
+                or receipt.observed_next_state not in range(4)
+                or receipt.action not in ACTION_ORDER
+                or type(receipt.observed_consequence) is not int
+                or receipt.observed_consequence not in (-1, 0, 1)
+            ):
+                return PackageCheck(False, "numeric_domain")
+        if type(c.relation_code) is not int or c.relation_code not in range(12):
+            return PackageCheck(False, "witness_domain")
         items = (a, b, c)
         process_ids = tuple(item.process_id for item in items)
         for item, (role, evidence_type) in zip(items, self._EXPECTED):
@@ -118,6 +133,7 @@ class EvidenceProvenanceFramework:
         registry: ProcessRegistry | None = None,
     ) -> None:
         self.inner = CrossSourceFramework(initial_state, epoch)
+        self.inner._requires_package = True
         self.registry = registry or normal_registry()
         self.package_authorizer = EvidencePackageAuthorizer()
         self.packages: list[AuthorizedPackage] = []
@@ -137,7 +153,17 @@ class EvidenceProvenanceFramework:
         )}
 
     def __getattr__(self, name: str) -> Any:
-        return getattr(self.inner, name)
+        # Diagnostic data only: never delegate an inherited mutating method.
+        if name in {"map", "memory", "pairs", "pending", "epoch", "explorer",
+                    "trace", "continuation_authorized", "next_transaction_id",
+                    "episode_steps", "epochs_started", "max_trace",
+                    "max_pending_receipts"}:
+            return getattr(self.inner, name)
+        raise AttributeError(name)
+
+    def submit_receipt(self, port: str, receipt: object, **kwargs: Any) -> StepResult:
+        """Explicit fail-closed compatibility ingress; A+B cannot grant v2 authority."""
+        return self.inner._reject("mandatory package authorization required", executed=True)
 
     def _trace(self, reason: str) -> None:
         pending = self.inner.pending
@@ -147,17 +173,45 @@ class EvidenceProvenanceFramework:
         self.package_trace.append((*identity, reason))
         self.max_package_trace = max(self.max_package_trace, len(self.package_trace))
 
-    def _audit_package_ring(self) -> None:
-        if len(self.packages) != len(self.inner.memory.records):
-            raise RuntimeError("package/Memory ring length mismatch")
-        for package, record in zip(self.packages, self.inner.memory.records):
-            if (package.epoch, package.transaction_id) != (record.epoch, record.transaction_id):
-                raise RuntimeError("package/Memory identity mismatch")
+    def _audit_package_ring(self, inner=None, packages=None) -> None:
+        inner = self.inner if inner is None else inner
+        packages = self.packages if packages is None else packages
+        if not (len(packages) == len(inner.memory.records) == len(inner.pairs.decisions)):
+            raise RuntimeError("package/Memory/pair ring length mismatch")
+        seen = set()
+        for package, record, pair in zip(packages, inner.memory.records, inner.pairs.decisions):
+            identity = (record.epoch, record.transaction_id, record.pair_decision_id)
+            if identity in seen or identity != (pair.epoch, pair.transaction_id, pair.pair_decision_id):
+                raise RuntimeError("Memory/pair slot identity mismatch")
+            seen.add(identity)
+            if (
+                (package.epoch, package.transaction_id, package.channel_sequence,
+                 package.observation_a_id, package.observation_b_id)
+                != (pair.epoch, pair.transaction_id, pair.channel_sequence,
+                    pair.observation_a_id, pair.observation_b_id)
+            ):
+                raise RuntimeError("package/pair slot identity mismatch")
 
     def begin_step(self, **kwargs: Any) -> Any:
         self._audit_package_ring()
         self.staged.clear()
-        return self.inner.begin_step(**kwargs)
+        candidate = deepcopy(self.inner)
+        result = candidate.begin_step(**kwargs)
+        if isinstance(result, StepResult):
+            self._publish_control(candidate)
+        else:
+            # Retained Memory repair is validated before it can affect Explorer
+            # or become visible. Epoch values never determine ring order.
+            self._audit_package_ring(candidate, self.packages)
+            self.inner = candidate
+            self.inner.continuation_authorized = False
+        return result
+
+    def _publish_control(self, candidate: CrossSourceFramework) -> None:
+        # Rejection/re-observation may advance control state, never authorized history.
+        for name in ("pending", "continuation_authorized", "metrics", "trace",
+                     "max_trace", "max_pending_receipts"):
+            setattr(self.inner, name, getattr(candidate, name))
 
     def start_epoch(self, epoch: int) -> None:
         self.inner.start_epoch(epoch)
@@ -168,6 +222,8 @@ class EvidenceProvenanceFramework:
     def stage(self, role: str, evidence: object) -> StepResult | None:
         if self.inner.pending is None:
             raise RuntimeError("no pending transaction")
+        if role not in ("source_a", "source_b", "witness"):
+            return self._fail_package("process_identity")
         if role in self.staged:
             return self._fail_package("duplicate_witness" if role == "witness" else "process_identity")
         self.staged[role] = evidence
@@ -221,23 +277,39 @@ class EvidenceProvenanceFramework:
             lineage_class=EXTERNAL_OBSERVATION,
             fault_domain=OBSERVATION_B,
         )
-        partial = self.inner.submit_receipt("A", canonical_a)
-        if partial.committed:
-            raise RuntimeError("commit occurred before complete package")
-        oldest = self.packages[0] if len(self.packages) == PACKAGE_LIMIT else None
-        result = self.inner.submit_receipt(
-            "B", canonical_b, common_mode=common_mode,
-            wrong_measure=wrong_measure, candidate_value=candidate_value,
-            failed_recovery=failed_recovery,
+        candidate = deepcopy(self.inner)
+        candidate._package_grant = (
+            check.package.epoch, check.package.transaction_id,
+            check.package.channel_sequence, check.package.observation_a_id,
+            check.package.observation_b_id,
         )
-        if result.committed:
-            if oldest is not None:
-                self.packages.pop(0)
-            self.packages.append(check.package)
-            self.max_packages = max(self.max_packages, len(self.packages))
-            self._audit_package_ring()
-        self.staged.clear()
-        return result
+        try:
+            partial = candidate.submit_receipt("A", canonical_a)
+            if partial.committed:
+                raise RuntimeError("commit occurred before complete package")
+            result = candidate.submit_receipt(
+                "B", canonical_b, common_mode=common_mode,
+                wrong_measure=wrong_measure, candidate_value=candidate_value,
+                failed_recovery=failed_recovery,
+            )
+            if result.committed:
+                packages = (self.packages + [check.package])[-PACKAGE_LIMIT:]
+                self._audit_package_ring(candidate, packages)
+                candidate.assert_bounds()
+                # All checks precede publication. No callback/check runs between
+                # these assignments in this single-threaded bounded prototype.
+                candidate._package_grant = None
+                self.inner, self.packages = candidate, packages
+                self.max_packages = max(self.max_packages, len(packages))
+            else:
+                self._publish_control(candidate)
+            return result
+        except Exception:
+            self.inner._reject("transaction validation failed", executed=True)
+            raise
+        finally:
+            candidate._package_grant = None
+            self.staged.clear()
 
     def _fail_package(self, reason: str) -> StepResult:
         metric = {

@@ -1,0 +1,2203 @@
+[
+  {
+    "action": "HOLD",
+    "actual_event": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 1
+    },
+    "after": {
+      "commits": 1,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 1
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        }
+      ]
+    },
+    "authorization": {
+      "action": "HOLD",
+      "committed": true,
+      "continued": true,
+      "executed": true,
+      "incumbent_retained": true,
+      "needs_reobservation": false,
+      "reason": "authorized",
+      "recovery_authorized": false,
+      "status": "AUTHORIZED",
+      "transaction_id": 1
+    },
+    "before": {
+      "commits": 0,
+      "ledger": [],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 0
+      },
+      "memory": [],
+      "packages": [],
+      "pairs": []
+    },
+    "bounds": {
+      "map_quarantine": 0,
+      "memory": 1,
+      "memory_quarantine": 0,
+      "package_trace": 4,
+      "packages": 1,
+      "pairs": 1,
+      "staged": 0,
+      "trace": 3
+    },
+    "declared_process_separation": true,
+    "evidence_matches_actual": true,
+    "evidence_rounds": [
+      {
+        "a": {
+          "evidence_role": "source_a",
+          "process_id": "OBSERVATION_PATH_A",
+          "receipt": {
+            "action": "HOLD",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_A",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793993472,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 1,
+            "source_id": "SOURCE_A",
+            "transaction_id": 1
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "b": {
+          "evidence_role": "source_b",
+          "process_id": "OBSERVATION_PATH_B",
+          "receipt": {
+            "action": "HOLD",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_B",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793993600,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 1,
+            "source_id": "SOURCE_B",
+            "transaction_id": 1
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "c": {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "process_id": "WITNESS_PATH_C",
+          "registry_version": "V2-NORMAL-1",
+          "relation_code": 5,
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        }
+      }
+    ],
+    "external_false_accept": false,
+    "fresh_identity": true,
+    "incumbent_retained": true,
+    "inner_metric_delta": {
+      "candidate_replacements": 0,
+      "clean_authorizations": 0,
+      "commits": 1,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 1,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "inner_metrics": {
+      "candidate_replacements": 0,
+      "clean_authorizations": 0,
+      "commits": 1,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 1,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "integrity_errors": [],
+    "map_quarantine": [],
+    "memory_quarantine": [],
+    "old_records_preserved": true,
+    "original_frozen_event": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 1
+    },
+    "package_metrics": {
+      "ab_common_mode_attempts": 0,
+      "ab_common_mode_blocks": 0,
+      "ab_disagreements": 0,
+      "abc_common_mode_false_accepts": 0,
+      "candidate_derived_rejections": 0,
+      "duplicate_witness_rejections": 0,
+      "package_authorizations": 1,
+      "persistent_disagreement_rejections": 0,
+      "process_identity_rejections": 0,
+      "process_separation_rejections": 0,
+      "registry_corruption_false_accepts": 0,
+      "reobservations": 0,
+      "stale_provenance_rejections": 0,
+      "successful_transient_recoveries": 0,
+      "witness_disagreements": 0
+    },
+    "package_trace": [
+      [
+        1001,
+        1,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        1,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        1,
+        "staged_witness"
+      ],
+      [
+        1001,
+        1,
+        "PROCESS_VALIDATED"
+      ]
+    ],
+    "prediction_after": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 1
+    },
+    "prediction_at_begin": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 1
+    },
+    "prediction_latch_unchanged": true,
+    "prediction_matches_actual": true,
+    "recovery_authorized": false,
+    "regime": "OLD",
+    "trace": [
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 1
+      }
+    ]
+  },
+  {
+    "action": "ADVANCE",
+    "actual_event": {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "epoch": 1001,
+      "next_state": 2,
+      "pre_state": 1,
+      "transaction_id": 2
+    },
+    "after": {
+      "commits": 2,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ],
+        [
+          1001,
+          2,
+          4299262263808
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 2,
+        "valid": true,
+        "version": 2
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "authorization": "AUTHORIZED",
+          "consequence": -1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 2
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "package_id": 1100611139535043,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "channel_sequence": 0,
+          "consequence": -1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 2
+        }
+      ]
+    },
+    "authorization": {
+      "action": "ADVANCE",
+      "committed": true,
+      "continued": true,
+      "executed": true,
+      "incumbent_retained": false,
+      "needs_reobservation": false,
+      "reason": "authorized",
+      "recovery_authorized": false,
+      "status": "AUTHORIZED",
+      "transaction_id": 2
+    },
+    "before": {
+      "commits": 1,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 1
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        }
+      ]
+    },
+    "bounds": {
+      "map_quarantine": 0,
+      "memory": 2,
+      "memory_quarantine": 0,
+      "package_trace": 8,
+      "packages": 2,
+      "pairs": 2,
+      "staged": 0,
+      "trace": 6
+    },
+    "declared_process_separation": true,
+    "evidence_matches_actual": true,
+    "evidence_rounds": [
+      {
+        "a": {
+          "evidence_role": "source_a",
+          "process_id": "OBSERVATION_PATH_A",
+          "receipt": {
+            "action": "ADVANCE",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_A",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793993728,
+            "observed_consequence": -1,
+            "observed_next_state": 2,
+            "pre_state": 1,
+            "source_id": "SOURCE_A",
+            "transaction_id": 2
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "b": {
+          "evidence_role": "source_b",
+          "process_id": "OBSERVATION_PATH_B",
+          "receipt": {
+            "action": "ADVANCE",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_B",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793993856,
+            "observed_consequence": -1,
+            "observed_next_state": 2,
+            "pre_state": 1,
+            "source_id": "SOURCE_B",
+            "transaction_id": 2
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "c": {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "process_id": "WITNESS_PATH_C",
+          "registry_version": "V2-NORMAL-1",
+          "relation_code": 6,
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        }
+      }
+    ],
+    "external_false_accept": false,
+    "fresh_identity": true,
+    "incumbent_retained": false,
+    "inner_metric_delta": {
+      "candidate_replacements": 1,
+      "clean_authorizations": 0,
+      "commits": 1,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 0,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "inner_metrics": {
+      "candidate_replacements": 1,
+      "clean_authorizations": 0,
+      "commits": 2,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 1,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "integrity_errors": [],
+    "map_quarantine": [],
+    "memory_quarantine": [],
+    "old_records_preserved": true,
+    "original_frozen_event": {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "epoch": 1001,
+      "next_state": 2,
+      "pre_state": 1,
+      "transaction_id": 2
+    },
+    "package_metrics": {
+      "ab_common_mode_attempts": 0,
+      "ab_common_mode_blocks": 0,
+      "ab_disagreements": 0,
+      "abc_common_mode_false_accepts": 0,
+      "candidate_derived_rejections": 0,
+      "duplicate_witness_rejections": 0,
+      "package_authorizations": 2,
+      "persistent_disagreement_rejections": 0,
+      "process_identity_rejections": 0,
+      "process_separation_rejections": 0,
+      "registry_corruption_false_accepts": 0,
+      "reobservations": 0,
+      "stale_provenance_rejections": 0,
+      "successful_transient_recoveries": 0,
+      "witness_disagreements": 0
+    },
+    "package_trace": [
+      [
+        1001,
+        1,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        1,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        1,
+        "staged_witness"
+      ],
+      [
+        1001,
+        1,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        2,
+        "staged_witness"
+      ],
+      [
+        1001,
+        2,
+        "PROCESS_VALIDATED"
+      ]
+    ],
+    "prediction_after": {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "epoch": 1001,
+      "next_state": 2,
+      "pre_state": 1,
+      "transaction_id": 2
+    },
+    "prediction_at_begin": {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "epoch": 1001,
+      "next_state": 2,
+      "pre_state": 1,
+      "transaction_id": 2
+    },
+    "prediction_latch_unchanged": true,
+    "prediction_matches_actual": true,
+    "recovery_authorized": false,
+    "regime": "OLD",
+    "trace": [
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      }
+    ]
+  },
+  {
+    "action": "RETREAT",
+    "actual_event": {
+      "action": "RETREAT",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 2,
+      "transaction_id": 3
+    },
+    "after": {
+      "commits": 3,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ],
+        [
+          1001,
+          2,
+          4299262263808
+        ],
+        [
+          1001,
+          3,
+          4299262264064
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 3
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "authorization": "AUTHORIZED",
+          "consequence": -1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 3
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "package_id": 1100611139535043,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "package_id": 1100611139600579,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 3,
+          "witness_id": 16793994048
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "channel_sequence": 0,
+          "consequence": -1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 3
+        }
+      ]
+    },
+    "authorization": {
+      "action": "RETREAT",
+      "committed": true,
+      "continued": true,
+      "executed": true,
+      "incumbent_retained": false,
+      "needs_reobservation": false,
+      "reason": "authorized",
+      "recovery_authorized": false,
+      "status": "AUTHORIZED",
+      "transaction_id": 3
+    },
+    "before": {
+      "commits": 2,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ],
+        [
+          1001,
+          2,
+          4299262263808
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 2,
+        "valid": true,
+        "version": 2
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "authorization": "AUTHORIZED",
+          "consequence": -1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 2
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "package_id": 1100611139535043,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "channel_sequence": 0,
+          "consequence": -1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 2
+        }
+      ]
+    },
+    "bounds": {
+      "map_quarantine": 0,
+      "memory": 3,
+      "memory_quarantine": 0,
+      "package_trace": 12,
+      "packages": 3,
+      "pairs": 3,
+      "staged": 0,
+      "trace": 9
+    },
+    "declared_process_separation": true,
+    "evidence_matches_actual": true,
+    "evidence_rounds": [
+      {
+        "a": {
+          "evidence_role": "source_a",
+          "process_id": "OBSERVATION_PATH_A",
+          "receipt": {
+            "action": "RETREAT",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_A",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793993984,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 2,
+            "source_id": "SOURCE_A",
+            "transaction_id": 3
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "b": {
+          "evidence_role": "source_b",
+          "process_id": "OBSERVATION_PATH_B",
+          "receipt": {
+            "action": "RETREAT",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_B",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793994112,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 2,
+            "source_id": "SOURCE_B",
+            "transaction_id": 3
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "c": {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "process_id": "WITNESS_PATH_C",
+          "registry_version": "V2-NORMAL-1",
+          "relation_code": 5,
+          "transaction_id": 3,
+          "witness_id": 16793994048
+        }
+      }
+    ],
+    "external_false_accept": false,
+    "fresh_identity": true,
+    "incumbent_retained": false,
+    "inner_metric_delta": {
+      "candidate_replacements": 1,
+      "clean_authorizations": 0,
+      "commits": 1,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 0,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "inner_metrics": {
+      "candidate_replacements": 2,
+      "clean_authorizations": 0,
+      "commits": 3,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 1,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "integrity_errors": [],
+    "map_quarantine": [],
+    "memory_quarantine": [],
+    "old_records_preserved": true,
+    "original_frozen_event": {
+      "action": "RETREAT",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 2,
+      "transaction_id": 3
+    },
+    "package_metrics": {
+      "ab_common_mode_attempts": 0,
+      "ab_common_mode_blocks": 0,
+      "ab_disagreements": 0,
+      "abc_common_mode_false_accepts": 0,
+      "candidate_derived_rejections": 0,
+      "duplicate_witness_rejections": 0,
+      "package_authorizations": 3,
+      "persistent_disagreement_rejections": 0,
+      "process_identity_rejections": 0,
+      "process_separation_rejections": 0,
+      "registry_corruption_false_accepts": 0,
+      "reobservations": 0,
+      "stale_provenance_rejections": 0,
+      "successful_transient_recoveries": 0,
+      "witness_disagreements": 0
+    },
+    "package_trace": [
+      [
+        1001,
+        1,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        1,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        1,
+        "staged_witness"
+      ],
+      [
+        1001,
+        1,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        2,
+        "staged_witness"
+      ],
+      [
+        1001,
+        2,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        3,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        3,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        3,
+        "staged_witness"
+      ],
+      [
+        1001,
+        3,
+        "PROCESS_VALIDATED"
+      ]
+    ],
+    "prediction_after": {
+      "action": "RETREAT",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 2,
+      "transaction_id": 3
+    },
+    "prediction_at_begin": {
+      "action": "RETREAT",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 2,
+      "transaction_id": 3
+    },
+    "prediction_latch_unchanged": true,
+    "prediction_matches_actual": true,
+    "recovery_authorized": false,
+    "regime": "OLD",
+    "trace": [
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 3
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 3
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      }
+    ]
+  },
+  {
+    "action": "HOLD",
+    "actual_event": {
+      "action": "HOLD",
+      "consequence": -1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 4
+    },
+    "after": {
+      "commits": 4,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ],
+        [
+          1001,
+          2,
+          4299262263808
+        ],
+        [
+          1001,
+          3,
+          4299262264064
+        ],
+        [
+          1001,
+          4,
+          4299262264320
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 4
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "authorization": "AUTHORIZED",
+          "consequence": -1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 3
+        },
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793994240,
+          "observation_b_id": 16793994368,
+          "pair_decision_id": 4299262264320,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 4
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "package_id": 1100611139535043,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "package_id": 1100611139600579,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 3,
+          "witness_id": 16793994048
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793994240,
+          "observation_b_id": 16793994368,
+          "package_id": 1100611139666115,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 4,
+          "witness_id": 16793994304
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "channel_sequence": 0,
+          "consequence": -1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 3
+        },
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793994240,
+          "observation_b_id": 16793994368,
+          "pair_decision_id": 4299262264320,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 4
+        }
+      ]
+    },
+    "authorization": {
+      "action": "HOLD",
+      "committed": true,
+      "continued": true,
+      "executed": true,
+      "incumbent_retained": true,
+      "needs_reobservation": false,
+      "reason": "authorized",
+      "recovery_authorized": false,
+      "status": "AUTHORIZED",
+      "transaction_id": 4
+    },
+    "before": {
+      "commits": 3,
+      "ledger": [
+        [
+          1001,
+          1,
+          4299262263552
+        ],
+        [
+          1001,
+          2,
+          4299262263808
+        ],
+        [
+          1001,
+          3,
+          4299262264064
+        ]
+      ],
+      "map": {
+        "epoch": 1001,
+        "state": 1,
+        "valid": true,
+        "version": 3
+      },
+      "memory": [
+        {
+          "action": "HOLD",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "authorization": "AUTHORIZED",
+          "consequence": -1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "authorization": "AUTHORIZED",
+          "consequence": 1,
+          "epoch": 1001,
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_pair": [
+            "SOURCE_A",
+            "SOURCE_B"
+          ],
+          "transaction_id": 3
+        }
+      ],
+      "packages": [
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "package_id": 1100611139469507,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 1,
+          "witness_id": 16793993536
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "package_id": 1100611139535043,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 2,
+          "witness_id": 16793993792
+        },
+        {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "package_id": 1100611139600579,
+          "process_ids": [
+            "OBSERVATION_PATH_A",
+            "OBSERVATION_PATH_B",
+            "WITNESS_PATH_C"
+          ],
+          "registry_version": "V2-NORMAL-1",
+          "transaction_id": 3,
+          "witness_id": 16793994048
+        }
+      ],
+      "pairs": [
+        {
+          "action": "HOLD",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993472,
+          "observation_b_id": 16793993600,
+          "pair_decision_id": 4299262263552,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 1
+        },
+        {
+          "action": "ADVANCE",
+          "channel_sequence": 0,
+          "consequence": -1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 2,
+          "observation_a_id": 16793993728,
+          "observation_b_id": 16793993856,
+          "pair_decision_id": 4299262263808,
+          "pre_state": 1,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 2
+        },
+        {
+          "action": "RETREAT",
+          "channel_sequence": 0,
+          "consequence": 1,
+          "domain_a": "OBSERVATION_A",
+          "domain_b": "OBSERVATION_B",
+          "epoch": 1001,
+          "lineage_a": "EXTERNAL_OBSERVATION",
+          "lineage_b": "EXTERNAL_OBSERVATION",
+          "measurement_matches": true,
+          "next_state": 1,
+          "observation_a_id": 16793993984,
+          "observation_b_id": 16793994112,
+          "pair_decision_id": 4299262264064,
+          "pre_state": 2,
+          "source_a": "SOURCE_A",
+          "source_b": "SOURCE_B",
+          "transaction_id": 3
+        }
+      ]
+    },
+    "bounds": {
+      "map_quarantine": 0,
+      "memory": 4,
+      "memory_quarantine": 0,
+      "package_trace": 16,
+      "packages": 4,
+      "pairs": 4,
+      "staged": 0,
+      "trace": 12
+    },
+    "declared_process_separation": true,
+    "evidence_matches_actual": false,
+    "evidence_rounds": [
+      {
+        "a": {
+          "evidence_role": "source_a",
+          "process_id": "OBSERVATION_PATH_A",
+          "receipt": {
+            "action": "HOLD",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_A",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793994240,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 1,
+            "source_id": "SOURCE_A",
+            "transaction_id": 4
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "b": {
+          "evidence_role": "source_b",
+          "process_id": "OBSERVATION_PATH_B",
+          "receipt": {
+            "action": "HOLD",
+            "channel_sequence": 0,
+            "epoch": 1001,
+            "fault_domain": "OBSERVATION_B",
+            "lineage_class": "EXTERNAL_OBSERVATION",
+            "observation_id": 16793994368,
+            "observed_consequence": 1,
+            "observed_next_state": 1,
+            "pre_state": 1,
+            "source_id": "SOURCE_B",
+            "transaction_id": 4
+          },
+          "registry_version": "V2-NORMAL-1"
+        },
+        "c": {
+          "channel_sequence": 0,
+          "epoch": 1001,
+          "process_id": "WITNESS_PATH_C",
+          "registry_version": "V2-NORMAL-1",
+          "relation_code": 5,
+          "transaction_id": 4,
+          "witness_id": 16793994304
+        }
+      }
+    ],
+    "external_false_accept": true,
+    "fresh_identity": true,
+    "incumbent_retained": true,
+    "inner_metric_delta": {
+      "candidate_replacements": 0,
+      "clean_authorizations": 0,
+      "commits": 1,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 1,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "inner_metrics": {
+      "candidate_replacements": 2,
+      "clean_authorizations": 0,
+      "commits": 4,
+      "common_mode_false_accepts": 0,
+      "common_mode_pair_false_confidence": 0,
+      "derived_source_rejections": 0,
+      "duplicate_authorizations": 0,
+      "false_accepts": 0,
+      "false_rejects": 0,
+      "incumbents_quarantined": 0,
+      "incumbents_retained": 2,
+      "invalid_recovery_rejections": 0,
+      "measurement_corruptions_detected": 0,
+      "memory_behavior_changes": 0,
+      "memory_corruptions_detected": 0,
+      "persistent_disagreement_rejections": 0,
+      "provenance_rejections": 0,
+      "reobservations": 0,
+      "safe_rejections": 0,
+      "shared_ancestor_rejections": 0,
+      "single_source_disagreements": 0,
+      "source_identity_rejections": 0,
+      "successful_reobservation_recoveries": 0
+    },
+    "integrity_errors": [
+      "committed_memory_disagrees_with_actual_event",
+      "frozen_evidence_does_not_authenticate_actual_consequence"
+    ],
+    "map_quarantine": [],
+    "memory_quarantine": [],
+    "old_records_preserved": true,
+    "original_frozen_event": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 4
+    },
+    "package_metrics": {
+      "ab_common_mode_attempts": 0,
+      "ab_common_mode_blocks": 0,
+      "ab_disagreements": 0,
+      "abc_common_mode_false_accepts": 0,
+      "candidate_derived_rejections": 0,
+      "duplicate_witness_rejections": 0,
+      "package_authorizations": 4,
+      "persistent_disagreement_rejections": 0,
+      "process_identity_rejections": 0,
+      "process_separation_rejections": 0,
+      "registry_corruption_false_accepts": 0,
+      "reobservations": 0,
+      "stale_provenance_rejections": 0,
+      "successful_transient_recoveries": 0,
+      "witness_disagreements": 0
+    },
+    "package_trace": [
+      [
+        1001,
+        1,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        1,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        1,
+        "staged_witness"
+      ],
+      [
+        1001,
+        1,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        2,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        2,
+        "staged_witness"
+      ],
+      [
+        1001,
+        2,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        3,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        3,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        3,
+        "staged_witness"
+      ],
+      [
+        1001,
+        3,
+        "PROCESS_VALIDATED"
+      ],
+      [
+        1001,
+        4,
+        "staged_source_a"
+      ],
+      [
+        1001,
+        4,
+        "staged_source_b"
+      ],
+      [
+        1001,
+        4,
+        "staged_witness"
+      ],
+      [
+        1001,
+        4,
+        "PROCESS_VALIDATED"
+      ]
+    ],
+    "prediction_after": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 4
+    },
+    "prediction_at_begin": {
+      "action": "HOLD",
+      "consequence": 1,
+      "epoch": 1001,
+      "next_state": 1,
+      "pre_state": 1,
+      "transaction_id": 4
+    },
+    "prediction_latch_unchanged": true,
+    "prediction_matches_actual": false,
+    "recovery_authorized": false,
+    "regime": "NEW",
+    "trace": [
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 1
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 2
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 3
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 3
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 3
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "action authorized for execution",
+        "status": "PROPOSED",
+        "transaction_id": 4
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "receipt A staged; no commit",
+        "status": "OBSERVED_PARTIAL",
+        "transaction_id": 4
+      },
+      {
+        "channel_sequence": 0,
+        "epoch": 1001,
+        "reason": "paired transaction committed",
+        "status": "AUTHORIZED",
+        "transaction_id": 4
+      }
+    ]
+  }
+]

@@ -1,0 +1,265 @@
+{
+  "actual_model_calls": 0,
+  "exact_replay": {
+    "actual_model_calls": 0,
+    "byte_identical_files": [
+      "results.json",
+      "details.json"
+    ],
+    "passed": true
+  },
+  "historical_preservation": {
+    "actual_model_calls": 0,
+    "executions": [
+      {
+        "actual_model_calls": 0,
+        "check": "grounding-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.realized_event_grounding_v0.run",
+          "--replay",
+          "$GROUNDING_V0",
+          "--output",
+          "$CHECKS/grounding-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:44.555933+00:00",
+        "log_sha256": "d4634833eeb699983aef6fd8cbb91478913aff9378f4b325226c8edf6dd6c824",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:44.371485+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "init-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_initialization_boundary_v1.run",
+          "--replay",
+          "$INIT_V1",
+          "--output",
+          "$CHECKS/init-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:44.654806+00:00",
+        "log_sha256": "6cad5eae200320d80b437943dcf925a4b759ea177dcab462e32b1c5497ba5b95",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:44.371657+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "transfer-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_model_transfer_v0.run",
+          "--replay",
+          "$TRANSFER_V0",
+          "--output",
+          "$CHECKS/transfer-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:48.351993+00:00",
+        "log_sha256": "3b26b3cb2bb993da85b3d4e6b2ac504d3e5156fbe156e557d1112c9e40a27df9",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:44.372465+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "ablation-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.composition_map_memory_ablation_v0.run",
+          "--source",
+          "$R1_EVIDENCE",
+          "--replay",
+          "$ABLATION_LIVE",
+          "--output",
+          "$CHECKS/ablation-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:49.304207+00:00",
+        "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:44.556490+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "r1-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+          "--replay",
+          "$R1_EVIDENCE",
+          "--baseline",
+          "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+          "--output",
+          "$CHECKS/r1-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:55.833548+00:00",
+        "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:44.654971+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "depth-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_map_history_depth_v1.run",
+          "--replay",
+          "$DEPTH_V1",
+          "--output",
+          "$CHECKS/depth-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:51.494435+00:00",
+        "log_sha256": "23127725173d2e248fed3b754362a139d34045b79e67597afd50b95bab492b3a",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:48.352199+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "historical-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_map_history_depth_v1.test_study",
+          "experiments.cross_episode_initialization_boundary_v1.test_boundary",
+          "experiments.cross_episode_model_transfer_v0.test_study",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+          "experiments.composition_input_bindings_v1.test_bindings",
+          "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+          "experiments.state_recovery_proposal_interface_v1.test_interface",
+          "experiments.realized_event_grounding_v0.test_grounding",
+          "experiments.model_proposal_role_composition_v2.test_study",
+          "experiments.model_map_proposal_v0.test_study",
+          "experiments.model_map_established_prior_revision_v1.test_study",
+          "-v"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T09:32:56.322576+00:00",
+        "log_sha256": "8d546b028c880b776e925932b380e2c1630834fc8345911639dcd25c716f8494",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T09:32:49.304403+00:00",
+        "tests": 67
+      }
+    ],
+    "inherited_substantive_files_byte_identical": 549,
+    "main_tags_prior_refs_unchanged": true,
+    "passed": true,
+    "prior_decisions": {
+      "composition_empty_history_schema_contract_v0": "SCHEMA-CONTRACT EFFECT SUPPORTED",
+      "composition_map_memory_ablation_v0": "AUTHENTIC-HISTORY MAP EFFECT SUPPORTED",
+      "cross_episode_authenticated_memory_boundary_v0": "C \u2014 NOT ESTABLISHED",
+      "cross_episode_initialization_boundary_v1": "A \u2014 CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE",
+      "cross_episode_map_history_depth_v1": "TWO-OBSERVATION CROSS-EPISODE MAP EFFECT SUPPORTED",
+      "cross_episode_model_transfer_v0": "CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED",
+      "model_proposal_role_composition_v2_replacement_r1": "A \u2014 MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS"
+    },
+    "private_archive_checksums": {
+      "R1": 288,
+      "ablation": 105,
+      "boundary_v0": 82,
+      "depth_v1": 163,
+      "initialization_v1": 88,
+      "map_prior_v1": 114,
+      "transfer_v0": 140
+    }
+  },
+  "independent_audit": {
+    "Map_versions_equal_across_arms": true,
+    "actual_model_calls": 0,
+    "all_campaign_authorized_commits": 30,
+    "current_state_all_stages": 0,
+    "exact_replay_files": 2,
+    "law_scope_checks": 12,
+    "mappings_per_stage": 12,
+    "maxima": {
+      "memory": 8,
+      "packages": 8,
+      "pairs": 8,
+      "trace": 24
+    },
+    "native_Recovery_value": 1,
+    "native_state_Recovery_calls": {
+      "CHANGED": 2,
+      "CONTROL": 0
+    },
+    "negative_controls_rejected": 4,
+    "negative_fixture_receipts": 16,
+    "network_attempts": 0,
+    "old_target_retention_through_P2": true,
+    "passed": true,
+    "primary_commits": 14,
+    "primary_plus_fifo_receipts": 18,
+    "projection_stages": 6,
+    "protected_false_accepts": 0,
+    "receipt_prediction_history_rewrites": 0,
+    "saved_provenance_bindings_checked": 88,
+    "script_sha256": "97a1f47ada9ffde8d30348f0587208f02fb58c5e115aab0e24e7fd4bf9828cae",
+    "trace_snapshots_equal_across_arms": true
+  },
+  "network_forbidden": true,
+  "new_executions": [
+    {
+      "actual_model_calls": 0,
+      "check": "new-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "experiments.cross_episode_stale_memory_feasibility_v0.test_fixture",
+        "-v"
+      ],
+      "exit_code": 0,
+      "finished_utc": "2026-09-20T09:31:57.614431+00:00",
+      "log_sha256": "a186060c9bcee47b27004c3e7e9d1f2fcfb6737ec6880c79fa1def236cc35950",
+      "network_forbidden": true,
+      "started_utc": "2026-09-20T09:31:55.558953+00:00"
+    },
+    {
+      "actual_model_calls": 0,
+      "check": "campaign",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.cross_episode_stale_memory_feasibility_v0.run",
+        "--output",
+        "$STALE_ARCHIVE/campaign"
+      ],
+      "exit_code": 0,
+      "finished_utc": "2026-09-20T09:31:58.615593+00:00",
+      "log_sha256": "4da85d7ffe38d557bfdb4fde80c0d9c3f0b82e83fbe05a0f446f913d17ceaba2",
+      "network_forbidden": true,
+      "started_utc": "2026-09-20T09:31:57.623577+00:00"
+    },
+    {
+      "actual_model_calls": 0,
+      "check": "replay",
+      "command": [
+        "python3",
+        "-m",
+        "experiments.cross_episode_stale_memory_feasibility_v0.run",
+        "--replay",
+        "$STALE_ARCHIVE/campaign",
+        "--output",
+        "$STALE_ARCHIVE/replay"
+      ],
+      "exit_code": 0,
+      "finished_utc": "2026-09-20T09:31:59.627477+00:00",
+      "log_sha256": "731b7543faf5abb073660e66269786d706a0f77d04363cc3a71e319c6a4b3c96",
+      "network_forbidden": true,
+      "started_utc": "2026-09-20T09:31:58.624313+00:00"
+    }
+  ],
+  "new_tests": 6,
+  "passed": true,
+  "preregistration_commit": "2338e1ac32893772a35a702e458da5fd7b955259"
+}

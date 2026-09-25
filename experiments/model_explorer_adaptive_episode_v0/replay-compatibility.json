@@ -1,0 +1,14 @@
+{
+  "reason": "Post-inference replay-only serialization fix: compare persisted JSON summaries in JSON form instead of comparing decoded lists against in-memory Python tuples. No model calls, behavior, metrics, thresholds, or original evidence changed.",
+  "inference_implementation_commit": "d042759",
+  "source_changes": {
+    "experiments/model_explorer_adaptive_episode_v0/run.py": {
+      "inference_sha256": "9f0ca84e15d7b736c16507894cab43b11095f3af25a1ce4534882115efae851d",
+      "replay_sha256": "f225642230055681c58f21decedc69d519d2f2290c7a226a32e49d7c84fd6f78"
+    },
+    "experiments/model_explorer_adaptive_episode_v0/test_study.py": {
+      "inference_sha256": "aa3925627478fda5b076df4f1590fc3bbbead2dd905aef044bf7141095e7b0a0",
+      "replay_sha256": "d02deb9bff958c0f6db2414bec915a3273bbfd0b7614be00581c455d1f4c0a74"
+    }
+  }
+}
