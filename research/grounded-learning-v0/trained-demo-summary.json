@@ -1,0 +1,323 @@
+{
+  "actual_model_calls": 36,
+  "authorized_steps": 6,
+  "consequence_model": "horus-consequence-v0.2:45a70d5f78aa98540ac00ca7e86a04155dd6a4c482a5f7d5dc6db25ed9f9c8fe",
+  "session_id": "041ef453419b4c15c97a9e20dde60a7a",
+  "status": "VERIFIED",
+  "steps": [
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "f692698af5c0edd367a67fc3d1105d8e6d85d5cf6cfa022917d8c9e6d03c478a",
+      "epoch": 2001,
+      "explorer": {
+        "action": "HOLD",
+        "reason": "UNIQUE_MAXIMUM"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 0,
+        "RETREAT": 0
+      },
+      "input_context_hash": "60c78faf87edf242db062174d6a6369e3c2ce38cbf41b67ee6d990ca8a71961e",
+      "prediction_match": {
+        "consequence": true,
+        "exact": true,
+        "next_state": true
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 2001,
+        "event_id": 1,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 1
+      },
+      "state": 1,
+      "step": 1,
+      "transaction_id": 1
+    },
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "b965c92c838b9617bc81b19b18e339b1b40e9c6745ff6e4dd2055b4e04605289",
+      "epoch": 2001,
+      "explorer": {
+        "action": "ADVANCE",
+        "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 1,
+        "RETREAT": 0
+      },
+      "input_context_hash": "c918174b82cd7dddb4acfae9540e1f838826c6df1830c91ad1bde3244bb3edf0",
+      "prediction_match": {
+        "consequence": false,
+        "exact": false,
+        "next_state": false
+      },
+      "receipt": {
+        "action": "ADVANCE",
+        "epoch": 2001,
+        "event_id": 2,
+        "next_state": 2,
+        "pre_state": 1,
+        "realized_consequence": -1,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 2
+      },
+      "state": 1,
+      "step": 2,
+      "transaction_id": 2
+    },
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "1e102a8ee3238fd149bdf87824ff6ea5b9328e1f44bde5d3fca7a121703e0154",
+      "epoch": 2001,
+      "explorer": {
+        "action": "HOLD",
+        "reason": "UNIQUE_MAXIMUM"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 3
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 0,
+        "RETREAT": 0
+      },
+      "input_context_hash": "17a665e05fc6b87d7c198ae087360f23b152bc6390745d6b147af69163a2c559",
+      "prediction_match": {
+        "consequence": false,
+        "exact": false,
+        "next_state": false
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 2001,
+        "event_id": 3,
+        "next_state": 2,
+        "pre_state": 2,
+        "realized_consequence": 0,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 3
+      },
+      "state": 2,
+      "step": 3,
+      "transaction_id": 3
+    },
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "029a05a89dc6caaae4e178e6f64474d1ab02909870e2321db8d96b8da132423c",
+      "epoch": 2001,
+      "explorer": {
+        "action": "HOLD",
+        "reason": "UNIQUE_MAXIMUM"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 3
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 1,
+        "RETREAT": 0
+      },
+      "input_context_hash": "d54dfac848e6cf179aa9b601be2b8b112c7d84d024097e305a0b354345701af2",
+      "prediction_match": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 2001,
+        "event_id": 4,
+        "next_state": 2,
+        "pre_state": 2,
+        "realized_consequence": 0,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 4
+      },
+      "state": 2,
+      "step": 4,
+      "transaction_id": 4
+    },
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "953a34cbd7f2b1adb205cf8378a0ca5cfca809dfdf571252a0c55f28d9c4d216",
+      "epoch": 2001,
+      "explorer": {
+        "action": "HOLD",
+        "reason": "UNIQUE_MAXIMUM"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 3
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 2,
+        "RETREAT": 0
+      },
+      "input_context_hash": "db71172484f8cd75a88d91fb7cde564b6e72f3259c6100e06be1b2f0bfea3049",
+      "prediction_match": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 2001,
+        "event_id": 5,
+        "next_state": 2,
+        "pre_state": 2,
+        "realized_consequence": 0,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 5
+      },
+      "state": 2,
+      "step": 5,
+      "transaction_id": 5
+    },
+    {
+      "authorization": "AUTHORIZED",
+      "consequence_request_sha256": "fc6e15ad55e6368d911bab365320f754af51db914ee04e874f42f3c734ceb743",
+      "epoch": 2001,
+      "explorer": {
+        "action": "HOLD",
+        "reason": "UNIQUE_MAXIMUM"
+      },
+      "forecasts": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1
+        }
+      ],
+      "history_counts": {
+        "ADVANCE": 0,
+        "HOLD": 3,
+        "RETREAT": 0
+      },
+      "input_context_hash": "965fbb64a89c5cd703a67dc27100bf06917ec0f1f2a19cb5885f6bd4af358bcd",
+      "prediction_match": {
+        "consequence": false,
+        "exact": false,
+        "next_state": true
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 2001,
+        "event_id": 6,
+        "next_state": 2,
+        "pre_state": 2,
+        "realized_consequence": 0,
+        "source_identity": "HORUS:041ef453419b4c15c97a9e20dde60a7a:runtime:1:fa29a22380e87bb3",
+        "transaction_id": 6
+      },
+      "state": 2,
+      "step": 6,
+      "transaction_id": 6
+    }
+  ],
+  "stream_heads": {
+    "calls": {
+      "count": 108,
+      "head_sha256": "883872a36bd4b7d8ba492949601e9d6cb6a0f952271b69126b714c8534582cf6"
+    },
+    "events": {
+      "count": 6,
+      "head_sha256": "be7c9c566f2e2cad2132fb21109db8e043aa30215048f1c968fd39d8a2826ea2"
+    },
+    "training": {
+      "count": 6,
+      "head_sha256": "1f8e1eecca6b2a65042309c96d93e0d401319dc7403dfcaf6cfe621239803e17"
+    }
+  }
+}

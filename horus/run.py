@@ -68,6 +68,11 @@ def main(argv=None):
     parser.add_argument("--steps", type=int, default=1)
     parser.add_argument("--session", type=Path)
     parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--consequence-model", choices=("mixtral", "base", "trained"),
+                        default="mixtral")
+    parser.add_argument("--trained-adapter", type=Path)
+    parser.add_argument("--consequence-base-model", type=Path,
+                        help="optional local directory for the pinned Qwen base snapshot")
     args = parser.parse_args(argv)
     if args.live:
         if args.session is None:
@@ -75,7 +80,18 @@ def main(argv=None):
         if args.resume and not args.live:
             parser.error("--resume requires --live")
         from .live import run_live
-        artifact = run_live(args.session, args.steps, args.resume)
+        consequence_client = None
+        if args.consequence_model != "mixtral":
+            from .grounded_learning import QwenConsequenceClient, default_adapter_path
+            adapter = None
+            if args.consequence_model == "trained":
+                adapter = args.trained_adapter or default_adapter_path()
+                if not adapter.exists():
+                    parser.error(f"trained adapter does not exist: {adapter}")
+            consequence_client = QwenConsequenceClient(
+                adapter_path=adapter, model_path=args.consequence_base_model)
+        artifact = run_live(args.session, args.steps, args.resume,
+                            consequence_client=consequence_client)
         render_live(artifact)
         return
     if args.resume or args.session is not None:

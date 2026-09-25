@@ -1,0 +1,19 @@
+{
+  "adapter_alpha": 16,
+  "adapter_dropout": 0.05,
+  "adapter_rank": 8,
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "batch_size": 2,
+  "epochs": 5,
+  "gradient_accumulation": 2,
+  "learning_rate": 0.0002,
+  "max_length": 512,
+  "optimizer": "AdamW",
+  "seed": 20260925,
+  "target_modules": [
+    "q_proj",
+    "v_proj"
+  ],
+  "weight_decay": 0.01
+}

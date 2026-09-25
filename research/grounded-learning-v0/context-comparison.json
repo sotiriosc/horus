@@ -1,0 +1,52 @@
+{
+  "adapter_sha256": "45a70d5f78aa98540ac00ca7e86a04155dd6a4c482a5f7d5dc6db25ed9f9c8fe",
+  "authenticated_history": [],
+  "base_choice": {
+    "action": "ADVANCE",
+    "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+  },
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+  "decision_changed": true,
+  "executions": 0,
+  "forecasts": [
+    {
+      "action": "ADVANCE",
+      "alias": "K1",
+      "base_consequence": 1,
+      "base_raw": "{\"consequence\":1}",
+      "changed": true,
+      "request_sha256": "5ef13fbcca47f358c9e306cd5865fb5161bada985625550b739f3e58599a7d32",
+      "trained_consequence": 0,
+      "trained_raw": "{\"consequence\":0}"
+    },
+    {
+      "action": "HOLD",
+      "alias": "K2",
+      "base_consequence": 1,
+      "base_raw": "{\"consequence\":1}",
+      "changed": false,
+      "request_sha256": "106b9e6871ada737d89cf69e933bdbcfb1ecd146de9b1d28022141a1b74e3ab3",
+      "trained_consequence": 1,
+      "trained_raw": "{\"consequence\":1}"
+    },
+    {
+      "action": "RETREAT",
+      "alias": "K3",
+      "base_consequence": 1,
+      "base_raw": "{\"consequence\":1}",
+      "changed": true,
+      "request_sha256": "e6f995a3f8241ef064e38ef64ce8141c56aecc854d6006f153ddf19a180e0ff0",
+      "trained_consequence": 0,
+      "trained_raw": "{\"consequence\":0}"
+    }
+  ],
+  "memory_publications": 0,
+  "receipts": 0,
+  "state": 1,
+  "status": "FROZEN_PRE_EXECUTION_COMPARISON",
+  "trained_choice": {
+    "action": "HOLD",
+    "reason": "UNIQUE_MAXIMUM"
+  },
+  "trained_model": "horus-consequence-v0.2:45a70d5f78aa98540ac00ca7e86a04155dd6a4c482a5f7d5dc6db25ed9f9c8fe"
+}
