@@ -8,6 +8,22 @@ production-qualified processor or a general safety system.
 
 ## Current status
 
+**Restartable Horus v0.1:** `python -m horus.run --live --steps 4 --session
+/path/outside/the/repository` uses the established local joint Map model for
+`next_state`, a separately requested consequence-only response, and the
+unchanged grounded publication chain. Resume with the same command plus
+`--resume`. Each process gets a fresh source identity and framework epoch;
+signed prior outcomes enter model prompts only as imported proposal evidence.
+See [the live runtime and trust boundary](docs/HORUS_V0_1_LIVE.md).
+
+**Runnable Horus v0:** `python -m horus.run` now executes a grounded two-episode
+closed loop. An original receipt from episode 1 is authorized into Memory and
+changes episode 2's mechanical action selection. The application uses the
+existing joint Map path for next state, an independent authenticated-history
+consequence adapter, mechanical reconciliation and Explorer comparison, and the
+existing receipt/Measure/authorization/Recovery/Memory chain. See
+[the v0 architecture and limits](docs/HORUS_V0.md).
+
 **Implemented:** NFE-13 arithmetic, E4M3/E3M6 components, normalization,
 width-preserving MACs, tiles, routing, scale tracking, selected block
 detection/repair paths, reference models, and a fail-closed public test runner.
