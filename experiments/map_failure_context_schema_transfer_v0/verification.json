@@ -1,0 +1,91 @@
+{
+  "Explorer_model_calls": 0,
+  "Recovery_model_calls": 0,
+  "archive_paths_published": false,
+  "correction_scope": "request-hash byte source only: intent.exact_request_json",
+  "exact_replay_files": 7,
+  "exact_replay_snapshots": 22,
+  "frozen_finalizer_preserved": true,
+  "historical_context_numbers": [
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    10,
+    27,
+    30,
+    32,
+    33
+  ],
+  "historical_joint_request_hashes_reproduced": 11,
+  "live_archive_sha256": {
+    "campaign-state.json": "9f1396d95469272a32cee94faed07d2a90939274a6f04b7956b98e1f6a3123e0",
+    "contexts.jsonl": "c7e8b445922472aaa3611ff6e93052048b1b959fe10aee50169e52ec34acb610",
+    "journal.jsonl": "3eb8286dc6b9fbf6c627339a150a36da06f8d98a0fb415859bfad0eb9e7c459c",
+    "metadata.json": "3d6b5b1955ec030b99140bd6c972578441137372fc1e5652ceb8bc155eceb25d",
+    "metrics.json": "757271311ee51e9c5cfe64116ee80072cf32c7afa30a2ecb47283d348ebebf26",
+    "model-calls.jsonl": "484f07b55889eb0cf7ce75f94d75eb4cc0edadacda2e604837a542a9c117af30",
+    "steps.jsonl": "14d58abb8160c61ea36a03071a851227e4182363dfc4ff024edecf624118698b"
+  },
+  "no_probe_execution_or_publication_authority": true,
+  "parent": "9219d313f3fca720c99bf7af9876d35e52ed89b9",
+  "parent_files_preserved": 754,
+  "passed": true,
+  "post_inference_reporting_correction": true,
+  "preflight": {
+    "actual_model_calls": 0,
+    "byte_identical_replay": true,
+    "canaries": 22,
+    "changed_instruction_rejected": true,
+    "descriptive_summary_controls": 3,
+    "detached_output_variants": 16,
+    "durability_controls": 2,
+    "exact_historical_contexts": 11,
+    "frozen_inputs_sha256": "fbe295897f5e85268a08cdd0d56530b3f34f59afd364ace5292279eb80fbe376",
+    "historical_joint_request_hashes_reproduced": 11,
+    "invalid_probes_no_authority": true,
+    "matched_request_pairs": 11,
+    "parent": "9219d313f3fca720c99bf7af9876d35e52ed89b9",
+    "passed": true,
+    "strict_J_parser_rejections": 11,
+    "strict_S_parser_rejections": 20,
+    "synthetic_campaign_responses": 22,
+    "synthetic_replay_responses": 22,
+    "task_field_mismatch_rejected": true,
+    "world_executions": {
+      "canaries": 132,
+      "detachment_controls": 96,
+      "synthetic_campaign": 132,
+      "synthetic_replay": 132,
+      "total": 492
+    }
+  },
+  "raw_requests_published": false,
+  "real_model_calls": 22,
+  "registered_request_hashes": 22,
+  "registration_commit": "c84e9cafc968d131b24d28b4c5ad9b26d61596d4",
+  "replacement_calls": 0,
+  "replay_archive_sha256": {
+    "campaign-state.json": "9f1396d95469272a32cee94faed07d2a90939274a6f04b7956b98e1f6a3123e0",
+    "contexts.jsonl": "c7e8b445922472aaa3611ff6e93052048b1b959fe10aee50169e52ec34acb610",
+    "journal.jsonl": "3eb8286dc6b9fbf6c627339a150a36da06f8d98a0fb415859bfad0eb9e7c459c",
+    "metadata.json": "3d6b5b1955ec030b99140bd6c972578441137372fc1e5652ceb8bc155eceb25d",
+    "metrics.json": "757271311ee51e9c5cfe64116ee80072cf32c7afa30a2ecb47283d348ebebf26",
+    "model-calls.jsonl": "484f07b55889eb0cf7ce75f94d75eb4cc0edadacda2e604837a542a9c117af30",
+    "steps.jsonl": "14d58abb8160c61ea36a03071a851227e4182363dfc4ff024edecf624118698b"
+  },
+  "retries": 0,
+  "supplemental_unit_tests": [
+    {
+      "command": "python3 -m unittest experiments.map_explorer_oracle_decomposition_v0.test_study experiments.map_output_schema_isolation_v0.test_study",
+      "result": "COMMAND ERROR: second named module does not exist; seven decomposition tests passed before loader error"
+    },
+    {
+      "command": "python3 -m unittest experiments.map_explorer_oracle_decomposition_v0.test_study",
+      "result": "PASS",
+      "tests": 7
+    }
+  ]
+}
