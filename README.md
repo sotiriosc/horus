@@ -8,6 +8,15 @@ production-qualified processor or a general safety system.
 
 ## Current status
 
+**Grounded consequence learning v0.2:** the independent consequence role now
+has a checked-in rank-8 LoRA adapter trained only from 42 authorized realized
+receipts. A session-separated held-out set improved from 6/12 to 8/12, with
+four corrections and two regressions. A fresh-process reload and a six-step
+live run verify that the adapter participates in the unchanged authority path
+while authenticated Memory remains in later requests. See [the v0.2 design and
+reproduction guide](docs/HORUS_V0_2_GROUNDED_LEARNING.md) and [the complete
+result](research/grounded-learning-v0/RESULTS.md).
+
 **Restartable Horus v0.1:** `python -m horus.run --live --steps 4 --session
 /path/outside/the/repository` uses the established local joint Map model for
 `next_state`, a separately requested consequence-only response, and the

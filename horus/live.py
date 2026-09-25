@@ -220,6 +220,7 @@ class SessionStore:
     def append(self, name: str, kind: str, record: dict) -> dict:
         rows = self.records[name]
         previous = None if not rows else sha256(_canonical(rows[-1]).encode()).hexdigest()
+        record = {**record, "recorded_at": record.get("recorded_at", _now())}
         signed = dict(sequence=len(rows) + 1, previous_sha256=previous,
                       kind=kind, record=_plain(record))
         envelope = {**signed, "hmac_sha256": self._mac(signed)}
@@ -357,6 +358,7 @@ class DurableHistoryReader:
 
 class ModelClient:
     """One-attempt local model transport; callers durably register first."""
+    model_id = MODEL
     def __init__(self, endpoint: str = "http://127.0.0.1:11434"):
         self.endpoint = endpoint.rstrip("/")
         self.requests = 0
@@ -392,18 +394,22 @@ class ForecastEvidence:
 
 
 class LiveSplitMap:
-    def __init__(self, store: SessionStore, client: ModelClient):
-        self.store, self.client = store, client
+    def __init__(self, store: SessionStore, joint_client: ModelClient,
+                 consequence_client=None):
+        self.store, self.joint_client = store, joint_client
+        self.consequence_client = consequence_client or joint_client
 
-    def _request(self, system: str, prompt: str) -> dict:
-        return dict(model=MODEL, system=system, prompt=prompt, stream=False,
+    def _request(self, system: str, prompt: str, model: str) -> dict:
+        return dict(model=model, system=system, prompt=prompt, stream=False,
                     options=dict(OPTIONS["Map"]))
 
     def forecast(self, capture: dict, action: str, decision_id: str) -> ForecastEvidence:
         payload = capture["map_inputs"][action]
         prompt = _canonical(payload)
-        joint = self._request(JOINT_SYSTEM, prompt)
-        consequence = self._request(CONSEQUENCE_SYSTEM, prompt)
+        joint = self._request(JOINT_SYSTEM, prompt,
+                              getattr(self.joint_client, "model_id", MODEL))
+        consequence = self._request(CONSEQUENCE_SYSTEM, prompt,
+            getattr(self.consequence_client, "model_id", MODEL))
         pair_id = f"{decision_id}:{action}"
         # Both complete requests are frozen durably before either response exists.
         self.store.append("calls", "REQUEST_INTENT", dict(
@@ -412,10 +418,10 @@ class LiveSplitMap:
         self.store.append("calls", "REQUEST_INTENT", dict(
             call_id=pair_id + ":C", role="independent-consequence", request=consequence,
             request_sha256=digest(consequence), independent_of_joint_response=True))
-        jr = self.client.generate(joint)
+        jr = self.joint_client.generate(joint)
         self.store.append("calls", "RESPONSE", dict(call_id=pair_id + ":J", response=jr,
             response_sha256=digest(jr)))
-        cr = self.client.generate(consequence)
+        cr = self.consequence_client.generate(consequence)
         self.store.append("calls", "RESPONSE", dict(call_id=pair_id + ":C", response=cr,
             response_sha256=digest(cr)))
         jp = cp = None
@@ -460,14 +466,16 @@ class LiveSplitMap:
 
 
 class LiveRuntime:
-    def __init__(self, store: SessionStore, client: ModelClient):
+    def __init__(self, store: SessionStore, client: ModelClient,
+                 consequence_client=None):
         self.store, self.client = store, client
+        self.consequence_client = consequence_client or client
         epoch, source = store.begin_runtime()
         self.controller = LiveController(source, store.checkpoint["current_state"], epoch)
         self.authentic, self.executions = {}, {}
         self.reader = DurableHistoryReader(self.controller, store,
                                            self.authentic, self.executions)
-        self.map = LiveSplitMap(store, client)
+        self.map = LiveSplitMap(store, client, self.consequence_client)
         self.explorer = MechanicalExplorer()
 
     def step(self) -> dict:
@@ -545,6 +553,9 @@ class LiveRuntime:
             consequence_model_response=selected_evidence.consequence_parsed,
             consequence_raw_response_sha256=digest(selected_evidence.consequence_response),
             predicted_consequence=selected.consequence,
+            joint_request_sha256=selected_evidence.request_hashes["joint"],
+            consequence_request_sha256=
+                selected_evidence.request_hashes["consequence"],
             realized_next_state=receipt.next_state,
             realized_consequence=receipt.realized_consequence,
             prediction_match=dict(next_state=selected.next_state == receipt.next_state,
@@ -583,22 +594,31 @@ class LiveRuntime:
 
 
 def run_live(session: Path, steps: int, resume: bool,
-             client: ModelClient | None = None) -> dict:
+             client: ModelClient | None = None, consequence_client=None) -> dict:
     if type(steps) is not int or steps < 0:
         raise ValueError("steps must be a nonnegative integer")
     with SessionStore(session, resume) as store:
-        runtime = LiveRuntime(store, client or ModelClient())
+        joint = client or ModelClient()
+        consequence = consequence_client or joint
+        joint_before = joint.requests
+        consequence_before = consequence.requests
+        runtime = LiveRuntime(store, joint, consequence)
         rows = []
         for _ in range(steps):
             row = runtime.step()
             rows.append(row)
             if row["status"] == "ABSTAINED":
                 break
+        role_calls = sum(len(row["map_forecasts"]) for row in rows)
         return dict(mode="live", session_id=store.checkpoint["session_id"],
             session=str(store.directory), resumed=resume,
             runtime_index=store.checkpoint["runtime_index"],
             epoch=store.checkpoint["current_epoch"],
-            actual_model_calls=runtime.client.requests, steps=rows,
+            actual_model_calls=(joint.requests - joint_before +
+                (0 if consequence is joint else
+                 consequence.requests - consequence_before)),
+            joint_model_calls=role_calls, consequence_model_calls=role_calls,
+            consequence_model=getattr(consequence, "model_id", MODEL), steps=rows,
             checkpoint=_plain(store.checkpoint),
             trust_scope=("local HMAC-authenticated application checkpoint; fresh receipt "
                          "source/framework epoch on every process; no physical, hostile-host, "
