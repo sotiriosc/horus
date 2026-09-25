@@ -31,6 +31,11 @@ def render(artifact):
 def render_live(artifact):
     print(f"Horus live session: {artifact['session_id']}")
     print(f"Runtime {artifact['runtime_index']} / epoch {artifact['epoch']}")
+    if artifact.get("active_model"):
+        model = artifact["active_model"]
+        print(f"Consequence model generation: {model['generation']}")
+        print(f"Parent generation: {model['parent_generation']}")
+        print(f"Artifact hash: {model['artifact_sha256']}")
     for row in artifact["steps"]:
         print(f"\nStep {row['step']}")
         print("Prior authenticated observations used: " +
@@ -68,9 +73,11 @@ def main(argv=None):
     parser.add_argument("--steps", type=int, default=1)
     parser.add_argument("--session", type=Path)
     parser.add_argument("--resume", action="store_true")
-    parser.add_argument("--consequence-model", choices=("mixtral", "base", "trained"),
+    parser.add_argument("--consequence-model",
+                        choices=("mixtral", "base", "trained", "active"),
                         default="mixtral")
     parser.add_argument("--trained-adapter", type=Path)
+    parser.add_argument("--model-registry", type=Path)
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
     args = parser.parse_args(argv)
@@ -81,7 +88,13 @@ def main(argv=None):
             parser.error("--resume requires --live")
         from .live import run_live
         consequence_client = None
-        if args.consequence_model != "mixtral":
+        active_spec = None
+        if args.consequence_model == "active":
+            if args.model_registry is None:
+                parser.error("--consequence-model active requires --model-registry")
+            from .learning_cycle import active_client
+            consequence_client, active_spec = active_client(args.model_registry)
+        elif args.consequence_model != "mixtral":
             from .grounded_learning import QwenConsequenceClient, default_adapter_path
             adapter = None
             if args.consequence_model == "trained":
@@ -92,6 +105,8 @@ def main(argv=None):
                 adapter_path=adapter, model_path=args.consequence_base_model)
         artifact = run_live(args.session, args.steps, args.resume,
                             consequence_client=consequence_client)
+        if active_spec is not None:
+            artifact["active_model"] = active_spec
         render_live(artifact)
         return
     if args.resume or args.session is not None:

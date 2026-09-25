@@ -153,7 +153,8 @@ def load_adapter(model, path: Path) -> None:
 class QwenConsequenceClient:
     """Constrained consequence scorer over the three permitted JSON values."""
     def __init__(self, adapter_path: Path | None = None,
-                 model_path: Path | None = None, device: str | None = None):
+                 model_path: Path | None = None, device: str | None = None,
+                 model_identity: dict | None = None):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
         self.requests = 0
@@ -161,6 +162,14 @@ class QwenConsequenceClient:
         self.adapter_path = adapter_path
         self.model_id = (BASE_MODEL_ID if adapter_path is None else
             f"horus-consequence-v0.2:{file_hash(adapter_path)}")
+        self.horus_model_identity = model_identity or dict(
+            generation=0 if adapter_path is None else 1,
+            parent_generation=None if adapter_path is None else 0,
+            base_model_identity=BASE_MODEL_ID,
+            artifact_sha256=(file_hash(self.path / "model.safetensors")
+                if adapter_path is None else file_hash(adapter_path)),
+            adapter_identity=("BASE" if adapter_path is None else
+                f"standalone:{file_hash(adapter_path)}"))
         device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.device = torch.device(device)
         dtype = torch.bfloat16 if device == "cuda" else torch.float32
@@ -212,6 +221,7 @@ class QwenConsequenceClient:
         raw, scores = self._score(request_body["system"], request_body["prompt"])
         return dict(raw_output=raw, transport_error=None,
             response_metadata=dict(model=self.model_id,
+                horus_model_identity=self.horus_model_identity,
                 decoding="mean_log_probability_over_three_exact_JSON_candidates",
                 candidate_scores=dict(zip(CANDIDATES, scores)), done=True))
 
@@ -319,7 +329,8 @@ def _build_example(store: SessionStore, session_name: str,
         receipt_provenance_sha256=event["receipt_provenance_sha256"],
         event_sequence=event_envelope["sequence"], target=receipt["realized_consequence"],
         target_json=target, prediction_before_execution=parsed["parsed"],
-        prediction_raw_sha256=digest(response["response"]))
+        prediction_raw_sha256=digest(response["response"]),
+        consequence_model_identity=intent.get("model_generation_identity"))
 
 
 def freeze_dataset(collection_root: Path, output: Path) -> dict:
@@ -449,7 +460,10 @@ def _batch(tokenizer, rows: list[dict], max_length: int, device):
     return ids, mask, target
 
 
-def train(dataset: Path, pre_evaluation: Path, output: Path) -> dict:
+def train(dataset: Path, pre_evaluation: Path, output: Path,
+          parent_adapter: Path | None = None,
+          lineage_parent_generation: int | None = None,
+          training_strategy: str = "frozen-base") -> dict:
     import torch
     from transformers import AutoModelForCausalLM, AutoTokenizer
     if output.exists():
@@ -474,6 +488,8 @@ def train(dataset: Path, pre_evaluation: Path, output: Path) -> dict:
     model = AutoModelForCausalLM.from_pretrained(_model_path(), local_files_only=True,
                                                 dtype=torch.bfloat16).to(device)
     modules, trainable = inject_lora(model, config)
+    if parent_adapter is not None:
+        load_adapter(model, parent_adapter)
     output.mkdir(parents=True)
     initial = output / "initial-adapter.safetensors"
     final = output / "trained-adapter.safetensors"
@@ -530,9 +546,17 @@ def train(dataset: Path, pre_evaluation: Path, output: Path) -> dict:
         injected_modules=modules, base_model_identity=BASE_MODEL_ID,
         base_weights_sha256=manifest["payload"]["base_weights_sha256"],
         trainable_parameters=trainable,
+        parent_adapter_sha256=(None if parent_adapter is None else
+                               file_hash(parent_adapter)),
+        parent_generation=lineage_parent_generation,
+        training_strategy=training_strategy,
         total_base_parameters=sum(parameter.numel() for parameter in model.parameters()) - trainable)
     atomic_json(output / "adapter-config.json", adapter_config)
     lineage = dict(parent_model=BASE_MODEL_ID,
+        parent_generation=lineage_parent_generation,
+        parent_adapter_sha256=(None if parent_adapter is None else
+                               file_hash(parent_adapter)),
+        training_strategy=training_strategy,
         base_weights_sha256=manifest["payload"]["base_weights_sha256"],
         authenticated_dataset_manifest_sha256=manifest["manifest_sha256"],
         examples_sha256=manifest["payload"]["examples_sha256"],

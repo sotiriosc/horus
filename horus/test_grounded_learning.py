@@ -88,6 +88,17 @@ class GroundedLearningTests(unittest.TestCase):
                     _build_example(store, "session", event,
                                    store.records["training"][0])
 
+    def test_builder_rejects_unauthorized_training_record(self):
+        with TemporaryDirectory() as directory:
+            session = self._one_step_store(directory)
+            with SessionStore(session, True) as store:
+                training = store.records["training"][0]
+                training["record"]["authorization_status"] = "REJECTED"
+                with self.assertRaisesRegex(RuntimeError,
+                                            "unauthorized training candidate"):
+                    _build_example(store, "session", store.records["events"][0],
+                                   training)
+
     def test_checked_in_adapter_lineage_proves_parameter_update(self):
         root = Path(__file__).resolve().parents[1]
         model = root / "models/horus_consequence_v0_2"

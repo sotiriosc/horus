@@ -410,6 +410,10 @@ class LiveSplitMap:
                               getattr(self.joint_client, "model_id", MODEL))
         consequence = self._request(CONSEQUENCE_SYSTEM, prompt,
             getattr(self.consequence_client, "model_id", MODEL))
+        consequence_identity = getattr(
+            self.consequence_client, "horus_model_identity", None)
+        if consequence_identity is not None:
+            consequence["horus_model_identity"] = _plain(consequence_identity)
         pair_id = f"{decision_id}:{action}"
         # Both complete requests are frozen durably before either response exists.
         self.store.append("calls", "REQUEST_INTENT", dict(
@@ -417,7 +421,8 @@ class LiveSplitMap:
             request_sha256=digest(joint)))
         self.store.append("calls", "REQUEST_INTENT", dict(
             call_id=pair_id + ":C", role="independent-consequence", request=consequence,
-            request_sha256=digest(consequence), independent_of_joint_response=True))
+            request_sha256=digest(consequence), independent_of_joint_response=True,
+            model_generation_identity=consequence_identity))
         jr = self.joint_client.generate(joint)
         self.store.append("calls", "RESPONSE", dict(call_id=pair_id + ":J", response=jr,
             response_sha256=digest(jr)))
@@ -556,6 +561,10 @@ class LiveRuntime:
             joint_request_sha256=selected_evidence.request_hashes["joint"],
             consequence_request_sha256=
                 selected_evidence.request_hashes["consequence"],
+            consequence_model_identity=
+                selected_evidence.consequence_response.get("response_metadata", {}).get(
+                    "horus_model_identity",
+                    getattr(self.consequence_client, "horus_model_identity", None)),
             realized_next_state=receipt.next_state,
             realized_consequence=receipt.realized_consequence,
             prediction_match=dict(next_state=selected.next_state == receipt.next_state,
@@ -619,6 +628,8 @@ def run_live(session: Path, steps: int, resume: bool,
                  consequence.requests - consequence_before)),
             joint_model_calls=role_calls, consequence_model_calls=role_calls,
             consequence_model=getattr(consequence, "model_id", MODEL), steps=rows,
+            consequence_model_identity=getattr(
+                consequence, "horus_model_identity", None),
             checkpoint=_plain(store.checkpoint),
             trust_scope=("local HMAC-authenticated application checkpoint; fresh receipt "
                          "source/framework epoch on every process; no physical, hostile-host, "
