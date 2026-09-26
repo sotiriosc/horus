@@ -402,7 +402,8 @@ def load_dataset(directory: Path) -> tuple[dict, list[dict]]:
     return manifest, rows
 
 
-def evaluate(dataset: Path, output: Path, adapter: Path | None = None) -> dict:
+def evaluate(dataset: Path, output: Path, adapter: Path | None = None,
+             evaluation_phase: str | None = None) -> dict:
     if output.exists():
         raise RuntimeError("evaluation output already exists")
     manifest, examples = load_dataset(dataset)
@@ -427,7 +428,10 @@ def evaluate(dataset: Path, output: Path, adapter: Path | None = None) -> dict:
         for value in (-1, 0, 1)}
     for item in by_target.values():
         item["accuracy"] = None if not item["n"] else item["correct"] / item["n"]
-    output_value = dict(status="FROZEN", phase="POST_TRAINING" if adapter else "PRE_TRAINING",
+    phase = evaluation_phase or ("POST_TRAINING" if adapter else "PRE_TRAINING")
+    if phase not in {"PRE_TRAINING", "POST_TRAINING"}:
+        raise ValueError("invalid evaluation phase")
+    output_value = dict(status="FROZEN", phase=phase,
         fresh_process_pid=os.getpid(), dataset_manifest_sha256=manifest["manifest_sha256"],
         model=client.model_id, adapter_sha256=None if adapter is None else file_hash(adapter),
         examples=len(results), correct=sum(row["correct"] for row in results),

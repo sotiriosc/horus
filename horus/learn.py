@@ -24,6 +24,7 @@ def main(argv=None):
     p.add_argument("--dataset", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--adapter", type=Path)
+    p.add_argument("--phase", choices=("PRE_TRAINING", "POST_TRAINING"))
     p = commands.add_parser("train")
     p.add_argument("--dataset", type=Path, required=True)
     p.add_argument("--pre-evaluation", type=Path, required=True)
@@ -60,7 +61,7 @@ def main(argv=None):
     elif args.command == "freeze":
         result = freeze_dataset(args.collection, args.output)
     elif args.command == "evaluate":
-        result = evaluate(args.dataset, args.output, args.adapter)
+        result = evaluate(args.dataset, args.output, args.adapter, args.phase)
     elif args.command == "train":
         result = train(args.dataset, args.pre_evaluation, args.output)
     elif args.command == "compare":

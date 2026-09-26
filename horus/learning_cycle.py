@@ -234,12 +234,15 @@ def promotion_decision(incumbent: dict, candidate: dict, comparison: dict,
 
 
 def _run_evaluation(dataset: Path, output: Path,
-                    adapter: Path | None = None) -> dict:
+                    adapter: Path | None = None,
+                    phase: str | None = None) -> dict:
     log = output.with_suffix(output.suffix + ".stdout")
     command = [sys.executable, "-m", "horus.learn", "evaluate",
                "--dataset", str(dataset), "--output", str(output)]
     if adapter is not None:
         command.extend(("--adapter", str(adapter)))
+    if phase is not None:
+        command.extend(("--phase", phase))
     with log.open("x") as stream:
         completed = subprocess.run(command, cwd=ROOT, stdout=stream,
                                    stderr=subprocess.STDOUT, text=True)
@@ -285,7 +288,8 @@ def run_cycle(session_root: Path, registry_root: Path,
         incumbent_result = _run_evaluation(
             fresh, incumbent_eval, registry["root"] / incumbent["adapter_path"])
         training_pre = candidate_root / "training-pre-evaluation.json"
-        _run_evaluation(training_dataset, training_pre, parent_adapter)
+        _run_evaluation(training_dataset, training_pre, parent_adapter,
+                        phase="PRE_TRAINING")
         model_output = candidate_root / "model"
         lineage = train(training_dataset, training_pre, model_output,
             parent_adapter=parent_adapter,
