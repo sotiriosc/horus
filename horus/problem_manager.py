@@ -409,6 +409,60 @@ class ProblemManager:
                 decision_sequence=state["attempted_decisions"],kind="REPRESENTATION_EVALUATED",
                 representation="OPTION_PROFILE_DOMINANCE",result=record["outcome"],
                 selected_action=record.get("selected_action")))
+        elif kind=="OPTION_PROFILE_BEHAVIORAL_INTEGRATION_AUTHORIZED":
+            p=state["problems"].get(record["problem_id"]); representation=(None if not p else
+                p.get("route_budgets",{}).get("option_profile_dominance"))
+            if not p or p["problem_id"]!="PR-0002" or p["scope"]!=decision_scope(
+                    2,["ADVANCE","RETREAT"]) or \
+                    p["requested_capability"]!="OPTION_PROFILE_BEHAVIORAL_INTEGRATION" or \
+                    not representation or representation.get("evaluated")!=representation.get("limit"):
+                raise RoutingError("option-profile integration lacks the evaluated PR-0002 request")
+            if record["result"]!="RETREAT_PROFILE_DOMINATES" or record["selected_action"]!="RETREAT":
+                raise RoutingError("option-profile integration authorization changed the retained result")
+            if "option_profile_behavioral_integration" in p["route_budgets"]:
+                raise RoutingError("option-profile integration already authorized")
+            p["route_budgets"]["option_profile_behavioral_integration"]={
+                "limit":1,"granted":0,"executed":0,"follow_up_limit":1,"follow_up_observed":0,
+                "authorization_sha256":record["authorization_sha256"],
+                "profile_evidence_sha256":record["profile_evidence_sha256"]}
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],
+                kind="OPTION_PROFILE_BEHAVIORAL_INTEGRATION_AUTHORIZED",
+                representation="OPTION_PROFILE_DOMINANCE",result=record["result"],
+                selected_action=record["selected_action"],
+                authorization_sha256=record["authorization_sha256"],
+                profile_evidence_sha256=record["profile_evidence_sha256"]))
+        elif kind=="OPTION_PROFILE_DECISION_FROZEN":
+            if state["pending_decision"] is not None: raise RoutingError("problem decision already pending")
+            observed=cls._observe_tie(state,record); p=state["problems"].get(record["problem_id"])
+            budget=(None if not p else p.get("route_budgets",{}).get(
+                "option_profile_behavioral_integration"))
+            if observed is None or observed["problem_id"]!=record["problem_id"] or \
+                    not p or p["problem_id"]!="PR-0002" or record["pre_state"]!=2 or \
+                    p["scope"]!=decision_scope(2,["ADVANCE","RETREAT"]) or \
+                    not budget or budget["granted"]>=budget["limit"]:
+                raise RoutingError("option-profile integration is outside its scoped allowance")
+            actions,_=_tie(record["forecasts"]); ordinary=record["ordinary_decision"]
+            if actions!=["ADVANCE","RETREAT"] or ordinary.get("reason")!="EXPLOIT_TIED_MAXIMUM" or \
+                    ordinary.get("abstained") is not True or \
+                    record["result"]!="RETREAT_PROFILE_DOMINATES" or \
+                    record["selected_action"]!="RETREAT" or \
+                    record["profile_evidence_sha256"]!=budget["profile_evidence_sha256"]:
+                raise RoutingError("option-profile integration preconditions changed")
+            final=record["final_decision"]
+            if final.get("action")!="RETREAT" or final.get("abstained") is not False or \
+                    final.get("reason")!="OPTION_PROFILE_DOMINANCE":
+                raise RoutingError("option-profile frozen action changed")
+            budget["granted"]+=1; p["route_request_count"]+=1
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=record["decision_sequence"],kind="OPTION_PROFILE_DECISION_FROZEN",
+                representation="OPTION_PROFILE_DOMINANCE",result=record["result"],
+                selected_action="RETREAT",ordinary_decision_sha256=record[
+                    "ordinary_decision_sha256"],current_predictions_sha256=record[
+                    "current_predictions_sha256"],profiles_sha256=record["profiles_sha256"]))
+            state["pending_decision"]={"decision_sequence":record["decision_sequence"],
+                "problem_id":"PR-0002","selected_route":"OPTION_PROFILE_DOMINANCE",
+                "action":"RETREAT","expected_consequence":1,"expected_next_state":1}
         elif kind=="ONE_STEP_EXECUTION_PREPARED":
             if state["pending_decision"] is not None: raise RoutingError("problem decision already pending")
             cls._observe_tie(state,record)
@@ -460,7 +514,68 @@ class ProblemManager:
                 elif record["status"]=="FRAMEWORK_REJECTED":
                     cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
                         {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
+            elif pid and pending.get("selected_route")=="OPTION_PROFILE_DOMINANCE":
+                p=state["problems"][pid]; budget=p["route_budgets"][
+                    "option_profile_behavioral_integration"]
+                if record["status"]=="AUTHORIZED":
+                    receipt=record["receipt"]
+                    if receipt is None or receipt["action"]!=pending["action"]:
+                        raise RoutingError("option-profile execution receipt changed the frozen action")
+                    budget["executed"]+=1
+                    consistent=(receipt["realized_consequence"]==pending["expected_consequence"] and
+                                receipt["realized_next_state"]==pending["expected_next_state"])
+                    classification=("INTEGRATION_EXECUTED_CONSISTENT" if consistent else
+                                    "INTEGRATION_EXECUTED_CONTRADICTED")
+                    p["evidence"].append(dict(kind="OPTION_PROFILE_REALITY_OBSERVED",
+                        decision_sequence=record["decision_sequence"],action=pending["action"],
+                        receipt=deepcopy(receipt),retained_expectation={"consequence":pending[
+                            "expected_consequence"],"next_state":pending["expected_next_state"]},
+                        classification=classification))
+                    p["history"].extend([
+                        dict(lifecycle_state="ROUTE_EXECUTED",decision_sequence=record[
+                            "decision_sequence"],kind="ROUTE_EXECUTED",route="OPTION_PROFILE_DOMINANCE",
+                            action=pending["action"],receipt_identity=receipt["receipt_identity"]),
+                        dict(lifecycle_state="ROUTE_EXECUTED",decision_sequence=record[
+                            "decision_sequence"],kind="REALITY_OBSERVED",classification=classification,
+                            realized_consequence=receipt["realized_consequence"],
+                            realized_next_state=receipt["realized_next_state"]),
+                        dict(lifecycle_state="REASSESSED",decision_sequence=record[
+                            "decision_sequence"],kind="REASSESSED",result=classification)])
+                    p["lifecycle_state"]="REASSESSED"; p["requested_capability"]=None
+                    p["option_profile_integration_result"]=classification
+                else:
+                    classification="INTEGRATION_FAILED_OPERATIONALLY"
+                    p["lifecycle_state"]="REASSESSED"; p["option_profile_integration_result"]=classification
+                    p["history"].append(dict(lifecycle_state="REASSESSED",
+                        decision_sequence=record["decision_sequence"],kind="REASSESSED",
+                        result=classification,status=record["status"]))
+                    if record["status"]=="FRAMEWORK_REJECTED":
+                        cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
+                            {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
             state["pending_decision"]=None
+        elif kind=="OPTION_PROFILE_FOLLOWUP_OBSERVED":
+            if state["pending_decision"] is not None: raise RoutingError("follow-up observed while decision pending")
+            p=state["problems"].get(record["problem_id"]); budget=(None if not p else
+                p.get("route_budgets",{}).get("option_profile_behavioral_integration"))
+            if not p or p["problem_id"]!="PR-0002" or not budget or budget["executed"]!=1 or \
+                    budget["follow_up_observed"]>=budget["follow_up_limit"] or \
+                    record["decision_sequence"]!=state["attempted_decisions"]+1:
+                raise RoutingError("ordinary follow-up exceeds its scoped allowance")
+            if record["explorer"].get("reason")=="OPTION_PROFILE_DOMINANCE":
+                raise RoutingError("option-profile representation controlled the ordinary follow-up")
+            if record["status"]=="AUTHORIZED":
+                if record.get("receipt") is None: raise RoutingError("authorized follow-up lacks receipt")
+                state["authorized_executions"]+=1
+            elif record["status"] not in ("ABSTAINED","FRAMEWORK_REJECTED"):
+                raise RoutingError("unknown ordinary follow-up status")
+            state["attempted_decisions"]=record["decision_sequence"]
+            budget["follow_up_observed"]+=1
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=record["decision_sequence"],kind="ORDINARY_FOLLOW_UP_OBSERVED",
+                status=record["status"],action=record["explorer"].get("action"),
+                reason=record["explorer"].get("reason"),receipt=deepcopy(record.get("receipt")),
+                suffix_prefix_check=deepcopy(record.get("suffix_prefix_check")),
+                option_profile_controlled=False))
         elif kind=="OPERATIONAL_PROBLEM_ATTACHED":
             cls._create_operational(state,record["decision_sequence"],record["problem_type"],
                 record["scope"],record["owner"],record.get("blocked_problem_id"))
@@ -582,6 +697,55 @@ class ProblemManager:
                               selected_action: str | None, evaluation: dict):
         return self._append("OPTION_PROFILE_EVALUATED",dict(problem_id=problem_id,
             outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
+
+    def authorize_option_profile_integration(self, *, problem_id: str,
+            authorization_sha256: str, profile_evidence_sha256: str,
+            result: str, selected_action: str):
+        if len(authorization_sha256)!=64 or len(profile_evidence_sha256)!=64:
+            raise RoutingError("invalid option-profile integration commitment")
+        record=dict(
+            problem_id=problem_id,authorization_sha256=authorization_sha256,
+            profile_evidence_sha256=profile_evidence_sha256,result=result,
+            selected_action=selected_action)
+        self._apply(deepcopy(self.state),"OPTION_PROFILE_BEHAVIORAL_INTEGRATION_AUTHORIZED",record)
+        return self._append("OPTION_PROFILE_BEHAVIORAL_INTEGRATION_AUTHORIZED",record)
+
+    def prepare_option_profile_integration(self, *, store, ordinary_decision: dict,
+            pre_state: int, forecasts: dict, problem_id: str, profiles: dict,
+            result: str, selected_action: str, profile_evidence_sha256: str) -> dict:
+        self.bind_session(store); final=deepcopy(ordinary_decision)
+        final.update(mode="EXPLOIT",action=selected_action,abstained=False,
+            reason="OPTION_PROFILE_DOMINANCE",problem_id=problem_id,
+            ordinary_decision_sha256=digest(ordinary_decision),
+            route_broker={"selected_route":"OPTION_PROFILE_DOMINANCE",
+                "broker_result":"EXPLICIT_V017_AUTHORIZATION","authoritative":False,
+                "one_use":True,"global":False})
+        record=dict(decision_sequence=ordinary_decision["decision_sequence"],pre_state=pre_state,
+            ordinary_decision=deepcopy(ordinary_decision),forecasts=deepcopy(forecasts),
+            ordinary_decision_sha256=digest(ordinary_decision),
+            current_predictions_sha256=digest(forecasts),problem_id=problem_id,
+            profiles=deepcopy(profiles),profiles_sha256=digest(profiles),result=result,
+            selected_action=selected_action,profile_evidence_sha256=profile_evidence_sha256,
+            final_decision=deepcopy(final),hidden_regime_available=False,
+            simulator_law_available=False,future_consequence_available=False,
+            counterfactual_outcomes_available=False,frozen_before_external_execution=True)
+        self._apply(deepcopy(self.state),"OPTION_PROFILE_DECISION_FROZEN",record)
+        self._append("OPTION_PROFILE_DECISION_FROZEN",record); return final
+
+    def record_option_profile_followup(self, *, store, row: dict,
+                                       suffix_prefix_check: dict | None):
+        receipt=row.get("receipt"); compact=None
+        if receipt is not None:
+            compact=dict(receipt_identity=[receipt[k] for k in (
+                "source_identity","event_id","epoch","transaction_id")],
+                action=receipt["action"],realized_consequence=receipt["realized_consequence"],
+                realized_next_state=receipt["next_state"],receipt_is_authenticated=True)
+        record=dict(problem_id="PR-0002",decision_sequence=row["prediction_batch_sequence"],
+            status=row["status"],explorer=deepcopy(row["explorer"]),receipt=compact,
+            suffix_prefix_check=deepcopy(suffix_prefix_check))
+        self._apply(deepcopy(self.state),"OPTION_PROFILE_FOLLOWUP_OBSERVED",record)
+        self._append("OPTION_PROFILE_FOLLOWUP_OBSERVED",record); self.bind_session(store)
+        return deepcopy(record)
 
     def prepare_one_step_execution(self, *, store, ordinary_decision: dict,
                                    pre_state: int, forecasts: dict,
