@@ -212,33 +212,52 @@ def collection_endurance(session_root: Path) -> dict:
 
 def collect_regime_shift(session_root: Path, registry_root: Path,
                          target: int = 60) -> dict:
-    if session_root.exists():
-        raise RuntimeError("regime-shift session root already exists")
     if target != 60:
         raise ValueError("v0.4 fixed collection target is exactly 60")
-    session_root.mkdir(parents=True)
+    session_root.mkdir(parents=True, exist_ok=True)
     consequence, spec = active_client(registry_root, device="cuda")
     if spec["generation"] != 2:
         raise RegistryError("regime shift must begin under ACTIVE generation 2")
     joint = ModelClient(); summaries = []
     bridge = session_root / "session-000"
-    before = run_live(bridge, 3, False, joint, consequence, regime_version="A")
-    after = run_live(bridge, 3, True, joint, consequence, regime_version="B",
-                     allow_regime_transition=True)
-    summaries.append(dict(name=bridge.name, authorized=6, attempted=6,
-        process_segments=[dict(regime="A", runtime_index=before["runtime_index"], steps=3),
-                          dict(regime="B", runtime_index=after["runtime_index"], steps=3)],
-        joint_calls=18, consequence_calls=18))
+    if not bridge.exists():
+        before = run_live(bridge, 3, False, joint, consequence, regime_version="A")
+    else:
+        with SessionStore(bridge, True) as store:
+            if store.checkpoint["completed_steps"] < 3:
+                raise RuntimeError("bridge failed before frozen A boundary")
+            before = dict(epoch=store.records["events"][0]["record"]["receipt"]["epoch"])
+    with SessionStore(bridge, True) as store:
+        bridge_steps = store.checkpoint["completed_steps"]
+        bridge_attempts = store.checkpoint["attempted_decisions"]
+        bridge_regime = store.checkpoint.get("external_regime_version", "A")
+    while bridge_steps < 6 and bridge_attempts < 12:
+        transition = bridge_regime == "A"
+        run_live(bridge, 6 - bridge_steps, True, joint, consequence,
+                 regime_version="B", allow_regime_transition=transition)
+        with SessionStore(bridge, True) as store:
+            bridge_steps = store.checkpoint["completed_steps"]
+            bridge_attempts = store.checkpoint["attempted_decisions"]
+            bridge_regime = store.checkpoint["external_regime_version"]
+    if bridge_steps != 6:
+        raise RuntimeError("bridge exhausted frozen attempt bound before six receipts")
     authorized = 6
     for index in range(1, 10):
         path = session_root / f"session-{index:03d}"
-        result = run_live(path, 6, False, joint, consequence, regime_version="B")
-        count = sum(row["status"] == "AUTHORIZED" for row in result["steps"])
-        summaries.append(dict(name=path.name, authorized=count,
-            attempted=len(result["steps"]), process_segments=[dict(
-                regime="B", runtime_index=result["runtime_index"], steps=count)],
-            joint_calls=result["joint_model_calls"],
-            consequence_calls=result["consequence_model_calls"]))
+        if path.exists():
+            with SessionStore(path, True) as store:
+                count = store.checkpoint["completed_steps"]
+                attempts = store.checkpoint["attempted_decisions"]
+        else:
+            count = attempts = 0
+        while count < 6 and attempts < 12:
+            run_live(path, 6 - count, path.exists(), joint, consequence,
+                     regime_version="B")
+            with SessionStore(path, True) as store:
+                count = store.checkpoint["completed_steps"]
+                attempts = store.checkpoint["attempted_decisions"]
+        if count != 6:
+            raise RuntimeError(f"{path.name} exhausted frozen attempt bound")
         authorized += count
         print(f"regime-B collection {path.name}: {authorized}/{target}", flush=True)
     if authorized != target:
@@ -262,6 +281,22 @@ def collect_regime_shift(session_root: Path, registry_root: Path,
                    payload["VERIFIED_CHRONOLOGICAL_HISTORY"]):
                 old_history_after_restart += 1
         checkpoint = deepcopy(store.checkpoint)
+    for path in sorted(p.parent for p in session_root.glob("session-*/checkpoint.json")):
+        with SessionStore(path, True) as store:
+            attempts = store.checkpoint["attempted_decisions"]
+            completed = store.checkpoint["completed_steps"]
+            requests = Counter(row["record"].get("role")
+                for row in store.records["calls"]
+                if row["kind"] == "REQUEST_INTENT")
+            responses = sum(row["kind"] == "RESPONSE"
+                            for row in store.records["calls"])
+            summaries.append(dict(name=path.name, authorized=completed,
+                attempted=attempts, abstained=attempts - completed,
+                runtime_count=store.checkpoint["runtime_index"],
+                joint_calls=requests["joint-next-state"],
+                consequence_calls=requests["independent-consequence"],
+                response_records=responses,
+                regime_history=store.checkpoint["regime_history"]))
     pairs = {}
     for row in rows:
         pairs.setdefault((row["state"], row["action"]), {}).setdefault(
@@ -281,18 +316,22 @@ def collect_regime_shift(session_root: Path, registry_root: Path,
         hidden_prompt_checks=hidden_checks,
         old_history_requests_after_restart=old_history_after_restart,
         contradictory_state_action_pairs=contradictions,
-        restart_proof=dict(runtime_indices=[1, 2],
+        restart_proof=dict(runtime_indices=sorted({row["runtime_index"] for row in rows
+                                                   if row["session"] == bridge.name}),
             source_identities=sorted({row["source_identity"] for row in rows
                                       if row["session"] == bridge.name}),
             regime_history=checkpoint["regime_history"],
             prior_records_preserved=sum(row["session"] == bridge.name and
                                         row["runtime_index"] == 1 for row in rows),
             post_restart_records=sum(row["session"] == bridge.name and
-                                     row["runtime_index"] == 2 for row in rows)),
+                                     row["runtime_index"] > 1 for row in rows)),
+        total_attempted_decisions=sum(item["attempted"] for item in summaries),
+        fail_closed_abstentions=sum(item["abstained"] for item in summaries),
         endurance_windows=endurance["windows"],
         immediately_before_shift=endurance["immediately_before_shift"],
         first_six_after_shift=endurance["first_six_after_shift"],
-        selection="fixed 3 A + 57 B schedule; no performance-based extension")
+        selection=("fixed target of 60 authorized receipts (3 A + 57 B), "
+                   "maximum 12 attempts/session; no outcome-based extension"))
     atomic_json(session_root / "collection.json", result)
     return result
 

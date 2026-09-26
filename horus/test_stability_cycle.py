@@ -87,6 +87,15 @@ class StabilityTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "not explicitly authorized"):
                 run_live(session, 1, True, DeterministicClient(), regime_version="B")
 
+    def test_fresh_session_may_begin_directly_in_registered_regime_b(self):
+        with TemporaryDirectory() as directory:
+            session = Path(directory) / "session"
+            result = run_live(session, 1, False, DeterministicClient(),
+                              regime_version="B")
+            self.assertEqual(result["external_regime_version"], "B")
+            with SessionStore(session, True) as store:
+                self.assertEqual(store.checkpoint["regime_history"][0]["version"], "B")
+
     def test_initial_bank_uses_only_prior_heldout_examples(self):
         with TemporaryDirectory() as directory:
             root = Path(directory) / "registry"

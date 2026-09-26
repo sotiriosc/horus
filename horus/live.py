@@ -251,10 +251,12 @@ class SessionStore:
             raise SessionError("unknown external regime")
         current = self.checkpoint.get("external_regime_version")
         if current is None:
-            current = "A"
+            existing_history = (self.checkpoint["completed_steps"] > 0 or
+                                bool(self.records["events"]))
+            current = "A" if existing_history else version
             self.checkpoint["external_regime_version"] = current
             self.checkpoint["regime_history"] = [dict(
-                version="A", starts_after_completed_step=0,
+                version=current, starts_after_completed_step=0,
                 model_visible=False, configured_at=_now())]
         if current != version:
             if not allow_transition or (current, version) != ("A", "B"):

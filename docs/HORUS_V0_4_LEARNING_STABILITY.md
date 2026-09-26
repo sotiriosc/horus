@@ -21,11 +21,21 @@ The framework does not rewrite prior observations. The regime version is an
 audit field on the event and receipt-linked training record, with
 `regime_model_visible=false`; it is never added to the consequence prompt.
 
-The fixed 60-decision schedule begins with a bridge session: three Regime-A
+The fixed 60-authorized-receipt schedule begins with a bridge session: three Regime-A
 decisions, an explicit process restart and prospective A-to-B transition, then
 three Regime-B decisions. Nine additional six-step sessions run in B. The
-schedule therefore contains 3 A and 57 B events and cannot be extended based on
-model performance.
+schedule therefore contains 3 A and 57 B authorized events. Each session has a
+recovery-amendment bound of 12 attempted decisions, frozen before resumption,
+so a fail-closed model
+abstention cannot be reinterpreted as experience. A later decision may fill the
+fixed receipt target, but collection cannot extend based on realized outcomes
+or predictive performance.
+
+The original collection implementation incorrectly initialized a new empty
+Regime-B session as Regime A. It stopped after five authorized bridge records
+and one fail-closed abstention, before training or evaluation. The retained
+records are not repeated. `HORUS_V0_4_RECOVERY_AMENDMENT.md` records the exact
+failure and the bounded continuation rule.
 
 ## Evaluation bank
 
