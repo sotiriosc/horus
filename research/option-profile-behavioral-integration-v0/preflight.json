@@ -1,0 +1,160 @@
+{
+  "authorization_sha256": "b112a70071d510a3f24aa44fdc093936312894f42c433c2e785e8db092b533b5",
+  "core_regression_steps": 53,
+  "counterfactual_execution_authorized": false,
+  "full_horus_tests": 218,
+  "generated_at": "2026-09-26T22:59:25.957596+00:00",
+  "global_explorer_changed": false,
+  "identity": "HORUS_V017_ZERO_INFERENCE_PREFLIGHT",
+  "implementation_commit": "ae18fe5",
+  "maximum_fresh_decisions": 2,
+  "maximum_model_calls": 18,
+  "model_calls": 0,
+  "per_decision_model_calls": 9,
+  "policy_hashes_verified": true,
+  "pr0003_sha256": "52abbc28b599fafd771452499e9503738fedf212434062f4526317b7d4eaba8b",
+  "problem": {
+    "capability_assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "integration_allowance_present": false,
+    "lifecycle_state": "REASSESSED",
+    "problem_id": "PR-0002",
+    "requested_capability": "OPTION_PROFILE_BEHAVIORAL_INTEGRATION",
+    "scope": {
+      "kind": "decision_state",
+      "pre_state": 2,
+      "tied_action_set": [
+        "ADVANCE",
+        "RETREAT"
+      ]
+    }
+  },
+  "profile_evidence_sha256": "54fc0a6f95195329d0a033b272b2305175fcdd224581705f3a605e0dcb2d6214",
+  "reconstructed_outcome": "RETREAT_PROFILE_DOMINATES",
+  "reconstructed_profiles": {
+    "ADVANCE": [
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          -1,
+          1
+        ]
+      }
+    ],
+    "RETREAT": [
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "retries": 0,
+  "selected_action": "RETREAT",
+  "source_checkpoint": {
+    "attempted_decisions": 85,
+    "authorized_executions": 54,
+    "call_envelopes": 2394,
+    "current_epoch": 2011,
+    "current_state": 2,
+    "exploration_records": 170,
+    "problem_manager_events": 36,
+    "request_intents": 798,
+    "routing_records": 54,
+    "runtime_index": 11,
+    "training_envelopes": 88
+  },
+  "status": "PASS",
+  "training_runs": 0,
+  "v016_evidence_verified": true,
+  "world_executions": 0
+}
