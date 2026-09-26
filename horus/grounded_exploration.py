@@ -1238,10 +1238,21 @@ def analyze_grounded_exploration_campaign(session: Path,
                                 for row in events)
     runtime_execution_counts = {runtime: execution_counter[runtime]
                                 for runtime in expected_batches}
-    runtime_memory_imports = {runtime: max((row.get(
-        "imported_pre_restart_records", 0) for row in training
-        if row["source_scope"]["runtime_index"] == runtime), default=0)
-        for runtime in expected_batches}
+    verified_history_projection = {}
+    for runtime in expected_batches:
+        depths = []
+        for row in requests:
+            record = row["record"]
+            token = next(part for part in record["call_id"].split(":")
+                         if part.startswith("e") and part[1:].isdigit())
+            if int(token[1:]) - 2000 != runtime:
+                continue
+            payload = json.loads(record["request"]["prompt"])
+            depths.append(len(payload["VERIFIED_CHRONOLOGICAL_HISTORY"]))
+        verified_history_projection[runtime] = dict(requests=len(depths),
+            requests_with_prior_relation_history=sum(depth > 0 for depth in depths),
+            minimum_relation_history_depth=min(depths),
+            maximum_relation_history_depth=max(depths))
     staleness_reasons = [row for row in probe_rows
                          if row["reason"] == "PROBE_STALE"]
     minimum_probe_rate = min(row["rate"] for row in probe_rates.values())
@@ -1260,6 +1271,8 @@ def analyze_grounded_exploration_campaign(session: Path,
         model_calls_by_role=dict(Counter(row["record"]["role"] for row in requests)),
         autonomous_decision_attempts=checkpoint["attempted_decisions"],
         autonomous_executions=len(events), abstentions=len(abstained_rows),
+        nonexecution_count_by_reason=dict(Counter(
+            row["reason"] for row in abstained_rows)),
         framework_rejections=len(internal_route_problems),
         internal_route_problems=internal_route_problems,
         execution_kind_counts=dict(Counter(row["execution_kind"] for row in events)),
@@ -1274,8 +1287,8 @@ def analyze_grounded_exploration_campaign(session: Path,
         worst_exploration_window=dict(rate=minimum_probe_rate,
                                       phase_halves=worst_windows),
         final_relation_coverage_by_encountered_state=final_coverage,
-        unresolved_relations_at_end=sum(row["relations_unresolved"]
-                                        for row in final_coverage),
+        unresolved_relations_at_last_state_encounters=sum(
+            row["relations_unresolved"] for row in final_coverage),
         action_trajectory=[dict(decision_sequence=row["decision_sequence"],
             phase=row["phase"], pre_state=row["pre_state"], mode=row["mode"],
             action=row["action"], status=row["status"],
@@ -1300,7 +1313,7 @@ def analyze_grounded_exploration_campaign(session: Path,
                                     for row in training}),
             batches_by_runtime=batches_by_runtime,
             executions_by_runtime=runtime_execution_counts,
-            imported_memory_records_by_runtime=runtime_memory_imports,
+            verified_history_projection_by_runtime=verified_history_projection,
             source_identities=source_identities,
             epoch_ids_by_runtime={runtime: sorted(values) for runtime, values in
                                   epoch_ids_by_runtime.items()},
