@@ -16,6 +16,8 @@ from .grounded_exploration import (analyze_grounded_exploration_campaign,
                                    initialize_grounded_exploration_registry)
 from .problem_routing import (analyze_problem_route_campaign,
                               initialize_problem_route_registry)
+from .capability_gap import (analyze_capability_gap_campaign,
+                             initialize_capability_gap_registry)
 
 
 def main(argv=None):
@@ -105,6 +107,13 @@ def main(argv=None):
     p.add_argument("--session", type=Path, required=True)
     p.add_argument("--problem-route-registry", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
+    p = commands.add_parser("init-capability-gap")
+    p.add_argument("--registry", type=Path, required=True)
+    p.add_argument("--source-report", type=Path, required=True)
+    p = commands.add_parser("capability-gap-report")
+    p.add_argument("--session", type=Path, required=True)
+    p.add_argument("--registry", type=Path, required=True)
+    p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -168,9 +177,15 @@ def main(argv=None):
     elif args.command == "init-problem-route":
         result = initialize_problem_route_registry(
             args.problem_route_registry, args.source_registry)
-    else:
+    elif args.command == "problem-route-report":
         result = analyze_problem_route_campaign(
             args.session, args.problem_route_registry, args.output)
+    elif args.command == "init-capability-gap":
+        result = initialize_capability_gap_registry(args.registry,
+                                                    args.source_report)
+    else:
+        result = analyze_capability_gap_campaign(args.session, args.registry,
+                                                 args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

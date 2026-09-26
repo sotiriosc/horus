@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "mode": "HORUS_CAPABILITY_GAP_DETECTION_V0",
+  "source_problem_id": "PR-0001",
+  "source_problem_type": "UNRESOLVED_VALUE_TIE",
+  "successor_problem_id": "PR-0002",
+  "maximum_tie_information_probes": 2,
+  "maximum_live_decisions": 12,
+  "calls_per_decision": 9,
+  "classifications": [
+    "MORE_EVIDENCE_REQUIRED",
+    "VALUE_TIE_RESOLVED",
+    "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "ROUTE_FAILED"
+  ],
+  "capabilities": [
+    "MORE_RELATION_EVIDENCE",
+    "LONGER_HORIZON_VALUE",
+    "ALTERNATIVE_REPRESENTATION",
+    "NEW_SPECIALIST",
+    "NEW_RUNTIME",
+    "EXTERNAL_SERVICE_REPAIR"
+  ],
+  "localizations": [
+    "MAP_NEXT_STATE",
+    "MAP_CONSEQUENCE",
+    "RELATION_ROUTER",
+    "EXPLORER_VALUE_COMPARISON",
+    "EVIDENCE_COVERAGE",
+    "RUNTIME_CAPACITY",
+    "MODEL_SERVICE",
+    "REPRESENTATION"
+  ],
+  "tie_probe_priority": [
+    "UNPROBED_FOR_PROBLEM",
+    "SPECIALIST_DISAGREEMENT",
+    "UNRESOLVED_CONTRADICTION",
+    "LESS_AUTHENTICATED_LOCAL_EVIDENCE",
+    "MORE_STALE",
+    "CANONICAL_ACTION_ORDER"
+  ],
+  "common_specialist_error_minimum": 3,
+  "automatic_grants": ["MORE_RELATION_EVIDENCE"],
+  "external_approval_only": [
+    "LONGER_HORIZON_VALUE",
+    "ALTERNATIVE_REPRESENTATION",
+    "NEW_SPECIALIST",
+    "NEW_RUNTIME",
+    "EXTERNAL_SERVICE_REPAIR"
+  ]
+}

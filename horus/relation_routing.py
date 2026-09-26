@@ -574,7 +574,10 @@ class RelationRoutedRuntime:
             next_state=by_specialist[selections[action]][action].next_state,
             action_alias=by_specialist[selections[action]][action].action_alias,
             history_count=by_specialist[selections[action]][action].history_count,
-            valid=not by_specialist[selections[action]][action].abstained)
+            valid=not by_specialist[selections[action]][action].abstained,
+            selected_failure=by_specialist[selections[action]][action].failure,
+            G2_failure=by_specialist["G2"][action].failure,
+            G3_failure=by_specialist["G3"][action].failure)
             for action in ACTION_ORDER}
 
     def comparison(self) -> dict:
