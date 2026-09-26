@@ -315,6 +315,47 @@ class ProblemManager:
             if state["deadlock_route_enabled"]: raise RoutingError("deadlock route already preregistered")
             state["deadlock_route_enabled"]=True
             state["deadlock_preregistration_sha256"]=record["preregistration_sha256"]
+        elif kind=="ONE_STEP_CAPABILITY_AUTHORIZED":
+            p=state["problems"].get(record["problem_id"])
+            if not p or p["capability_assessment"]!="CURRENT_OBJECTIVE_CANNOT_DISTINGUISH" or \
+                    p["requested_capability"]!="LONGER_HORIZON_VALUE":
+                raise RoutingError("one-step authorization lacks the requested capability")
+            if "one_step_continuation_value" in p["route_budgets"]:
+                raise RoutingError("one-step capability already authorized")
+            p["route_budgets"]["one_step_continuation_value"]={"limit":1,"granted":0,"executed":0}
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],kind="CAPABILITY_AUTHORIZED",
+                capability="LONGER_HORIZON_VALUE",implementation="ONE_STEP_CONTINUATION_VALUE",
+                authorization_sha256=record["authorization_sha256"]))
+        elif kind=="ONE_STEP_ROUTE_EVALUATED":
+            p=state["problems"].get(record["problem_id"]); budget=p.get("route_budgets",{}).get(
+                "one_step_continuation_value") if p else None
+            if not budget or budget["granted"]>=budget["limit"]:
+                raise RoutingError("one-step route is not authorized or is consumed")
+            budget["granted"]+=1; budget["executed"]+=1; p["route_request_count"]+=1
+            p["evidence"].append(deepcopy(record["evaluation"])); p["lifecycle_state"]="REASSESSED"
+            p["requested_capability"]=(None if record["outcome"]=="ONE_STEP_DISTINGUISHES"
+                                       else "DEEPER_HORIZON_VALUE")
+            if record["outcome"] not in ("ONE_STEP_DISTINGUISHES","STILL_TIED_AT_ONE_STEP"):
+                raise RoutingError("unknown one-step result")
+            p["history"].extend([dict(lifecycle_state="ROUTE_REQUESTED",
+                decision_sequence=state["attempted_decisions"],route="ONE_STEP_CONTINUATION_VALUE"),
+                dict(lifecycle_state="ROUTE_EXECUTED",decision_sequence=state["attempted_decisions"],
+                     route="ONE_STEP_CONTINUATION_VALUE"),
+                dict(lifecycle_state="REASSESSED",decision_sequence=state["attempted_decisions"],
+                     result=record["outcome"],selected_action=record.get("selected_action"))])
+        elif kind=="ONE_STEP_EXECUTION_PREPARED":
+            if state["pending_decision"] is not None: raise RoutingError("problem decision already pending")
+            cls._observe_tie(state,record)
+            p=state["problems"].get(record["problem_id"])
+            if not p or record["selected_action"] not in p["scope"]["tied_action_set"]:
+                raise RoutingError("one-step execution is not bound to its problem")
+            final=record["final_decision"]
+            if final.get("action")!=record["selected_action"] or final.get("reason")!="ONE_STEP_CONTINUATION_VALUE":
+                raise RoutingError("one-step execution decision changed")
+            state["pending_decision"]={"decision_sequence":record["decision_sequence"],
+                "problem_id":p["problem_id"],"selected_route":"ONE_STEP_CONTINUATION_VALUE",
+                "action":record["selected_action"]}
         elif kind=="RETROSPECTIVE_DECISION_REPLAYED":
             cls._observe_tie(state,record)
         elif kind=="LIVE_DECISION_PREPARED":
@@ -340,6 +381,17 @@ class ProblemManager:
                     p["history"].append(dict(lifecycle_state="ROUTE_EXECUTED",
                         decision_sequence=record["decision_sequence"],receipt_identity=record[
                             "receipt"]["receipt_identity"]))
+                elif record["status"]=="FRAMEWORK_REJECTED":
+                    cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
+                        {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
+            elif pid and pending.get("selected_route")=="ONE_STEP_CONTINUATION_VALUE":
+                p=state["problems"][pid]
+                if record["status"]=="AUTHORIZED":
+                    p["history"].append(dict(lifecycle_state="REASSESSED",
+                        decision_sequence=record["decision_sequence"],kind="SELECTED_ACTION_RECEIPT",
+                        action=pending["action"],receipt_identity=record["receipt"]["receipt_identity"],
+                        realized_consequence=record["receipt"]["realized_consequence"],
+                        realized_next_state=record["receipt"]["realized_next_state"]))
                 elif record["status"]=="FRAMEWORK_REJECTED":
                     cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
                         {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
@@ -429,6 +481,34 @@ class ProblemManager:
         if len(preregistration_sha256)!=64: raise RoutingError("invalid preregistration hash")
         return self._append("DEADLOCK_ROUTE_PREREGISTERED",{
             "preregistration_sha256":preregistration_sha256})
+
+    def authorize_one_step(self, problem_id: str, authorization_sha256: str):
+        if len(authorization_sha256)!=64:
+            raise RoutingError("invalid one-step authorization hash")
+        return self._append("ONE_STEP_CAPABILITY_AUTHORIZED",{
+            "problem_id":problem_id,"authorization_sha256":authorization_sha256})
+
+    def record_one_step_evaluation(self, *, problem_id: str, outcome: str,
+                                   selected_action: str | None, evaluation: dict):
+        return self._append("ONE_STEP_ROUTE_EVALUATED",dict(problem_id=problem_id,
+            outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
+
+    def prepare_one_step_execution(self, *, store, ordinary_decision: dict,
+                                   pre_state: int, forecasts: dict,
+                                   problem_id: str, selected_action: str) -> dict:
+        self.bind_session(store); final=deepcopy(ordinary_decision)
+        if ordinary_decision.get("reason")=="INVALID_MAP_COMPONENT":
+            raise RoutingError("one-step execution integration predictions invalid")
+        final.update(mode="PROBE",action=selected_action,abstained=False,
+            reason="ONE_STEP_CONTINUATION_VALUE",problem_id=problem_id,
+            route_broker={"selected_route":"ONE_STEP_CONTINUATION_VALUE",
+                "broker_result":"EXPLICIT_V014_AUTHORIZATION","authoritative":False})
+        record=dict(decision_sequence=ordinary_decision["decision_sequence"],pre_state=pre_state,
+            ordinary_decision=deepcopy(ordinary_decision),forecasts=deepcopy(forecasts),
+            problem_id=problem_id,selected_action=selected_action,final_decision=deepcopy(final),
+            hidden_regime_available=False,simulator_law_available=False,
+            future_consequence_available=False,counterfactual_outcomes_available=False)
+        self._append("ONE_STEP_EXECUTION_PREPARED",record); return final
 
     def replay_decision(self, *, pre_state: int, ordinary_decision: dict, forecasts: dict):
         if self.state["pending_decision"] is not None: raise RoutingError("pending live decision")
