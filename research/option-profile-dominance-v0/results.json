@@ -1,0 +1,185 @@
+{
+  "behavioral_executions": 0,
+  "behavioral_integration_authorized": false,
+  "behavioral_integration_justified_for_separate_authorization": true,
+  "comparison": {
+    "outcome": "RETREAT_PROFILE_DOMINATES",
+    "partial_order": true,
+    "rank_comparisons": [
+      {
+        "advance": [
+          1,
+          1,
+          1
+        ],
+        "rank": 1,
+        "relation": "EQUAL",
+        "retreat": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "advance": [
+          1,
+          0,
+          1
+        ],
+        "rank": 2,
+        "relation": "RETREAT_GREATER",
+        "retreat": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "advance": [
+          1,
+          -1,
+          1
+        ],
+        "rank": 3,
+        "relation": "RETREAT_GREATER",
+        "retreat": [
+          1,
+          0,
+          1
+        ]
+      }
+    ],
+    "scalar_value": null,
+    "selected_action": "RETREAT"
+  },
+  "dominance_rule": "equal cardinality; no-worse at every corresponding rank; strictly better at one or more ranks",
+  "execution": null,
+  "final_pr0002": {
+    "capability_assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "lifecycle_state": "REASSESSED",
+    "option_profile_budget": {
+      "evaluated": 1,
+      "limit": 1
+    },
+    "request_authority_status": "REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+    "requested_capability": "OPTION_PROFILE_BEHAVIORAL_INTEGRATION"
+  },
+  "global_explorer_changed": false,
+  "identity": "HORUS_V016_OPTION_PROFILE_DOMINANCE_RESULT",
+  "model_calls": 0,
+  "option_profile_definition": "complete finite multiset of depth-2 consequence trajectories sorted lexicographically best-to-worst with duplicates preserved",
+  "pr0003_unchanged": true,
+  "profiles": {
+    "ADVANCE": [
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          -1,
+          1
+        ]
+      }
+    ],
+    "RETREAT": [
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "scalar_value": null,
+  "selected_action": "RETREAT",
+  "source_v015_unchanged": true,
+  "status": "RETREAT_PROFILE_DOMINATES",
+  "training_runs": 0
+}
