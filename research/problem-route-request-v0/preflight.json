@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "campaign_identity": "HORUS_PROBLEM_ROUTE_REQUEST_V0",
+  "campaign_calls_before_start": 0,
+  "lineage": {
+    "parent_r2_evidence": "0155df09d7cad0b6df9fefd185d3da25b64389fd",
+    "implementation": "2c7375f5185d305647085ec9261bf620e4aa248b",
+    "preregistration": "4d1b5c79a659a30212874a53084b8a0764888eac"
+  },
+  "r2_preservation": {
+    "tracked_diff_from_parent": false,
+    "evidence_manifest_sha256": "25ae5c1d3f4a810dc99390ed214330777e1ce0c55f6fab07d7e1a5b3bc450395",
+    "exploration_report_sha256": "50de3429619db46d20d6d5ef2dcd277c2212ece1f3ad244cc25cf56449d4d35e"
+  },
+  "frozen_mechanism": {
+    "persistent_identical_tie_attempts": 2,
+    "maximum_tie_information_probes_per_problem": 2,
+    "registered_routes": [
+      "NORMAL_EXPLOIT",
+      "RELATION_PROBE",
+      "TIE_INFORMATION_PROBE"
+    ],
+    "problem_has_authority": false,
+    "hidden_regime_available": false,
+    "protected_episode_limit": 12,
+    "protected_episode_limit_changed": false,
+    "runtime_count": 6,
+    "attempts_per_runtime": [9, 9, 9, 9, 9, 9],
+    "calibration_actions": 0,
+    "total_decisions": 54,
+    "maximum_campaign_calls": 486
+  },
+  "frozen_hashes": {
+    "implementation_tree": "4a4c49050d19c5598cb0b2b3f93ef0ecbea77c4b",
+    "problem_routing_py": "016e73eb66044198a379856b1c1c09676580a94cc516b36d8983af2f58dc3e97",
+    "problem_route_policy": "08dfaf20e2202383c4d596c662e7ae521a70771b8c9e681cd471bc61ae7ee109",
+    "grounded_exploration_py": "88f744965f661b0a2c0bf610ff82e145a692da98d3ec58aea49c2ae07327af34",
+    "one_shot_runner": "d1f06a9e2550176a9124bbe3f4e7ec82dca086f0925f2a29ab4eaa7e42965d5a",
+    "unchanged_v0_7_policy": "f6f963403a6ffaa827069288df49340035a4f9a7556d7111de9ba426382db7b3",
+    "joint_system_instruction": "805542ebed5d2fa09b9b36f4895bdbd917b5d2af58db56d744478887a824b3e7",
+    "consequence_system_instruction": "9fa97c24f33f7e25497bce9bb23a70cea52f91f6e02a3a01bd8e2d571ea37df8"
+  },
+  "specialists": {
+    "G2": {
+      "generation": 2,
+      "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+      "global_status": "ACTIVE",
+      "routing_eligibility": "ROUTABLE_SPECIALIST",
+      "verified": true
+    },
+    "G3": {
+      "generation": 3,
+      "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+      "global_status": "REJECTED",
+      "routing_eligibility": "ROUTABLE_SPECIALIST",
+      "verified": true
+    }
+  },
+  "persistent_joint_service": {
+    "supervisor": "tmux",
+    "supervisor_session": "horus-v08-ollama",
+    "ollama_version": "0.1.16",
+    "listener": "127.0.0.1:11434",
+    "health_context": "HORUS_PROBLEM_ROUTE_REQUEST_V0_HEALTH_ONLY",
+    "health_request_campaign_evidence": false,
+    "health_request_sha256": "d8d7a7b1f53fb601f018a3c28ae1ba7890a202b11f7677421c9cd24cb5c7d47d",
+    "health_response_sha256": "8c373ab6f013b47302e58c8bdcb5bdda7d407615d55bc0abb142f23b7bbd0023",
+    "strict_joint_parse": {
+      "next_state": 1,
+      "consequence": 0
+    },
+    "transport_error": null,
+    "elapsed_seconds": 43.932
+  },
+  "verification": {
+    "new_problem_route_tests": 18,
+    "full_horus_tests": 99,
+    "full_horus_test_seconds": 27.207,
+    "core_regression_steps": 53,
+    "core_regression_seconds": 17.063,
+    "deterministic_54_decision_integration": true,
+    "deterministic_integration_model_calls": 486,
+    "all_passed": true
+  }
+}
