@@ -1,0 +1,200 @@
+{
+  "behavioral_executions": 0,
+  "comparison": {
+    "outcome": "RETREAT_PROFILE_DOMINATES",
+    "partial_order": true,
+    "rank_comparisons": [
+      {
+        "advance": [
+          1,
+          1,
+          1
+        ],
+        "rank": 1,
+        "relation": "EQUAL",
+        "retreat": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "advance": [
+          1,
+          0,
+          1
+        ],
+        "rank": 2,
+        "relation": "RETREAT_GREATER",
+        "retreat": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "advance": [
+          1,
+          -1,
+          1
+        ],
+        "rank": 3,
+        "relation": "RETREAT_GREATER",
+        "retreat": [
+          1,
+          0,
+          1
+        ]
+      }
+    ],
+    "scalar_value": null,
+    "selected_action": "RETREAT"
+  },
+  "complete_multisets": true,
+  "deterministic_sort": true,
+  "duplicates_preserved": true,
+  "generated_at": "2026-09-26T22:45:08.622471+00:00",
+  "hidden_world_information_used": false,
+  "identity": "HORUS_V016_ZERO_INFERENCE_PREFLIGHT",
+  "model_calls": 0,
+  "policy_hashes_verified": true,
+  "pr0003_sha256": "52abbc28b599fafd771452499e9503738fedf212434062f4526317b7d4eaba8b",
+  "problem": {
+    "assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "problem_id": "PR-0002",
+    "representation_previously_authorized": false,
+    "requested_capability": "ALTERNATIVE_VALUE_REPRESENTATION",
+    "scope": {
+      "kind": "decision_state",
+      "pre_state": 2,
+      "tied_action_set": [
+        "ADVANCE",
+        "RETREAT"
+      ]
+    }
+  },
+  "profiles": {
+    "ADVANCE": [
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "current_action": "ADVANCE",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          -1,
+          1
+        ]
+      }
+    ],
+    "RETREAT": [
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 1,
+        "second_action": "ADVANCE",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 2,
+        "second_action": "HOLD",
+        "sequence": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "current_action": "RETREAT",
+        "provenance": {
+          "c0": "AUTHENTICATED_RECEIPT",
+          "c1": "MODEL_FORECAST",
+          "c2": "MODEL_FORECAST",
+          "state1": "AUTHENTICATED_RECEIPT",
+          "state2": "MODEL_FORECAST"
+        },
+        "rank": 3,
+        "second_action": "RETREAT",
+        "sequence": [
+          1,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "scalar_value": null,
+  "source_checkpoint": {
+    "attempted_decisions": 85,
+    "authorized_executions": 54,
+    "call_envelopes": 2394,
+    "current_epoch": 2011,
+    "current_state": 2,
+    "problem_manager_events": 34,
+    "request_intents": 798,
+    "runtime_index": 11,
+    "training_envelopes": 87
+  },
+  "source_results_sha256": "2fc4e2ddc489aa1c2d8bc394a041b182215f080df486afd637f827dee5759341",
+  "status": "PASS",
+  "training_runs": 0,
+  "v015_evidence_unchanged": true
+}
