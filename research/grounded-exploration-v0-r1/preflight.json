@@ -1,0 +1,78 @@
+{
+  "campaign_calls_before_reservation": 0,
+  "campaign_identity": "HORUS_GROUNDED_EXPLORATION_V0_R1",
+  "failed_evidence_commit": "5edc8894fb47709d8c40dd8f3eb2f6c968dfa173",
+  "frozen_implementation": {
+    "commit": "72cdc09",
+    "document_sha256": "1eb3317dab20e501740689a76faf2bc4b531cce0fc844fc5c9b43b4f173a5dea",
+    "policy_sha256": "f6f963403a6ffaa827069288df49340035a4f9a7556d7111de9ba426382db7b3",
+    "source_sha256": "ba72e8af3fe4686f3cfc46c6f41384b4d6595d215dd8484e97f752f6cc2b4cd8",
+    "tree": "4bb48dbb3eb6344cbd3cf0a38ebb5c4435172578"
+  },
+  "hidden_input_exclusion_verified": true,
+  "infrastructure_correction": "joint Ollama service moved to an independent detached tmux supervisor",
+  "joint_health_check": {
+    "campaign_evidence": false,
+    "parsed": {
+      "consequence": 0,
+      "next_state": 1
+    },
+    "request_sha256": "d8d7a7b1f53fb601f018a3c28ae1ba7890a202b11f7677421c9cd24cb5c7d47d",
+    "response_sha256": "c6534b32caa8e3b304ee088af657923d73bf9e2df1e21ff0134b685ba9a9996c",
+    "strict_existing_parser_passed": true,
+    "transport_error": null
+  },
+  "joint_model": {
+    "format": "gguf",
+    "manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+    "model": "dolphin-mixtral:latest",
+    "ollama_version": "0.1.16",
+    "parameter_size": "47B",
+    "quantization": "Q4_0",
+    "verified_blobs": {
+      "config": "368364f689573ccfe29939353f655f3a153acc0646b2e21f65a4231330b7537a",
+      "parameters": "58ca659992b02d65b647752bb49f240dea3751194fa0e2e6426d7b121e77e462",
+      "system": "9640c2212a51f7df5840f7929448afa17cb33fbb173cf15e1d74883e932a3466",
+      "template": "a47b02e00552cd7022ea700b1abf8c572bb26c9bc8c1a37e01b566f2344df5dc",
+      "weights": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+    },
+    "weight_bytes": 26441544128
+  },
+  "original_failure_preserved": true,
+  "reason_for_replacement": "external joint service unavailable throughout the original campaign",
+  "schedule": {
+    "A1": 18,
+    "A2": 18,
+    "B1": 9,
+    "B2_after_restart": 9,
+    "maximum_campaign_calls": 486,
+    "total_decisions": 54
+  },
+  "scientific_rule_changed": false,
+  "service_liveness": {
+    "health_request_completed": true,
+    "independent_shell_check_passed": true,
+    "supervisor": "tmux",
+    "supervisor_session": "horus-v07-r1-ollama"
+  },
+  "specialists": {
+    "G2": {
+      "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+      "global_status": "ACTIVE",
+      "verified": true
+    },
+    "G3": {
+      "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+      "global_status": "REJECTED",
+      "routing_status": "ROUTABLE_SPECIALIST",
+      "verified": true
+    }
+  },
+  "status": "PASS",
+  "verification": {
+    "core_regression_steps": 53,
+    "core_regression_status": "PASS",
+    "horus_tests": 74,
+    "horus_tests_status": "PASS"
+  }
+}
