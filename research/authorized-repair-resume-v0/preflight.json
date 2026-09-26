@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "campaign_identity": "HORUS_AUTHORIZED_REPAIR_RESUME_V0",
+  "lineage": {
+    "parent_v0_9": "3ad28c5a22942abc12ec3532113469112be7cbc1",
+    "implementation": "49599c2",
+    "implementation_tree": "88187f9f8c139580fc80b2f6bff53e488d41d36a",
+    "preregistration": "f2586c3fc38ef472abff4bf4d10574fad9853af5"
+  },
+  "source_preservation": {
+    "v0_9_session_tree_before": "9642a0545e7249e9fd7f1f033d4f0e6e7a1e671543bc46e05495b54c93dc3a5d",
+    "v0_9_registry_tree_before": "e85af91667c0b7bb4465fad6c121106ce1692dee1b02f55f70e90ed06b7031a7",
+    "private_clone_session_tree_after_initialization": "9642a0545e7249e9fd7f1f033d4f0e6e7a1e671543bc46e05495b54c93dc3a5d",
+    "private_clone_registry_tree_after_initialization": "fd52e83a7d59bbd1407e9a440e6f75764457786a9f18bfb23cafa941e91b0126",
+    "source_modified": false
+  },
+  "failed_call": {
+    "logical_prediction_identity": "a67e675004193a13c31485bad53fbb86:e2007:b57:HOLD:J",
+    "request_sha256": "beb7997f877f396815a9e3100e35db6314f0e967ce03c2565bf74746edbf6e22",
+    "transport_bytes_sha256": "a70575f7cfac745c1708534ee65ffc6de35a8c41dd925ddf18b337d398915274",
+    "failed_response_sha256": "9e177280df0d138c5d65e05b99bb075132b0ea61e91123edd18f9234f9a87a97",
+    "failure": "TimeoutError",
+    "attempt_1_retained": true,
+    "other_original_batch_components_valid": 8,
+    "external_action_after_failure": false,
+    "receipt_after_failure": false,
+    "memory_after_failure": false,
+    "routing_evidence_after_failure": false,
+    "training_target_after_failure": false,
+    "decision_unresolved": true,
+    "retry_causally_eligible": true
+  },
+  "repair_authority": {
+    "authorization_sha256": "e72b4c2dd3620898b09ef4a15020f05ec83c949996140a745f982e468ec21acc",
+    "initial_lifecycle_state": "REQUESTED",
+    "restart_count": 0,
+    "reissue_count": 0,
+    "allowed_capabilities": [
+      "RESTART_MODEL_SERVICE",
+      "VERIFY_MODEL_ARTIFACT",
+      "REISSUE_UNEXECUTED_PREDICTION_REQUEST"
+    ],
+    "repair_records_are_behavioral_evidence": false
+  },
+  "service_before_repair": {
+    "ollama_process_present": false,
+    "expected_model": "dolphin-mixtral:latest",
+    "expected_manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a"
+  },
+  "frozen_live_bound": {
+    "fresh_runtimes": 1,
+    "restarts": 1,
+    "reissues": 1,
+    "operational_health_calls": 1,
+    "maximum_behavioral_decisions": 6,
+    "maximum_fresh_normal_prediction_calls": 45,
+    "maximum_total_live_model_calls": 47,
+    "repaired_batch_additional_behavioral_calls": 0,
+    "training": 0
+  },
+  "zero_inference_validation": {
+    "reconstructed_state": 2,
+    "reconstructed_forecasts": {
+      "ADVANCE": {"next_state": 3, "routed_consequence": 1},
+      "HOLD": {"next_state": 2, "routed_consequence": 0},
+      "RETREAT": {"next_state": 1, "routed_consequence": 1}
+    },
+    "reconstructed_batch_valid": true,
+    "next_problem_probe": "RETREAT",
+    "advance_probe_repeated": false,
+    "longer_horizon_route_implemented": false
+  },
+  "verification": {
+    "focused_repair_tests": 16,
+    "focused_repair_seconds": 0.701,
+    "full_horus_tests": 130,
+    "full_horus_seconds": 26.856,
+    "core_regression_steps": 53,
+    "all_passed": true
+  }
+}
