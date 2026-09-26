@@ -1,0 +1,74 @@
+{
+  "campaign_identity": "HORUS_BOUNDED_EVIDENCE_COVERAGE_V0",
+  "status": "PASS",
+  "lineage": {
+    "parent_v0_10": "a935a4d99445eeb3f8d655deaccaf7878fed7fcd",
+    "implementation": "64b7cf5",
+    "implementation_tree": "2a91729c5ae37a172c46dddfde5296d2ad04afd3",
+    "preregistration": "3db00c59416b935303434aea72aafba75b3d8844",
+    "preregistration_sha256": "b61891737d08ff6b49bfc5eefeab380495458f546b2fc5e86f45a4290cd88a37"
+  },
+  "source_preservation": {
+    "v0_10_session_before": "5188545300c2faf001d5f18929128246900454b7b2b5ae0dddbb67a773957e62",
+    "v0_10_registry_before": "f6b1c5d327aa78f236c397239ed0f6360de717934c84d216c342e407214eb0f5",
+    "private_clone_session_before_live": "5188545300c2faf001d5f18929128246900454b7b2b5ae0dddbb67a773957e62",
+    "private_clone_registry_before_live": "f6b1c5d327aa78f236c397239ed0f6360de717934c84d216c342e407214eb0f5",
+    "source_modified": false
+  },
+  "source_state": {
+    "attempted_decisions": 63,
+    "authorized_executions": 53,
+    "training_records": 63,
+    "ordinary_request_intents": 558,
+    "current_state": 1,
+    "problem_id": "PR-0002",
+    "problem_probe_count": 2,
+    "terminal_classification": null,
+    "advance_receipt": {"realized_consequence": 1, "realized_next_state": 3},
+    "retreat_receipt": {"realized_consequence": 1, "realized_next_state": 1}
+  },
+  "sole_intervention": {
+    "parameter": "maximum fresh ordinary behavioral decisions",
+    "v0_10_allowance": 5,
+    "v0_11_allowance": 20,
+    "runtime_schedule": [10, 10],
+    "protected_episode_limit": 12,
+    "maximum_ordinary_prediction_calls": 180,
+    "outcome_conditioned_rollover": false
+  },
+  "frozen_authority": {
+    "repair_lifecycle": "RESUMED",
+    "consumed_restart_count": 1,
+    "consumed_reissue_count": 1,
+    "new_restart_authority": 0,
+    "new_reissue_authority": 0,
+    "operational_health_model_calls": 0,
+    "training_runs": 0
+  },
+  "service_observation_before_live": {
+    "persistent_ollama_process_observed": false,
+    "observation_used_model_inference": false,
+    "repair_attempted": false,
+    "interpretation": "NO_PRECOMMITTED_RESULT; ORDINARY_EXECUTION_MAY_TERMINATE_AS_OPERATIONAL_FAILURE"
+  },
+  "frozen_behavioral_integrity": {
+    "files_verified_by_sha256": 7,
+    "explorer_unchanged": true,
+    "state_1_policy_unchanged": true,
+    "tie_behavior_unchanged": true,
+    "classifier_unchanged": true,
+    "probe_budget_unchanged": true,
+    "prompts_and_sampler_unchanged": true,
+    "world_and_receipts_unchanged": true,
+    "decision_64_sequence_binding_verified": true
+  },
+  "verification": {
+    "focused_v0_11_tests": 12,
+    "focused_seconds": 0.004,
+    "full_horus_tests": 142,
+    "full_horus_seconds": 26.934,
+    "core_regression_steps": 53,
+    "all_passed": true
+  },
+  "no_result_guaranteed": true
+}
