@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<worktree>/horus/run.py", line 269, in <module>
+    main()
+  File "<worktree>/horus/run.py", line 219, in main
+    artifact = run_grounded_exploration_segment(args.session,
+  File "<worktree>/horus/grounded_exploration.py", line 766, in run_grounded_exploration_segment
+    rows = [runtime.execute_autonomous() for _ in range(plan["decisions"])]
+  File "<worktree>/horus/grounded_exploration.py", line 766, in <listcomp>
+    rows = [runtime.execute_autonomous() for _ in range(plan["decisions"])]
+  File "<worktree>/horus/grounded_exploration.py", line 606, in execute_autonomous
+    if _plain(asdict(pending.prediction)) != _plain(asdict(prediction)):
+AttributeError: 'StepResult' object has no attribute 'prediction'
