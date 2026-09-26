@@ -14,6 +14,9 @@ import secrets
 from typing import Any
 
 from experiments.base_framework_v0.framework import ACTION_ORDER, Prediction
+from experiments.base_framework_v1.framework import (EPISODE_LIMIT,
+                                                      PendingTransaction,
+                                                      StepResult)
 from experiments.realized_event_grounding_v0.framework import evidence
 
 from .core import (BoundPredictionMap, MapForecast, MechanicalExplorer, digest,
@@ -32,6 +35,10 @@ POLICY_PATH = Path(__file__).with_name("grounded_exploration_policy.json")
 DEFAULT_SOURCE_REGISTRY = ROOT / "research/learning-stability-v0/registry"
 EXPLORATION_VERSION = 1
 SEGMENTS = ("A1", "B1", "B2", "A2")
+R2_SEGMENTS = ("R2_A1_1", "R2_A1_2", "R2_B1", "R2_B2", "R2_A2_1",
+               "R2_A2_2")
+PROBLEM_TYPES = ("EXTERNAL_SERVICE_PROBLEM", "INTERNAL_ROUTE_PROBLEM",
+                 "UNRESOLVED_RELATION_PROBLEM")
 
 
 def _document(payload: dict) -> dict:
@@ -338,7 +345,7 @@ class ExplorerConfidenceStore:
         if completion["decision_sequence"] != freeze["decision_sequence"]:
             raise RoutingError("exploration completion identity mismatch")
         replay["attempted_decisions"] += 1
-        if completion["status"] == "ABSTAINED":
+        if completion["status"] in ("ABSTAINED", "FRAMEWORK_REJECTED"):
             return
         if completion["status"] != "AUTHORIZED":
             raise RoutingError("invalid exploration completion status")
@@ -480,6 +487,27 @@ class ExplorerConfidenceStore:
         self._write_state(); self.bind_session(store)
         return _plain(record)
 
+    def complete_rejected(self, store: SessionStore, frozen: dict,
+                          rejected: StepResult, problem: dict) -> dict:
+        if frozen["decision"]["action"] is None or \
+                frozen["decision"]["abstained"] or \
+                rejected.status.value != "REJECTED" or rejected.executed or \
+                rejected.committed or rejected.continued or \
+                problem.get("type") != "INTERNAL_ROUTE_PROBLEM" or \
+                problem.get("authoritative") is not False:
+            raise RoutingError("invalid fail-closed framework rejection")
+        record = dict(decision_sequence=frozen["decision_sequence"],
+            status="FRAMEWORK_REJECTED", action=frozen["decision"]["action"],
+            receipt_identity=None, routing_evidence_sequence=None,
+            framework_reason=rejected.reason, problem=deepcopy(problem),
+            contradiction_started=False, router_switch_occurred=False,
+            contradiction_resolved=False)
+        self._append("EXPLORER_DECISION_COMPLETED", record)
+        self.state["attempted_decisions"] += 1
+        self.state["pending_decision"] = None
+        self._write_state(); self.bind_session(store)
+        return _plain(record)
+
     def complete_authorized(self, store: SessionStore,
                             routing_store: RelationEvidenceStore, frozen: dict,
                             event_envelope: dict, routing_record: dict) -> dict:
@@ -554,6 +582,26 @@ class GroundedExplorationRuntime(RelationRoutedRuntime):
         self.confidence_store = confidence_store
         confidence_store.bind_session(store)
 
+    @staticmethod
+    def _internal_route_problem(rejected: StepResult,
+                                episode_steps: int) -> dict:
+        constraint = ("PROTECTED_EPISODE_LIMIT" if
+                      episode_steps >= EPISODE_LIMIT else
+                      "PROTECTED_CONTINUATION_REFUSAL")
+        problem = dict(type="INTERNAL_ROUTE_PROBLEM",
+            component="execution lifecycle", requested_operation="begin_step",
+            observed_constraint=constraint, protected_limit=EPISODE_LIMIT,
+            episode_steps=episode_steps, authority_result="rejected",
+            framework_reason=rejected.reason, execution_occurred=False,
+            receipt_created=False, memory_mutated=False,
+            routing_evidence_created=False, suggested_need="NEW_RUNTIME_ROUTE",
+            authoritative=False, controls_execution=False,
+            controls_runtime_creation=False, controls_schedule=False,
+            trains_model=False)
+        if problem["type"] not in PROBLEM_TYPES:
+            raise RoutingError("unknown problem type")
+        return problem
+
     def execute_autonomous(self) -> dict:
         capture, batch, batch_sequence, decision_id = self._next_batch()
         previews, selections, routed = self._route_batch(capture, batch)
@@ -603,6 +651,34 @@ class GroundedExplorationRuntime(RelationRoutedRuntime):
         core = self.controller._active.framework.inner
         core.map = BoundPredictionMap(unwrap_map(core.map), prediction)
         pending = self.controller.begin_step(selected.action)
+        if isinstance(pending, StepResult):
+            problem = self._internal_route_problem(pending, core.episode_steps)
+            record = dict(prediction_batch_sequence=batch_sequence,
+                decision_id=decision_id,
+                execution_kind="EXPLORER_FRAMEWORK_REJECTION",
+                action_source="GROUNDED_EXPLORER", status="FRAMEWORK_REJECTED",
+                pre_state=capture["state"], requested_action=selected.action,
+                relation_previews=previews,
+                relation_selections_before=selections,
+                forecasts=public_forecasts, choices=routed["choices"],
+                explorer=explorer, actual_execution=False,
+                receipt_identity=None, routing_evidence=None,
+                framework_result=_plain(asdict(pending)), problem=problem,
+                source_scope=dict(runtime_index=self.store.checkpoint["runtime_index"],
+                                  source_identity=self.store.checkpoint[
+                                      "current_source_identity"]),
+                external_regime_version=self.regime_version,
+                regime_model_visible=False, model_calls=9)
+            self.store.append("training",
+                              "GROUNDED_EXPLORER_FRAMEWORK_REJECTION", record)
+            self.store.save(state=capture["state"],
+                next_transaction_id=capture["transaction_id"],
+                attempted_decision=True)
+            completion = self.confidence_store.complete_rejected(
+                self.store, frozen, pending, problem)
+            return {**_plain(record), "confidence_completion": completion}
+        if not isinstance(pending, PendingTransaction):
+            raise RoutingError("begin_step returned an unknown result type")
         if _plain(asdict(pending.prediction)) != _plain(asdict(prediction)):
             raise RoutingError("grounded Explorer prediction was not latched")
         if self.controller._source.reader().current() is not None:
@@ -729,13 +805,40 @@ def _segment_expectation(segment: str) -> dict:
     }[segment]
 
 
+def _r2_segment_expectation(segment: str) -> dict:
+    return {
+        "R2_A1_1": dict(resume=False, attempts=0, batches=0, runtime=0,
+                        regime="A", transition=False, decisions=9,
+                        decision_range=[1, 9]),
+        "R2_A1_2": dict(resume=True, attempts=9, batches=9, runtime=1,
+                        regime="A", transition=False, decisions=9,
+                        decision_range=[10, 18]),
+        "R2_B1": dict(resume=True, attempts=18, batches=18, runtime=2,
+                      regime="B", transition=True, decisions=9,
+                      decision_range=[19, 27]),
+        "R2_B2": dict(resume=True, attempts=27, batches=27, runtime=3,
+                      regime="B", transition=False, decisions=9,
+                      decision_range=[28, 36]),
+        "R2_A2_1": dict(resume=True, attempts=36, batches=36, runtime=4,
+                        regime="A", transition=True, decisions=9,
+                        decision_range=[37, 45]),
+        "R2_A2_2": dict(resume=True, attempts=45, batches=45, runtime=5,
+                        regime="A", transition=False, decisions=9,
+                        decision_range=[46, 54]),
+    }[segment]
+
+
 def run_grounded_exploration_segment(session: Path, exploration_registry: Path,
                                      segment: str, resume: bool,
                                      joint_client=None,
-                                     specialist_clients=None) -> dict:
-    if segment not in SEGMENTS:
+                                     specialist_clients=None,
+                                     runtime_schedule: str = "V0") -> dict:
+    if runtime_schedule == "V0" and segment in SEGMENTS:
+        plan = _segment_expectation(segment)
+    elif runtime_schedule == "R2" and segment in R2_SEGMENTS:
+        plan = _r2_segment_expectation(segment)
+    else:
         raise RoutingError("unknown grounded-exploration segment")
-    plan = _segment_expectation(segment)
     if resume != plan["resume"]:
         raise RoutingError("segment resume mode differs from frozen schedule")
     exploration = load_grounded_exploration_registry(exploration_registry)
@@ -760,6 +863,17 @@ def run_grounded_exploration_segment(session: Path, exploration_registry: Path,
             raise RoutingError(f"segment start differs from frozen schedule: {actual}")
         if confidence_store.state["attempted_decisions"] != plan["attempts"]:
             raise RoutingError("confidence schedule position differs")
+        rollover_input = dict(
+            prior_runtime_index=store.checkpoint["runtime_index"],
+            prior_attempted_decisions=store.checkpoint["attempted_decisions"],
+            prior_authorized_events=len(store.records["events"]),
+            prior_routing_evidence=len(routing_store.records),
+            prior_confidence_state_sha256=digest({key: confidence_store.state[key]
+                for key in ("attempted_decisions", "authorized_decisions",
+                            "last_probe_decision_sequence",
+                            "last_probe_authorized_decision",
+                            "last_execution_by_relation",
+                            "unresolved_contradictions")}))
         store.configure_regime(plan["regime"], plan["transition"])
         runtime = GroundedExplorationRuntime(store, joint, specialist_clients,
             relation_registry, routing_store, confidence_store, plan["regime"])
@@ -767,6 +881,8 @@ def run_grounded_exploration_segment(session: Path, exploration_registry: Path,
         calls = joint.requests - joint_before + sum(
             specialist_clients[key].requests - before[key] for key in SPECIALISTS)
         return dict(mode="grounded-exploration-live", segment=segment,
+            runtime_schedule=runtime_schedule,
+            registered_decision_range=plan.get("decision_range"),
             session_id=store.checkpoint["session_id"], session=str(store.directory),
             resumed=resume, runtime_index=store.checkpoint["runtime_index"],
             epoch=store.checkpoint["current_epoch"], rows=rows,
@@ -778,6 +894,7 @@ def run_grounded_exploration_segment(session: Path, exploration_registry: Path,
             relation_state=deepcopy(routing_store.state["relations"]),
             consequence_specialists=relation_registry["payload"]["specialists"],
             external_regime_version=plan["regime"], regime_model_visible=False,
+            rollover_input=rollover_input,
             checkpoint=_plain(store.checkpoint))
 
 
@@ -802,7 +919,8 @@ def _forecast_tuple(forecasts: dict) -> tuple[MapForecast, ...]:
 
 def analyze_grounded_exploration_campaign(session: Path,
                                           exploration_registry: Path,
-                                          output: Path) -> dict:
+                                          output: Path,
+                                          runtime_schedule: str = "V0") -> dict:
     if output.exists():
         raise RoutingError("grounded exploration report output already exists")
     policy = json.loads(POLICY_PATH.read_text())
@@ -838,6 +956,7 @@ def analyze_grounded_exploration_campaign(session: Path,
 
     batches: dict[tuple[int, int], list[str]] = {}
     artifact_checks: dict[int, dict[str, set]] = {}
+    epoch_ids_by_runtime: dict[int, set[int]] = {}
     hidden_prompt_checks = 0
     for row in requests:
         record = row["record"]
@@ -854,6 +973,8 @@ def analyze_grounded_exploration_campaign(session: Path,
         if epoch_token is None or batch_token is None:
             raise RoutingError("grounded-exploration call identity is malformed")
         runtime = int(epoch_token[1:]) - 2000
+        epoch_ids_by_runtime.setdefault(runtime, set()).add(
+            int(epoch_token[1:]))
         batch = int(batch_token[1:])
         batches.setdefault((runtime, batch), []).append(record["role"])
         if record["role"].startswith("routed-consequence:"):
@@ -868,7 +989,12 @@ def analyze_grounded_exploration_campaign(session: Path,
     if len(batches) != 54 or any(Counter(roles) != required_roles
                                 for roles in batches.values()):
         raise RoutingError("prediction batch role cardinality mismatch")
-    expected_batches = {1: 18, 2: 9, 3: 9, 4: 18}
+    expected_batches = ({1: 18, 2: 9, 3: 9, 4: 18}
+                        if runtime_schedule == "V0" else
+                        {runtime: 9 for runtime in range(1, 7)}
+                        if runtime_schedule == "R2" else None)
+    if expected_batches is None:
+        raise RoutingError("unknown grounded-exploration runtime schedule")
     batches_by_runtime = dict(Counter(runtime for runtime, _ in batches))
     if batches_by_runtime != expected_batches:
         raise RoutingError(f"runtime schedule differs: {batches_by_runtime}")
@@ -1104,6 +1230,23 @@ def analyze_grounded_exploration_campaign(session: Path,
     reason_counts = Counter(row["reason"] for row in probe_rows)
     phase_counts = Counter(_phase(row["prediction_batch_sequence"])[0]
                            for row in training)
+    internal_route_problems = [deepcopy(row["problem"]) | dict(
+        decision_sequence=row["prediction_batch_sequence"])
+        for row in training if row.get("problem", {}).get("type") ==
+        "INTERNAL_ROUTE_PROBLEM"]
+    execution_counter = Counter(row["source_scope"]["runtime_index"]
+                                for row in events)
+    runtime_execution_counts = {runtime: execution_counter[runtime]
+                                for runtime in expected_batches}
+    runtime_memory_imports = {runtime: max((row.get(
+        "imported_pre_restart_records", 0) for row in training
+        if row["source_scope"]["runtime_index"] == runtime), default=0)
+        for runtime in expected_batches}
+    staleness_reasons = [row for row in probe_rows
+                         if row["reason"] == "PROBE_STALE"]
+    minimum_probe_rate = min(row["rate"] for row in probe_rates.values())
+    worst_windows = [name for name, row in probe_rates.items()
+                     if row["rate"] == minimum_probe_rate]
     source_identities = sorted({row["source_scope"]["source_identity"]
                                 for row in training})
     b_runtimes = sorted({row["source_scope"]["runtime_index"] for row in training
@@ -1117,6 +1260,8 @@ def analyze_grounded_exploration_campaign(session: Path,
         model_calls_by_role=dict(Counter(row["record"]["role"] for row in requests)),
         autonomous_decision_attempts=checkpoint["attempted_decisions"],
         autonomous_executions=len(events), abstentions=len(abstained_rows),
+        framework_rejections=len(internal_route_problems),
+        internal_route_problems=internal_route_problems,
         execution_kind_counts=dict(Counter(row["execution_kind"] for row in events)),
         phase_decision_counts=dict(phase_counts),
         probe_count=len(probe_rows), probe_count_by_reason=dict(reason_counts),
@@ -1124,7 +1269,19 @@ def analyze_grounded_exploration_campaign(session: Path,
         useful_probes=sum(row["useful"] for row in probe_rows),
         redundant_probes=sum(not row["useful"] for row in probe_rows),
         probe_rates=probe_rates, relation_coverage_timeline=coverage_timeline,
+        staleness_behavior=dict(stale_probes=len(staleness_reasons),
+                                decisions=staleness_reasons),
+        worst_exploration_window=dict(rate=minimum_probe_rate,
+                                      phase_halves=worst_windows),
         final_relation_coverage_by_encountered_state=final_coverage,
+        unresolved_relations_at_end=sum(row["relations_unresolved"]
+                                        for row in final_coverage),
+        action_trajectory=[dict(decision_sequence=row["decision_sequence"],
+            phase=row["phase"], pre_state=row["pre_state"], mode=row["mode"],
+            action=row["action"], status=row["status"],
+            realized_consequence=row["realized_consequence"])
+            for row in sorted(probe_rows + exploit_rows + abstained_rows,
+                              key=lambda value: value["decision_sequence"])],
         target_relation_trace=target_trace,
         target_relation_switches=target_switches,
         routing_switch_probe_dependencies=switch_dependencies,
@@ -1137,17 +1294,28 @@ def analyze_grounded_exploration_campaign(session: Path,
                                            for row in offline_rows),
             counterfactual_receipts_created=0,
             actual_relations_with_evidence=len(final_route_state["relations"])),
-        restart_proof=dict(B_runtime_indices=b_runtimes,
+        restart_proof=dict(runtime_schedule=runtime_schedule,
+            B_runtime_indices=b_runtimes,
             runtime_indices=sorted({row["source_scope"]["runtime_index"]
                                     for row in training}),
             batches_by_runtime=batches_by_runtime,
+            executions_by_runtime=runtime_execution_counts,
+            imported_memory_records_by_runtime=runtime_memory_imports,
             source_identities=source_identities,
+            epoch_ids_by_runtime={runtime: sorted(values) for runtime, values in
+                                  epoch_ids_by_runtime.items()},
             confidence_exact_replay=True,
             confidence_decisions_before_restart=27,
             confidence_decisions_after_restart=27,
             specialist_artifacts_reverified_on_every_runtime=artifacts_reverified,
             artifact_verifications_by_runtime=artifact_verification,
-            fresh_source_and_epoch_per_runtime=len(source_identities) == 4),
+            maximum_attempts_per_runtime=max(batches_by_runtime.values()),
+            protected_episode_limit=EPISODE_LIMIT,
+            fresh_source_and_epoch_per_runtime=(
+                len(source_identities) == len(expected_batches) and
+                len(epoch_ids_by_runtime) == len(expected_batches) and
+                all(len(values) == 1 for values in
+                    epoch_ids_by_runtime.values()))),
         memory_chronology=[dict(decision_sequence=row["prediction_batch_sequence"],
             pre_state=row["receipt"]["pre_state"], action=row["receipt"]["action"],
             realized_consequence=row["receipt"]["realized_consequence"],

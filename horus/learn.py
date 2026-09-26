@@ -94,6 +94,7 @@ def main(argv=None):
     p.add_argument("--session", type=Path, required=True)
     p.add_argument("--exploration-registry", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
+    p.add_argument("--runtime-schedule", choices=("V0", "R2"), default="V0")
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -152,7 +153,8 @@ def main(argv=None):
             args.exploration_registry, args.source_registry)
     else:
         result = analyze_grounded_exploration_campaign(
-            args.session, args.exploration_registry, args.output)
+            args.session, args.exploration_registry, args.output,
+            runtime_schedule=args.runtime_schedule)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

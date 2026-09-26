@@ -7,9 +7,11 @@ from tempfile import TemporaryDirectory
 import unittest
 
 from experiments.base_framework_v0.framework import ACTION_ORDER, MapModel
+from experiments.base_framework_v1.framework import CrossAuthorityState, StepResult
 
-from .core import MapForecast
-from .grounded_exploration import (ExplorerConfidenceStore, GroundedExplorer,
+from .core import MapForecast, digest
+from .grounded_exploration import (ExplorerConfidenceStore,
+    GroundedExplorationRuntime, GroundedExplorer,
     analyze_grounded_exploration_campaign,
     initialize_grounded_exploration_registry,
     load_grounded_exploration_registry, run_grounded_exploration_segment)
@@ -260,6 +262,117 @@ class GroundedExplorationCampaignTests(unittest.TestCase):
                 ExplorerConfidenceStore(self.root)
         finally:
             path.write_text(original)
+
+
+class GroundedExplorationR2ScheduleTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        cls.root, cls.session, cls.report = (base / "registry", base / "session",
+                                             base / "report.json")
+        initialize_grounded_exploration_registry(cls.root)
+        registry = load_grounded_exploration_registry(cls.root)["relation_registry"]
+        cls.segments = []
+        for segment, resume in (("R2_A1_1", False), ("R2_A1_2", True),
+                                ("R2_B1", True), ("R2_B2", True),
+                                ("R2_A2_1", True), ("R2_A2_2", True)):
+            cls.segments.append(run_grounded_exploration_segment(
+                cls.session, cls.root, segment, resume,
+                joint_client=JointClient(), specialist_clients=clients(registry),
+                runtime_schedule="R2"))
+        cls.result = analyze_grounded_exploration_campaign(
+            cls.session, cls.root, cls.report, runtime_schedule="R2")
+
+    @classmethod
+    def tearDownClass(cls): cls.tmp.cleanup()
+
+    def test_17_fixed_nine_plus_nine_rollover_completes_phase(self):
+        first, second = self.segments[:2]
+        self.assertEqual((first["registered_decision_range"],
+                          second["registered_decision_range"]),
+                         ([1, 9], [10, 18]))
+        self.assertEqual(sum(len(row["rows"]) for row in self.segments[:2]), 18)
+        self.assertEqual(self.result["phase_decision_counts"]["A1"], 18)
+
+    def test_18_each_registered_runtime_is_bounded_to_nine(self):
+        proof = self.result["restart_proof"]
+        self.assertEqual(proof["batches_by_runtime"],
+                         {runtime: 9 for runtime in range(1, 7)})
+        self.assertLessEqual(max(proof["executions_by_runtime"].values()), 9)
+        self.assertEqual(proof["maximum_attempts_per_runtime"], 9)
+        self.assertEqual(proof["protected_episode_limit"], 12)
+
+    def test_19_memory_routing_and_confidence_survive_rollover(self):
+        first, second = self.segments[:2]
+        self.assertEqual(second["rollover_input"]["prior_attempted_decisions"], 9)
+        self.assertEqual(second["rollover_input"]["prior_authorized_events"],
+                         first["checkpoint"]["completed_steps"])
+        self.assertEqual(second["rollover_input"]["prior_routing_evidence"],
+                         first["checkpoint"]["completed_steps"])
+        self.assertGreater(second["rollover_input"]["prior_authorized_events"], 0)
+        imported = [row.get("imported_pre_restart_records", 0)
+                    for row in second["rows"] if row["status"] == "AUTHORIZED"]
+        self.assertTrue(imported and max(imported) > 0)
+        self.assertEqual(second["rollover_input"]["prior_confidence_state_sha256"],
+                         digest({key: first["confidence_state"][key] for key in
+                            ("attempted_decisions", "authorized_decisions",
+                             "last_probe_decision_sequence",
+                             "last_probe_authorized_decision",
+                             "last_execution_by_relation",
+                             "unresolved_contradictions")}))
+
+    def test_20_every_rollover_has_fresh_source_and_epoch(self):
+        proof = self.result["restart_proof"]
+        self.assertEqual(proof["runtime_indices"], list(range(1, 7)))
+        self.assertTrue(proof["fresh_source_and_epoch_per_runtime"])
+        self.assertEqual(proof["B_runtime_indices"], [3, 4])
+
+    def test_21_r2_prompts_retain_hidden_state_exclusion(self):
+        self.assertEqual(self.result["hidden_regime_prompt_checks"], 486)
+        self.assertEqual(self.result["calibration_executions"], 0)
+
+
+class GroundedExplorationFrameworkRejectionTests(unittest.TestCase):
+    def test_22_rejected_step_result_is_recorded_without_execution(self):
+        with TemporaryDirectory() as directory:
+            base = Path(directory); root = base / "registry"; session = base / "session"
+            initialize_grounded_exploration_registry(root)
+            relation = load_grounded_exploration_registry(root)["relation_registry"]
+            with SessionStore(session, False) as store, \
+                    RelationEvidenceStore(root) as routing, \
+                    ExplorerConfidenceStore(root) as confidence:
+                store.configure_regime("A", False)
+                runtime = GroundedExplorationRuntime(store, JointClient(),
+                    clients(relation), relation, routing, confidence, "A")
+                rejected = StepResult(1, CrossAuthorityState.REJECTED, "ADVANCE",
+                    False, False, False, False, False, False,
+                    "begin validation failed")
+                runtime.controller.begin_step = lambda action: rejected
+                row = runtime.execute_autonomous()
+                self.assertEqual(row["status"], "FRAMEWORK_REJECTED")
+                self.assertEqual(len(store.records["events"]), 0)
+                self.assertEqual(len(routing.records), 0)
+                self.assertIsNone(runtime.controller._source.reader().current())
+                self.assertIsNone(runtime.controller._active.framework.inner.pending)
+                self.assertFalse(hasattr(rejected, "prediction"))
+                self.assertEqual(confidence.state["attempted_decisions"], 1)
+                self.assertEqual(confidence.state["authorized_decisions"], 0)
+
+    def test_23_internal_problem_is_non_authoritative(self):
+        rejected = StepResult(13, CrossAuthorityState.REJECTED, "HOLD",
+            False, False, False, False, False, False,
+            "begin validation failed")
+        problem = GroundedExplorationRuntime._internal_route_problem(rejected, 12)
+        self.assertEqual(problem["type"], "INTERNAL_ROUTE_PROBLEM")
+        self.assertEqual(problem["observed_constraint"],
+                         "PROTECTED_EPISODE_LIMIT")
+        self.assertEqual(problem["suggested_need"], "NEW_RUNTIME_ROUTE")
+        for field in ("authoritative", "controls_execution",
+                      "controls_runtime_creation", "controls_schedule",
+                      "trains_model", "execution_occurred", "receipt_created",
+                      "memory_mutated", "routing_evidence_created"):
+            self.assertIs(problem[field], False)
 
 
 if __name__ == "__main__":
