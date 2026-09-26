@@ -1,0 +1,497 @@
+{
+  "authorization_envelope": {
+    "hmac_sha256": "efcccf8a2d76da71576529ce4971f2664b3fa398e49497a0be2d2d4592c5d0c2",
+    "kind": "OPTION_PROFILE_BEHAVIORAL_INTEGRATION_AUTHORIZED",
+    "previous_sha256": "9507e71d1de5c6acdb755d86a4b855c862be10ca5b40596cb5f434249d091c07",
+    "record": {
+      "authorization_sha256": "b112a70071d510a3f24aa44fdc093936312894f42c433c2e785e8db092b533b5",
+      "problem_id": "PR-0002",
+      "profile_evidence_sha256": "54fc0a6f95195329d0a033b272b2305175fcdd224581705f3a605e0dcb2d6214",
+      "recorded_at": "2026-09-26T23:00:41.167053+00:00",
+      "result": "RETREAT_PROFILE_DOMINATES",
+      "selected_action": "RETREAT"
+    },
+    "sequence": 37
+  },
+  "frozen_before_receipt": true,
+  "frozen_decision_envelope": {
+    "hmac_sha256": "eebeedfed6cb2b12b6ded0dbcb55dbb77cb50f78cee4fb721d4193db4ea23c27",
+    "kind": "OPTION_PROFILE_DECISION_FROZEN",
+    "previous_sha256": "c9d4c770fba88f7a0e649f150a5f60432a534028639f329b7f6034cb57fbabdc",
+    "record": {
+      "counterfactual_outcomes_available": false,
+      "current_predictions_sha256": "11009f42fa09f2dbab1d0dea5c59a76211ff08f43c4b1ec2b784ddef98a2d5f4",
+      "decision_sequence": 86,
+      "final_decision": {
+        "abstained": false,
+        "action": "RETREAT",
+        "coverage": {
+          "legal_relations": 3,
+          "relations_recently_grounded": 2,
+          "relations_unresolved": 1,
+          "relations_with_authenticated_evidence": 3,
+          "state": 2
+        },
+        "decision_sequence": 86,
+        "mode": "EXPLOIT",
+        "ordinary_decision_sha256": "0ec0f85d054ab489d8192b73918dcc156f859b8e29d92793cc1ed3a600c54c04",
+        "probe_budget_available": false,
+        "problem_id": "PR-0002",
+        "qualifying_probe_blocked_by_budget": true,
+        "reason": "OPTION_PROFILE_DOMINANCE",
+        "relation_confidence": {
+          "ADVANCE": {
+            "authenticated_observations": 4,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 3,
+                "total": 4
+              },
+              "G3": {
+                "correct": 3,
+                "total": 4
+              }
+            },
+            "most_recent_observation_sequence": 51,
+            "observations_since_last_execution": 3,
+            "qualifying_probe_reasons": [],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "ADVANCE",
+              "identity_sha256": "107c317185f6e7f69aff78223daf8b2e38fcaf74f524da872c0eec88c423e5d9",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "HOLD": {
+            "authenticated_observations": 2,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 2
+              },
+              "G3": {
+                "correct": 2,
+                "total": 2
+              }
+            },
+            "most_recent_observation_sequence": 3,
+            "observations_since_last_execution": 51,
+            "qualifying_probe_reasons": [
+              "PROBE_STALE"
+            ],
+            "recent_correctness": {
+              "G2": [
+                true,
+                true
+              ],
+              "G3": [
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              0,
+              0
+            ],
+            "relation": {
+              "action": "HOLD",
+              "identity_sha256": "46c42d8d1d2467e8981c7d17c7ba514acd00b0ae70c611d2e7a2b1a48fa95960",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "RETREAT": {
+            "authenticated_observations": 4,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 3,
+                "total": 4
+              },
+              "G3": {
+                "correct": 3,
+                "total": 4
+              }
+            },
+            "most_recent_observation_sequence": 53,
+            "observations_since_last_execution": 1,
+            "qualifying_probe_reasons": [],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "RETREAT",
+              "identity_sha256": "032c97fe60323ff83684ce552f5a9572e4fb352db1590b3993c9a6cac4fd82a7",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          }
+        },
+        "route_broker": {
+          "authoritative": false,
+          "broker_result": "EXPLICIT_V017_AUTHORIZATION",
+          "global": false,
+          "one_use": true,
+          "selected_route": "OPTION_PROFILE_DOMINANCE"
+        }
+      },
+      "forecasts": {
+        "ADVANCE": {
+          "G2_consequence": 1,
+          "G2_failure": null,
+          "G3_consequence": 1,
+          "G3_failure": null,
+          "action_alias": "K1",
+          "history_count": 4,
+          "next_state": 3,
+          "routed_consequence": 1,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "HOLD": {
+          "G2_consequence": 0,
+          "G2_failure": null,
+          "G3_consequence": 0,
+          "G3_failure": null,
+          "action_alias": "K2",
+          "history_count": 2,
+          "next_state": 2,
+          "routed_consequence": 0,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "RETREAT": {
+          "G2_consequence": 1,
+          "G2_failure": null,
+          "G3_consequence": 1,
+          "G3_failure": null,
+          "action_alias": "K3",
+          "history_count": 4,
+          "next_state": 1,
+          "routed_consequence": 1,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        }
+      },
+      "frozen_before_external_execution": true,
+      "future_consequence_available": false,
+      "hidden_regime_available": false,
+      "ordinary_decision": {
+        "abstained": true,
+        "action": null,
+        "coverage": {
+          "legal_relations": 3,
+          "relations_recently_grounded": 2,
+          "relations_unresolved": 1,
+          "relations_with_authenticated_evidence": 3,
+          "state": 2
+        },
+        "decision_sequence": 86,
+        "mode": "EXPLOIT",
+        "probe_budget_available": false,
+        "qualifying_probe_blocked_by_budget": true,
+        "reason": "EXPLOIT_TIED_MAXIMUM",
+        "relation_confidence": {
+          "ADVANCE": {
+            "authenticated_observations": 4,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 3,
+                "total": 4
+              },
+              "G3": {
+                "correct": 3,
+                "total": 4
+              }
+            },
+            "most_recent_observation_sequence": 51,
+            "observations_since_last_execution": 3,
+            "qualifying_probe_reasons": [],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "ADVANCE",
+              "identity_sha256": "107c317185f6e7f69aff78223daf8b2e38fcaf74f524da872c0eec88c423e5d9",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "HOLD": {
+            "authenticated_observations": 2,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 2
+              },
+              "G3": {
+                "correct": 2,
+                "total": 2
+              }
+            },
+            "most_recent_observation_sequence": 3,
+            "observations_since_last_execution": 51,
+            "qualifying_probe_reasons": [
+              "PROBE_STALE"
+            ],
+            "recent_correctness": {
+              "G2": [
+                true,
+                true
+              ],
+              "G3": [
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              0,
+              0
+            ],
+            "relation": {
+              "action": "HOLD",
+              "identity_sha256": "46c42d8d1d2467e8981c7d17c7ba514acd00b0ae70c611d2e7a2b1a48fa95960",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "RETREAT": {
+            "authenticated_observations": 4,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 3,
+                "total": 4
+              },
+              "G3": {
+                "correct": 3,
+                "total": 4
+              }
+            },
+            "most_recent_observation_sequence": 53,
+            "observations_since_last_execution": 1,
+            "qualifying_probe_reasons": [],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "RETREAT",
+              "identity_sha256": "032c97fe60323ff83684ce552f5a9572e4fb352db1590b3993c9a6cac4fd82a7",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          }
+        }
+      },
+      "ordinary_decision_sha256": "0ec0f85d054ab489d8192b73918dcc156f859b8e29d92793cc1ed3a600c54c04",
+      "pre_state": 2,
+      "problem_id": "PR-0002",
+      "profile_evidence_sha256": "54fc0a6f95195329d0a033b272b2305175fcdd224581705f3a605e0dcb2d6214",
+      "profiles": {
+        "ADVANCE": [
+          {
+            "current_action": "ADVANCE",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 1,
+            "second_action": "RETREAT",
+            "sequence": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "current_action": "ADVANCE",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 2,
+            "second_action": "HOLD",
+            "sequence": [
+              1,
+              0,
+              1
+            ]
+          },
+          {
+            "current_action": "ADVANCE",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 3,
+            "second_action": "ADVANCE",
+            "sequence": [
+              1,
+              -1,
+              1
+            ]
+          }
+        ],
+        "RETREAT": [
+          {
+            "current_action": "RETREAT",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 1,
+            "second_action": "ADVANCE",
+            "sequence": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "current_action": "RETREAT",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 2,
+            "second_action": "HOLD",
+            "sequence": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "current_action": "RETREAT",
+            "provenance": {
+              "c0": "AUTHENTICATED_RECEIPT",
+              "c1": "MODEL_FORECAST",
+              "c2": "MODEL_FORECAST",
+              "state1": "AUTHENTICATED_RECEIPT",
+              "state2": "MODEL_FORECAST"
+            },
+            "rank": 3,
+            "second_action": "RETREAT",
+            "sequence": [
+              1,
+              0,
+              1
+            ]
+          }
+        ]
+      },
+      "profiles_sha256": "1437dd4e699c52b985446b1a28505a21ddfc1cab95a8518f42a6b0915fcc3425",
+      "recorded_at": "2026-09-26T23:02:02.400162+00:00",
+      "result": "RETREAT_PROFILE_DOMINATES",
+      "selected_action": "RETREAT",
+      "simulator_law_available": false
+    },
+    "sequence": 38
+  },
+  "identity": "HORUS_V017_AUTHORIZATION_AND_FROZEN_DECISION"
+}
