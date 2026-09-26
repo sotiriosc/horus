@@ -12,6 +12,8 @@ from .stability_cycle import (collect_regime_shift, initialize_stability_registr
 from .routing import (analyze_routing_campaign, initialize_routing_registry)
 from .relation_routing import (analyze_relation_routing_campaign,
                                initialize_relation_routing_registry)
+from .grounded_exploration import (analyze_grounded_exploration_campaign,
+                                   initialize_grounded_exploration_registry)
 
 
 def main(argv=None):
@@ -84,6 +86,14 @@ def main(argv=None):
     p.add_argument("--session", type=Path, required=True)
     p.add_argument("--routing-registry", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
+    p = commands.add_parser("init-grounded-exploration")
+    p.add_argument("--source-registry", type=Path,
+                   default=Path("research/learning-stability-v0/registry"))
+    p.add_argument("--exploration-registry", type=Path, required=True)
+    p = commands.add_parser("grounded-exploration-report")
+    p.add_argument("--session", type=Path, required=True)
+    p.add_argument("--exploration-registry", type=Path, required=True)
+    p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -134,9 +144,15 @@ def main(argv=None):
     elif args.command == "init-relation-routing":
         result = initialize_relation_routing_registry(args.routing_registry,
                                                       args.source_registry)
-    else:
+    elif args.command == "relation-routing-report":
         result = analyze_relation_routing_campaign(
             args.session, args.routing_registry, args.output)
+    elif args.command == "init-grounded-exploration":
+        result = initialize_grounded_exploration_registry(
+            args.exploration_registry, args.source_registry)
+    else:
+        result = analyze_grounded_exploration_campaign(
+            args.session, args.exploration_registry, args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

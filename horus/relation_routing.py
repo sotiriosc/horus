@@ -441,7 +441,8 @@ class RelationEvidenceStore:
             raise RoutingError("receipt was not the next authenticated routing event")
         event = event_envelope["record"]
         if event.get("execution_kind") != execution_kind or execution_kind not in (
-                "ROUTING_CALIBRATION_EXECUTION", "EXPLORER_SELECTED_EXECUTION"):
+                "ROUTING_CALIBRATION_EXECUTION", "EXPLORER_SELECTED_EXECUTION",
+                "EXPLORER_PROBE_EXECUTION", "EXPLORER_EXPLOIT_EXECUTION"):
             raise RoutingError("invalid execution-kind provenance")
         self._validate_commitment(store, commitment, event)
         receipt = event["receipt"]

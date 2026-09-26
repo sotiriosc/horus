@@ -146,6 +146,40 @@ def render_relation_routed(artifact):
     print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
 
 
+def render_grounded_exploration(artifact):
+    print(f"Horus grounded-exploration session: {artifact['session_id']}")
+    print(f"Segment {artifact['segment']} / runtime {artifact['runtime_index']} / "
+          f"epoch {artifact['epoch']}")
+    for row in artifact["rows"]:
+        explorer = row["explorer"]
+        print(f"\nDecision {row['prediction_batch_sequence']}")
+        print(f"State: {row['pre_state'] if 'pre_state' in row else row['state']}")
+        for action, confidence in explorer["relation_confidence"].items():
+            forecasts = row["forecasts"][action]
+            print(f"Relation {action}: specialist={confidence['selected_specialist']} "
+                  f"G2={forecasts['G2_consequence']} "
+                  f"G3={forecasts['G3_consequence']} "
+                  f"observations={confidence['authenticated_observations']} "
+                  f"status={','.join(confidence['qualifying_probe_reasons']) or 'GROUNDED'}")
+        print(f"Explorer: mode={explorer['mode']} action={explorer['action']} "
+              f"reason={explorer['reason']}")
+        if row["status"] == "ABSTAINED":
+            print("Executed: no (invalid or tied component set failed closed)")
+            continue
+        print(f"Receipt: {row['receipt']['action']} -> "
+              f"{row['receipt']['realized_consequence']}")
+        print("Memory: published")
+        route = row["routing_evidence"]
+        score = route["router_score_after"]
+        print(f"Relation router: G2={score['G2']['correct']}/{score['G2']['total']} "
+              f"G3={score['G3']['correct']}/{score['G3']['total']}")
+        if route["switch_occurred"]:
+            print(f"SWITCH {route['selected_specialist']} -> "
+                  f"{route['selected_specialist_after']}")
+    print(f"\nActual model calls this process: {artifact['actual_model_calls']}")
+    print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Run the bounded Horus v0 closed loop")
     parser.add_argument("--output", type=Path, default=Path("horus-v0-run.json"))
@@ -156,12 +190,13 @@ def main(argv=None):
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--consequence-model",
                         choices=("mixtral", "base", "trained", "active", "routed",
-                                 "relation-routed"),
+                                 "relation-routed", "grounded-exploration"),
                         default="mixtral")
     parser.add_argument("--trained-adapter", type=Path)
     parser.add_argument("--model-registry", type=Path)
     parser.add_argument("--routing-registry", type=Path)
     parser.add_argument("--relation-segment", choices=("A1", "B1", "B2", "A2"))
+    parser.add_argument("--exploration-segment", choices=("A1", "B1", "B2", "A2"))
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
     parser.add_argument("--external-regime", choices=("A", "B"), default="A",
@@ -177,6 +212,14 @@ def main(argv=None):
         from .live import run_live
         consequence_client = None
         active_spec = None
+        if args.consequence_model == "grounded-exploration":
+            if args.routing_registry is None or args.exploration_segment is None:
+                parser.error("grounded-exploration requires --routing-registry and --exploration-segment")
+            from .grounded_exploration import run_grounded_exploration_segment
+            artifact = run_grounded_exploration_segment(args.session,
+                args.routing_registry, args.exploration_segment, args.resume)
+            render_grounded_exploration(artifact)
+            return
         if args.consequence_model == "relation-routed":
             if args.routing_registry is None or args.relation_segment is None:
                 parser.error("relation-routed requires --routing-registry and --relation-segment")
