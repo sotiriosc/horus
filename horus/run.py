@@ -111,6 +111,41 @@ def render_routed(artifact):
     print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
 
 
+def render_relation_routed(artifact):
+    print(f"Horus relation-routed session: {artifact['session_id']}")
+    print(f"Segment {artifact['segment']} / runtime {artifact['runtime_index']} / "
+          f"epoch {artifact['epoch']}")
+    for row in artifact["rows"]:
+        print(f"\nPrediction batch {row['prediction_batch_sequence']}: "
+              f"{row['execution_kind']}")
+        print("Relation selections: " + ", ".join(
+            f"{action}={specialist}" for action, specialist in
+            row["relation_selections_before"].items()))
+        print("Explorer comparisons: " + ", ".join(
+            f"{name}={choice['action']}" for name, choice in row["choices"].items()))
+        if row.get("status") == "ABSTAINED":
+            print("Executed: no (relation-routed component set failed closed)")
+        elif row["execution_kind"] == "COMPARISON_ONLY_NO_EXECUTION":
+            print("Executed: no (frozen comparison-only path)")
+        else:
+            receipt = row["receipt"]
+            print(f"Executed: {receipt['action']} ({row['action_source']})")
+            print(f"Receipt: consequence={receipt['realized_consequence']}, "
+                  f"identity={[receipt['source_identity'], receipt['event_id'], receipt['epoch'], receipt['transaction_id']]}")
+            route = row["routing_evidence"]
+            if route["switch_occurred"]:
+                relation = route["relation"]
+                print(f"RELATION ROUTER SWITCH ({relation['pre_state']}, "
+                      f"{relation['action']}): {route['selected_specialist']} -> "
+                      f"{route['selected_specialist_after']}")
+                print(f"reason: {route['switch_reason']}")
+    target = artifact["target_relation"]
+    print(f"\nTarget relation selected: {target['selected_specialist']}")
+    print(f"Target local scores: {target['scores']}")
+    print(f"Actual model calls this process: {artifact['actual_model_calls']}")
+    print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Run the bounded Horus v0 closed loop")
     parser.add_argument("--output", type=Path, default=Path("horus-v0-run.json"))
@@ -120,11 +155,13 @@ def main(argv=None):
     parser.add_argument("--session", type=Path)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--consequence-model",
-                        choices=("mixtral", "base", "trained", "active", "routed"),
+                        choices=("mixtral", "base", "trained", "active", "routed",
+                                 "relation-routed"),
                         default="mixtral")
     parser.add_argument("--trained-adapter", type=Path)
     parser.add_argument("--model-registry", type=Path)
     parser.add_argument("--routing-registry", type=Path)
+    parser.add_argument("--relation-segment", choices=("A1", "B1", "B2", "A2"))
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
     parser.add_argument("--external-regime", choices=("A", "B"), default="A",
@@ -140,6 +177,14 @@ def main(argv=None):
         from .live import run_live
         consequence_client = None
         active_spec = None
+        if args.consequence_model == "relation-routed":
+            if args.routing_registry is None or args.relation_segment is None:
+                parser.error("relation-routed requires --routing-registry and --relation-segment")
+            from .relation_routing import run_relation_segment
+            artifact = run_relation_segment(args.session, args.routing_registry,
+                args.relation_segment, args.resume)
+            render_relation_routed(artifact)
+            return
         if args.consequence_model == "routed":
             if args.routing_registry is None:
                 parser.error("--consequence-model routed requires --routing-registry")
