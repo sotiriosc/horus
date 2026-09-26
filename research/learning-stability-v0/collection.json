@@ -1,0 +1,353 @@
+{
+  "active_artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+  "active_generation": 2,
+  "authorized": 60,
+  "consequence_distribution": {
+    "-1": 12,
+    "0": 36,
+    "1": 12
+  },
+  "contradictory_state_action_pairs": [
+    {
+      "action": "HOLD",
+      "regime_A": [
+        1
+      ],
+      "regime_B": [
+        -1
+      ],
+      "state": 1
+    }
+  ],
+  "endurance_windows": {
+    "early": {
+      "accuracy": 0.55,
+      "action_distribution": {
+        "ADVANCE": 3,
+        "HOLD": 17
+      },
+      "correct": 11,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "n": 20,
+      "realized_consequence_distribution": {
+        "-1": 6,
+        "0": 8,
+        "1": 6
+      }
+    },
+    "late": {
+      "accuracy": 0.7,
+      "action_distribution": {
+        "ADVANCE": 3,
+        "HOLD": 17
+      },
+      "correct": 14,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "n": 20,
+      "realized_consequence_distribution": {
+        "-1": 3,
+        "0": 14,
+        "1": 3
+      }
+    },
+    "middle": {
+      "accuracy": 0.7,
+      "action_distribution": {
+        "ADVANCE": 3,
+        "HOLD": 17
+      },
+      "correct": 14,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "n": 20,
+      "realized_consequence_distribution": {
+        "-1": 3,
+        "0": 14,
+        "1": 3
+      }
+    },
+    "worst_rolling_10": {
+      "accuracy": 0.4,
+      "action_distribution": {
+        "ADVANCE": 1,
+        "HOLD": 9
+      },
+      "correct": 4,
+      "invalid": 0,
+      "invalid_rate": 0.0,
+      "n": 10,
+      "realized_consequence_distribution": {
+        "-1": 5,
+        "0": 4,
+        "1": 1
+      },
+      "start": 4
+    }
+  },
+  "fail_closed_abstentions": 1,
+  "first_six_after_shift": {
+    "accuracy": 0.16666666666666666,
+    "action_distribution": {
+      "ADVANCE": 1,
+      "HOLD": 5
+    },
+    "correct": 1,
+    "invalid": 0,
+    "invalid_rate": 0.0,
+    "n": 6,
+    "realized_consequence_distribution": {
+      "-1": 4,
+      "0": 1,
+      "1": 1
+    }
+  },
+  "hidden_prompt_checks": 21,
+  "immediately_before_shift": {
+    "accuracy": 1.0,
+    "action_distribution": {
+      "HOLD": 3
+    },
+    "correct": 3,
+    "invalid": 0,
+    "invalid_rate": 0.0,
+    "n": 3,
+    "realized_consequence_distribution": {
+      "1": 3
+    }
+  },
+  "old_history_requests_after_restart": 6,
+  "regime_definition_sha256": "c36b50c6f19d9a6e00181b6448f1dae3f4aba2f27c7612feb3b38a269fd42a7f",
+  "regime_distribution": {
+    "A": 3,
+    "B": 57
+  },
+  "regime_transition": {
+    "after_completed_step": 3,
+    "bridge_session": "session-000",
+    "from_regime": "A",
+    "model_visible": false,
+    "to_regime": "B"
+  },
+  "restart_proof": {
+    "post_restart_records": 3,
+    "prior_records_preserved": 3,
+    "regime_history": [
+      {
+        "configured_at": "2026-09-26T01:32:30.818996+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 0,
+        "version": "A"
+      },
+      {
+        "configured_at": "2026-09-26T01:34:24.620790+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 3,
+        "version": "B"
+      }
+    ],
+    "runtime_indices": [
+      1,
+      2,
+      3
+    ],
+    "source_identities": [
+      "HORUS:b35c89d77c6232d951af0d59e7bf546a:runtime:1:1892acb22d64ec8a",
+      "HORUS:b35c89d77c6232d951af0d59e7bf546a:runtime:2:2f2acd25151a6eeb",
+      "HORUS:b35c89d77c6232d951af0d59e7bf546a:runtime:3:cf149f0641e69446"
+    ]
+  },
+  "selection": "fixed target of 60 authorized receipts (3 A + 57 B), maximum 12 attempts/session; no outcome-based extension",
+  "sessions": [
+    {
+      "abstained": 1,
+      "attempted": 7,
+      "authorized": 6,
+      "consequence_calls": 21,
+      "joint_calls": 21,
+      "name": "session-000",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T01:32:30.818996+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "A"
+        },
+        {
+          "configured_at": "2026-09-26T01:34:24.620790+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 3,
+          "version": "B"
+        }
+      ],
+      "response_records": 42,
+      "runtime_count": 3
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-001",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T01:51:40.148678+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-002",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T01:54:05.201928+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-003",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T01:56:31.253231+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-004",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T01:58:55.217318+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-005",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T02:01:25.958436+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-006",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T02:03:58.361338+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-007",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T02:06:30.556559+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-008",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T02:09:03.574966+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    },
+    {
+      "abstained": 0,
+      "attempted": 6,
+      "authorized": 6,
+      "consequence_calls": 18,
+      "joint_calls": 18,
+      "name": "session-009",
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T02:11:35.024361+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "B"
+        }
+      ],
+      "response_records": 36,
+      "runtime_count": 1
+    }
+  ],
+  "status": "COMPLETE",
+  "target": 60,
+  "total_attempted_decisions": 61
+}

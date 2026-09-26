@@ -1,0 +1,697 @@
+{
+  "active_generation_after": 2,
+  "candidate_adapter_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+  "candidate_label": "3",
+  "decision": "REJECTED",
+  "evaluation": {
+    "combined": {
+      "candidate": {
+        "accuracy": 0.6111111111111112,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 8
+          },
+          "0": {
+            "accuracy": 0.8888888888888888,
+            "correct": 16,
+            "n": 18
+          },
+          "1": {
+            "accuracy": 0.6,
+            "correct": 6,
+            "n": 10
+          }
+        },
+        "correct": 22,
+        "examples": 36,
+        "invalid": 0
+      },
+      "candidate_groups": {
+        "bank_batch_id": {
+          "v0.2-grounded-learning": {
+            "accuracy": 0.16666666666666666,
+            "correct": 2,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.3-learning-cycle": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.4-regime-B": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "invalid": 0,
+            "n": 8
+          },
+          "0": {
+            "accuracy": 0.8888888888888888,
+            "correct": 16,
+            "invalid": 0,
+            "n": 18
+          },
+          "1": {
+            "accuracy": 0.6,
+            "correct": 6,
+            "invalid": 0,
+            "n": 10
+          }
+        },
+        "evaluation_origin": {
+          "fresh": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          },
+          "historical": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "external_regime_version": {
+          "A": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "invalid": 0,
+            "n": 24
+          },
+          "B": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "historical_window": {
+          "early": {
+            "accuracy": 0.125,
+            "correct": 1,
+            "invalid": 0,
+            "n": 8
+          },
+          "fresh": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          },
+          "middle": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          },
+          "recent": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "invalid": 0,
+            "n": 8
+          }
+        }
+      },
+      "forgetting_events": [
+        {
+          "candidate": 1,
+          "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 0,
+          "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 0,
+          "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+          "incumbent": -1,
+          "target": -1
+        }
+      ],
+      "incumbent": {
+        "accuracy": 0.7222222222222222,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.75,
+            "correct": 6,
+            "n": 8
+          },
+          "0": {
+            "accuracy": 0.8888888888888888,
+            "correct": 16,
+            "n": 18
+          },
+          "1": {
+            "accuracy": 0.4,
+            "correct": 4,
+            "n": 10
+          }
+        },
+        "correct": 26,
+        "examples": 36,
+        "invalid": 0
+      },
+      "incumbent_groups": {
+        "bank_batch_id": {
+          "v0.2-grounded-learning": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.3-learning-cycle": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.4-regime-B": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "-1": {
+            "accuracy": 0.75,
+            "correct": 6,
+            "invalid": 0,
+            "n": 8
+          },
+          "0": {
+            "accuracy": 0.8888888888888888,
+            "correct": 16,
+            "invalid": 0,
+            "n": 18
+          },
+          "1": {
+            "accuracy": 0.4,
+            "correct": 4,
+            "invalid": 0,
+            "n": 10
+          }
+        },
+        "evaluation_origin": {
+          "fresh": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          },
+          "historical": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "external_regime_version": {
+          "A": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "invalid": 0,
+            "n": 24
+          },
+          "B": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "historical_window": {
+          "early": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          },
+          "fresh": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          },
+          "middle": {
+            "accuracy": 0.75,
+            "correct": 6,
+            "invalid": 0,
+            "n": 8
+          },
+          "recent": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "invalid": 0,
+            "n": 8
+          }
+        }
+      },
+      "transitions": {
+        "correct_to_correct": 20,
+        "correct_to_wrong": 6,
+        "wrong_to_correct": 2,
+        "wrong_to_wrong": 8
+      }
+    },
+    "fresh": {
+      "candidate": {
+        "accuracy": 0.8333333333333334,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 2
+          },
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "n": 8
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "n": 2
+          }
+        },
+        "correct": 10,
+        "examples": 12,
+        "invalid": 0
+      },
+      "candidate_groups": {
+        "bank_batch_id": {
+          "UNSPECIFIED": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "UNSPECIFIED": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "evaluation_origin": {
+          "UNSPECIFIED": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "external_regime_version": {
+          "B": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "historical_window": {
+          "UNSPECIFIED": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        }
+      },
+      "forgetting_events": [],
+      "incumbent": {
+        "accuracy": 0.6666666666666666,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 2
+          },
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "n": 8
+          },
+          "1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 2
+          }
+        },
+        "correct": 8,
+        "examples": 12,
+        "invalid": 0
+      },
+      "incumbent_groups": {
+        "bank_batch_id": {
+          "UNSPECIFIED": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "UNSPECIFIED": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "evaluation_origin": {
+          "UNSPECIFIED": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "external_regime_version": {
+          "B": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "historical_window": {
+          "UNSPECIFIED": {
+            "accuracy": 0.6666666666666666,
+            "correct": 8,
+            "invalid": 0,
+            "n": 12
+          }
+        }
+      },
+      "transitions": {
+        "correct_to_correct": 8,
+        "wrong_to_correct": 2,
+        "wrong_to_wrong": 2
+      }
+    },
+    "historical": {
+      "candidate": {
+        "accuracy": 0.5,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 6
+          },
+          "0": {
+            "accuracy": 0.8,
+            "correct": 8,
+            "n": 10
+          },
+          "1": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "n": 8
+          }
+        },
+        "correct": 12,
+        "examples": 24,
+        "invalid": 0
+      },
+      "candidate_groups": {
+        "bank_batch_id": {
+          "v0.2-grounded-learning": {
+            "accuracy": 0.16666666666666666,
+            "correct": 2,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.3-learning-cycle": {
+            "accuracy": 0.8333333333333334,
+            "correct": 10,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "invalid": 0,
+            "n": 6
+          },
+          "0": {
+            "accuracy": 0.8,
+            "correct": 8,
+            "invalid": 0,
+            "n": 10
+          },
+          "1": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          }
+        },
+        "evaluation_origin": {
+          "historical": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "external_regime_version": {
+          "A": {
+            "accuracy": 0.5,
+            "correct": 12,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "historical_window": {
+          "early": {
+            "accuracy": 0.125,
+            "correct": 1,
+            "invalid": 0,
+            "n": 8
+          },
+          "middle": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          },
+          "recent": {
+            "accuracy": 0.875,
+            "correct": 7,
+            "invalid": 0,
+            "n": 8
+          }
+        }
+      },
+      "forgetting_events": [
+        {
+          "candidate": 1,
+          "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 0,
+          "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 0,
+          "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+          "incumbent": -1,
+          "target": -1
+        },
+        {
+          "candidate": 1,
+          "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+          "incumbent": -1,
+          "target": -1
+        }
+      ],
+      "incumbent": {
+        "accuracy": 0.75,
+        "by_target": {
+          "-1": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "n": 6
+          },
+          "0": {
+            "accuracy": 0.8,
+            "correct": 8,
+            "n": 10
+          },
+          "1": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "n": 8
+          }
+        },
+        "correct": 18,
+        "examples": 24,
+        "invalid": 0
+      },
+      "incumbent_groups": {
+        "bank_batch_id": {
+          "v0.2-grounded-learning": {
+            "accuracy": 0.5,
+            "correct": 6,
+            "invalid": 0,
+            "n": 12
+          },
+          "v0.3-learning-cycle": {
+            "accuracy": 1.0,
+            "correct": 12,
+            "invalid": 0,
+            "n": 12
+          }
+        },
+        "consequence_class": {
+          "-1": {
+            "accuracy": 1.0,
+            "correct": 6,
+            "invalid": 0,
+            "n": 6
+          },
+          "0": {
+            "accuracy": 0.8,
+            "correct": 8,
+            "invalid": 0,
+            "n": 10
+          },
+          "1": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          }
+        },
+        "evaluation_origin": {
+          "historical": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "external_regime_version": {
+          "A": {
+            "accuracy": 0.75,
+            "correct": 18,
+            "invalid": 0,
+            "n": 24
+          }
+        },
+        "historical_window": {
+          "early": {
+            "accuracy": 0.5,
+            "correct": 4,
+            "invalid": 0,
+            "n": 8
+          },
+          "middle": {
+            "accuracy": 0.75,
+            "correct": 6,
+            "invalid": 0,
+            "n": 8
+          },
+          "recent": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "invalid": 0,
+            "n": 8
+          }
+        }
+      },
+      "transitions": {
+        "correct_to_correct": 12,
+        "correct_to_wrong": 6,
+        "wrong_to_wrong": 6
+      }
+    },
+    "promotion": {
+      "catastrophic_classes": [
+        -1
+      ],
+      "criteria": {
+        "combined_retained": false,
+        "fresh_adaptation": true,
+        "historical_accuracy_retained": false,
+        "historical_forgetting_bounded": false,
+        "integrity_checks_passed": true,
+        "invalid_not_increased": true,
+        "no_historical_class_collapse": false,
+        "sufficient_evidence": true
+      },
+      "decision": "REJECTED",
+      "forgetting_events": 6,
+      "forgetting_failure": true,
+      "rule": {
+        "combined_correct_tolerance": 0,
+        "historical_class_collapse_absolute": 0.25,
+        "historical_class_minimum_examples": 4,
+        "maximum_historical_correct_loss": 1,
+        "maximum_historical_forgetting_events": 1,
+        "minimum_fresh_correct_gain": 1,
+        "rule": "fresh correct must improve by at least one; historical correct may lose at most one; historical correct-to-wrong may not exceed one; represented historical classes may not drop by more than 0.25; combined correct may not decrease; invalid responses may not increase; all integrity checks must pass",
+        "version": 1
+      },
+      "rule_sha256": "fb1a419e5021274ccce5489defea73e018a7c5707246d97f4338669178d5c3fa"
+    }
+  },
+  "generation": 3,
+  "parent_generation": 2,
+  "registry_state_sha256": "136ab38dd8e4840f8d316c88a6bf8018449db139bc8ad2f4771621cb6b7ac16e"
+}

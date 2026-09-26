@@ -1,0 +1,85 @@
+{
+  "active_generation_after": 2,
+  "candidate_adapter_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+  "candidate_evaluation": {
+    "accuracy": 1.0,
+    "by_target": {
+      "-1": {
+        "accuracy": 1.0,
+        "correct": 2,
+        "n": 2
+      },
+      "0": {
+        "accuracy": 1.0,
+        "correct": 8,
+        "n": 8
+      },
+      "1": {
+        "accuracy": 1.0,
+        "correct": 2,
+        "n": 2
+      }
+    },
+    "correct": 12,
+    "examples": 12,
+    "invalid": 0
+  },
+  "decision": "PROMOTED",
+  "fresh_dataset_manifest_sha256": "78368982a6c356cf0b816672e9be0e964f56479d184312c6108c05664fca8e8b",
+  "generation": 2,
+  "incumbent_evaluation": {
+    "accuracy": 0.16666666666666666,
+    "by_target": {
+      "-1": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "n": 2
+      },
+      "0": {
+        "accuracy": 0.0,
+        "correct": 0,
+        "n": 8
+      },
+      "1": {
+        "accuracy": 1.0,
+        "correct": 2,
+        "n": 2
+      }
+    },
+    "correct": 2,
+    "examples": 12,
+    "invalid": 0
+  },
+  "parent_generation": 1,
+  "promotion": {
+    "catastrophic_classes": [],
+    "criteria": {
+      "integrity_checks_passed": true,
+      "invalid_not_increased": true,
+      "net_corrections": true,
+      "no_catastrophic_class_collapse": true,
+      "overall_improved": true,
+      "sufficient_evidence": true
+    },
+    "decision": "ACTIVE",
+    "rule": {
+      "catastrophic_class_minimum_examples": 3,
+      "maximum_absolute_class_accuracy_drop": 0.5,
+      "minimum_evaluation_examples": 12,
+      "minimum_examples_per_class": 2,
+      "rule": "candidate accuracy must be strictly greater; invalid count must not increase; wrong-to-correct must exceed correct-to-wrong; represented classes may not catastrophically collapse; all artifact, provenance, leakage, and fresh-reload checks must pass",
+      "version": 1
+    },
+    "rule_sha256": "44991d3ebc09b29e0d658fa5d123d39540a408897a41eda6999d29fe1abc3892"
+  },
+  "registry_state_sha256": "d694c2e615a35747eb9a57555d2856595bff2ca4bd6adf14f413ad731fbeaf0a",
+  "status": "COMPLETE",
+  "strategy": "continue-active",
+  "training_dataset_manifest_sha256": "d1db2a12ec7e5073e3cd236de9616649877280b5f3e57b22dec9c6eb43e0bb39",
+  "transitions": {
+    "correct_to_wrong": 0,
+    "unchanged_correct": 2,
+    "unchanged_wrong": 0,
+    "wrong_to_correct": 10
+  }
+}

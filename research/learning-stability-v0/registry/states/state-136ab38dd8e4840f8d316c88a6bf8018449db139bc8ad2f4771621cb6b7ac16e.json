@@ -1,0 +1,44 @@
+{
+  "payload": {
+    "generations": [
+      {
+        "artifact_sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+        "generation": 0,
+        "manifest": "generations/generation-0000/generation.json",
+        "manifest_sha256": "e015e8521f39e63eb1413b52872ff00d0bbc128f71f01b84821c06022bb1cdd5",
+        "parent_generation": null,
+        "reason": "Superseded by the imported v0.2 grounded adapter",
+        "status": "RETIRED"
+      },
+      {
+        "artifact_sha256": "45a70d5f78aa98540ac00ca7e86a04155dd6a4c482a5f7d5dc6db25ed9f9c8fe",
+        "generation": 1,
+        "manifest": "generations/generation-0001/generation.json",
+        "manifest_sha256": "50810746d0e9e398a384c33726c4f00e7d2f2a86980f9032ea587fd0b7fc7f30",
+        "parent_generation": 0,
+        "reason": "Superseded by generation 2",
+        "status": "RETIRED"
+      },
+      {
+        "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+        "generation": 2,
+        "manifest": "generations/generation-0002/generation.json",
+        "manifest_sha256": "2301996221c87483d4fb4c9a1ebba2e783fc72653511f9ac86d04976d993d2c4",
+        "parent_generation": 1,
+        "reason": "All frozen promotion criteria passed",
+        "status": "ACTIVE"
+      },
+      {
+        "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+        "generation": 3,
+        "manifest": "generations/generation-0003/generation.json",
+        "manifest_sha256": "3ffc2ecd4212b7ea10a4fcbc4fee9afec5f159892cd694e775aa6b67d6617911",
+        "parent_generation": 2,
+        "reason": "One or more frozen stability criteria failed",
+        "status": "REJECTED"
+      }
+    ],
+    "version": 1
+  },
+  "sha256": "136ab38dd8e4840f8d316c88a6bf8018449db139bc8ad2f4771621cb6b7ac16e"
+}

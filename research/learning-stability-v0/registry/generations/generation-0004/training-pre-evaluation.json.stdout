@@ -1,0 +1,356 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 4659.80it/s]
+evaluation 1/12 target=-1 predicted=1
+evaluation 2/12 target=1 predicted=-1
+evaluation 3/12 target=0 predicted=0
+evaluation 4/12 target=0 predicted=0
+evaluation 5/12 target=0 predicted=0
+evaluation 6/12 target=0 predicted=0
+evaluation 7/12 target=-1 predicted=1
+evaluation 8/12 target=1 predicted=-1
+evaluation 9/12 target=0 predicted=0
+evaluation 10/12 target=0 predicted=0
+evaluation 11/12 target=0 predicted=0
+evaluation 12/12 target=0 predicted=0
+{
+  "accuracy": 0.6666666666666666,
+  "adapter_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+  "by_target": {
+    "-1": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 2
+    },
+    "0": {
+      "accuracy": 1.0,
+      "correct": 8,
+      "n": 8
+    },
+    "1": {
+      "accuracy": 0.0,
+      "correct": 0,
+      "n": 2
+    }
+  },
+  "correct": 8,
+  "dataset_manifest_sha256": "e08579be68eaece9afe24fcd45cda25da5b97ee41b45a656ddf5f1b7115a271d",
+  "examples": 12,
+  "fresh_process_pid": 293392,
+  "invalid": 0,
+  "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+  "phase": "PRE_TRAINING",
+  "results": [
+    {
+      "correct": false,
+      "example_id": "f94574e4b3864405ab8944754c20810c3eea4599d5b0f94f803280efab36883b",
+      "parse_error": null,
+      "predicted": 1,
+      "raw_response": "{\"consequence\":1}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.3596481084823608,
+          "{\"consequence\":0}": -1.5783926248550415,
+          "{\"consequence\":1}": -0.000266492017544806
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": -1
+    },
+    {
+      "correct": false,
+      "example_id": "a4f2832a72846ebc601c26b16e5bd0b975f9e5733357ac9c5500d4166a25ba57",
+      "parse_error": null,
+      "predicted": -1,
+      "raw_response": "{\"consequence\":-1}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -0.0008216351270675659,
+          "{\"consequence\":0}": -0.845805823802948,
+          "{\"consequence\":1}": -1.4239275455474854
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": 1
+    },
+    {
+      "correct": true,
+      "example_id": "711233a90b4c844719c10e0eb353f914201ceb899c1ecce5569ee94bc84101d1",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.2034034729003906,
+          "{\"consequence\":0}": -0.00027439917903393507,
+          "{\"consequence\":1}": -2.047147512435913
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "ac68abbaba7de55e625fc1cfb4ba0a0d97f954c36f64e3227714cfe8d9f60fdc",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.863788366317749,
+          "{\"consequence\":0}": -0.0001618115056771785,
+          "{\"consequence\":1}": -1.9220380783081055
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "2dd207a368e329e842c01dddbf1fe51778bc245b0152546d0f97e3d267d149a7",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.9722015857696533,
+          "{\"consequence\":0}": -0.00012522698671091348,
+          "{\"consequence\":1}": -1.9688752889633179
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "5be1155543eeea0e95b725749efe103fe5e0c4a1859b8c1b87bf530a1d0523a5",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.8911514282226562,
+          "{\"consequence\":0}": -0.00012258788046892732,
+          "{\"consequence\":1}": -1.8907464742660522
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-008",
+      "target": 0
+    },
+    {
+      "correct": false,
+      "example_id": "ed7e4f5006315109c7cc0e61a5f2a61608b3369299b6303b901c08f32794e4b1",
+      "parse_error": null,
+      "predicted": 1,
+      "raw_response": "{\"consequence\":1}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.3596481084823608,
+          "{\"consequence\":0}": -1.5783926248550415,
+          "{\"consequence\":1}": -0.000266492017544806
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": -1
+    },
+    {
+      "correct": false,
+      "example_id": "d3c6f7a00d20e1bf4056ed6e29d1aa0e483523f809b99ea88e8301b7bc24019a",
+      "parse_error": null,
+      "predicted": -1,
+      "raw_response": "{\"consequence\":-1}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -0.0008216351270675659,
+          "{\"consequence\":0}": -0.845805823802948,
+          "{\"consequence\":1}": -1.4239275455474854
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": 1
+    },
+    {
+      "correct": true,
+      "example_id": "78c525867f8924da0c3bc35b564fc6ce893229fd176a73a40e395ade110a9a5a",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.2034034729003906,
+          "{\"consequence\":0}": -0.00027439917903393507,
+          "{\"consequence\":1}": -2.047147512435913
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "e5db687cc9388fa85fa458444b43d9971e1287ad1cfa3e7aee463793c6ff0a5f",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.863788366317749,
+          "{\"consequence\":0}": -0.0001618115056771785,
+          "{\"consequence\":1}": -1.9220380783081055
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "26c789000391182d45bc77a04f440b98ba1d688496be5e87a5735fdccff279db",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.9722015857696533,
+          "{\"consequence\":0}": -0.00012522698671091348,
+          "{\"consequence\":1}": -1.9688752889633179
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": 0
+    },
+    {
+      "correct": true,
+      "example_id": "d47a658e16620de89f74cb8406ea436d79e0384a8ef84d6932f274d890fffca7",
+      "parse_error": null,
+      "predicted": 0,
+      "raw_response": "{\"consequence\":0}",
+      "response_metadata": {
+        "candidate_scores": {
+          "{\"consequence\":-1}": -1.8911514282226562,
+          "{\"consequence\":0}": -0.00012258788046892732,
+          "{\"consequence\":1}": -1.8907464742660522
+        },
+        "decoding": "mean_log_probability_over_three_exact_JSON_candidates",
+        "done": true,
+        "horus_model_identity": {
+          "adapter_identity": "standalone:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+          "generation": 1,
+          "parent_generation": 0
+        },
+        "model": "horus-consequence-v0.2:effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a"
+      },
+      "session_name": "session-009",
+      "target": 0
+    }
+  ],
+  "status": "FROZEN"
+}

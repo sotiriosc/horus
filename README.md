@@ -8,6 +8,14 @@ production-qualified processor or a general safety system.
 
 ## Current status
 
+**Learning stability v0.4:** a hidden deterministic A-to-B outcome shift
+produced 60 new authenticated receipts. Pure continuation improved the fresh
+set from 8/12 to 10/12 but fell from 18/24 to 12/24 on the historical bank, so
+the frozen lifecycle rejected it. The one permitted grounded-rehearsal
+candidate also reached 10/12 fresh but only 14/24 historical and was rejected.
+Generation 2 remains ACTIVE. See [the stability design](docs/HORUS_V0_4_LEARNING_STABILITY.md)
+and [the completed result](research/learning-stability-v0/RESULTS.md).
+
 **Grounded learning cycle v0.3:** Horus now keeps explicit consequence-model
 generations, trains candidates outside the ACTIVE model, compares incumbent and
 candidate on identical heldout receipt-grounded requests, and atomically
