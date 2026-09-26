@@ -1,0 +1,172 @@
+{
+  "absolute_paths_included": false,
+  "active_problem_layer": {
+    "creation_rule": {
+      "code_reference": "horus/capability_gap.py:350-356",
+      "requested_context_candidates": [
+        "ADVANCE",
+        "HOLD"
+      ],
+      "requested_context_state": 1,
+      "requires_no_current_problem": true,
+      "requires_source_problem_candidates": [
+        "ADVANCE",
+        "RETREAT"
+      ],
+      "requires_source_problem_state": 2
+    },
+    "current_problem": {
+      "assessment": "MORE_EVIDENCE_REQUIRED",
+      "candidate_actions": [
+        "ADVANCE",
+        "RETREAT"
+      ],
+      "probe_count": 2,
+      "problem_id": "PR-0002",
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "requested_capability": "MORE_RELATION_EVIDENCE",
+      "route_request_count": 2,
+      "source_problem_id": "PR-0001",
+      "state": 2,
+      "status": "ROUTE_EXECUTED",
+      "where_did_resolution_stop": "EVIDENCE_COVERAGE"
+    },
+    "new_state1_problem_opened": false,
+    "runtime_inheritance": [
+      "CoverageExtensionRuntime",
+      "CapabilityGapRuntime",
+      "GroundedExplorationRuntime"
+    ],
+    "terminal_classification": null,
+    "wraps_problem_route_store": false
+  },
+  "all_decisions_share_signature": true,
+  "analysis_type": "ZERO_INFERENCE_RETAINED_EVIDENCE_AND_CODE_PATH",
+  "decision_count": 20,
+  "decision_sequences": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+  ],
+  "diagnostic_gate": {
+    "different_bottleneck": "ACTIVE_PROBLEM_LIFECYCLE_CANNOT_OWN_NEW_STATE1_TIE",
+    "ordinary_probe_budget_is_only_blocker": false,
+    "ordinary_probe_budget_is_unavailable": true,
+    "proposed_deadlock_route_condition_6_reachable": false,
+    "required_action": "STOP_BEFORE_IMPLEMENTATION"
+  },
+  "historical_problem_route_layer": {
+    "active_in_v0_11_runtime": false,
+    "can_detect_two_consecutive_identical_ties": true,
+    "code_references": [
+      "horus/problem_routing.py:363-442",
+      "horus/capability_gap.py:506-523",
+      "horus/coverage_extension.py:43-50,115-126"
+    ],
+    "retained_attempted_decisions": 54,
+    "silent_rebind_valid": false,
+    "v0_11_session_attempted_decisions": 83
+  },
+  "identity": "HORUS_STATE1_TIE_ESCAPE_V0_RETROSPECTIVE",
+  "ordinary_probe_budget": {
+    "abstentions_advance_attempted_not_authorized": true,
+    "authorized_decisions": 53,
+    "available": false,
+    "code_reference": "horus/grounded_exploration.py:180-185,343-352",
+    "distance": 1,
+    "last_probe_authorized_decision": 53,
+    "minimum_decision_distance": 3,
+    "prospective_authorized_decision": 54
+  },
+  "private_prompts_or_responses_included": false,
+  "prospective_activity": {
+    "live_decisions": 0,
+    "model_calls": 0,
+    "new_receipts": 0,
+    "policy_changes": 0,
+    "training_runs": 0,
+    "world_executions": 0
+  },
+  "signature": {
+    "G2_predictions": {
+      "ADVANCE": 1,
+      "HOLD": 1,
+      "RETREAT": 0
+    },
+    "G3_predictions": {
+      "ADVANCE": -1,
+      "HOLD": -1,
+      "RETREAT": 0
+    },
+    "abstained": true,
+    "all_predictions_valid": true,
+    "explorer_reason": "EXPLOIT_TIED_MAXIMUM",
+    "probe_budget_available": false,
+    "problem_id": null,
+    "qualifying_probe_blocked_by_budget": true,
+    "relation_confidence": {
+      "ADVANCE": {
+        "authenticated_observations": 4,
+        "observations_since_last_execution": 3,
+        "qualifying_probe_reasons": [
+          "PROBE_DISAGREEMENT"
+        ],
+        "unresolved_recent_contradiction": null
+      },
+      "HOLD": {
+        "authenticated_observations": 12,
+        "observations_since_last_execution": 4,
+        "qualifying_probe_reasons": [],
+        "unresolved_recent_contradiction": null
+      },
+      "RETREAT": {
+        "authenticated_observations": 8,
+        "observations_since_last_execution": 8,
+        "qualifying_probe_reasons": [
+          "PROBE_STALE"
+        ],
+        "unresolved_recent_contradiction": null
+      }
+    },
+    "routed_values": {
+      "ADVANCE": 1,
+      "HOLD": 1,
+      "RETREAT": 0
+    },
+    "selected_action": null,
+    "state": 1,
+    "tied_maximum_actions": [
+      "ADVANCE",
+      "HOLD"
+    ]
+  },
+  "source_commit": "893c75d1f2092454e4e647a2ba3823f872172e0d",
+  "source_sha256": {
+    "horus/capability_gap.py": "a33f7d16755743f021a0cf125b1ac8af9f9fab6cb7ab152edc394240f5b4f844",
+    "horus/coverage_extension.py": "f8034eaa3294b611c583089ff986eb3b21426d2f3677cc3ddac71c483fc0d676",
+    "horus/grounded_exploration.py": "88f744965f661b0a2c0bf610ff82e145a692da98d3ec58aea49c2ae07327af34",
+    "horus/grounded_exploration_policy.json": "f6f963403a6ffaa827069288df49340035a4f9a7556d7111de9ba426382db7b3",
+    "horus/problem_routing.py": "016e73eb66044198a379856b1c1c09676580a94cc516b36d8983af2f58dc3e97",
+    "research/bounded-evidence-coverage-v0/bounded-evidence-coverage-report.json": "1a942e2bca630c7a9a453a8140fcd6c4d3f1c59c2bdd02adb3851370813cabcc",
+    "research/bounded-evidence-coverage-v0/capability-gap-state.json": "cb947ded0867354df3f711880e7b3c5f6cb4815ac3ca2352a11e4ab20c93b8d0",
+    "research/bounded-evidence-coverage-v0/new-exploration-decisions.jsonl": "2d3696cbb4f2c6007e571b01b762399cec3bd649309677b79c24c06e209bd32f"
+  },
+  "status": "STOPPED_BEFORE_IMPLEMENTATION_DIFFERENT_BOTTLENECK"
+}
