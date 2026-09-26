@@ -1,0 +1,38 @@
+{
+  "campaign_identity": "HORUS_PROBLEM_ROUTE_REQUEST_V0",
+  "status": "COMPLETE",
+  "autonomous_decision_attempts": 54,
+  "authorized_executions": 50,
+  "abstentions": 4,
+  "framework_rejections": 0,
+  "total_real_model_calls": 486,
+  "roles": {
+    "joint-next-state": {
+      "issued": 162,
+      "valid": 160,
+      "transport_failures": {
+        "TimeoutError": 2
+      }
+    },
+    "routed-consequence:G2": {
+      "issued": 162,
+      "valid": 162,
+      "transport_failures": {}
+    },
+    "routed-consequence:G3": {
+      "issued": 162,
+      "valid": 162,
+      "transport_failures": {}
+    }
+  },
+  "nonexecution_reasons": {
+    "INVALID_MAP_COMPONENT": 2,
+    "EXPLOIT_TIED_MAXIMUM_FIRST_OBSERVATION": 1,
+    "TIE_INFORMATION_PROBE_BOUND_EXHAUSTED": 1
+  },
+  "tie_information_probes": 2,
+  "completion_sentinel_present": true,
+  "process_exit_code": 0,
+  "retries_or_replacement_calls": 0,
+  "raw_private_model_stream_included": false
+}

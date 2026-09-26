@@ -1,0 +1,271 @@
+{
+  "hmac_sha256": "6b4b51193b397563004b186f870ec1bea81461662c046f3e73dfb249640299b4",
+  "payload": {
+    "attempted_decisions": 54,
+    "authorized_executions": 50,
+    "next_problem_number": 2,
+    "pending_decision": null,
+    "problems": {
+      "2:ADVANCE,RETREAT": {
+        "alters_memory": false,
+        "alters_simulator": false,
+        "alters_specialist_selection": false,
+        "authoritative": false,
+        "candidate_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "changes_prediction": false,
+        "changes_protected_bound": false,
+        "component": "MECHANICAL_EXPLORER",
+        "controls_execution": false,
+        "created_decision_sequence": 32,
+        "creates_receipt": false,
+        "current_forecasts": {
+          "ADVANCE": {
+            "G2_consequence": 1,
+            "G3_consequence": 1,
+            "action_alias": "K1",
+            "history_count": 3,
+            "next_state": 3,
+            "routed_consequence": 1,
+            "selected_specialist": "G2",
+            "valid": true
+          },
+          "HOLD": {
+            "G2_consequence": 0,
+            "G3_consequence": 0,
+            "action_alias": "K2",
+            "history_count": 2,
+            "next_state": 2,
+            "routed_consequence": 0,
+            "selected_specialist": "G2",
+            "valid": true
+          },
+          "RETREAT": {
+            "G2_consequence": 1,
+            "G3_consequence": 1,
+            "action_alias": "K3",
+            "history_count": 3,
+            "next_state": 1,
+            "routed_consequence": 1,
+            "selected_specialist": "G2",
+            "valid": true
+          }
+        },
+        "failure_count": 4,
+        "last_successful_execution": {
+          "count": 28
+        },
+        "probe_count": 2,
+        "problem_id": "PR-0001",
+        "problem_type": "UNRESOLVED_VALUE_TIE",
+        "receipt_evidence": [
+          {
+            "realized_consequence": 1,
+            "realized_next_state": 1,
+            "receipt_identity": [
+              "HORUS:a67e675004193a13c31485bad53fbb86:runtime:4:f5c891d96c1d16bb",
+              4,
+              2004,
+              4
+            ],
+            "routing_evidence_sequence": 29
+          },
+          {
+            "realized_consequence": 1,
+            "realized_next_state": 1,
+            "receipt_identity": [
+              "HORUS:a67e675004193a13c31485bad53fbb86:runtime:5:b9438cda740bdd80",
+              2,
+              2005,
+              2
+            ],
+            "routing_evidence_sequence": 35
+          }
+        ],
+        "relation_confidence": {
+          "ADVANCE": {
+            "authenticated_observations": 3,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 3
+              },
+              "G3": {
+                "correct": 2,
+                "total": 3
+              }
+            },
+            "most_recent_observation_sequence": 20,
+            "observations_since_last_execution": 30,
+            "qualifying_probe_reasons": [
+              "PROBE_STALE"
+            ],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "ADVANCE",
+              "identity_sha256": "107c317185f6e7f69aff78223daf8b2e38fcaf74f524da872c0eec88c423e5d9",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "HOLD": {
+            "authenticated_observations": 2,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 2
+              },
+              "G3": {
+                "correct": 2,
+                "total": 2
+              }
+            },
+            "most_recent_observation_sequence": 3,
+            "observations_since_last_execution": 47,
+            "qualifying_probe_reasons": [
+              "PROBE_STALE"
+            ],
+            "recent_correctness": {
+              "G2": [
+                true,
+                true
+              ],
+              "G3": [
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              0,
+              0
+            ],
+            "relation": {
+              "action": "HOLD",
+              "identity_sha256": "46c42d8d1d2467e8981c7d17c7ba514acd00b0ae70c611d2e7a2b1a48fa95960",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          },
+          "RETREAT": {
+            "authenticated_observations": 3,
+            "clear_local_preference": false,
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 3
+              },
+              "G3": {
+                "correct": 2,
+                "total": 3
+              }
+            },
+            "most_recent_observation_sequence": 35,
+            "observations_since_last_execution": 15,
+            "qualifying_probe_reasons": [
+              "PROBE_STALE"
+            ],
+            "recent_correctness": {
+              "G2": [
+                false,
+                true,
+                true
+              ],
+              "G3": [
+                false,
+                true,
+                true
+              ]
+            },
+            "recent_realized_consequences": [
+              1,
+              1,
+              1
+            ],
+            "relation": {
+              "action": "RETREAT",
+              "identity_sha256": "032c97fe60323ff83684ce552f5a9572e4fb352db1590b3993c9a6cac4fd82a7",
+              "pre_state": 2
+            },
+            "selected_specialist": "G2",
+            "specialists_disagree": false,
+            "unresolved_recent_contradiction": null
+          }
+        },
+        "relevant_authenticated_evidence_references": {
+          "ADVANCE": {
+            "authenticated_observations": 3,
+            "most_recent_observation_sequence": 20
+          },
+          "RETREAT": {
+            "authenticated_observations": 1,
+            "most_recent_observation_sequence": 22
+          }
+        },
+        "requested_capability": "MORE_RELATION_EVIDENCE",
+        "resolved_decision_sequence": null,
+        "route_request_count": 2,
+        "routing_state": {
+          "ADVANCE": {
+            "local_scores": {
+              "G2": {
+                "correct": 2,
+                "total": 3
+              },
+              "G3": {
+                "correct": 2,
+                "total": 3
+              }
+            },
+            "selected_specialist": "G2"
+          },
+          "RETREAT": {
+            "local_scores": {
+              "G2": {
+                "correct": 0,
+                "total": 1
+              },
+              "G3": {
+                "correct": 0,
+                "total": 1
+              }
+            },
+            "selected_specialist": "G2"
+          }
+        },
+        "state": 2,
+        "status": "UNRESOLVED",
+        "trains_model": false
+      }
+    },
+    "session_id": "a67e675004193a13c31485bad53fbb86",
+    "stream_count": 108,
+    "stream_head_sha256": "f054e8f4477ab4f963152461be87ec41dbe23cd1a356b31921f3ce8ab126c9e7",
+    "tie_candidate": null,
+    "updated_at": "2026-09-26T14:49:07.064806+00:00",
+    "version": 1
+  }
+}
