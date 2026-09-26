@@ -1,0 +1,1747 @@
+{
+  "adaptation_latency": {
+    "A_to_B": {
+      "additional_observations_after_first": 2,
+      "authenticated_observations_inclusive": 3,
+      "first_contradictory_receipt": 7,
+      "switch_evidence": 9
+    },
+    "B_to_A2": {
+      "additional_observations_after_first": 3,
+      "authenticated_observations_inclusive": 4,
+      "first_contradictory_receipt": 13,
+      "switch_evidence": 16
+    }
+  },
+  "attempted_executions": 19,
+  "executed_decisions": 19,
+  "execution_kind_counts": {
+    "EXPLORER_SELECTED_EXECUTION": 1,
+    "ROUTING_CALIBRATION_EXECUTION": 18
+  },
+  "final_checkpoint": {
+    "attempted_decisions": 19,
+    "completed_steps": 19,
+    "current_state": 1,
+    "runtime_index": 4,
+    "streams": {
+      "calls": {
+        "count": 567,
+        "head_sha256": "15a1856b13b4deaf087ec0f107ab3efbd19b7e76b03fb14bcec2e107370ab4f7"
+      },
+      "events": {
+        "count": 19,
+        "head_sha256": "68e8342eb83203c3a6e682531be59ac6a011d86ba0d52e1c75da8ae03e1632c8"
+      },
+      "training": {
+        "count": 21,
+        "head_sha256": "23a6f8d6943d977446ef23c25e32b2ea4a7c2a848b553603fbe547efbd2e8068"
+      }
+    }
+  },
+  "global_lifecycle_status": {
+    "G2": "ACTIVE",
+    "G3": "REJECTED"
+  },
+  "global_vs_local_offline_replay": {
+    "executed_relation_selection_disagreements": 0,
+    "global_final_selected": "G2",
+    "global_policy_sha256": "8bc94d20875ea303f50062f4708a91bb6b748c68fa7d3cdff7147bc4784743e8",
+    "global_switches": [
+      {
+        "evidence_sequence": 9,
+        "from_specialist": "G2",
+        "reason": "G3 grounded lead 5/6 vs 3/6",
+        "scores": {
+          "G2": {
+            "correct": 3,
+            "total": 6
+          },
+          "G3": {
+            "correct": 5,
+            "total": 6
+          }
+        },
+        "to_specialist": "G3"
+      },
+      {
+        "evidence_sequence": 16,
+        "from_specialist": "G3",
+        "reason": "G2 grounded lead 4/6 vs 2/6",
+        "scores": {
+          "G2": {
+            "correct": 4,
+            "total": 6
+          },
+          "G3": {
+            "correct": 2,
+            "total": 6
+          }
+        },
+        "to_specialist": "G2"
+      }
+    ],
+    "local_policy_sha256": "877d365594854348bff43bdbc5d44de266008d335fa4b78ace7214c607af4f05",
+    "local_switches": [
+      {
+        "evidence_sequence": 9,
+        "from_specialist": "G2",
+        "reason": "G3 local grounded lead 5/6 vs 3/6",
+        "relation": {
+          "action": "HOLD",
+          "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+          "pre_state": 1
+        },
+        "score_after": {
+          "G2": {
+            "correct": 3,
+            "total": 6
+          },
+          "G3": {
+            "correct": 5,
+            "total": 6
+          }
+        },
+        "to_specialist": "G3"
+      },
+      {
+        "evidence_sequence": 16,
+        "from_specialist": "G3",
+        "reason": "G2 local grounded lead 4/6 vs 2/6",
+        "relation": {
+          "action": "HOLD",
+          "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+          "pre_state": 1
+        },
+        "score_after": {
+          "G2": {
+            "correct": 4,
+            "total": 6
+          },
+          "G3": {
+            "correct": 2,
+            "total": 6
+          }
+        },
+        "to_specialist": "G2"
+      }
+    ],
+    "rows": [
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 1
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 2
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 3
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 4
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 5
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 6
+      },
+      {
+        "differing_actions": [],
+        "executed_action": null,
+        "executed_relation_selection_differs": null,
+        "execution_kind": "COMPARISON_ONLY_NO_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A1",
+        "prediction_batch_sequence": 7
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 8
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 9
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 10
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 11
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 12
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 13
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": null,
+        "executed_relation_selection_differs": null,
+        "execution_kind": "COMPARISON_ONLY_NO_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "B",
+        "prediction_batch_sequence": 14
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 15
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 16
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 17
+      },
+      {
+        "differing_actions": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G3",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G3",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 18
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 19
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 20
+      },
+      {
+        "differing_actions": [],
+        "executed_action": "HOLD",
+        "executed_relation_selection_differs": false,
+        "execution_kind": "EXPLORER_SELECTED_EXECUTION",
+        "global_selected": "G2",
+        "local_selected_by_action": {
+          "ADVANCE": "G2",
+          "HOLD": "G2",
+          "RETREAT": "G2"
+        },
+        "phase": "A2",
+        "prediction_batch_sequence": 21
+      }
+    ],
+    "scope": "specialist selection on identical frozen evidence; no counterfactual outcome"
+  },
+  "hidden_regime_prompt_checks": 189,
+  "memory_contradiction": {
+    "chronological_consequences": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "earlier_records_overwritten": false,
+    "phase_consequences": {
+      "A1": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "A2": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "B": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "relation": {
+      "action": "HOLD",
+      "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+      "pre_state": 1
+    }
+  },
+  "model_calls_by_role": {
+    "joint-next-state": 63,
+    "routed-consequence:G2": 63,
+    "routed-consequence:G3": 63
+  },
+  "no_weight_updates": true,
+  "ordinary_decisions": [
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        }
+      },
+      "executed_action": null,
+      "execution_kind": "COMPARISON_ONLY_NO_EXECUTION",
+      "mixed_relation_selection": false,
+      "phase": "A1",
+      "prediction_batch_sequence": 7,
+      "receipt_identity": null,
+      "routed_differs_from_G2": false,
+      "routed_differs_from_G3": true,
+      "routed_is_distinct_from_both": false,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G2",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        },
+        "G3": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        },
+        "relation_routed": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        }
+      },
+      "executed_action": null,
+      "execution_kind": "COMPARISON_ONLY_NO_EXECUTION",
+      "mixed_relation_selection": true,
+      "phase": "B",
+      "prediction_batch_sequence": 14,
+      "receipt_identity": null,
+      "routed_differs_from_G2": false,
+      "routed_differs_from_G3": false,
+      "routed_is_distinct_from_both": false,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        }
+      },
+      "executed_action": "HOLD",
+      "execution_kind": "EXPLORER_SELECTED_EXECUTION",
+      "mixed_relation_selection": false,
+      "phase": "A2",
+      "prediction_batch_sequence": 21,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        7,
+        2004,
+        7
+      ],
+      "routed_differs_from_G2": false,
+      "routed_differs_from_G3": true,
+      "routed_is_distinct_from_both": false,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G2",
+        "RETREAT": "G2"
+      }
+    }
+  ],
+  "per_relation_final_state": [
+    {
+      "evidence_count": 0,
+      "local_score": {
+        "G2": {
+          "correct": 0,
+          "total": 0
+        },
+        "G3": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "relation": {
+        "action": "ADVANCE",
+        "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+        "pre_state": 1
+      },
+      "selected_specialist": "G2"
+    },
+    {
+      "evidence_count": 19,
+      "local_score": {
+        "G2": {
+          "correct": 6,
+          "total": 6
+        },
+        "G3": {
+          "correct": 1,
+          "total": 6
+        }
+      },
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "selected_specialist": "G2"
+    },
+    {
+      "evidence_count": 0,
+      "local_score": {
+        "G2": {
+          "correct": 0,
+          "total": 0
+        },
+        "G3": {
+          "correct": 0,
+          "total": 0
+        }
+      },
+      "relation": {
+        "action": "RETREAT",
+        "identity_sha256": "0f6f9ab5d827513ea5de5f97e6ec89b1acc6fa163816e37a91b4e1da53ee0a9b",
+        "pre_state": 1
+      },
+      "selected_specialist": "G2"
+    }
+  ],
+  "phase_execution_counts": {
+    "A1": 6,
+    "A2": 7,
+    "B": 6
+  },
+  "prediction_batches": 21,
+  "relation_identity": [
+    "pre_state",
+    "action"
+  ],
+  "restart_proof": {
+    "B_runtime_indices": [
+      2,
+      3
+    ],
+    "artifact_verifications_by_runtime": {
+      "1": {
+        "G2": true,
+        "G3": true
+      },
+      "2": {
+        "G2": true,
+        "G3": true
+      },
+      "3": {
+        "G2": true,
+        "G3": true
+      },
+      "4": {
+        "G2": true,
+        "G3": true
+      }
+    },
+    "batches_by_runtime": {
+      "1": 7,
+      "2": 3,
+      "3": 4,
+      "4": 7
+    },
+    "imported_history_requests_after_B_restart": 12,
+    "runtime_indices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "source_identities": [
+      "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+      "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:2:075d0570ca138bfe",
+      "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:3:6131f7755c2fdccf",
+      "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6"
+    ],
+    "specialist_artifacts_reverified_on_every_runtime": true,
+    "target_relation_selection_continuity": {
+      "after_restart_selected_before": "G3",
+      "before_restart_selected_after": "G3",
+      "preserved": true,
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      }
+    }
+  },
+  "routing_eligibility": {
+    "G2": "ROUTABLE_SPECIALIST",
+    "G3": "ROUTABLE_SPECIALIST"
+  },
+  "routing_rule": {
+    "cold_start_specialist": "G2",
+    "evidence_scope": "EXACT_RELATION_ONLY",
+    "minimum_shared_scored_events": 3,
+    "switch_lead_correct": 2,
+    "ties_preserve_incumbent": true,
+    "window_size": 6
+  },
+  "schedule": [
+    {
+      "calibration_executions": 6,
+      "external_regime": "A",
+      "ordinary_comparison_batches": 1,
+      "ordinary_production_executions": 0,
+      "phase": "A1",
+      "segment": "A1"
+    },
+    {
+      "calibration_executions": 3,
+      "external_regime": "B",
+      "ordinary_comparison_batches": 0,
+      "ordinary_production_executions": 0,
+      "phase": "B",
+      "segment": "B1"
+    },
+    {
+      "calibration_executions": 3,
+      "external_regime": "B",
+      "ordinary_comparison_batches": 1,
+      "ordinary_production_executions": 0,
+      "phase": "B",
+      "segment": "B2"
+    },
+    {
+      "calibration_executions": 6,
+      "external_regime": "A",
+      "ordinary_comparison_batches": 0,
+      "ordinary_production_executions": 1,
+      "phase": "A2",
+      "segment": "A2"
+    }
+  ],
+  "simultaneous_mixed_specialist_examples": [
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "B",
+      "pre_state": 1,
+      "prediction_batch_sequence": 11,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "B",
+      "pre_state": 1,
+      "prediction_batch_sequence": 12,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "B",
+      "pre_state": 1,
+      "prediction_batch_sequence": 13,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        },
+        "G3": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        },
+        "relation_routed": {
+          "abstained": true,
+          "action": null,
+          "reason": "INVALID_MAP_COMPONENT"
+        }
+      },
+      "execution_kind": "COMPARISON_ONLY_NO_EXECUTION",
+      "phase": "B",
+      "pre_state": 1,
+      "prediction_batch_sequence": 14,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "A2",
+      "pre_state": 1,
+      "prediction_batch_sequence": 15,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "A2",
+      "pre_state": 1,
+      "prediction_batch_sequence": 16,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "A2",
+      "pre_state": 1,
+      "prediction_batch_sequence": 17,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    },
+    {
+      "choices": {
+        "G2": {
+          "abstained": false,
+          "action": "HOLD",
+          "reason": "UNIQUE_MAXIMUM"
+        },
+        "G3": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        },
+        "relation_routed": {
+          "abstained": false,
+          "action": "ADVANCE",
+          "reason": "BOUNDED_FIRST_UNTRIED_TIE_FALLBACK"
+        }
+      },
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "phase": "A2",
+      "pre_state": 1,
+      "prediction_batch_sequence": 18,
+      "selections": {
+        "ADVANCE": "G2",
+        "HOLD": "G3",
+        "RETREAT": "G2"
+      }
+    }
+  ],
+  "status": "COMPLETE",
+  "target_relation_switches": [
+    {
+      "evidence_sequence": 9,
+      "from_specialist": "G2",
+      "reason": "G3 local grounded lead 5/6 vs 3/6",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "score_after": {
+        "G2": {
+          "correct": 3,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "to_specialist": "G3"
+    },
+    {
+      "evidence_sequence": 16,
+      "from_specialist": "G3",
+      "reason": "G2 local grounded lead 4/6 vs 2/6",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "score_after": {
+        "G2": {
+          "correct": 4,
+          "total": 6
+        },
+        "G3": {
+          "correct": 2,
+          "total": 6
+        }
+      },
+      "to_specialist": "G2"
+    }
+  ],
+  "target_relation_trace": [
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 1,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 1,
+          "total": 1
+        },
+        "G3": {
+          "correct": 1,
+          "total": 1
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        1,
+        2001,
+        1
+      ],
+      "receipt_provenance_sha256": "23c62e5cad20b376d5ff70998b826d983d1a7802e06ca2b1055b56d6f80753ca",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 2,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 2,
+          "total": 2
+        },
+        "G3": {
+          "correct": 2,
+          "total": 2
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        2,
+        2001,
+        2
+      ],
+      "receipt_provenance_sha256": "131d91da715811b67aa30679b78d9b4e1381ee471d27056936ec466e877b0799",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 3,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 3,
+          "total": 3
+        },
+        "G3": {
+          "correct": 3,
+          "total": 3
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        3,
+        2001,
+        3
+      ],
+      "receipt_provenance_sha256": "320bd7173ab6588f72277049bfd19c202a9c908e012bc7506ce559750697a4e7",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 4,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 4,
+          "total": 4
+        },
+        "G3": {
+          "correct": 4,
+          "total": 4
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        4,
+        2001,
+        4
+      ],
+      "receipt_provenance_sha256": "87926e3bb948caf581989c63d14c6b6d14423f6d8a353df14003ff967ad270a2",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 5,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 5,
+          "total": 5
+        },
+        "G3": {
+          "correct": 5,
+          "total": 5
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        5,
+        2001,
+        5
+      ],
+      "receipt_provenance_sha256": "88fb2479e6ccad24014b61e20d8e0045ba9eff44afd18b549825fa126ebd4005",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 6,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 6,
+          "total": 6
+        },
+        "G3": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "phase": "A1",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:1:6377b05d180b686e",
+        6,
+        2001,
+        6
+      ],
+      "receipt_provenance_sha256": "c0471dcb2851dcc576d1de84cb5cc1f67c6d0113fe27c64b164ede930d61128a",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 1,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": 1,
+      "evidence_sequence": 7,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 5,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:2:075d0570ca138bfe",
+        1,
+        2002,
+        1
+      ],
+      "receipt_provenance_sha256": "1188ae0c2a65e5f8f14e9ac0d2774ae4c3895cc7df5eabfad5eba7c223ac1bbd",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 2,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": -1,
+      "evidence_sequence": 8,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 4,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:2:075d0570ca138bfe",
+        2,
+        2002,
+        2
+      ],
+      "receipt_provenance_sha256": "d6bfa9b5a1742a74b155f7c2efd29610765aa05ae4d9d90aaf5107637f3bf8cb",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 2,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": -1,
+      "evidence_sequence": 9,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 3,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:2:075d0570ca138bfe",
+        3,
+        2002,
+        3
+      ],
+      "receipt_provenance_sha256": "1a79dba08401b15bf4630f89547680a1b76ea692c6deebdcace1a42715d10428",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 2,
+      "selected_after": "G3",
+      "selected_before": "G2",
+      "switch_occurred": true
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": -1,
+      "evidence_sequence": 10,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 2,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:3:6131f7755c2fdccf",
+        1,
+        2003,
+        1
+      ],
+      "receipt_provenance_sha256": "5bafef22f4a976f2c8c24f5dfb8c6c8aca2933633b3a399d8e9dbf9563c6eb51",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 3,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": -1,
+      "evidence_sequence": 11,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 1,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:3:6131f7755c2fdccf",
+        2,
+        2003,
+        2
+      ],
+      "receipt_provenance_sha256": "184ba89202ec856a93fb2351a6ec47018fd056c13a01eafa9a5c2d2632706aca",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 3,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": false,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": -1,
+      "evidence_sequence": 12,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 0,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "B",
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:3:6131f7755c2fdccf",
+        3,
+        2003,
+        3
+      ],
+      "receipt_provenance_sha256": "2feb611ab2a1bd495f1ed04dfa902b8497a09a125241cc16bda31c3b5405a974",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 3,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 13,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 1,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        1,
+        2004,
+        1
+      ],
+      "receipt_provenance_sha256": "1e056d58d93d008b17aae44875473b0ae81e7d15fad1ac76b27634987bfa8108",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 14,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 2,
+          "total": 6
+        },
+        "G3": {
+          "correct": 4,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        2,
+        2004,
+        2
+      ],
+      "receipt_provenance_sha256": "54e5698adbd20ae3bb27bda16747a340ae4fb606c98c250028e72924491264e8",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 15,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 3,
+          "total": 6
+        },
+        "G3": {
+          "correct": 3,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        3,
+        2004,
+        3
+      ],
+      "receipt_provenance_sha256": "20c5b7cee914fe3bc1b0438ee3371620b7c7da8bcff363b65108d121dd7b7b55",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G3",
+      "selected_before": "G3",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 16,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 4,
+          "total": 6
+        },
+        "G3": {
+          "correct": 2,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        4,
+        2004,
+        4
+      ],
+      "receipt_provenance_sha256": "0779fb5305250135724517b40b3bf8d0d8705e5257595b5d20dfe32faeb0ac0d",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G2",
+      "selected_before": "G3",
+      "switch_occurred": true
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 17,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 5,
+          "total": 6
+        },
+        "G3": {
+          "correct": 1,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        5,
+        2004,
+        5
+      ],
+      "receipt_provenance_sha256": "f03ff35c525d24db53dd2e7ccbf326123791450c532ce87602a234ff1f8db16a",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": false,
+      "G3_prediction": -1,
+      "evidence_sequence": 18,
+      "execution_kind": "ROUTING_CALIBRATION_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 6,
+          "total": 6
+        },
+        "G3": {
+          "correct": 0,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        6,
+        2004,
+        6
+      ],
+      "receipt_provenance_sha256": "fcbb87e1a00ef5d2f27c9e9fce80f11cbb479ff438b35461f3829b2727edd832",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    },
+    {
+      "G2_correct": true,
+      "G2_prediction": 1,
+      "G3_correct": true,
+      "G3_prediction": 1,
+      "evidence_sequence": 19,
+      "execution_kind": "EXPLORER_SELECTED_EXECUTION",
+      "local_score_after": {
+        "G2": {
+          "correct": 6,
+          "total": 6
+        },
+        "G3": {
+          "correct": 1,
+          "total": 6
+        }
+      },
+      "phase": "A2",
+      "realized_consequence": 1,
+      "receipt_identity": [
+        "HORUS:fc3ca9b9fb46c8652ed6779e8a68d1aa:runtime:4:14adb2f663d930d6",
+        7,
+        2004,
+        7
+      ],
+      "receipt_provenance_sha256": "11b633a61e621812c41316c240919398fc4cde72415ad70dc06a2a3bd8a1694a",
+      "relation": {
+        "action": "HOLD",
+        "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+        "pre_state": 1
+      },
+      "runtime_index": 4,
+      "selected_after": "G2",
+      "selected_before": "G2",
+      "switch_occurred": false
+    }
+  ],
+  "total_model_calls": 189
+}
