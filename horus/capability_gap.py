@@ -232,8 +232,11 @@ class CapabilityGapStore:
                 self.state["stream_head_sha256"]!=sha256(
                     _canonical(self.records[-1]).encode()).hexdigest():
             raise RoutingError("capability gap state/stream replay mismatch")
-        if completes:
-            projection=completes[-1]["record"]["state_projection_after"]
+        projections=[r for r in self.records if r["kind"] in (
+            "CAPABILITY_GAP_DECISION_COMPLETED",
+            "AUTHORIZED_OPERATIONAL_REPAIR_RESUME_BOUND")]
+        if projections:
+            projection=projections[-1]["record"]["state_projection_after"]
             actual={k:self.state[k] for k in
                 ("attempted_decisions","authorized_executions",
                  "current_problem","terminal_classification")}
@@ -247,6 +250,55 @@ class CapabilityGapStore:
             raise RoutingError("capability gap/session history mismatch")
         if self.state["pending_decision"] is not None and not allow_pending:
             raise RoutingError("incomplete capability gap decision")
+
+    def resume_after_authorized_repair(self, *, store: SessionStore,
+                                       repair_reference: dict) -> dict:
+        """Prospectively reopen only the unresolved service-blocked route.
+
+        The terminal v0.9 completion remains in the append-only stream.  This
+        record binds an independently authorized operational repair to the
+        unchanged problem budget; it does not add a decision, receipt, Memory
+        record, routing observation, or training target.
+        """
+        self.bind_session(store)
+        problem=self.state.get("current_problem")
+        if self.state.get("terminal_classification")!="ROUTE_FAILED" or not problem or \
+                problem.get("assessment")!="ROUTE_FAILED" or \
+                problem.get("where_did_resolution_stop")!="MODEL_SERVICE" or \
+                problem.get("requested_capability")!="EXTERNAL_SERVICE_REPAIR":
+            raise RoutingError("no service-blocked capability route to resume")
+        if problem.get("probe_count")!=1 or len(problem[
+                "problem_probe_history"].get("ADVANCE",[]))!=1 or problem[
+                "problem_probe_history"].get("RETREAT"):
+            raise RoutingError("problem evidence differs from frozen repair scope")
+        required={"repair_event_sha256","logical_prediction_identity",
+                  "original_request_sha256","authorization_sha256"}
+        if not required.issubset(repair_reference) or \
+                repair_reference.get("lifecycle_state")!="REPAIR_SUCCEEDED":
+            raise RoutingError("authorized successful repair proof is absent")
+        problem.update(assessment="MORE_EVIDENCE_REQUIRED",status="OPEN",
+            where_did_resolution_stop="EVIDENCE_COVERAGE",
+            requested_capability="MORE_RELATION_EVIDENCE")
+        problem["evolution"].append(dict(
+            decision_sequence=self.state["attempted_decisions"],
+            events=["AUTHORIZED_OPERATIONAL_REPAIR_BOUND",
+                    "UNRESOLVED_PROBLEM_RESUMED"],
+            repair_reference=deepcopy(repair_reference),
+            recorded_before_execution=True))
+        self.state["terminal_classification"]=None
+        projection={k:deepcopy(self.state[k]) for k in
+            ("attempted_decisions","authorized_executions","current_problem",
+             "terminal_classification")}
+        record=dict(repair_reference=deepcopy(repair_reference),
+            problem_id=problem["problem_id"],probe_count_preserved=problem["probe_count"],
+            advance_probe_repeated=False,retreat_probe_still_missing=True,
+            behavioral_evidence_created=False,memory_mutated=False,
+            routing_evidence_created=False,training_target_created=False,
+            state_projection_after=projection)
+        env=self._append("AUTHORIZED_OPERATIONAL_REPAIR_RESUME_BOUND",record)
+        self._write_state()
+        self.bind_session(store)
+        return deepcopy(env["record"])
 
     @staticmethod
     def _tied_actions(forecasts):
