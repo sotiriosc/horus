@@ -65,6 +65,52 @@ def render_live(artifact):
     print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
 
 
+def render_routed(artifact):
+    print(f"Horus routed session: {artifact['session_id']}")
+    print(f"Runtime {artifact['runtime_index']} / epoch {artifact['epoch']}")
+    print("Consequence specialists:")
+    for row in artifact["consequence_specialists"]:
+        print(f"  {row['id']}: generation {row['generation']} "
+              f"{row['artifact_sha256']} "
+              f"(global={row['global_lifecycle_status']}, "
+              f"routing={row['routing_eligibility']})")
+    for row in artifact["steps"]:
+        before = row["router_before"]
+        print(f"\nAttempt {row['decision_id']}")
+        print(f"Router selected: {row['selected_specialist']}")
+        for specialist in ("G2", "G3"):
+            score = before["scores"][specialist]
+            print(f"  recent {specialist}: {score['correct']}/{score['total']}")
+        print("Specialist forecasts:")
+        for specialist in ("G2", "G3"):
+            values = ", ".join(
+                f"{item['action']}={item['consequence']}"
+                for item in row["specialist_forecasts"][specialist])
+            print(f"  {specialist}: {values}")
+        print(f"Explorer: {row['explorer']['action']} ({row['explorer']['reason']})")
+        if row["status"] == "ABSTAINED":
+            print("Executed: no (routed component set failed closed)")
+            continue
+        receipt = row["receipt"]
+        print(f"Receipt: consequence={receipt['realized_consequence']}, "
+              f"identity={[receipt['source_identity'], receipt['event_id'], receipt['epoch'], receipt['transaction_id']]}")
+        print("Shadow scoring:")
+        for specialist in ("G2", "G3"):
+            score = row["shadow_scoring"][specialist]
+            print(f"  {specialist} predicted {score['predicted']} -> "
+                  f"{'correct' if score['correct'] else 'wrong'}")
+        route = row["routing_evidence"]
+        if route["switch_occurred"]:
+            print("ROUTER SWITCH")
+            print(f"{route['selected_specialist']} -> "
+                  f"{route['selected_specialist_after']}")
+            print(f"reason: {route['switch_reason']}")
+    final = artifact["router_final"]
+    print(f"\nFinal router selection: {final['selected_specialist']}")
+    print(f"Actual model calls this process: {artifact['actual_model_calls']}")
+    print(f"Checkpoint: {Path(artifact['session']) / 'checkpoint.json'}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Run the bounded Horus v0 closed loop")
     parser.add_argument("--output", type=Path, default=Path("horus-v0-run.json"))
@@ -74,16 +120,17 @@ def main(argv=None):
     parser.add_argument("--session", type=Path)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--consequence-model",
-                        choices=("mixtral", "base", "trained", "active"),
+                        choices=("mixtral", "base", "trained", "active", "routed"),
                         default="mixtral")
     parser.add_argument("--trained-adapter", type=Path)
     parser.add_argument("--model-registry", type=Path)
+    parser.add_argument("--routing-registry", type=Path)
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
     parser.add_argument("--external-regime", choices=("A", "B"), default="A",
                         help="external audit regime; never added to model input")
     parser.add_argument("--transition-regime", action="store_true",
-                        help="authorize the one prospective A-to-B session transition")
+                        help="authorize one prospective registered A/B transition")
     args = parser.parse_args(argv)
     if args.live:
         if args.session is None:
@@ -93,6 +140,14 @@ def main(argv=None):
         from .live import run_live
         consequence_client = None
         active_spec = None
+        if args.consequence_model == "routed":
+            if args.routing_registry is None:
+                parser.error("--consequence-model routed requires --routing-registry")
+            from .routing import run_routed
+            artifact = run_routed(args.session, args.routing_registry, args.steps,
+                args.resume, args.external_regime, args.transition_regime)
+            render_routed(artifact)
+            return
         if args.consequence_model == "active":
             if args.model_registry is None:
                 parser.error("--consequence-model active requires --model-registry")

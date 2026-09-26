@@ -9,6 +9,7 @@ from .learning_cycle import STRATEGIES, collect_active, run_cycle
 from .model_registry import history, initialize_registry
 from .stability_cycle import (collect_regime_shift, initialize_stability_registry,
                               load_evaluation_bank, run_stability_cycle)
+from .routing import (analyze_routing_campaign, initialize_routing_registry)
 
 
 def main(argv=None):
@@ -65,6 +66,14 @@ def main(argv=None):
     p = commands.add_parser("stability-cycle")
     p.add_argument("--session-root", type=Path, required=True)
     p.add_argument("--registry", type=Path, required=True)
+    p = commands.add_parser("init-routing")
+    p.add_argument("--source-registry", type=Path,
+                   default=Path("research/learning-stability-v0/registry"))
+    p.add_argument("--routing-registry", type=Path, required=True)
+    p = commands.add_parser("routing-report")
+    p.add_argument("--session", type=Path, required=True)
+    p.add_argument("--routing-registry", type=Path, required=True)
+    p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -104,8 +113,14 @@ def main(argv=None):
         result = initialize_stability_registry(args.registry)
     elif args.command == "collect-regime-shift":
         result = collect_regime_shift(args.session_root, args.registry, args.target)
-    else:
+    elif args.command == "stability-cycle":
         result = run_stability_cycle(args.session_root, args.registry)
+    elif args.command == "init-routing":
+        result = initialize_routing_registry(args.routing_registry,
+                                             args.source_registry)
+    else:
+        result = analyze_routing_campaign(args.session, args.routing_registry,
+                                          args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

@@ -259,7 +259,7 @@ class SessionStore:
                 version=current, starts_after_completed_step=0,
                 model_visible=False, configured_at=_now())]
         if current != version:
-            if not allow_transition or (current, version) != ("A", "B"):
+            if not allow_transition or {current, version} != {"A", "B"}:
                 raise SessionError("external regime transition was not explicitly authorized")
             self.checkpoint["external_regime_version"] = version
             self.checkpoint["regime_history"].append(dict(
