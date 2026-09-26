@@ -8,6 +8,15 @@ production-qualified processor or a general safety system.
 
 ## Current status
 
+**Grounded learning cycle v0.3:** Horus now keeps explicit consequence-model
+generations, trains candidates outside the ACTIVE model, compares incumbent and
+candidate on identical heldout receipt-grounded requests, and atomically
+promotes or rejects under a frozen rule. The first cycle collected 60 new
+authorized outcomes and promoted generation 2 after a 2/12 versus 12/12
+comparison, with 10 corrections and no regressions in that small repetitive
+heldout set. See [the lifecycle design](docs/HORUS_V0_3_LEARNING_CYCLE.md) and
+[the completed result](research/learning-cycle-v0/RESULTS.md).
+
 **Grounded consequence learning v0.2:** the independent consequence role now
 has a checked-in rank-8 LoRA adapter trained only from 42 authorized realized
 receipts. A session-separated held-out set improved from 6/12 to 8/12, with

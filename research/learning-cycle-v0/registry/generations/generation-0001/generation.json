@@ -1,0 +1,65 @@
+{
+  "payload": {
+    "adapter_path": "generations/generation-0001/trained-adapter.safetensors",
+    "adapter_sha256": "45a70d5f78aa98540ac00ca7e86a04155dd6a4c482a5f7d5dc6db25ed9f9c8fe",
+    "artifact_kind": "LORA_ADAPTER",
+    "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+    "creation_status": "ACTIVE",
+    "creation_timestamp": "2026-09-25T22:40:53.881278+00:00",
+    "dataset_manifest_sha256": "4195c5b21aeeccb02d3a51d44277cd498901144770233d11d51713af94b0fcd3",
+    "dataset_path": "generations/generation-0001/dataset",
+    "evaluation_artifact": "generations/generation-0001/evaluation.json",
+    "evaluation_sha256": "4297802313ba203bb0f99b3747a857faf1df46f920d3715886019011b26ede30",
+    "evaluation_summary": {
+      "accuracy": 0.6666666666666666,
+      "by_target": {
+        "-1": {
+          "accuracy": 0.5,
+          "correct": 2,
+          "n": 4
+        },
+        "0": {
+          "accuracy": 1.0,
+          "correct": 2,
+          "n": 2
+        },
+        "1": {
+          "accuracy": 0.6666666666666666,
+          "correct": 4,
+          "n": 6
+        }
+      },
+      "correct": 8,
+      "examples": 12,
+      "invalid": 0
+    },
+    "example_usage_artifact": "generations/generation-0001/example-usage.json",
+    "example_usage_sha256": "f02e60dbbbf147140998a21ab4997c7f491cc0ada796903bf1890f25374f5280",
+    "generation": 1,
+    "grounded_training_examples": 42,
+    "lineage_artifact": "generations/generation-0001/learning-lineage.json",
+    "lineage_sha256": "88333c82c70447c8fad7afc2cd4fa0eb277e65273dab9788fb09023ba7a42d54",
+    "parent_generation": 0,
+    "reason": "Imported verified Horus v0.2 incumbent",
+    "training_configuration": {
+      "adapter_alpha": 16,
+      "adapter_dropout": 0.05,
+      "adapter_rank": 8,
+      "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "batch_size": 2,
+      "epochs": 5,
+      "gradient_accumulation": 2,
+      "learning_rate": 0.0002,
+      "max_length": 512,
+      "optimizer": "AdamW",
+      "seed": 20260925,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "weight_decay": 0.01
+    }
+  },
+  "sha256": "50810746d0e9e398a384c33726c4f00e7d2f2a86980f9032ea587fd0b7fc7f30"
+}
