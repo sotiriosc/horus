@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "problem_types": [
+    "UNRESOLVED_VALUE_TIE",
+    "UNRESOLVED_RELATION",
+    "EXTERNAL_SERVICE_PROBLEM",
+    "INTERNAL_ROUTE_PROBLEM"
+  ],
+  "capability_assessments": [
+    "MORE_EVIDENCE_REQUIRED",
+    "VALUE_TIE_RESOLVED",
+    "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "ROUTE_FAILED"
+  ],
+  "lifecycle_states": [
+    "DETECTED",
+    "OPEN",
+    "ROUTE_REQUESTED",
+    "ROUTE_EXECUTED",
+    "REASSESSED",
+    "RESOLVED",
+    "UNRESOLVED",
+    "SUPERSEDED",
+    "CLOSED"
+  ],
+  "active_lifecycle_states": [
+    "DETECTED",
+    "OPEN",
+    "ROUTE_REQUESTED",
+    "ROUTE_EXECUTED",
+    "REASSESSED",
+    "UNRESOLVED"
+  ],
+  "relationships": ["successor_of", "caused_by", "blocked_by", "related_to", "supersedes"],
+  "persistent_tie_attempts": 2,
+  "deadlock_probe_limit_per_problem": 1,
+  "action_order": ["ADVANCE", "HOLD", "RETREAT"],
+  "manager_authority": {
+    "select_actions": false,
+    "execute": false,
+    "issue_receipts": false,
+    "alter_memory": false,
+    "alter_predictions": false,
+    "train": false,
+    "change_objective": false,
+    "create_model": false,
+    "self_authorize": false
+  }
+}
