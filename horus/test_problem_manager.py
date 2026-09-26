@@ -147,8 +147,9 @@ class ProblemManagerTests(unittest.TestCase):
         self.assertTrue(all(p[k] is False for k in POLICY["manager_authority"]))
 
     def test_14_deadlock_route_requires_applicable_open_problem(self):
-        store=FakeStore(); result=self.manager.prepare(store=store,
-            ordinary_decision=ordinary(1),pre_state=1,forecasts=forecasts())
+        self.replay(); store=FakeStore(attempts=2)
+        result=self.manager.prepare(store=store,
+            ordinary_decision=ordinary(3),pre_state=1,forecasts=forecasts())
         self.assertEqual(result["reason"],"EXPLOIT_TIED_MAXIMUM")
 
     def test_15_hidden_simulator_information_absent(self):

@@ -1,0 +1,61 @@
+{
+  "bounds": {
+    "maximum_fresh_decisions": 8,
+    "maximum_model_calls": 72,
+    "protected_episode_limit": 12,
+    "runtime_schedule": [
+      8
+    ]
+  },
+  "eligibility_prerequisite": {
+    "PR-0003_open": true,
+    "allowance": {
+      "executed": 0,
+      "granted": 0,
+      "limit": 1
+    },
+    "state1_scope": {
+      "kind": "decision_state",
+      "pre_state": 1,
+      "tied_action_set": [
+        "ADVANCE",
+        "HOLD"
+      ]
+    }
+  },
+  "frozen_sha256": {
+    "grounded_exploration.py": "88f744965f661b0a2c0bf610ff82e145a692da98d3ec58aea49c2ae07327af34",
+    "live.py": "7a9d78692e2c07b1d3fc9ee24a0c079fe6b4b4cd247485f5bdf1024027faf92e",
+    "problem_manager.py": "10e282448e081fb6d6bbf30a27b6d10ed73224c9f89fa5f81e2f90892143126a",
+    "problem_ownership_policy.json": "1fcf7d5d453ee5a91ced9401db0a78a881be30dd641d9e5a6db0a9b994a06157",
+    "problem_ownership_run.py": "301e2bef5f2c2b8f5e965501decd99db90801614694cebdba609b1174d3b6717",
+    "relation_routing.py": "4845d0fdeb34ac3101fca915f1cd5979048b4b1d80c89a91c913e8fc3962d396"
+  },
+  "identity": "HORUS_PROBLEM_OWNERSHIP_V0_PREFLIGHT",
+  "inference_calls": 0,
+  "model_service": {
+    "health_check_behavioral_inference": false,
+    "model": "dolphin-mixtral:latest",
+    "model_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+    "ready": true
+  },
+  "preregistration_sha256": "e4120c0e9901309dbdd35699d0284aa7e74572b46f7d762858c97e0911a9a550",
+  "source_commit": "95a0639181e15e3478c89e2ee58a0cb349e1ed79",
+  "source_state": {
+    "attempted_decisions": 83,
+    "authorized_executions": 53,
+    "deadlock_route_enabled": false,
+    "problem_ids": [
+      "PR-0001",
+      "PR-0002",
+      "PR-0003"
+    ]
+  },
+  "tests": {
+    "core_regression_steps": 53,
+    "full_horus": 157,
+    "problem_manager": 15
+  },
+  "training_runs": 0,
+  "world_executions": 0
+}
