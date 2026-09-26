@@ -80,6 +80,10 @@ def main(argv=None):
     parser.add_argument("--model-registry", type=Path)
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
+    parser.add_argument("--external-regime", choices=("A", "B"), default="A",
+                        help="external audit regime; never added to model input")
+    parser.add_argument("--transition-regime", action="store_true",
+                        help="authorize the one prospective A-to-B session transition")
     args = parser.parse_args(argv)
     if args.live:
         if args.session is None:
@@ -104,7 +108,9 @@ def main(argv=None):
             consequence_client = QwenConsequenceClient(
                 adapter_path=adapter, model_path=args.consequence_base_model)
         artifact = run_live(args.session, args.steps, args.resume,
-                            consequence_client=consequence_client)
+                            consequence_client=consequence_client,
+                            regime_version=args.external_regime,
+                            allow_regime_transition=args.transition_regime)
         if active_spec is not None:
             artifact["active_model"] = active_spec
         render_live(artifact)

@@ -330,7 +330,12 @@ def _build_example(store: SessionStore, session_name: str,
         event_sequence=event_envelope["sequence"], target=receipt["realized_consequence"],
         target_json=target, prediction_before_execution=parsed["parsed"],
         prediction_raw_sha256=digest(response["response"]),
-        consequence_model_identity=intent.get("model_generation_identity"))
+        consequence_model_identity=intent.get("model_generation_identity"),
+        originating_runtime_index=event["source_scope"]["runtime_index"],
+        external_regime_version=event.get("external_regime_version", "A"),
+        regime_model_visible=event.get("regime_model_visible", False),
+        input_context_sha256=digest({"system": request["system"],
+                                     "prompt": request["prompt"]}))
 
 
 def freeze_dataset(collection_root: Path, output: Path) -> dict:

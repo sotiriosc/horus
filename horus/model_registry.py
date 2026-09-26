@@ -318,9 +318,11 @@ def history(root: Path) -> list[dict]:
     for entry in registry["entries"]:
         manifest = registry["manifests"][entry["generation"]]
         rows.append(dict(generation=entry["generation"],
+            candidate_label=manifest.get("candidate_label", str(entry["generation"])),
             parent_generation=entry["parent_generation"], status=entry["status"],
             reason=entry["reason"], base_model=manifest["base_model_identity"],
             adapter_sha256=entry["artifact_sha256"],
             grounded_training_examples=manifest["grounded_training_examples"],
-            evaluation_summary=manifest.get("evaluation_summary")))
+            evaluation_summary=manifest.get("evaluation_summary"),
+            evaluation_bank_version=manifest.get("evaluation_bank_version")))
     return rows

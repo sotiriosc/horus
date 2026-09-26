@@ -7,6 +7,8 @@ from .grounded_learning import (collect, compare, compare_context, evaluate,
                                 freeze_dataset, summarize_session, train)
 from .learning_cycle import STRATEGIES, collect_active, run_cycle
 from .model_registry import history, initialize_registry
+from .stability_cycle import (collect_regime_shift, initialize_stability_registry,
+                              load_evaluation_bank, run_stability_cycle)
 
 
 def main(argv=None):
@@ -54,6 +56,15 @@ def main(argv=None):
     p.add_argument("--strategy", choices=STRATEGIES, default="continue-active")
     p = commands.add_parser("history")
     p.add_argument("--registry", type=Path, required=True)
+    p = commands.add_parser("init-stability")
+    p.add_argument("--registry", type=Path, required=True)
+    p = commands.add_parser("collect-regime-shift")
+    p.add_argument("--session-root", type=Path, required=True)
+    p.add_argument("--registry", type=Path, required=True)
+    p.add_argument("--target", type=int, default=60)
+    p = commands.add_parser("stability-cycle")
+    p.add_argument("--session-root", type=Path, required=True)
+    p.add_argument("--registry", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -77,8 +88,24 @@ def main(argv=None):
                                 args.max_sessions, args.steps_per_session)
     elif args.command == "cycle":
         result = run_cycle(args.session_root, args.registry, args.strategy)
+    elif args.command == "history":
+        generations = history(args.registry)
+        if (args.registry / "evaluation-bank/current.json").exists():
+            bank, _ = load_evaluation_bank(args.registry)
+            result = dict(generations=generations, evaluation_bank=dict(
+                version=bank["payload"]["version"],
+                examples=bank["payload"]["example_count"],
+                class_distribution=bank["payload"]["class_distribution"],
+                batch_distribution=bank["payload"]["batch_distribution"],
+                manifest_sha256=bank["manifest_sha256"]))
+        else:
+            result = generations
+    elif args.command == "init-stability":
+        result = initialize_stability_registry(args.registry)
+    elif args.command == "collect-regime-shift":
+        result = collect_regime_shift(args.session_root, args.registry, args.target)
     else:
-        result = history(args.registry)
+        result = run_stability_cycle(args.session_root, args.registry)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 

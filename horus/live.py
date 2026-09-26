@@ -7,7 +7,7 @@ receipt capabilities and cannot authorize new Memory publication.
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 from datetime import datetime, timezone
 import fcntl
 from hashlib import sha256
@@ -38,6 +38,7 @@ from .core import (BoundPredictionMap, GroundedObservation, MAPPING, MapForecast
 JOINT_SYSTEM = SCHEMA_SYSTEMS["J"]
 CONSEQUENCE_SYSTEM = CONSEQUENCE_SYSTEMS["C"]
 FORMAT_VERSION = 1
+REGIME_CONFIG = json.loads(Path(__file__).with_name("regime_config.json").read_text())
 
 
 def _now() -> str:
@@ -245,6 +246,29 @@ class SessionStore:
         self.checkpoint["updated_at"] = _now()
         self._write_checkpoint()
 
+    def configure_regime(self, version: str, allow_transition: bool = False) -> None:
+        if version not in REGIME_CONFIG["regimes"]:
+            raise SessionError("unknown external regime")
+        current = self.checkpoint.get("external_regime_version")
+        if current is None:
+            current = "A"
+            self.checkpoint["external_regime_version"] = current
+            self.checkpoint["regime_history"] = [dict(
+                version="A", starts_after_completed_step=0,
+                model_visible=False, configured_at=_now())]
+        if current != version:
+            if not allow_transition or (current, version) != ("A", "B"):
+                raise SessionError("external regime transition was not explicitly authorized")
+            self.checkpoint["external_regime_version"] = version
+            self.checkpoint["regime_history"].append(dict(
+                version=version,
+                starts_after_completed_step=self.checkpoint["completed_steps"],
+                model_visible=False, configured_at=_now()))
+        elif allow_transition:
+            raise SessionError("requested regime transition did not change regime")
+        self.checkpoint["updated_at"] = _now()
+        self._write_checkpoint()
+
     def begin_runtime(self) -> tuple[int, str]:
         self.checkpoint["runtime_index"] += 1
         self.checkpoint["current_epoch"] += 1
@@ -272,13 +296,14 @@ class _ExecutionPort:
 
 class LiveController:
     """Fresh per-process controller using the unchanged receipt/authority chain."""
-    def __init__(self, source_identity: str, state: int, epoch: int):
+    def __init__(self, source_identity: str, state: int, epoch: int,
+                 regime_version: str = "A"):
         self._source_identity = source_identity
         self._active = None
         self._source = ExternalExecutionBoundary(_ExecutionPort(lambda: self._active),
                                                  source_identity)
         self._registered_source = self._source
-        self._active = Publication(EpisodeWorld(state),
+        self._active = Publication(RegimeEpisodeWorld(state, regime_version),
             StatusBoundFramework(self._source.reader(), state, epoch))
 
     def begin_step(self, action):
@@ -383,6 +408,27 @@ class ModelClient:
                         response_metadata={})
 
 
+class RegimeEpisodeWorld(EpisodeWorld):
+    """External deterministic reality; its regime is never projected to models."""
+    def __init__(self, initial_state: int, regime_version: str):
+        if regime_version not in REGIME_CONFIG["regimes"]:
+            raise ValueError("unknown external regime")
+        super().__init__(initial_state)
+        self.regime_version = regime_version
+
+    def execute(self, epoch, transaction_id, action):
+        original = super().execute(epoch, transaction_id, action)
+        actual = original
+        for override in REGIME_CONFIG["regimes"][self.regime_version][
+                "consequence_overrides"]:
+            if original.pre_state == override["pre_state"] and \
+                    original.action == override["action"]:
+                actual = replace(original, consequence=override["consequence"])
+                break
+        self.fixture.last_actual = actual
+        return actual
+
+
 @dataclass(frozen=True)
 class ForecastEvidence:
     forecast: MapForecast
@@ -472,11 +518,13 @@ class LiveSplitMap:
 
 class LiveRuntime:
     def __init__(self, store: SessionStore, client: ModelClient,
-                 consequence_client=None):
+                 consequence_client=None, regime_version: str = "A"):
         self.store, self.client = store, client
         self.consequence_client = consequence_client or client
         epoch, source = store.begin_runtime()
-        self.controller = LiveController(source, store.checkpoint["current_state"], epoch)
+        self.controller = LiveController(source, store.checkpoint["current_state"], epoch,
+                                         regime_version)
+        self.regime_version = regime_version
         self.authentic, self.executions = {}, {}
         self.reader = DurableHistoryReader(self.controller, store,
                                            self.authentic, self.executions)
@@ -538,7 +586,9 @@ class LiveRuntime:
             memory_record=memory_value,
             source_scope=dict(runtime_index=self.store.checkpoint["runtime_index"],
                               imported_after_restart=False,
-                              source_identity=receipt.source_identity))
+                              source_identity=receipt.source_identity),
+            external_regime_version=self.regime_version,
+            regime_model_visible=False)
         event_envelope = self.store.append("events", "AUTHORIZED_REALIZED_EVENT", event)
         event_head = sha256(_canonical(event_envelope).encode()).hexdigest()
         training = dict(session_id=self.store.checkpoint["session_id"],
@@ -577,7 +627,9 @@ class LiveRuntime:
             memory_reference=dict(event_sequence=event_envelope["sequence"],
                                   event_head_sha256=event_head),
             labels=dict(prediction_is_authenticated_target=False,
-                        realized_receipt_is_authenticated_target=True))
+                        realized_receipt_is_authenticated_target=True),
+            external_regime_version=self.regime_version,
+            regime_model_visible=False)
         self.store.append("training", "AUTHORIZED_TRAINING_EXAMPLE", training)
         self.controller.release(receipt)
         self.store.save(state=receipt.next_state,
@@ -603,15 +655,17 @@ class LiveRuntime:
 
 
 def run_live(session: Path, steps: int, resume: bool,
-             client: ModelClient | None = None, consequence_client=None) -> dict:
+             client: ModelClient | None = None, consequence_client=None,
+             regime_version: str = "A", allow_regime_transition: bool = False) -> dict:
     if type(steps) is not int or steps < 0:
         raise ValueError("steps must be a nonnegative integer")
     with SessionStore(session, resume) as store:
+        store.configure_regime(regime_version, allow_regime_transition)
         joint = client or ModelClient()
         consequence = consequence_client or joint
         joint_before = joint.requests
         consequence_before = consequence.requests
-        runtime = LiveRuntime(store, joint, consequence)
+        runtime = LiveRuntime(store, joint, consequence, regime_version)
         rows = []
         for _ in range(steps):
             row = runtime.step()
@@ -630,6 +684,8 @@ def run_live(session: Path, steps: int, resume: bool,
             consequence_model=getattr(consequence, "model_id", MODEL), steps=rows,
             consequence_model_identity=getattr(
                 consequence, "horus_model_identity", None),
+            external_regime_version=regime_version,
+            regime_model_visible=False,
             checkpoint=_plain(store.checkpoint),
             trust_scope=("local HMAC-authenticated application checkpoint; fresh receipt "
                          "source/framework epoch on every process; no physical, hostile-host, "
