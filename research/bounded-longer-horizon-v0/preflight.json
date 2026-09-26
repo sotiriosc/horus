@@ -1,0 +1,190 @@
+{
+  "applicable_problem": {
+    "assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "grounded_transitions": {
+      "ADVANCE": {
+        "continuation_state": 3,
+        "grounded": true,
+        "primary_value": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:7:fbd6aa709480146c",
+          1,
+          2007,
+          1
+        ]
+      },
+      "RETREAT": {
+        "continuation_state": 1,
+        "grounded": true,
+        "primary_value": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:8:9e523c741279b221",
+          1,
+          2008,
+          1
+        ]
+      }
+    },
+    "problem_id": "PR-0002",
+    "requested_capability": "LONGER_HORIZON_VALUE",
+    "scope": {
+      "kind": "decision_state",
+      "pre_state": 2,
+      "tied_action_set": [
+        "ADVANCE",
+        "RETREAT"
+      ]
+    }
+  },
+  "bounds": {
+    "additional_layers": 1,
+    "behavioral_executions": 1,
+    "conditional_integration_calls": 9,
+    "downstream_calls": 12,
+    "total_calls": 21
+  },
+  "generated_at": "2026-09-26T22:09:20.395881+00:00",
+  "inference_calls": 0,
+  "policy_hashes_verified": true,
+  "pr0003_sha256_before": "52abbc28b599fafd771452499e9503738fedf212434062f4526317b7d4eaba8b",
+  "relation_routing": {
+    "1": {
+      "ADVANCE": {
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "relation_evidence_count": 5,
+        "scores": {
+          "G2": {
+            "correct": 3,
+            "total": 5
+          },
+          "G3": {
+            "correct": 3,
+            "total": 5
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      },
+      "HOLD": {
+        "relation": {
+          "action": "HOLD",
+          "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+          "pre_state": 1
+        },
+        "relation_evidence_count": 12,
+        "scores": {
+          "G2": {
+            "correct": 6,
+            "total": 6
+          },
+          "G3": {
+            "correct": 1,
+            "total": 6
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      },
+      "RETREAT": {
+        "relation": {
+          "action": "RETREAT",
+          "identity_sha256": "0f6f9ab5d827513ea5de5f97e6ec89b1acc6fa163816e37a91b4e1da53ee0a9b",
+          "pre_state": 1
+        },
+        "relation_evidence_count": 8,
+        "scores": {
+          "G2": {
+            "correct": 6,
+            "total": 6
+          },
+          "G3": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      }
+    },
+    "3": {
+      "ADVANCE": {
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "756f1eea06c62036d159803061e95e65b1e62782893c3b68356c2f2d6eace60b",
+          "pre_state": 3
+        },
+        "relation_evidence_count": 1,
+        "scores": {
+          "G2": {
+            "correct": 1,
+            "total": 1
+          },
+          "G3": {
+            "correct": 0,
+            "total": 1
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      },
+      "HOLD": {
+        "relation": {
+          "action": "HOLD",
+          "identity_sha256": "9dca03e06237c2d1996c5b3c69fbcf57e1b421c3be74fd7c998592c96056fa19",
+          "pre_state": 3
+        },
+        "relation_evidence_count": 3,
+        "scores": {
+          "G2": {
+            "correct": 3,
+            "total": 3
+          },
+          "G3": {
+            "correct": 3,
+            "total": 3
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      },
+      "RETREAT": {
+        "relation": {
+          "action": "RETREAT",
+          "identity_sha256": "5902002a94bca1006d0c9883f749c887020b19755e77c4897409aa2a49c0e73c",
+          "pre_state": 3
+        },
+        "relation_evidence_count": 4,
+        "scores": {
+          "G2": {
+            "correct": 3,
+            "total": 4
+          },
+          "G3": {
+            "correct": 3,
+            "total": 4
+          }
+        },
+        "selected_specialist": "G2",
+        "total_evidence_count": 54
+      }
+    }
+  },
+  "source_checkpoint": {
+    "attempted_decisions": 85,
+    "authorized_executions": 54,
+    "calls_stream_count": 2268,
+    "current_state": 2,
+    "epoch": 2011,
+    "request_intent_count": 756,
+    "runtime_index": 11,
+    "training_stream_count": 85
+  },
+  "source_commit": "0eda60382b3d9cdaef0896e0648ae2a6bc25cb9e",
+  "status": "PASS",
+  "training_runs": 0,
+  "v013_public_evidence_unchanged": true
+}
