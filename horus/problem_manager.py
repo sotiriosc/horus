@@ -379,6 +379,36 @@ class ProblemManager:
                 decision_sequence=state["attempted_decisions"],route="BOUNDED_DEPTH2_TRAJECTORY_VALUE"),
                 dict(lifecycle_state="REASSESSED",decision_sequence=state["attempted_decisions"],
                     result=record["outcome"],selected_action=record.get("selected_action"))])
+        elif kind=="OPTION_PROFILE_AUTHORIZED":
+            p=state["problems"].get(record["problem_id"])
+            if not p or p["capability_assessment"]!="CURRENT_OBJECTIVE_CANNOT_DISTINGUISH" or \
+                    p["requested_capability"]!="ALTERNATIVE_VALUE_REPRESENTATION":
+                raise RoutingError("option-profile authorization lacks the requested capability")
+            if "option_profile_dominance" in p["route_budgets"]:
+                raise RoutingError("option-profile representation already authorized")
+            p["route_budgets"]["option_profile_dominance"]={"limit":1,"evaluated":0}
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],
+                kind="ALTERNATIVE_VALUE_REPRESENTATION_AUTHORIZED",
+                representation="OPTION_PROFILE_DOMINANCE",
+                authorization_sha256=record["authorization_sha256"]))
+        elif kind=="OPTION_PROFILE_EVALUATED":
+            p=state["problems"].get(record["problem_id"]); budget=(None if not p else
+                p.get("route_budgets",{}).get("option_profile_dominance"))
+            if not budget or budget["evaluated"]>=budget["limit"]:
+                raise RoutingError("option-profile representation is not authorized or is consumed")
+            if record["outcome"] not in ("ADVANCE_PROFILE_DOMINATES","RETREAT_PROFILE_DOMINATES",
+                                         "PROFILES_EQUAL","PROFILES_INCOMPARABLE"):
+                raise RoutingError("unknown option-profile result")
+            budget["evaluated"]+=1; p["evidence"].append(deepcopy(record["evaluation"]))
+            p["lifecycle_state"]="REASSESSED"
+            p["requested_capability"]=("OPTION_PROFILE_BEHAVIORAL_INTEGRATION"
+                if record["outcome"] in ("ADVANCE_PROFILE_DOMINATES","RETREAT_PROFILE_DOMINATES")
+                else "ALTERNATIVE_VALUE_REPRESENTATION")
+            p["history"].append(dict(lifecycle_state="REASSESSED",
+                decision_sequence=state["attempted_decisions"],kind="REPRESENTATION_EVALUATED",
+                representation="OPTION_PROFILE_DOMINANCE",result=record["outcome"],
+                selected_action=record.get("selected_action")))
         elif kind=="ONE_STEP_EXECUTION_PREPARED":
             if state["pending_decision"] is not None: raise RoutingError("problem decision already pending")
             cls._observe_tie(state,record)
@@ -541,6 +571,16 @@ class ProblemManager:
     def record_depth2_evaluation(self, *, problem_id: str, outcome: str,
                                  selected_action: str | None, evaluation: dict):
         return self._append("DEPTH2_ROUTE_EVALUATED",dict(problem_id=problem_id,
+            outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
+
+    def authorize_option_profile(self, problem_id: str, authorization_sha256: str):
+        if len(authorization_sha256)!=64: raise RoutingError("invalid option-profile authorization hash")
+        return self._append("OPTION_PROFILE_AUTHORIZED",{
+            "problem_id":problem_id,"authorization_sha256":authorization_sha256})
+
+    def record_option_profile(self, *, problem_id: str, outcome: str,
+                              selected_action: str | None, evaluation: dict):
+        return self._append("OPTION_PROFILE_EVALUATED",dict(problem_id=problem_id,
             outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
 
     def prepare_one_step_execution(self, *, store, ordinary_decision: dict,
