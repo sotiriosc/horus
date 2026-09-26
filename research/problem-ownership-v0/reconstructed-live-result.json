@@ -1,0 +1,184 @@
+{
+  "accounting": {
+    "abstentions": 1,
+    "authorized_world_executions": 1,
+    "fresh_decisions": 2,
+    "local_model_calls": 18,
+    "retries": 0,
+    "training_runs": 0
+  },
+  "applicable_sequence": [
+    {
+      "decision_sequence": 84,
+      "problem_id": "PR-0003"
+    },
+    {
+      "decision_sequence": 85,
+      "problem_id": "PR-0002"
+    }
+  ],
+  "artifact_status": "POST_CAMPAIGN_RESULT_SERIALIZATION_FAILED",
+  "bounds": {
+    "deadlock_probe_limit": 1,
+    "maximum_fresh_decisions": 8,
+    "maximum_model_calls": 72
+  },
+  "capability_request": "LONGER_HORIZON_VALUE",
+  "classifier_result": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+  "deadlock_returned": false,
+  "deadlock_route": {
+    "executed": 1,
+    "granted": 1,
+    "problem_id": "PR-0003",
+    "receipt": {
+      "action": "ADVANCE",
+      "realized_consequence": -1,
+      "realized_next_state": 2,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:11:1c9f176018359107",
+        1,
+        2011,
+        1
+      ],
+      "receipt_is_authenticated": true
+    },
+    "selected_action": "ADVANCE",
+    "selection_priority": {
+      "authenticated_observations": 4,
+      "canonical_action_index": 0,
+      "observations_since_last_execution": 3,
+      "specialists_disagree": true,
+      "unprobed": true,
+      "unresolved_contradiction": false
+    },
+    "tied_maximum_actions": [
+      "ADVANCE",
+      "HOLD"
+    ],
+    "transition_destination_available_to_selector": false
+  },
+  "decision_trace": [
+    {
+      "action": "ADVANCE",
+      "all_predictions_valid": true,
+      "capability_assessment": null,
+      "decision_sequence": 84,
+      "pre_state": 1,
+      "problem_id": "PR-0003",
+      "realized_consequence": -1,
+      "realized_next_state": 2,
+      "reason": "DEADLOCK_INFORMATION_PROBE",
+      "status": "AUTHORIZED"
+    },
+    {
+      "action": null,
+      "all_predictions_valid": true,
+      "capability_assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+      "decision_sequence": 85,
+      "pre_state": 2,
+      "problem_id": "PR-0002",
+      "realized_consequence": null,
+      "realized_next_state": null,
+      "reason": "EXPLOIT_TIED_MAXIMUM",
+      "status": "ABSTAINED"
+    }
+  ],
+  "durable_stream_counts": {
+    "exploration_new_records": 4,
+    "private_call_envelopes": 54,
+    "problem_manager_new_records": 5,
+    "routing_new_records": 1,
+    "session_event_new_records": 1,
+    "training_new_records": 2
+  },
+  "edges": [
+    {
+      "from": "PR-0002",
+      "relation": "successor_of",
+      "to": "PR-0001"
+    }
+  ],
+  "final_state": 2,
+  "identity": "HORUS_PROBLEM_OWNERSHIP_V0_LIVE_RECONSTRUCTED_FROM_DURABLE_RECORDS",
+  "longer_horizon_value_implemented": false,
+  "operational_failure": {
+    "campaign_rerun": false,
+    "evidence_lost": false,
+    "exception": "KeyError",
+    "missing_field": "pre_state",
+    "stage": "POST_CAMPAIGN_PUBLIC_RESULT_SERIALIZATION"
+  },
+  "ordinary_operation_resumed": true,
+  "private_prompts_or_responses_included": false,
+  "problem_graph": {
+    "PR-0001": {
+      "capability_assessment": "MORE_EVIDENCE_REQUIRED",
+      "lifecycle_state": "SUPERSEDED",
+      "owner": "EVIDENCE_COVERAGE",
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "requested_capability": "MORE_RELATION_EVIDENCE",
+      "route_budgets": {
+        "relation_information_probe": {
+          "executed": 2,
+          "granted": 2,
+          "limit": 2
+        }
+      },
+      "scope": {
+        "kind": "decision_state",
+        "pre_state": 2,
+        "tied_action_set": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      }
+    },
+    "PR-0002": {
+      "capability_assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+      "lifecycle_state": "REASSESSED",
+      "owner": "EVIDENCE_COVERAGE",
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "requested_capability": "LONGER_HORIZON_VALUE",
+      "route_budgets": {
+        "relation_information_probe": {
+          "executed": 2,
+          "granted": 2,
+          "limit": 2
+        }
+      },
+      "scope": {
+        "kind": "decision_state",
+        "pre_state": 2,
+        "tied_action_set": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      }
+    },
+    "PR-0003": {
+      "capability_assessment": null,
+      "lifecycle_state": "ROUTE_EXECUTED",
+      "owner": "EXPLORER_VALUE_COMPARISON",
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "requested_capability": null,
+      "route_budgets": {
+        "deadlock_information_probe": {
+          "executed": 1,
+          "granted": 1,
+          "limit": 1
+        }
+      },
+      "scope": {
+        "kind": "decision_state",
+        "pre_state": 1,
+        "tied_action_set": [
+          "ADVANCE",
+          "HOLD"
+        ]
+      }
+    }
+  },
+  "raw_private_call_stream_included": false,
+  "scientific_status": "ROUTE_EXECUTED_NORMAL_OPERATION_RESUMED",
+  "source_commit": "29e95aa42049cb660fc42381c8ad7ee825a57e0a"
+}

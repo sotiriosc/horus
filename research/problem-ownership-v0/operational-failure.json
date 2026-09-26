@@ -1,0 +1,21 @@
+{
+  "classification": "POST_CAMPAIGN_RESULT_SERIALIZATION_FAILURE",
+  "stage": "public result construction after the frozen live loop returned",
+  "exception_type": "KeyError",
+  "missing_field": "pre_state",
+  "cause": "authorized runtime rows retain pre_state in the durable training record rather than at the row top level expected by _plain_rows",
+  "campaign_started": true,
+  "campaign_terminal_condition_reached": true,
+  "original_result_file_created": false,
+  "authenticated_evidence_preserved": true,
+  "behavioral_evidence_affected": false,
+  "rerun_attempted": false,
+  "patch_attempted": false,
+  "reconstruction_source": [
+    "authenticated session event stream",
+    "authenticated training stream",
+    "authenticated exploration stream",
+    "authenticated routing stream",
+    "authenticated problem-manager stream"
+  ]
+}
