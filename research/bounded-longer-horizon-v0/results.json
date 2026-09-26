@@ -1,0 +1,221 @@
+{
+  "behavioral_executions": 0,
+  "call_ceiling": 21,
+  "downstream_forecasts_are_predictions_not_authenticated_targets": true,
+  "downstream_predictions": [
+    {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "parsed_sequence": 2282,
+      "request_sequence": 2269,
+      "request_sha256": "d4cc9daa5ef32aa52a003794a8e327cb35f40c69acb6efbbc4f170a35b98cd80",
+      "response_sequence": 2281,
+      "specialist": "G2",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "parsed_sequence": 2284,
+      "request_sequence": 2270,
+      "request_sha256": "3f26c0bea2490cfb0eea0780e3d8413c94accff502d4764c92f30e6825dedf89",
+      "response_sequence": 2283,
+      "specialist": "G3",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "HOLD",
+      "consequence": 0,
+      "parsed_sequence": 2286,
+      "request_sequence": 2271,
+      "request_sha256": "a3aa02588d0a9d8efd8e3137a6cf4aa984a1c7968a832094fd08d5d3f23f250e",
+      "response_sequence": 2285,
+      "specialist": "G2",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "HOLD",
+      "consequence": 0,
+      "parsed_sequence": 2288,
+      "request_sequence": 2272,
+      "request_sha256": "4fdb7e0d74ff98c3235bdb756427549d3ad6aa39a1d49e1433ac0e161a4fbee0",
+      "response_sequence": 2287,
+      "specialist": "G3",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "RETREAT",
+      "consequence": 1,
+      "parsed_sequence": 2290,
+      "request_sequence": 2273,
+      "request_sha256": "74a2f1fc9460d362e7db2448ac5569783e466df6e57440b51d8387e2a23a7114",
+      "response_sequence": 2289,
+      "specialist": "G2",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "RETREAT",
+      "consequence": 1,
+      "parsed_sequence": 2292,
+      "request_sequence": 2274,
+      "request_sha256": "b832d9d16b4d74276e962cc717ddb816606439bb8d3dede660ae2492b7f50d3f",
+      "response_sequence": 2291,
+      "specialist": "G3",
+      "state": 3,
+      "valid": true
+    },
+    {
+      "action": "ADVANCE",
+      "consequence": 1,
+      "parsed_sequence": 2294,
+      "request_sequence": 2275,
+      "request_sha256": "adbd910a7a3792da247c7c8273b640597a272912a3b37ca2f97712d543ebfb93",
+      "response_sequence": 2293,
+      "specialist": "G2",
+      "state": 1,
+      "valid": true
+    },
+    {
+      "action": "ADVANCE",
+      "consequence": -1,
+      "parsed_sequence": 2296,
+      "request_sequence": 2276,
+      "request_sha256": "9bfc0e4f2500d307017e5a415d02a036dce6d3905ae900cc0aa8d7f9497f01b6",
+      "response_sequence": 2295,
+      "specialist": "G3",
+      "state": 1,
+      "valid": true
+    },
+    {
+      "action": "HOLD",
+      "consequence": 1,
+      "parsed_sequence": 2298,
+      "request_sequence": 2277,
+      "request_sha256": "1296fc0e1b0fbb1dac4740f282ec713846e6ecf3d02902e651a0a6dddb99e253",
+      "response_sequence": 2297,
+      "specialist": "G2",
+      "state": 1,
+      "valid": true
+    },
+    {
+      "action": "HOLD",
+      "consequence": -1,
+      "parsed_sequence": 2300,
+      "request_sequence": 2278,
+      "request_sha256": "98b1f1c0e2543c7e1af141d0dfac3b101311f3461dda8c652ed7d93f7a3d7be2",
+      "response_sequence": 2299,
+      "specialist": "G3",
+      "state": 1,
+      "valid": true
+    },
+    {
+      "action": "RETREAT",
+      "consequence": 0,
+      "parsed_sequence": 2302,
+      "request_sequence": 2279,
+      "request_sha256": "96c265ea579599200d2f23780e332e65e0c77fd97ed6a077605c22497fa2bee3",
+      "response_sequence": 2301,
+      "specialist": "G2",
+      "state": 1,
+      "valid": true
+    },
+    {
+      "action": "RETREAT",
+      "consequence": 0,
+      "parsed_sequence": 2304,
+      "request_sequence": 2280,
+      "request_sha256": "ff8a6572570e74298da92c46ce4daa8de5d367095a14bbdc4b768b615729560c",
+      "response_sequence": 2303,
+      "specialist": "G3",
+      "state": 1,
+      "valid": true
+    }
+  ],
+  "downstream_routed": {
+    "1": {
+      "ADVANCE": 1,
+      "HOLD": 1,
+      "RETREAT": 0
+    },
+    "3": {
+      "ADVANCE": -1,
+      "HOLD": 0,
+      "RETREAT": 1
+    }
+  },
+  "downstream_selected_specialists": {
+    "1": {
+      "ADVANCE": "G2",
+      "HOLD": "G2",
+      "RETREAT": "G2"
+    },
+    "3": {
+      "ADVANCE": "G2",
+      "HOLD": "G2",
+      "RETREAT": "G2"
+    }
+  },
+  "execution": null,
+  "final_pr0002": {
+    "capability_assessment": "CURRENT_OBJECTIVE_CANNOT_DISTINGUISH",
+    "lifecycle_state": "REASSESSED",
+    "one_step_budget": {
+      "executed": 1,
+      "granted": 1,
+      "limit": 1
+    },
+    "request_authority_status": "REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+    "requested_capability": "DEEPER_HORIZON_VALUE",
+    "route_request_count": 3
+  },
+  "grounded_transitions": {
+    "ADVANCE": {
+      "continuation_state": 3,
+      "grounded": true,
+      "primary_value": 1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:7:fbd6aa709480146c",
+        1,
+        2007,
+        1
+      ]
+    },
+    "RETREAT": {
+      "continuation_state": 1,
+      "grounded": true,
+      "primary_value": 1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:8:9e523c741279b221",
+        1,
+        2008,
+        1
+      ]
+    }
+  },
+  "identity": "HORUS_V014_BOUNDED_LONGER_HORIZON_RESULT",
+  "maximum_horizon_depth": 1,
+  "model_calls": 12,
+  "no_deeper_horizon_implemented": true,
+  "pairs": {
+    "ADVANCE": [
+      1,
+      1
+    ],
+    "RETREAT": [
+      1,
+      1
+    ]
+  },
+  "pr0003_unchanged": true,
+  "predicted_next_state_inputs": 0,
+  "recursive_calls": 0,
+  "result_marker": "ONE_STEP_CONTINUATION_INSUFFICIENT",
+  "selected_action": null,
+  "status": "STILL_TIED_AT_ONE_STEP",
+  "training_runs": 0
+}
