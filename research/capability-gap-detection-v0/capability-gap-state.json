@@ -1,0 +1,390 @@
+{
+  "hmac_sha256": "e49963e082a8cf43df95ef0cfabb30c9d735e3bb712e06d97282af3f85540fd0",
+  "payload": {
+    "attempted_decisions": 57,
+    "authorized_executions": 52,
+    "current_problem": {
+      "assessment": "ROUTE_FAILED",
+      "authoritative": false,
+      "can_change_objective": false,
+      "can_create_architecture": false,
+      "can_execute": false,
+      "can_inspect_hidden_law": false,
+      "can_make_model_calls": false,
+      "can_train": false,
+      "candidate_actions": [
+        "ADVANCE",
+        "RETREAT"
+      ],
+      "created_decision_sequence": 55,
+      "evolution": [
+        {
+          "decision_sequence": 55,
+          "events": [
+            "SUCCESSOR_PROBLEM_OPENED_FROM_UNRESOLVED_V0_8_HISTORY",
+            "PROBLEM_SPECIFIC_PROBE_REQUESTED"
+          ],
+          "recorded_before_execution": true
+        },
+        {
+          "decision_sequence": 55,
+          "events": [
+            "AUTHENTICATED_PROBLEM_PROBE_EVIDENCE_ACQUIRED"
+          ],
+          "receipt_reference": [
+            "HORUS:a67e675004193a13c31485bad53fbb86:runtime:7:fbd6aa709480146c",
+            1,
+            2007,
+            1
+          ]
+        },
+        {
+          "decision_sequence": 56,
+          "events": [],
+          "recorded_before_execution": true
+        },
+        {
+          "decision_sequence": 57,
+          "events": [
+            "ROUTE_FAILED"
+          ],
+          "recorded_before_execution": true
+        }
+      ],
+      "initial_forecasts": {
+        "ADVANCE": {
+          "G2_consequence": 1,
+          "G2_failure": null,
+          "G3_consequence": 1,
+          "G3_failure": null,
+          "action_alias": "K1",
+          "history_count": 3,
+          "next_state": 3,
+          "routed_consequence": 1,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "HOLD": {
+          "G2_consequence": 0,
+          "G2_failure": null,
+          "G3_consequence": 0,
+          "G3_failure": null,
+          "action_alias": "K2",
+          "history_count": 2,
+          "next_state": 2,
+          "routed_consequence": 0,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "RETREAT": {
+          "G2_consequence": 1,
+          "G2_failure": null,
+          "G3_consequence": 1,
+          "G3_failure": null,
+          "action_alias": "K3",
+          "history_count": 3,
+          "next_state": 1,
+          "routed_consequence": 1,
+          "selected_failure": null,
+          "selected_specialist": "G2",
+          "valid": true
+        }
+      },
+      "probe_count": 1,
+      "problem_id": "PR-0002",
+      "problem_probe_history": {
+        "ADVANCE": [
+          {
+            "action": "ADVANCE",
+            "attempted_decision_sequence": 55,
+            "predicted_next_state": 3,
+            "prediction_is_descriptive_model_output": true,
+            "realized_consequence": 1,
+            "realized_next_state": 3,
+            "receipt_identity": [
+              "HORUS:a67e675004193a13c31485bad53fbb86:runtime:7:fbd6aa709480146c",
+              1,
+              2007,
+              1
+            ],
+            "receipt_is_authenticated": true,
+            "routing_evidence_sequence": 51
+          }
+        ],
+        "RETREAT": []
+      },
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "requested_capability": "EXTERNAL_SERVICE_REPAIR",
+      "route_request_count": 1,
+      "source_problem_id": "PR-0001",
+      "state": 2,
+      "status": "UNRESOLVED",
+      "where_did_resolution_stop": "MODEL_SERVICE"
+    },
+    "pending_decision": null,
+    "session_id": "a67e675004193a13c31485bad53fbb86",
+    "source_attempted_decisions": 54,
+    "source_authorized_executions": 50,
+    "source_problem": {
+      "alters_memory": false,
+      "alters_simulator": false,
+      "alters_specialist_selection": false,
+      "authoritative": false,
+      "candidate_actions": [
+        "ADVANCE",
+        "RETREAT"
+      ],
+      "changes_prediction": false,
+      "changes_protected_bound": false,
+      "component": "MECHANICAL_EXPLORER",
+      "controls_execution": false,
+      "created_decision_sequence": 32,
+      "creates_receipt": false,
+      "current_forecasts": {
+        "ADVANCE": {
+          "G2_consequence": 1,
+          "G3_consequence": 1,
+          "action_alias": "K1",
+          "history_count": 3,
+          "next_state": 3,
+          "routed_consequence": 1,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "HOLD": {
+          "G2_consequence": 0,
+          "G3_consequence": 0,
+          "action_alias": "K2",
+          "history_count": 2,
+          "next_state": 2,
+          "routed_consequence": 0,
+          "selected_specialist": "G2",
+          "valid": true
+        },
+        "RETREAT": {
+          "G2_consequence": 1,
+          "G3_consequence": 1,
+          "action_alias": "K3",
+          "history_count": 3,
+          "next_state": 1,
+          "routed_consequence": 1,
+          "selected_specialist": "G2",
+          "valid": true
+        }
+      },
+      "failure_count": 4,
+      "last_successful_execution": {
+        "count": 28
+      },
+      "probe_count": 2,
+      "problem_id": "PR-0001",
+      "problem_type": "UNRESOLVED_VALUE_TIE",
+      "receipt_evidence": [
+        {
+          "realized_consequence": 1,
+          "realized_next_state": 1,
+          "receipt_identity": [
+            "HORUS:a67e675004193a13c31485bad53fbb86:runtime:4:f5c891d96c1d16bb",
+            4,
+            2004,
+            4
+          ],
+          "routing_evidence_sequence": 29
+        },
+        {
+          "realized_consequence": 1,
+          "realized_next_state": 1,
+          "receipt_identity": [
+            "HORUS:a67e675004193a13c31485bad53fbb86:runtime:5:b9438cda740bdd80",
+            2,
+            2005,
+            2
+          ],
+          "routing_evidence_sequence": 35
+        }
+      ],
+      "relation_confidence": {
+        "ADVANCE": {
+          "authenticated_observations": 3,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 2,
+              "total": 3
+            },
+            "G3": {
+              "correct": 2,
+              "total": 3
+            }
+          },
+          "most_recent_observation_sequence": 20,
+          "observations_since_last_execution": 30,
+          "qualifying_probe_reasons": [
+            "PROBE_STALE"
+          ],
+          "recent_correctness": {
+            "G2": [
+              false,
+              true,
+              true
+            ],
+            "G3": [
+              false,
+              true,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            1,
+            1,
+            1
+          ],
+          "relation": {
+            "action": "ADVANCE",
+            "identity_sha256": "107c317185f6e7f69aff78223daf8b2e38fcaf74f524da872c0eec88c423e5d9",
+            "pre_state": 2
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": false,
+          "unresolved_recent_contradiction": null
+        },
+        "HOLD": {
+          "authenticated_observations": 2,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 2,
+              "total": 2
+            },
+            "G3": {
+              "correct": 2,
+              "total": 2
+            }
+          },
+          "most_recent_observation_sequence": 3,
+          "observations_since_last_execution": 47,
+          "qualifying_probe_reasons": [
+            "PROBE_STALE"
+          ],
+          "recent_correctness": {
+            "G2": [
+              true,
+              true
+            ],
+            "G3": [
+              true,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            0,
+            0
+          ],
+          "relation": {
+            "action": "HOLD",
+            "identity_sha256": "46c42d8d1d2467e8981c7d17c7ba514acd00b0ae70c611d2e7a2b1a48fa95960",
+            "pre_state": 2
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": false,
+          "unresolved_recent_contradiction": null
+        },
+        "RETREAT": {
+          "authenticated_observations": 3,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 2,
+              "total": 3
+            },
+            "G3": {
+              "correct": 2,
+              "total": 3
+            }
+          },
+          "most_recent_observation_sequence": 35,
+          "observations_since_last_execution": 15,
+          "qualifying_probe_reasons": [
+            "PROBE_STALE"
+          ],
+          "recent_correctness": {
+            "G2": [
+              false,
+              true,
+              true
+            ],
+            "G3": [
+              false,
+              true,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            1,
+            1,
+            1
+          ],
+          "relation": {
+            "action": "RETREAT",
+            "identity_sha256": "032c97fe60323ff83684ce552f5a9572e4fb352db1590b3993c9a6cac4fd82a7",
+            "pre_state": 2
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": false,
+          "unresolved_recent_contradiction": null
+        }
+      },
+      "relevant_authenticated_evidence_references": {
+        "ADVANCE": {
+          "authenticated_observations": 3,
+          "most_recent_observation_sequence": 20
+        },
+        "RETREAT": {
+          "authenticated_observations": 1,
+          "most_recent_observation_sequence": 22
+        }
+      },
+      "requested_capability": "MORE_RELATION_EVIDENCE",
+      "resolved_decision_sequence": null,
+      "route_request_count": 2,
+      "routing_state": {
+        "ADVANCE": {
+          "local_scores": {
+            "G2": {
+              "correct": 2,
+              "total": 3
+            },
+            "G3": {
+              "correct": 2,
+              "total": 3
+            }
+          },
+          "selected_specialist": "G2"
+        },
+        "RETREAT": {
+          "local_scores": {
+            "G2": {
+              "correct": 0,
+              "total": 1
+            },
+            "G3": {
+              "correct": 0,
+              "total": 1
+            }
+          },
+          "selected_specialist": "G2"
+        }
+      },
+      "state": 2,
+      "status": "UNRESOLVED",
+      "trains_model": false
+    },
+    "stream_count": 7,
+    "stream_head_sha256": "c350f810710f3863f0bbe6335fa96b65a1ec04535be67f9c524dcfc246236400",
+    "terminal_classification": "ROUTE_FAILED",
+    "updated_at": "2026-09-26T15:27:33.598706+00:00",
+    "version": 1
+  }
+}
