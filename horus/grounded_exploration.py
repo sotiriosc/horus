@@ -441,12 +441,17 @@ class ExplorerConfidenceStore:
     def freeze(self, *, store: SessionStore, routing_store: RelationEvidenceStore,
                pre_state: int, forecasts: dict, routed_forecasts: tuple,
                previews: dict, all_predictions_valid: bool,
-               prediction_batch_sequence: int, decision_id: str) -> dict:
+               prediction_batch_sequence: int, decision_id: str,
+               decision_override: dict | None = None) -> dict:
         self.bind_session(store)
-        decision = self.explorer.derive(pre_state=pre_state, forecasts=forecasts,
+        derived = self.explorer.derive(pre_state=pre_state, forecasts=forecasts,
             routed_forecasts=routed_forecasts, previews=previews,
             routing_records=routing_store.records, confidence_state=self.state,
             all_predictions_valid=all_predictions_valid)
+        decision = deepcopy(decision_override) if decision_override is not None else derived
+        if decision_override is not None and \
+                decision.get("ordinary_decision_sha256") != digest(derived):
+            raise RoutingError("decision override is not bound to ordinary decision")
         if decision["decision_sequence"] != prediction_batch_sequence:
             raise RoutingError("prediction and exploration decision sequences differ")
         record = dict(decision_sequence=decision["decision_sequence"],
@@ -595,6 +600,7 @@ class GroundedExplorationRuntime(RelationRoutedRuntime):
             framework_reason=rejected.reason, execution_occurred=False,
             receipt_created=False, memory_mutated=False,
             routing_evidence_created=False, suggested_need="NEW_RUNTIME_ROUTE",
+            requested_capability="NEW_RUNTIME",
             authoritative=False, controls_execution=False,
             controls_runtime_creation=False, controls_schedule=False,
             trains_model=False)

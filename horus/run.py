@@ -195,7 +195,8 @@ def main(argv=None):
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--consequence-model",
                         choices=("mixtral", "base", "trained", "active", "routed",
-                                 "relation-routed", "grounded-exploration"),
+                                 "relation-routed", "grounded-exploration",
+                                 "problem-route"),
                         default="mixtral")
     parser.add_argument("--trained-adapter", type=Path)
     parser.add_argument("--model-registry", type=Path)
@@ -203,7 +204,8 @@ def main(argv=None):
     parser.add_argument("--relation-segment", choices=("A1", "B1", "B2", "A2"))
     parser.add_argument("--exploration-segment", choices=(
         "A1", "B1", "B2", "A2", "R2_A1_1", "R2_A1_2", "R2_B1",
-        "R2_B2", "R2_A2_1", "R2_A2_2"))
+        "R2_B2", "R2_A2_1", "R2_A2_2", "V08_A1_1", "V08_A1_2",
+        "V08_B1", "V08_B2", "V08_A2_1", "V08_A2_2"))
     parser.add_argument("--consequence-base-model", type=Path,
                         help="optional local directory for the pinned Qwen base snapshot")
     parser.add_argument("--external-regime", choices=("A", "B"), default="A",
@@ -219,6 +221,14 @@ def main(argv=None):
         from .live import run_live
         consequence_client = None
         active_spec = None
+        if args.consequence_model == "problem-route":
+            if args.routing_registry is None or args.exploration_segment is None:
+                parser.error("problem-route requires --routing-registry and --exploration-segment")
+            from .problem_routing import run_problem_route_segment
+            artifact = run_problem_route_segment(args.session,
+                args.routing_registry, args.exploration_segment, args.resume)
+            render_grounded_exploration(artifact)
+            return
         if args.consequence_model == "grounded-exploration":
             if args.routing_registry is None or args.exploration_segment is None:
                 parser.error("grounded-exploration requires --routing-registry and --exploration-segment")

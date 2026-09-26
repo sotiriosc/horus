@@ -14,6 +14,8 @@ from .relation_routing import (analyze_relation_routing_campaign,
                                initialize_relation_routing_registry)
 from .grounded_exploration import (analyze_grounded_exploration_campaign,
                                    initialize_grounded_exploration_registry)
+from .problem_routing import (analyze_problem_route_campaign,
+                              initialize_problem_route_registry)
 
 
 def main(argv=None):
@@ -95,6 +97,14 @@ def main(argv=None):
     p.add_argument("--exploration-registry", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
     p.add_argument("--runtime-schedule", choices=("V0", "R2"), default="V0")
+    p = commands.add_parser("init-problem-route")
+    p.add_argument("--source-registry", type=Path,
+                   default=Path("research/learning-stability-v0/registry"))
+    p.add_argument("--problem-route-registry", type=Path, required=True)
+    p = commands.add_parser("problem-route-report")
+    p.add_argument("--session", type=Path, required=True)
+    p.add_argument("--problem-route-registry", type=Path, required=True)
+    p.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
     if args.command == "collect":
         result = collect(args.output, args.target, args.max_sessions,
@@ -151,10 +161,16 @@ def main(argv=None):
     elif args.command == "init-grounded-exploration":
         result = initialize_grounded_exploration_registry(
             args.exploration_registry, args.source_registry)
-    else:
+    elif args.command == "grounded-exploration-report":
         result = analyze_grounded_exploration_campaign(
             args.session, args.exploration_registry, args.output,
             runtime_schedule=args.runtime_schedule)
+    elif args.command == "init-problem-route":
+        result = initialize_problem_route_registry(
+            args.problem_route_registry, args.source_registry)
+    else:
+        result = analyze_problem_route_campaign(
+            args.session, args.problem_route_registry, args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
