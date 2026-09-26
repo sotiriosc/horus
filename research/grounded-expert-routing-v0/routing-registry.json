@@ -1,0 +1,46 @@
+{
+  "payload": {
+    "created_at": "2026-09-26T02:38:43.467619+00:00",
+    "default_specialist": "G2",
+    "generation_3r_included": false,
+    "global_active_generation": 2,
+    "lifecycle_status_rewritten": false,
+    "routing_policy_sha256": "8bc94d20875ea303f50062f4708a91bb6b748c68fa7d3cdff7147bc4784743e8",
+    "source_registry_state_sha256": "fcb3207684f13c092e76bf7c91e97a28701f5eb88a9bb7a83ebe3be107b5b05d",
+    "specialists": [
+      {
+        "adapter_path": "specialists/generation-0002/adapter.safetensors",
+        "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+        "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+        "generation": 2,
+        "global_lifecycle_status": "ACTIVE",
+        "id": "G2",
+        "lineage_path": "specialists/generation-0002/learning-lineage.json",
+        "lineage_sha256": "9824ae8364061a2b6529f9a376b8479d7c70e9bbd02aea33eaac59c9cbfa3a7f",
+        "parent_generation": 1,
+        "routing_eligibility": "ROUTABLE_SPECIALIST",
+        "source_generation_manifest": "specialists/generation-0002/source-generation.json",
+        "source_generation_manifest_sha256": "315796561adbb396f239575f5249251836f1c26c6a1c3a4a59e64b4c30dacdc9",
+        "source_registry_manifest_sha256": "2301996221c87483d4fb4c9a1ebba2e783fc72653511f9ac86d04976d993d2c4"
+      },
+      {
+        "adapter_path": "specialists/generation-0003/adapter.safetensors",
+        "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+        "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+        "generation": 3,
+        "global_lifecycle_status": "REJECTED",
+        "id": "G3",
+        "lineage_path": "specialists/generation-0003/learning-lineage.json",
+        "lineage_sha256": "5df5f32ecb7d01284fde02ef896a6e5181b458f8b9328b64e495ec480af53184",
+        "parent_generation": 2,
+        "routing_eligibility": "ROUTABLE_SPECIALIST",
+        "source_generation_manifest": "specialists/generation-0003/source-generation.json",
+        "source_generation_manifest_sha256": "44f97248f11dceadac111de4d19ac33e5ce51909dfcf507bd10727e6ef8fc6bd",
+        "source_registry_manifest_sha256": "3ffc2ecd4212b7ea10a4fcbc4fee9afec5f159892cd694e775aa6b67d6617911"
+      }
+    ],
+    "version": 1,
+    "weights_modified": false
+  },
+  "sha256": "df3bdedda64941fe6fb634e4250035dd95bfc9cf565bf4799e76b879590ae91b"
+}

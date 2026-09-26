@@ -1,0 +1,383 @@
+{
+  "attempted_decisions": 36,
+  "comparison_scope": "always-specialist scores use only actions actually executed; no counterfactual action/outcome claim",
+  "contradiction_trace": [
+    {
+      "action": "HOLD",
+      "observations": [
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            1,
+            2001,
+            1
+          ],
+          "sequence": 1
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            2,
+            2001,
+            2
+          ],
+          "sequence": 2
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            3,
+            2001,
+            3
+          ],
+          "sequence": 3
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            4,
+            2001,
+            4
+          ],
+          "sequence": 4
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            5,
+            2001,
+            5
+          ],
+          "sequence": 5
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            6,
+            2001,
+            6
+          ],
+          "sequence": 6
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            7,
+            2001,
+            7
+          ],
+          "sequence": 7
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            8,
+            2001,
+            8
+          ],
+          "sequence": 8
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            9,
+            2001,
+            9
+          ],
+          "sequence": 9
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            10,
+            2001,
+            10
+          ],
+          "sequence": 10
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            11,
+            2001,
+            11
+          ],
+          "sequence": 11
+        },
+        {
+          "consequence": 1,
+          "phase": "A1",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+            12,
+            2001,
+            12
+          ],
+          "sequence": 12
+        },
+        {
+          "consequence": -1,
+          "phase": "B",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:2:36a99c80d195ee89",
+            1,
+            2002,
+            1
+          ],
+          "sequence": 13
+        },
+        {
+          "consequence": -1,
+          "phase": "B",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:2:36a99c80d195ee89",
+            2,
+            2002,
+            2
+          ],
+          "sequence": 14
+        },
+        {
+          "consequence": -1,
+          "phase": "B",
+          "receipt_identity": [
+            "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:2:36a99c80d195ee89",
+            3,
+            2002,
+            3
+          ],
+          "sequence": 15
+        }
+      ],
+      "pre_state": 1
+    }
+  ],
+  "executed_decisions": 36,
+  "final_selected_specialist": "G3",
+  "global_lifecycle_status": {
+    "G2": "ACTIVE",
+    "G3": "REJECTED"
+  },
+  "hidden_regime_prompt_checks": 324,
+  "model_calls_by_role": {
+    "joint-next-state": 108,
+    "routed-consequence:G2": 108,
+    "routed-consequence:G3": 108
+  },
+  "no_weight_updates": true,
+  "overall": {
+    "always_G2_correct": 28,
+    "always_G3_correct": 30,
+    "invalid_specialist_predictions": 0,
+    "n": 36,
+    "nonexecuted_attempts": 0,
+    "routed_correct": 28,
+    "worst_rolling_window": {
+      "correct": 1,
+      "n": 6,
+      "start_evidence_sequence": 13
+    }
+  },
+  "phase_metrics": {
+    "A1": {
+      "G2_correct": 12,
+      "G3_correct": 12,
+      "action_distribution": {
+        "HOLD": 12
+      },
+      "attempted_decisions": 12,
+      "executed": 12,
+      "invalid_specialist_predictions": 0,
+      "nonexecuted_attempts": 0,
+      "realized_consequence_distribution": {
+        "1": 12
+      },
+      "routed_correct": 12,
+      "selected_specialist_distribution": {
+        "G2": 12
+      },
+      "switches": []
+    },
+    "A2": {
+      "G2_correct": 11,
+      "G3_correct": 11,
+      "action_distribution": {
+        "ADVANCE": 6,
+        "RETREAT": 6
+      },
+      "attempted_decisions": 12,
+      "executed": 12,
+      "invalid_specialist_predictions": 0,
+      "nonexecuted_attempts": 0,
+      "realized_consequence_distribution": {
+        "1": 12
+      },
+      "routed_correct": 11,
+      "selected_specialist_distribution": {
+        "G3": 12
+      },
+      "switches": []
+    },
+    "B": {
+      "G2_correct": 5,
+      "G3_correct": 7,
+      "action_distribution": {
+        "ADVANCE": 7,
+        "HOLD": 4,
+        "RETREAT": 1
+      },
+      "attempted_decisions": 12,
+      "executed": 12,
+      "invalid_specialist_predictions": 0,
+      "nonexecuted_attempts": 0,
+      "realized_consequence_distribution": {
+        "-1": 4,
+        "0": 2,
+        "1": 6
+      },
+      "routed_correct": 5,
+      "selected_specialist_distribution": {
+        "G2": 3,
+        "G3": 9
+      },
+      "switches": [
+        15
+      ]
+    }
+  },
+  "policy_sha256": "8bc94d20875ea303f50062f4708a91bb6b748c68fa7d3cdff7147bc4784743e8",
+  "restart_proof": {
+    "B_runtime_indices": [
+      2,
+      3
+    ],
+    "artifact_verifications_by_runtime": {
+      "1": {
+        "G2": true,
+        "G3": true
+      },
+      "2": {
+        "G2": true,
+        "G3": true
+      },
+      "3": {
+        "G2": true,
+        "G3": true
+      },
+      "4": {
+        "G2": true,
+        "G3": true
+      }
+    },
+    "attempts_by_runtime": {
+      "1": 12,
+      "2": 6,
+      "3": 6,
+      "4": 12
+    },
+    "imported_history_requests_after_B_restart": 24,
+    "router_selection_continuity": {
+      "after_restart_selected_before": "G3",
+      "before_restart_selected_after": "G3",
+      "preserved": true
+    },
+    "runtime_indices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "source_identities": [
+      "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:1:399d3bdc47e5023d",
+      "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:2:36a99c80d195ee89",
+      "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:3:d348f23321d36ad0",
+      "HORUS:0589dff9ea7b49fe23dab9de0b70be63:runtime:4:02d7a0937b250737"
+    ],
+    "specialist_artifacts_reverified_on_every_runtime": true
+  },
+  "routing_eligibility": {
+    "G2": "ROUTABLE_SPECIALIST",
+    "G3": "ROUTABLE_SPECIALIST"
+  },
+  "schedule": [
+    {
+      "attempted_decisions": 12,
+      "external_regime": "A",
+      "phase": "A1",
+      "restart_after_attempt": null
+    },
+    {
+      "attempted_decisions": 12,
+      "external_regime": "B",
+      "phase": "B",
+      "restart_after_attempt": 6
+    },
+    {
+      "attempted_decisions": 12,
+      "external_regime": "A",
+      "phase": "A2",
+      "restart_after_attempt": null
+    }
+  ],
+  "status": "COMPLETE",
+  "switch_back_occurred": false,
+  "switch_delays": {
+    "A2": {
+      "first_contradictory_receipt_sequence": null,
+      "scored_events_after_first_contradiction": null,
+      "switch_evidence_sequence": null
+    },
+    "B": {
+      "first_contradictory_receipt_sequence": 13,
+      "scored_events_after_first_contradiction": 2,
+      "switch_evidence_sequence": 15
+    }
+  },
+  "switches": [
+    {
+      "evidence_sequence": 15,
+      "from_specialist": "G2",
+      "future_four_assessment": {
+        "former_correct": 1,
+        "new_correct": 1,
+        "unnecessary": false
+      },
+      "reason": "G3 grounded lead 5/6 vs 3/6",
+      "score_after": {
+        "G2": {
+          "correct": 3,
+          "total": 6
+        },
+        "G3": {
+          "correct": 5,
+          "total": 6
+        }
+      },
+      "to_specialist": "G3"
+    }
+  ],
+  "total_model_calls": 324,
+  "unnecessary_switches": 0
+}
