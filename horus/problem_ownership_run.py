@@ -96,8 +96,15 @@ def _plain_rows(rows):
     result=[]
     for row in rows:
         receipt=row.get("receipt")
+        # Authorized GroundedExplorationRuntime rows expose the captured state as
+        # ``state``; abstention rows expose the same schema field as ``pre_state``.
+        # Normalize only this public result view.  Durable behavioral records are
+        # not rewritten.
+        pre_state=row.get("pre_state",row.get("state"))
+        if type(pre_state) is not int:
+            raise RoutingError("runtime result lacks a valid pre-state")
         result.append(dict(decision_sequence=row["prediction_batch_sequence"],
-            pre_state=row["pre_state"],status=row["status"],action=row["explorer"].get("action"),
+            pre_state=pre_state,status=row["status"],action=row["explorer"].get("action"),
             reason=row["explorer"].get("reason"),problem_id=row["explorer"].get("problem_id"),
             capability_assessment=row["explorer"].get("capability_assessment"),
             realized_consequence=None if receipt is None else receipt["realized_consequence"],
