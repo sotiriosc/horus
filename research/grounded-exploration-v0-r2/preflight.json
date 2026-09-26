@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "campaign_identity": "HORUS_GROUNDED_EXPLORATION_V0_R2",
+  "campaign_calls_before_reservation": 0,
+  "lineage": {
+    "original_implementation": "72cdc095b9e35fb58e1bc353f1eae5de6c8aad39",
+    "original_failed_evidence": "5edc8894fb47709d8c40dd8f3eb2f6c968dfa173",
+    "r1_preserved_failure": "d5620234f3523d45ae7a443593f82ce8874c025c",
+    "r2_repair": "a460bd9106dc1c80885b50f8d6e07c3a6f190de6",
+    "r2_preregistration": "d6e6818ac61b75a1e07287305859913890ac46d5"
+  },
+  "r1_preservation": {
+    "byte_identity_passed": true,
+    "classification": "NOT_ESTABLISHED_INCOMPLETE_PROTECTED_EPISODE_BOUND_EXHAUSTION",
+    "failure_report_sha256": "3ff38e0ac54802a21fcd94cdeb8c33f86ee90b805330fbc1321c874a2ed4d608",
+    "failure_manifest_sha256": "258c38f4400f887e680762b8f31b0b9e17efa140006d308c6bfc1835d05b1ba1"
+  },
+  "protected_runtime": {
+    "episode_limit": 12,
+    "episode_limit_changed": false,
+    "runtime_count": 6,
+    "attempts_per_runtime": [9, 9, 9, 9, 9, 9],
+    "deterministic_eighteen_attempt_phase_passed": true,
+    "maximum_tested_executions_per_runtime": 9,
+    "memory_continuity_passed": true,
+    "routing_continuity_passed": true,
+    "confidence_continuity_passed": true,
+    "fresh_source_and_epoch_passed": true
+  },
+  "step_result_boundary": {
+    "sum_type_handled": true,
+    "nonexistent_prediction_member_not_accessed": true,
+    "rejection_created_execution": false,
+    "rejection_created_receipt": false,
+    "rejection_created_routing_evidence": false,
+    "internal_route_problem_emitted": true,
+    "internal_route_problem_authoritative": false
+  },
+  "frozen_science": {
+    "policy_sha256": "f6f963403a6ffaa827069288df49340035a4f9a7556d7111de9ba426382db7b3",
+    "policy_byte_identical_to_original_v0_7": true,
+    "implementation_sha256": "d539807a19fd5d83e4f8d00d0dd535e4dbafdea20337677c3610c0a3453da4d0",
+    "joint_system_sha256": "805542ebed5d2fa09b9b36f4895bdbd917b5d2af58db56d744478887a824b3e7",
+    "consequence_system_sha256": "9fa97c24f33f7e25497bce9bb23a70cea52f91f6e02a3a01bd8e2d571ea37df8",
+    "hidden_regime_router_explorer_prompt_exclusion_passed": true,
+    "total_decisions": 54,
+    "maximum_campaign_calls": 486,
+    "calibration_executions": 0
+  },
+  "persistent_joint_service": {
+    "supervisor": "tmux",
+    "supervisor_session": "horus-v07-r1-ollama",
+    "reused_surviving_r1_service": true,
+    "independent_shell_liveness_passed": true,
+    "health_context": "HORUS_GROUNDED_EXPLORATION_V0_R2_HEALTH_ONLY",
+    "health_request_campaign_evidence": false,
+    "health_request_sha256": "0b12a817bc45ee447c444f6ae06c7b7ac3f320ba00005396031af0c12bb1d7ae",
+    "health_response_sha256": "0277d965d54ef51d0e9ac468d16fb1d345f294b2c8072a41c0a01af547f001e5",
+    "strict_joint_parse": {
+      "next_state": 1,
+      "consequence": 0
+    },
+    "transport_error": null,
+    "sandbox_blocked_attempt_reached_service": false
+  },
+  "joint_model": {
+    "model": "dolphin-mixtral:latest",
+    "ollama_version": "0.1.16",
+    "manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+    "weight_bytes": 26441544128,
+    "verified_blobs": {
+      "config": "368364f689573ccfe29939353f655f3a153acc0646b2e21f65a4231330b7537a",
+      "parameters": "58ca659992b02d65b647752bb49f240dea3751194fa0e2e6426d7b121e77e462",
+      "system": "9640c2212a51f7df5840f7929448afa17cb33fbb173cf15e1d74883e932a3466",
+      "template": "a47b02e00552cd7022ea700b1abf8c572bb26c9bc8c1a37e01b566f2344df5dc",
+      "weights": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+    }
+  },
+  "specialists": {
+    "G2": {
+      "generation": 2,
+      "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+      "global_status": "ACTIVE",
+      "routing_status": "ROUTABLE_SPECIALIST",
+      "verified": true
+    },
+    "G3": {
+      "generation": 3,
+      "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+      "global_status": "REJECTED",
+      "routing_status": "ROUTABLE_SPECIALIST",
+      "verified": true
+    }
+  },
+  "verification": {
+    "focused_exploration_tests": 23,
+    "full_horus_tests": 81,
+    "core_regression_steps": 53,
+    "all_passed": true
+  }
+}
