@@ -344,6 +344,41 @@ class ProblemManager:
                      route="ONE_STEP_CONTINUATION_VALUE"),
                 dict(lifecycle_state="REASSESSED",decision_sequence=state["attempted_decisions"],
                      result=record["outcome"],selected_action=record.get("selected_action"))])
+        elif kind=="DEPTH2_CAPABILITY_AUTHORIZED":
+            p=state["problems"].get(record["problem_id"])
+            if not p or p["requested_capability"]!="DEEPER_HORIZON_VALUE":
+                raise RoutingError("depth-2 authorization lacks the requested capability")
+            if "bounded_depth2_trajectory_value" in p["route_budgets"]:
+                raise RoutingError("depth-2 capability already authorized")
+            p["route_budgets"]["bounded_depth2_trajectory_value"]={"limit":1,"granted":0,"executed":0}
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],kind="DEEPER_HORIZON_VALUE_AUTHORIZED",
+                implementation="BOUNDED_DEPTH2_TRAJECTORY_VALUE",
+                authorization_sha256=record["authorization_sha256"]))
+        elif kind=="DEPTH2_ROUTE_DESIGN_VALIDATED":
+            p=state["problems"].get(record["problem_id"]); budget=(None if not p else
+                p.get("route_budgets",{}).get("bounded_depth2_trajectory_value"))
+            if not budget or budget["granted"]!=0:
+                raise RoutingError("depth-2 design validation is not authorized")
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],kind="ROUTE_DESIGN_VALIDATED",
+                route="BOUNDED_DEPTH2_TRAJECTORY_VALUE",
+                analysis_sha256=record["analysis_sha256"]))
+        elif kind=="DEPTH2_ROUTE_EVALUATED":
+            p=state["problems"].get(record["problem_id"]); budget=(None if not p else
+                p.get("route_budgets",{}).get("bounded_depth2_trajectory_value"))
+            if not budget or budget["granted"]>=budget["limit"]:
+                raise RoutingError("depth-2 route is not authorized or is consumed")
+            if record["outcome"] not in ("DEPTH2_DISTINGUISHES","STILL_TIED_AT_DEPTH2"):
+                raise RoutingError("unknown depth-2 result")
+            budget["granted"]+=1; budget["executed"]+=1; p["route_request_count"]+=1
+            p["evidence"].append(deepcopy(record["evaluation"])); p["lifecycle_state"]="REASSESSED"
+            p["requested_capability"]=(None if record["outcome"]=="DEPTH2_DISTINGUISHES"
+                else "ALTERNATIVE_VALUE_REPRESENTATION")
+            p["history"].extend([dict(lifecycle_state="ROUTE_EXECUTED",
+                decision_sequence=state["attempted_decisions"],route="BOUNDED_DEPTH2_TRAJECTORY_VALUE"),
+                dict(lifecycle_state="REASSESSED",decision_sequence=state["attempted_decisions"],
+                    result=record["outcome"],selected_action=record.get("selected_action"))])
         elif kind=="ONE_STEP_EXECUTION_PREPARED":
             if state["pending_decision"] is not None: raise RoutingError("problem decision already pending")
             cls._observe_tie(state,record)
@@ -491,6 +526,21 @@ class ProblemManager:
     def record_one_step_evaluation(self, *, problem_id: str, outcome: str,
                                    selected_action: str | None, evaluation: dict):
         return self._append("ONE_STEP_ROUTE_EVALUATED",dict(problem_id=problem_id,
+            outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
+
+    def authorize_depth2(self, problem_id: str, authorization_sha256: str):
+        if len(authorization_sha256)!=64: raise RoutingError("invalid depth-2 authorization hash")
+        return self._append("DEPTH2_CAPABILITY_AUTHORIZED",{
+            "problem_id":problem_id,"authorization_sha256":authorization_sha256})
+
+    def validate_depth2_design(self, problem_id: str, analysis_sha256: str):
+        if len(analysis_sha256)!=64: raise RoutingError("invalid depth-2 analysis hash")
+        return self._append("DEPTH2_ROUTE_DESIGN_VALIDATED",{
+            "problem_id":problem_id,"analysis_sha256":analysis_sha256})
+
+    def record_depth2_evaluation(self, *, problem_id: str, outcome: str,
+                                 selected_action: str | None, evaluation: dict):
+        return self._append("DEPTH2_ROUTE_EVALUATED",dict(problem_id=problem_id,
             outcome=outcome,selected_action=selected_action,evaluation=deepcopy(evaluation)))
 
     def prepare_one_step_execution(self, *, store, ordinary_decision: dict,
