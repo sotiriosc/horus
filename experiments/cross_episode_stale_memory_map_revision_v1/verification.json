@@ -1,0 +1,259 @@
+{
+  "exact_replay": {
+    "actual_model_calls": 0,
+    "byte_identical_files": 8,
+    "execution": {
+      "actual_model_calls": 0,
+      "command": [
+        "python3",
+        "-m",
+        "experiments.cross_episode_stale_memory_map_revision_v1.run",
+        "--replay",
+        "$REVISION_ARCHIVE/live",
+        "--output",
+        "$REVISION_REPLAY"
+      ],
+      "exit_code": 0,
+      "finished_utc": "2026-09-20T10:35:33.569375+00:00",
+      "log_sha256": "f6e662d2df47224efb82fea16a43131a183efbc24cc9ba765f60e0a3d9eb3788",
+      "network_forbidden": true,
+      "started_utc": "2026-09-20T10:35:05.114611+00:00"
+    },
+    "network_forbidden": true,
+    "passed": true,
+    "system_snapshots": 144
+  },
+  "historical_preservation": {
+    "actual_model_calls": 0,
+    "executions": [
+      {
+        "actual_model_calls": 0,
+        "check": "feasibility-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_stale_memory_feasibility_v0.run",
+          "--replay",
+          "$FEASIBILITY_V0",
+          "--output",
+          "$CHECKS/feasibility-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:00.902797+00:00",
+        "log_sha256": "731b7543faf5abb073660e66269786d706a0f77d04363cc3a71e319c6a4b3c96",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:06:59.820272+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "grounding-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.realized_event_grounding_v0.run",
+          "--replay",
+          "$GROUNDING_V0",
+          "--output",
+          "$CHECKS/grounding-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:00.024400+00:00",
+        "log_sha256": "d5eb685f98566738e432b9f1cd053cb0e9577085e10b43a562800d4e2668bc17",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:06:59.820493+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "init-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_initialization_boundary_v1.run",
+          "--replay",
+          "$INIT_V1",
+          "--output",
+          "$CHECKS/init-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:00.117825+00:00",
+        "log_sha256": "6cad5eae200320d80b437943dcf925a4b759ea177dcab462e32b1c5497ba5b95",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:06:59.820696+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "transfer-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_model_transfer_v0.run",
+          "--replay",
+          "$TRANSFER_V0",
+          "--output",
+          "$CHECKS/transfer-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:04.276400+00:00",
+        "log_sha256": "3b26b3cb2bb993da85b3d4e6b2ac504d3e5156fbe156e557d1112c9e40a27df9",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:07:00.024708+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "ablation-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.composition_map_memory_ablation_v0.run",
+          "--source",
+          "$R1_EVIDENCE",
+          "--replay",
+          "$ABLATION_LIVE",
+          "--output",
+          "$CHECKS/ablation-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:05.142496+00:00",
+        "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:07:00.117998+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "r1-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+          "--replay",
+          "$R1_EVIDENCE",
+          "--baseline",
+          "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+          "--output",
+          "$CHECKS/r1-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:09.816803+00:00",
+        "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:07:00.902982+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "depth-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_map_history_depth_v1.run",
+          "--replay",
+          "$DEPTH_V1",
+          "--output",
+          "$CHECKS/depth-replay"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:07.573646+00:00",
+        "log_sha256": "23127725173d2e248fed3b754362a139d34045b79e67597afd50b95bab492b3a",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:07:04.276604+00:00"
+      },
+      {
+        "actual_model_calls": 0,
+        "check": "historical-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_map_history_depth_v1.test_study",
+          "experiments.cross_episode_initialization_boundary_v1.test_boundary",
+          "experiments.cross_episode_model_transfer_v0.test_study",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+          "experiments.composition_input_bindings_v1.test_bindings",
+          "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+          "experiments.state_recovery_proposal_interface_v1.test_interface",
+          "experiments.realized_event_grounding_v0.test_grounding",
+          "experiments.model_proposal_role_composition_v2.test_study",
+          "experiments.model_map_proposal_v0.test_study",
+          "experiments.model_map_established_prior_revision_v1.test_study",
+          "-v"
+        ],
+        "exit_code": 0,
+        "finished_utc": "2026-09-20T10:07:09.925083+00:00",
+        "log_sha256": "a0954969dd823ca73a87579b9c9c573aded67844f38e709bf4bd92eccb0104c6",
+        "network_forbidden": true,
+        "started_utc": "2026-09-20T10:07:05.142713+00:00",
+        "tests": 67
+      }
+    ],
+    "inherited_substantive_files_byte_identical": 560,
+    "main_tags_prior_refs_unchanged": true,
+    "passed": true,
+    "prior_decisions": {
+      "composition_empty_history_schema_contract_v0": "SCHEMA-CONTRACT EFFECT SUPPORTED",
+      "composition_map_memory_ablation_v0": "AUTHENTIC-HISTORY MAP EFFECT SUPPORTED",
+      "cross_episode_authenticated_memory_boundary_v0": "C \u2014 NOT ESTABLISHED",
+      "cross_episode_initialization_boundary_v1": "A \u2014 CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE",
+      "cross_episode_map_history_depth_v1": "TWO-OBSERVATION CROSS-EPISODE MAP EFFECT SUPPORTED",
+      "cross_episode_model_transfer_v0": "CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED",
+      "cross_episode_stale_memory_feasibility_v0": "A \u2014 CROSS-EPISODE STALE-MEMORY FIXTURE FEASIBLE",
+      "model_proposal_role_composition_v2_replacement_r1": "A \u2014 MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS"
+    },
+    "private_archive_checksums": {
+      "R1": 288,
+      "ablation": 105,
+      "boundary_v0": 82,
+      "depth_v1": 163,
+      "feasibility_v0": 135,
+      "initialization_v1": 88,
+      "map_prior_v1": 114,
+      "transfer_v0": 140
+    }
+  },
+  "independent_audit": {
+    "Explorer": 0,
+    "Map": 144,
+    "P0_byte_identical_pairs": 24,
+    "Recovery_model": 0,
+    "all_http_200": true,
+    "ambiguous_calls": [],
+    "calls": 144,
+    "deterministic_setup_events": 720,
+    "family_support_after_replay": {
+      "O1": true,
+      "O2": true
+    },
+    "full_model_bytes_verified_before_inference": true,
+    "full_provenance_bindings_checked": 720,
+    "independent_parsing_components_pairs_paths_latency": true,
+    "journal_records": 576,
+    "native_fixture_Recovery_calls": 72,
+    "ollama_generate_requests": 144,
+    "original_histories_preserved": true,
+    "passed": true,
+    "preregistered_exact_requests": true,
+    "revision_latency": {
+      "O1": {
+        "P1": 6,
+        "P2": 6
+      },
+      "O2": {
+        "P1": 6,
+        "P2": 6
+      }
+    },
+    "script_sha256": "27317a970f0da21b5e568678404ee2e497214fd4afc24a10a1e6def12696aaeb",
+    "stateless_request_keys": true,
+    "unique_ids": 144,
+    "zero_event_boundaries": 144,
+    "zero_probe_execution_or_Memory_mutation": true
+  },
+  "passed": true,
+  "preflight": {
+    "actual_model_calls": 0,
+    "completed_utc": "2026-09-20T10:06:45.483039+00:00",
+    "frozen_inputs_sha256": "d8145174f55dbd386e3e077a087c553c68e7d118743d7b47512914224dafd623",
+    "passed": true,
+    "preregistration_commit": "1f32741bb65a913e85ee92e71627f9ceb3f302ec",
+    "test_log_sha256": "f924113afe0b9eff7f3c86ca0aa4375f6f148684ec83eb14234073d63f2c4585",
+    "tests": 18
+  }
+}

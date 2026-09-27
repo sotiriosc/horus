@@ -1,0 +1,17 @@
+{
+  "model_visible": false,
+  "regimes": {
+    "A": {
+      "description": "stationary registered world used through generation 2",
+      "consequence_overrides": []
+    },
+    "B": {
+      "description": "prospective state-1 reversal; transitions and receipt authority unchanged",
+      "consequence_overrides": [
+        {"action": "ADVANCE", "consequence": 1, "pre_state": 1},
+        {"action": "HOLD", "consequence": -1, "pre_state": 1}
+      ]
+    }
+  },
+  "version": 1
+}

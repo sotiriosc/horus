@@ -1,0 +1,6 @@
+read_verilog ../rtl/horus_e3m6_core.v
+read_verilog ../rtl/horus_e3m6_acc_baseline.v
+synth -top horus_e3m6_acc_baseline
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@

@@ -1,0 +1,1091 @@
+{
+  "Recovery_calls": 0,
+  "classification": "CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED",
+  "completed_calls": 48,
+  "evidence_sha256": {
+    "campaign-state.json": "349082ed3fdacfd20ba671c37697f57f1c03bdd7dfcd3de21c08e2f685be2170",
+    "contexts.json": "6655f0e93a86ccc0f8ea8254d0faae6f1e4abf82737a2bbf10c28d5640c7ac47",
+    "journal.jsonl": "7c210fbccdb51b70d5b83b41abe32d13de90b283642034b846e1259f517f5534",
+    "metadata.json": "82c1935b7ea17f06d44c29e60e08ad0f3566464c96fd75e071cfc077aeb19dce",
+    "metrics.json": "15f6772febe01eb335519f0acacc2f9400aed83f305899e3bc8a6bbee8661286",
+    "model-calls.jsonl": "f0b72bf7cc1cee6f279cdc87fd1fe297b0e4c39ca49a2369e5441162a6143665",
+    "pairs.json": "ae0ad894fccb998bd5f1dd07df6fb5af4662df9151267b05107174fa54aa7ae7",
+    "requests.json": "1a05e29ed95d8aeab0102c1f4a8545ab57378cd7eb3202e90accce09a7fd3343"
+  },
+  "model": {
+    "complete_blobs_verified": 5,
+    "format": "GGUF 47B Q4_0",
+    "name": "dolphin-mixtral:latest",
+    "runtime": "Ollama 0.1.16"
+  },
+  "model_probe_memory_commits": 0,
+  "model_probe_world_executions": 0,
+  "narrow_scope": "First-decision read-only stateless proposals; persistence belongs to authenticated external system Memory, not model weights or chat.",
+  "paired_contexts": [
+    {
+      "both_negative": false,
+      "both_positive": true,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "context_index": 0,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": true,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 0,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": true,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "context_index": 1,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": true,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 1,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K2",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "HOLD",
+          "advance": false,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "context_index": 2,
+      "family": "O1",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": true,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 0
+          },
+          "valid": true
+        }
+      },
+      "context_index": 2,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K3",
+          "valid": true
+        },
+        "FRESH": {
+          "action": null,
+          "advance": false,
+          "error": "malformed_or_unknown_label",
+          "surface": null,
+          "valid": false
+        }
+      },
+      "context_index": 3,
+      "family": "O1",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 3,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K2",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "context_index": 4,
+      "family": "O1",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 4,
+      "family": "O1",
+      "favorable": true,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "K3",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "K1",
+          "valid": true
+        }
+      },
+      "context_index": 5,
+      "family": "O1",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 5,
+      "family": "O1",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": true,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "context_index": 6,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": true,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 6,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "context_index": 7,
+      "family": "O2",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 7,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "HOLD",
+          "advance": false,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "context_index": 8,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": false,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": true,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": true,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 0
+          },
+          "valid": true
+        }
+      },
+      "context_index": 8,
+      "family": "O2",
+      "favorable": true,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "Z2",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "context_index": 9,
+      "family": "O2",
+      "favorable": true,
+      "identical_valid_choices": false,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": false,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 9,
+      "family": "O2",
+      "favorable": true,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": false,
+      "both_positive": true,
+      "conditions": {
+        "CARRY": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "M4",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "ADVANCE",
+          "advance": true,
+          "error": null,
+          "surface": "M4",
+          "valid": true
+        }
+      },
+      "context_index": 10,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": true,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        }
+      },
+      "context_index": 10,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "reverse": false,
+      "role": "Map"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        },
+        "FRESH": {
+          "action": "RETREAT",
+          "advance": false,
+          "error": null,
+          "surface": "Q7",
+          "valid": true
+        }
+      },
+      "context_index": 11,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": true,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "role": "Explorer"
+    },
+    {
+      "both_negative": true,
+      "both_positive": false,
+      "conditions": {
+        "CARRY": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "FRESH": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 11,
+      "family": "O2",
+      "favorable": false,
+      "identical_valid_choices": null,
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "reverse": false,
+      "role": "Map"
+    }
+  ],
+  "parent": "9e2e70bcde58f8cfe5a76f0dd2d2a08c2ba617f8",
+  "preregistration_commit": "e083bef80159fbe150f19b658959207f38473839",
+  "reset_realized_events": 0,
+  "roles": {
+    "Explorer": {
+      "actions": {
+        "CARRY": {
+          "ADVANCE": 10,
+          "HOLD": 1,
+          "INVALID": 0,
+          "RETREAT": 1
+        },
+        "FRESH": {
+          "ADVANCE": 5,
+          "HOLD": 1,
+          "INVALID": 1,
+          "RETREAT": 5
+        }
+      },
+      "both_negative": 1,
+      "both_positive": 4,
+      "conditions": {
+        "CARRY": {
+          "advance": 10,
+          "valid": 12
+        },
+        "FRESH": {
+          "advance": 5,
+          "valid": 11
+        }
+      },
+      "criteria": {
+        "O1_carry_advance_at_least_4": true,
+        "O2_carry_advance_at_least_4": true,
+        "all_24_complete": true,
+        "carry_advance_at_least_9": true,
+        "carry_valid_at_least_11": true,
+        "favorable_at_least_5": true,
+        "fresh_valid_at_least_11": true,
+        "reverse_at_most_1": true
+      },
+      "decision": "CROSS-EPISODE EXPLORER MEMORY EFFECT SUPPORTED",
+      "families": {
+        "O1": {
+          "actions": {
+            "CARRY": {
+              "ADVANCE": 6,
+              "HOLD": 0,
+              "INVALID": 0,
+              "RETREAT": 0
+            },
+            "FRESH": {
+              "ADVANCE": 2,
+              "HOLD": 1,
+              "INVALID": 1,
+              "RETREAT": 2
+            }
+          },
+          "both_negative": 0,
+          "both_positive": 2,
+          "conditions": {
+            "CARRY": {
+              "advance": 6,
+              "valid": 6
+            },
+            "FRESH": {
+              "advance": 2,
+              "valid": 5
+            }
+          },
+          "favorable": 4,
+          "identical_valid_choices": 2,
+          "pairs": 6,
+          "reverse": 0
+        },
+        "O2": {
+          "actions": {
+            "CARRY": {
+              "ADVANCE": 4,
+              "HOLD": 1,
+              "INVALID": 0,
+              "RETREAT": 1
+            },
+            "FRESH": {
+              "ADVANCE": 3,
+              "HOLD": 0,
+              "INVALID": 0,
+              "RETREAT": 3
+            }
+          },
+          "both_negative": 1,
+          "both_positive": 2,
+          "conditions": {
+            "CARRY": {
+              "advance": 4,
+              "valid": 6
+            },
+            "FRESH": {
+              "advance": 3,
+              "valid": 6
+            }
+          },
+          "favorable": 2,
+          "identical_valid_choices": 3,
+          "pairs": 6,
+          "reverse": 1
+        }
+      },
+      "favorable": 6,
+      "identical_valid_choices": 5,
+      "pairs": 12,
+      "reverse": 1,
+      "supported": true
+    },
+    "Map": {
+      "both_negative": 9,
+      "both_positive": 0,
+      "conditions": {
+        "CARRY": {
+          "consequence": 3,
+          "exact": 3,
+          "next_state": 12,
+          "valid": 12
+        },
+        "FRESH": {
+          "consequence": 2,
+          "exact": 0,
+          "next_state": 9,
+          "valid": 12
+        }
+      },
+      "criteria": {
+        "O1_favorable_exceeds_reverse": true,
+        "O2_favorable_exceeds_reverse": true,
+        "all_24_complete": true,
+        "carry_exact_exceeds_fresh": true,
+        "carry_valid_at_least_11": true,
+        "favorable_at_least_4": false,
+        "fresh_valid_at_least_11": true,
+        "reverse_at_most_1": true
+      },
+      "decision": "CROSS-EPISODE MAP MEMORY EFFECT NOT ESTABLISHED",
+      "families": {
+        "O1": {
+          "both_negative": 5,
+          "both_positive": 0,
+          "conditions": {
+            "CARRY": {
+              "consequence": 1,
+              "exact": 1,
+              "next_state": 6,
+              "valid": 6
+            },
+            "FRESH": {
+              "consequence": 1,
+              "exact": 0,
+              "next_state": 5,
+              "valid": 6
+            }
+          },
+          "favorable": 1,
+          "pairs": 6,
+          "reverse": 0
+        },
+        "O2": {
+          "both_negative": 4,
+          "both_positive": 0,
+          "conditions": {
+            "CARRY": {
+              "consequence": 2,
+              "exact": 2,
+              "next_state": 6,
+              "valid": 6
+            },
+            "FRESH": {
+              "consequence": 1,
+              "exact": 0,
+              "next_state": 4,
+              "valid": 6
+            }
+          },
+          "favorable": 2,
+          "pairs": 6,
+          "reverse": 0
+        }
+      },
+      "favorable": 3,
+      "pairs": 12,
+      "reverse": 0,
+      "supported": false
+    }
+  },
+  "setup_world_executions": 48,
+  "status": "FINAL",
+  "study": "cross-episode-model-transfer-v0",
+  "threshold_decision": "CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED",
+  "verification": {
+    "exact_replay": true,
+    "historical_preservation": true,
+    "independent_audit": true
+  }
+}

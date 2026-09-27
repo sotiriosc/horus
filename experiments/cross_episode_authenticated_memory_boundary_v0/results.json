@@ -1,0 +1,195 @@
+{
+  "actual_model_calls": 0,
+  "basic_commits_by_group": [
+    4,
+    4
+  ],
+  "capacities": {
+    "authorization_per_epoch": 24,
+    "epochs": 2,
+    "memory": 8,
+    "packages": 8,
+    "pairs": 8,
+    "pending_authentic": 1,
+    "source_executions_lifetime": 24
+  },
+  "cases": {
+    "archived_contradiction_representation": 1,
+    "authority_negative_controls": 4,
+    "epoch_carry_and_ninth": 1,
+    "epoch_guards": 4,
+    "new_lifetime_key_diagnostic": 1,
+    "nonzero_reset": 1
+  },
+  "chronology": [
+    [
+      1001,
+      1
+    ],
+    [
+      1001,
+      4
+    ],
+    [
+      1002,
+      1
+    ],
+    [
+      1002,
+      4
+    ]
+  ],
+  "classification": "C \u2014 NOT ESTABLISHED",
+  "complete_requested_two_episode_reset_fixture": false,
+  "contradiction_control_scope": "Read-only representation control from existing authenticated SHIFT archive. Group labels are diagnostic metadata only; not evidence of a new reset or new cross-epoch contradiction.",
+  "core_changes": false,
+  "details_sha256": "8ae5afced36f70f87b67fdff1033014c113e8ff5b9bd471b14df938f08414d5b",
+  "evicted_memory_identity": [
+    1001,
+    1,
+    4299262263552
+  ],
+  "final_assurance_pending": false,
+  "invariants": {
+    "Measure_unchanged": true,
+    "Recovery_unchanged": true,
+    "exact_replay": true,
+    "fresh_zero_current_state_without_history_rewrite": false,
+    "historical_regressions": true,
+    "known_retained_pairs_not_UNKNOWN": true,
+    "memory_bound_8": true,
+    "new_observations_append_chronologically": true,
+    "no_boundary_fake_event": true,
+    "no_identity_collision_in_registered_same_lifetime_epochs": true,
+    "no_model_chat_persistence": true,
+    "ordinary_eviction_unchanged": true,
+    "pending_authentic_receipt_at_most_1": true,
+    "prior_authenticated_records_unchanged": true,
+    "provenance_traceable": true,
+    "receipt_authority_unchanged": true,
+    "untouched_pairs_remain_UNKNOWN": true
+  },
+  "limited_epoch_continuity_fixture_completed": true,
+  "missing_property": "No existing supported boundary resets a nonzero world/current authorized state to zero while preserving authenticated history.",
+  "network_attempts": 0,
+  "ninth_commit": true,
+  "ollama_started": false,
+  "ordinary_fifo_evictions": 1,
+  "parent": "46d01e1e6d09a24191aea1ddf9e413f04711b14b",
+  "projection_limitation": "Map output sorts by (epoch, transaction_id) but exposes transaction_id only; repeated displayed IDs are not globally identifying.",
+  "registered_source_lifetime": "same external source across E=1001 to E+1=1002",
+  "semantic_failures_in_supported_epoch_boundary": [],
+  "study": "cross-episode-authenticated-memory-boundary-v0",
+  "verification": {
+    "ablation_exact_replay": true,
+    "actual_model_calls": 0,
+    "core_changes": false,
+    "diagnostic_replay_files": 2,
+    "executions": [
+      {
+        "check": "boundary-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.run",
+          "--contradiction-source",
+          "$PRIOR_MAP_SETUP",
+          "--output",
+          "$CHECKS/replay",
+          "--replay",
+          "$CHECKS/diagnostic"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T01:51:29.624473+00:00",
+        "log_sha256": "29f288de61b807df2ed01daba141bbc0021a00baa19141a41c0754ebb40998d6",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T01:51:29.459936+00:00"
+      },
+      {
+        "check": "boundary-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.cross_episode_authenticated_memory_boundary_v0.test_boundary",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T01:51:29.722505+00:00",
+        "log_sha256": "65dc7f3efd4fc066ef53175ca63f9b86cb03a1e56c232ce43b58fb3eeeec33c4",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T01:51:29.632677+00:00"
+      },
+      {
+        "check": "ablation-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.composition_map_memory_ablation_v0.run",
+          "--source",
+          "$R1_EVIDENCE",
+          "--replay",
+          "$ABLATION_LIVE",
+          "--output",
+          "$CHECKS/ablation-replay"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T01:51:32.893720+00:00",
+        "log_sha256": "2c83e5d5f3d30d828ee428aa317bd28ea61ecfe149b992f920841daea431994c",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T01:51:29.730784+00:00"
+      },
+      {
+        "check": "r1-replay",
+        "command": [
+          "python3",
+          "-m",
+          "experiments.model_proposal_role_composition_v2_replacement_r1.replay",
+          "--replay",
+          "$R1_EVIDENCE",
+          "--baseline",
+          "$COMPOSITION_V1_EVIDENCE/model-calls.jsonl",
+          "--output",
+          "$CHECKS/r1-replay"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T01:51:42.475478+00:00",
+        "log_sha256": "ddd91e04ad1fe1349128b18184e0328f57a680a6d2bbd8c267a70f6f1be5daa8",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T01:51:32.902128+00:00"
+      },
+      {
+        "check": "historical-tests",
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "experiments.model_proposal_role_composition_v2.test_study",
+          "experiments.realized_event_grounding_v0.test_grounding",
+          "experiments.state_recovery_authorizer_status_binding_v1.test_status",
+          "experiments.composition_input_bindings_v1.test_bindings",
+          "-v"
+        ],
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "finished_utc": "2026-09-20T01:51:43.863375+00:00",
+        "log_sha256": "bccd857fe2c5735997e0489c2f581fafcd97bf30a2d42f0e1b6593e981d8754b",
+        "socket_creation_forbidden": true,
+        "started_utc": "2026-09-20T01:51:42.483887+00:00"
+      }
+    ],
+    "inherited_substantive_files_byte_identical": 503,
+    "main_tags_prior_refs_unchanged": true,
+    "network_permitted": false,
+    "passed": true,
+    "private_archive_checksum_counts": {
+      "R1": 288,
+      "ablation": 105
+    },
+    "r1_exact_replay": true
+  }
+}

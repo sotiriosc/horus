@@ -1,0 +1,6 @@
+read_verilog ../rtl/skpr.v
+synth -top skpr
+dfflibmap -liberty @LIBERTY@
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@

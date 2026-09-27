@@ -1,0 +1,162 @@
+{
+  "parent": "0dcc5d810f5b03ce2479d8f151e3603f85906500",
+  "protocol_commit": "b5f39acef295d6fd8483efaf30c62ce69cca53bb",
+  "implementation_commit": "7b74ebc011cad5fb9a443477a6ce25dac912edac",
+  "classification": "A \u2014 CONCRETE MODEL/PARSER SPECIFICATION GAP IDENTIFIED",
+  "secondary": "EMPTY-HISTORY ASSOCIATION OBSERVED",
+  "new_model_calls": 0,
+  "no_prompt_parser_projection_option_authority_change": true,
+  "no_response_repair": true,
+  "independent_raw_recount": {
+    "map_calls": 9,
+    "valid_json": 9,
+    "integer_next_state_1": 9,
+    "string_consequence": 9,
+    "bare_K2_consequences": 4,
+    "prose_with_target": 5,
+    "opaque_token_mentions": {
+      "K2": 4,
+      "Q7": 4,
+      "M4": 1
+    },
+    "unchanged_live_executions": 0,
+    "unchanged_live_commits": 0
+  },
+  "diagnostic_regeneration": {
+    "files": 2,
+    "byte_identical": true,
+    "sha256": {
+      "results.json": "305ff9d4bdc7d2d05e77e2f089c9c88533a1f7b906510e9afbd833357d8771a4",
+      "diagnostic-private.json": "c7ff08045d2db7c5b1af0db5853b9836a3e4235ae2e5f17f53651e75dfef8dcf"
+    }
+  },
+  "focused_historical_replays": [
+    {
+      "checkpoint": "composition-replay",
+      "byte_identical": true,
+      "files": {
+        "chains.json": "0ddb1e507f4fec0c653ce1ccfc27f1a752d2a07d71996c13cef2c7859ad5d26e",
+        "controls.json": "6f55783748b69f84924d4224c385bdc80eb6c96a9bcff3c2028f01c4da0d287c",
+        "metadata.json": "40152f4ce0b3982426c67a2dd3e867b6b6abca56419c6ede1dc4f2df8dbfa048",
+        "model-calls.jsonl": "8cf25b4ffad31d0c9b86d5ebb4c6f9db9f2e205d66ec736596be9789eacfe4f6",
+        "results.json": "8d017a3f3420d8218462ac7f97ddef2a0236f5fe021c6ab4f7e0a6b2b4c081b8",
+        "schedule.json": "6ae18f2f55f966181e4f985b9e0423e68f44458ccea2897484a3b712909bf78a",
+        "steps.jsonl": "1c343f8d486c47c0ffa78f4e4099ebcd98fc1b86dab7ebc475c424bf7ae11bba"
+      }
+    },
+    {
+      "checkpoint": "bindings-replay",
+      "byte_identical": true,
+      "files": {
+        "results.json": "212960cf8ddf2444b93c7bd732025f8ff4faef4fdc8f8d4ab34146709df774a6",
+        "synthetic-calls.json": "072928f42552c61bcec8e607be775e2f575414094f7c1e48a5fabb23529e268b",
+        "transactions.json": "b2be4624a2dd5fcb2d2310367f1fd4ae11b48d02851adb5810e862d79f8e859d"
+      }
+    },
+    {
+      "checkpoint": "map0-replay",
+      "byte_identical": true,
+      "files": {
+        "controls.jsonl": "13d9fe0834fe03f581c9f35c4135d5bdf3b9d491eb48401342443b7c854e771f",
+        "metadata.json": "763c9ed447f69c37e5055e7c2400e1fe5939e90a7bf59d2fd6ff21333e374429",
+        "model-calls.jsonl": "6613f82f49e58464c3addc65b3b55700df887cbc96ec1696e49ebc920c30c94e",
+        "registered-prompts.json": "4f1c0aed7b0a3df04066b9b24f9be1851c917b6878e83dcf7d5834921abbac81",
+        "results.json": "808e1227a50eccf44101a63329cd2686ff7ea7b5333aaa405fcd6af627a4ed05",
+        "setup.jsonl": "27354c83d7fdce92d979d13205a520dbde549f70a77d2cde1c8cb7659e67d37b",
+        "steps.jsonl": "718e3edb411fccf3983d559bb22f98c0881571b1704a0da813eeb9c5a07c6610"
+      }
+    },
+    {
+      "checkpoint": "map1-replay",
+      "byte_identical": true,
+      "files": {
+        "controls.jsonl": "0c93242450901c039a70db236082f382a5bb6a63a2868716ebd302d28259285e",
+        "metadata.json": "3396c69a601be29a6e5442911d90081e749c25b1fb7e234844d81b156a5e54d4",
+        "model-calls.jsonl": "6c1c343832495a9d0e6b7eac5bfbda05e766d532dc4c85d8e5765f771402c732",
+        "registered-prompts.json": "6061e392f218ce7366a3f84b7119119f860bfcf660af504860c2857c424a631e",
+        "results.json": "71fa9b0c629773832e92cf05fcd89a8f002b70938756221208d34243baf041b4",
+        "setup.jsonl": "0dfc970515a7beb117ebb8dfc7b603a93942743c40b65614cf1874077c3bb948",
+        "steps.jsonl": "e32a2cc04cf9cef450a16eb2914c4aed1e34188335d16b2daddbc5cd2eb3faaa"
+      }
+    }
+  ],
+  "executions": [
+    {
+      "command": "python3 -m experiments.composition_initial_map_schema_diagnosis_v0.diagnose --composition $COMPOSITION_EVIDENCE --map0 $MAP0_EVIDENCE --map1 $MAP1_EVIDENCE --output $DIAGNOSIS_OUTPUT",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:40.060169+00:00",
+      "finished_utc": "2026-09-19T19:02:40.180930+00:00",
+      "log_sha256": "53488586e5be3f077c73a967a97f6190fad7df18b49e0926ccf64aa17294771b"
+    },
+    {
+      "command": "python3 -m experiments.composition_initial_map_schema_diagnosis_v0.diagnose --composition $COMPOSITION_EVIDENCE --map0 $MAP0_EVIDENCE --map1 $MAP1_EVIDENCE --replay $DIAGNOSIS_OUTPUT --output $DIAGNOSIS_REPLAY",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:40.181234+00:00",
+      "finished_utc": "2026-09-19T19:02:40.278995+00:00",
+      "log_sha256": "a4aca69ebbbda0974d55c658dd04df2013b6df98354419ab7e1b7107fc5ceadf"
+    },
+    {
+      "command": "python3 -m experiments.model_proposal_role_composition_v1.run --replay $COMPOSITION_EVIDENCE --output $COMPOSITION_REPLAY",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:40.279329+00:00",
+      "finished_utc": "2026-09-19T19:02:40.697910+00:00",
+      "log_sha256": "5ef9ec722bb0a374a5214677ecb97a1c82b0bce4ad08440dda478d9075bcf192"
+    },
+    {
+      "command": "python3 -m experiments.composition_input_bindings_v1.run --replay $BINDINGS_EVIDENCE --output $BINDINGS_REPLAY",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:40.698245+00:00",
+      "finished_utc": "2026-09-19T19:02:43.525987+00:00",
+      "log_sha256": "f0b51af7e4473a1b57d116b480c1db9077e4f65fa1e5d4704346eeb5be9236c8"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.run --replay $MAP0_EVIDENCE/model-calls.jsonl --output $MAP0_REPLAY",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:43.526382+00:00",
+      "finished_utc": "2026-09-19T19:02:47.354314+00:00",
+      "log_sha256": "d367aba2fad8722e87ee7177394c322af90329216d3471805f7f3158769fa91d"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.run --replay $MAP1_EVIDENCE/model-calls.jsonl --output $MAP1_REPLAY",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T19:02:47.354654+00:00",
+      "finished_utc": "2026-09-19T19:02:49.216721+00:00",
+      "log_sha256": "94d6cc1f4a9f732c6cfded8f90bd2b64618753275884ca9d20c2061f4445da2b"
+    }
+  ],
+  "total_validation_commands": 6,
+  "full_historical_universe_rerun": false,
+  "input_evidence_sha256": {
+    "composition/metadata.json": "40152f4ce0b3982426c67a2dd3e867b6b6abca56419c6ede1dc4f2df8dbfa048",
+    "composition/model-calls.jsonl": "8cf25b4ffad31d0c9b86d5ebb4c6f9db9f2e205d66ec736596be9789eacfe4f6",
+    "composition/results.json": "8d017a3f3420d8218462ac7f97ddef2a0236f5fe021c6ab4f7e0a6b2b4c081b8",
+    "composition/schedule.json": "6ae18f2f55f966181e4f985b9e0423e68f44458ccea2897484a3b712909bf78a",
+    "composition/steps.jsonl": "1c343f8d486c47c0ffa78f4e4099ebcd98fc1b86dab7ebc475c424bf7ae11bba",
+    "map0/metadata.json": "763c9ed447f69c37e5055e7c2400e1fe5939e90a7bf59d2fd6ff21333e374429",
+    "map0/model-calls.jsonl": "6613f82f49e58464c3addc65b3b55700df887cbc96ec1696e49ebc920c30c94e",
+    "map0/registered-prompts.json": "4f1c0aed7b0a3df04066b9b24f9be1851c917b6878e83dcf7d5834921abbac81",
+    "map0/results.json": "808e1227a50eccf44101a63329cd2686ff7ea7b5333aaa405fcd6af627a4ed05",
+    "map1/metadata.json": "3396c69a601be29a6e5442911d90081e749c25b1fb7e234844d81b156a5e54d4",
+    "map1/model-calls.jsonl": "6c1c343832495a9d0e6b7eac5bfbda05e766d532dc4c85d8e5765f771402c732",
+    "map1/registered-prompts.json": "6061e392f218ce7366a3f84b7119119f860bfcf660af504860c2857c424a631e",
+    "map1/results.json": "71fa9b0c629773832e92cf05fcd89a8f002b70938756221208d34243baf041b4"
+  },
+  "parser_sha256": "0195cc2b5fdb657dcb53f6991ed5494f6ffeb2f279cdb4ae0d4f6b9589dc0494",
+  "preservation": {
+    "parent_files": 442,
+    "unchanged_historical_files": 440,
+    "only_modified_parent_files": [
+      "README.md",
+      "PUBLIC_MANIFEST.json"
+    ],
+    "main_existing_branches_tags_unchanged": true
+  },
+  "inference_of_causality": false,
+  "next_experiment_implemented": false
+}

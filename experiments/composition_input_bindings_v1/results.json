@@ -1,0 +1,143 @@
+{
+  "A_to_O": {
+    "A": {
+      "claim": "finite Explorer proposal and rejected cross-role schema",
+      "executed_evidence": "first + invalid_Explorer",
+      "status": "PASS"
+    },
+    "B": {
+      "claim": "finite Prediction content and rejected capability fields",
+      "executed_evidence": "map domains + invalid_Map",
+      "status": "PASS"
+    },
+    "C": {
+      "claim": "value-only candidate with native identity/status envelope",
+      "executed_evidence": "recovery + invalid_Recovery",
+      "status": "PASS"
+    },
+    "D": {
+      "claim": "Explorer Map object rejected before Map invocation",
+      "executed_evidence": "invalid_Explorer_0",
+      "status": "PASS"
+    },
+    "E": {
+      "claim": "Map action text/field rejected before execution",
+      "executed_evidence": "invalid_Map_9 + invalid_Map_10",
+      "status": "PASS"
+    },
+    "F": {
+      "claim": "Map receipt field rejected; executed receipts stay authentic",
+      "executed_evidence": "invalid_Map_11 + first + recovery",
+      "status": "PASS"
+    },
+    "G": {
+      "claim": "Recovery receipt/prediction fields rejected; latch/receipt unchanged",
+      "executed_evidence": "invalid_Recovery + recovery",
+      "status": "PASS"
+    },
+    "H": {
+      "claim": "Measure/quarantine/native attempt precede Recovery; valid incumbent suppresses it",
+      "executed_evidence": "recovery + no_recovery",
+      "status": "PASS"
+    },
+    "I": {
+      "claim": "one native attempt and no second source callback",
+      "executed_evidence": "recovery + budget",
+      "status": "PASS"
+    },
+    "J": {
+      "claim": "RECOVERING candidate independently accepted",
+      "executed_evidence": "12 correct recovery cases",
+      "status": "PASS"
+    },
+    "K": {
+      "claim": "wrong value independently rejects with unchanged protected snapshot",
+      "executed_evidence": "12 wrong recovery cases",
+      "status": "PASS"
+    },
+    "L": {
+      "claim": "committed Memory equals authenticated receipt, not proposed outcome",
+      "executed_evidence": "first + episode + no_recovery",
+      "status": "PASS"
+    },
+    "M": {
+      "claim": "all adapters in staged transactions and same staged Memory reference",
+      "executed_evidence": "recovery + episode",
+      "status": "PASS"
+    },
+    "N": {
+      "claim": "failed Recovery prevents any later role request",
+      "executed_evidence": "wrong recovery + invalid_Recovery",
+      "status": "PASS"
+    },
+    "O": {
+      "claim": "inherited assert_bounds and eight-record maximum",
+      "executed_evidence": "all transactions + episode",
+      "status": "PASS"
+    }
+  },
+  "actual_model_calls": 0,
+  "all_action_cross_role_alias_checks": 36,
+  "auxiliary_observer_transactions": 4,
+  "capability_controls": {
+    "Explorer": 5,
+    "Map": 14,
+    "Recovery": 22
+  },
+  "classification": "A \u2014 COMPOSITION INPUT BINDINGS READY",
+  "classification_scope": "Synthetic campaign; final completion additionally requires verification.json replay/preservation/regression checks.",
+  "complete_explorer_evidence_equivalence": 48,
+  "composed_commits": 68,
+  "composed_transactions": 121,
+  "composed_world_executions": 102,
+  "correct_recovery_authorizations": 12,
+  "empty_explorer_contexts": 48,
+  "empty_to_experienced_transition": true,
+  "episode_genuine_recovery_opportunities": 1,
+  "first_state_zero_transactions": 36,
+  "historical_authority_sources_changed": false,
+  "historical_map_exact_byte_equivalence": 288,
+  "map_contexts": 432,
+  "map_finite_pairs": 12,
+  "map_history_lengths": [
+    0,
+    1,
+    2
+  ],
+  "maxima": {
+    "map_quarantine": 0,
+    "memory": 8,
+    "memory_quarantine": 0,
+    "packages": 8,
+    "pairs": 8,
+    "pending_authentic": 1,
+    "trace": 24
+  },
+  "mixed_explorer_contexts": 48,
+  "model_behavior": "UNTESTED_ZERO_INFERENCE",
+  "no_recovery_controls": 12,
+  "observer_noninterference": true,
+  "observer_noninterference_cases": 2,
+  "one_attempt": {
+    "callbacks": 1,
+    "candidate": {
+      "epoch": 1001,
+      "pair_decision_id": 4299262263552,
+      "status": "RECOVERING",
+      "transaction_id": 1,
+      "value": 1
+    },
+    "second_attempt_rejected": true
+  },
+  "protected_false_accepts": 0,
+  "raw_text_leakage": 0,
+  "receipt_mismatch_accepts": 0,
+  "synthetic_episode_decisions": 8,
+  "synthetic_request_count_includes_observer_controls": true,
+  "synthetic_role_requests": {
+    "Explorer": 125,
+    "Map": 552,
+    "Recovery": 51
+  },
+  "wrong_recovery_atomic_rejections": 12
+}

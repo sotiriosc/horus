@@ -1,0 +1,103 @@
+{
+  "parent": "4d1609e893529d3d60d30dc8fe4a8a71e18159dd",
+  "preregistration_commit": "4f5aa58",
+  "prospective_clarification_commit": "14cffd7",
+  "implementation_commit": "d042759",
+  "exact_replay": {
+    "exit_code": 0,
+    "calls": 288,
+    "complete_steps_identical": true,
+    "episode_analysis_identical": true,
+    "metric_summary_identical": true,
+    "behavior_and_preregistration_hashes_identical": true,
+    "replay_only_source_changes": {
+      "experiments/model_explorer_adaptive_episode_v0/run.py": {
+        "inference_sha256": "9f0ca84e15d7b736c16507894cab43b11095f3af25a1ce4534882115efae851d",
+        "replay_sha256": "f225642230055681c58f21decedc69d519d2f2290c7a226a32e49d7c84fd6f78"
+      },
+      "experiments/model_explorer_adaptive_episode_v0/test_study.py": {
+        "inference_sha256": "aa3925627478fda5b076df4f1590fc3bbbead2dd905aef044bf7141095e7b0a0",
+        "replay_sha256": "d02deb9bff958c0f6db2414bec915a3273bbfd0b7614be00581c455d1f4c0a74"
+      }
+    },
+    "evidence_sha256": {
+      "model-calls.jsonl": "de9525f9710f2d9889e21b1df226708eb46f5ff14e0db9ba57c499a73eff3d4f",
+      "steps.jsonl": "c0151e3c576d4f5308e0354809f994189ad4d1979960fd03b1181bf0ca0987cb",
+      "episode-analysis.json": "4af81221d205e4d05692f3ff85bfcc9a6235e60548f05f9e852e9455020a004a"
+    }
+  },
+  "regressions": [
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:15.771159+00:00",
+      "finished_utc": "2026-09-19T02:05:16.183779+00:00",
+      "log_sha256": "be097b7164229b6c721c9abfd4a5ae199c453a8d8b49bc96f54238e4ebc015c4"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:16.183921+00:00",
+      "finished_utc": "2026-09-19T02:05:16.430873+00:00",
+      "log_sha256": "9dbd37415d40dd24e49e2ed04acac14e211e28a115d10ad6b4d80af5862de492"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:16.430994+00:00",
+      "finished_utc": "2026-09-19T02:05:18.248472+00:00",
+      "log_sha256": "20e6bbaf05737f0cc038d03e78260d5e6ea7996810b5a4e808afb551583b3802"
+    },
+    {
+      "command": "make base-framework-v0",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:18.248609+00:00",
+      "finished_utc": "2026-09-19T02:05:18.303221+00:00",
+      "log_sha256": "1c8f3d5aeaecbd9f315b7ed5d4d29e364b6601cd1e909c5d9e7624788266b96b"
+    },
+    {
+      "command": "make base-framework-v1",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:18.303331+00:00",
+      "finished_utc": "2026-09-19T02:05:18.371472+00:00",
+      "log_sha256": "795fac2409f006b61657299878a785dc90c4b1a540641daf28aa42d9e05734a2"
+    },
+    {
+      "command": "make base-framework-v2",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:18.371585+00:00",
+      "finished_utc": "2026-09-19T02:05:18.517560+00:00",
+      "log_sha256": "b6a2c2ab43c7a663e197feb89f2ac7abc35bae278d646b0ebd88029dc2e846aa"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_adaptive_episode_v0.test_study -v",
+      "exit_code": 0,
+      "started_utc": "2026-09-19T02:05:18.517671+00:00",
+      "finished_utc": "2026-09-19T02:05:19.714460+00:00",
+      "log_sha256": "7e608212d420b855f3d3fcbba439dd2bb98a769cd97fbf808705fbc3867ba1f0"
+    }
+  ],
+  "previous_model_transcripts_and_summaries_identical": true,
+  "inherited_files_identical_before_publication": 241,
+  "frozen_framework_hashes_verified": 23,
+  "no_behavior_or_preregistration_change_since_inference": true,
+  "post_inference_replay_fix_commit": "62f3e80",
+  "initial_replay": {
+    "exit_code": 1,
+    "reason": "JSON-decoded lists compared to Python tuples; calls, full steps, and episode-analysis already byte-identical"
+  },
+  "replay_fix_tests": {
+    "command": "python3 -m unittest experiments.model_explorer_adaptive_episode_v0.test_study -v",
+    "tests": 8,
+    "exit_code": 0,
+    "log_sha256": "19e5ea72571434984d25d4c57d3dbc2d7b1c5b6b1b47bb49da4ab8186e726c4a"
+  },
+  "public_main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+  "historical_tags": {
+    "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+    "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+    "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+    "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+    "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+  }
+}

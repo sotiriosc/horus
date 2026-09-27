@@ -1,0 +1,431 @@
+{
+  "parent": "ed8b8f3f6fdae83bf0a9c8a5aff51c25ce35ed9b",
+  "protocol_commit": "99a43aac74429af077982191bdb9321d7e3c9ed0",
+  "preflight_commit": "2f93db624c535d28f534194aad55e755edc1dee8",
+  "repair_commit": "099fce13e5dbbadfd262bc82ccebc8e6c8cb0a89",
+  "campaign_commit": "3490a05465290d831ac1c9a5983c33c417ccc3f8",
+  "classification": "A \u2014 STATE RECOVERY STATUS BINDING COMPLETE",
+  "actual_model_calls": 0,
+  "model_usefulness": "UNTESTED",
+  "completion_criteria": [
+    {
+      "criterion": "legitimate_recovery_contract_unambiguous",
+      "passed": true,
+      "evidence": "native producers and 57 envelopes; ordinary PROPOSED scope kept separate"
+    },
+    {
+      "criterion": "valid_recovering_behavior_preserved",
+      "passed": true,
+      "evidence": "16/16 status matrix acceptance; default/injected compatibility"
+    },
+    {
+      "criterion": "wrong_status_rejection",
+      "passed": true,
+      "evidence": "120/120 direct matrix; 25/25 transaction rejections in Recovery scope"
+    },
+    {
+      "criterion": "identity_and_value_checks_preserved",
+      "passed": true,
+      "evidence": "40/40 identity/value/combined invalid controls reject"
+    },
+    {
+      "criterion": "proposer_cannot_supply_status",
+      "passed": true,
+      "evidence": "inherited value-only helper and exact-int admission unchanged"
+    },
+    {
+      "criterion": "correct_injected_values_authorize",
+      "passed": true,
+      "evidence": "8/8 primary correct plus retained-history success"
+    },
+    {
+      "criterion": "wrong_injected_values_reject",
+      "passed": true,
+      "evidence": "8/8 primary wrong plus retained-history rejection"
+    },
+    {
+      "criterion": "malformed_values_reject",
+      "passed": true,
+      "evidence": "20/20 inherited admission/failure cases"
+    },
+    {
+      "criterion": "no_recovery_controls_unchanged",
+      "passed": true,
+      "evidence": "12 registered zero-callback controls; ordinary replacement unchanged"
+    },
+    {
+      "criterion": "attempt_budget_unchanged",
+      "passed": true,
+      "evidence": "eight inherited controls identical; status rejection grants no extra callback"
+    },
+    {
+      "criterion": "wrong_status_atomicity",
+      "passed": true,
+      "evidence": "25/25 identical published snapshots and false continuation across submission"
+    },
+    {
+      "criterion": "receipt_prediction_history_preserved",
+      "passed": true,
+      "evidence": "complete interface equivalence and retained-history status rejection"
+    },
+    {
+      "criterion": "zero_repaired_protected_false_accepts",
+      "passed": true,
+      "evidence": "all bounded transaction checks passed"
+    },
+    {
+      "criterion": "exact_replay",
+      "passed": true,
+      "evidence": "campaign.json/results.json byte-identical; observer noninterference"
+    },
+    {
+      "criterion": "historical_regressions",
+      "passed": true,
+      "evidence": "31 expected statuses including 28 inherited commands"
+    },
+    {
+      "criterion": "historical_negative_preserved",
+      "passed": true,
+      "evidence": "old REJECTED witnesses still accept 8/8; old C checkpoint exact replay"
+    }
+  ],
+  "contract_scope": {
+    "source": "trusted existing coordinator recovery_authorized branch flag",
+    "candidate_cannot_choose_scope": true,
+    "non_recovery_proposed_transactions_preserved": true,
+    "direct_authorizer_default": "Recovery",
+    "enum_class_restriction_added": false
+  },
+  "replay": {
+    "files": [
+      "campaign.json",
+      "results.json"
+    ],
+    "byte_identical": true,
+    "campaign_sha256": "ecc42ddd3eeb9aa56dac69b110880ac70bb8f30dfa05ba6e51dd27ec286fb157",
+    "results_sha256": "88401266ff58577c2d64df8bb7ae68ac1dfac37bfa8e9a86591ef59c5d9ae766",
+    "observer_noninterference": true
+  },
+  "regression_commands": 31,
+  "new_unit_tests_passed": 9,
+  "regressions": [
+    {
+      "command": "python3 -m experiments.state_recovery_authorizer_status_binding_v1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:16.899421+00:00",
+      "finished_utc": "2026-09-19T13:19:18.128618+00:00",
+      "log_sha256": "e64b3f6971118698a73ed75835fc092f42aae716f491319cfd3a5a9722a05e4d"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_authorizer_status_binding_v1.run --replay $HORUS_STATUS_CAMPAIGN",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:18.128938+00:00",
+      "finished_utc": "2026-09-19T13:19:19.346486+00:00",
+      "log_sha256": "ad9c0e22e576e73a9a90040d765855d850a23013f73e57c37bd7a0bb9a3b6f10"
+    },
+    {
+      "command": "python3 -m unittest experiments.state_recovery_authorizer_status_binding_v1.test_status -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:19.346802+00:00",
+      "finished_utc": "2026-09-19T13:19:20.546375+00:00",
+      "log_sha256": "9160ec5c491d5d36264fae3aa822e37e690248461b7ed2292b4584ad28f39079"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:19:20.546806+00:00",
+      "finished_utc": "2026-09-19T13:19:21.052157+00:00",
+      "log_sha256": "0f438661afeed5a4b37bcaa0fe6dedeaf01a718d04c4804d9d95a4ac38cca20c"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --replay $HORUS_INTERFACE_CAMPAIGN --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:19:21.052498+00:00",
+      "finished_utc": "2026-09-19T13:19:21.560703+00:00",
+      "log_sha256": "e1726a978ccd93dbca56d85a40d2a3c8db96cfedb01c26eee83c2b7a175036e5"
+    },
+    {
+      "command": "python3 -m unittest experiments.state_recovery_proposal_interface_v1.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:21.561024+00:00",
+      "finished_utc": "2026-09-19T13:19:22.049106+00:00",
+      "log_sha256": "cf047971ea1fd886db5c9de255fc091ae0c2096144ca5bebed2644602bda7354"
+    },
+    {
+      "command": "python3 -m experiments.model_recovery_proposal_v0.run --replay $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:19:22.049489+00:00",
+      "finished_utc": "2026-09-19T13:19:22.214408+00:00",
+      "log_sha256": "27b52eef37e2a683a4236383ddc0f0a5ca2a6fec9edc5cdca28b689c0dd32b61"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.run --replay $HORUS_MAP_PRIOR_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:22.214762+00:00",
+      "finished_utc": "2026-09-19T13:19:24.081044+00:00",
+      "log_sha256": "94d6cc1f4a9f732c6cfded8f90bd2b64618753275884ca9d20c2061f4445da2b"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.run --replay $HORUS_MAP_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:24.081392+00:00",
+      "finished_utc": "2026-09-19T13:19:27.971109+00:00",
+      "log_sha256": "d367aba2fad8722e87ee7177394c322af90329216d3471805f7f3158769fa91d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1.run --replay $HORUS_CONTRADICTION_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:27.971532+00:00",
+      "finished_utc": "2026-09-19T13:19:31.851297+00:00",
+      "log_sha256": "45d2cf847d34d917f85fe6f49185372e00bb9146b01766242e055ca1b47f3160"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_prior_factorial_v1.run --replay $HORUS_FACTORIAL_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:31.851828+00:00",
+      "finished_utc": "2026-09-19T13:19:33.481935+00:00",
+      "log_sha256": "8decbeeb42673e64af5e962b9940d777294c4bd0f2498f215ef28132134ee0dc"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:33.482417+00:00",
+      "finished_utc": "2026-09-19T13:19:34.037563+00:00",
+      "log_sha256": "113abe4859a0d879a4da55a9986d824589d6777ba4a4563f2a2aa33d27783efa"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:34.037968+00:00",
+      "finished_utc": "2026-09-19T13:19:34.636993+00:00",
+      "log_sha256": "f0c68cac5ae5f3e2d100c9b89c5570abb6f2349f9f788384b4d8ad8fb51e599d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:34.637407+00:00",
+      "finished_utc": "2026-09-19T13:19:36.265695+00:00",
+      "log_sha256": "6ac2e8d1d35004d5013896517c61510eaa3ef064ad6c422c531c0813cdf6a6e1"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:36.268329+00:00",
+      "finished_utc": "2026-09-19T13:19:36.476623+00:00",
+      "log_sha256": "94f44fd087fc858e7c40583f72d62e6c71a2ee99bd5c3af68eaf86a78704e946"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:36.477230+00:00",
+      "finished_utc": "2026-09-19T13:19:36.841458+00:00",
+      "log_sha256": "93733065872c214289d545e3f57af420aa1124904603fcbc43452f27c24a8015"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:36.841812+00:00",
+      "finished_utc": "2026-09-19T13:19:36.888935+00:00",
+      "log_sha256": "fc413309432fd7cb409b550c3430f09f73022005da213d5d1f6cfc73eaac5578"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:36.889708+00:00",
+      "finished_utc": "2026-09-19T13:19:36.946509+00:00",
+      "log_sha256": "a6f9066113779443f0871f0a33f5ab6e819205ccb8b68c4dd77060c72bc4da4b"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:36.947443+00:00",
+      "finished_utc": "2026-09-19T13:19:37.073664+00:00",
+      "log_sha256": "a4e5dbac30b1c77add454fa23163f1bfbbd045852184405a8d94fd5397419f6b"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v0.test_preflight -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.074334+00:00",
+      "finished_utc": "2026-09-19T13:19:37.134552+00:00",
+      "log_sha256": "087d9449885d323cb960b33761b003aee8eecae9e99a33e0d8f5a2f73b9d0929"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T13:19:37.134931+00:00",
+      "finished_utc": "2026-09-19T13:19:37.200192+00:00",
+      "log_sha256": "13447c6f48e575e05a2b3dec227629228f7b618f7ca961c1e791555d5dd6508a"
+    },
+    {
+      "command": "python3 -m unittest experiments.realized_event_grounding_v0.test_grounding -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.201608+00:00",
+      "finished_utc": "2026-09-19T13:19:37.242293+00:00",
+      "log_sha256": "8626774166a1042aeea498cdc4458727bef2a963d3314439789c0cf46b2f4fb5"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.242700+00:00",
+      "finished_utc": "2026-09-19T13:19:37.399159+00:00",
+      "log_sha256": "505f94be58cbe3ef2e12dbabeb9a9dd869f6fdd42b3c47a18e27dd52b95c0a6d"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run --replay $HORUS_REPAIR_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.399574+00:00",
+      "finished_utc": "2026-09-19T13:19:37.554832+00:00",
+      "log_sha256": "5b09cded15b2f4cc2b27c1929615fa8e5c7c78ef8f8a7ff2feeaab90ad6f98b9"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1_feasibility.run --replay $HORUS_FEASIBILITY_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.555206+00:00",
+      "finished_utc": "2026-09-19T13:19:37.668559+00:00",
+      "log_sha256": "0b2dc0360b1c93717b5edf2418f0a449c21ce14dd186c20417c9bcd0f45f69cc"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:37.668945+00:00",
+      "finished_utc": "2026-09-19T13:19:39.237672+00:00",
+      "log_sha256": "2695b2cabf48c01e60a6b421294efe21b9232f36f153684eae1672ba057b3136"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_proposal_v0.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:39.238086+00:00",
+      "finished_utc": "2026-09-19T13:19:41.081818+00:00",
+      "log_sha256": "e1fd3556d5513ba2e8814979f39b6be72fb1a5d7023103192964c10458387521"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.gate --replay $HORUS_MAP_GATE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:41.082239+00:00",
+      "finished_utc": "2026-09-19T13:19:41.365536+00:00",
+      "log_sha256": "5138c77b824ce29540ef5d92507265be6cd80ad3169f655f012161221d6b84d3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_established_prior_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:41.365917+00:00",
+      "finished_utc": "2026-09-19T13:19:43.510023+00:00",
+      "log_sha256": "69b0d93b43f8dd7c17c10648e99cac2de7edb1b50302b107a5fba0ca63649484"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.preflight --replay $HORUS_MAP_PRIOR_PREFLIGHT",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:43.510432+00:00",
+      "finished_utc": "2026-09-19T13:19:44.324377+00:00",
+      "log_sha256": "f53253db4b48b0d6defa4951d0f4bf446c1645b84f5aa8cf1b05ffad67beb1c3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_recovery_proposal_v0.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T13:19:44.324784+00:00",
+      "finished_utc": "2026-09-19T13:19:44.461810+00:00",
+      "log_sha256": "5ca85d7ac8b02b9fad4080df02e7061f8208bc69e8ec9e06ddbf2318994233d0"
+    }
+  ],
+  "additional_historical_byte_comparisons": [
+    "3/campaign.json",
+    "3/results.json",
+    "4/campaign.json",
+    "4/results.json",
+    "15/compact.json",
+    "15/results.json",
+    "22/campaign.json",
+    "22/results.json",
+    "base-framework-v0/results.json",
+    "base-framework-v1/results.json",
+    "base-framework-v2/results.json"
+  ],
+  "preservation": {
+    "inherited_files": 381,
+    "unchanged_inherited_files": 379,
+    "documentation_updates": [
+      "README.md",
+      "PUBLIC_MANIFEST.json"
+    ],
+    "main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+    "tags": {
+      "v0.1-horus-baseline": "8f7bee46ffe74d225de71d1ceeec6f29d3c41f60",
+      "v0.2-independent-authorization": "fb0c7122b3c8e79e2f89e1b50453fafda055eec2",
+      "v0.3-base-framework-v0": "6752f0adf591bf6ceacfe4b07cee967075f49c20",
+      "v0.4-cross-source-v1": "4fa4c9bdc3f20d71da2b59bd5ed723bbcc6c90ff",
+      "v0.5-evidence-provenance-v2": "bdac607af38bf7a693e1d98db64cc8d2df9a48fa"
+    },
+    "old_interface_classification": "C \u2014 NOT ESTABLISHED",
+    "old_recovery_v0": "BLOCKED",
+    "no_push": true
+  },
+  "limitations": [
+    "Recovery scope is trusted coordinator input; no hostile-process security claim.",
+    "Status equality is not an added runtime enum-class/type restriction.",
+    "Ordinary authorization retains historical semantics outside Recovery scope.",
+    "Zero model calls; no model usefulness result.",
+    "Software receipt root and implementation process remain trusted."
+  ]
+}

@@ -1,0 +1,839 @@
+{
+  "summary": {
+    "real_model_calls": 144,
+    "registered_calls": 144,
+    "valid_proposals": 144,
+    "complete": true,
+    "framework_integrity": "PASS",
+    "global_behavioral_gate": true,
+    "protected_false_accepts": 0,
+    "receipt_mismatch_accepts": 0,
+    "prediction_rewrites": 0,
+    "history_rewrites": 0,
+    "probe_commits": 144,
+    "probe_contradiction_opportunities": 72,
+    "probe_recovery_authorizations": 37,
+    "parser_controls": 12,
+    "parser_control_commits": 0,
+    "families": {
+      "O1": {
+        "cells": {
+          "CONTROL/H0": {
+            "HOLD": 12,
+            "ADVANCE": 0,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 12
+          },
+          "CONTROL/H1": {
+            "HOLD": 12,
+            "ADVANCE": 0,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 12
+          },
+          "CONTROL/H2": {
+            "HOLD": 12,
+            "ADVANCE": 0,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 12
+          },
+          "SHIFT/H0": {
+            "HOLD": 12,
+            "ADVANCE": 0,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 0
+          },
+          "SHIFT/H1": {
+            "HOLD": 4,
+            "ADVANCE": 8,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 8
+          },
+          "SHIFT/H2": {
+            "HOLD": 1,
+            "ADVANCE": 11,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 11
+          }
+        },
+        "h2_favorable": 11,
+        "h2_reverse": 0,
+        "matched_h2": [
+          {
+            "schedule_id": 0,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 1,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 2,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 3,
+            "control": "HOLD",
+            "shift": "HOLD"
+          },
+          {
+            "schedule_id": 4,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 5,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 6,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 7,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 8,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 9,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 10,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 11,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          }
+        ],
+        "transitions": [
+          {
+            "schedule_id": 0,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 0,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 1,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 1,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 2,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 2,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 3,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 3,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "HOLD",
+            "h0_h1_switch": true,
+            "h1_h2_switch": true,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 4,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 4,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 5,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 5,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 6,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 6,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 7,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 7,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 8,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 8,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 9,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 9,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 10,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 10,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 11,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 11,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          }
+        ],
+        "latency": {
+          "H1": 8,
+          "H2": 4,
+          "no_observed_switch": 0,
+          "initially_advance": 0,
+          "initially_invalid_or_missing": 0
+        },
+        "criteria": {
+          "old_preference": true,
+          "shift_h2_advance": true,
+          "control_h2_hold": true,
+          "favorable_pairs": true,
+          "reverse_pairs": true,
+          "global_gate": true
+        },
+        "revision": "SUPPORTED"
+      },
+      "O2": {
+        "cells": {
+          "CONTROL/H0": {
+            "HOLD": 10,
+            "ADVANCE": 2,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 10
+          },
+          "CONTROL/H1": {
+            "HOLD": 12,
+            "ADVANCE": 0,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 12
+          },
+          "CONTROL/H2": {
+            "HOLD": 11,
+            "ADVANCE": 1,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 11
+          },
+          "SHIFT/H0": {
+            "HOLD": 10,
+            "ADVANCE": 2,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 2
+          },
+          "SHIFT/H1": {
+            "HOLD": 4,
+            "ADVANCE": 8,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 8
+          },
+          "SHIFT/H2": {
+            "HOLD": 4,
+            "ADVANCE": 8,
+            "observed": 12,
+            "registered_denominator": 12,
+            "invalid": 0,
+            "current_world_correct": 8
+          }
+        },
+        "h2_favorable": 7,
+        "h2_reverse": 0,
+        "matched_h2": [
+          {
+            "schedule_id": 0,
+            "control": "HOLD",
+            "shift": "HOLD"
+          },
+          {
+            "schedule_id": 1,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 2,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 3,
+            "control": "HOLD",
+            "shift": "HOLD"
+          },
+          {
+            "schedule_id": 4,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 5,
+            "control": "HOLD",
+            "shift": "HOLD"
+          },
+          {
+            "schedule_id": 6,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 7,
+            "control": "ADVANCE",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 8,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 9,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 10,
+            "control": "HOLD",
+            "shift": "ADVANCE"
+          },
+          {
+            "schedule_id": 11,
+            "control": "HOLD",
+            "shift": "HOLD"
+          }
+        ],
+        "transitions": [
+          {
+            "schedule_id": 0,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 0,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 1,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 1,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 2,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 2,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 3,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 3,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "HOLD",
+            "h0_h1_switch": true,
+            "h1_h2_switch": true,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 4,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 4,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 5,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 5,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 6,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 6,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 7,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 7,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": true,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 8,
+            "arm": "CONTROL",
+            "H0": "ADVANCE",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 8,
+            "arm": "SHIFT",
+            "H0": "ADVANCE",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 9,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 9,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 10,
+            "arm": "CONTROL",
+            "H0": "ADVANCE",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": true,
+            "h1_h2_switch": false,
+            "h0_h2_switch": true
+          },
+          {
+            "schedule_id": 10,
+            "arm": "SHIFT",
+            "H0": "ADVANCE",
+            "H1": "ADVANCE",
+            "H2": "ADVANCE",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 11,
+            "arm": "CONTROL",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          },
+          {
+            "schedule_id": 11,
+            "arm": "SHIFT",
+            "H0": "HOLD",
+            "H1": "HOLD",
+            "H2": "HOLD",
+            "h0_h1_switch": false,
+            "h1_h2_switch": false,
+            "h0_h2_switch": false
+          }
+        ],
+        "latency": {
+          "H1": 6,
+          "H2": 1,
+          "no_observed_switch": 3,
+          "initially_advance": 2,
+          "initially_invalid_or_missing": 0
+        },
+        "criteria": {
+          "old_preference": true,
+          "shift_h2_advance": false,
+          "control_h2_hold": true,
+          "favorable_pairs": false,
+          "reverse_pairs": true,
+          "global_gate": true
+        },
+        "revision": "NOT_ESTABLISHED"
+      }
+    },
+    "overall": "CONTRADICTION-DRIVEN BEHAVIORAL REVISION NOT ESTABLISHED",
+    "measured_setup_transactions": 768
+  },
+  "model": {
+    "model": "dolphin-mixtral:latest",
+    "system": "Choose one available action using only the verified chronological outcomes shown. Higher verified consequences are preferable. Reply with exactly one available action and no explanation.",
+    "options": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "num_predict": 16,
+      "num_ctx": 2048,
+      "repeat_penalty": 1.1
+    },
+    "server": {
+      "version": "0.1.16"
+    },
+    "installed_model": {
+      "name": "dolphin-mixtral:latest",
+      "modified_at": "2023-12-19T01:34:23.169233495-05:00",
+      "size": 26441544856,
+      "digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    },
+    "template": {
+      "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+      "system": "You are Dolphin, a helpful AI assistant.\n",
+      "parameters": "num_ctx                        4096\nstop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    },
+    "verified_model_bytes": {
+      "manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+      "weights_sha256": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3",
+      "weights_bytes": 26441544128,
+      "verified_utc": "2026-09-19T05:27:35.288592+00:00"
+    }
+  },
+  "source_sha256": {
+    "experiments/model_explorer_contradiction_revision_v1/__init__.py": "7139f302976b3d84ef14f8bdaddc3abb33947c626975591c525ef29302e381cc",
+    "experiments/model_explorer_contradiction_revision_v1/adapter.py": "4f00f2095fc0bb2e5379861275c886ce6e4b8171fe3f773ff6216b3138d34937",
+    "experiments/model_explorer_contradiction_revision_v1/analysis.py": "363c77c9f0cf89b0ee1cdfb35c65530d0e6ee271be9804ef30330e0f1e4db897",
+    "experiments/model_explorer_contradiction_revision_v1/campaign.py": "1b23578130489e20d8e796a3bb839c84a38781f4d96ca26bbd960de1f54afafb",
+    "experiments/model_explorer_contradiction_revision_v1/frozen-inputs.json": "0503adf43192e5b0165d68681f8c4afe6cfc779c052c8c18f238c1c17e972bdf",
+    "experiments/model_explorer_contradiction_revision_v1/registration-digests.json": "107763d7c31c03ccb9484bb2b4deca04687d8ca0e82887f4732dfbc4bd2b221b",
+    "experiments/model_explorer_contradiction_revision_v1/run.py": "5db70a23e5451e53032f4cbd084c8dd0e70eebb3b4ce86b3e7719b15bd4333f5",
+    "experiments/model_explorer_contradiction_revision_v1/test_study.py": "b60bc4c5b894dc8281404f36c17a1332ac1c96d3907d5944e4e587268b9bccb5",
+    "research/model-explorer-contradiction-revision-v1-preregistration.md": "048c1f7719a0c6ee945f32204c5d1cbf0ff32cba9f49b4bd3934c2f438272263"
+  },
+  "evidence_sha256": {
+    "registered-prompts.json": "b9be1a7514825a022685962364e3867212d25bb57299b6169e491a433f8dd05b",
+    "model-calls.jsonl": "f1561ef2d554db42182158d7b0652f3a59947f02bd1c55de41a5954d98ff1d57",
+    "steps.jsonl": "092d8373a743790dbfd1f4aa56ddb9d553034348e17bc919bc5c03383bfdf0d0",
+    "setup.jsonl": "27354c83d7fdce92d979d13205a520dbde549f70a77d2cde1c8cb7659e67d37b",
+    "controls.jsonl": "2718671caabe46afe66b9fdf1cd8d8039819dff11099cc58df1a512de5259151"
+  }
+}

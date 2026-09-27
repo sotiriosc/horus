@@ -1,0 +1,253 @@
+{
+  "P1_GROUNDED_PLUS_ONE": {
+    "candidates": [
+      "ADVANCE",
+      "HOLD"
+    ],
+    "case": "GROUNDED_CEILING",
+    "regime": "A",
+    "seed": [
+      [
+        "B",
+        "ADVANCE"
+      ],
+      [
+        "B",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "HOLD"
+      ]
+    ]
+  },
+  "P2_SAFE_ZERO_CONFIRM_WORSE": {
+    "candidates": [
+      "HOLD",
+      "RETREAT"
+    ],
+    "case": "ZERO_FALLBACK",
+    "probe": [
+      "B",
+      "HOLD"
+    ],
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "B",
+        "HOLD"
+      ]
+    ]
+  },
+  "P3_NEGATIVE_ONLY": {
+    "candidates": [
+      "ADVANCE",
+      "HOLD"
+    ],
+    "case": "NEGATIVE_ONLY",
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "B",
+        "HOLD"
+      ]
+    ]
+  },
+  "P4_TWO_UNRESOLVED_ZERO": {
+    "candidates": [
+      "ADVANCE",
+      "HOLD",
+      "RETREAT"
+    ],
+    "case": "TWO_UNRESOLVED",
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "B",
+        "HOLD"
+      ],
+      [
+        "B",
+        "ADVANCE"
+      ],
+      [
+        "B",
+        "RETREAT"
+      ]
+    ]
+  },
+  "P5_CONFIRMED_BETTER": {
+    "candidates": [
+      "ADVANCE",
+      "RETREAT"
+    ],
+    "case": "BETTER_LATER",
+    "probe": [
+      "B",
+      "ADVANCE"
+    ],
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "B",
+        "ADVANCE"
+      ],
+      [
+        "B",
+        "RETREAT"
+      ]
+    ]
+  },
+  "P6_REJECTED_CHANGE": {
+    "candidates": [
+      "HOLD",
+      "RETREAT"
+    ],
+    "case": "REJECTED_LATER",
+    "probe": [
+      "A",
+      "HOLD"
+    ],
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "B",
+        "HOLD"
+      ]
+    ]
+  },
+  "P7_UNSEEN_WITH_ZERO": {
+    "candidates": [
+      "ADVANCE",
+      "HOLD",
+      "RETREAT"
+    ],
+    "case": "UNSEEN_WITH_FALLBACK",
+    "regime": "B",
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "B",
+        "HOLD"
+      ]
+    ]
+  },
+  "P8_RESTART_SAFE": {
+    "candidates": [
+      "HOLD",
+      "RETREAT"
+    ],
+    "case": "RESTART_WITH_FALLBACK",
+    "regime": "B",
+    "restart": true,
+    "seed": [
+      [
+        "A",
+        "RETREAT"
+      ],
+      [
+        "A",
+        "ADVANCE"
+      ],
+      [
+        "A",
+        "HOLD"
+      ],
+      [
+        "B",
+        "HOLD"
+      ]
+    ]
+  }
+}

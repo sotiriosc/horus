@@ -1,0 +1,868 @@
+{
+  "arms": [
+    "HYBRID",
+    "MODEL",
+    "FORCED_GROUNDED"
+  ],
+  "classification": "GROUNDED_HYBRID_SUPPORTED",
+  "decisions_per_arm": 10,
+  "epistemic": {
+    "FALSE_CERTAINTY": 0,
+    "GROUNDED_WHEN_JUSTIFIED": 14,
+    "MISSED_KNOWN_VALUE": 0,
+    "MODEL_ONLY_WHEN_UNSEEN": 6,
+    "UNRESOLVED_WHEN_EVIDENCE_INSUFFICIENT": 3
+  },
+  "hybrid_calls_avoided_for_established": 28,
+  "hybrid_calls_avoided_for_unresolved": 6,
+  "hybrid_model_calls_required_for_unseen": 12,
+  "information_boundary": {
+    "next_confirmed_value": -1,
+    "next_rejected_value": 1,
+    "shared_prefix": "RETREAT:+0,ADVANCE:+1,HOLD:+1,HOLD:-1",
+    "status": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH"
+  },
+  "limitations": [
+    "Small deterministic world with two registered hidden regimes; no population inference.",
+    "Seed observations are controlled; only decision-stage actions are autonomous.",
+    "Second E decisions follow arm-specific autonomous histories and are descriptive, not matched.",
+    "Retrospective unnecessary abstentions use analysis-only registered-world counterfactuals, not authenticated receipts.",
+    "Grounded evidence is historical; a hidden regime can change before the next receipt.",
+    "The +1 selector uses the registered global consequence bound; a different world requires a new bound."
+  ],
+  "model_calls_avoided_vs_model": 34,
+  "model_to_grounded_handoff": true,
+  "operational": {
+    "FORCED_GROUNDED": {
+      "context_tokens": 0,
+      "decision_seconds": 0.384058549097972,
+      "logical_model_calls": 0,
+      "max_serialized_grounded_state_bytes": 1609,
+      "mean_serialized_grounded_state_bytes": 586.695652173913,
+      "mechanical_derivation_seconds": 0.0004799539456143975,
+      "model_calls_recorded_in_decisions": 0,
+      "physical_model_attempts": 0
+    },
+    "HYBRID": {
+      "context_tokens": 252,
+      "decision_seconds": 53.33631794794928,
+      "logical_model_calls": 12,
+      "max_serialized_grounded_state_bytes": 1609,
+      "mean_serialized_grounded_state_bytes": 586.6086956521739,
+      "mechanical_derivation_seconds": 0.0008523339056409895,
+      "model_calls_recorded_in_decisions": 12,
+      "physical_model_attempts": 12
+    },
+    "MODEL": {
+      "context_tokens": 2534,
+      "decision_seconds": 294.80250802994124,
+      "logical_model_calls": 46,
+      "max_serialized_grounded_state_bytes": 1609,
+      "mean_serialized_grounded_state_bytes": 586.6086956521739,
+      "mechanical_derivation_seconds": 0.0014471660542767495,
+      "model_calls_recorded_in_decisions": 46,
+      "physical_model_attempts": 46
+    }
+  },
+  "per_scenario": {
+    "A_ALL_ESTABLISHED": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 6,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "B_ESTABLISHED_UNSEEN": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 2,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "C_ESTABLISHED_UNRESOLVED": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING_WITH_UNRESOLVED_OTHER_ACTION",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "ADVANCE",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": -1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "D_UNRESOLVED_BEST": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "ADVANCE",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": null,
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": null,
+          "reason": "ABSTAIN_UNRESOLVED_COULD_CHANGE_WINNER",
+          "selected_status": null
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": -1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "E_MULTIPLE_UNSEEN": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "ADVANCE",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": -1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        },
+        {
+          "action": "HOLD",
+          "index": 2,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 6,
+          "realized_consequence": 1,
+          "reason": "SELECT_MODEL_GENERALIZATION",
+          "selected_status": "MODEL_GENERALIZATION"
+        },
+        {
+          "action": "HOLD",
+          "index": 2,
+          "model_calls": 4,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 6,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        },
+        {
+          "action": "HOLD",
+          "index": 2,
+          "model_calls": 6,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "F_CANDIDATE_CONFIRMED": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "RETREAT",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 0,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "RETREAT",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 0,
+          "reason": "SELECT_GROUNDED_POINT",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": -1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "G_RESTORATION": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "H_RESTART_UNRESOLVED": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "RETREAT",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 0,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": null,
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": null,
+          "reason": "ABSTAIN_UNRESOLVED_COULD_CHANGE_WINNER",
+          "selected_status": null
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": -1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    },
+    "I_ANOMALY_REJECTED": {
+      "FORCED_GROUNDED": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "FORCED_POINT_MAX",
+          "selected_status": "FORCED_POINT"
+        }
+      ],
+      "HYBRID": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 0,
+          "realized_consequence": 1,
+          "reason": "GROUNDED_AT_REGISTERED_CEILING",
+          "selected_status": "GROUNDED"
+        }
+      ],
+      "MODEL": [
+        {
+          "action": "HOLD",
+          "index": 1,
+          "model_calls": 4,
+          "realized_consequence": 1,
+          "reason": "MODEL_POINT_MAX",
+          "selected_status": "MODEL_POINT"
+        }
+      ]
+    }
+  },
+  "perturbation": {
+    "failed_operation": "NONCURRENT_UNAUTHORIZED_MEMORY_ADMISSION",
+    "grounded_state_unchanged": true,
+    "no_receipt_or_memory": true,
+    "rejection": "RuntimeError",
+    "status": "PASS"
+  },
+  "restart": {
+    "conditions": {
+      "FORCED_GROUNDED": {
+        "current_state": 1,
+        "event_count": 4,
+        "grounded_states": {
+          "1:HOLD": {
+            "alternatives": [],
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:4:5c82d22a08622512\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "established_support": [
+              "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:3:6474b9ca2dac8f9e\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:3:6474b9ca2dac8f9e\",1,2003,1]",
+                "receipt_sha256": "d64a78c78cdcf8c0ed762397a01f89d11b9aae31b3d256def7e4a14ca10e3677",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:4:5c82d22a08622512\",1,2004,1]",
+                "receipt_sha256": "12f4c329d7b01131825a05f830d874b1bb3c7a6146716150ec285da1e6d2dfc7",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ]
+          },
+          "1:RETREAT": {
+            "alternatives": [],
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "established_support": [
+              "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:1:45e809c99213c892\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:b49570b2ac39b21e35059f3f731a6acd:runtime:1:45e809c99213c892\",1,2001,1]",
+                "receipt_sha256": "078bded5e7cf1ac959bf14891bf21e643f40791235cce37007d38fa093dae8bd",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ]
+          }
+        },
+        "memory": {
+          "database_sha256": "7b004bab59520ed4c36597d3837ab12951e8b31953ae013c998f373319d75c74",
+          "event_count": 4,
+          "event_store_sha256": "d724bd7d3f3d78297f366160d88bb1c2691faf34df116f88a9e2be2237d61d2f",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "a37eb8920d67d7085163142664c0cf3aa1f14cce8e95f29c06c0c2f79cbc84f7",
+          "checkpoint.json": "2b340080b04529b2b7dfa000d315e4bcfdf69ec628338e4ee78ecab5b627038f",
+          "events.jsonl": "d211c4807a5cc1209ff60454a7fffe828b0bec79afa14d42785078cfca87c919",
+          "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "training-records.jsonl": "55c17f298da3953146c384ad75bfb804ca96c5b82c3beaf6734b5d11deef7e38"
+        }
+      },
+      "HYBRID": {
+        "current_state": 1,
+        "event_count": 4,
+        "grounded_states": {
+          "1:HOLD": {
+            "alternatives": [],
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:4:0740d25c1a8c0559\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "established_support": [
+              "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:3:9991a369eda832e0\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:3:9991a369eda832e0\",1,2003,1]",
+                "receipt_sha256": "b1a2b0d2c63692d587da42e28531ad54dded4500793365791f66cff1c545a8f7",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:4:0740d25c1a8c0559\",1,2004,1]",
+                "receipt_sha256": "dcc27a16d85e679f6bfc4ffdc21ec00e5c7bf5989e3b2db534c9a493f2aec21b",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ]
+          },
+          "1:RETREAT": {
+            "alternatives": [],
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "established_support": [
+              "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:1:467284a3d6d70553\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:3cecd3f5f196e722181ccd9675513716:runtime:1:467284a3d6d70553\",1,2001,1]",
+                "receipt_sha256": "61b3519cb945d803b34dc00d91750048022924f5499451463b446695f594f02e",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ]
+          }
+        },
+        "memory": {
+          "database_sha256": "92dcd025e73953831140ea2bfc890ee4c7ade636ffca4e0903337248869f1815",
+          "event_count": 4,
+          "event_store_sha256": "c723fcf9c7cb977b157654141fbcb5805fb128ac3944c6bfd22403caac21e953",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "1cd49bb59edd0ae5602896519f2b0d4cc62e9a4796bf96c34b971a660367e7d4",
+          "checkpoint.json": "693e58b185d55ea6c9b088f1271a1917eadd145ba94314b55b6a019bdd6ea09a",
+          "events.jsonl": "e67d7bd3d78b2a2f90b3d1ed369f9bb43b3f9ba4572ba15e02b4f8f983d5ec73",
+          "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "training-records.jsonl": "e48d88f0e73615dd6bcc62ede00f9acf8c9b5134395203d1ccc02f62d301c5bd"
+        }
+      },
+      "MODEL": {
+        "current_state": 1,
+        "event_count": 4,
+        "grounded_states": {
+          "1:HOLD": {
+            "alternatives": [],
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:4:b9dfe0960001fad5\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "established_support": [
+              "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:3:ab62f5173f8fe831\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:3:ab62f5173f8fe831\",1,2003,1]",
+                "receipt_sha256": "c332a433c7b76c7061cbbab88f96aace0c07d208507db20edd85355b76b70de8",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:4:b9dfe0960001fad5\",1,2004,1]",
+                "receipt_sha256": "efb62d976995087b70e190135481f118383dbbc7e05309d0924cdcda394fdd86",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ]
+          },
+          "1:RETREAT": {
+            "alternatives": [],
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "established_support": [
+              "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:1:3706415685624cf1\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "receipt_provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:5dee4db0331b445f68d3e20bfb28b952:runtime:1:3706415685624cf1\",1,2001,1]",
+                "receipt_sha256": "858e9fbb31ed1dc68c171cdd0a2ed8161d387e2f8b0a935f6af16a4bd4c75f22",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ]
+          }
+        },
+        "memory": {
+          "database_sha256": "2b27f6ca6a490ae61a6900543583f55ba9873718f324a0d5b32d542b2483b5a5",
+          "event_count": 4,
+          "event_store_sha256": "63656b6a3ec5baf4b30cd9816f971f947022bcfbeec85741a66bdd8176ed1e94",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "1d0c4b2118a0c7c86cc9112fd6b44610d4924cf1931871f39a0e8c3d233b282e",
+          "checkpoint.json": "3b58bf1ec63841cabde8158c822c5bdbb867d67556b9c041e3150d076312067b",
+          "events.jsonl": "368dd7a0d6438d7240314fc6b3b9ceb5309e0d8884c09aa0951a84881cac23fe",
+          "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "training-records.jsonl": "930957e7e5771d5e0c4f69fb108b2a6688372b71d954d79da8f3cf6522edcb6f"
+        }
+      }
+    },
+    "exact_durable_files_and_grounded_states": true,
+    "status": "PASS"
+  },
+  "scenarios": [
+    "A_ALL_ESTABLISHED",
+    "B_ESTABLISHED_UNSEEN",
+    "C_ESTABLISHED_UNRESOLVED",
+    "D_UNRESOLVED_BEST",
+    "E_MULTIPLE_UNSEEN",
+    "F_CANDIDATE_CONFIRMED",
+    "G_RESTORATION",
+    "H_RESTART_UNRESOLVED",
+    "I_ANOMALY_REJECTED"
+  ],
+  "status": "COMPLETE",
+  "totals": {
+    "FORCED_GROUNDED": {
+      "abstentions": 0,
+      "decisions": 10,
+      "decisions_blocked_by_unresolved": 0,
+      "executed": 10,
+      "incorrect_confident_actions": 3,
+      "realized_consequence_sum": 6,
+      "realized_consequences": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "A_ALL_ESTABLISHED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "B_ESTABLISHED_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "C_ESTABLISHED_UNRESOLVED"
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "D_UNRESOLVED_BEST"
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "index": 1,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 2,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "index": 1,
+          "scenario": "F_CANDIDATE_CONFIRMED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "G_RESTORATION"
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "index": 1,
+          "scenario": "H_RESTART_UNRESOLVED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "I_ANOMALY_REJECTED"
+        }
+      ],
+      "retrospectively_unnecessary_abstentions": 0,
+      "selected_source_counts": {
+        "FORCED_POINT": 10
+      }
+    },
+    "HYBRID": {
+      "abstentions": 2,
+      "decisions": 10,
+      "decisions_blocked_by_unresolved": 2,
+      "executed": 8,
+      "incorrect_confident_actions": 0,
+      "realized_consequence_sum": 7,
+      "realized_consequences": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "A_ALL_ESTABLISHED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "B_ESTABLISHED_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "C_ESTABLISHED_UNRESOLVED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 2,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "index": 1,
+          "scenario": "F_CANDIDATE_CONFIRMED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "G_RESTORATION"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "I_ANOMALY_REJECTED"
+        }
+      ],
+      "retrospectively_unnecessary_abstentions": 2,
+      "selected_source_counts": {
+        "GROUNDED": 7,
+        "MODEL_GENERALIZATION": 1
+      }
+    },
+    "MODEL": {
+      "abstentions": 0,
+      "decisions": 10,
+      "decisions_blocked_by_unresolved": 0,
+      "executed": 10,
+      "incorrect_confident_actions": 4,
+      "realized_consequence_sum": 2,
+      "realized_consequences": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "A_ALL_ESTABLISHED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "B_ESTABLISHED_UNSEEN"
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "index": 1,
+          "scenario": "C_ESTABLISHED_UNRESOLVED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "index": 1,
+          "scenario": "D_UNRESOLVED_BEST"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 2,
+          "scenario": "E_MULTIPLE_UNSEEN"
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "index": 1,
+          "scenario": "F_CANDIDATE_CONFIRMED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "G_RESTORATION"
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "index": 1,
+          "scenario": "H_RESTART_UNRESOLVED"
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 1,
+          "scenario": "I_ANOMALY_REJECTED"
+        }
+      ],
+      "retrospectively_unnecessary_abstentions": 0,
+      "selected_source_counts": {
+        "MODEL_POINT": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,1004 @@
+{
+  "Explorer_calls": 0,
+  "Map_calls": 36,
+  "Recovery_calls": 0,
+  "aggregate_exact_monotone": true,
+  "classification": "TWO-OBSERVATION CROSS-EPISODE MAP EFFECT SUPPORTED",
+  "comparisons": {
+    "D1_vs_D0": {
+      "both_exact": 0,
+      "both_wrong": 5,
+      "favorable": 7,
+      "reverse": 0
+    },
+    "D2_vs_D0": {
+      "both_exact": 0,
+      "both_wrong": 2,
+      "favorable": 10,
+      "reverse": 0
+    },
+    "D2_vs_D1": {
+      "both_exact": 6,
+      "both_wrong": 1,
+      "favorable": 4,
+      "reverse": 1
+    }
+  },
+  "completed_calls": 36,
+  "conditions": {
+    "D0": {
+      "consequence": 1,
+      "exact": 0,
+      "next_state": 6,
+      "valid": 12
+    },
+    "D1": {
+      "consequence": 7,
+      "exact": 7,
+      "next_state": 12,
+      "valid": 12
+    },
+    "D2": {
+      "consequence": 10,
+      "exact": 10,
+      "next_state": 12,
+      "valid": 12
+    }
+  },
+  "context_triples": [
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 0,
+      "family": "O1",
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "HOLD",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 0,
+      "seed": 91001,
+      "trajectory": "wrong -> wrong -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 1,
+      "family": "O1",
+      "mapping": {
+        "K1": "ADVANCE",
+        "K2": "RETREAT",
+        "K3": "HOLD"
+      },
+      "mapping_index": 1,
+      "seed": 91002,
+      "trajectory": "wrong -> wrong -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 2,
+      "family": "O1",
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "ADVANCE",
+        "K3": "RETREAT"
+      },
+      "mapping_index": 2,
+      "seed": 91003,
+      "trajectory": "wrong -> exact -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 3,
+      "family": "O1",
+      "mapping": {
+        "K1": "HOLD",
+        "K2": "RETREAT",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "seed": 91004,
+      "trajectory": "wrong -> exact -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 4,
+      "family": "O1",
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "ADVANCE",
+        "K3": "HOLD"
+      },
+      "mapping_index": 4,
+      "seed": 91005,
+      "trajectory": "wrong -> wrong -> wrong"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 5,
+      "family": "O1",
+      "mapping": {
+        "K1": "RETREAT",
+        "K2": "HOLD",
+        "K3": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "seed": 91006,
+      "trajectory": "wrong -> wrong -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 6,
+      "family": "O2",
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "ADVANCE",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 0,
+      "seed": 91001,
+      "trajectory": "wrong -> wrong -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": true,
+          "favorable": false,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": true
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": true,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 7,
+      "family": "O2",
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "ADVANCE",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 1,
+      "seed": 91002,
+      "trajectory": "wrong -> exact -> wrong"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": true,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 8,
+      "family": "O2",
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "HOLD",
+        "Z2": "RETREAT"
+      },
+      "mapping_index": 2,
+      "seed": 91003,
+      "trajectory": "wrong -> exact -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 9,
+      "family": "O2",
+      "mapping": {
+        "M4": "RETREAT",
+        "Q7": "HOLD",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 3,
+      "seed": 91004,
+      "trajectory": "wrong -> exact -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 10,
+      "family": "O2",
+      "mapping": {
+        "M4": "ADVANCE",
+        "Q7": "RETREAT",
+        "Z2": "HOLD"
+      },
+      "mapping_index": 4,
+      "seed": 91005,
+      "trajectory": "wrong -> exact -> exact"
+    },
+    {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D0": {
+          "both_exact": false,
+          "both_wrong": false,
+          "favorable": true,
+          "reverse": false
+        },
+        "D2_vs_D1": {
+          "both_exact": true,
+          "both_wrong": false,
+          "favorable": false,
+          "reverse": false
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": false,
+          "error": null,
+          "exact": false,
+          "next_state": false,
+          "prediction": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "valid": true
+        },
+        "D1": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        },
+        "D2": {
+          "consequence": true,
+          "error": null,
+          "exact": true,
+          "next_state": true,
+          "prediction": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "valid": true
+        }
+      },
+      "context_index": 11,
+      "family": "O2",
+      "mapping": {
+        "M4": "HOLD",
+        "Q7": "RETREAT",
+        "Z2": "ADVANCE"
+      },
+      "mapping_index": 5,
+      "seed": 91006,
+      "trajectory": "wrong -> exact -> exact"
+    }
+  ],
+  "contexts": 12,
+  "criteria": {
+    "D0_valid_at_least_11": true,
+    "D1_valid_at_least_11": true,
+    "D2_exact_at_least_9": true,
+    "D2_exact_exceeds_D0": true,
+    "D2_valid_at_least_11": true,
+    "O1_favorable_exceeds_reverse": true,
+    "O2_favorable_exceeds_reverse": true,
+    "all_36_complete": true,
+    "exact_replay": true,
+    "favorable_at_least_5": true,
+    "reverse_at_most_1": true,
+    "system_provenance_integrity": true
+  },
+  "evidence_sha256": {
+    "campaign-state.json": "5565e4303fb85baff4b319f5afaf3671580bda0dcfff1815c3680e3fb6839398",
+    "contexts.json": "367e41fe937155978fb60264a46ad7a57d3041079f13743ba89c803f1b1dcb8d",
+    "journal.jsonl": "adb1fc55c5e3af6a7cce2352b403d3f5916fb72229aafdfe4a2b211da960cac3",
+    "metadata.json": "7d3e7b3cfb8c5d1ce20f592863304653a44f72a7e4ec24f13299c4f918768117",
+    "metrics.json": "40f807309c43eb739782f0a0e22c8abc7b9be5876279e0e5da908ba235162ad4",
+    "model-calls.jsonl": "7839c3545150e5e1380debb29410ca39ac4502cadad6947ea3d450d1bc370fa9",
+    "pairs.json": "c9c54d5243a53de7545ae05738a4198049ee9ebf606d625af358b2760a4b288b",
+    "requests.json": "7e206c667785863030739b9d89ea6ef98fc6babc84f471e6c0b949f473aee96a"
+  },
+  "families": {
+    "O1": {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": 0,
+          "both_wrong": 4,
+          "favorable": 2,
+          "reverse": 0
+        },
+        "D2_vs_D0": {
+          "both_exact": 0,
+          "both_wrong": 1,
+          "favorable": 5,
+          "reverse": 0
+        },
+        "D2_vs_D1": {
+          "both_exact": 2,
+          "both_wrong": 1,
+          "favorable": 3,
+          "reverse": 0
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": 0,
+          "exact": 0,
+          "next_state": 5,
+          "valid": 6
+        },
+        "D1": {
+          "consequence": 2,
+          "exact": 2,
+          "next_state": 6,
+          "valid": 6
+        },
+        "D2": {
+          "consequence": 5,
+          "exact": 5,
+          "next_state": 6,
+          "valid": 6
+        }
+      },
+      "contexts": 6,
+      "trajectory_counts": {
+        "wrong -> exact -> exact": 2,
+        "wrong -> wrong -> exact": 3,
+        "wrong -> wrong -> wrong": 1
+      }
+    },
+    "O2": {
+      "comparisons": {
+        "D1_vs_D0": {
+          "both_exact": 0,
+          "both_wrong": 1,
+          "favorable": 5,
+          "reverse": 0
+        },
+        "D2_vs_D0": {
+          "both_exact": 0,
+          "both_wrong": 1,
+          "favorable": 5,
+          "reverse": 0
+        },
+        "D2_vs_D1": {
+          "both_exact": 4,
+          "both_wrong": 0,
+          "favorable": 1,
+          "reverse": 1
+        }
+      },
+      "conditions": {
+        "D0": {
+          "consequence": 1,
+          "exact": 0,
+          "next_state": 1,
+          "valid": 6
+        },
+        "D1": {
+          "consequence": 5,
+          "exact": 5,
+          "next_state": 6,
+          "valid": 6
+        },
+        "D2": {
+          "consequence": 5,
+          "exact": 5,
+          "next_state": 6,
+          "valid": 6
+        }
+      },
+      "contexts": 6,
+      "trajectory_counts": {
+        "wrong -> exact -> exact": 4,
+        "wrong -> exact -> wrong": 1,
+        "wrong -> wrong -> exact": 1
+      }
+    }
+  },
+  "model": {
+    "complete_blobs_verified": 5,
+    "format": "GGUF 47B Q4_0",
+    "name": "dolphin-mixtral:latest",
+    "runtime": "Ollama 0.1.16"
+  },
+  "model_probe_memory_commits": 0,
+  "model_probe_world_executions": 0,
+  "monotonicity_is_descriptive": true,
+  "narrow_scope": "Matched stateless read-only Map proposals with 0, 1 or 2 authenticated exact-pair observations from a prior episode; external system Memory persists, not model weights or chat.",
+  "parent": "148b760d7c97583142c7e7f6093aa0835f0d4a71",
+  "preregistration_commit": "50730a208417e069b1f79f349a09be14ab9b492a",
+  "reset_realized_events": 0,
+  "setup_world_executions": 48,
+  "status": "FINAL",
+  "study": "cross-episode-map-history-depth-v1",
+  "trajectory_counts": {
+    "wrong -> exact -> exact": 6,
+    "wrong -> exact -> wrong": 1,
+    "wrong -> wrong -> exact": 4,
+    "wrong -> wrong -> wrong": 1
+  },
+  "verification": {
+    "exact_replay": true,
+    "historical_preservation": true,
+    "independent_audit": true
+  }
+}

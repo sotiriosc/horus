@@ -1,0 +1,462 @@
+{
+  "summary": {
+    "framework_integrity": "PASS",
+    "violations": {},
+    "real_calls": 69,
+    "real_valid_proposals": 69,
+    "real_parse_failures": {},
+    "synthetic_calls": 24,
+    "synthetic_commits": 0,
+    "measured_world_executions": 87,
+    "measured_commits": 78,
+    "setup_steps": 75,
+    "conditions": [
+      {
+        "condition": "A",
+        "episodes": 3,
+        "proposals": 18,
+        "valid": 18,
+        "actions": {
+          "HOLD": 17,
+          "ADVANCE": 1
+        },
+        "commits": 18,
+        "reward": 1,
+        "action_changes": 1
+      },
+      {
+        "condition": "B",
+        "episodes": 3,
+        "proposals": 18,
+        "valid": 18,
+        "actions": {
+          "ADVANCE": 1,
+          "HOLD": 17
+        },
+        "commits": 18,
+        "reward": 6,
+        "action_changes": 1
+      },
+      {
+        "condition": "C",
+        "episodes": 3,
+        "proposals": 18,
+        "valid": 18,
+        "actions": {
+          "ADVANCE": 15,
+          "HOLD": 3
+        },
+        "commits": 18,
+        "reward": 6,
+        "action_changes": 3
+      }
+    ],
+    "matched_pairs": 6,
+    "improved_pairs": 1,
+    "memory_usefulness": "NOT_ESTABLISHED",
+    "fault_results": [
+      {
+        "name": "corrupt_memory",
+        "seed": 1,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "wrong_map",
+        "seed": 1,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "invalid_recovery",
+        "seed": 1,
+        "action": "ADVANCE",
+        "committed": false,
+        "reason": "state recovery/candidate rejected",
+        "violations": []
+      },
+      {
+        "name": "stale_provenance",
+        "seed": 1,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "persistent evidence failure: stale_provenance",
+        "violations": []
+      },
+      {
+        "name": "incomplete_evidence",
+        "seed": 1,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "descendant_evidence",
+        "seed": 1,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "persistent evidence failure: candidate_derived",
+        "violations": []
+      },
+      {
+        "name": "corrupt_memory",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "wrong_map",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "invalid_recovery",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "state recovery/candidate rejected",
+        "violations": []
+      },
+      {
+        "name": "stale_provenance",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "persistent evidence failure: stale_provenance",
+        "violations": []
+      },
+      {
+        "name": "incomplete_evidence",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "descendant_evidence",
+        "seed": 2,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "persistent evidence failure: candidate_derived",
+        "violations": []
+      },
+      {
+        "name": "corrupt_memory",
+        "seed": 3,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "wrong_map",
+        "seed": 3,
+        "action": "ADVANCE",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "invalid_recovery",
+        "seed": 3,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "state recovery/candidate rejected",
+        "violations": []
+      },
+      {
+        "name": "stale_provenance",
+        "seed": 3,
+        "action": "ADVANCE",
+        "committed": false,
+        "reason": "persistent evidence failure: stale_provenance",
+        "violations": []
+      },
+      {
+        "name": "incomplete_evidence",
+        "seed": 3,
+        "action": "HOLD",
+        "committed": true,
+        "reason": "authorized",
+        "violations": []
+      },
+      {
+        "name": "descendant_evidence",
+        "seed": 3,
+        "action": "HOLD",
+        "committed": false,
+        "reason": "persistent evidence failure: candidate_derived",
+        "violations": []
+      }
+    ],
+    "prompt_controls": [
+      {
+        "seed": 1,
+        "raw_output": " HOLD",
+        "committed": true
+      },
+      {
+        "seed": 2,
+        "raw_output": " HOLD",
+        "committed": true
+      },
+      {
+        "seed": 3,
+        "raw_output": " HOLD",
+        "committed": true
+      }
+    ],
+    "maxima": {
+      "memory": 6,
+      "pairs": 6,
+      "packages": 6,
+      "trace": 18,
+      "package_trace": 24,
+      "staged": 0,
+      "map_quarantine": 0,
+      "memory_quarantine": 0
+    }
+  },
+  "pairs": [
+    {
+      "seed": 101,
+      "history_action": "ADVANCE",
+      "no_history_action": "HOLD",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": false
+    },
+    {
+      "seed": 102,
+      "history_action": "ADVANCE",
+      "no_history_action": "HOLD",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": false
+    },
+    {
+      "seed": 103,
+      "history_action": "HOLD",
+      "no_history_action": "HOLD",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": false
+    },
+    {
+      "seed": 104,
+      "history_action": "HOLD",
+      "no_history_action": "ADVANCE",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": true
+    },
+    {
+      "seed": 105,
+      "history_action": "HOLD",
+      "no_history_action": "HOLD",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": false
+    },
+    {
+      "seed": 106,
+      "history_action": "ADVANCE",
+      "no_history_action": "HOLD",
+      "empirical_scores": {
+        "ADVANCE": -1.0,
+        "HOLD": 0.0,
+        "RETREAT": 0.0
+      },
+      "improved": false
+    }
+  ],
+  "model": {
+    "model": "dolphin-mixtral:latest",
+    "options": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "num_predict": 16,
+      "num_ctx": 2048,
+      "repeat_penalty": 1.1
+    },
+    "system": "Choose exactly one allowed action. Prefer higher observed consequences. Reply only ADVANCE, HOLD, or RETREAT.",
+    "frozen": {
+      "framework_commit": "8ec32c839133df7ddd76448063b5f765c20155da",
+      "source_sha256": {
+        "experiments/base_framework_v0/__init__.py": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29",
+        "experiments/base_framework_v0/campaign.py": "3006d4ec2c08426be578e27dda511bb83d280fd18663cccacd6bd36725434e6b",
+        "experiments/base_framework_v0/environment.py": "8b121bcf2ee1336cec7adb4e44153d1f17da6cad295cc3574b54f77244618eff",
+        "experiments/base_framework_v0/framework.py": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e",
+        "experiments/base_framework_v0/run.py": "da291611142fd7b364f6faffeb79c4563e282b11b4dab906e8524d0daaad7750",
+        "experiments/base_framework_v0/test_framework.py": "e434e5c4725275754e2f4de7aa25f9e9f3c36637f7666ab0ddf3670ad051c6fe",
+        "experiments/base_framework_v1/__init__.py": "10f3ace674d3514a9f4b9bc1e967e709a617db09b961c17e5a9e039bff9c17f2",
+        "experiments/base_framework_v1/campaign.py": "d15f3ffbd21ad928c7e469b5ae46ce8c89049349cd6d93aecf2a91734a85ef59",
+        "experiments/base_framework_v1/framework.py": "66366511e0b59ed34fa7c116d99fda9a7557b48df752f265c6352a32575fb572",
+        "experiments/base_framework_v1/hidden_oracle.py": "3468e06a051025b56cc84492ffeb599a8ec1d29d3870ec11388e8bcc2e343109",
+        "experiments/base_framework_v1/run.py": "7e1f15a01edf1c4dc48e385fd5e443b9b04b07c398cd3ee3563209d30d963566",
+        "experiments/base_framework_v1/source_a.py": "3e4161846abddfe8be6bb7ba2ba52ab8bbc018056df4dc0e9bbe2d67bde7209e",
+        "experiments/base_framework_v1/source_b.py": "f2b1806ae0d5ce93723a6da596a2011f0318ac37586265528ab24b7bd1d0eab9",
+        "experiments/base_framework_v1/test_framework.py": "fdd3a51fb0eab94473ccba0ad918f8ce4815d87f10d4a27f5bc979137515b652",
+        "experiments/base_framework_v1/types.py": "9f2fbd9b9ccd72a5dec81e8dc072b842970321ccbf636adab8836d3a4b81c0dd",
+        "experiments/base_framework_v2/__init__.py": "af37735eaf51d765d75a7ce9871cceecf9a3b692d2b4897d7d90c903eaf98b50",
+        "experiments/base_framework_v2/campaign.py": "cd9bb560b27b3931200470d0b6c8c2967eaf7d8e5b6a6f2f63dcd7152923f78c",
+        "experiments/base_framework_v2/framework.py": "fd0b9882b06e5c6db5cc5478a603d072579ada110e4acdd92162174b8294a244",
+        "experiments/base_framework_v2/registry.py": "e3e4d3eb1957dc507d3eac558efbaae28543b85d7d479bf5d32a9d9410477774",
+        "experiments/base_framework_v2/run.py": "60170a2340b1495d76630661feff7fdcf193b9283231cc72aafc3aa292ec722c",
+        "experiments/base_framework_v2/test_framework.py": "71287adcc3336cf7f14d375ef9b507e21b2b5ea25c6f51dc4bf0d8db0a2cc80f",
+        "experiments/base_framework_v2/types.py": "c5555d1bea2ab75cedfa1823737e40189455b53b1d20ee8d08a8822cdf890e4d",
+        "experiments/base_framework_v2/witness_c.py": "8f0d71e83056658dd3a0b30a620fa8868052c39331ed629503b742f644757f42"
+      },
+      "model": {
+        "name": "dolphin-mixtral:latest",
+        "manifest_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "weights_digest": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3"
+      }
+    },
+    "execution": "real_inference",
+    "server": {
+      "version": "0.1.16"
+    },
+    "installed_model": {
+      "name": "dolphin-mixtral:latest",
+      "modified_at": "2023-12-19T01:34:23.169233495-05:00",
+      "size": 26441544856,
+      "digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    },
+    "model_template": {
+      "template": "<|im_start|>system\n{{ .System }}<|im_end|>\n<|im_start|>user\n{{ .Prompt }}<|im_end|>\n<|im_start|>assistant\n",
+      "system": "You are Dolphin, a helpful AI assistant.\n",
+      "parameters": "stop                           <|im_end|>\nstop                           <|im_start|>\nstop                           <|im_end|>\nnum_ctx                        4096",
+      "details": {
+        "format": "gguf",
+        "family": "llama",
+        "families": [
+          "llama"
+        ],
+        "parameter_size": "47B",
+        "quantization_level": "Q4_0"
+      }
+    }
+  },
+  "source_sha256": {
+    "experiments/model_explorer_integration_v0/__init__.py": "ac6d0d8f4a61e8e4df1da8255119e6144df383d331cc279ae2b0bc6d7d11d5dd",
+    "experiments/model_explorer_integration_v0/adapter.py": "6e70252a6c2e022e66e373ceca15db6e48772c2f72e4b1b0556f0b5fe762dc64",
+    "experiments/model_explorer_integration_v0/campaign.py": "46fffac1be31ac44ef26e59ba0574593195dae699c4994efc7ce1afb877ff98f",
+    "experiments/model_explorer_integration_v0/run.py": "b02e45d4a3e88944e456b3756ca9345f3afc89b50b0db18093ca94e7cb1600ce",
+    "experiments/model_explorer_integration_v0/test_adapter.py": "5a76aa1d0b394ea1e9238da75928dd0935b8b25cb28b18b0eebe009221b84425"
+  },
+  "transcript_sha256": "7475ad409311cf589bc3d145c482735656c6bc7d6b6d13064debf3bf26f42160",
+  "fresh_regressions": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "experiments.minimum_framework_repair_1.run"
+      ],
+      "exit_code": 0,
+      "log": "0.log",
+      "log_sha256": "b8d8f020f584533348a63bd4853c202bb5683d9478cb7d660c06c7c3cf69fa40",
+      "evidence_directory": "repair"
+    },
+    {
+      "command": [
+        "make",
+        "base-framework-v0"
+      ],
+      "exit_code": 0,
+      "log": "1.log",
+      "log_sha256": "d5bef226309e0f3147c9d463087b6379a7899c50ed51ff4570ee1bbf05226429",
+      "evidence_directory": "base-framework-v0"
+    },
+    {
+      "command": [
+        "make",
+        "base-framework-v1"
+      ],
+      "exit_code": 0,
+      "log": "2.log",
+      "log_sha256": "895df184c54fae1f9d729026f2aacf8da5c9d66f7cf5ac97edb135672bd5eda9",
+      "evidence_directory": "base-framework-v1"
+    },
+    {
+      "command": [
+        "make",
+        "base-framework-v2"
+      ],
+      "exit_code": 0,
+      "log": "3.log",
+      "log_sha256": "7248d1a704d636ac1fd6a8a56c704dd6e35818ea0c9e451c57c523b007a93792",
+      "evidence_directory": "base-framework-v2"
+    }
+  ],
+  "artifact_sha256": {
+    "model-calls.jsonl": "7475ad409311cf589bc3d145c482735656c6bc7d6b6d13064debf3bf26f42160",
+    "proposal-outcomes.json": "35c5c239299e944f14b48badaa6c5fc629a37480a95ce8d27bac8b37284e9f9d"
+  },
+  "adapter_unit_tests": {
+    "run": 4,
+    "failures": 0,
+    "errors": 0
+  },
+  "rates": {
+    "real_valid": 1.0,
+    "real_invalid": 0.0,
+    "real_malformed": 0.0
+  },
+  "clarification": "Five setup steps supply ADVANCE=-1 and no observed HOLD outcome; original schedule and scoring preserved. See setup-clarification document.",
+  "replay": {
+    "exit_code": 0,
+    "step_records": 186,
+    "model_call_records": 69,
+    "step_records_byte_identical": true,
+    "model_calls_byte_identical": true,
+    "summary_and_pairs_identical": true
+  },
+  "matched_comparison": {
+    "improved": 1,
+    "worsened": 3,
+    "unchanged": 2,
+    "required_improvements": 4
+  },
+  "raw_evidence_sha256": {
+    "results.json": "7c23de04ec3893b19c47a64a1f510d9633eafec3c63d1d63703ab1915024bbe6",
+    "steps.jsonl": "dae3b1f101054291f8a152cd846017f3e2b58d42863d4d00390dbbbe1da90dc1",
+    "metadata.json": "8afa964c4d9be0f0471d1459ea01ab55240a40ccfd6cd8366e00eb2265329bd8"
+  }
+}

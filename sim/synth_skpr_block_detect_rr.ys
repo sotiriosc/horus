@@ -1,0 +1,10 @@
+read_verilog ../rtl/skpr_block_detect_rr.v
+hierarchy -check -top skpr_block_detect_rr
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+dfflibmap -liberty @LIBERTY@
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@
+abc -liberty @LIBERTY@ -D 10000 -script +strash;scorr;ifraig;retime,-D,10000;strash;dch,-f;map,-M,1,-D,10000;topo;dnsize;buffer,-N,5,-S,10;upsize
+stat -liberty @LIBERTY@

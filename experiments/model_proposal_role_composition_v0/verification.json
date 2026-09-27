@@ -1,0 +1,336 @@
+{
+  "parent": "2a145a3ebbe905ebafbf87559bbe97d062ed9103",
+  "protocol_commit": "dcd40e954d6169f21bbf2151a23cedff67b1ba4b",
+  "classification": "C \u2014 NOT ESTABLISHED",
+  "actual_real_model_calls": 0,
+  "interfaces_changed": false,
+  "gate_commands": [
+    {
+      "command": "python3 -m experiments.model_proposal_role_composition_v0.gate --output \"$HORUS_COMPOSITION_GATE\"",
+      "exit_code": 0,
+      "result": "EXPECTED_BLOCKED"
+    },
+    {
+      "command": "python3 -m experiments.model_proposal_role_composition_v0.gate --replay \"$HORUS_COMPOSITION_GATE\" --output \"$HORUS_COMPOSITION_REPLAY\"",
+      "exit_code": 0,
+      "result": "EXPECTED_BLOCKED_EXACT_REPLAY"
+    }
+  ],
+  "diagnostic_replay": {
+    "new_inference": 0,
+    "byte_identical": true,
+    "files": {
+      "results.json": "0c3ddb445b17fc170a50c25f114373deaab4a91cdd9af5e2eacf94c44f498088",
+      "diagnostic.json": "a76159705d9b4bfcb41d15951cb53a914b377e65600d80ce88a2f0ce50634089"
+    }
+  },
+  "regressions": [
+    {
+      "command": "python3 -m experiments.model_recovery_proposal_v1.run --replay $HORUS_MODEL_RECOVERY_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:14.062687+00:00",
+      "finished_utc": "2026-09-19T16:03:14.676589+00:00",
+      "log_sha256": "c21913f5163ed8bbb5a71837c198ae4adf9595605909383bc62520e660b2a640"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_recovery_proposal_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:14.677127+00:00",
+      "finished_utc": "2026-09-19T16:03:15.899253+00:00",
+      "log_sha256": "bc1e58494ed5f6f52f55ad4aa8a32d7f2d351b176b5c90785741b62cc41a3b9c"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_authorizer_status_binding_v1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:15.899613+00:00",
+      "finished_utc": "2026-09-19T16:03:17.205063+00:00",
+      "log_sha256": "e64b3f6971118698a73ed75835fc092f42aae716f491319cfd3a5a9722a05e4d"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_authorizer_status_binding_v1.run --replay $HORUS_STATUS_CAMPAIGN",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:17.205502+00:00",
+      "finished_utc": "2026-09-19T16:03:18.515045+00:00",
+      "log_sha256": "ad9c0e22e576e73a9a90040d765855d850a23013f73e57c37bd7a0bb9a3b6f10"
+    },
+    {
+      "command": "python3 -m unittest experiments.state_recovery_authorizer_status_binding_v1.test_status -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:18.515435+00:00",
+      "finished_utc": "2026-09-19T16:03:19.804399+00:00",
+      "log_sha256": "4cbd5859814953e4ce819e7f5fbf83defd8c26992eb03f79cf935496852624e1"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T16:03:19.804784+00:00",
+      "finished_utc": "2026-09-19T16:03:19.372556+00:00",
+      "log_sha256": "0f438661afeed5a4b37bcaa0fe6dedeaf01a718d04c4804d9d95a4ac38cca20c"
+    },
+    {
+      "command": "python3 -m experiments.state_recovery_proposal_interface_v1.run --replay $HORUS_INTERFACE_CAMPAIGN --historical-evidence $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T16:03:19.372983+00:00",
+      "finished_utc": "2026-09-19T16:03:19.918615+00:00",
+      "log_sha256": "e1726a978ccd93dbca56d85a40d2a3c8db96cfedb01c26eee83c2b7a175036e5"
+    },
+    {
+      "command": "python3 -m unittest experiments.state_recovery_proposal_interface_v1.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:19.919002+00:00",
+      "finished_utc": "2026-09-19T16:03:20.438144+00:00",
+      "log_sha256": "8c1eced747f5e6e1f12aad4456e87e8ade10b90fea9269de9d5c02661e67400f"
+    },
+    {
+      "command": "python3 -m experiments.model_recovery_proposal_v0.run --replay $HORUS_RECOVERY_DIAGNOSTIC",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T16:03:20.438725+00:00",
+      "finished_utc": "2026-09-19T16:03:20.615056+00:00",
+      "log_sha256": "27b52eef37e2a683a4236383ddc0f0a5ca2a6fec9edc5cdca28b689c0dd32b61"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.run --replay $HORUS_MAP_PRIOR_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:20.615467+00:00",
+      "finished_utc": "2026-09-19T16:03:22.593549+00:00",
+      "log_sha256": "94d6cc1f4a9f732c6cfded8f90bd2b64618753275884ca9d20c2061f4445da2b"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.run --replay $HORUS_MAP_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:22.594164+00:00",
+      "finished_utc": "2026-09-19T16:03:26.736460+00:00",
+      "log_sha256": "d367aba2fad8722e87ee7177394c322af90329216d3471805f7f3158769fa91d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1.run --replay $HORUS_CONTRADICTION_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:26.736914+00:00",
+      "finished_utc": "2026-09-19T16:03:30.804380+00:00",
+      "log_sha256": "45d2cf847d34d917f85fe6f49185372e00bb9146b01766242e055ca1b47f3160"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_prior_factorial_v1.run --replay $HORUS_FACTORIAL_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:30.805084+00:00",
+      "finished_utc": "2026-09-19T16:03:32.544466+00:00",
+      "log_sha256": "d651fc13b6d2aba627be7d89cf5a14c2d8b00e8d9a1fe02f0f691d1d0afd0d1d"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_semantic_prior_study_v0.run --replay $HORUS_SEMANTIC_EVIDENCE/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:32.544889+00:00",
+      "finished_utc": "2026-09-19T16:03:35.014467+00:00",
+      "log_sha256": "f98aeb8b735cebe04a8220e523fecf48d142e84a402d7103983093dde052c7d9"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_adaptive_episode_v0.run --replay experiments/model_explorer_adaptive_episode_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:35.015121+00:00",
+      "finished_utc": "2026-09-19T16:03:35.664606+00:00",
+      "log_sha256": "36cc8ce91e4938862ed6c505a5260135317391577da62dc6bb1dda837c2da814"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_memory_study_v1.run --replay experiments/model_explorer_memory_study_v1/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:35.665172+00:00",
+      "finished_utc": "2026-09-19T16:03:37.418670+00:00",
+      "log_sha256": "1bce2c06064e772345b07fc1dcf6b7a03a50b39a9221c0f0039cdbc4578c9283"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_integration_v0.run --replay experiments/model_explorer_integration_v0/model-calls.jsonl",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:37.421432+00:00",
+      "finished_utc": "2026-09-19T16:03:37.662825+00:00",
+      "log_sha256": "73aa4e8fe2c3338e8e6fe67901052cdbcf07ad4a03e8a565b451df6e9cc0d1a9"
+    },
+    {
+      "command": "python3 -m experiments.minimum_framework_repair_1.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:37.663653+00:00",
+      "finished_utc": "2026-09-19T16:03:38.069489+00:00",
+      "log_sha256": "fdfcd9b6cc560107b1397e02ccc2a239ff9c147046aa1ef6d4c4844ec9a5b52a"
+    },
+    {
+      "command": "make base-framework-v0",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.069881+00:00",
+      "finished_utc": "2026-09-19T16:03:38.125629+00:00",
+      "log_sha256": "76d4775aea68e394a57ee12f2a8c1622bb53d5d747ed8afe3ed9b3bef7293e21"
+    },
+    {
+      "command": "make base-framework-v1",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.126414+00:00",
+      "finished_utc": "2026-09-19T16:03:38.191976+00:00",
+      "log_sha256": "b9e1d28e9eb43eab78670f6b49ce1b4516c78a0bcc00986b6f4ab481aa80ba61"
+    },
+    {
+      "command": "make base-framework-v2",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.193042+00:00",
+      "finished_utc": "2026-09-19T16:03:38.332595+00:00",
+      "log_sha256": "e7575b125fdbf6c473ac32140597388d9077c3801a6fc38a12feade7cd18b374"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v0.test_preflight -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.333350+00:00",
+      "finished_utc": "2026-09-19T16:03:38.406033+00:00",
+      "log_sha256": "087d9449885d323cb960b33761b003aee8eecae9e99a33e0d8f5a2f73b9d0929"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "started_utc": "2026-09-19T16:03:38.406474+00:00",
+      "finished_utc": "2026-09-19T16:03:38.481443+00:00",
+      "log_sha256": "62322e9afa6dc373d706a782965e6dedc7749a9ffbb01e12721f5b3860cabd44"
+    },
+    {
+      "command": "python3 -m unittest experiments.realized_event_grounding_v0.test_grounding -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.482861+00:00",
+      "finished_utc": "2026-09-19T16:03:38.529136+00:00",
+      "log_sha256": "078bdb5eba761b7e8c3aec27d3054dc6fbbebfd5f8a97d1a6bc9861b55f3d169"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.529580+00:00",
+      "finished_utc": "2026-09-19T16:03:38.702811+00:00",
+      "log_sha256": "ce3bc8d051e047fcb2268448dbf57afcb2792c93741771fa27337b0125dfc819"
+    },
+    {
+      "command": "python3 -m experiments.realized_event_grounding_v0.run --replay $HORUS_REPAIR_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.703269+00:00",
+      "finished_utc": "2026-09-19T16:03:38.877700+00:00",
+      "log_sha256": "b157f10f45cdce048c31be29477509510e452377712ad6d39754f5172eac308c"
+    },
+    {
+      "command": "python3 -m experiments.model_explorer_contradiction_revision_v1_feasibility.run --replay $HORUS_FEASIBILITY_EVIDENCE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:38.878167+00:00",
+      "finished_utc": "2026-09-19T16:03:39.001372+00:00",
+      "log_sha256": "3db88339f370f310bd4b5b7cc61437518ca3b6749b879865980da7e23179fdd3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_explorer_contradiction_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:39.001839+00:00",
+      "finished_utc": "2026-09-19T16:03:40.708493+00:00",
+      "log_sha256": "708215983517d446b9c09205d20c06f726f3ad014bb396623ac34806e53acd3b"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_proposal_v0.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:40.708933+00:00",
+      "finished_utc": "2026-09-19T16:03:42.723920+00:00",
+      "log_sha256": "6c4e64b62ad897ca20770d13631cdc6c9628b80fe9a7c4c9d88f44da9f60bc15"
+    },
+    {
+      "command": "python3 -m experiments.model_map_proposal_v0.gate --replay $HORUS_MAP_GATE",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:42.724391+00:00",
+      "finished_utc": "2026-09-19T16:03:43.038743+00:00",
+      "log_sha256": "5138c77b824ce29540ef5d92507265be6cd80ad3169f655f012161221d6b84d3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_map_established_prior_revision_v1.test_study -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:43.039221+00:00",
+      "finished_utc": "2026-09-19T16:03:45.389238+00:00",
+      "log_sha256": "face13bcb52e19d20233aeea90eb11fa4129d15953c5cfbcac67b86588c8cb5f"
+    },
+    {
+      "command": "python3 -m experiments.model_map_established_prior_revision_v1.preflight --replay $HORUS_MAP_PRIOR_PREFLIGHT",
+      "local_output_argument_omitted": true,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:45.389724+00:00",
+      "finished_utc": "2026-09-19T16:03:46.298662+00:00",
+      "log_sha256": "f53253db4b48b0d6defa4951d0f4bf446c1645b84f5aa8cf1b05ffad67beb1c3"
+    },
+    {
+      "command": "python3 -m unittest experiments.model_recovery_proposal_v0.test_interface -v",
+      "local_output_argument_omitted": false,
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "started_utc": "2026-09-19T16:03:46.299177+00:00",
+      "finished_utc": "2026-09-19T16:03:46.452543+00:00",
+      "log_sha256": "0545595ba120655296d3db6ea7ebf4b7db51efe94d9f9dcdb64257bb7e44ae83"
+    }
+  ],
+  "historical_command_count": 33,
+  "all_expected_statuses": true,
+  "preservation": {
+    "parent_file_count": 410,
+    "unchanged_inherited_files": 408,
+    "root_index_manifest_only_modified": true,
+    "main_and_tags_unchanged": true
+  },
+  "live_response_replay": "NOT_APPLICABLE_NO_CALLS",
+  "post_live_controls": "NOT_RUN_GATE_BLOCKED"
+}

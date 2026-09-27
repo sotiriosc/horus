@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "claim": "SUPPORTED UNDER TESTED CONDITIONS: a bounded five-component closed loop with protected evidence, separate recovery verification, explicit authority, and history-dependent behavior.",
+  "seeds": [1, 2, 3],
+  "verification": {
+    "unit_tests_run": 12,
+    "unit_test_failures": 0,
+    "unit_test_errors": 0,
+    "scenario_runs": 42
+  },
+  "bounds": {
+    "world_states": 4,
+    "actions": 3,
+    "memory_records": 8,
+    "protected_receipts": 8,
+    "quarantine_entries_per_subsystem": 1,
+    "recovery_candidates": 1,
+    "recovery_attempts": 1,
+    "trace_records": 16,
+    "episode_transitions": 12,
+    "epochs_per_scenario": 2,
+    "authorization_records_per_epoch": 24
+  },
+  "totals": {
+    "protected_false_accepts": 0,
+    "false_rejects": 0,
+    "duplicate_authorizations": 0,
+    "recovery_successes": 21,
+    "recovery_rejections": 9,
+    "provenance_rejections": 12,
+    "lineage_rejections": 3,
+    "descendant_false_confidence": 3,
+    "memory_corruptions_detected": 6,
+    "measurement_corruptions_detected": 3,
+    "incumbents_retained": 27,
+    "incumbents_quarantined": 21,
+    "candidate_replacements": 51,
+    "commits": 87,
+    "safe_rejections": 15,
+    "world_executions": 96,
+    "memory_behavior_changes": 3
+  },
+  "clean_episode": {
+    "runs": 3,
+    "transactions_per_run": 12,
+    "state_1_first_action": "ADVANCE",
+    "state_1_later_action": "HOLD",
+    "memory_records_at_end": 8,
+    "paired_evictions_per_run": 4
+  },
+  "scenario_status": {
+    "clean_episode": "PASS (3/3)",
+    "wrong_map_state": "PASS (3/3)",
+    "corrupted_memory_record": "PASS (3/3)",
+    "wrong_measure_verdict": "PASS (3/3)",
+    "invalid_explorer_proposal": "PASS (3/3)",
+    "failed_recovery": "PASS (3/3)",
+    "wrong_transaction": "PASS (3/3)",
+    "wrong_epoch": "PASS (3/3)",
+    "shared_descendant": "PASS (3/3)",
+    "stale_incumbent": "PASS (3/3)",
+    "valid_incumbent_over_bad_candidate": "PASS (3/3)",
+    "unrecoverable_fault": "PASS (3/3)",
+    "epoch_transition": "PASS (3/3)",
+    "wrong_memory_recovery": "PASS (3/3)"
+  },
+  "source_sha256": {
+    "experiments/base_framework_v0/__init__.py": "40707ce1439456c92d81cb37bbc1e3705e6458ff42221b598679e5843e301a29",
+    "experiments/base_framework_v0/campaign.py": "3006d4ec2c08426be578e27dda511bb83d280fd18663cccacd6bd36725434e6b",
+    "experiments/base_framework_v0/environment.py": "8b121bcf2ee1336cec7adb4e44153d1f17da6cad295cc3574b54f77244618eff",
+    "experiments/base_framework_v0/framework.py": "324dfbb8abeffa131a9cfffdfb540f95bb2256f53524e0d0ef9a484ef5cea20e",
+    "experiments/base_framework_v0/run.py": "da291611142fd7b364f6faffeb79c4563e282b11b4dab906e8524d0daaad7750",
+    "experiments/base_framework_v0/test_framework.py": "e434e5c4725275754e2f4de7aa25f9e9f3c36637f7666ab0ddf3670ad051c6fe"
+  }
+}

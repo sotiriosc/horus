@@ -1,0 +1,6 @@
+read_verilog ../rtl/horus_e3m6_mac_param.v
+read_verilog ../rtl/horus_e3m6_mac_w36.v
+synth -top horus_e3m6_mac_w36
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@

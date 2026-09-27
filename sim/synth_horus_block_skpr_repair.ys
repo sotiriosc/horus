@@ -1,0 +1,8 @@
+read_verilog ../rtl/horus_norm_v2.v ../rtl/skpr.v ../rtl/skpr_block_detect_rr.v ../rtl/skpr_block_repair.v ../rtl/horus_block_skpr_repair.v
+hierarchy -check -top horus_block_skpr_repair
+proc; opt; fsm; opt; memory; opt
+techmap; opt
+dfflibmap -liberty @LIBERTY@
+abc -liberty @LIBERTY@
+clean
+stat -liberty @LIBERTY@

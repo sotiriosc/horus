@@ -1,0 +1,81 @@
+{
+  "runtime_commit": "6a8789a",
+  "all_exit_codes_zero": true,
+  "executions": [
+    {
+      "command": "make test",
+      "exit_code": 0,
+      "log": "test.log",
+      "log_sha256": "4a1a8ed9f243855a07a3cb16d47916b2d67d44b8969d2dc4d5e384ca8903c080",
+      "evidence_directory": "test",
+      "measured": {
+        "executed_steps": 53
+      }
+    },
+    {
+      "command": "make independent-commit",
+      "exit_code": 0,
+      "log": "independent-commit.log",
+      "log_sha256": "2f3761149f325a6c2f3c07e486082a41516178ef30edcac300326bf754d9ee9b",
+      "evidence_directory": "independent-commit",
+      "measured": {
+        "schedules": 21,
+        "protected_transactions": 4200,
+        "negative_false_accepts": 300
+      }
+    },
+    {
+      "command": "make independent-commit-followup",
+      "exit_code": 0,
+      "log": "independent-commit-followup.log",
+      "log_sha256": "7f470d7dbe3d0f711fc8999a06516ce8393e8b07d6c7bf987ad8ca10ecfd24b5",
+      "evidence_directory": "independent-commit-followup",
+      "measured": {
+        "broader_fault_transactions": 2700,
+        "paired_trace_comparisons": 21
+      }
+    },
+    {
+      "command": "make base-framework-v0",
+      "exit_code": 0,
+      "log": "base-framework-v0.log",
+      "log_sha256": "a6e1194d06b996f86492244c13423cddaa82ee8959b03ce99e7c9613d8a7b0a0",
+      "evidence_directory": "base-framework-v0",
+      "measured": {
+        "tests": 12,
+        "scenarios": 42,
+        "protected_false_accepts": 0,
+        "false_rejects": 0,
+        "duplicate_authorizations": 0
+      }
+    },
+    {
+      "command": "make base-framework-v1",
+      "exit_code": 0,
+      "log": "base-framework-v1.log",
+      "log_sha256": "94a6f393528c555f5a86ad1e7267586e402e60356f557ed5bbf9f983be3ef03c",
+      "evidence_directory": "base-framework-v1",
+      "measured": {
+        "tests": 10,
+        "scenarios": 69,
+        "protected_false_accepts": 0,
+        "common_mode_false_accepts": 3
+      }
+    },
+    {
+      "command": "make base-framework-v2",
+      "exit_code": 0,
+      "log": "base-framework-v2.log",
+      "log_sha256": "7d9879c0becb72b5931c50191359e75e38137b594c5f8351e59443563e6717ab",
+      "evidence_directory": "base-framework-v2",
+      "measured": {
+        "tests": 13,
+        "scenarios": 57,
+        "protected_false_accepts": 0,
+        "ab_common_mode_blocks": 12,
+        "abc_common_mode_false_accepts": 3,
+        "registry_corruption_false_accepts": 3
+      }
+    }
+  ]
+}

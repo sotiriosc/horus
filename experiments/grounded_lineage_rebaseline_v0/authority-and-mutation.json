@@ -1,0 +1,799 @@
+{
+  "controls": [
+    {
+      "detail": {
+        "candidate_consequence": -2,
+        "candidate_next_state": 2,
+        "publication_unchanged": true,
+        "reason": "receipt_content_or_identity_binding"
+      },
+      "name": "numeric_domain_alias_(2, -2)",
+      "passed": true
+    },
+    {
+      "detail": {
+        "candidate_consequence": true,
+        "candidate_next_state": 1,
+        "publication_unchanged": true,
+        "reason": "receipt_content_or_identity_binding"
+      },
+      "name": "numeric_domain_alias_(1, True)",
+      "passed": true
+    },
+    {
+      "detail": {
+        "candidate_consequence": 1.0,
+        "candidate_next_state": 1,
+        "publication_unchanged": true,
+        "reason": "receipt_content_or_identity_binding"
+      },
+      "name": "numeric_domain_alias_(1, 1.0)",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "receipt_domain"
+      },
+      "name": "genuine_but_out_of_domain_emission",
+      "passed": true
+    },
+    {
+      "detail": {
+        "inner": false,
+        "publication_unchanged": true,
+        "reason": "mandatory realized-event package"
+      },
+      "name": "delegated_ingress_False",
+      "passed": true
+    },
+    {
+      "detail": {
+        "inner": true,
+        "publication_unchanged": true,
+        "reason": "mandatory package authorization required"
+      },
+      "name": "delegated_ingress_True",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "inauthentic_or_substituted_receipt"
+      },
+      "name": "equal_copy",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "inauthentic_or_substituted_receipt"
+      },
+      "name": "wrong_receipt",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "inauthentic_or_substituted_receipt"
+      },
+      "name": "old_receipt",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "receipt_content_or_identity_binding"
+      },
+      "name": "detached_pair_binding",
+      "passed": true
+    },
+    {
+      "detail": {
+        "publication_unchanged": true,
+        "reason": "receipt_content_or_identity_binding"
+      },
+      "name": "detached_package_binding",
+      "passed": true
+    },
+    {
+      "detail": {
+        "authorization_ledger_unchanged": true,
+        "publication_unchanged": true,
+        "reason": "injected final validation failure"
+      },
+      "name": "staged_late_failure",
+      "passed": true
+    },
+    {
+      "detail": {
+        "authorization_ledger_unchanged": true,
+        "publication_unchanged": true,
+        "reason": "retained receipt/pair binding"
+      },
+      "name": "staged_pair_identity",
+      "passed": true
+    },
+    {
+      "detail": {
+        "authorization_ledger_unchanged": true,
+        "publication_unchanged": true,
+        "reason": "retained receipt/pair binding"
+      },
+      "name": "staged_package_order",
+      "passed": true
+    },
+    {
+      "detail": {
+        "identity_aligned_repair": true,
+        "insertion_order": [
+          [
+            101,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "name": "descending_epoch_recovery_order",
+      "passed": true
+    },
+    {
+      "detail": {
+        "late_pending_prediction_ignored": true,
+        "original_prediction": {
+          "action": "HOLD",
+          "consequence": 1,
+          "epoch": 1001,
+          "next_state": 1,
+          "pre_state": 1,
+          "transaction_id": 1
+        }
+      },
+      "name": "pre_execution_prediction_latch",
+      "passed": true
+    }
+  ],
+  "deterministic_controls": 16,
+  "existing_suites": [
+    {
+      "log": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.006s\n\nOK\n",
+      "module": "realized_event_grounding_v0.test_grounding",
+      "passed": true,
+      "tests": 6
+    },
+    {
+      "log": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.469s\n\nOK\n",
+      "module": "state_recovery_proposal_interface_v1.test_interface",
+      "passed": true,
+      "tests": 9
+    },
+    {
+      "log": ".........\n----------------------------------------------------------------------\nRan 9 tests in 1.234s\n\nOK\n",
+      "module": "state_recovery_authorizer_status_binding_v1.test_status",
+      "passed": true,
+      "tests": 9
+    },
+    {
+      "log": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.011s\n\nOK\n",
+      "module": "composition_input_bindings_v1.test_bindings",
+      "passed": true,
+      "tests": 5
+    },
+    {
+      "log": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.015s\n\nOK\n",
+      "module": "cross_episode_authenticated_memory_boundary_v0.test_boundary",
+      "passed": true,
+      "tests": 5
+    },
+    {
+      "log": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.122s\n\nOK\n",
+      "module": "cross_episode_initialization_boundary_v1.test_boundary",
+      "passed": true,
+      "tests": 6
+    },
+    {
+      "log": "........\n----------------------------------------------------------------------\nRan 8 tests in 2.878s\n\nOK\n",
+      "module": "map_guided_explorer_interface_v0.test_interface",
+      "passed": true,
+      "tests": 8
+    },
+    {
+      "log": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.106s\n\nOK\n",
+      "module": "model_proposal_role_composition_v2.test_study",
+      "passed": true,
+      "tests": 5
+    }
+  ],
+  "legacy_law_authority_calls": 0,
+  "model_calls": 0,
+  "mutation": [
+    {
+      "actual": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 4
+      },
+      "before": {
+        "authorized": [
+          [
+            1001,
+            1,
+            4299262263552
+          ],
+          [
+            1001,
+            2,
+            4299262263808
+          ],
+          [
+            1001,
+            3,
+            4299262264064
+          ]
+        ],
+        "evictions": 0,
+        "protected": {
+          "commits": 3,
+          "map": {
+            "epoch": 1001,
+            "state": 1,
+            "valid": true,
+            "version": 3
+          },
+          "map_quarantine": [],
+          "memory": [
+            {
+              "action": "HOLD",
+              "authorization": "AUTHORIZED",
+              "consequence": 1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993473,
+              "observation_b_id": 16793993474,
+              "pair_decision_id": 4299262263552,
+              "pre_state": 1,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 1
+            },
+            {
+              "action": "ADVANCE",
+              "authorization": "AUTHORIZED",
+              "consequence": -1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 2,
+              "observation_a_id": 16793993729,
+              "observation_b_id": 16793993730,
+              "pair_decision_id": 4299262263808,
+              "pre_state": 1,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 2
+            },
+            {
+              "action": "RETREAT",
+              "authorization": "AUTHORIZED",
+              "consequence": 1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993985,
+              "observation_b_id": 16793993986,
+              "pair_decision_id": 4299262264064,
+              "pre_state": 2,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 3
+            }
+          ],
+          "memory_quarantine": [],
+          "packages": [
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                1,
+                1001,
+                1
+              ],
+              "pair_decision_id": 4299262263552,
+              "prediction": {
+                "action": "HOLD",
+                "consequence": 1,
+                "epoch": 1001,
+                "next_state": 1,
+                "pre_state": 1,
+                "transaction_id": 1
+              },
+              "receipt": {
+                "action": "HOLD",
+                "epoch": 1001,
+                "event_id": 1,
+                "next_state": 1,
+                "pre_state": 1,
+                "realized_consequence": 1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 1
+              }
+            },
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                2,
+                1001,
+                2
+              ],
+              "pair_decision_id": 4299262263808,
+              "prediction": {
+                "action": "ADVANCE",
+                "consequence": -1,
+                "epoch": 1001,
+                "next_state": 2,
+                "pre_state": 1,
+                "transaction_id": 2
+              },
+              "receipt": {
+                "action": "ADVANCE",
+                "epoch": 1001,
+                "event_id": 2,
+                "next_state": 2,
+                "pre_state": 1,
+                "realized_consequence": -1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 2
+              }
+            },
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                3,
+                1001,
+                3
+              ],
+              "pair_decision_id": 4299262264064,
+              "prediction": {
+                "action": "RETREAT",
+                "consequence": 1,
+                "epoch": 1001,
+                "next_state": 1,
+                "pre_state": 2,
+                "transaction_id": 3
+              },
+              "receipt": {
+                "action": "RETREAT",
+                "epoch": 1001,
+                "event_id": 3,
+                "next_state": 1,
+                "pre_state": 2,
+                "realized_consequence": 1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 3
+              }
+            }
+          ],
+          "pairs": [
+            {
+              "action": "HOLD",
+              "channel_sequence": 0,
+              "consequence": 1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993473,
+              "observation_b_id": 16793993474,
+              "pair_decision_id": 4299262263552,
+              "pre_state": 1,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 1
+            },
+            {
+              "action": "ADVANCE",
+              "channel_sequence": 0,
+              "consequence": -1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 2,
+              "observation_a_id": 16793993729,
+              "observation_b_id": 16793993730,
+              "pair_decision_id": 4299262263808,
+              "pre_state": 1,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 2
+            },
+            {
+              "action": "RETREAT",
+              "channel_sequence": 0,
+              "consequence": 1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993985,
+              "observation_b_id": 16793993986,
+              "pair_decision_id": 4299262264064,
+              "pre_state": 2,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 3
+            }
+          ]
+        }
+      },
+      "memory": {
+        "action": "HOLD",
+        "authorization": "AUTHORIZED",
+        "consequence": 1,
+        "epoch": 1001,
+        "measurement_matches": true,
+        "next_state": 1,
+        "observation_a_id": 16793994241,
+        "observation_b_id": 16793994242,
+        "pair_decision_id": 4299262264320,
+        "pre_state": 1,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 4
+      },
+      "old_memory_unchanged": true,
+      "original_receipt_object": true,
+      "prediction": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 4
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 4,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": 1,
+        "source_identity": "REBASELINE_MUTATION",
+        "transaction_id": 4
+      },
+      "result": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 4
+      },
+      "retained_HOLD_consequences": [
+        1,
+        1
+      ]
+    },
+    {
+      "actual": {
+        "action": "HOLD",
+        "consequence": -1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 4
+      },
+      "before": {
+        "authorized": [
+          [
+            1001,
+            1,
+            4299262263552
+          ],
+          [
+            1001,
+            2,
+            4299262263808
+          ],
+          [
+            1001,
+            3,
+            4299262264064
+          ]
+        ],
+        "evictions": 0,
+        "protected": {
+          "commits": 3,
+          "map": {
+            "epoch": 1001,
+            "state": 1,
+            "valid": true,
+            "version": 3
+          },
+          "map_quarantine": [],
+          "memory": [
+            {
+              "action": "HOLD",
+              "authorization": "AUTHORIZED",
+              "consequence": 1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993473,
+              "observation_b_id": 16793993474,
+              "pair_decision_id": 4299262263552,
+              "pre_state": 1,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 1
+            },
+            {
+              "action": "ADVANCE",
+              "authorization": "AUTHORIZED",
+              "consequence": -1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 2,
+              "observation_a_id": 16793993729,
+              "observation_b_id": 16793993730,
+              "pair_decision_id": 4299262263808,
+              "pre_state": 1,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 2
+            },
+            {
+              "action": "RETREAT",
+              "authorization": "AUTHORIZED",
+              "consequence": 1,
+              "epoch": 1001,
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993985,
+              "observation_b_id": 16793993986,
+              "pair_decision_id": 4299262264064,
+              "pre_state": 2,
+              "source_pair": [
+                "SOURCE_A",
+                "SOURCE_B"
+              ],
+              "transaction_id": 3
+            }
+          ],
+          "memory_quarantine": [],
+          "packages": [
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                1,
+                1001,
+                1
+              ],
+              "pair_decision_id": 4299262263552,
+              "prediction": {
+                "action": "HOLD",
+                "consequence": 1,
+                "epoch": 1001,
+                "next_state": 1,
+                "pre_state": 1,
+                "transaction_id": 1
+              },
+              "receipt": {
+                "action": "HOLD",
+                "epoch": 1001,
+                "event_id": 1,
+                "next_state": 1,
+                "pre_state": 1,
+                "realized_consequence": 1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 1
+              }
+            },
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                2,
+                1001,
+                2
+              ],
+              "pair_decision_id": 4299262263808,
+              "prediction": {
+                "action": "ADVANCE",
+                "consequence": -1,
+                "epoch": 1001,
+                "next_state": 2,
+                "pre_state": 1,
+                "transaction_id": 2
+              },
+              "receipt": {
+                "action": "ADVANCE",
+                "epoch": 1001,
+                "event_id": 2,
+                "next_state": 2,
+                "pre_state": 1,
+                "realized_consequence": -1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 2
+              }
+            },
+            {
+              "package_id": [
+                "REBASELINE_MUTATION",
+                3,
+                1001,
+                3
+              ],
+              "pair_decision_id": 4299262264064,
+              "prediction": {
+                "action": "RETREAT",
+                "consequence": 1,
+                "epoch": 1001,
+                "next_state": 1,
+                "pre_state": 2,
+                "transaction_id": 3
+              },
+              "receipt": {
+                "action": "RETREAT",
+                "epoch": 1001,
+                "event_id": 3,
+                "next_state": 1,
+                "pre_state": 2,
+                "realized_consequence": 1,
+                "source_identity": "REBASELINE_MUTATION",
+                "transaction_id": 3
+              }
+            }
+          ],
+          "pairs": [
+            {
+              "action": "HOLD",
+              "channel_sequence": 0,
+              "consequence": 1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993473,
+              "observation_b_id": 16793993474,
+              "pair_decision_id": 4299262263552,
+              "pre_state": 1,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 1
+            },
+            {
+              "action": "ADVANCE",
+              "channel_sequence": 0,
+              "consequence": -1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 2,
+              "observation_a_id": 16793993729,
+              "observation_b_id": 16793993730,
+              "pair_decision_id": 4299262263808,
+              "pre_state": 1,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 2
+            },
+            {
+              "action": "RETREAT",
+              "channel_sequence": 0,
+              "consequence": 1,
+              "domain_a": "SHARED_REALIZED_EVENT_ROOT",
+              "domain_b": "SHARED_REALIZED_EVENT_ROOT",
+              "epoch": 1001,
+              "lineage_a": "SHARED_REALIZED_EVENT_ROOT",
+              "lineage_b": "SHARED_REALIZED_EVENT_ROOT",
+              "measurement_matches": true,
+              "next_state": 1,
+              "observation_a_id": 16793993985,
+              "observation_b_id": 16793993986,
+              "pair_decision_id": 4299262264064,
+              "pre_state": 2,
+              "source_a": "SOURCE_A",
+              "source_b": "SOURCE_B",
+              "transaction_id": 3
+            }
+          ]
+        }
+      },
+      "memory": {
+        "action": "HOLD",
+        "authorization": "AUTHORIZED",
+        "consequence": -1,
+        "epoch": 1001,
+        "measurement_matches": false,
+        "next_state": 1,
+        "observation_a_id": 16793994241,
+        "observation_b_id": 16793994242,
+        "pair_decision_id": 4299262264320,
+        "pre_state": 1,
+        "source_pair": [
+          "SOURCE_A",
+          "SOURCE_B"
+        ],
+        "transaction_id": 4
+      },
+      "old_memory_unchanged": true,
+      "original_receipt_object": true,
+      "prediction": {
+        "action": "HOLD",
+        "consequence": 1,
+        "epoch": 1001,
+        "next_state": 1,
+        "pre_state": 1,
+        "transaction_id": 4
+      },
+      "receipt": {
+        "action": "HOLD",
+        "epoch": 1001,
+        "event_id": 4,
+        "next_state": 1,
+        "pre_state": 1,
+        "realized_consequence": -1,
+        "source_identity": "REBASELINE_MUTATION",
+        "transaction_id": 4
+      },
+      "result": {
+        "action": "HOLD",
+        "committed": true,
+        "continued": true,
+        "executed": true,
+        "incumbent_retained": true,
+        "needs_reobservation": false,
+        "reason": "authorized",
+        "recovery_authorized": false,
+        "status": "AUTHORIZED",
+        "transaction_id": 4
+      },
+      "retained_HOLD_consequences": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "network_calls": 0,
+  "passed": true,
+  "tests": 53
+}
