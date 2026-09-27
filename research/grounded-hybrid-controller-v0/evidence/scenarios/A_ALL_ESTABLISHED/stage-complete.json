@@ -1,0 +1,695 @@
+{
+  "conditions": {
+    "FORCED_GROUNDED": {
+      "current_state": 1,
+      "event_count": 6,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:1:7d445b90e214f615\",1,2001,1]",
+            "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:6:3a0daf6ff604dbca\",1,2006,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:1:7d445b90e214f615\",1,2001,1]",
+              "receipt_sha256": "f7bdfcbe7cfca02e84db900f4680caed7f0f7f445fa9d9ec63276d2a0865823e",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 6,
+              "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:6:3a0daf6ff604dbca\",1,2006,1]",
+              "receipt_sha256": "82536bc6eeef4ee5446119cfbafa7fc3583827aa3b304a4ab1def2b24e5dc90f",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:4:e3488495a7e341df\",1,2004,1]"
+          ],
+          "established_value": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:4:e3488495a7e341df\",1,2004,1]",
+              "receipt_sha256": "568e1fcc4168d7e76586927736a39811c26905b93a48c3cc7007325d126c7bec",
+              "value": {
+                "consequence": 0,
+                "next_state": 0
+              }
+            }
+          ]
+        }
+      },
+      "memory": {
+        "database_sha256": "9459d85d4f864b648234df4b6c6b8c0090d2b9fb218d98ed40144f64318718b9",
+        "event_count": 6,
+        "event_store_sha256": "a89d68df566946628a28f3ea85b4deee6c1ef3e7c62d7cf842527c71226eb48c",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "07be1ebf3ef9f2101e83b0d921436af36b9e115c6ab29036004c8c3b167ff9ac",
+        "checkpoint.json": "bb79b482a344c1b9f690b03b30c56688a54eaff7d127fe7483b28370c4841e12",
+        "events.jsonl": "d94c5b933748a78f716400ab872ed0dae292b4df10ed477aa92eaf28c970a9e1",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "2c6828623d9d704a6279c139a8e0b47762b52a1b68ec91299dbd6f71c08d5ccc"
+      }
+    },
+    "HYBRID": {
+      "current_state": 1,
+      "event_count": 6,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:1:9bf36820c38c38af\",1,2001,1]",
+            "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:6:6d820a3824476c87\",1,2006,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:1:9bf36820c38c38af\",1,2001,1]",
+              "receipt_sha256": "5bd96d7caba7a3a98827542f0351d17724a5d69d3a345fc56344388c25791c78",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 6,
+              "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:6:6d820a3824476c87\",1,2006,1]",
+              "receipt_sha256": "1a69844ee601add04785ab366722657b0bf912dd1365c6d96a3b2846ac665210",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:4:6c533b90f63d5684\",1,2004,1]"
+          ],
+          "established_value": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:4:6c533b90f63d5684\",1,2004,1]",
+              "receipt_sha256": "e2ae7aad801b8a7e9c956befd905113bc2a0e993362e48ef71a3f913342a721e",
+              "value": {
+                "consequence": 0,
+                "next_state": 0
+              }
+            }
+          ]
+        }
+      },
+      "memory": {
+        "database_sha256": "ada0f9696a9dbe66b589c99ef84209ecbf4174aff060fd27e72604bf4bedcecd",
+        "event_count": 6,
+        "event_store_sha256": "0f8089ceb721b43040e8ed75b1dd85fd5a349b3af62e2e51bea5990a2ce57543",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "9365f29057ca471c4ceed31d1df5465c8950a99796770d0b3c6a583a62aad42b",
+        "checkpoint.json": "3c8e03f64bfff8ca71711374e8aeb47cf7c4d7da474cb6f48fed01ccb536678e",
+        "events.jsonl": "6ce7478c57b51984dca591068df3e10da5a84cc9d400654acff686dd7d9027cf",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "1b838dccbbb697b34eb8d556c48705577ad5ab43622778405d5d2f9d9e04d2bb"
+      }
+    },
+    "MODEL": {
+      "current_state": 1,
+      "event_count": 6,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:1:e272de46ac920d4f\",1,2001,1]",
+            "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:6:3162deaf65dad4d2\",1,2006,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:1:e272de46ac920d4f\",1,2001,1]",
+              "receipt_sha256": "2f6fc3cceb456800828ea763bd958cef6a93ee5f27dc4b52f04187905835e0f1",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 6,
+              "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:6:3162deaf65dad4d2\",1,2006,1]",
+              "receipt_sha256": "bb8eb3c47eafb6ad8f09805c1ac00eaba8d25a6b70d21ef8826b6b644006f363",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:4:7cbe95f222718f7f\",1,2004,1]"
+          ],
+          "established_value": {
+            "consequence": 0,
+            "next_state": 0
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:4:7cbe95f222718f7f\",1,2004,1]",
+              "receipt_sha256": "eb5390661267bdf8a6676b57ce42275480b8a1fcde0f4827ef3677d040b5f450",
+              "value": {
+                "consequence": 0,
+                "next_state": 0
+              }
+            }
+          ]
+        }
+      },
+      "memory": {
+        "database_sha256": "d501f49337f74f2f2cb51ea0e244bf02e5565880e80c316cdd06e21cadb1ebeb",
+        "event_count": 6,
+        "event_store_sha256": "c2f499581364af8b93d131603bb8ec7f30485f396684d112d068324bbaa40104",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "298d23a3b248677b2760f307ecf9997c4409cd2de626b95c524f6978ddf2c71c",
+        "checkpoint.json": "0c25b43dde23d4097d0b65cef9094095e8ee6274cd8d288e81cd106353a7ade1",
+        "events.jsonl": "cb75852e5b31c3439f65bee07d95a86cd002d0480dbb19371c1a95faf1272ac6",
+        "model-calls.private.jsonl": "18b87fc11dad250b4df48e0bec4ae917acf07768320d42b64acf4fee2fa9d24c",
+        "training-records.jsonl": "1d4052022203ee9bd0af640d2d338b0531d06ebe485f893201542d6dd0c9232f"
+      }
+    }
+  },
+  "decisions": {
+    "FORCED_GROUNDED": [
+      {
+        "arm": "FORCED_GROUNDED",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 4.521998926065862e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:2:748175275bfe2d8b\",1,2002,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.2754014935344458e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 2,
+                "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:2:748175275bfe2d8b\",1,2002,1]",
+                "receipt_sha256": "adae29489bf7aa86ae52dfce2e5d6b3e1740e80bc3390c711117980e7177c849",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 2.4814013158902526e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:1:7d445b90e214f615\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 9.489012882113457e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:1:7d445b90e214f615\",1,2001,1]",
+                "receipt_sha256": "f7bdfcbe7cfca02e84db900f4680caed7f0f7f445fa9d9ec63276d2a0865823e",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 536,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 2.1908985218033195e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:4:e3488495a7e341df\",1,2004,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 8.539005648344755e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:a66547a24d8f84d845f85a2c2113b925:runtime:4:e3488495a7e341df\",1,2004,1]",
+                "receipt_sha256": "568e1fcc4168d7e76586927736a39811c26905b93a48c3cc7007325d126c7bec",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 536,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 0
+            }
+          }
+        ],
+        "authorized_event_sequence": 6,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.03714413402485661,
+        "index": 1,
+        "mechanical_seconds": 4.078203346580267e-05,
+        "model_calls": 0,
+        "pre_event_count": 5,
+        "pre_memory_sha256": "72dcca6bea257fad68000894600c0907c3ca22b1732b4a9a6d041eb655066556",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "FORCED_POINT_MAX",
+        "scenario": "A_ALL_ESTABLISHED",
+        "selected_action": "HOLD"
+      }
+    ],
+    "HYBRID": [
+      {
+        "arm": "HYBRID",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 4.2706000385805964e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:2:16ca556a091e9424\",1,2002,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.7658999897539616e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 2,
+                "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:2:16ca556a091e9424\",1,2002,1]",
+                "receipt_sha256": "29833bcf2b3757c3b5d643c3c6ef7ac1a454f4a5b183ddbdda0b19873bc2239b",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 2.066299202851951e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:1:9bf36820c38c38af\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 1.202299608848989e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:1:9bf36820c38c38af\",1,2001,1]",
+                "receipt_sha256": "5bd96d7caba7a3a98827542f0351d17724a5d69d3a345fc56344388c25791c78",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 536,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 1.7896993085741997e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:4:6c533b90f63d5684\",1,2004,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 1.032798900268972e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:e69e904200097ade93c6c0629a9d6b38:runtime:4:6c533b90f63d5684\",1,2004,1]",
+                "receipt_sha256": "e2ae7aad801b8a7e9c956befd905113bc2a0e993362e48ef71a3f913342a721e",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 536,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": 0,
+              "next_state": 0
+            }
+          }
+        ],
+        "authorized_event_sequence": 6,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.035644723975565284,
+        "index": 1,
+        "mechanical_seconds": 5.0009984988719225e-05,
+        "model_calls": 0,
+        "pre_event_count": 5,
+        "pre_memory_sha256": "20f7f4672e8c1e1fd95fe0445b6e87cbe1c910eefb6d9f7f482201363b48aaba",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "GROUNDED_AT_REGISTERED_CEILING",
+        "scenario": "A_ALL_ESTABLISHED",
+        "selected_action": "HOLD"
+      }
+    ],
+    "MODEL": [
+      {
+        "arm": "MODEL",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 46.951510696992045,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 98,
+            "established_support": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:2:c9463b2943625129\",1,2002,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.44530092459172e-05,
+            "model_call_ids": [
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:ADVANCE:J",
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:2:c9463b2943625129\",1,2002,1]"
+            ],
+            "preparation_seconds": 46.94023845499032,
+            "provenance": [
+              {
+                "event_stream_sequence": 2,
+                "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:2:c9463b2943625129\",1,2002,1]",
+                "receipt_sha256": "f9bfb00ee288ba833ed7b9d2854af0958c6b09932bfe9c8530136f3427bb6aa6",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 10.074095535004744,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 98,
+            "established_support": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:1:e272de46ac920d4f\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 9.925500489771366e-05,
+            "model_call_ids": [
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:HOLD:J",
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:HOLD:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:1:e272de46ac920d4f\",1,2001,1]"
+            ],
+            "preparation_seconds": 10.060633493994828,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:1:e272de46ac920d4f\",1,2001,1]",
+                "receipt_sha256": "2f6fc3cceb456800828ea763bd958cef6a93ee5f27dc4b52f04187905835e0f1",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 536,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 11.031907680997392,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 98,
+            "established_support": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:4:7cbe95f222718f7f\",1,2004,1]"
+            ],
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 8.322199573740363e-05,
+            "model_call_ids": [
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:RETREAT:J",
+              "A_ALL_ESTABLISHED:DECISION:1:MODEL:M:RETREAT:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:4:7cbe95f222718f7f\",1,2004,1]"
+            ],
+            "preparation_seconds": 11.020387031981954,
+            "provenance": [
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:0f0fd8e9fcd6267d5484790acf1d057f:runtime:4:7cbe95f222718f7f\",1,2004,1]",
+                "receipt_sha256": "eb5390661267bdf8a6676b57ce42275480b8a1fcde0f4827ef3677d040b5f450",
+                "value": {
+                  "consequence": 0,
+                  "next_state": 0
+                }
+              }
+            ],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 536,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 0
+            }
+          }
+        ],
+        "authorized_event_sequence": 6,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 294,
+        "decision_seconds": 68.09464024202316,
+        "index": 1,
+        "mechanical_seconds": 0.0002069300098810345,
+        "model_calls": 6,
+        "pre_event_count": 5,
+        "pre_memory_sha256": "6256315c123d7af399145868277ac8ac0a6f86ec09ba19b0087dbe47796d6ce0",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "MODEL_POINT_MAX",
+        "scenario": "A_ALL_ESTABLISHED",
+        "selected_action": "HOLD"
+      }
+    ]
+  },
+  "matched_seed": 5,
+  "scenario": "A_ALL_ESTABLISHED",
+  "stage": "single",
+  "status": "COMPLETE",
+  "wall_seconds": 68.75587800701032
+}

@@ -1,0 +1,871 @@
+{
+  "conditions": {
+    "FORCED_GROUNDED": {
+      "current_state": 1,
+      "event_count": 3,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:ba7dcb524141278ea75edc09b734b5a4:runtime:3:c8f988b7643c4269\",1,2003,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:ba7dcb524141278ea75edc09b734b5a4:runtime:3:c8f988b7643c4269\",1,2003,1]",
+              "receipt_sha256": "ee08804b22311ddaaf9192e97bf11363571ede812848d0f25822b0ecf37bfb7a",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "e0717ac5cafe6997cfffc800f2e268532753483461e7934e9776d72942a81aac",
+        "event_count": 3,
+        "event_store_sha256": "a3f6e09d04bc896afb0615c0e49b061eba8d8706f604638e4fa390b3e13f8a3a",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "ea5a343e9f7fbbbd561e3e2ce79c5a836299f997f299035b915f386e0290b4f1",
+        "checkpoint.json": "ace3014da7e46f637fa90ec2e30e561bc637e314398da734516f4bd39b9a3f0d",
+        "events.jsonl": "f4e9d77d378437a7aa785414d3c18b3c3b05eec1cf962101a9252bef927d11a8",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "6e004259dfcd913abad892508b754a5d3f352b76a77379b1fd10834938839657"
+      }
+    },
+    "HYBRID": {
+      "current_state": 1,
+      "event_count": 2,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:1:a3d2bb04714d3829\",1,2001,1]",
+            "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:2:929ea4ef2b832778\",1,2002,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:1:a3d2bb04714d3829\",1,2001,1]",
+              "receipt_sha256": "42d217abec7e943277806a90f2e211659d270691e91cf153448eafd29a158854",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 2,
+              "identity": "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:2:929ea4ef2b832778\",1,2002,1]",
+              "receipt_sha256": "db0ebc36deaa03e0b0d56134a309c192446fd6f9cba045bb0162534e4428935b",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "7a54411aed4660964d4f718cb9b454c6704c8175dfcdb480869f103aaee8cf55",
+        "event_count": 2,
+        "event_store_sha256": "5778abb578c5c2a67de738f53e38281fd056cd81795d6110d13c497aa836b5aa",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "b3b0c8e9f37a728a4ada13fa9ef5142f9c5620c2f56efbc9180d6d81967bdeda",
+        "checkpoint.json": "e92af0921b65215e33d7a0fbfb20c19392107e6da4b1d13bc64d6f4bd7cf7b19",
+        "events.jsonl": "46a49f1dd7ec0a6662ed09324e6d066e8c143e1f01d918825101515ff3d8e012",
+        "model-calls.private.jsonl": "7613358e3ddf1d62d9ba770e79080d5bd548361ddfbabbba30aff1feb65b45ac",
+        "training-records.jsonl": "86afb84cbf79269967bc861dc382c766d0313855c5d8d3564c25938730049c13"
+      }
+    },
+    "MODEL": {
+      "current_state": 1,
+      "event_count": 2,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:1:876b3aecc56f5a84\",1,2001,1]",
+            "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:2:dfcacc4ba2dd3954\",1,2002,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:1:876b3aecc56f5a84\",1,2001,1]",
+              "receipt_sha256": "0519f488df690177cbd9cf4456b19dc868c0878115efb17a836d40a7d4685c6b",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 2,
+              "identity": "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:2:dfcacc4ba2dd3954\",1,2002,1]",
+              "receipt_sha256": "a176c0d5488988b27f97616cdfeb753bff3c88350421507ed4414da79cf01924",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "2e76d17c09712c0938ffb560ab03f374d641510732659df46ffd4811bc33be80",
+        "event_count": 2,
+        "event_store_sha256": "04a8229d300dceeb8b5866ed185ff12c7d9ebbb660b87f63191e129a2c144aa0",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "009857ac2861266759c0c221e9d3fa1113d36e206d72d82bf2b08d559871563d",
+        "checkpoint.json": "5c40ce4bcf5215786693967fc167f533c8accbdea00b1f98ebaea6ee649d9011",
+        "events.jsonl": "21b885a21520d2f58671bb445bdc3b7f00747e63891c539ec849c3d225f64936",
+        "model-calls.private.jsonl": "8da82fd4b6966ba01f6d1d16fa97a220dfa9f391d3b750d6fac70767728aa004",
+        "training-records.jsonl": "bea66bb7202a40098887fe1388a9c0c719880645b436c9b3c1b1803223e66c38"
+      }
+    }
+  },
+  "decisions": {
+    "FORCED_GROUNDED": [
+      {
+        "arm": "FORCED_GROUNDED",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 9.22270119190216e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 7.252799696289003e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 175,
+            "source": "NEUTRAL_COLD_START",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 1.4999997802078724e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 5.593989044427872e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 175,
+            "source": "NEUTRAL_COLD_START",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 1.2727017747238278e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 4.617992090061307e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "NEUTRAL_COLD_START",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 1,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.03620110501651652,
+        "index": 1,
+        "mechanical_seconds": 8.273997809737921e-05,
+        "model_calls": 0,
+        "pre_event_count": 0,
+        "pre_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "pre_state": 1,
+        "realized": {
+          "consequence": -1,
+          "next_state": 2
+        },
+        "reason": "FORCED_POINT_MAX",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "ADVANCE"
+      },
+      {
+        "arm": "FORCED_GROUNDED",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 4.772900138050318e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:ba7dcb524141278ea75edc09b734b5a4:runtime:1:a21317a3847e26d7\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.5380984880030155e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:ba7dcb524141278ea75edc09b734b5a4:runtime:1:a21317a3847e26d7\",1,2001,1]",
+                "receipt_sha256": "4655090fda5c6eae26550234763f5901b94036ddf333a0713741b4227e2578c4",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 1.5063007595017552e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 5.259003955870867e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 175,
+            "source": "NEUTRAL_COLD_START",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 1.2007978511974216e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 4.1869934648275375e-06,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "NEUTRAL_COLD_START",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": 0,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 3,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.03998479500296526,
+        "index": 2,
+        "mechanical_seconds": 3.482698230072856e-05,
+        "model_calls": 0,
+        "pre_event_count": 2,
+        "pre_memory_sha256": "9ccd250d18ab235c06e06905fe6d82ed8284ac120c7fab3d3c76ed3f3f3a2166",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "FORCED_POINT_MAX",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "HOLD"
+      }
+    ],
+    "HYBRID": [
+      {
+        "arm": "HYBRID",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 9.160297506023198,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 6.783599383197725e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:ADVANCE:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 9.148946181987412,
+            "provenance": [],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_GENERALIZATION",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 9.118294079002226,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 6.684698746539652e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:HOLD:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:HOLD:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 9.107520044984994,
+            "provenance": [],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_GENERALIZATION",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 8.7886432770174,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 7.532001473009586e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:RETREAT:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:HYBRID:M:RETREAT:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.777702891995432,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_GENERALIZATION",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 1,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 126,
+        "decision_seconds": 27.104738125985023,
+        "index": 1,
+        "mechanical_seconds": 0.00021000299602746964,
+        "model_calls": 6,
+        "pre_event_count": 0,
+        "pre_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "SELECT_MODEL_GENERALIZATION",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "HOLD"
+      },
+      {
+        "arm": "HYBRID",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 8.64879546299926,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 1.625300501473248e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:2:HYBRID:M:ADVANCE:J",
+              "E_MULTIPLE_UNSEEN:DECISION:2:HYBRID:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.637965080997674,
+            "provenance": [],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_GENERALIZATION",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 0.00015038700075820088,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:1:a3d2bb04714d3829\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 9.608699474483728e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:639713aca7ea278bfc3dff2000d2a890:runtime:1:a3d2bb04714d3829\",1,2001,1]",
+                "receipt_sha256": "42d217abec7e943277806a90f2e211659d270691e91cf153448eafd29a158854",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 536,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 8.569022048992338,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 1.5388010069727898e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:2:HYBRID:M:RETREAT:J",
+              "E_MULTIPLE_UNSEEN:DECISION:2:HYBRID:M:RETREAT:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.557625782006653,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_GENERALIZATION",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 2,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 84,
+        "decision_seconds": 17.254217545996653,
+        "index": 2,
+        "mechanical_seconds": 0.00012772800982929766,
+        "model_calls": 4,
+        "pre_event_count": 1,
+        "pre_memory_sha256": "423f2c0c931d389ecc0740375147c2e44f30e99c7bde4d505b98ab6d19b05684",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "GROUNDED_AT_REGISTERED_CEILING",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "HOLD"
+      }
+    ],
+    "MODEL": [
+      {
+        "arm": "MODEL",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 9.04750550998142,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 0.00011545300367288291,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:ADVANCE:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 9.036711427994305,
+            "provenance": [],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 9.007177265011705,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 6.191499414853752e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:HOLD:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:HOLD:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.996046012995066,
+            "provenance": [],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 8.684475460002432,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 7.32059997972101e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:RETREAT:J",
+              "E_MULTIPLE_UNSEEN:DECISION:1:MODEL:M:RETREAT:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.67285885399906,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 1,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 126,
+        "decision_seconds": 26.777111754985526,
+        "index": 1,
+        "mechanical_seconds": 0.00025057399761863053,
+        "model_calls": 6,
+        "pre_event_count": 0,
+        "pre_memory_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "MODEL_POINT_MAX",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "HOLD"
+      },
+      {
+        "arm": "MODEL",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 8.523153791989898,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 1.4165008906275034e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:ADVANCE:J",
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.511962235992542,
+            "provenance": [],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 10.17852927200147,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 98,
+            "established_support": [
+              "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:1:876b3aecc56f5a84\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 7.984600961208344e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:HOLD:J",
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:HOLD:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:1:876b3aecc56f5a84\",1,2001,1]"
+            ],
+            "preparation_seconds": 10.167155684990576,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:1ddbaaf68220b703764e7705521e9dc8:runtime:1:876b3aecc56f5a84\",1,2001,1]",
+                "receipt_sha256": "0519f488df690177cbd9cf4456b19dc868c0878115efb17a836d40a7d4685c6b",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 536,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          },
+          {
+            "action": "RETREAT",
+            "assessment_seconds": 8.625519808003446,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 42,
+            "established_support": [],
+            "established_value": null,
+            "grounded_state_kind": "UNSEEN",
+            "mechanical_seconds": 8.733299910090864e-05,
+            "model_call_ids": [
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:RETREAT:J",
+              "E_MULTIPLE_UNSEEN:DECISION:2:MODEL:M:RETREAT:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [],
+            "preparation_seconds": 8.61463488600566,
+            "provenance": [],
+            "relation": "1:RETREAT",
+            "serialized_grounded_state_bytes": 175,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 2,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "context_tokens": 182,
+        "decision_seconds": 27.363912450993666,
+        "index": 2,
+        "mechanical_seconds": 0.0001813440176192671,
+        "model_calls": 6,
+        "pre_event_count": 1,
+        "pre_memory_sha256": "ebf0e4ea40fb1ca1ebc905d6de504aaa6c80cc0fc0bbaf372c51b7bf1392b4ca",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "reason": "MODEL_POINT_MAX",
+        "scenario": "E_MULTIPLE_UNSEEN",
+        "selected_action": "HOLD"
+      }
+    ]
+  },
+  "matched_seed": 0,
+  "scenario": "E_MULTIPLE_UNSEEN",
+  "stage": "single",
+  "status": "COMPLETE",
+  "wall_seconds": 98.68688759399811
+}
