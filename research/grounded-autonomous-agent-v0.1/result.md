@@ -1,0 +1,17 @@
+# Grounded autonomous agent v0.1 — INVALID campaign
+
+The prospectively registered v0.1 campaign did not produce a valid 30-decision run. All three independent runs stopped under the frozen action rule after two responses for the next decision failed to parse as a JSON object with one valid `selected_action`. No world execution occurred for any stopped decision. The preregistered full-run analyzer rejected the campaign with `INVALID: incomplete run or review cadence`. **No behavioral conclusion about use of grounded experience or self-analysis is drawn from these partial runs.**
+
+| Run | Authorized decisions and receipts | Stop before | Partial realized consequence | Scheduled reviews | Restart |
+| --- | ---: | ---: | ---: | --- | --- |
+| A | 7 | 8 | -1 | 1 `INVALID_SELF_REVIEW` | Not applicable |
+| B | 8 | 9 | 0 | 1 `INVALID_SELF_REVIEW` | Decision 15 not reached |
+| C | 8 | 9 | 0 | 1 `INVALID_SELF_REVIEW` | Not applicable |
+
+The signed streams, 23 receipt identities, authorized consequences, and grounded-state folds replayed exactly in the partial-run audit. Every executed decision had `action_parse_status=VALID`. The descriptive status was `INVALID_DESCRIPTIVE_OUTPUT` for all seven A decisions and all eight B decisions; C had six invalid descriptive outputs and two complete ones. These descriptive defects did not block an unambiguous action. Each review was invalid, remained non-authoritative, created no proposal, and made no Memory or world-state change. There is no valid self-review proposal to classify as supported, overfit, contradicted, or reusable. The study's self-analysis question is unanswered.
+
+All six terminal responses failed JSON parsing with an unterminated string. Their model response metadata each reports 180 generated tokens, the frozen decision `num_predict` limit. This is consistent with output truncation at that limit; it does not establish that a different limit would have produced valid decisions. The frozen settings and retry count were not changed during the campaign. Run B never reached its planned fresh-process restart, so restart survival is untested here.
+
+The separate v0 pilot at `9accc700207538d0953ad0c5485f2a2dbf45ae99` remains permanently **INVALID**, with zero authorized decisions. Its failed inference is not used as behavioral evidence. The v0.1 preregistration was committed as `0565e7e` before official campaign inference. A copied-test incident before registration is disclosed in the preregistration and excluded from campaign evidence.
+
+[`invalid-campaign-audit.json`](invalid-campaign-audit.json) contains the sanitized decision, parser, review, hash, and replay summary. The read-only [`audit_invalid.py`](audit_invalid.py) reproduces that JSON from the private archive with `PYTHONPATH=. python research/grounded-autonomous-agent-v0.1/audit_invalid.py --private-root PRIVATE_ROOT --output AUDIT_JSON`; its regenerated output matched byte for byte. Complete private v0.1 evidence is preserved locally in commit `ce2e97d` on `research/grounded-autonomous-agent-v0.1-private-archive`; complete v0 pilot evidence is preserved locally in commit `0e5310c` on `research/grounded-autonomous-agent-v0-invalid-pilot-local`. Those commits contain keys and private model-call streams, are deliberately absent from publication ancestry, and must not be pushed. SHA-256 digests of excluded v0.1 files, including each authentication key and private call stream, are in the sanitized audit. The private archives remain the authoritative full evidence record.
