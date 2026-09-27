@@ -1,0 +1,63 @@
+{
+  "expected_ordinary_route": {
+    "action": "ADVANCE",
+    "mode": "PROBE",
+    "probe_budget_available": true,
+    "reason": "PROBE_DISAGREEMENT"
+  },
+  "followup_requires_reusable_zero_call_predictions": true,
+  "identity": "HORUS_V022_ROUTE_HANDOFF_DURABLE_RECOVERY_POLICY",
+  "maximum_new_model_calls": 0,
+  "maximum_ordinary_followups": 1,
+  "maximum_ordinary_probe_executions": 1,
+  "new_route_allowed": false,
+  "parent_commit": "9c3f7b866def0d3d3c1b106493723afdbf1bde91",
+  "route_precedence": [
+    "ORDINARY_LEGITIMATE_EXPLORER_ROUTE",
+    "EXISTING_PROBLEM_SCOPED_FALLBACK",
+    "ABSTAIN_OR_REQUEST_AUTHORITY"
+  ],
+  "router_threshold_changes_allowed": false,
+  "scoped_budget_expected": {
+    "executed": 1,
+    "granted": 1,
+    "limit": 2
+  },
+  "source_endpoint": {
+    "attempted_decisions": 90,
+    "authorized_executions": 57,
+    "checkpoint_call_count": 2502,
+    "confidence_records": 180,
+    "current_state": 1,
+    "manager_records": 59,
+    "physical_call_count": 2529,
+    "routing_records": 57,
+    "tail_records": 27
+  },
+  "tail_recovery_required_conditions": [
+    "tail_authenticated",
+    "chain_continuous",
+    "single_unfinished_decision",
+    "no_receipt",
+    "no_memory_publication",
+    "no_routing_evidence",
+    "no_explorer_completion",
+    "no_contradictory_state"
+  ],
+  "training_allowed": false,
+  "unfinished_decision": {
+    "logical_decision_id": "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91",
+    "request_hashes": {
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:G2": "73c80dd178cd9de1aba0426d591695747c8aa13690faf8dd84f043263dd9f8f4",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:G3": "6166eb65a3c92b056e68e73bc34f92aa1ecda7fec78607ec76b6b42748210663",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:J": "b5a511be21b1e3716cd4a67b78947f5fa783020530c25c9713d49075a983e064",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:G2": "1296fc0e1b0fbb1dac4740f282ec713846e6ecf3d02902e651a0a6dddb99e253",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:G3": "98b1f1c0e2543c7e1af141d0dfac3b101311f3461dda8c652ed7d93f7a3d7be2",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:J": "ff55dd2efdc3459b9f1d880edca3fbf2a838a0f283d8750c234b81f75d308f2d",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:G2": "96c265ea579599200d2f23780e332e65e0c77fd97ed6a077605c22497fa2bee3",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:G3": "ff8a6572570e74298da92c46ce4daa8de5d367095a14bbdc4b768b615729560c",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:J": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f"
+    },
+    "sequence": 91
+  }
+}

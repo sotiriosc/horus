@@ -693,6 +693,102 @@ class ProblemManager:
         elif kind=="OPERATIONAL_PROBLEM_ATTACHED":
             cls._create_operational(state,record["decision_sequence"],record["problem_type"],
                 record["scope"],record["owner"],record.get("blocked_problem_id"))
+        elif kind=="UNCOMMITTED_AUTHENTICATED_CALL_TAIL":
+            p=state["problems"].get(record.get("problem_id"))
+            checks=record.get("safety_conditions",{})
+            required={"tail_authenticated","chain_continuous","single_unfinished_decision",
+                "no_receipt","no_memory_publication","no_routing_evidence",
+                "no_explorer_completion","no_contradictory_state"}
+            if not p or p["problem_id"]!="PR-0005" or p[
+                    "problem_type"]!="INTERNAL_ROUTE_PROBLEM" or \
+                    set(checks)!=required or not all(checks.values()) or \
+                    record.get("checkpoint_count")!=2502 or record.get(
+                    "physical_count")!=2529 or record.get("tail_records")!=27 or \
+                    record.get("decision_sequence")!=91:
+                raise RoutingError("unsafe authenticated-call-tail diagnosis")
+            evidence=dict(kind="UNCOMMITTED_AUTHENTICATED_CALL_TAIL",
+                decision_sequence=91,checkpoint_count=2502,physical_count=2529,
+                tail_records=27,logical_decision_id=record["logical_decision_id"],
+                safety_conditions=deepcopy(checks),tail_head_sha256=record[
+                    "tail_head_sha256"])
+            p["evidence"].append(evidence)
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=91,kind="UNCOMMITTED_AUTHENTICATED_CALL_TAIL",
+                tail_records=27))
+        elif kind=="DURABLE_TAIL_RECOVERED":
+            p=state["problems"].get(record.get("problem_id"))
+            diagnosed=bool(p and any(row.get("kind")==
+                "UNCOMMITTED_AUTHENTICATED_CALL_TAIL" for row in p.get("evidence",[])))
+            if not diagnosed or record.get("registered_count")!=2529 or \
+                    len(record.get("registered_head_sha256",""))!=64 or record.get(
+                    "stream_records_rewritten") is not False or record.get(
+                    "model_calls_reissued") is not False:
+                raise RoutingError("durable tail recovery lacks exact diagnosis")
+            p["durable_tail_recovery"]="RECOVERED"
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=91,kind="DURABLE_TAIL_RECOVERED",
+                registered_count=2529,registered_head_sha256=record[
+                    "registered_head_sha256"]))
+        elif kind=="NORMAL_ROUTE_REGAINS_CONTROL":
+            p5=state["problems"].get(record.get("problem_id"))
+            p3=state["problems"].get(record.get("blocked_problem_id"))
+            ordinary=record.get("ordinary_decision",{})
+            if not p5 or p5["problem_id"]!="PR-0005" or not p3 or p3[
+                    "problem_id"]!="PR-0003" or p3.get(
+                    "target_relation_reacquired") is not True or \
+                    p5.get("durable_tail_recovery")!="RECOVERED" or \
+                    ordinary.get("mode")!="PROBE" or ordinary.get(
+                    "reason")!="PROBE_DISAGREEMENT" or ordinary.get(
+                    "action")!="ADVANCE" or ordinary.get("abstained") is not False or \
+                    record.get("selected_route")!="ORDINARY_EXPLORER" or record.get(
+                    "scoped_fallback_superseded") is not True:
+                raise RoutingError("ordinary route handoff proof changed")
+            p5["handoff_status"]="NORMAL_ROUTE_REGAINS_CONTROL"
+            p5["history"].append(dict(lifecycle_state=p5["lifecycle_state"],
+                decision_sequence=91,kind="NORMAL_ROUTE_REGAINS_CONTROL",
+                route="ORDINARY_EXPLORER",action="ADVANCE"))
+        elif kind=="NORMAL_ROUTE_EVIDENCE_REASSESSED":
+            p=state["problems"].get(record.get("problem_id"))
+            routing=record.get("routing_evidence",{}); receipt=record.get("receipt",{})
+            budget=(None if not p else p.get("route_budgets",{}).get(
+                "problem_scoped_relation_probe"))
+            if not p or p["problem_id"]!="PR-0003" or record.get(
+                    "decision_sequence")!=state["attempted_decisions"] or \
+                    routing.get("relation")!=relation_identity(1,"ADVANCE") or \
+                    receipt.get("receipt_is_authenticated") is not True or receipt.get(
+                    "action")!="ADVANCE" or budget is None or \
+                    (budget["limit"],budget["granted"],budget["executed"])!=(2,1,1):
+                raise RoutingError("ordinary route reassessment is not scoped correctly")
+            scores=routing["router_score_after"]
+            resolved=(scores["G2"]["total"]>=3 and abs(scores["G2"]["correct"]-
+                      scores["G3"]["correct"])>=2)
+            if resolved!=record.get("switch_threshold_satisfied"):
+                raise RoutingError("ordinary route reassessment threshold changed")
+            p["lifecycle_state"]="REASSESSED"
+            p["capability_assessment"]=("VALUE_TIE_RESOLVED" if resolved else
+                                        "MORE_EVIDENCE_REQUIRED")
+            p["requested_capability"]=(None if resolved else "MORE_RELATION_EVIDENCE")
+            p["evidence"].append(dict(kind="ORDINARY_RELATION_RECEIPT",
+                decision_sequence=record["decision_sequence"],receipt=deepcopy(receipt),
+                routing_evidence=deepcopy(routing),scoped_budget_consumed=False))
+            p["history"].append(dict(lifecycle_state="REASSESSED",
+                decision_sequence=record["decision_sequence"],
+                kind="NORMAL_ROUTE_EVIDENCE_REASSESSED",scores=deepcopy(scores),
+                selected_specialist_after=routing["selected_specialist_after"],
+                switch_occurred=routing["switch_occurred"],
+                scoped_budget_consumed=False))
+        elif kind=="ROUTE_HANDOFF_REPAIR_CLOSED":
+            p=state["problems"].get(record.get("problem_id"))
+            if not p or p["problem_id"]!="PR-0005" or p.get(
+                    "durable_tail_recovery")!="RECOVERED" or p.get(
+                    "handoff_status")!="NORMAL_ROUTE_REGAINS_CONTROL" or record.get(
+                    "model_calls_issued")!=0 or record.get("decision_status")!="AUTHORIZED":
+                raise RoutingError("route-handoff repair closure lacks completed proof")
+            p["lifecycle_state"]="CLOSED"; p["capability_assessment"]=None
+            p["requested_capability"]=None; p["repair_result"]="ROUTE_HANDOFF_RECOVERED"
+            p["history"].append(dict(lifecycle_state="CLOSED",
+                decision_sequence=state["attempted_decisions"],
+                kind="ROUTE_HANDOFF_REPAIR_CLOSED",model_calls_issued=0))
         elif kind=="RELATION_EVIDENCE_REQUESTED":
             p=state["problems"].get(record.get("problem_id"))
             relation=record.get("relation",{})
@@ -1201,6 +1297,21 @@ class ProblemManager:
 
     def attach_operational(self, **record):
         return self._append("OPERATIONAL_PROBLEM_ATTACHED",record)
+
+    def record_uncommitted_call_tail(self, **record):
+        return self._append("UNCOMMITTED_AUTHENTICATED_CALL_TAIL",record)
+
+    def record_tail_recovered(self, **record):
+        return self._append("DURABLE_TAIL_RECOVERED",record)
+
+    def record_normal_route_handoff(self, **record):
+        return self._append("NORMAL_ROUTE_REGAINS_CONTROL",record)
+
+    def record_normal_route_reassessment(self, **record):
+        return self._append("NORMAL_ROUTE_EVIDENCE_REASSESSED",record)
+
+    def close_route_handoff_repair(self, **record):
+        return self._append("ROUTE_HANDOFF_REPAIR_CLOSED",record)
 
     def request_relation_evidence(self, *, problem_id: str, relation: dict,
                                   classification: str,
