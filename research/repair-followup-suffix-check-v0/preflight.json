@@ -1,0 +1,174 @@
+{
+  "artifact_verification": {
+    "all_artifacts_hash_verified": true,
+    "blobs": [
+      {
+        "media_type": "application/vnd.docker.container.image.v1+json",
+        "sha256": "368364f689573ccfe29939353f655f3a153acc0646b2e21f65a4231330b7537a",
+        "size": 484
+      },
+      {
+        "media_type": "application/vnd.ollama.image.model",
+        "sha256": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3",
+        "size": 26441544128
+      },
+      {
+        "media_type": "application/vnd.ollama.image.template",
+        "sha256": "a47b02e00552cd7022ea700b1abf8c572bb26c9bc8c1a37e01b566f2344df5dc",
+        "size": 106
+      },
+      {
+        "media_type": "application/vnd.ollama.image.system",
+        "sha256": "9640c2212a51f7df5840f7929448afa17cb33fbb173cf15e1d74883e932a3466",
+        "size": 41
+      },
+      {
+        "media_type": "application/vnd.ollama.image.params",
+        "sha256": "58ca659992b02d65b647752bb49f240dea3751194fa0e2e6426d7b121e77e462",
+        "size": 97
+      }
+    ],
+    "manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+    "model": "dolphin-mixtral:latest"
+  },
+  "core_regression_steps": 53,
+  "eligibility": {
+    "eligible": true,
+    "facts": {
+      "eight_siblings_valid": true,
+      "failed_decision_completed_as_abstention": true,
+      "no_external_action": true,
+      "no_memory_publication": true,
+      "no_receipt": true,
+      "no_routing_evidence": true,
+      "no_training_target": true,
+      "original_lineage_complete": true,
+      "original_request_hash_exact": true,
+      "original_timeout_preserved": true,
+      "original_transport_bytes_exact": true,
+      "pr0004_open": true,
+      "source_checkpoint_exact": true
+    },
+    "failed_logical_prediction_identity": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:J",
+    "failed_request_sha256": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f",
+    "failed_response_sha256": "9e177280df0d138c5d65e05b99bb075132b0ea61e91123edd18f9234f9a87a97",
+    "failed_transport_bytes_sha256": "ca5407171f21954fef0ee767b329cb14e6ecb2dc6c8559bc26b4b527c793870b",
+    "pr0002_sha256": "69344821dc453215ad0d12598179e99591371f61c4d5eeea9185e0c1652fa1a2",
+    "pr0003_sha256": "52abbc28b599fafd771452499e9503738fedf212434062f4526317b7d4eaba8b",
+    "pr0004": {
+      "alter_memory": false,
+      "alter_predictions": false,
+      "capability_assessment": "ROUTE_FAILED",
+      "change_objective": false,
+      "create_model": false,
+      "created_decision_sequence": 87,
+      "evidence": [],
+      "execute": false,
+      "history": [
+        {
+          "decision_sequence": 87,
+          "lifecycle_state": "OPEN"
+        }
+      ],
+      "imported_snapshot": null,
+      "imported_snapshot_sha256": null,
+      "issue_receipts": false,
+      "lifecycle_state": "OPEN",
+      "owner": "MODEL_SERVICE",
+      "probe_evidence": {},
+      "problem_id": "PR-0004",
+      "problem_type": "EXTERNAL_SERVICE_PROBLEM",
+      "requested_capability": "EXTERNAL_SERVICE_REPAIR",
+      "route_budgets": {},
+      "route_request_count": 0,
+      "scope": {
+        "kind": "service",
+        "service_id": "MODEL_SERVICE"
+      },
+      "select_actions": false,
+      "self_authorize": false,
+      "train": false
+    },
+    "result": "REISSUE_ALLOWED",
+    "siblings": [
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:ADVANCE:G2",
+        "request_sha256": "adbd910a7a3792da247c7c8273b640597a272912a3b37ca2f97712d543ebfb93",
+        "response_sha256": "edca3d603a1a65952d8fababd6c5a25b7c859f035b751f48397ba711f8ea9b80",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:ADVANCE:G3",
+        "request_sha256": "9bfc0e4f2500d307017e5a415d02a036dce6d3905ae900cc0aa8d7f9497f01b6",
+        "response_sha256": "56faf2e8957bd19764c7004f3c6eab8000d73427108b96007cfc4ffa88e69ade",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:ADVANCE:J",
+        "request_sha256": "43d92607a51a23755fc923102ac53ea98a02e90b3c3e3cb31308a0817eb4d82f",
+        "response_sha256": "9fd42120009b7cdab52f012160a9e40f0fdc9ca0d0db228346a6cb83d70ae0b9",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:HOLD:G2",
+        "request_sha256": "1296fc0e1b0fbb1dac4740f282ec713846e6ecf3d02902e651a0a6dddb99e253",
+        "response_sha256": "fa3df804d02925ea9b651c0cecda575d06370556fd3f3cb612937322e52825d2",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:HOLD:G3",
+        "request_sha256": "98b1f1c0e2543c7e1af141d0dfac3b101311f3461dda8c652ed7d93f7a3d7be2",
+        "response_sha256": "351219f22ede04a6a8f396517c098fb4b0f3ec688353d8939f60254bccd8733e",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:HOLD:J",
+        "request_sha256": "ff55dd2efdc3459b9f1d880edca3fbf2a838a0f283d8750c234b81f75d308f2d",
+        "response_sha256": "928163cf2ed51b560fbb39fa31bc6e2c102d25b752f0e9565cad842ef7929cdf",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:G2",
+        "request_sha256": "96c265ea579599200d2f23780e332e65e0c77fd97ed6a077605c22497fa2bee3",
+        "response_sha256": "b7ca6b25d46a052822ee0653d43f579ea70529366c2ee592d24d4bda0f21f8dd",
+        "valid": true
+      },
+      {
+        "call_id": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:G3",
+        "request_sha256": "ff8a6572570e74298da92c46ce4daa8de5d367095a14bbdc4b768b615729560c",
+        "response_sha256": "39357de0b8757818f0cc193d3f92f33d129886517f61a49718548ea03d25d601",
+        "valid": true
+      }
+    ],
+    "source_checkpoint": {
+      "attempted_decisions": 87,
+      "authorized_executions": 55,
+      "calls": 2448,
+      "current_state": 1,
+      "exploration": 174,
+      "manager": 41,
+      "routing": 55,
+      "training": 90
+    }
+  },
+  "exact_live_plan": {
+    "infrastructure_parse_health_calls": 1,
+    "other_model_calls": 0,
+    "repaired_transport_calls": 1,
+    "resumed_ordinary_decisions": 1,
+    "retries_after_attempt_2": 0,
+    "service_repairs": 1,
+    "sibling_predictions_regenerated": 0,
+    "total_model_call_ceiling": 2,
+    "transport_reissues": 1
+  },
+  "full_horus_tests": 233,
+  "generated_at": "2026-09-27T00:07:19.170216+00:00",
+  "identity": "HORUS_V018_ZERO_INFERENCE_PREFLIGHT",
+  "implementation_commit": "016b7bd",
+  "model_calls": 0,
+  "status": "PASS",
+  "training_runs": 0,
+  "v017_evidence_unchanged": true,
+  "world_executions": 0
+}
