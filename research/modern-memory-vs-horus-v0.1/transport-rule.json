@@ -1,0 +1,29 @@
+{
+  "rule": {
+    "batch_retry": false,
+    "before_execution_only": true,
+    "eligible_errors": [
+      "TimeoutError",
+      "ConnectionError",
+      "ConnectionResetError",
+      "ConnectionAbortedError",
+      "ConnectionRefusedError",
+      "BrokenPipeError",
+      "RemoteDisconnected",
+      "URLError",
+      "HTTP_SERVICE_INTERRUPTION"
+    ],
+    "eligible_http_status": [
+      408,
+      429,
+      500,
+      502,
+      503,
+      504
+    ],
+    "identical_request_bytes": true,
+    "maximum_attempts": 2,
+    "semantic_retry": false
+  },
+  "sha256": "f9580f849a2baec25cda5ef9bb9eee3cf7be1d3b992411b5ba25decdfe17eb20"
+}
