@@ -1,0 +1,84 @@
+{
+  "authoritative": false,
+  "availability": {
+    "authority_status": "REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+    "deadlock_probe_available": false,
+    "deadlock_probe_budget": {
+      "executed": 1,
+      "granted": 1,
+      "limit": 1
+    },
+    "existing_route": "RELATION_PROBE",
+    "existing_route_legally_available": false,
+    "relation_probe_cadence": {
+      "available": false,
+      "distance": 2,
+      "last_probe_authorized_decision": 54,
+      "minimum_distance": 3,
+      "next_authorized_decision": 56
+    },
+    "selected_route": null
+  },
+  "can_execute": false,
+  "request": {
+    "alters_memory": false,
+    "alters_simulator": false,
+    "alters_specialist_selection": false,
+    "authoritative": false,
+    "authority_status": "REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+    "changes_prediction": false,
+    "changes_protected_bound": false,
+    "classification": "ROUTING_CORRECT_AS_FROZEN",
+    "controls_execution": false,
+    "creates_receipt": false,
+    "current_scores": {
+      "G2": {
+        "correct": 3,
+        "total": 5
+      },
+      "G3": {
+        "correct": 3,
+        "total": 5
+      }
+    },
+    "hidden_transition_destination_used": false,
+    "latest_evidence_sequence": 54,
+    "latest_grounded_comparison": {
+      "G2_correct": false,
+      "G3_correct": true
+    },
+    "option_profile_used": false,
+    "problem_id": "PR-0003",
+    "reason": "RELATION_SPECIFIC_EVIDENCE_INSUFFICIENT_FOR_SPECIALIST_SELECTION",
+    "recorded_at": "2026-09-27T00:31:04.090248+00:00",
+    "relation": {
+      "action": "ADVANCE",
+      "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+      "pre_state": 1
+    },
+    "requested_capability": "MORE_RELATION_EVIDENCE",
+    "requested_route": "RELATION_PROBE",
+    "route_availability": {
+      "authority_status": "REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+      "deadlock_probe_available": false,
+      "deadlock_probe_budget": {
+        "executed": 1,
+        "granted": 1,
+        "limit": 1
+      },
+      "existing_route": "RELATION_PROBE",
+      "existing_route_legally_available": false,
+      "relation_probe_cadence": {
+        "available": false,
+        "distance": 2,
+        "last_probe_authorized_decision": 54,
+        "minimum_distance": 3,
+        "next_authorized_decision": 56
+      },
+      "selected_route": null
+    },
+    "selected_route": null,
+    "selected_specialist": "G2",
+    "trains_model": false
+  }
+}

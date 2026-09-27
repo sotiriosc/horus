@@ -3,16 +3,14 @@ from __future__ import annotations
 
 from copy import deepcopy
 from hashlib import sha256
-import json
 from pathlib import Path
-from typing import Any
 
 from experiments.base_framework_v0.framework import ACTION_ORDER
 
 from .core import MapForecast, MechanicalExplorer, digest
 from .grounded_exploration import ExplorerConfidenceStore
 from .grounded_learning import atomic_json, file_hash
-from .live import SessionStore, _canonical, _now
+from .live import SessionStore, _now
 from .problem_manager import ProblemManager
 from .relation_routing import (RelationEvidenceStore, RelationGroundedRouter,
                                relation_identity, relation_key)
@@ -152,7 +150,7 @@ def run_zero_inference(*, session_root: Path, registry_root: Path,
     output_root.mkdir(parents=True,exist_ok=True)
     session_stats_before={name:_hash_lines(session_root/name) for name in
         ("events.jsonl","model-calls.private.jsonl","training-records.jsonl")}
-    with SessionStore(session_root) as session, \
+    with SessionStore(session_root,resume=True) as session, \
             RelationEvidenceStore(registry_root) as routing, \
             ExplorerConfidenceStore(registry_root) as confidence, \
             ProblemManager(registry_root) as manager:
