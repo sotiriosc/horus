@@ -634,6 +634,55 @@ class ProblemManager:
         elif kind=="OPERATIONAL_PROBLEM_ATTACHED":
             cls._create_operational(state,record["decision_sequence"],record["problem_type"],
                 record["scope"],record["owner"],record.get("blocked_problem_id"))
+        elif kind=="RELATION_EVIDENCE_REQUESTED":
+            p=state["problems"].get(record.get("problem_id"))
+            relation=record.get("relation",{})
+            if not p or p["problem_type"]!="UNRESOLVED_VALUE_TIE" or \
+                    relation.get("pre_state")!=p["scope"]["pre_state"] or \
+                    relation.get("action") not in p["scope"]["tied_action_set"] or \
+                    relation.get("identity_sha256")!=digest({"pre_state":relation.get(
+                        "pre_state"),"action":relation.get("action")}):
+                raise RoutingError("relation-evidence request is outside problem scope")
+            if record.get("classification")!="ROUTING_CORRECT_AS_FROZEN" or \
+                    record.get("requested_capability")!="MORE_RELATION_EVIDENCE" or \
+                    record.get("requested_route")!="RELATION_PROBE" or \
+                    record.get("authority_status")!="REQUEST_REQUIRES_EXTERNAL_APPROVAL" or \
+                    record.get("selected_route") is not None:
+                raise RoutingError("relation-evidence request invented route authority")
+            scores=record.get("current_scores",{}); latest=record.get(
+                "latest_grounded_comparison",{})
+            if record.get("selected_specialist")!="G2" or set(scores)!={"G2","G3"} or \
+                    scores["G2"].get("total")!=scores["G3"].get("total") or \
+                    scores["G3"].get("correct")-scores["G2"].get("correct")>=2 or \
+                    latest!={"G2_correct":False,"G3_correct":True} or \
+                    record.get("route_availability",{}).get(
+                        "existing_route_legally_available") is not False:
+                raise RoutingError("relation evidence does not justify an external request")
+            if record.get("reason")!=\
+                    "RELATION_SPECIFIC_EVIDENCE_INSUFFICIENT_FOR_SPECIALIST_SELECTION" or \
+                    record.get("hidden_transition_destination_used") is not False or \
+                    record.get("option_profile_used") is not False:
+                raise RoutingError("relation-evidence request changed its scoped reason")
+            duplicate=any(row.get("kind")=="RELATION_EVIDENCE_REQUESTED" and
+                row.get("relation")==relation for row in p["history"])
+            if duplicate: raise RoutingError("duplicate relation-evidence request")
+            p["lifecycle_state"]="ROUTE_REQUESTED"
+            p["capability_assessment"]="MORE_EVIDENCE_REQUIRED"
+            p["requested_capability"]="MORE_RELATION_EVIDENCE"
+            p["route_request_count"]+=1
+            evidence={k:deepcopy(record[k]) for k in (
+                "relation","classification","latest_evidence_sequence",
+                "latest_grounded_comparison","current_scores",
+                "selected_specialist","route_availability")}
+            evidence["kind"]="SCOPED_RELATION_REASSESSMENT"
+            p["evidence"].append(evidence)
+            p["history"].append(dict(lifecycle_state="ROUTE_REQUESTED",
+                decision_sequence=state["attempted_decisions"],
+                kind="RELATION_EVIDENCE_REQUESTED",relation=deepcopy(relation),
+                requested_capability="MORE_RELATION_EVIDENCE",
+                requested_route="RELATION_PROBE",
+                authority_status="REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+                reason=record["reason"]))
         else: raise RoutingError("unknown problem manager event")
 
     @classmethod
@@ -873,6 +922,34 @@ class ProblemManager:
 
     def attach_operational(self, **record):
         return self._append("OPERATIONAL_PROBLEM_ATTACHED",record)
+
+    def request_relation_evidence(self, *, problem_id: str, relation: dict,
+                                  classification: str,
+                                  latest_evidence_sequence: int,
+                                  latest_grounded_comparison: dict,
+                                  current_scores: dict,
+                                  selected_specialist: str,
+                                  route_availability: dict):
+        """Persist a scoped request without granting or executing a route."""
+        record=dict(problem_id=problem_id,relation=deepcopy(relation),
+            classification=classification,
+            requested_capability="MORE_RELATION_EVIDENCE",
+            requested_route="RELATION_PROBE",
+            authority_status="REQUEST_REQUIRES_EXTERNAL_APPROVAL",
+            selected_route=None,
+            reason="RELATION_SPECIFIC_EVIDENCE_INSUFFICIENT_FOR_SPECIALIST_SELECTION",
+            latest_evidence_sequence=latest_evidence_sequence,
+            latest_grounded_comparison=deepcopy(latest_grounded_comparison),
+            current_scores=deepcopy(current_scores),
+            selected_specialist=selected_specialist,
+            route_availability=deepcopy(route_availability),
+            hidden_transition_destination_used=False,option_profile_used=False,
+            authoritative=False,controls_execution=False,alters_memory=False,
+            alters_specialist_selection=False,changes_prediction=False,
+            trains_model=False,changes_protected_bound=False,
+            alters_simulator=False,creates_receipt=False)
+        self._apply(deepcopy(self.state),"RELATION_EVIDENCE_REQUESTED",record)
+        return self._append("RELATION_EVIDENCE_REQUESTED",record)
 
     def bind_session(self,store):
         if self.state["session_id"]!=store.checkpoint["session_id"]:
