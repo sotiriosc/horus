@@ -1,0 +1,58 @@
+{
+  "calls_per_stage_a_event": 2,
+  "calls_per_stage_b_opportunity": 6,
+  "condition_order": [
+    "F",
+    "HZ",
+    "H",
+    "Z"
+  ],
+  "conditions": 4,
+  "horus_source_commit": "1007622b8817ab82ba208ce6a198e85b24f3960d",
+  "model_artifact_sha256": {
+    "G2": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+    "G3": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24"
+  },
+  "model_base": {
+    "repository": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+  },
+  "perturbation": "replace the returned G2 wire value with out-of-domain consequence=2 after the real call and before parsing, identically once per arm",
+  "perturbation_stage_a_event": 14,
+  "restart_before_stage_a_event": 10,
+  "stage_a_events": 18,
+  "stage_b_opportunities": 6,
+  "toggles": [
+    "horus_enabled",
+    "zakhor_enabled"
+  ],
+  "total_call_budget": 288,
+  "version": 1,
+  "weights_trainable": false,
+  "zakhor_repository_commit": "a7605d84e9e12eee57e1a1c0d0fd643f6adde653",
+  "zakhor_source_sha256": {
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/__init__.py": "de96f6dd8ff9219945a15f447fffaa699ee9185bf08e2545ba601d99c792eb09",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/bfp.py": "df820d70ea9ea0def039410a4a019974c1df282145734e9173d981833ada3d54",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/bitflip.py": "2a1121b16597a3dad757fd983b89a588322d767fbf243894946ba0ced60d0409",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/compose.py": "6bfaea6b24648ff888a02d2d1ae2be15ca28be939bcfe93ba4254b385ae59b03",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/config.py": "6595d7b2f9cd81c85bdd1feb0bcd002b1dc0507008a06edd8a25ccbb25e4a5c1",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/controller.py": "5338ff3586a3ed47f738dff9d2fb3ffb84ce1a65a3963614a21f7036f6e770ae",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/diagnostics.py": "fa3c4c485aa186b84cd2848cb1372957f3669ae46b1152b34a023d95e8faf670",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/epistemic.py": "4b0ee1cc064e0735498e0a7b3d822d3594d22e5b3369f5ef9449f7e06da82f6d",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/hooks.py": "a9d2517e4c278bf7c14bba9bd40e0eafc12620e3e9139e606fe24a746d1ac4dc",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/interfaces.py": "f76848eb98ec64be89839db4be0e16f6ef44595f475b164d86a99f01c8c88fc4",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/layers.py": "7db47464104ff9f2e2c9fc82904c15e703bc06d2ab9db4b15b60344a252f1102",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/pathspace.py": "e3707b4abf4137fb69b0afa8bce9e8bca915d3ab5080543ffd13654fc109c3b5",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/phi.py": "b527aa0ef459cbb21112aa2b381dd9969c80e855cea3c392618152c2cd83ea2d",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/ports.py": "b151a3284aaba2c827df5faae0502b98e706be332f946f0929b63da0fa9ddc44",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/root.py": "993ed23f70f5669c5f4f4903b76c3237d4eaa9fcf1268ebdf2dffa47656828c2",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/simulate.py": "f273ba55fe4cdd3cccd3b17dec6ff8f1c0fedd2f5de060ecbb39cd6c6742b67e",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/switch.py": "b752d303024d2d9ce83bf75314d51d1bbe8c78afb9a0697bd1ce64371cc00f0b",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/telemetry.py": "b26c373a6a371706aae0a079c8bb6d2b0971841422cad4402941f4815fe4a0ff",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/torch_fast.py": "c1e96ca4cae2733c19b1e7883acacc1e4dad7cca0334db84aa8ad92af5b8d92f",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/torch_keeper.py": "0bb9a26f99a2549ca894c3c73ab38617130319ddd48fd9e51e19f056af5e8689",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/torch_quantize.py": "773a0fc335bb46610630842cf252ed9cceae89a14cde50eb49af9985e64d54eb",
+    "experiments/horus_zakhor_component_attribution_v0/zakhor_runtime/tracker.py": "d9b17779a250cf1ba412469248dc20173d8d58396aa9b345bdc419d7edaeaeed"
+  },
+  "zakhor_source_status": "snapshot of strongest present working-tree runtime; upstream working tree was uncommitted, so every copied source file is content-addressed here"
+}

@@ -1,0 +1,312 @@
+{
+  "behavioral_equivalence": {
+    "F_equals_Z": true,
+    "H_equals_HZ_aggregate": true
+  },
+  "conditions": {
+    "F": {
+      "autonomous_modes": [
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL"
+      ],
+      "false_persistence_after_change": 6,
+      "false_persistence_after_restoration": 0,
+      "restoration_errors": 1,
+      "route_switch_events": [],
+      "stage_a": {
+        "abstentions": 0,
+        "actions": [
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "authorized_executions": 18,
+        "consequence_accuracy": 0.5,
+        "correct": 9,
+        "invalid_outputs": 1,
+        "opportunities": 18,
+        "realized_consequence": 2
+      },
+      "stage_b": {
+        "abstentions": 0,
+        "actions": [
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD"
+        ],
+        "authorized_executions": 6,
+        "consequence_accuracy": 0.6666666666666666,
+        "correct": 4,
+        "invalid_outputs": 0,
+        "opportunities": 6,
+        "realized_consequence": 2
+      }
+    },
+    "H": {
+      "autonomous_modes": [
+        "PROBE",
+        "EXPLOIT",
+        "EXPLOIT",
+        "PROBE",
+        "EXPLOIT",
+        "EXPLOIT"
+      ],
+      "false_persistence_after_change": 5,
+      "false_persistence_after_restoration": 5,
+      "restoration_errors": 6,
+      "route_switch_events": [
+        {
+          "action": "HOLD",
+          "opportunity": 11,
+          "selected_before": "G2",
+          "stage": "A",
+          "state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "opportunity": 16,
+          "selected_before": "G2",
+          "stage": "A",
+          "state": 1
+        },
+        {
+          "action": "HOLD",
+          "opportunity": 1,
+          "selected_before": "G3",
+          "stage": "B",
+          "state": 1
+        }
+      ],
+      "stage_a": {
+        "abstentions": 0,
+        "actions": [
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "authorized_executions": 18,
+        "consequence_accuracy": 0.3333333333333333,
+        "correct": 6,
+        "invalid_outputs": 1,
+        "opportunities": 18,
+        "realized_consequence": 2
+      },
+      "stage_b": {
+        "abstentions": 0,
+        "actions": [
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "RETREAT",
+          "HOLD",
+          "HOLD"
+        ],
+        "authorized_executions": 6,
+        "consequence_accuracy": 0.5,
+        "correct": 3,
+        "invalid_outputs": 0,
+        "opportunities": 6,
+        "realized_consequence": 1
+      }
+    },
+    "HZ": {
+      "autonomous_modes": [
+        "PROBE",
+        "EXPLOIT",
+        "EXPLOIT",
+        "PROBE",
+        "EXPLOIT",
+        "EXPLOIT"
+      ],
+      "false_persistence_after_change": 6,
+      "false_persistence_after_restoration": 4,
+      "restoration_errors": 5,
+      "route_switch_events": [
+        {
+          "action": "HOLD",
+          "opportunity": 11,
+          "selected_before": "G2",
+          "stage": "A",
+          "state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "opportunity": 16,
+          "selected_before": "G2",
+          "stage": "A",
+          "state": 1
+        },
+        {
+          "action": "HOLD",
+          "opportunity": 1,
+          "selected_before": "G3",
+          "stage": "B",
+          "state": 1
+        }
+      ],
+      "stage_a": {
+        "abstentions": 0,
+        "actions": [
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "authorized_executions": 18,
+        "consequence_accuracy": 0.3333333333333333,
+        "correct": 6,
+        "invalid_outputs": 1,
+        "opportunities": 18,
+        "realized_consequence": 2
+      },
+      "stage_b": {
+        "abstentions": 0,
+        "actions": [
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "RETREAT",
+          "HOLD",
+          "HOLD"
+        ],
+        "authorized_executions": 6,
+        "consequence_accuracy": 0.5,
+        "correct": 3,
+        "invalid_outputs": 0,
+        "opportunities": 6,
+        "realized_consequence": 1
+      }
+    },
+    "Z": {
+      "autonomous_modes": [
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL",
+        "MECHANICAL"
+      ],
+      "false_persistence_after_change": 6,
+      "false_persistence_after_restoration": 0,
+      "restoration_errors": 1,
+      "route_switch_events": [],
+      "stage_a": {
+        "abstentions": 0,
+        "actions": [
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "authorized_executions": 18,
+        "consequence_accuracy": 0.5,
+        "correct": 9,
+        "invalid_outputs": 1,
+        "opportunities": 18,
+        "realized_consequence": 2
+      },
+      "stage_b": {
+        "abstentions": 0,
+        "actions": [
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD",
+          "HOLD"
+        ],
+        "authorized_executions": 6,
+        "consequence_accuracy": 0.6666666666666666,
+        "correct": 4,
+        "invalid_outputs": 0,
+        "opportunities": 6,
+        "realized_consequence": 2
+      }
+    }
+  },
+  "source_results_sha256": "092a8e02d181da0f2b46426079f3fcb387d3fffec9dc0ba709c5efcf998e2c32",
+  "stage_a_accuracy_effects": {
+    "horus_main": -0.16666666666666669,
+    "interaction": 0.0,
+    "metric": "accuracy",
+    "zakhor_main": 0.0
+  },
+  "stage_b_accuracy_effects": {
+    "horus_main": -0.16666666666666663,
+    "interaction": 0.0,
+    "metric": "accuracy",
+    "zakhor_main": 0.0
+  },
+  "stage_b_realized_effects": {
+    "horus_main": -1.0,
+    "interaction": 0,
+    "metric": "realized",
+    "zakhor_main": 0.0
+  },
+  "status": "COMPLETE"
+}

@@ -520,15 +520,47 @@ def verify_chain(path: Path, key: bytes) -> int:
 
 def replay(output: Path) -> dict:
     original = json.loads((output / "results.json").read_text())
-    counts = {}
+    counts, checks = {}, {}
     for name in CONDITIONS:
         counts[name] = verify_chain(output / name / "records.jsonl",
                                     sha256(("horus-zakhor-v0:" + name).encode()).digest())
         summary = json.loads((output / name / "summary.json").read_text())
         if summary != original["conditions"][name]:
             raise RuntimeError(f"condition summary mismatch: {name}")
+        envelopes = [json.loads(line) for line in
+                     (output / name / "records.jsonl").read_text().splitlines()]
+        requests = {row["record"]["call_id"]: row["record"] for row in envelopes
+                    if row["kind"] == "MODEL_REQUEST"}
+        responses = {row["record"]["call_id"]: row["record"] for row in envelopes
+                     if row["kind"] == "MODEL_RESPONSE"}
+        decisions = [row["record"] for row in envelopes if row["kind"] in
+                     ("AUTHORIZED_RECEIPT", "ABSTENTION")]
+        if len(requests) != 72 or set(requests) != set(responses):
+            raise RuntimeError(f"call pairing/count mismatch: {name}")
+        if any(requests[key]["request_sha256"] != responses[key]["request_sha256"]
+               for key in requests):
+            raise RuntimeError(f"request/response identity mismatch: {name}")
+        if len(decisions) != 24 or sum(row["stage"] == "A" for row in decisions) != 18:
+            raise RuntimeError(f"decision schedule mismatch: {name}")
+        perturbations = [row for row in responses.values()
+                         if row["perturbation_applied"]]
+        if len(perturbations) != 1 or perturbations[0]["call_id"] != "A:14:G2" or \
+                perturbations[0]["prediction"] is not None:
+            raise RuntimeError(f"perturbation mismatch: {name}")
+        for row in decisions:
+            if row["receipt"] is not None:
+                receipt = dict(row["receipt"])
+                registered = receipt.pop("receipt_sha256")
+                if digest(receipt) != registered:
+                    raise RuntimeError(f"receipt provenance mismatch: {name}")
+        scored = [row for row in decisions if row["consequence_correct"] is not None]
+        recomputed = sum(bool(row["consequence_correct"]) for row in scored) / len(scored)
+        if recomputed != summary["consequence_prediction_accuracy"]:
+            raise RuntimeError(f"summary accuracy mismatch: {name}")
+        checks[name] = dict(model_requests=len(requests), model_responses=len(responses),
+            decisions=len(decisions), perturbations=len(perturbations),
+            recorded_receipt_values=sum(row["receipt"] is not None for row in decisions))
     if original["total_model_calls"] != 288:
         raise RuntimeError("frozen call budget mismatch")
     return dict(status="PASS", exact_results_match=True, record_counts=counts,
-                total_model_calls=original["total_model_calls"])
-
+                integrity_checks=checks, total_model_calls=original["total_model_calls"])
