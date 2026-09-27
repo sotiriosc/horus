@@ -1,0 +1,433 @@
+{
+  "authorization_sha256": "a14e3eadac617c5efbf8a8fc8b965bee3507d8f8db5afb0f08af14b30784f83e",
+  "behavioral_decisions_completed": 1,
+  "confidence_records": 180,
+  "failure_diagnosis": {
+    "defect": "remaining-probe integration incorrectly required a tied abstaining ordinary decision",
+    "ordinary_post_reacquisition_route": "PROBE",
+    "ordinary_probe_budget_available": true,
+    "ordinary_probe_distance": 4,
+    "patch_applied": false,
+    "qualifying_reason": "PROBE_DISAGREEMENT",
+    "rerun_performed": false
+  },
+  "failure_message": "remaining scoped relation probe eligibility changed",
+  "failure_problem_id": "PR-0005",
+  "failure_stage": "REMAINING_SCOPED_PROBE_PREPARATION",
+  "failure_type": "INTERNAL_ROUTE_PROBLEM",
+  "final_pr0003_assessment": "MORE_RELATION_EVIDENCE_REQUIRED_BLOCKED_BY_OPERATIONAL_FAILURE",
+  "global_navigation": false,
+  "identity": "HORUS_V021_GROUNDED_RELATION_REACQUISITION",
+  "last_completed_advance_scores": {
+    "G2": {
+      "correct": 3,
+      "total": 6
+    },
+    "G3": {
+      "correct": 4,
+      "total": 6
+    }
+  },
+  "logical_model_calls": 18,
+  "manager_stream_count": 59,
+  "models_changed": false,
+  "navigation": {
+    "action": "RETREAT",
+    "prediction_batch_sequence": 90,
+    "reason": "REACQUIRE_TARGET_RELATION_STATE",
+    "receipt": {
+      "action": "RETREAT",
+      "epoch": 2015,
+      "event_id": 1,
+      "next_state": 1,
+      "pre_state": 2,
+      "realized_consequence": 1,
+      "source_identity": "HORUS:a67e675004193a13c31485bad53fbb86:runtime:15:ab424125f4912c25",
+      "transaction_id": 1
+    },
+    "receipt_identity": [
+      "HORUS:a67e675004193a13c31485bad53fbb86:runtime:15:ab424125f4912c25",
+      1,
+      2015,
+      1
+    ],
+    "receipt_provenance_sha256": "4453a8b98aba922830f94dac7b4176badbd33685012bc9eb43cb3888e5d7bb88",
+    "routing_evidence": {
+      "context_input_sha256": "b0549a5f4b5c87bec329969377afd52cdc4e639ab98b28335ec708caec548b32",
+      "correctness": {
+        "G2": true,
+        "G3": false
+      },
+      "evidence_sequence": 57,
+      "evidence_source": "AUTHORIZED_ORIGINAL_RECEIPT",
+      "execution_kind": "EXPLORER_EXPLOIT_EXECUTION",
+      "per_action_selection_before": {
+        "ADVANCE": "G2",
+        "HOLD": "G2",
+        "RETREAT": "G2"
+      },
+      "prediction_commitment": {
+        "joint": {
+          "call_id": "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d90:RETREAT:J",
+          "parsed_sequence": 2498,
+          "request_sequence": 2482,
+          "request_sha256": "8bfe945aa49c98e80f1b8da0982660a7d3e752c73a7e13d27837d08bf7b1e95b",
+          "response_sequence": 2497
+        },
+        "specialists": {
+          "G2": {
+            "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+            "call_id": "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d90:RETREAT:G2",
+            "parsed_sequence": 2500,
+            "prediction": 1,
+            "request_sequence": 2483,
+            "request_sha256": "0f6b5c347f42f81cb74ee1c1711bf44c5c8bea2c06d382faadc66f3c55e8d791",
+            "response_sequence": 2499
+          },
+          "G3": {
+            "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+            "call_id": "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d90:RETREAT:G3",
+            "parsed_sequence": 2502,
+            "prediction": -1,
+            "request_sequence": 2484,
+            "request_sha256": "10b90f120f610b2dcec07679348fb844f9126cc909ca69697a1eb5e5258797b8",
+            "response_sequence": 2501
+          }
+        }
+      },
+      "predictions_frozen_before_execution": true,
+      "realized_consequence": 1,
+      "receipt_event_sequence": 57,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:15:ab424125f4912c25",
+        1,
+        2015,
+        1
+      ],
+      "receipt_provenance_sha256": "4453a8b98aba922830f94dac7b4176badbd33685012bc9eb43cb3888e5d7bb88",
+      "recorded_at": "2026-09-27T01:21:35.116271+00:00",
+      "relation": {
+        "action": "RETREAT",
+        "identity_sha256": "032c97fe60323ff83684ce552f5a9572e4fb352db1590b3993c9a6cac4fd82a7",
+        "pre_state": 2
+      },
+      "router_score_after": {
+        "G2": {
+          "correct": 5,
+          "total": 6
+        },
+        "G3": {
+          "correct": 4,
+          "total": 6
+        }
+      },
+      "router_score_before": {
+        "G2": {
+          "correct": 4,
+          "total": 5
+        },
+        "G3": {
+          "correct": 4,
+          "total": 5
+        }
+      },
+      "selected_specialist": "G2",
+      "selected_specialist_after": "G2",
+      "specialists": {
+        "G2": {
+          "artifact_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+          "frozen_consequence": 1,
+          "generation": 2
+        },
+        "G3": {
+          "artifact_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+          "frozen_consequence": -1,
+          "generation": 3
+        }
+      },
+      "switch_occurred": false,
+      "switch_reason": "local incumbent retained: minimum evidence/lead not satisfied"
+    },
+    "status": "AUTHORIZED",
+    "supporting_authenticated_transition_receipt": {
+      "action": "RETREAT",
+      "authenticated": true,
+      "epoch": 2012,
+      "event_sequence": 55,
+      "pre_state": 2,
+      "realized_consequence": 1,
+      "realized_next_state": 1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+        1,
+        2012,
+        1
+      ],
+      "receipt_provenance_sha256": "e7798d28cc973dfe8622352b7ddde53d530480f37be716fe81bbabbe3d24f191",
+      "recorded_at": "2026-09-26T23:02:02.419320+00:00",
+      "source": "AUTHORIZED_REALIZED_EVENT",
+      "transaction_id": 1
+    }
+  },
+  "new_authenticated_receipts": 1,
+  "operational_problem": {
+    "alter_memory": false,
+    "alter_predictions": false,
+    "capability_assessment": "ROUTE_FAILED",
+    "change_objective": false,
+    "create_model": false,
+    "created_decision_sequence": 91,
+    "evidence": [],
+    "execute": false,
+    "history": [
+      {
+        "decision_sequence": 91,
+        "lifecycle_state": "OPEN"
+      }
+    ],
+    "imported_snapshot": null,
+    "imported_snapshot_sha256": null,
+    "issue_receipts": false,
+    "lifecycle_state": "OPEN",
+    "owner": "REMAINING_SCOPED_PROBE_ROUTE",
+    "probe_evidence": {},
+    "problem_id": "PR-0005",
+    "problem_type": "INTERNAL_ROUTE_PROBLEM",
+    "requested_capability": "NEW_RUNTIME",
+    "route_budgets": {},
+    "route_request_count": 0,
+    "scope": {
+      "kind": "runtime",
+      "runtime_id": "v0.21-remaining-scoped-probe-eligibility"
+    },
+    "select_actions": false,
+    "self_authorize": false,
+    "train": false
+  },
+  "ordinary_follow_up": null,
+  "ordinary_follow_up_used": false,
+  "ordinary_probe_marker_after": 54,
+  "ordinary_probe_marker_before": 54,
+  "parent_commit": "bec668b391fb90205923fe4b6202bf25465e5696",
+  "pr0002_sha256": "69344821dc453215ad0d12598179e99591371f61c4d5eeea9185e0c1652fa1a2",
+  "pr0002_unchanged": true,
+  "pr0003_canonical_assessment": "MORE_EVIDENCE_REQUIRED",
+  "pr0003_requested_capability": "MORE_RELATION_EVIDENCE",
+  "predicted_transition_used_for_navigation": false,
+  "remaining_scoped_probe": null,
+  "resulting_state1_routed_values": {
+    "ADVANCE": 1,
+    "HOLD": 1,
+    "RETREAT": 0
+  },
+  "rolling_window_added": null,
+  "rolling_window_evicted": null,
+  "route_proof": {
+    "candidates": [
+      {
+        "action": "RETREAT",
+        "authenticated": true,
+        "epoch": 2003,
+        "event_sequence": 22,
+        "pre_state": 2,
+        "realized_consequence": 1,
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:3:7d8fb6ab42ad673b",
+          5,
+          2003,
+          5
+        ],
+        "receipt_provenance_sha256": "de6dc49185861f543727adb7f7c3dc0cd8589eb24f0285d2bb90dd70a5ccab38",
+        "recorded_at": "2026-09-26T13:56:06.397372+00:00",
+        "source": "AUTHORIZED_REALIZED_EVENT",
+        "transaction_id": 5
+      },
+      {
+        "action": "RETREAT",
+        "authenticated": true,
+        "epoch": 2004,
+        "event_sequence": 29,
+        "pre_state": 2,
+        "realized_consequence": 1,
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:4:f5c891d96c1d16bb",
+          4,
+          2004,
+          4
+        ],
+        "receipt_provenance_sha256": "7cc1706e49b9854e6f6954189e7d074fedf31f525bc60daf565220c903bf3036",
+        "recorded_at": "2026-09-26T14:14:41.387333+00:00",
+        "source": "AUTHORIZED_REALIZED_EVENT",
+        "transaction_id": 4
+      },
+      {
+        "action": "RETREAT",
+        "authenticated": true,
+        "epoch": 2005,
+        "event_sequence": 35,
+        "pre_state": 2,
+        "realized_consequence": 1,
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:5:b9438cda740bdd80",
+          2,
+          2005,
+          2
+        ],
+        "receipt_provenance_sha256": "51c51a5f270b3e462cf58fc9c4e58d8169697fc5363f71abd262c5f98aa9ec07",
+        "recorded_at": "2026-09-26T14:19:49.913994+00:00",
+        "source": "AUTHORIZED_REALIZED_EVENT",
+        "transaction_id": 2
+      },
+      {
+        "action": "RETREAT",
+        "authenticated": true,
+        "epoch": 2008,
+        "event_sequence": 53,
+        "pre_state": 2,
+        "realized_consequence": 1,
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:8:9e523c741279b221",
+          1,
+          2008,
+          1
+        ],
+        "receipt_provenance_sha256": "2822ade12040644dfea816ed2c32b81619312cb9df484e1e6733eeb33a94da66",
+        "recorded_at": "2026-09-26T17:00:11.456289+00:00",
+        "source": "AUTHORIZED_REALIZED_EVENT",
+        "transaction_id": 1
+      },
+      {
+        "action": "RETREAT",
+        "authenticated": true,
+        "epoch": 2012,
+        "event_sequence": 55,
+        "pre_state": 2,
+        "realized_consequence": 1,
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+          1,
+          2012,
+          1
+        ],
+        "receipt_provenance_sha256": "e7798d28cc973dfe8622352b7ddde53d530480f37be716fe81bbabbe3d24f191",
+        "recorded_at": "2026-09-26T23:02:02.419320+00:00",
+        "source": "AUTHORIZED_REALIZED_EVENT",
+        "transaction_id": 1
+      }
+    ],
+    "consequence_used_for_selection": false,
+    "current_state": 2,
+    "exact_transition_repetitions": 5,
+    "graph_edge_count": 56,
+    "graph_sha256": "917999e0ceac72efabcb46df2c519d73205d0b12ae6950160404001c12e918b5",
+    "identity": "HORUS_V021_ZERO_INFERENCE_ROUTE_PROOF",
+    "inference_calls": 0,
+    "predicted_next_state_used": false,
+    "reason": "REACQUIRE_TARGET_RELATION_STATE",
+    "selected_action": "RETREAT",
+    "selection_priority": [
+      "MOST_RECENT_AUTHENTICATED_RECEIPT",
+      "EXACT_TRANSITION_REPETITIONS",
+      "CANONICAL_ACTION_ORDER"
+    ],
+    "source_event_count": 56,
+    "status": "RELATION_REACQUISITION_ROUTE_AVAILABLE",
+    "supporting_receipt": {
+      "action": "RETREAT",
+      "authenticated": true,
+      "epoch": 2012,
+      "event_sequence": 55,
+      "pre_state": 2,
+      "realized_consequence": 1,
+      "realized_next_state": 1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+        1,
+        2012,
+        1
+      ],
+      "receipt_provenance_sha256": "e7798d28cc973dfe8622352b7ddde53d530480f37be716fe81bbabbe3d24f191",
+      "recorded_at": "2026-09-26T23:02:02.419320+00:00",
+      "source": "AUTHORIZED_REALIZED_EVENT",
+      "transaction_id": 1
+    },
+    "target_state": 1,
+    "training_runs": 0,
+    "world_executions": 0
+  },
+  "router_score_after_second_probe": null,
+  "router_threshold_changed": false,
+  "routing_records": 57,
+  "scoped_budget_after": {
+    "executed": 1,
+    "granted": 1,
+    "limit": 2
+  },
+  "scoped_budget_before": {
+    "executed": 1,
+    "granted": 1,
+    "limit": 2
+  },
+  "scoped_budget_reset": false,
+  "second_advance_receipt": null,
+  "session_call_stream_fail_closed": true,
+  "session_checkpoint": {
+    "attempted_decisions": 90,
+    "completed_steps": 57,
+    "created_at": "2026-09-26T13:28:37.129148+00:00",
+    "current_epoch": 2015,
+    "current_source_identity": "HORUS:a67e675004193a13c31485bad53fbb86:runtime:15:ab424125f4912c25",
+    "current_state": 1,
+    "external_regime_version": "A",
+    "next_transaction_id": 2,
+    "regime_history": [
+      {
+        "configured_at": "2026-09-26T13:28:37.145166+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 0,
+        "version": "A"
+      },
+      {
+        "configured_at": "2026-09-26T13:52:59.126435+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 17,
+        "version": "B"
+      },
+      {
+        "configured_at": "2026-09-26T14:18:12.766559+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 33,
+        "version": "A"
+      }
+    ],
+    "runtime_index": 15,
+    "session_id": "a67e675004193a13c31485bad53fbb86",
+    "streams": {
+      "calls": {
+        "count": 2502,
+        "head_sha256": "842f075b1687e3d15ad1eaca32fae00523be8954e00c6aa135cbc04551fe3445"
+      },
+      "events": {
+        "count": 57,
+        "head_sha256": "44b311d90a4b6ff0db936c968244ae273aba9cd69ba352a4afdb4e394bce03c2"
+      },
+      "training": {
+        "count": 93,
+        "head_sha256": "f51bbccae042d08fc446bb7dd2fe3d2ec1b3511fa3a81f8d181ecec22c9238de"
+      }
+    },
+    "updated_at": "2026-09-27T01:21:35.101869+00:00",
+    "version": 1
+  },
+  "simulator_transition_used": false,
+  "specialist_switched": false,
+  "state1_reacquired": true,
+  "status": "OPERATIONAL_FAILURE",
+  "training_runs": 0,
+  "world_executions": 1
+}
