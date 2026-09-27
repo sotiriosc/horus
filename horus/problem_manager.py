@@ -486,7 +486,8 @@ class ProblemManager:
             state["pending_decision"]={"decision_sequence":record["decision_sequence"],
                 "problem_id":expected.get("problem_id"),"selected_route":expected.get(
                     "route_broker",{}).get("selected_route"),"action":expected.get("action")}
-        elif kind in ("LIVE_DECISION_COMPLETED","SCOPED_RELATION_PROBE_EXECUTED"):
+        elif kind in ("LIVE_DECISION_COMPLETED","SCOPED_RELATION_PROBE_EXECUTED",
+                      "GROUNDED_RELATION_REACQUISITION_EXECUTED"):
             pending=state["pending_decision"]
             if pending is None or pending["decision_sequence"]!=record["decision_sequence"]:
                 raise RoutingError("problem completion lacks pending decision")
@@ -553,6 +554,28 @@ class ProblemManager:
                     if record["status"]=="FRAMEWORK_REJECTED":
                         cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
                             {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
+            elif pid and pending.get("selected_route")=="GROUNDED_RELATION_REACQUISITION":
+                p=state["problems"][pid]; budget=p["route_budgets"][
+                    "grounded_relation_reacquisition"]
+                if record["status"]=="AUTHORIZED":
+                    receipt=record["receipt"]
+                    if receipt is None or receipt["action"]!=pending["action"]:
+                        raise RoutingError("reacquisition receipt changed the frozen action")
+                    budget["executed"]+=1
+                    reacquired=receipt["realized_next_state"]==budget["target_state"]
+                    p["target_relation_reacquired"]=reacquired
+                    p["reacquisition_status"]=("TARGET_RELATION_REACQUIRED" if reacquired else
+                                                "REACQUISITION_TRANSITION_CONTRADICTED")
+                    p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                        decision_sequence=record["decision_sequence"],kind=p[
+                            "reacquisition_status"],route="GROUNDED_RELATION_REACQUISITION",
+                        action=pending["action"],receipt_identity=receipt["receipt_identity"],
+                        realized_next_state=receipt["realized_next_state"],
+                        supporting_receipt_identity=deepcopy(budget[
+                            "supporting_receipt_identity"])))
+                elif record["status"]=="FRAMEWORK_REJECTED":
+                    cls._create_operational(state,record["decision_sequence"],"INTERNAL_ROUTE_PROBLEM",
+                        {"kind":"runtime","runtime_id":record["runtime_id"]},"RUNTIME_CAPACITY",pid)
             elif pid and pending.get("selected_route")=="PROBLEM_SCOPED_RELATION_PROBE":
                 p=state["problems"][pid]; budget=p["route_budgets"][
                     "problem_scoped_relation_probe"]
@@ -719,6 +742,106 @@ class ProblemManager:
                 requested_route="RELATION_PROBE",
                 authority_status="REQUEST_REQUIRES_EXTERNAL_APPROVAL",
                 reason=record["reason"]))
+        elif kind=="TARGET_RELATION_NOT_CURRENT":
+            p=state["problems"].get(record.get("problem_id")); relation=record.get("target_relation",{})
+            budget=(None if not p else p.get("route_budgets",{}).get(
+                "problem_scoped_relation_probe"))
+            if not p or p["problem_id"]!="PR-0003" or p.get(
+                    "requested_capability")!="MORE_RELATION_EVIDENCE" or \
+                    relation!=relation_identity(1,"ADVANCE") or record.get(
+                    "current_state")!=2 or budget is None or \
+                    budget["executed"]>=budget["limit"]:
+                raise RoutingError("target-relation-not-current condition changed")
+            if any(row.get("kind")=="TARGET_RELATION_NOT_CURRENT" for row in p["history"]):
+                raise RoutingError("target-relation-not-current already recorded")
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],
+                kind="TARGET_RELATION_NOT_CURRENT",current_state=2,target_state=1,
+                target_relation=deepcopy(relation),remaining_scoped_probes=(
+                    budget["limit"]-budget["executed"])))
+        elif kind=="GROUNDED_RELATION_REACQUISITION_AUTHORIZED":
+            p=state["problems"].get(record.get("problem_id")); scoped=(None if not p else
+                p.get("route_budgets",{}).get("problem_scoped_relation_probe"))
+            condition=any(row.get("kind")=="TARGET_RELATION_NOT_CURRENT"
+                          for row in (p or {}).get("history",[]))
+            if not p or p["problem_id"]!="PR-0003" or not condition or \
+                    record.get("target_relation")!=relation_identity(1,"ADVANCE") or \
+                    record.get("target_state")!=1 or record.get("maximum_executions")!=1 or \
+                    scoped is None or scoped["limit"]-scoped["executed"]!=1 or \
+                    record.get("graph_source")!="AUTHENTICATED_REALIZED_RECEIPTS" or \
+                    record.get("global_navigation") is not False:
+                raise RoutingError("reacquisition authorization widened scope")
+            if "grounded_relation_reacquisition" in p["route_budgets"]:
+                raise RoutingError("reacquisition route already authorized")
+            p["route_budgets"]["grounded_relation_reacquisition"]={
+                "limit":1,"granted":0,"executed":0,"target_state":1,
+                "selected_action":record["selected_action"],
+                "supporting_receipt_identity":deepcopy(record[
+                    "supporting_receipt_identity"]),
+                "authorization_sha256":record["authorization_sha256"],
+                "graph_sha256":record["graph_sha256"]}
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=state["attempted_decisions"],
+                kind="GROUNDED_RELATION_REACQUISITION_AUTHORIZED",
+                target_state=1,selected_action=record["selected_action"],
+                supporting_receipt_identity=deepcopy(record[
+                    "supporting_receipt_identity"]),maximum_executions=1))
+        elif kind=="RELATION_REACQUISITION_DECISION_FROZEN":
+            if state["pending_decision"] is not None:
+                raise RoutingError("problem decision already pending")
+            p=state["problems"].get(record.get("problem_id")); budget=(None if not p else
+                p.get("route_budgets",{}).get("grounded_relation_reacquisition"))
+            if record.get("decision_sequence")!=state["attempted_decisions"]+1 or \
+                    not p or p["problem_id"]!="PR-0003" or budget is None or \
+                    budget["granted"]>=budget["limit"] or record.get("current_state")!=2 or \
+                    record.get("target_state")!=1 or record.get(
+                        "target_relation")!=relation_identity(1,"ADVANCE") or \
+                    record.get("selected_navigation_action")!=budget["selected_action"] or \
+                    record.get("supporting_authenticated_transition_receipt",{}).get(
+                        "receipt_identity")!=budget["supporting_receipt_identity"] or \
+                    record.get("reason")!="REACQUIRE_TARGET_RELATION_STATE" or \
+                    any(record["forecasts"][a].get("valid") is not True for a in ACTION_ORDER):
+                raise RoutingError("reacquisition decision differs from grounded authorization")
+            final=record["final_decision"]
+            if final.get("mode")!="PROBLEM_SCOPED_NAVIGATION" or final.get(
+                    "action")!=budget["selected_action"] or final.get(
+                    "reason")!="REACQUIRE_TARGET_RELATION_STATE" or final.get(
+                    "abstained") is not False:
+                raise RoutingError("reacquisition action was not frozen")
+            state["attempted_decisions"]+=1; budget["granted"]+=1
+            state["pending_decision"]={"decision_sequence":record["decision_sequence"],
+                "problem_id":"PR-0003","selected_route":"GROUNDED_RELATION_REACQUISITION",
+                "action":budget["selected_action"]}
+        elif kind in ("TARGET_RELATION_REACQUIRED","REACQUISITION_TRANSITION_CONTRADICTED"):
+            p=state["problems"].get(record.get("problem_id"))
+            if not p or p.get("reacquisition_status")!=kind or record.get(
+                    "decision_sequence")!=state["attempted_decisions"]:
+                raise RoutingError("reacquisition outcome audit changed")
+        elif kind=="REMAINING_SCOPED_RELATION_PROBE_PREPARED":
+            if state["pending_decision"] is not None:
+                raise RoutingError("problem decision already pending")
+            observed=cls._observe_tie(state,record); p=state["problems"].get(record["problem_id"])
+            budget=p["route_budgets"].get("problem_scoped_relation_probe")
+            final=record["final_decision"]
+            if observed is not p or p["problem_id"]!="PR-0003" or p.get(
+                    "target_relation_reacquired") is not True or record.get("pre_state")!=1 or \
+                    budget is None or budget!={**budget,"limit":2,"granted":1,"executed":1} or \
+                    record.get("relation")!=budget["relation"] or \
+                    any(record["forecasts"][a].get("valid") is not True for a in ACTION_ORDER) or \
+                    final.get("mode")!="PROBLEM_SCOPED_PROBE" or final.get("action")!="ADVANCE" or \
+                    final.get("reason")!="GROUND_RELATION_FOR_SPECIALIST_SELECTION" or \
+                    final.get("abstained") is not False:
+                raise RoutingError("remaining scoped relation probe eligibility changed")
+            budget["granted"]+=1; p["route_request_count"]+=1
+            p["lifecycle_state"]="ROUTE_REQUESTED"
+            p["history"].append(dict(lifecycle_state="ROUTE_REQUESTED",
+                decision_sequence=record["decision_sequence"],
+                kind="REMAINING_SCOPED_RELATION_PROBE_PREPARED",
+                route="PROBLEM_SCOPED_RELATION_PROBE",relation=deepcopy(budget["relation"]),
+                reason="GROUND_RELATION_FOR_SPECIALIST_SELECTION"))
+            state["pending_decision"]={"decision_sequence":record["decision_sequence"],
+                "problem_id":"PR-0003","selected_route":"PROBLEM_SCOPED_RELATION_PROBE",
+                "action":"ADVANCE"}
         elif kind=="ROUTE_GATING_DEADLOCK_DETECTED":
             p=state["problems"].get(record.get("problem_id")); relation=record.get("relation",{})
             if not p or p["problem_id"]!="PR-0003" or p.get(
@@ -1047,8 +1170,10 @@ class ProblemManager:
                     routing_evidence=routing_compact)
         pending=self.state.get("pending_decision") or {}
         kind=("SCOPED_RELATION_PROBE_EXECUTED" if pending.get(
-            "selected_route")=="PROBLEM_SCOPED_RELATION_PROBE"
-            else "LIVE_DECISION_COMPLETED")
+            "selected_route")=="PROBLEM_SCOPED_RELATION_PROBE" else
+            "GROUNDED_RELATION_REACQUISITION_EXECUTED" if pending.get(
+            "selected_route")=="GROUNDED_RELATION_REACQUISITION" else
+            "LIVE_DECISION_COMPLETED")
         self._append(kind,record)
         if kind=="SCOPED_RELATION_PROBE_EXECUTED" and row["status"]=="AUTHORIZED":
             routing=row["routing_evidence"]
@@ -1061,6 +1186,16 @@ class ProblemManager:
                 switch_threshold_satisfied=(routing["router_score_after"]["G2"]["total"]>=3
                     and abs(routing["router_score_after"]["G2"]["correct"]-
                             routing["router_score_after"]["G3"]["correct"])>=2)))
+        elif kind=="GROUNDED_RELATION_REACQUISITION_EXECUTED" and row[
+                "status"]=="AUTHORIZED":
+            receipt=row["receipt"]
+            outcome=("TARGET_RELATION_REACQUIRED" if receipt["next_state"]==1 else
+                     "REACQUISITION_TRANSITION_CONTRADICTED")
+            self._append(outcome,dict(problem_id="PR-0003",
+                decision_sequence=row["prediction_batch_sequence"],
+                receipt_identity=[receipt[k] for k in (
+                    "source_identity","event_id","epoch","transaction_id")],
+                realized_next_state=receipt["next_state"]))
         self.bind_session(store)
         return deepcopy(record)
 
@@ -1109,6 +1244,91 @@ class ProblemManager:
             creates_receipt=False,trains_model=False)
         self._apply(deepcopy(self.state),"ROUTE_GATING_DEADLOCK_DETECTED",record)
         return self._append("ROUTE_GATING_DEADLOCK_DETECTED",record)
+
+    def record_target_relation_not_current(self, *, problem_id: str,
+                                           target_relation: dict,
+                                           current_state: int):
+        record=dict(problem_id=problem_id,target_relation=deepcopy(target_relation),
+            current_state=current_state,condition="TARGET_RELATION_NOT_CURRENT",
+            authoritative=False,controls_execution=False,creates_receipt=False,
+            trains_model=False)
+        self._apply(deepcopy(self.state),"TARGET_RELATION_NOT_CURRENT",record)
+        return self._append("TARGET_RELATION_NOT_CURRENT",record)
+
+    def authorize_grounded_relation_reacquisition(self, *, problem_id: str,
+            target_relation: dict, selected_action: str,
+            supporting_receipt_identity: list, authorization_sha256: str,
+            graph_sha256: str):
+        if len(authorization_sha256)!=64 or len(graph_sha256)!=64:
+            raise RoutingError("invalid reacquisition authorization identity")
+        record=dict(problem_id=problem_id,target_relation=deepcopy(target_relation),
+            target_state=target_relation["pre_state"],selected_action=selected_action,
+            supporting_receipt_identity=deepcopy(supporting_receipt_identity),
+            authorization_sha256=authorization_sha256,graph_sha256=graph_sha256,
+            maximum_executions=1,graph_source="AUTHENTICATED_REALIZED_RECEIPTS",
+            reason="REACQUIRE_TARGET_RELATION_STATE",global_navigation=False,
+            authoritative=False,controls_execution=False,creates_receipt=False,
+            alters_memory=False,changes_prediction=False,trains_model=False,
+            alters_simulator=False)
+        self._apply(deepcopy(self.state),
+                    "GROUNDED_RELATION_REACQUISITION_AUTHORIZED",record)
+        return self._append("GROUNDED_RELATION_REACQUISITION_AUTHORIZED",record)
+
+    def prepare_grounded_relation_reacquisition(self, *, store,
+            ordinary_decision: dict, pre_state: int, forecasts: dict,
+            supporting_receipt: dict, problem_id: str="PR-0003") -> dict:
+        self.bind_session(store)
+        p=self.state["problems"].get(problem_id); budget=(None if not p else
+            p.get("route_budgets",{}).get("grounded_relation_reacquisition"))
+        if budget is None:
+            raise RoutingError("reacquisition route is not authorized")
+        final=deepcopy(ordinary_decision)
+        final.update(mode="PROBLEM_SCOPED_NAVIGATION",
+            action=budget["selected_action"],abstained=False,
+            reason="REACQUIRE_TARGET_RELATION_STATE",problem_id=problem_id,
+            ordinary_decision_sha256=digest(ordinary_decision),
+            route_broker={"selected_route":"GROUNDED_RELATION_REACQUISITION",
+                "broker_result":"EXPLICIT_V021_PROBLEM_SCOPED_AUTHORIZATION",
+                "target_state":1,"authoritative":False,"global":False})
+        record=dict(decision_sequence=ordinary_decision["decision_sequence"],
+            problem_id=problem_id,current_state=pre_state,target_state=1,
+            target_relation=relation_identity(1,"ADVANCE"),
+            selected_navigation_action=budget["selected_action"],
+            supporting_authenticated_transition_receipt=deepcopy(supporting_receipt),
+            reason="REACQUIRE_TARGET_RELATION_STATE",
+            ordinary_decision=deepcopy(ordinary_decision),forecasts=deepcopy(forecasts),
+            final_decision=deepcopy(final),hidden_regime_available=False,
+            simulator_law_available=False,predicted_transition_used=False,
+            consequence_value_used_for_selection=False,future_receipt_available=False,
+            frozen_before_external_execution=True)
+        self._apply(deepcopy(self.state),
+                    "RELATION_REACQUISITION_DECISION_FROZEN",record)
+        self._append("RELATION_REACQUISITION_DECISION_FROZEN",record)
+        return final
+
+    def prepare_remaining_scoped_relation_probe(self, *, store,
+            ordinary_decision: dict, pre_state: int, forecasts: dict,
+            problem_id: str="PR-0003") -> dict:
+        self.bind_session(store); relation=relation_identity(1,"ADVANCE")
+        final=deepcopy(ordinary_decision)
+        final.update(mode="PROBLEM_SCOPED_PROBE",action="ADVANCE",abstained=False,
+            reason="GROUND_RELATION_FOR_SPECIALIST_SELECTION",problem_id=problem_id,
+            ordinary_decision_sha256=digest(ordinary_decision),
+            route_broker={"selected_route":"PROBLEM_SCOPED_RELATION_PROBE",
+                "broker_result":"REMAINING_V020_PROBE_AFTER_V021_REACQUISITION",
+                "requested_capability":"MORE_RELATION_EVIDENCE",
+                "authoritative":False,"global_probe_policy_changed":False})
+        record=dict(decision_sequence=ordinary_decision["decision_sequence"],
+            pre_state=pre_state,ordinary_decision=deepcopy(ordinary_decision),
+            forecasts=deepcopy(forecasts),problem_id=problem_id,relation=relation,
+            selected_action="ADVANCE",final_decision=deepcopy(final),
+            hidden_regime_available=False,simulator_law_available=False,
+            future_consequence_available=False,counterfactual_outcomes_available=False,
+            hidden_transition_destination_used=False)
+        self._apply(deepcopy(self.state),
+                    "REMAINING_SCOPED_RELATION_PROBE_PREPARED",record)
+        self._append("REMAINING_SCOPED_RELATION_PROBE_PREPARED",record)
+        return final
 
     def authorize_scoped_relation_evidence(self, *, problem_id: str, relation: dict,
                                             authorization_sha256: str,
