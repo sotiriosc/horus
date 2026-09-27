@@ -1,0 +1,237 @@
+{
+  "events": [
+    {
+      "hmac_sha256": "37c0814ae85c202d41ac5ae97cad2d839130cee18c5a08b6e731f65102306ab7",
+      "previous_sha256": null,
+      "record": {
+        "allowed_capabilities": [
+          "RESTART_MODEL_SERVICE",
+          "VERIFY_MODEL_ARTIFACT",
+          "REISSUE_UNEXECUTED_PREDICTION_REQUEST"
+        ],
+        "decision_unresolved": true,
+        "eight_sibling_predictions_retained": true,
+        "exact_request_bytes_retained": true,
+        "external_action_after_failure": false,
+        "logical_prediction_identity": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:J",
+        "memory_after_failure": false,
+        "original_failure": "TimeoutError",
+        "original_request_sha256": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f",
+        "original_transport_bytes_sha256": "ca5407171f21954fef0ee767b329cb14e6ecb2dc6c8559bc26b4b527c793870b",
+        "receipt_after_failure": false,
+        "recorded_at": "2026-09-27T00:08:05.072447+00:00",
+        "requested_capability": "EXTERNAL_SERVICE_REPAIR",
+        "routing_evidence_after_failure": false
+      },
+      "sequence": 1,
+      "state": "REQUESTED"
+    },
+    {
+      "hmac_sha256": "ca21fdcafe78887c710d99d612eabe89afb1ac734744c378c6d9fd8f0abe525c",
+      "previous_sha256": "edffe102a5f4c1761d8264162cd59d7062c88114fdba5660e50458e9ac2460b3",
+      "record": {
+        "authority_class": "OPERATIONAL_REPAIR_ROUTE",
+        "authorization_sha256": "0a48ac629e7c5c5b8bb30ff4a9ec61cde7a56a4d3a7839ae46d8672dafc6d459",
+        "authorized": true,
+        "can_add_routing_evidence": false,
+        "can_change_architecture": false,
+        "can_change_objective": false,
+        "can_create_receipt": false,
+        "can_create_training_target": false,
+        "can_execute_world_action": false,
+        "can_publish_memory": false,
+        "can_train": false,
+        "capabilities": [
+          "RESTART_MODEL_SERVICE",
+          "VERIFY_MODEL_ARTIFACT",
+          "REISSUE_UNEXECUTED_PREDICTION_REQUEST"
+        ],
+        "recorded_at": "2026-09-27T00:08:05.182827+00:00"
+      },
+      "sequence": 2,
+      "state": "AUTHORIZED"
+    },
+    {
+      "hmac_sha256": "93ebe8645724661e7f554bbbae9b5075f41af438c2719c9024dd1aa22849d440",
+      "previous_sha256": "46593668ba74208f810542963424c48804aade857251bbb638505485ef61c7d6",
+      "record": {
+        "recorded_at": "2026-09-27T00:08:05.214165+00:00",
+        "restart_count": 1,
+        "service_metadata": {
+          "command": [
+            "ollama",
+            "serve"
+          ],
+          "persistent": true,
+          "prior_service_pids": [
+            722756
+          ]
+        }
+      },
+      "sequence": 3,
+      "state": "REPAIR_ATTEMPTED"
+    },
+    {
+      "hmac_sha256": "c5a1c5f6415468faeb7f540d1e58b83bdc3cc407adf7f00ca5122e3ddffda6f9",
+      "previous_sha256": "66c5c2abe2d698662fc6723c858ea801916bf1ea03323fbd38b9b60f9dee10d7",
+      "record": {
+        "artifact_verification": {
+          "all_artifacts_hash_verified": true,
+          "blobs": [
+            {
+              "media_type": "application/vnd.docker.container.image.v1+json",
+              "sha256": "368364f689573ccfe29939353f655f3a153acc0646b2e21f65a4231330b7537a",
+              "size": 484
+            },
+            {
+              "media_type": "application/vnd.ollama.image.model",
+              "sha256": "bdb11b0699e03d791f0accd97279989d810d79615c6cf5ac21fb68e8f33e8ca3",
+              "size": 26441544128
+            },
+            {
+              "media_type": "application/vnd.ollama.image.template",
+              "sha256": "a47b02e00552cd7022ea700b1abf8c572bb26c9bc8c1a37e01b566f2344df5dc",
+              "size": 106
+            },
+            {
+              "media_type": "application/vnd.ollama.image.system",
+              "sha256": "9640c2212a51f7df5840f7929448afa17cb33fbb173cf15e1d74883e932a3466",
+              "size": 41
+            },
+            {
+              "media_type": "application/vnd.ollama.image.params",
+              "sha256": "58ca659992b02d65b647752bb49f240dea3751194fa0e2e6426d7b121e77e462",
+              "size": 97
+            }
+          ],
+          "manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+          "model": "dolphin-mixtral:latest"
+        },
+        "health_parse": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "health_parse_valid": true,
+        "health_request_is_behavioral_evidence": false,
+        "health_request_sha256": "eeeb0c79a4d1674cf6870b77e3819412d1cb2638f9fe39ca075753c4e2cea435",
+        "health_response_sha256": "f3779421eedc12a7660f2b2c52058aad4a3c14472ef5eb1acd81c70cd8d3d2f9",
+        "health_transport_error": null,
+        "listener_alive": true,
+        "model": "dolphin-mixtral:latest",
+        "model_manifest_sha256": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+        "persistent_process_alive": true,
+        "recorded_at": "2026-09-27T00:08:47.732491+00:00",
+        "service_instance": {
+          "command": [
+            "ollama",
+            "serve"
+          ],
+          "listener": "127.0.0.1:11434",
+          "listener_alive": true,
+          "log_sha256": "c172602cdfdf880c917d88d40cd4e6f9ac098c8d888f81c8ca6de1cb24851599",
+          "persistent_process_alive": true,
+          "pid": 918574
+        }
+      },
+      "sequence": 4,
+      "state": "REPAIR_SUCCEEDED"
+    },
+    {
+      "hmac_sha256": "b7a485c2f34ebfca44982e67c86c7374ed76e138be78dc994f32209897e2e0a5",
+      "previous_sha256": "9507c5c39ac40ea6436ab6abf846dde003f9e36fc7a2b1e95805709fabd57c6c",
+      "record": {
+        "logical_prediction_identity": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:J",
+        "recorded_at": "2026-09-27T00:08:47.763335+00:00",
+        "request_sha256": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f",
+        "transport_attempt": 2,
+        "transport_attempt_identity": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:J:transport:2",
+        "transport_bytes_sha256": "ca5407171f21954fef0ee767b329cb14e6ecb2dc6c8559bc26b4b527c793870b"
+      },
+      "sequence": 5,
+      "state": "REISSUE_ATTEMPTED"
+    },
+    {
+      "hmac_sha256": "aad330337a5c7e7f89e6ce3a33442eaa73950c3175dc359f38428203e8b33c7b",
+      "previous_sha256": "8663ba93c1fe6753f90522af330cf696e508ccbf5c225ae15838324f2eaaaf7d",
+      "record": {
+        "action": null,
+        "receipt_identity": null,
+        "recorded_at": "2026-09-27T00:09:16.145897+00:00",
+        "repair_event_is_world_evidence": false,
+        "resumed_decision_sequence": 88,
+        "status": "ABSTAINED"
+      },
+      "sequence": 6,
+      "state": "RESUMED"
+    }
+  ],
+  "identity": "HORUS_V018_REPAIR_LIFECYCLE",
+  "local_executable_path_included": false,
+  "private_attempt_count": 2,
+  "private_requests_or_outputs_included": false,
+  "state": {
+    "created_at": "2026-09-27T00:08:05.068172+00:00",
+    "lifecycle_state": "RESUMED",
+    "logical_prediction_identity": "a67e675004193a13c31485bad53fbb86:e2012:option-profile-integration:d87:RETREAT:J",
+    "original_failed_response_sha256": "9e177280df0d138c5d65e05b99bb075132b0ea61e91123edd18f9234f9a87a97",
+    "original_request_sha256": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f",
+    "original_transport_bytes_sha256": "ca5407171f21954fef0ee767b329cb14e6ecb2dc6c8559bc26b4b527c793870b",
+    "reissue_count": 1,
+    "repair_failed": false,
+    "restart_count": 1,
+    "resumed": true,
+    "source_calls_head_sha256": "6ab7225c10e65a87e74546ba192405ab34504f07a3938341a35e165d654bbb20",
+    "source_checkpoint": {
+      "attempted_decisions": 87,
+      "completed_steps": 55,
+      "created_at": "2026-09-26T13:28:37.129148+00:00",
+      "current_epoch": 2012,
+      "current_source_identity": "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+      "current_state": 1,
+      "external_regime_version": "A",
+      "next_transaction_id": 2,
+      "regime_history": [
+        {
+          "configured_at": "2026-09-26T13:28:37.145166+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 0,
+          "version": "A"
+        },
+        {
+          "configured_at": "2026-09-26T13:52:59.126435+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 17,
+          "version": "B"
+        },
+        {
+          "configured_at": "2026-09-26T14:18:12.766559+00:00",
+          "model_visible": false,
+          "starts_after_completed_step": 33,
+          "version": "A"
+        }
+      ],
+      "runtime_index": 12,
+      "session_id": "a67e675004193a13c31485bad53fbb86",
+      "streams": {
+        "calls": {
+          "count": 2448,
+          "head_sha256": "6ab7225c10e65a87e74546ba192405ab34504f07a3938341a35e165d654bbb20"
+        },
+        "events": {
+          "count": 55,
+          "head_sha256": "d6ef874b61b1720a13664ff761a2511ea84fc15256e23cf2c50bf07d691baece"
+        },
+        "training": {
+          "count": 90,
+          "head_sha256": "2203bbb248f2cf345798861ebbf2205d6cbb2bf7557abd51d5084d15a794dd5a"
+        }
+      },
+      "updated_at": "2026-09-26T23:13:39.634842+00:00",
+      "version": 1
+    },
+    "stream_count": 6,
+    "stream_head_sha256": "83126901296e433b35ea3916343978962c6d7545d28b4914387cf466ecc1506c",
+    "updated_at": "2026-09-27T00:09:16.149299+00:00",
+    "version": 1
+  }
+}
