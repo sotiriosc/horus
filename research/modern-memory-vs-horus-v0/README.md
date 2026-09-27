@@ -21,3 +21,11 @@ python -m experiments.modern_memory_vs_horus_v0.analyze \
 python -m experiments.modern_memory_vs_horus_v0.replay \
   --output research/modern-memory-vs-horus-v0/evidence
 ```
+
+The live campaign stopped under the frozen no-retry rule before reaching the
+ordinary analyzer. Its authoritative zero-inference stopped-campaign replay is:
+
+```bash
+python -m experiments.modern_memory_vs_horus_v0.invalid_replay \
+  --output research/modern-memory-vs-horus-v0/evidence
+```

@@ -1,0 +1,99 @@
+{
+  "campaign_restarted": false,
+  "classification": "INVALID",
+  "completed_scope": {
+    "fresh_process_restart_reached": false,
+    "registered_perturbation_reached": false,
+    "stage_a_M_only_event": 5,
+    "stage_a_matched_events": 4,
+    "stage_a_target_events": 12,
+    "stage_b_reached": false
+  },
+  "conditions": {
+    "M": {
+      "actions": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD"
+      ],
+      "authenticated_events": 5,
+      "call_errors": {},
+      "checkpoint_registered_call_records": 90,
+      "complete_call_chains": true,
+      "completed_scored_events": 5,
+      "consequence_correct": 4,
+      "elapsed_recorded_seconds": 932.095672,
+      "exact_correct": 4,
+      "issued_model_calls": 30,
+      "physical_call_records": 90,
+      "realized_consequences": [
+        1,
+        1,
+        1,
+        1,
+        -1
+      ]
+    },
+    "MH": {
+      "actions": [
+        "HOLD",
+        "HOLD",
+        "HOLD",
+        "HOLD"
+      ],
+      "authenticated_events": 4,
+      "call_errors": {
+        "TimeoutError": 1
+      },
+      "checkpoint_registered_call_records": 108,
+      "complete_call_chains": true,
+      "completed_scored_events": 4,
+      "consequence_correct": 4,
+      "elapsed_recorded_seconds": 1534.528197,
+      "exact_correct": 4,
+      "issued_model_calls": 45,
+      "physical_call_records": 135,
+      "realized_consequences": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "failure": {
+    "action": "ADVANCE",
+    "call_id": "A:05:MH:ADVANCE:J",
+    "condition": "MH",
+    "event": 5,
+    "memory_published": false,
+    "policy_result": "FAIL_CLOSED_NO_EXECUTION",
+    "receipt_created": false,
+    "role": "joint-next-state",
+    "routing_evidence_created": false,
+    "stage": "A",
+    "strict_parser_result": "INVALID",
+    "transport_error": "TimeoutError"
+  },
+  "inference_retried": false,
+  "intervention_ledger": [],
+  "metrics_not_estimable": [
+    "adaptation_latency",
+    "restoration_latency",
+    "endurance_windows",
+    "autonomous_trajectory",
+    "full_component_attribution"
+  ],
+  "narrow_observation": "Current Horus failed closed on an incomplete Map batch. The planned Horus-versus-modern-memory capability comparison is not interpretable.",
+  "protected_harness": {
+    "authenticated_streams_replay": true,
+    "failed_MH_execution_created_receipt": false,
+    "original_receipt_identity_retained": true,
+    "status": "PASS_THROUGH_FAILURE_BOUNDARY",
+    "unauthorized_evidence_admitted": false
+  },
+  "reason": "MATCHED_STAGE_A_SEQUENCE_BROKEN_BY_UNPLANNED_JOINT_TRANSPORT_TIMEOUT",
+  "status": "STOPPED"
+}
