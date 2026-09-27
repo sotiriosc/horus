@@ -1,0 +1,82 @@
+{
+  "authenticated_source_replay": {
+    "explorer_confidence": true,
+    "problem_manager": true,
+    "relation_routing": true,
+    "session": true
+  },
+  "authorization_sha256": "2a8f926fa087a108f75c3cc1b778102e5746c61e42b455ed5410f89df8c13ebe",
+  "frozen_reason": "GROUND_RELATION_FOR_SPECIALIST_SELECTION",
+  "generated_at": "2026-09-27T01:02:48.192438+00:00",
+  "global_probe_policy_changed": false,
+  "gpu_preflight": {
+    "available": true,
+    "device": "NVIDIA GeForce RTX 4090",
+    "memory_free_mib": 22670
+  },
+  "identity": "HORUS_V020_PREFLIGHT",
+  "live_execution_started": false,
+  "local_model_service": {
+    "available": true,
+    "model": "dolphin-mixtral:latest"
+  },
+  "maximum_behavioral_decisions": 3,
+  "maximum_model_calls": 27,
+  "maximum_ordinary_followups": 1,
+  "maximum_scoped_probes": 2,
+  "model_calls_per_decision": 9,
+  "parent_commit": "a5472be42355c45e4accb85142f6d3d83cfa2083",
+  "policy_sha256": "a216c1b9ab49ccf9885024bd620c618f5eb07d95adb2baf3df071ed6fcefcc2a",
+  "preregistration_sha256": "55ab4af1bc215480090b73255a0cd2da1fd8ea0e0372dbc117739dc6316f39c7",
+  "private_paths_in_public_evidence": false,
+  "request_event_sha256": "d7def109cc5564d0c6e29e0f029ece62090e0168f631b58b4b8cb7efd713281c",
+  "source_endpoint": {
+    "attempted_decisions": 88,
+    "authorized_executions": 55,
+    "call_stream_records": 2448,
+    "manager_records": 48,
+    "routing_records": 55
+  },
+  "status": "PASS",
+  "tests": {
+    "core_regression_steps": {
+      "failed": 0,
+      "passed": 53
+    },
+    "full_repository_tests": {
+      "failed": 0,
+      "passed": 262
+    },
+    "scoped_route_properties": {
+      "failed": 0,
+      "passed": 15
+    }
+  },
+  "zero_inference_deadlock_proof": {
+    "abstention_changes_authorized_decisions": false,
+    "abstention_changes_last_probe": false,
+    "abstentions_advance_cadence": false,
+    "authorized_decisions": 55,
+    "blocking_condition": "RELATION_PROBE_CADENCE",
+    "classification": "ROUTE_GATING_DEADLOCK",
+    "distance": 2,
+    "exact_problem_scope": true,
+    "identity": "HORUS_V020_ZERO_INFERENCE_DEADLOCK_PROOF",
+    "inference_calls": 0,
+    "last_probe_authorized_decision": 54,
+    "minimum_distance": 3,
+    "next_authorized_decision": 56,
+    "problem_id": "PR-0003",
+    "relation": {
+      "action": "ADVANCE",
+      "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+      "pre_state": 1
+    },
+    "repeated_abstention_distance": 2,
+    "request_event_sha256": "d7def109cc5564d0c6e29e0f029ece62090e0168f631b58b4b8cb7efd713281c",
+    "requested_capability": "MORE_RELATION_EVIDENCE",
+    "source_manager_stream_count": 48,
+    "training_runs": 0,
+    "world_executions": 0
+  }
+}
