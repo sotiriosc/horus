@@ -1,0 +1,2335 @@
+{
+  "conditions": {
+    "L": {
+      "calls": 12,
+      "current_state": 1,
+      "events": 12,
+      "memory": {
+        "database_sha256": "8621ec6d15cdc93b350a7c18a2b91bed73e8dc4a196d42eb88a6fb18fd54480a",
+        "event_count": 12,
+        "event_store_sha256": "70a799213505d2ed30120da593506899e16ebabcefa9b7a4e491c1f61a977295",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "32c5f27159ebe0327d19dcaa953efb21d518558955678ee5c83922658edafa4c",
+        "checkpoint.json": "9c5f21904bfaa2675adc384ff1b4620f4ad6ae4dd63126e2dfe149aaeac65c8d",
+        "events.jsonl": "3cc7023036f4a6bf00659d485ae9283f2a17f605301445178f8d3ce1425a2959",
+        "model-calls.private.jsonl": "af954425e28554e4174f5ad266df48f9067fdf3565aeb9ed88f27b321141751f",
+        "training-records.jsonl": "594bab644abbfbcabcd7989d6934d75d7063f931183572480ee63aa1efad6c53"
+      },
+      "training": 12
+    },
+    "M": {
+      "calls": 132,
+      "current_state": 1,
+      "events": 12,
+      "memory": {
+        "database_sha256": "33b084e7b00f21ebe091e45f377aa31794e1589603219fa880d6164a1c1deb03",
+        "event_count": 12,
+        "event_store_sha256": "93b519e9c473a64315bffad2cda44a26611d32c49d58bf83430f2bf2a57eecfb",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "6f773ace538c4bf39300f80977a63c0f787ea895ebcb7bc39f5c6b66c8e69975",
+        "checkpoint.json": "1e733e93694814bc49c4e96c4d0ab6438aaae22e0867d7ba85067515531f29aa",
+        "events.jsonl": "6f90b41ccc990c09a11d5d285c604f11315704a2e06e670bee8525c44052e07b",
+        "model-calls.private.jsonl": "f9f5c3f45bb8420c5c144f4f25ad20b55f33cd3df7131e2c477ebb15427c39ff",
+        "training-records.jsonl": "c9d702e839361f20aa759df4fdb3f69288d38c3f12208a46ee4a179b542fd88c"
+      },
+      "training": 12
+    },
+    "R3": {
+      "calls": 12,
+      "current_state": 1,
+      "events": 12,
+      "memory": {
+        "database_sha256": "5115605f7a64e6b612756b930162b2999664c0e30281077e01610775f9b3b279",
+        "event_count": 12,
+        "event_store_sha256": "0a64e63fa116cbee325d8e12ca7599a60a3caef52a6cb55b104a0958d515736a",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "49ee54335ad31230ab79267649a9fd7bb3fa33dfe5fcf7ffa088c40247fd4755",
+        "checkpoint.json": "440be1cfdffcc45684856da5ad103baee697af9ee864e99947bea72b841e4669",
+        "events.jsonl": "5261a864726fa3c67ab783570b507b221c7926cb7ad72683ef068359603df77b",
+        "model-calls.private.jsonl": "0de735fe2bbee1fcf32ae0288ed09cc7127a4bd3bbed33774d29634b66452a5e",
+        "training-records.jsonl": "a005979476937814435d34bc4357d466ad81d12bffa8c6a62d6f75fa46327794"
+      },
+      "training": 12
+    }
+  },
+  "perturbation": null,
+  "restart": null,
+  "rows": [
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "event_stream_head_sha256": "ce6889d8c2ac7c5894384db4855372e6ba3d58813acde2464f6e631007552412",
+          "order": 1,
+          "relation": "1:HOLD"
+        },
+        "event": 1,
+        "event_stream_head_sha256": "ce6889d8c2ac7c5894384db4855372e6ba3d58813acde2464f6e631007552412",
+        "event_stream_sequence": 1,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00027947998023591936,
+        "model_supplied_memories": [],
+        "observation_id": "C:01:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064",
+          1,
+          2001,
+          1
+        ],
+        "receipt_provenance_sha256": "5914194902a615308f297cbc4c214183001939e1167df06499daffcb090d5e46",
+        "rule": "COLD_START_NEUTRAL_ZERO_AND_IDENTITY_STATE",
+        "schedule": "C",
+        "selected_consequences": [],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [],
+        "window_consequences": []
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 42,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "event_stream_head_sha256": "580188f1806076a8390f3a972cc0dc0fb0cee225fc95ca2146555c4dcfefcd10",
+          "order": 1,
+          "relation": "1:HOLD"
+        },
+        "event": 1,
+        "event_stream_head_sha256": "580188f1806076a8390f3a972cc0dc0fb0cee225fc95ca2146555c4dcfefcd10",
+        "event_stream_sequence": 1,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 8.053763686999446,
+        "model_supplied_memories": [],
+        "observation_id": "C:01:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f",
+          1,
+          2001,
+          1
+        ],
+        "receipt_provenance_sha256": "3270c5a3023f0b6f8a05f0400174e5a4aeadcff18931a322fcee88151097fd7d",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "event_stream_head_sha256": "2fc1d82690d0ff27dc33a0af42fd669c23e7767512809c0d1475c23e24a920af",
+          "order": 1,
+          "relation": "1:HOLD"
+        },
+        "event": 1,
+        "event_stream_head_sha256": "2fc1d82690d0ff27dc33a0af42fd669c23e7767512809c0d1475c23e24a920af",
+        "event_stream_sequence": 1,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00022349698701873422,
+        "model_supplied_memories": [],
+        "observation_id": "C:01:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d",
+          1,
+          2001,
+          1
+        ],
+        "receipt_provenance_sha256": "441316fdb9966685cde286bd275b4f99a670105539df5da5708d190eea1000c3",
+        "rule": "COLD_START_NEUTRAL_ZERO_AND_IDENTITY_STATE",
+        "schedule": "C",
+        "selected_consequences": [],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [],
+        "window_consequences": []
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "event_stream_head_sha256": "fbabf47f09b670d2e67ac51cdfd27ff87fc6fe0f924e2cff141251ecb269fb81",
+          "order": 2,
+          "relation": "1:HOLD"
+        },
+        "event": 2,
+        "event_stream_head_sha256": "fbabf47f09b670d2e67ac51cdfd27ff87fc6fe0f924e2cff141251ecb269fb81",
+        "event_stream_sequence": 2,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00026309399981983006,
+        "model_supplied_memories": [],
+        "observation_id": "C:02:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064",
+          2,
+          2001,
+          2
+        ],
+        "receipt_provenance_sha256": "fecb671c56c6fda5b7d4200fed915932fc7889c941980222368ffab2e4d033c5",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 98,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "event_stream_head_sha256": "3b133f1b297a3aaf8d0c738b278771faad5fc188c9dbccec300bbd8cd4602ab2",
+          "order": 2,
+          "relation": "1:HOLD"
+        },
+        "event": 2,
+        "event_stream_head_sha256": "3b133f1b297a3aaf8d0c738b278771faad5fc188c9dbccec300bbd8cd4602ab2",
+        "event_stream_sequence": 2,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 9.225129605998518,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]"
+        ],
+        "observation_id": "C:02:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f",
+          2,
+          2001,
+          2
+        ],
+        "receipt_provenance_sha256": "807aa2c84357dee6581d52e8de9c4801a0ebeb051d36b2e407514ceddecbc83b",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "event_stream_head_sha256": "b7b03f494d7bcf62d8eff74c27b24db1a28acde08d47df0f5df83c41e99284fa",
+          "order": 2,
+          "relation": "1:HOLD"
+        },
+        "event": 2,
+        "event_stream_head_sha256": "b7b03f494d7bcf62d8eff74c27b24db1a28acde08d47df0f5df83c41e99284fa",
+        "event_stream_sequence": 2,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0005040520045440644,
+        "model_supplied_memories": [],
+        "observation_id": "C:02:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d",
+          2,
+          2001,
+          2
+        ],
+        "receipt_provenance_sha256": "43498d730b5dc97cca21c6b37ca8177dd4f1615d8a9b824bafb3bd21ebfbfad8",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "event_stream_head_sha256": "6ca295359670efe88f1ee338572c1504d663eaad91d238767d63dca36e0e9f3e",
+          "order": 3,
+          "relation": "1:HOLD"
+        },
+        "event": 3,
+        "event_stream_head_sha256": "6ca295359670efe88f1ee338572c1504d663eaad91d238767d63dca36e0e9f3e",
+        "event_stream_sequence": 3,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002422840043436736,
+        "model_supplied_memories": [],
+        "observation_id": "C:03:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064",
+          3,
+          2001,
+          3
+        ],
+        "receipt_provenance_sha256": "08a4a0d3e36a3381cba041267b1f0e719fe291ff3a9cc94d69a6f6d568734236",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 154,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "event_stream_head_sha256": "d9ade7a95ce3e4e103de58a10b5d3089c0a61db49a62c5518a8f7b2260d38eac",
+          "order": 3,
+          "relation": "1:HOLD"
+        },
+        "event": 3,
+        "event_stream_head_sha256": "d9ade7a95ce3e4e103de58a10b5d3089c0a61db49a62c5518a8f7b2260d38eac",
+        "event_stream_sequence": 3,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 11.037269285996445,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]"
+        ],
+        "observation_id": "C:03:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f",
+          3,
+          2001,
+          3
+        ],
+        "receipt_provenance_sha256": "eb110942409dd81e61754afa15b1f39e43bd0408c05ae4c5aa03fbeca48a37cc",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "event_stream_head_sha256": "f756d8eff6ff4251203ff22a1d5b23eb7ad420713247fe054ca8acc257170471",
+          "order": 3,
+          "relation": "1:HOLD"
+        },
+        "event": 3,
+        "event_stream_head_sha256": "f756d8eff6ff4251203ff22a1d5b23eb7ad420713247fe054ca8acc257170471",
+        "event_stream_sequence": 3,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002109569904860109,
+        "model_supplied_memories": [],
+        "observation_id": "C:03:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d",
+          3,
+          2001,
+          3
+        ],
+        "receipt_provenance_sha256": "9d34f5642e43d41e074817fe745fb4232ded3c8f1fe6a7902c6edccaaf5d695e",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]"
+        ],
+        "window_consequences": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "event_stream_head_sha256": "8bdfccb739db2eb40477842e31f225f8a101f77bd033261f7bf2ef11e9488dd5",
+          "order": 4,
+          "relation": "1:HOLD"
+        },
+        "event": 4,
+        "event_stream_head_sha256": "8bdfccb739db2eb40477842e31f225f8a101f77bd033261f7bf2ef11e9488dd5",
+        "event_stream_sequence": 4,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002099249977618456,
+        "model_supplied_memories": [],
+        "observation_id": "C:04:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064",
+          4,
+          2001,
+          4
+        ],
+        "receipt_provenance_sha256": "fb1e31b8320ce12912ddcb97339893bff12e3a46d91fcc18cbf6a3f14b1601f9",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 210,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "event_stream_head_sha256": "c39ebf1920a1d26f1076343a5c66bbadc88e08e09db94ddf035a090894b1c96b",
+          "order": 4,
+          "relation": "1:HOLD"
+        },
+        "event": 4,
+        "event_stream_head_sha256": "c39ebf1920a1d26f1076343a5c66bbadc88e08e09db94ddf035a090894b1c96b",
+        "event_stream_sequence": 4,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 12.44462511400343,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]"
+        ],
+        "observation_id": "C:04:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f",
+          4,
+          2001,
+          4
+        ],
+        "receipt_provenance_sha256": "a5995f365f1333b3ca22a859f22e5b9411ad9663cd4f5c6ad753e9fc450cbc76",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "event_stream_head_sha256": "9450b724691de833e4e1acc5ed587f1cd9f8161760b7f6e184f6c8287897d002",
+          "order": 4,
+          "relation": "1:HOLD"
+        },
+        "event": 4,
+        "event_stream_head_sha256": "9450b724691de833e4e1acc5ed587f1cd9f8161760b7f6e184f6c8287897d002",
+        "event_stream_sequence": 4,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00021411501802504063,
+        "model_supplied_memories": [],
+        "observation_id": "C:04:HOLD",
+        "phase": "STABLE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d",
+          4,
+          2001,
+          4
+        ],
+        "receipt_provenance_sha256": "9547bd3041ea279070085a42d069292970cc70e8ebb4e51cdb7e4e5d10fd4d33",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]"
+        ],
+        "window_consequences": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "event_stream_head_sha256": "4ce3175de8e231e7be02a66c7b7c33dada901421e7724760e62fdc1b402fd04c",
+          "order": 5,
+          "relation": "1:HOLD"
+        },
+        "event": 5,
+        "event_stream_head_sha256": "4ce3175de8e231e7be02a66c7b7c33dada901421e7724760e62fdc1b402fd04c",
+        "event_stream_sequence": 5,
+        "exact_correct": false,
+        "isolated_noise": true,
+        "model_calls": 0,
+        "model_seconds": 0.0002619889855850488,
+        "model_supplied_memories": [],
+        "observation_id": "C:05:HOLD",
+        "phase": "NOISE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44",
+          1,
+          2002,
+          1
+        ],
+        "receipt_provenance_sha256": "e058dca088b43c04428aa5e169b91e825a80327f39b6eb4aea12c778305fdd19",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": false,
+        "context_tokens": 266,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "event_stream_head_sha256": "03730f8192c7c7c3d95f0642a7a3b304227cc01c564fe1f6fdb9f3126e2ec0a5",
+          "order": 5,
+          "relation": "1:HOLD"
+        },
+        "event": 5,
+        "event_stream_head_sha256": "03730f8192c7c7c3d95f0642a7a3b304227cc01c564fe1f6fdb9f3126e2ec0a5",
+        "event_stream_sequence": 5,
+        "exact_correct": false,
+        "isolated_noise": true,
+        "model_calls": 2,
+        "model_seconds": 13.805434820998926,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]"
+        ],
+        "observation_id": "C:05:HOLD",
+        "phase": "NOISE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05",
+          1,
+          2002,
+          1
+        ],
+        "receipt_provenance_sha256": "2dd1081ba8ee149fd626586d6edb57f5e91f64245ef3c43be5acf85ee0cbb2eb",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "event_stream_head_sha256": "33f264445acad4795ff478d7e6068f41ebc1c52562ea0e01cc000b9b36b1b8e1",
+          "order": 5,
+          "relation": "1:HOLD"
+        },
+        "event": 5,
+        "event_stream_head_sha256": "33f264445acad4795ff478d7e6068f41ebc1c52562ea0e01cc000b9b36b1b8e1",
+        "event_stream_sequence": 5,
+        "exact_correct": false,
+        "isolated_noise": true,
+        "model_calls": 0,
+        "model_seconds": 0.0002341899962630123,
+        "model_supplied_memories": [],
+        "observation_id": "C:05:HOLD",
+        "phase": "NOISE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87",
+          1,
+          2002,
+          1
+        ],
+        "receipt_provenance_sha256": "0cd2f8eba09c03ea0e694863287feb0cbfd8b9feadaad8c08c1cb766f67d0590",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]"
+        ],
+        "window_consequences": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "event_stream_head_sha256": "478b989f10e1fa8fb0d4386a7a11c70b2347e2617e02513e01a087f417a994d3",
+          "order": 6,
+          "relation": "1:HOLD"
+        },
+        "event": 6,
+        "event_stream_head_sha256": "478b989f10e1fa8fb0d4386a7a11c70b2347e2617e02513e01a087f417a994d3",
+        "event_stream_sequence": 6,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00024548801593482494,
+        "model_supplied_memories": [],
+        "observation_id": "C:06:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1",
+          1,
+          2003,
+          1
+        ],
+        "receipt_provenance_sha256": "f8addf83688fedd587a2242fad7f37a79767bd72007242c5c910ff9ade33bc8e",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]"
+        ],
+        "window_consequences": [
+          -1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 322,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "event_stream_head_sha256": "ef55f9d7b1f437e87d0913d4a318f414603bcbbc2b57a28e00edba45d3d92704",
+          "order": 6,
+          "relation": "1:HOLD"
+        },
+        "event": 6,
+        "event_stream_head_sha256": "ef55f9d7b1f437e87d0913d4a318f414603bcbbc2b57a28e00edba45d3d92704",
+        "event_stream_sequence": 6,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 323.88023251801496,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]"
+        ],
+        "observation_id": "C:06:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079",
+          1,
+          2003,
+          1
+        ],
+        "receipt_provenance_sha256": "45964a6625840d25538be7e23c51b81fbd01d67a8484a219918a18cab8bc96dc",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "event_stream_head_sha256": "e998c8352072f58920b895c8d00431c88d38f5d2766688a3fc313233a64a9264",
+          "order": 6,
+          "relation": "1:HOLD"
+        },
+        "event": 6,
+        "event_stream_head_sha256": "e998c8352072f58920b895c8d00431c88d38f5d2766688a3fc313233a64a9264",
+        "event_stream_sequence": 6,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002822969981934875,
+        "model_supplied_memories": [],
+        "observation_id": "C:06:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294",
+          1,
+          2003,
+          1
+        ],
+        "receipt_provenance_sha256": "bf2d7938cbc814982e3d46f4c94d1aa83af85c87ff80a532a635a9f9204f9aae",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]"
+        ],
+        "window_consequences": [
+          1,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]",
+          "event_stream_head_sha256": "7ae64429daf4e5278c4a67c7242c81399c00a43122edd81ab358dc8ff66778db",
+          "order": 7,
+          "relation": "1:HOLD"
+        },
+        "event": 7,
+        "event_stream_head_sha256": "7ae64429daf4e5278c4a67c7242c81399c00a43122edd81ab358dc8ff66778db",
+        "event_stream_sequence": 7,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00030754899489693344,
+        "model_supplied_memories": [],
+        "observation_id": "C:07:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",1,2001,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1",
+          2,
+          2003,
+          2
+        ],
+        "receipt_provenance_sha256": "9f9f6248556c8cd74531332e4007eeed01e24512a0cd3fdfce79b117061247ca",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "event_stream_head_sha256": "14f52dab5a7de6551037c8de9c35997d4c3ce00127e7fb6b278f1781560506c4",
+          "order": 7,
+          "relation": "1:HOLD"
+        },
+        "event": 7,
+        "event_stream_head_sha256": "14f52dab5a7de6551037c8de9c35997d4c3ce00127e7fb6b278f1781560506c4",
+        "event_stream_sequence": 7,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 25.687292172020534,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]"
+        ],
+        "observation_id": "C:07:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079",
+          2,
+          2003,
+          2
+        ],
+        "receipt_provenance_sha256": "244a240e85fc5d6ec5a72997cd3ebeb3710299ab868e02415843c7ea4802bc98",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",1,2001,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "event_stream_head_sha256": "9a11a20de8dc76a12fb1d2655a918323aed71ed5d22f8ebe82fca4bf97ed9dd1",
+          "order": 7,
+          "relation": "1:HOLD"
+        },
+        "event": 7,
+        "event_stream_head_sha256": "9a11a20de8dc76a12fb1d2655a918323aed71ed5d22f8ebe82fca4bf97ed9dd1",
+        "event_stream_sequence": 7,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002558690030127764,
+        "model_supplied_memories": [],
+        "observation_id": "C:07:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",1,2001,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294",
+          2,
+          2003,
+          2
+        ],
+        "receipt_provenance_sha256": "2c6edb2998c0344a1dde2f0feeb2f041e1d8452d07b5b5945e50367915785b6c",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]"
+        ],
+        "window_consequences": [
+          1,
+          -1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]",
+          "event_stream_head_sha256": "518f83eeace3f74d35ec9842965692750e5ae08d46ce1901e7af18b1c917fd99",
+          "order": 8,
+          "relation": "1:HOLD"
+        },
+        "event": 8,
+        "event_stream_head_sha256": "518f83eeace3f74d35ec9842965692750e5ae08d46ce1901e7af18b1c917fd99",
+        "event_stream_sequence": 8,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00027500500436872244,
+        "model_supplied_memories": [],
+        "observation_id": "C:08:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",2,2001,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1",
+          3,
+          2003,
+          3
+        ],
+        "receipt_provenance_sha256": "06f2c5cc9f9720666d74293584311e16ebc0473de2acb4a48ecf42fc357ca57e",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": true,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "event_stream_head_sha256": "9f7bc217ce8615546b21201f711acfbf8ba0cee8d8b297be4c835b3f82f5a2e2",
+          "order": 8,
+          "relation": "1:HOLD"
+        },
+        "event": 8,
+        "event_stream_head_sha256": "9f7bc217ce8615546b21201f711acfbf8ba0cee8d8b297be4c835b3f82f5a2e2",
+        "event_stream_sequence": 8,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 21.66515526099829,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]"
+        ],
+        "observation_id": "C:08:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079",
+          3,
+          2003,
+          3
+        ],
+        "receipt_provenance_sha256": "209cb5ae42f6904cde96adac2d0b83d58bee5ea1d793f2d5c15813127b50c088",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",2,2001,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "event_stream_head_sha256": "244d0343b079eba31d23074029f291adec9e0d591e9d79b28cda83c60cac67f6",
+          "order": 8,
+          "relation": "1:HOLD"
+        },
+        "event": 8,
+        "event_stream_head_sha256": "244d0343b079eba31d23074029f291adec9e0d591e9d79b28cda83c60cac67f6",
+        "event_stream_sequence": 8,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00042653101263567805,
+        "model_supplied_memories": [],
+        "observation_id": "C:08:HOLD",
+        "phase": "RECOVERY",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",2,2001,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]"
+        ],
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294",
+          3,
+          2003,
+          3
+        ],
+        "receipt_provenance_sha256": "b741439e1d75b9834685eb274762b07a3c63a10d2a5ebdeebe58b370af4f177d",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]"
+        ],
+        "window_consequences": [
+          -1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",1,2004,1]",
+          "event_stream_head_sha256": "61cf6a7d8db82a85e6ccb0b764d26e2f705a57924614c6831823cfef5af7e325",
+          "order": 9,
+          "relation": "1:HOLD"
+        },
+        "event": 9,
+        "event_stream_head_sha256": "61cf6a7d8db82a85e6ccb0b764d26e2f705a57924614c6831823cfef5af7e325",
+        "event_stream_sequence": 9,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00026493900804780424,
+        "model_supplied_memories": [],
+        "observation_id": "C:09:HOLD",
+        "phase": "CHANGE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",3,2001,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e",
+          1,
+          2004,
+          1
+        ],
+        "receipt_provenance_sha256": "06eb1ae4de783332c08369574ed561727444f3ad53591f28977633a4bf1802ab",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]"
+        ],
+        "window_consequences": [
+          1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": false,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "event_stream_head_sha256": "e08e768b2a7a47ced5e1625d637510520e543b1298433352c69fc6d947a4e907",
+          "order": 9,
+          "relation": "1:HOLD"
+        },
+        "event": 9,
+        "event_stream_head_sha256": "e08e768b2a7a47ced5e1625d637510520e543b1298433352c69fc6d947a4e907",
+        "event_stream_sequence": 9,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 21.260333671001717,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]"
+        ],
+        "observation_id": "C:09:HOLD",
+        "phase": "CHANGE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218",
+          1,
+          2004,
+          1
+        ],
+        "receipt_provenance_sha256": "72b1b35c03686cac8c1a66f849d7830d497362b41f06dd75785cd5f0cfad8f1f",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",3,2001,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]",
+          "event_stream_head_sha256": "3695ac7c2ecaaaa49a607704adf5b7c0dd44b9a4266fd2fabdb1af74dabdb89c",
+          "order": 9,
+          "relation": "1:HOLD"
+        },
+        "event": 9,
+        "event_stream_head_sha256": "3695ac7c2ecaaaa49a607704adf5b7c0dd44b9a4266fd2fabdb1af74dabdb89c",
+        "event_stream_sequence": 9,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0002951479982584715,
+        "model_supplied_memories": [],
+        "observation_id": "C:09:HOLD",
+        "phase": "CHANGE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",3,2001,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f",
+          1,
+          2004,
+          1
+        ],
+        "receipt_provenance_sha256": "bfb05e07157b1e7acf0f372bc029ef0199d9fe06df1b3de4dd841bc20fbd6383",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]"
+        ],
+        "window_consequences": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",2,2004,2]",
+          "event_stream_head_sha256": "b90a45f7f9fafddb9f310f8cdd19d6c3a4c11d73eb6a8c59994e1c1ed84e8961",
+          "order": 10,
+          "relation": "1:HOLD"
+        },
+        "event": 10,
+        "event_stream_head_sha256": "b90a45f7f9fafddb9f310f8cdd19d6c3a4c11d73eb6a8c59994e1c1ed84e8961",
+        "event_stream_sequence": 10,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00029502500547096133,
+        "model_supplied_memories": [],
+        "observation_id": "C:10:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:1:48dde73a24f72064\",4,2001,4]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",1,2004,1]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e",
+          2,
+          2004,
+          2
+        ],
+        "receipt_provenance_sha256": "3a88110829674575b803d222e7ea57bd599d2eaadcd249beb771433c5e3cc324",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",1,2004,1]"
+        ],
+        "window_consequences": [
+          -1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": false,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]",
+          "event_stream_head_sha256": "8d9523337c52469c59080c6f2e86dad412c607502621a5569a58e9dee6b19067",
+          "order": 10,
+          "relation": "1:HOLD"
+        },
+        "event": 10,
+        "event_stream_head_sha256": "8d9523337c52469c59080c6f2e86dad412c607502621a5569a58e9dee6b19067",
+        "event_stream_sequence": 10,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 21.346012456982862,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]"
+        ],
+        "observation_id": "C:10:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218",
+          2,
+          2004,
+          2
+        ],
+        "receipt_provenance_sha256": "f1cb572d6eca3311ada1094cee77f6621e376539fc114b8df8472b350c9f517b",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:1:250abb2e690fe47f\",4,2001,4]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": false,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",2,2004,2]",
+          "event_stream_head_sha256": "2c196a45cb364f1b494a99c88edd1f427249945ac92677d5a2573d7e3d1277d0",
+          "order": 10,
+          "relation": "1:HOLD"
+        },
+        "event": 10,
+        "event_stream_head_sha256": "2c196a45cb364f1b494a99c88edd1f427249945ac92677d5a2573d7e3d1277d0",
+        "event_stream_sequence": 10,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00031984399538487196,
+        "model_supplied_memories": [],
+        "observation_id": "C:10:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:1:3d4a184bb5150b2d\",4,2001,4]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f",
+          2,
+          2004,
+          2
+        ],
+        "receipt_provenance_sha256": "309fc3a06b2cac29e025f17e1c1ae006397487c5cf04c72b8af3f56d286913c8",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]"
+        ],
+        "window_consequences": [
+          1,
+          1,
+          -1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",3,2004,3]",
+          "event_stream_head_sha256": "28f4aa316bf8e3dbf40abd18c32e6a07d514c95b652ae1c4bcd9ff872ac34264",
+          "order": 11,
+          "relation": "1:HOLD"
+        },
+        "event": 11,
+        "event_stream_head_sha256": "28f4aa316bf8e3dbf40abd18c32e6a07d514c95b652ae1c4bcd9ff872ac34264",
+        "event_stream_sequence": 11,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.00047017401084303856,
+        "model_supplied_memories": [],
+        "observation_id": "C:11:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:2:8debeb9132ca0b44\",1,2002,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",1,2004,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",2,2004,2]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e",
+          3,
+          2004,
+          3
+        ],
+        "receipt_provenance_sha256": "2662dd04d86e5e01dfa110ed01271a0cc2a94fa5fe616c235c46fe02f22440a4",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",2,2004,2]"
+        ],
+        "window_consequences": [
+          -1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": false,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",3,2004,3]",
+          "event_stream_head_sha256": "7ab211629d783fad6f43c9b057ebee44f581a97266b72f4b0ee836200246dd17",
+          "order": 11,
+          "relation": "1:HOLD"
+        },
+        "event": 11,
+        "event_stream_head_sha256": "7ab211629d783fad6f43c9b057ebee44f581a97266b72f4b0ee836200246dd17",
+        "event_stream_sequence": 11,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 22.320699556003092,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]"
+        ],
+        "observation_id": "C:11:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218",
+          3,
+          2004,
+          3
+        ],
+        "receipt_provenance_sha256": "2eb4b87d10985080954363dd9187ab64abfa26d1154e54fee6cad1356461d63b",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:2:cf86a644a7106b05\",1,2002,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",3,2004,3]",
+          "event_stream_head_sha256": "79529c4cdb6e087565d59612e292b32252940e53cc86d3ec57d57b91d7778609",
+          "order": 11,
+          "relation": "1:HOLD"
+        },
+        "event": 11,
+        "event_stream_head_sha256": "79529c4cdb6e087565d59612e292b32252940e53cc86d3ec57d57b91d7778609",
+        "event_stream_sequence": 11,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0003081390168517828,
+        "model_supplied_memories": [],
+        "observation_id": "C:11:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:2:5226f89413505a87\",1,2002,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",2,2004,2]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f",
+          3,
+          2004,
+          3
+        ],
+        "receipt_provenance_sha256": "171548bf562ef5fd7bcb7e6b85c01b4ef8783c4d4504d78eba8ac43ad5cfdd86",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",2,2004,2]"
+        ],
+        "window_consequences": [
+          1,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "L": {
+        "action": "HOLD",
+        "arm": "L",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",4,2004,4]",
+          "event_stream_head_sha256": "0867c2eb64fab391a8eeb77741ae7607cc593b557d6235f2b05d7f5ca0e566f8",
+          "order": 12,
+          "relation": "1:HOLD"
+        },
+        "event": 12,
+        "event_stream_head_sha256": "0867c2eb64fab391a8eeb77741ae7607cc593b557d6235f2b05d7f5ca0e566f8",
+        "event_stream_sequence": 12,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0004083579988218844,
+        "model_supplied_memories": [],
+        "observation_id": "C:12:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",1,2003,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",2,2003,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:3:7debcc7477c400a1\",3,2003,3]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",1,2004,1]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",2,2004,2]",
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",3,2004,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e",
+          4,
+          2004,
+          4
+        ],
+        "receipt_provenance_sha256": "a4c3bf0017ba65e62e4d5484b63ae2a272d552fab3975a8ce27cd248d0ac92fd",
+        "rule": "LATEST_AUTHENTICATED_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:d3ae2eab0d9527fca2ccbe667f29eeaf:runtime:4:94f81a4373a3ce2e\",3,2004,3]"
+        ],
+        "window_consequences": [
+          -1
+        ]
+      },
+      "M": {
+        "action": "HOLD",
+        "arm": "M",
+        "consequence_correct": false,
+        "context_tokens": 378,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",4,2004,4]",
+          "event_stream_head_sha256": "60c63d9327b60d8f434f0eb082e42b608521d40978e9928f7c7a4c2e96ba55c9",
+          "order": 12,
+          "relation": "1:HOLD"
+        },
+        "event": 12,
+        "event_stream_head_sha256": "60c63d9327b60d8f434f0eb082e42b608521d40978e9928f7c7a4c2e96ba55c9",
+        "event_stream_sequence": 12,
+        "exact_correct": false,
+        "isolated_noise": false,
+        "model_calls": 2,
+        "model_seconds": 21.663264530012384,
+        "model_supplied_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",3,2004,3]"
+        ],
+        "observation_id": "C:12:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",3,2004,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218",
+          4,
+          2004,
+          4
+        ],
+        "receipt_provenance_sha256": "e0b8c5ea6297d17b2cf8377e723fa927396f1b2c066f3c58ce3f4f2034c0039f",
+        "rule": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",1,2003,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",2,2003,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:3:e22164f53837b079\",3,2003,3]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",1,2004,1]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",2,2004,2]",
+          "[\"HORUS:fda32da2f9fe27d1c908238cf3545a62:runtime:4:a954c54b519ac218\",3,2004,3]"
+        ],
+        "window_consequences": null
+      },
+      "R3": {
+        "action": "HOLD",
+        "arm": "R3",
+        "consequence_correct": true,
+        "context_tokens": 0,
+        "durable_admission": {
+          "event_identity": "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",4,2004,4]",
+          "event_stream_head_sha256": "a74d0c85f6f976b7bb9b9f925d9550e13cf5b46ce10d045bf2a2e02ae7f065ae",
+          "order": 12,
+          "relation": "1:HOLD"
+        },
+        "event": 12,
+        "event_stream_head_sha256": "a74d0c85f6f976b7bb9b9f925d9550e13cf5b46ce10d045bf2a2e02ae7f065ae",
+        "event_stream_sequence": 12,
+        "exact_correct": true,
+        "isolated_noise": false,
+        "model_calls": 0,
+        "model_seconds": 0.0003322449920233339,
+        "model_supplied_memories": [],
+        "observation_id": "C:12:HOLD",
+        "phase": "PERSISTENCE",
+        "prediction": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "raw_eligible_memories": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",1,2003,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",2,2003,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:3:c5e9c5a6e5b3f294\",3,2003,3]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",2,2004,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",3,2004,3]"
+        ],
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f",
+          4,
+          2004,
+          4
+        ],
+        "receipt_provenance_sha256": "76b6155faf56c315cde005fe21cab104e8854bf0c11bcd6bd103da43a4c31b74",
+        "rule": "RECENT3_MAJORITY",
+        "schedule": "C",
+        "selected_consequences": [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "state": 1,
+        "status": "AUTHORIZED",
+        "used_event_identities": [
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",1,2004,1]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",2,2004,2]",
+          "[\"HORUS:a8c62ae9bd7fd7fa37ae5b4d64d47391:runtime:4:09a3ad56b02f321f\",3,2004,3]"
+        ],
+        "window_consequences": [
+          -1,
+          -1,
+          -1
+        ]
+      }
+    }
+  ],
+  "schedule": "C",
+  "stage": "C",
+  "status": "COMPLETE",
+  "wall_seconds": 515.3587683470105
+}
