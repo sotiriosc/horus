@@ -1,0 +1,810 @@
+{
+  "classification": "EXPLICIT_UNCERTAINTY_SUPPORTED",
+  "cold_start": {
+    "L": {
+      "correct": 1,
+      "events": 6
+    },
+    "M": {
+      "correct": 6,
+      "events": 6
+    },
+    "R3": {
+      "correct": 1,
+      "events": 6
+    },
+    "U": {
+      "correct": 1,
+      "events": 6
+    }
+  },
+  "conditions": [
+    "M",
+    "L",
+    "R3",
+    "U"
+  ],
+  "costs": {
+    "L": {
+      "context_tokens": 0,
+      "logical_model_calls": 0,
+      "mean_state_bytes": 0,
+      "mechanical_update_seconds": 0,
+      "preparation_seconds": 0.011873100971570238
+    },
+    "M": {
+      "context_tokens": 10122,
+      "logical_model_calls": 82,
+      "mean_state_bytes": 0,
+      "mechanical_update_seconds": 0,
+      "preparation_seconds": 1014.8311210570391
+    },
+    "R3": {
+      "context_tokens": 0,
+      "logical_model_calls": 0,
+      "mean_state_bytes": 0,
+      "mechanical_update_seconds": 0,
+      "preparation_seconds": 0.012345299939624965
+    },
+    "U": {
+      "context_tokens": 0,
+      "logical_model_calls": 0,
+      "mean_state_bytes": 1508.8048780487804,
+      "mechanical_update_seconds": 0.0013344109465833753,
+      "preparation_seconds": 0.01163975812960416
+    }
+  },
+  "events_per_arm": 41,
+  "information_boundary_audit": [
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ]
+      ],
+      "event": 4,
+      "matching_frozen_schedules": [
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "ANOMALY"
+        },
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "EXCURSION"
+        },
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "NOISE_THEN_CHANGE"
+        }
+      ],
+      "relation": "1:HOLD",
+      "schedule": "SUSTAINED",
+      "status": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ]
+      ],
+      "event": 8,
+      "matching_frozen_schedules": [],
+      "relation": "1:HOLD",
+      "schedule": "SUSTAINED",
+      "status": "NO_DIVERGENT_FROZEN_CONTINUATION_FOUND"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ]
+      ],
+      "event": 4,
+      "matching_frozen_schedules": [
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "SUSTAINED"
+        },
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "EXCURSION"
+        },
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "NOISE_THEN_CHANGE"
+        }
+      ],
+      "relation": "1:HOLD",
+      "schedule": "ANOMALY",
+      "status": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ]
+      ],
+      "event": 4,
+      "matching_frozen_schedules": [
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "SUSTAINED"
+        },
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "ANOMALY"
+        },
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "NOISE_THEN_CHANGE"
+        }
+      ],
+      "relation": "1:HOLD",
+      "schedule": "EXCURSION",
+      "status": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ]
+      ],
+      "event": 6,
+      "matching_frozen_schedules": [],
+      "relation": "1:HOLD",
+      "schedule": "EXCURSION",
+      "status": "NO_DIVERGENT_FROZEN_CONTINUATION_FOUND"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ]
+      ],
+      "event": 4,
+      "matching_frozen_schedules": [
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "SUSTAINED"
+        },
+        {
+          "next_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "schedule": "ANOMALY"
+        },
+        {
+          "next_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "schedule": "EXCURSION"
+        }
+      ],
+      "relation": "1:HOLD",
+      "schedule": "NOISE_THEN_CHANGE",
+      "status": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ]
+      ],
+      "event": 7,
+      "matching_frozen_schedules": [],
+      "relation": "1:HOLD",
+      "schedule": "NOISE_THEN_CHANGE",
+      "status": "NO_DIVERGENT_FROZEN_CONTINUATION_FOUND"
+    },
+    {
+      "available_relation_history": [
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          -1
+        ],
+        [
+          1,
+          "HOLD",
+          1,
+          1
+        ]
+      ],
+      "event": 11,
+      "matching_frozen_schedules": [],
+      "relation": "1:HOLD",
+      "schedule": "NOISE_THEN_CHANGE",
+      "status": "NO_DIVERGENT_FROZEN_CONTINUATION_FOUND"
+    }
+  ],
+  "limitations": [
+    "Small deterministic protected simulation; no population inference.",
+    "Hidden regime labels are known only for scoring; receipt-only U does not see them.",
+    "Two consecutive identical receipts confirm by rule but cannot prove indefinite persistence.",
+    "Forced point accuracy does not measure epistemic state quality.",
+    "No additional context was given to M for contradictory histories."
+  ],
+  "model_call_ceiling": {
+    "logical": 84,
+    "physical": 168
+  },
+  "perturbation": {
+    "context_tokens": 266,
+    "logical_call_ids": [
+      "SUSTAINED:PERTURBATION:M:HOLD:J",
+      "SUSTAINED:PERTURBATION:M:HOLD:G2"
+    ],
+    "mechanical_learning": false,
+    "model_calls": 2,
+    "model_parser_rejected": true,
+    "model_seconds": 15.928863673994783,
+    "no_receipt_or_memory": true,
+    "status": "PASS",
+    "transport_distinct": true
+  },
+  "restart": {
+    "conditions": {
+      "L": {
+        "calls": 4,
+        "current_state": 1,
+        "events": 4,
+        "grounded_state": null,
+        "memory": {
+          "database_sha256": "a64a6a10ebafe747cac1b3566bc471cb28b6dda6b94a6a511dbf80ebe642a736",
+          "event_count": 4,
+          "event_store_sha256": "797efdcacd88e85a74fad308a26158eac9fc2cc908b1761601c96a534e074c36",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "1a09793333aa31e716a9c659eaaa1b676844b2e625457346654b1c9ae8fd9ee5",
+          "checkpoint.json": "59269e0b6a41afc182612e5d59d6332461a7ca07a1e2867d4653cce11ecf0bbc",
+          "events.jsonl": "0552dc29aefab0f53a3b665f110244ac38cd69408c23af38f295bb8fef9c3f29",
+          "model-calls.private.jsonl": "c966a31bfbca978f57bc07762cf156b9477714b0b485ecf6720bdc795428c17c",
+          "training-records.jsonl": "9d1a268d9024562fa785bbe2afe85a85598597d0d5171a3675c121409342db86"
+        },
+        "training": 4
+      },
+      "M": {
+        "calls": 44,
+        "current_state": 1,
+        "events": 4,
+        "grounded_state": null,
+        "memory": {
+          "database_sha256": "01ab72d7fc13743c0c972809a9733ef83b685c8fcdbbddb3431ef0c31e98f5de",
+          "event_count": 4,
+          "event_store_sha256": "57f22c698718d96b91a669196dfe0d3a2b51ca1489adf94bb2a069082bb94017",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "7bd0a455e294a7c3a588877751b6abff3b30cd3642fefb9fe8f6d02995d76b47",
+          "checkpoint.json": "0e5a9b17b17f98f57e0652a7b70c52891fceb01fdaa330c3532c9bf41365538c",
+          "events.jsonl": "45bcab3ec1be88aeb3e66c32d89a447f3ad545f07c1c6d179ae3d908820ed725",
+          "model-calls.private.jsonl": "7071c8b9cf562897adbe153271d2de49115a94f6bfb0598aa95ecd699e61a02b",
+          "training-records.jsonl": "f738cff6268334075a9cd73a8ad47394a9ec8da89ad49afe4610f5c6be1261da"
+        },
+        "training": 4
+      },
+      "R3": {
+        "calls": 4,
+        "current_state": 1,
+        "events": 4,
+        "grounded_state": null,
+        "memory": {
+          "database_sha256": "be742c03c33330fab3bb76b3d0461bc4ca3d36a358c540762ac37efe8dbda897",
+          "event_count": 4,
+          "event_store_sha256": "f0a60cdc765499b4660c2fe306b31d516242ef4cdf0ecfa47e40c39f5fe3c6c5",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "f5b6582b8ea5d9a10393fe03cfb790a2479df6f1b542ca691e45d29710b1a8ea",
+          "checkpoint.json": "c8f9d8168346b8f4943812ce255571e250d836a5ec0bf17bd4c7ae8dfc34d2ab",
+          "events.jsonl": "8f39e3d65249dc68ecb87c9f33c8ebfea390972e4b3e71ca78d5e273ae75a971",
+          "model-calls.private.jsonl": "e78db414d027a9b93311cd1ce8e4e2dbd90c86bbf0bc7d5913957c307ed74bf7",
+          "training-records.jsonl": "a36d4ed8d4a546aee49e9241b6e16fe6d55def48d3c663289c4bd1c43328ffe7"
+        },
+        "training": 4
+      },
+      "U": {
+        "calls": 4,
+        "current_state": 1,
+        "events": 4,
+        "grounded_state": {
+          "alternatives": [],
+          "candidate_count": 1,
+          "candidate_support": [
+            "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:2:963291597de60a99\",1,2002,1]"
+          ],
+          "candidate_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "established_support": [
+            "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",1,2001,1]",
+            "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",2,2001,2]",
+            "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",3,2001,3]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "UNRESOLVED_CHANGE",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 1,
+              "identity": "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",1,2001,1]",
+              "receipt_sha256": "eb2442a15fd48550bb73bee26c6dba8e2e8fb088a99f330f8c1f25da8e687707",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 2,
+              "identity": "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",2,2001,2]",
+              "receipt_sha256": "63b9fe2a0b36d19cf3f7cafb4b7a28696689c8cbd56aa1bb40e6981b610b7299",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:1:d284197e45d15f84\",3,2001,3]",
+              "receipt_sha256": "4e69d24faab59a38ace56efe01ed150ffd79c623f9907963c01a3a525b97dba5",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:1c681b79b2acc627035d11f85040f123:runtime:2:963291597de60a99\",1,2002,1]",
+              "receipt_sha256": "2f68aca077350fc3d0a260140533ec0728828333dce1693f10ee9e2c68881969",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "memory": {
+          "database_sha256": "4d65955f01b64601f6c40218bc431866e7f90048d4e4f18a357bc2b7c2768d49",
+          "event_count": 4,
+          "event_store_sha256": "ce7b31ae9e92c6457038c3e07b946fa04c759b1c94ea22b0d120e26048ee069a",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+        },
+        "session_files_sha256": {
+          "authority.key": "a200e35e68fff6dbccc3f197243e4e3eba9cf5f076de9fb4cb5469928e3c5a4c",
+          "checkpoint.json": "eb2bc5c5da559eb741146d33501b64fe55f238e099df4bdb91a86857411f98c9",
+          "events.jsonl": "b8a8883cad6ec48a27877df699c716599eaf868facff82c88bbc2281fd081de3",
+          "model-calls.private.jsonl": "9d945b0399afa0e03d14cac107376c305e7e694f18329e35c05e718df3da85cf",
+          "training-records.jsonl": "3a34c303761948e446af3f4e23e8e0278126cbafcc45c58a82872b44134b408f"
+        },
+        "training": 4
+      }
+    },
+    "exact_file_and_memory_hash_match": true,
+    "exact_uncertainty_state_and_supporting_receipt_match": true,
+    "status": "PASS"
+  },
+  "schedules": [
+    "SUSTAINED",
+    "ANOMALY",
+    "EXCURSION",
+    "NOISE_THEN_CHANGE"
+  ],
+  "status": "COMPLETE",
+  "totals": {
+    "L": {
+      "events": 41,
+      "point_consequence_correct": 26,
+      "point_exact_correct": 26
+    },
+    "M": {
+      "events": 41,
+      "point_consequence_correct": 29,
+      "point_exact_correct": 28
+    },
+    "R3": {
+      "events": 41,
+      "point_consequence_correct": 22,
+      "point_exact_correct": 22
+    },
+    "U": {
+      "events": 41,
+      "point_consequence_correct": 22,
+      "point_exact_correct": 22
+    }
+  },
+  "uncertainty": {
+    "established_pre_correct": 19,
+    "established_pre_events": 27,
+    "false_certainty_count": 8,
+    "missed_ambiguity_count": 0,
+    "post_established_events": 33,
+    "post_unresolved_events": 8,
+    "provenance_integrity": true,
+    "restart_integrity": true,
+    "transitions": [
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 4,
+        "kind": "change",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "schedule": "SUSTAINED"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 8,
+        "kind": "restoration",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "schedule": "SUSTAINED"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 4,
+        "kind": "anomaly",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "schedule": "ANOMALY"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 4,
+        "kind": "excursion",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "schedule": "EXCURSION"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 6,
+        "kind": "restoration",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "schedule": "EXCURSION"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 4,
+        "kind": "anomaly",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "schedule": "NOISE_THEN_CHANGE"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 7,
+        "kind": "change",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "schedule": "NOISE_THEN_CHANGE"
+      },
+      {
+        "after_state": "UNRESOLVED_CHANGE",
+        "event": 11,
+        "kind": "restoration",
+        "resolution_receipts": 1,
+        "resolved_value": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "schedule": "NOISE_THEN_CHANGE"
+      }
+    ],
+    "unresolved_pre_events": 8,
+    "unresolved_pre_new_value": 6,
+    "unresolved_pre_old_value": 2
+  }
+}
