@@ -350,8 +350,98 @@ def _window(routing: RelationEvidenceStore) -> list[dict]:
 
 
 def _compact_window(row: dict) -> dict:
-    return {key:deepcopy(row[key]) for key in ("evidence_sequence","relation",
-        "receipt_identity","realized_consequence","specialist_predictions","correctness")}
+    predictions={key:value["frozen_consequence"]
+                 for key,value in row["specialists"].items()}
+    return dict(evidence_sequence=row["evidence_sequence"],
+        relation=deepcopy(row["relation"]),receipt_identity=deepcopy(row[
+            "receipt_identity"]),realized_consequence=row["realized_consequence"],
+        specialist_predictions=predictions,correctness=deepcopy(row["correctness"]))
+
+
+def _problem_summary(problem: dict) -> dict:
+    return dict(problem_id=problem["problem_id"],problem_type=problem["problem_type"],
+        scope=deepcopy(problem["scope"]),lifecycle_state=problem["lifecycle_state"],
+        capability_assessment=problem.get("capability_assessment"),
+        requested_capability=problem.get("requested_capability"),
+        target_relation_reacquired=problem.get("target_relation_reacquired"),
+        reacquisition_status=problem.get("reacquisition_status"),
+        repair_result=problem.get("repair_result"),
+        route_budgets=deepcopy(problem.get("route_budgets",{})),
+        latest_history=deepcopy(problem.get("history",[])[-3:]))
+
+
+def finalize_completed_recovery(*, session_root: Path, registry_root: Path,
+                                evidence_root: Path, output: Path) -> dict:
+    """Assemble the report after execution, without another behavioral action."""
+    preflight=json.loads((evidence_root/"tail-preflight.json").read_text())
+    zero=json.loads((evidence_root/"zero-inference-preflight.json").read_text())
+    policy=json.loads((evidence_root/"policy.json").read_text())
+    with SessionStore(session_root,True) as store, \
+            RelationEvidenceStore(registry_root) as routing, \
+            ExplorerConfidenceStore(registry_root) as confidence, \
+            ProblemManager(registry_root) as manager:
+        local=[deepcopy(row["record"]) for row in routing.records
+               if relation_key(row["record"]["relation"])==relation_key(TARGET)]
+        if len(local)<7 or local[-1]["evidence_sequence"]!=58:
+            raise RoutingError("completed recovery routing evidence is missing")
+        before,after=local[-7:-1],local[-6:]
+        event=next(row for row in store.records["events"] if row["record"].get(
+            "prediction_batch_sequence")==91)
+        training=next(row for row in store.records["training"] if row["record"].get(
+            "prediction_batch_sequence")==91)
+        freeze=next(row for row in confidence.records if row["kind"]==
+            "EXPLORER_DECISION_FROZEN" and row["record"].get("decision_sequence")==91)
+        completion=next(row for row in confidence.records if row["kind"]==
+            "EXPLORER_DECISION_COMPLETED" and row["record"].get("decision_sequence")==91)
+        row=local[-1]; receipt=deepcopy(event["record"]["receipt"])
+        if completion["record"]["status"]!="AUTHORIZED" or receipt["action"]!="ADVANCE" or \
+                len(store.records["calls"])!=2529:
+            raise RoutingError("completed recovery identity changed")
+        selections={action:routing.preview(pre_state=1,action=action)[
+            "selected_specialist"] for action in ACTION_ORDER}
+        forecasts=training["record"]["forecasts"]
+        values={action:forecasts[action][f"{selections[action]}_consequence"]
+                for action in ACTION_ORDER}
+        maximum=max(values.values()); maximizing=[a for a in ACTION_ORDER if values[a]==maximum]
+        pr3=deepcopy(manager.state["problems"]["PR-0003"])
+        pr5=deepcopy(manager.state["problems"]["PR-0005"])
+        budget_after=deepcopy(pr3["route_budgets"]["problem_scoped_relation_probe"])
+        budget_before=deepcopy(policy["scoped_budget_expected"])
+        if {k:budget_after[k] for k in ("limit","granted","executed")}!=budget_before or \
+                pr5["lifecycle_state"]!="CLOSED":
+            raise RoutingError("completed recovery final state changed")
+        result=dict(identity="HORUS_V022_ROUTE_HANDOFF_DURABLE_RECOVERY",
+            status="COMPLETED",route_handoff_rule=policy["route_precedence"],
+            zero_inference_proof=zero,tail_recovery=preflight,
+            checkpoint_recovery=dict(status="DURABLE_TAIL_RECOVERED",
+                registered_count=2529,registered_head_sha256=store.checkpoint[
+                    "streams"]["calls"]["head_sha256"],stream_records_rewritten=False,
+                model_calls_reissued=False),model_calls_issued=0,recovered_model_calls=9,
+            reconstructed_decision=deepcopy(freeze["record"]["decision"]),
+            action_executed=receipt["action"],receipt=receipt,
+            receipt_provenance_sha256=event["record"]["receipt_provenance_sha256"],
+            rolling_window=dict(evicted=_compact_window(before[0]),
+                added=_compact_window(after[-1]),before=[_compact_window(x) for x in before],
+                after=[_compact_window(x) for x in after]),
+            router_scores=deepcopy(row["router_score_after"]),
+            selected_specialist_before=row["selected_specialist"],
+            selected_specialist_after=row["selected_specialist_after"],
+            specialist_switched=row["switch_occurred"],state_1_values=dict(
+                values=values,maximizing_actions=maximizing,tie_present=len(maximizing)>1),
+            ordinary_followup=dict(executed=False,reason=(
+                "NO_REUSABLE_PREDICTION_BATCH; NEW_MODEL_CALLS_REQUIRE_SEPARATE_AUTHORIZATION")),
+            scoped_budget_before=budget_before,scoped_budget_after=budget_after,
+            pr0003_final=_problem_summary(pr3),pr0005_final=_problem_summary(pr5),
+            confidence_completion=deepcopy(completion["record"]),
+            final_checkpoint=deepcopy(store.checkpoint),training_performed=False,
+            weights_modified=False,new_route_created=False,
+            reporting_recovery=dict(behavior_repeated=False,model_calls_repeated=False,
+                defect="RESULT_SERIALIZER_EXPECTED_NONEXISTENT_SPECIALIST_PREDICTIONS_FIELD",
+                recovery="REPORT_REBUILT_FROM_AUTHENTICATED_DURABLE_STORES"),
+            limitation=("The single recovered probe tests one realized regime-A outcome; "
+                        "no ordinary follow-up ran because it would require new model calls."))
+    atomic_json(output,result)
+    return result
 
 
 def execute_recovered(*, session_root: Path, registry_root: Path,
@@ -442,8 +532,8 @@ def execute_recovered(*, session_root: Path, registry_root: Path,
             ordinary_followup=dict(executed=False,reason=(
                 "NO_REUSABLE_PREDICTION_BATCH; NEW_MODEL_CALLS_REQUIRE_SEPARATE_AUTHORIZATION")),
             scoped_budget_before=budget_before,scoped_budget_after=budget_after,
-            pr0003_final=deepcopy(manager.state["problems"]["PR-0003"]),
-            pr0005_final=deepcopy(manager.state["problems"]["PR-0005"]),
+            pr0003_final=_problem_summary(manager.state["problems"]["PR-0003"]),
+            pr0005_final=_problem_summary(manager.state["problems"]["PR-0005"]),
             final_checkpoint=deepcopy(store.checkpoint),
             training_performed=False,weights_modified=False,new_route_created=False,
             limitation=("The single recovered probe tests one realized regime-A outcome; "

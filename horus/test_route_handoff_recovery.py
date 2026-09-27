@@ -11,7 +11,7 @@ from horus.live import _canonical
 from horus.problem_manager import ProblemManager, decision_scope
 from horus.relation_routing import relation_identity
 from horus.route_handoff_recovery import (
-    EXPECTED_LOGICAL_ID, NoCallClient, _authenticated_file, _recovered_batch,
+    EXPECTED_LOGICAL_ID, NoCallClient, _authenticated_file, _compact_window, _recovered_batch,
     _tail_calls, choose_route, tail_safety)
 from horus.routing import RoutingError
 
@@ -141,6 +141,11 @@ class RouteHandoffRecoveryTests(unittest.TestCase):
     def test_12_rolling_window_evicts_exact_oldest(self):
         before=list(range(1,7)); after=(before+[7])[-6:]
         self.assertEqual((before[0],after),(1,[2,3,4,5,6,7]))
+        compact=_compact_window(dict(evidence_sequence=1,relation=relation_identity(1,"ADVANCE"),
+            receipt_identity=["s",1,1,1],realized_consequence=-1,
+            specialists={"G2":{"frozen_consequence":1},"G3":{"frozen_consequence":-1}},
+            correctness={"G2":False,"G3":True}))
+        self.assertEqual(compact["specialist_predictions"],{"G2":1,"G3":-1})
 
     def test_13_recovery_events_leave_pr0003_and_budget_unchanged(self):
         with tempfile.TemporaryDirectory() as td:

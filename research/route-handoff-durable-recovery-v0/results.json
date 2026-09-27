@@ -1,0 +1,1044 @@
+{
+  "action_executed": "ADVANCE",
+  "checkpoint_recovery": {
+    "model_calls_reissued": false,
+    "registered_count": 2529,
+    "registered_head_sha256": "454dfab3f77b1fdb447eb465a30f5bae02aaf5f642717e56be8e0688e7061d80",
+    "status": "DURABLE_TAIL_RECOVERED",
+    "stream_records_rewritten": false
+  },
+  "confidence_completion": {
+    "action": "ADVANCE",
+    "clear_preference_lead_correct": 2,
+    "clear_preference_minimum_observations": 3,
+    "contradiction_baseline_required": 3,
+    "contradiction_resolved": true,
+    "contradiction_started": false,
+    "decision_sequence": 91,
+    "realized_consequence": -1,
+    "receipt_identity": [
+      "HORUS:a67e675004193a13c31485bad53fbb86:runtime:16:52196addde8cd027",
+      1,
+      2016,
+      1
+    ],
+    "receipt_provenance_sha256": "819a3ffc6cdd2387b8fb67dd73de588eddf5ed2d4bab1a6bf1593aa0de3f57eb",
+    "recorded_at": "2026-09-27T01:46:29.257564+00:00",
+    "relation": {
+      "action": "ADVANCE",
+      "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+      "pre_state": 1
+    },
+    "router_score_after": {
+      "G2": {
+        "correct": 2,
+        "total": 6
+      },
+      "G3": {
+        "correct": 5,
+        "total": 6
+      }
+    },
+    "router_switch_occurred": true,
+    "routing_evidence_sequence": 58,
+    "status": "AUTHORIZED"
+  },
+  "final_checkpoint": {
+    "attempted_decisions": 91,
+    "completed_steps": 58,
+    "created_at": "2026-09-26T13:28:37.129148+00:00",
+    "current_epoch": 2016,
+    "current_source_identity": "HORUS:a67e675004193a13c31485bad53fbb86:runtime:16:52196addde8cd027",
+    "current_state": 2,
+    "external_regime_version": "A",
+    "next_transaction_id": 2,
+    "regime_history": [
+      {
+        "configured_at": "2026-09-26T13:28:37.145166+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 0,
+        "version": "A"
+      },
+      {
+        "configured_at": "2026-09-26T13:52:59.126435+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 17,
+        "version": "B"
+      },
+      {
+        "configured_at": "2026-09-26T14:18:12.766559+00:00",
+        "model_visible": false,
+        "starts_after_completed_step": 33,
+        "version": "A"
+      }
+    ],
+    "runtime_index": 16,
+    "session_id": "a67e675004193a13c31485bad53fbb86",
+    "streams": {
+      "calls": {
+        "count": 2529,
+        "head_sha256": "454dfab3f77b1fdb447eb465a30f5bae02aaf5f642717e56be8e0688e7061d80"
+      },
+      "events": {
+        "count": 58,
+        "head_sha256": "2bfd4907594eea393000502d032e3b47612d197c9fe0091e370a46a83d6474fc"
+      },
+      "training": {
+        "count": 94,
+        "head_sha256": "096a7784dbfa6790870ff64b9324808ae5ad9237d71ec9977f31bc7f023d0968"
+      }
+    },
+    "updated_at": "2026-09-27T01:46:29.235373+00:00",
+    "version": 1
+  },
+  "identity": "HORUS_V022_ROUTE_HANDOFF_DURABLE_RECOVERY",
+  "limitation": "The single recovered probe tests one realized regime-A outcome; no ordinary follow-up ran because it would require new model calls.",
+  "model_calls_issued": 0,
+  "new_route_created": false,
+  "ordinary_followup": {
+    "executed": false,
+    "reason": "NO_REUSABLE_PREDICTION_BATCH; NEW_MODEL_CALLS_REQUIRE_SEPARATE_AUTHORIZATION"
+  },
+  "pr0003_final": {
+    "capability_assessment": "VALUE_TIE_RESOLVED",
+    "latest_history": [
+      {
+        "decision_sequence": 89,
+        "kind": "GROUNDED_RELATION_REACQUISITION_AUTHORIZED",
+        "lifecycle_state": "REASSESSED",
+        "maximum_executions": 1,
+        "selected_action": "RETREAT",
+        "supporting_receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+          1,
+          2012,
+          1
+        ],
+        "target_state": 1
+      },
+      {
+        "action": "RETREAT",
+        "decision_sequence": 90,
+        "kind": "TARGET_RELATION_REACQUIRED",
+        "lifecycle_state": "REASSESSED",
+        "realized_next_state": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:15:ab424125f4912c25",
+          1,
+          2015,
+          1
+        ],
+        "route": "GROUNDED_RELATION_REACQUISITION",
+        "supporting_receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+          1,
+          2012,
+          1
+        ]
+      },
+      {
+        "decision_sequence": 91,
+        "kind": "NORMAL_ROUTE_EVIDENCE_REASSESSED",
+        "lifecycle_state": "REASSESSED",
+        "scoped_budget_consumed": false,
+        "scores": {
+          "G2": {
+            "correct": 2,
+            "total": 6
+          },
+          "G3": {
+            "correct": 5,
+            "total": 6
+          }
+        },
+        "selected_specialist_after": "G3",
+        "switch_occurred": true
+      }
+    ],
+    "lifecycle_state": "REASSESSED",
+    "problem_id": "PR-0003",
+    "problem_type": "UNRESOLVED_VALUE_TIE",
+    "reacquisition_status": "TARGET_RELATION_REACQUIRED",
+    "repair_result": null,
+    "requested_capability": null,
+    "route_budgets": {
+      "deadlock_information_probe": {
+        "executed": 1,
+        "granted": 1,
+        "limit": 1
+      },
+      "grounded_relation_reacquisition": {
+        "authorization_sha256": "a14e3eadac617c5efbf8a8fc8b965bee3507d8f8db5afb0f08af14b30784f83e",
+        "executed": 1,
+        "granted": 1,
+        "graph_sha256": "917999e0ceac72efabcb46df2c519d73205d0b12ae6950160404001c12e918b5",
+        "limit": 1,
+        "selected_action": "RETREAT",
+        "supporting_receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:12:ff1b1b2419b3ee4c",
+          1,
+          2012,
+          1
+        ],
+        "target_state": 1
+      },
+      "problem_scoped_relation_probe": {
+        "authorization_sha256": "2a8f926fa087a108f75c3cc1b778102e5746c61e42b455ed5410f89df8c13ebe",
+        "executed": 1,
+        "granted": 1,
+        "limit": 2,
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "request_event_sha256": "d7def109cc5564d0c6e29e0f029ece62090e0168f631b58b4b8cb7efd713281c"
+      }
+    },
+    "scope": {
+      "kind": "decision_state",
+      "pre_state": 1,
+      "tied_action_set": [
+        "ADVANCE",
+        "HOLD"
+      ]
+    },
+    "target_relation_reacquired": true
+  },
+  "pr0005_final": {
+    "capability_assessment": null,
+    "latest_history": [
+      {
+        "decision_sequence": 91,
+        "kind": "DURABLE_TAIL_RECOVERED",
+        "lifecycle_state": "OPEN",
+        "registered_count": 2529,
+        "registered_head_sha256": "454dfab3f77b1fdb447eb465a30f5bae02aaf5f642717e56be8e0688e7061d80"
+      },
+      {
+        "action": "ADVANCE",
+        "decision_sequence": 91,
+        "kind": "NORMAL_ROUTE_REGAINS_CONTROL",
+        "lifecycle_state": "OPEN",
+        "route": "ORDINARY_EXPLORER"
+      },
+      {
+        "decision_sequence": 91,
+        "kind": "ROUTE_HANDOFF_REPAIR_CLOSED",
+        "lifecycle_state": "CLOSED",
+        "model_calls_issued": 0
+      }
+    ],
+    "lifecycle_state": "CLOSED",
+    "problem_id": "PR-0005",
+    "problem_type": "INTERNAL_ROUTE_PROBLEM",
+    "reacquisition_status": null,
+    "repair_result": "ROUTE_HANDOFF_RECOVERED",
+    "requested_capability": null,
+    "route_budgets": {},
+    "scope": {
+      "kind": "runtime",
+      "runtime_id": "v0.21-remaining-scoped-probe-eligibility"
+    },
+    "target_relation_reacquired": null
+  },
+  "receipt": {
+    "action": "ADVANCE",
+    "epoch": 2016,
+    "event_id": 1,
+    "next_state": 2,
+    "pre_state": 1,
+    "realized_consequence": -1,
+    "source_identity": "HORUS:a67e675004193a13c31485bad53fbb86:runtime:16:52196addde8cd027",
+    "transaction_id": 1
+  },
+  "receipt_provenance_sha256": "819a3ffc6cdd2387b8fb67dd73de588eddf5ed2d4bab1a6bf1593aa0de3f57eb",
+  "reconstructed_decision": {
+    "abstained": false,
+    "action": "ADVANCE",
+    "capability_assessment": null,
+    "coverage": {
+      "legal_relations": 3,
+      "relations_recently_grounded": 1,
+      "relations_unresolved": 3,
+      "relations_with_authenticated_evidence": 3,
+      "state": 1
+    },
+    "decision_sequence": 91,
+    "mode": "PROBE",
+    "probe_budget_available": true,
+    "problem_id": "PR-0003",
+    "reason": "PROBE_DISAGREEMENT",
+    "relation_confidence": {
+      "ADVANCE": {
+        "authenticated_observations": 6,
+        "clear_local_preference": false,
+        "local_scores": {
+          "G2": {
+            "correct": 3,
+            "total": 6
+          },
+          "G3": {
+            "correct": 4,
+            "total": 6
+          }
+        },
+        "most_recent_observation_sequence": 56,
+        "observations_since_last_execution": 1,
+        "qualifying_probe_reasons": [
+          "PROBE_DISAGREEMENT"
+        ],
+        "recent_correctness": {
+          "G2": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "G3": [
+            false,
+            true,
+            false,
+            true,
+            true,
+            true
+          ]
+        },
+        "recent_realized_consequences": [
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "selected_specialist": "G2",
+        "specialists_disagree": true,
+        "unresolved_recent_contradiction": null
+      },
+      "HOLD": {
+        "authenticated_observations": 12,
+        "clear_local_preference": true,
+        "local_scores": {
+          "G2": {
+            "correct": 6,
+            "total": 6
+          },
+          "G3": {
+            "correct": 1,
+            "total": 6
+          }
+        },
+        "most_recent_observation_sequence": 49,
+        "observations_since_last_execution": 8,
+        "qualifying_probe_reasons": [
+          "PROBE_STALE"
+        ],
+        "recent_correctness": {
+          "G2": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "G3": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        },
+        "recent_realized_consequences": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "relation": {
+          "action": "HOLD",
+          "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+          "pre_state": 1
+        },
+        "selected_specialist": "G2",
+        "specialists_disagree": true,
+        "unresolved_recent_contradiction": null
+      },
+      "RETREAT": {
+        "authenticated_observations": 8,
+        "clear_local_preference": false,
+        "local_scores": {
+          "G2": {
+            "correct": 6,
+            "total": 6
+          },
+          "G3": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "most_recent_observation_sequence": 45,
+        "observations_since_last_execution": 12,
+        "qualifying_probe_reasons": [
+          "PROBE_STALE"
+        ],
+        "recent_correctness": {
+          "G2": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "G3": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "recent_realized_consequences": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "relation": {
+          "action": "RETREAT",
+          "identity_sha256": "0f6f9ab5d827513ea5de5f97e6ec89b1acc6fa163816e37a91b4e1da53ee0a9b",
+          "pre_state": 1
+        },
+        "selected_specialist": "G2",
+        "specialists_disagree": false,
+        "unresolved_recent_contradiction": null
+      }
+    }
+  },
+  "recovered_model_calls": 9,
+  "reporting_recovery": {
+    "behavior_repeated": false,
+    "defect": "RESULT_SERIALIZER_EXPECTED_NONEXISTENT_SPECIALIST_PREDICTIONS_FIELD",
+    "model_calls_repeated": false,
+    "recovery": "REPORT_REBUILT_FROM_AUTHENTICATED_DURABLE_STORES"
+  },
+  "rolling_window": {
+    "added": {
+      "correctness": {
+        "G2": false,
+        "G3": true
+      },
+      "evidence_sequence": 58,
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:16:52196addde8cd027",
+        1,
+        2016,
+        1
+      ],
+      "relation": {
+        "action": "ADVANCE",
+        "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+        "pre_state": 1
+      },
+      "specialist_predictions": {
+        "G2": 1,
+        "G3": -1
+      }
+    },
+    "after": [
+      {
+        "correctness": {
+          "G2": true,
+          "G3": true
+        },
+        "evidence_sequence": 16,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:2:570c7a2d0f38d497",
+          8,
+          2002,
+          8
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": false
+        },
+        "evidence_sequence": 28,
+        "realized_consequence": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:4:f5c891d96c1d16bb",
+          3,
+          2004,
+          3
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": true,
+          "G3": true
+        },
+        "evidence_sequence": 50,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:6:14a3c1affe5a88f9",
+          8,
+          2006,
+          8
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": true
+        },
+        "evidence_sequence": 54,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:11:1c9f176018359107",
+          1,
+          2011,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": 1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": true
+        },
+        "evidence_sequence": 56,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:14:030997733fe0c0e2",
+          1,
+          2014,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": 1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": true
+        },
+        "evidence_sequence": 58,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:16:52196addde8cd027",
+          1,
+          2016,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": 1,
+          "G3": -1
+        }
+      }
+    ],
+    "before": [
+      {
+        "correctness": {
+          "G2": true,
+          "G3": false
+        },
+        "evidence_sequence": 1,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:1:0d1effe0a4ba912f",
+          1,
+          2001,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": 1
+        }
+      },
+      {
+        "correctness": {
+          "G2": true,
+          "G3": true
+        },
+        "evidence_sequence": 16,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:2:570c7a2d0f38d497",
+          8,
+          2002,
+          8
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": false
+        },
+        "evidence_sequence": 28,
+        "realized_consequence": 1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:4:f5c891d96c1d16bb",
+          3,
+          2004,
+          3
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": true,
+          "G3": true
+        },
+        "evidence_sequence": 50,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:6:14a3c1affe5a88f9",
+          8,
+          2006,
+          8
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": -1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": true
+        },
+        "evidence_sequence": 54,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:11:1c9f176018359107",
+          1,
+          2011,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": 1,
+          "G3": -1
+        }
+      },
+      {
+        "correctness": {
+          "G2": false,
+          "G3": true
+        },
+        "evidence_sequence": 56,
+        "realized_consequence": -1,
+        "receipt_identity": [
+          "HORUS:a67e675004193a13c31485bad53fbb86:runtime:14:030997733fe0c0e2",
+          1,
+          2014,
+          1
+        ],
+        "relation": {
+          "action": "ADVANCE",
+          "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+          "pre_state": 1
+        },
+        "specialist_predictions": {
+          "G2": 1,
+          "G3": -1
+        }
+      }
+    ],
+    "evicted": {
+      "correctness": {
+        "G2": true,
+        "G3": false
+      },
+      "evidence_sequence": 1,
+      "realized_consequence": -1,
+      "receipt_identity": [
+        "HORUS:a67e675004193a13c31485bad53fbb86:runtime:1:0d1effe0a4ba912f",
+        1,
+        2001,
+        1
+      ],
+      "relation": {
+        "action": "ADVANCE",
+        "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+        "pre_state": 1
+      },
+      "specialist_predictions": {
+        "G2": -1,
+        "G3": 1
+      }
+    }
+  },
+  "route_handoff_rule": [
+    "ORDINARY_LEGITIMATE_EXPLORER_ROUTE",
+    "EXISTING_PROBLEM_SCOPED_FALLBACK",
+    "ABSTAIN_OR_REQUEST_AUTHORITY"
+  ],
+  "router_scores": {
+    "G2": {
+      "correct": 2,
+      "total": 6
+    },
+    "G3": {
+      "correct": 5,
+      "total": 6
+    }
+  },
+  "scoped_budget_after": {
+    "authorization_sha256": "2a8f926fa087a108f75c3cc1b778102e5746c61e42b455ed5410f89df8c13ebe",
+    "executed": 1,
+    "granted": 1,
+    "limit": 2,
+    "relation": {
+      "action": "ADVANCE",
+      "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+      "pre_state": 1
+    },
+    "request_event_sha256": "d7def109cc5564d0c6e29e0f029ece62090e0168f631b58b4b8cb7efd713281c"
+  },
+  "scoped_budget_before": {
+    "executed": 1,
+    "granted": 1,
+    "limit": 2
+  },
+  "selected_specialist_after": "G3",
+  "selected_specialist_before": "G2",
+  "specialist_switched": true,
+  "state_1_values": {
+    "maximizing_actions": [
+      "HOLD"
+    ],
+    "tie_present": false,
+    "values": {
+      "ADVANCE": -1,
+      "HOLD": 1,
+      "RETREAT": 0
+    }
+  },
+  "status": "COMPLETED",
+  "tail_recovery": {
+    "checkpoint_count": 2502,
+    "checkpoint_head_sha256": "842f075b1687e3d15ad1eaca32fae00523be8954e00c6aa135cbc04551fe3445",
+    "decision_sequence": 91,
+    "identity": "UNCOMMITTED_AUTHENTICATED_CALL_TAIL",
+    "logical_decision_id": "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91",
+    "physical_count": 2529,
+    "physical_head_sha256": "454dfab3f77b1fdb447eb465a30f5bae02aaf5f642717e56be8e0688e7061d80",
+    "request_hashes": {
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:G2": "73c80dd178cd9de1aba0426d591695747c8aa13690faf8dd84f043263dd9f8f4",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:G3": "6166eb65a3c92b056e68e73bc34f92aa1ecda7fec78607ec76b6b42748210663",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:ADVANCE:J": "b5a511be21b1e3716cd4a67b78947f5fa783020530c25c9713d49075a983e064",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:G2": "1296fc0e1b0fbb1dac4740f282ec713846e6ecf3d02902e651a0a6dddb99e253",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:G3": "98b1f1c0e2543c7e1af141d0dfac3b101311f3461dda8c652ed7d93f7a3d7be2",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:HOLD:J": "ff55dd2efdc3459b9f1d880edca3fbf2a838a0f283d8750c234b81f75d308f2d",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:G2": "96c265ea579599200d2f23780e332e65e0c77fd97ed6a077605c22497fa2bee3",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:G3": "ff8a6572570e74298da92c46ce4daa8de5d367095a14bbdc4b768b615729560c",
+      "a67e675004193a13c31485bad53fbb86:e2015:relation-reacquisition:d91:RETREAT:J": "d2541b9cf79573ec0b33b281568ed93032d77ff346310b90b6148288f14f4e6f"
+    },
+    "safety_conditions": {
+      "chain_continuous": true,
+      "no_contradictory_state": true,
+      "no_explorer_completion": true,
+      "no_memory_publication": true,
+      "no_receipt": true,
+      "no_routing_evidence": true,
+      "single_unfinished_decision": true,
+      "tail_authenticated": true
+    },
+    "tail_first_sequence": 2503,
+    "tail_last_sequence": 2529,
+    "tail_records": 27
+  },
+  "training_performed": false,
+  "weights_modified": false,
+  "zero_inference_proof": {
+    "cadence": {
+      "authorized_decisions": 57,
+      "last_probe_authorized_decision": 54,
+      "minimum_distance": 3,
+      "next_authorized_decision": 58
+    },
+    "identity": "ZERO_INFERENCE_ROUTE_HANDOFF_PROOF",
+    "model_calls": 0,
+    "ordinary_decision": {
+      "abstained": false,
+      "action": "ADVANCE",
+      "coverage": {
+        "legal_relations": 3,
+        "relations_recently_grounded": 1,
+        "relations_unresolved": 3,
+        "relations_with_authenticated_evidence": 3,
+        "state": 1
+      },
+      "decision_sequence": 91,
+      "mode": "PROBE",
+      "probe_budget_available": true,
+      "reason": "PROBE_DISAGREEMENT",
+      "relation_confidence": {
+        "ADVANCE": {
+          "authenticated_observations": 6,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 3,
+              "total": 6
+            },
+            "G3": {
+              "correct": 4,
+              "total": 6
+            }
+          },
+          "most_recent_observation_sequence": 56,
+          "observations_since_last_execution": 1,
+          "qualifying_probe_reasons": [
+            "PROBE_DISAGREEMENT"
+          ],
+          "recent_correctness": {
+            "G2": [
+              true,
+              true,
+              false,
+              true,
+              false,
+              false
+            ],
+            "G3": [
+              false,
+              true,
+              false,
+              true,
+              true,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "relation": {
+            "action": "ADVANCE",
+            "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": true,
+          "unresolved_recent_contradiction": null
+        },
+        "HOLD": {
+          "authenticated_observations": 12,
+          "clear_local_preference": true,
+          "local_scores": {
+            "G2": {
+              "correct": 6,
+              "total": 6
+            },
+            "G3": {
+              "correct": 1,
+              "total": 6
+            }
+          },
+          "most_recent_observation_sequence": 49,
+          "observations_since_last_execution": 8,
+          "qualifying_probe_reasons": [
+            "PROBE_STALE"
+          ],
+          "recent_correctness": {
+            "G2": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "G3": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "relation": {
+            "action": "HOLD",
+            "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": true,
+          "unresolved_recent_contradiction": null
+        },
+        "RETREAT": {
+          "authenticated_observations": 8,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 6,
+              "total": 6
+            },
+            "G3": {
+              "correct": 6,
+              "total": 6
+            }
+          },
+          "most_recent_observation_sequence": 45,
+          "observations_since_last_execution": 12,
+          "qualifying_probe_reasons": [
+            "PROBE_STALE"
+          ],
+          "recent_correctness": {
+            "G2": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "G3": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "relation": {
+            "action": "RETREAT",
+            "identity_sha256": "0f6f9ab5d827513ea5de5f97e6ec89b1acc6fa163816e37a91b4e1da53ee0a9b",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": false,
+          "unresolved_recent_contradiction": null
+        }
+      }
+    },
+    "problem_applicable": true,
+    "problem_id": "PR-0003",
+    "route_precedence": "NORMAL_ROUTE_REGAINS_CONTROL",
+    "scoped_fallback_eligible_to_supersede": false,
+    "selected_route": "ORDINARY_EXPLORER",
+    "state": 1,
+    "target_relation_reacquired": true
+  }
+}
