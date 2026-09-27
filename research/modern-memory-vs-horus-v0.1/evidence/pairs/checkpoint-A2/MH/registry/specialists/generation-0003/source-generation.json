@@ -1,0 +1,1433 @@
+{
+  "payload": {
+    "adapter_path": "generations/generation-0003/model/trained-adapter.safetensors",
+    "adapter_sha256": "edb9f6ff90dff7af75ece168825f04839ab720dc8a79ce166225a5ffcc1efb24",
+    "artifact_kind": "LORA_ADAPTER",
+    "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+    "candidate_label": "3",
+    "creation_status": "CANDIDATE",
+    "creation_timestamp": "2026-09-26T02:15:34.583297+00:00",
+    "dataset_manifest_sha256": "9f01faa28a01973ded36a101c423e1b9b5b4ae9730a133685c3b18917021bce8",
+    "dataset_path": "generations/generation-0003/fresh-dataset",
+    "evaluation_artifact": "generations/generation-0003/stability-evaluation.json",
+    "evaluation_bank_manifest_sha256": "11255c91addfa2c611ca4cbcff64a886b145f1547a6660ae8c3dbfdb32554864",
+    "evaluation_bank_version": 1,
+    "evaluation_sha256": "454798cdc71b2a7d6f246d6ac2628ab354cf52abe8b4173f6efc0093f331d25c",
+    "evaluation_summary": {
+      "combined": {
+        "candidate": {
+          "accuracy": 0.6111111111111112,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.6,
+              "correct": 6,
+              "n": 10
+            }
+          },
+          "correct": 22,
+          "examples": 36,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.16666666666666666,
+              "correct": 2,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.4-regime-B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "invalid": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "invalid": 0,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.6,
+              "correct": 6,
+              "invalid": 0,
+              "n": 10
+            }
+          },
+          "evaluation_origin": {
+            "fresh": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "historical": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            },
+            "B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.125,
+              "correct": 1,
+              "invalid": 0,
+              "n": 8
+            },
+            "fresh": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "middle": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 0.875,
+              "correct": 7,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "forgetting_events": [
+          {
+            "candidate": 1,
+            "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+            "incumbent": -1,
+            "target": -1
+          }
+        ],
+        "incumbent": {
+          "accuracy": 0.7222222222222222,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.4,
+              "correct": 4,
+              "n": 10
+            }
+          },
+          "correct": 26,
+          "examples": 36,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.5,
+              "correct": 6,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.4-regime-B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "invalid": 0,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.4,
+              "correct": 4,
+              "invalid": 0,
+              "n": 10
+            }
+          },
+          "evaluation_origin": {
+            "fresh": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            },
+            "historical": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            },
+            "B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "fresh": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            },
+            "middle": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 20,
+          "correct_to_wrong": 6,
+          "wrong_to_correct": 2,
+          "wrong_to_wrong": 8
+        }
+      },
+      "fresh": {
+        "candidate": {
+          "accuracy": 0.8333333333333334,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            },
+            "0": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "n": 8
+            },
+            "1": {
+              "accuracy": 1.0,
+              "correct": 2,
+              "n": 2
+            }
+          },
+          "correct": 10,
+          "examples": 12,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "evaluation_origin": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "external_regime_version": {
+            "B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          }
+        },
+        "forgetting_events": [],
+        "incumbent": {
+          "accuracy": 0.6666666666666666,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            },
+            "0": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "n": 8
+            },
+            "1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            }
+          },
+          "correct": 8,
+          "examples": 12,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "evaluation_origin": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "external_regime_version": {
+            "B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 8,
+          "wrong_to_correct": 2,
+          "wrong_to_wrong": 2
+        }
+      },
+      "historical": {
+        "candidate": {
+          "accuracy": 0.5,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "n": 8
+            }
+          },
+          "correct": 12,
+          "examples": 24,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.16666666666666666,
+              "correct": 2,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "invalid": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "invalid": 0,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            }
+          },
+          "evaluation_origin": {
+            "historical": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.125,
+              "correct": 1,
+              "invalid": 0,
+              "n": 8
+            },
+            "middle": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 0.875,
+              "correct": 7,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "forgetting_events": [
+          {
+            "candidate": 1,
+            "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+            "incumbent": -1,
+            "target": -1
+          }
+        ],
+        "incumbent": {
+          "accuracy": 0.75,
+          "by_target": {
+            "-1": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "n": 8
+            }
+          },
+          "correct": 18,
+          "examples": 24,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.5,
+              "correct": 6,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "invalid": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "invalid": 0,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            }
+          },
+          "evaluation_origin": {
+            "historical": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "middle": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 12,
+          "correct_to_wrong": 6,
+          "wrong_to_wrong": 6
+        }
+      },
+      "promotion": {
+        "catastrophic_classes": [
+          -1
+        ],
+        "criteria": {
+          "combined_retained": false,
+          "fresh_adaptation": true,
+          "historical_accuracy_retained": false,
+          "historical_forgetting_bounded": false,
+          "integrity_checks_passed": true,
+          "invalid_not_increased": true,
+          "no_historical_class_collapse": false,
+          "sufficient_evidence": true
+        },
+        "decision": "REJECTED",
+        "forgetting_events": 6,
+        "forgetting_failure": true,
+        "rule": {
+          "combined_correct_tolerance": 0,
+          "historical_class_collapse_absolute": 0.25,
+          "historical_class_minimum_examples": 4,
+          "maximum_historical_correct_loss": 1,
+          "maximum_historical_forgetting_events": 1,
+          "minimum_fresh_correct_gain": 1,
+          "rule": "fresh correct must improve by at least one; historical correct may lose at most one; historical correct-to-wrong may not exceed one; represented historical classes may not drop by more than 0.25; combined correct may not decrease; invalid responses may not increase; all integrity checks must pass",
+          "version": 1
+        },
+        "rule_sha256": "fb1a419e5021274ccce5489defea73e018a7c5707246d97f4338669178d5c3fa"
+      }
+    },
+    "example_usage_artifact": "generations/generation-0003/example-usage.json",
+    "example_usage_sha256": "017b1be9decbba71755a9eafcb4e37309deeff6bb5d7b036666aeee4fbf2cbb2",
+    "final_status": "REJECTED",
+    "fresh_process_reload_passed": true,
+    "generation": 3,
+    "grounded_training_examples": 42,
+    "lineage_artifact": "generations/generation-0003/model/learning-lineage.json",
+    "lineage_sha256": "5df5f32ecb7d01284fde02ef896a6e5181b458f8b9328b64e495ec480af53184",
+    "newly_eligible_grounded_examples": 60,
+    "optimizer_evaluation_leakage": 0,
+    "parent_generation": 2,
+    "promotion_rule_sha256": "fb1a419e5021274ccce5489defea73e018a7c5707246d97f4338669178d5c3fa",
+    "provenance_checks_passed": true,
+    "reason": "One or more frozen stability criteria failed",
+    "regime_definition_sha256": "c36b50c6f19d9a6e00181b6448f1dae3f4aba2f27c7612feb3b38a269fd42a7f",
+    "rehearsal_selection_artifact": null,
+    "rehearsal_selection_sha256": null,
+    "stability_summary": {
+      "combined": {
+        "candidate": {
+          "accuracy": 0.6111111111111112,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.6,
+              "correct": 6,
+              "n": 10
+            }
+          },
+          "correct": 22,
+          "examples": 36,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.16666666666666666,
+              "correct": 2,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.4-regime-B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "invalid": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "invalid": 0,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.6,
+              "correct": 6,
+              "invalid": 0,
+              "n": 10
+            }
+          },
+          "evaluation_origin": {
+            "fresh": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "historical": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            },
+            "B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.125,
+              "correct": 1,
+              "invalid": 0,
+              "n": 8
+            },
+            "fresh": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            },
+            "middle": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 0.875,
+              "correct": 7,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "forgetting_events": [
+          {
+            "candidate": 1,
+            "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+            "incumbent": -1,
+            "target": -1
+          }
+        ],
+        "incumbent": {
+          "accuracy": 0.7222222222222222,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.4,
+              "correct": 4,
+              "n": 10
+            }
+          },
+          "correct": 26,
+          "examples": 36,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.5,
+              "correct": 6,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.4-regime-B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "0": {
+              "accuracy": 0.8888888888888888,
+              "correct": 16,
+              "invalid": 0,
+              "n": 18
+            },
+            "1": {
+              "accuracy": 0.4,
+              "correct": 4,
+              "invalid": 0,
+              "n": 10
+            }
+          },
+          "evaluation_origin": {
+            "fresh": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            },
+            "historical": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            },
+            "B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "fresh": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            },
+            "middle": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 20,
+          "correct_to_wrong": 6,
+          "wrong_to_correct": 2,
+          "wrong_to_wrong": 8
+        }
+      },
+      "fresh": {
+        "candidate": {
+          "accuracy": 0.8333333333333334,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            },
+            "0": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "n": 8
+            },
+            "1": {
+              "accuracy": 1.0,
+              "correct": 2,
+              "n": 2
+            }
+          },
+          "correct": 10,
+          "examples": 12,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "evaluation_origin": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "external_regime_version": {
+            "B": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "UNSPECIFIED": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          }
+        },
+        "forgetting_events": [],
+        "incumbent": {
+          "accuracy": 0.6666666666666666,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            },
+            "0": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "n": 8
+            },
+            "1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 2
+            }
+          },
+          "correct": 8,
+          "examples": 12,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "evaluation_origin": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "external_regime_version": {
+            "B": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "historical_window": {
+            "UNSPECIFIED": {
+              "accuracy": 0.6666666666666666,
+              "correct": 8,
+              "invalid": 0,
+              "n": 12
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 8,
+          "wrong_to_correct": 2,
+          "wrong_to_wrong": 2
+        }
+      },
+      "historical": {
+        "candidate": {
+          "accuracy": 0.5,
+          "by_target": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "n": 8
+            }
+          },
+          "correct": 12,
+          "examples": 24,
+          "invalid": 0
+        },
+        "candidate_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.16666666666666666,
+              "correct": 2,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 0.8333333333333334,
+              "correct": 10,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 0.0,
+              "correct": 0,
+              "invalid": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "invalid": 0,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            }
+          },
+          "evaluation_origin": {
+            "historical": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.5,
+              "correct": 12,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.125,
+              "correct": 1,
+              "invalid": 0,
+              "n": 8
+            },
+            "middle": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 0.875,
+              "correct": 7,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "forgetting_events": [
+          {
+            "candidate": 1,
+            "example_id": "f6df38a101b730e0cc3877c2e7c038cb95396a79ce62a6ca95aab875ea675303",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "97fbeacceb6461d246695b6e3a89f25e7b9c3b4c3074ae45e58915260cfa6f41",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "28da568fe7d3d166aac7d527c084d14cfb9f8016ef67ac6f2da0e0f5666cdccc",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 0,
+            "example_id": "70682e293a101569a21af5d998759f61bc662f02788da76670d2d0bdb93313e6",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "bf1f77c78285d7b49ad8719199b27d5e40c6c5bd4aefcef219e1462ba4e3cb4a",
+            "incumbent": -1,
+            "target": -1
+          },
+          {
+            "candidate": 1,
+            "example_id": "09be622eaa8a306ca56c02d9a707c6088145e4d200fe355d29649a984c9adef8",
+            "incumbent": -1,
+            "target": -1
+          }
+        ],
+        "incumbent": {
+          "accuracy": 0.75,
+          "by_target": {
+            "-1": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "n": 8
+            }
+          },
+          "correct": 18,
+          "examples": 24,
+          "invalid": 0
+        },
+        "incumbent_groups": {
+          "bank_batch_id": {
+            "v0.2-grounded-learning": {
+              "accuracy": 0.5,
+              "correct": 6,
+              "invalid": 0,
+              "n": 12
+            },
+            "v0.3-learning-cycle": {
+              "accuracy": 1.0,
+              "correct": 12,
+              "invalid": 0,
+              "n": 12
+            }
+          },
+          "consequence_class": {
+            "-1": {
+              "accuracy": 1.0,
+              "correct": 6,
+              "invalid": 0,
+              "n": 6
+            },
+            "0": {
+              "accuracy": 0.8,
+              "correct": 8,
+              "invalid": 0,
+              "n": 10
+            },
+            "1": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            }
+          },
+          "evaluation_origin": {
+            "historical": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "external_regime_version": {
+            "A": {
+              "accuracy": 0.75,
+              "correct": 18,
+              "invalid": 0,
+              "n": 24
+            }
+          },
+          "historical_window": {
+            "early": {
+              "accuracy": 0.5,
+              "correct": 4,
+              "invalid": 0,
+              "n": 8
+            },
+            "middle": {
+              "accuracy": 0.75,
+              "correct": 6,
+              "invalid": 0,
+              "n": 8
+            },
+            "recent": {
+              "accuracy": 1.0,
+              "correct": 8,
+              "invalid": 0,
+              "n": 8
+            }
+          }
+        },
+        "transitions": {
+          "correct_to_correct": 12,
+          "correct_to_wrong": 6,
+          "wrong_to_wrong": 6
+        }
+      },
+      "promotion": {
+        "catastrophic_classes": [
+          -1
+        ],
+        "criteria": {
+          "combined_retained": false,
+          "fresh_adaptation": true,
+          "historical_accuracy_retained": false,
+          "historical_forgetting_bounded": false,
+          "integrity_checks_passed": true,
+          "invalid_not_increased": true,
+          "no_historical_class_collapse": false,
+          "sufficient_evidence": true
+        },
+        "decision": "REJECTED",
+        "forgetting_events": 6,
+        "forgetting_failure": true,
+        "rule": {
+          "combined_correct_tolerance": 0,
+          "historical_class_collapse_absolute": 0.25,
+          "historical_class_minimum_examples": 4,
+          "maximum_historical_correct_loss": 1,
+          "maximum_historical_forgetting_events": 1,
+          "minimum_fresh_correct_gain": 1,
+          "rule": "fresh correct must improve by at least one; historical correct may lose at most one; historical correct-to-wrong may not exceed one; represented historical classes may not drop by more than 0.25; combined correct may not decrease; invalid responses may not increase; all integrity checks must pass",
+          "version": 1
+        },
+        "rule_sha256": "fb1a419e5021274ccce5489defea73e018a7c5707246d97f4338669178d5c3fa"
+      }
+    },
+    "training_configuration": {
+      "adapter_alpha": 16,
+      "adapter_dropout": 0.05,
+      "adapter_rank": 8,
+      "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "batch_size": 2,
+      "epochs": 5,
+      "gradient_accumulation": 2,
+      "learning_rate": 0.0002,
+      "max_length": 512,
+      "optimizer": "AdamW",
+      "seed": 20260925,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "weight_decay": 0.01
+    },
+    "training_dataset_manifest_sha256": "8b1203fa3fb1f6de2b17b4488efb3e3c8e79793569e2284f18df0e2214d9310e",
+    "training_dataset_path": "generations/generation-0003/training-dataset",
+    "training_strategy": "continue-active"
+  },
+  "sha256": "3ffc2ecd4212b7ea10a4fcbc4fee9afec5f159892cd694e775aa6b67d6617911"
+}

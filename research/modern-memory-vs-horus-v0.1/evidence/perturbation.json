@@ -1,0 +1,172 @@
+{
+  "M": {
+    "condition": "M",
+    "context_tokens": 462,
+    "decision": {
+      "abstained": true,
+      "action": null,
+      "mode": "BASELINE_MECHANICAL",
+      "reason": "INVALID_MAP_COMPONENT"
+    },
+    "execution_occurred": false,
+    "memory_mutated": false,
+    "model_calls": 6,
+    "model_seconds": 46.31203878298402,
+    "operational_recovery": "PENDING_NEXT_VALID_DECISION",
+    "opportunity": "REGISTERED_PERTURBATION",
+    "receipt_created": false,
+    "stage": "A",
+    "status": "ABSTAINED",
+    "strict_parser_rejection": true
+  },
+  "MH": {
+    "condition": "MH",
+    "context_tokens": 693,
+    "decision": {
+      "abstained": true,
+      "action": null,
+      "coverage": {
+        "legal_relations": 3,
+        "relations_recently_grounded": 0,
+        "relations_unresolved": 3,
+        "relations_with_authenticated_evidence": 1,
+        "state": 1
+      },
+      "decision_sequence": 1,
+      "mode": "ABSTAIN",
+      "probe_budget_available": true,
+      "reason": "INVALID_MAP_COMPONENT",
+      "relation_confidence": {
+        "ADVANCE": {
+          "authenticated_observations": 0,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 0,
+              "total": 0
+            },
+            "G3": {
+              "correct": 0,
+              "total": 0
+            }
+          },
+          "most_recent_observation_sequence": null,
+          "observations_since_last_execution": null,
+          "qualifying_probe_reasons": [
+            "PROBE_UNTRIED",
+            "PROBE_DISAGREEMENT"
+          ],
+          "recent_correctness": {
+            "G2": [],
+            "G3": []
+          },
+          "recent_realized_consequences": [],
+          "relation": {
+            "action": "ADVANCE",
+            "identity_sha256": "fea775170af5d9cdc55598f1b1638835ba1e5cd0e6c615562a40a4f656260a1b",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": true,
+          "unresolved_recent_contradiction": null
+        },
+        "HOLD": {
+          "authenticated_observations": 6,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 4,
+              "total": 6
+            },
+            "G3": {
+              "correct": 5,
+              "total": 6
+            }
+          },
+          "most_recent_observation_sequence": 6,
+          "observations_since_last_execution": null,
+          "qualifying_probe_reasons": [
+            "PROBE_DISAGREEMENT"
+          ],
+          "recent_correctness": {
+            "G2": [
+              true,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "G3": [
+              true,
+              true,
+              true,
+              true,
+              false,
+              true
+            ]
+          },
+          "recent_realized_consequences": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1
+          ],
+          "relation": {
+            "action": "HOLD",
+            "identity_sha256": "2a68d0d51d5331b979234d613cee4cd728fcdcb608526ba454cb914ac9db011c",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": true,
+          "unresolved_recent_contradiction": null
+        },
+        "RETREAT": {
+          "authenticated_observations": 0,
+          "clear_local_preference": false,
+          "local_scores": {
+            "G2": {
+              "correct": 0,
+              "total": 0
+            },
+            "G3": {
+              "correct": 0,
+              "total": 0
+            }
+          },
+          "most_recent_observation_sequence": null,
+          "observations_since_last_execution": null,
+          "qualifying_probe_reasons": [
+            "PROBE_UNTRIED",
+            "PROBE_DISAGREEMENT"
+          ],
+          "recent_correctness": {
+            "G2": [],
+            "G3": []
+          },
+          "recent_realized_consequences": [],
+          "relation": {
+            "action": "RETREAT",
+            "identity_sha256": "0f6f9ab5d827513ea5de5f97e6ec89b1acc6fa163816e37a91b4e1da53ee0a9b",
+            "pre_state": 1
+          },
+          "selected_specialist": "G2",
+          "specialists_disagree": true,
+          "unresolved_recent_contradiction": null
+        }
+      }
+    },
+    "execution_occurred": false,
+    "memory_mutated": false,
+    "model_calls": 9,
+    "model_seconds": 46.32390456000576,
+    "operational_recovery": "PENDING_NEXT_VALID_DECISION",
+    "opportunity": "REGISTERED_PERTURBATION",
+    "receipt_created": false,
+    "stage": "A",
+    "status": "ABSTAINED",
+    "strict_parser_rejection": true
+  }
+}

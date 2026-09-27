@@ -1,0 +1,130 @@
+{
+  "payload": {
+    "adapter_path": "generations/generation-0002/model/trained-adapter.safetensors",
+    "adapter_sha256": "effb5eebef0649818c0697f1dfbadc73bc9e047eb1eaf6e3d5f6c63e0a35d39a",
+    "artifact_kind": "LORA_ADAPTER",
+    "base_model_identity": "Qwen/Qwen2.5-0.5B-Instruct@7ae557604adf67be50417f59c2c2f167def9a775",
+    "candidate_evaluation_artifact": "generations/generation-0002/candidate-evaluation.json",
+    "candidate_evaluation_sha256": "45ef4865b351eb678a49ecffadfc71bc2b78643f964e8d63f0c2f5f9dfb7e014",
+    "creation_status": "CANDIDATE",
+    "creation_timestamp": "2026-09-26T00:59:42.262671+00:00",
+    "dataset_manifest_sha256": "78368982a6c356cf0b816672e9be0e964f56479d184312c6108c05664fca8e8b",
+    "dataset_path": "generations/generation-0002/fresh-dataset",
+    "evaluation_artifact": "generations/generation-0002/evaluation-comparison.json",
+    "evaluation_sha256": "54bd366d6746d1cde334119604ecc21c7dcf2525455ada76f4bc167b54c4a127",
+    "evaluation_summary": {
+      "candidate": {
+        "accuracy": 1.0,
+        "by_target": {
+          "-1": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "n": 2
+          },
+          "0": {
+            "accuracy": 1.0,
+            "correct": 8,
+            "n": 8
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "n": 2
+          }
+        },
+        "correct": 12,
+        "examples": 12,
+        "invalid": 0
+      },
+      "incumbent": {
+        "accuracy": 0.16666666666666666,
+        "by_target": {
+          "-1": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 2
+          },
+          "0": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "n": 8
+          },
+          "1": {
+            "accuracy": 1.0,
+            "correct": 2,
+            "n": 2
+          }
+        },
+        "correct": 2,
+        "examples": 12,
+        "invalid": 0
+      },
+      "promotion": {
+        "catastrophic_classes": [],
+        "criteria": {
+          "integrity_checks_passed": true,
+          "invalid_not_increased": true,
+          "net_corrections": true,
+          "no_catastrophic_class_collapse": true,
+          "overall_improved": true,
+          "sufficient_evidence": true
+        },
+        "decision": "ACTIVE",
+        "rule": {
+          "catastrophic_class_minimum_examples": 3,
+          "maximum_absolute_class_accuracy_drop": 0.5,
+          "minimum_evaluation_examples": 12,
+          "minimum_examples_per_class": 2,
+          "rule": "candidate accuracy must be strictly greater; invalid count must not increase; wrong-to-correct must exceed correct-to-wrong; represented classes may not catastrophically collapse; all artifact, provenance, leakage, and fresh-reload checks must pass",
+          "version": 1
+        },
+        "rule_sha256": "44991d3ebc09b29e0d658fa5d123d39540a408897a41eda6999d29fe1abc3892"
+      },
+      "transitions": {
+        "correct_to_wrong": 0,
+        "unchanged_correct": 2,
+        "unchanged_wrong": 0,
+        "wrong_to_correct": 10
+      }
+    },
+    "example_usage_artifact": "generations/generation-0002/example-usage.json",
+    "example_usage_sha256": "6117dfb149a4208b41a9cd06124098af5fe4d6325ab8c751f3d1c4f0187ff0e3",
+    "final_status": "ACTIVE",
+    "fresh_process_reload_passed": true,
+    "generation": 2,
+    "grounded_training_examples": 42,
+    "incumbent_evaluation_artifact": "generations/generation-0002/incumbent-evaluation.json",
+    "incumbent_evaluation_sha256": "6b42624d3f3e4f750617ea1336e366081facbfd99cb2badf3791664ee2135cbf",
+    "lineage_artifact": "generations/generation-0002/model/learning-lineage.json",
+    "lineage_sha256": "9824ae8364061a2b6529f9a376b8479d7c70e9bbd02aea33eaac59c9cbfa3a7f",
+    "newly_eligible_grounded_examples": 60,
+    "optimizer_evaluation_leakage": 0,
+    "parent_generation": 1,
+    "promotion_rule_sha256": "44991d3ebc09b29e0d658fa5d123d39540a408897a41eda6999d29fe1abc3892",
+    "provenance_checks_passed": true,
+    "reason": "All frozen promotion criteria passed",
+    "training_configuration": {
+      "adapter_alpha": 16,
+      "adapter_dropout": 0.05,
+      "adapter_rank": 8,
+      "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+      "base_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "batch_size": 2,
+      "epochs": 5,
+      "gradient_accumulation": 2,
+      "learning_rate": 0.0002,
+      "max_length": 512,
+      "optimizer": "AdamW",
+      "seed": 20260925,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "weight_decay": 0.01
+    },
+    "training_dataset_manifest_sha256": "d1db2a12ec7e5073e3cd236de9616649877280b5f3e57b22dec9c6eb43e0bb39",
+    "training_dataset_path": "generations/generation-0002/training-dataset",
+    "training_strategy": "continue-active"
+  },
+  "sha256": "2301996221c87483d4fb4c9a1ebba2e783fc72653511f9ac86d04976d993d2c4"
+}

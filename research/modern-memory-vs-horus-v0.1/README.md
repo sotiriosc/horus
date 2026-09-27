@@ -22,3 +22,8 @@ Zero-inference infrastructure tests:
 ```sh
 python -m unittest experiments.modern_memory_vs_horus_v0_1.test_protocol -v
 ```
+
+Completed classification: **HORUS_NET_HARMFUL** for the registered workload.
+See [the complete 25-item report](results.md), [intervention ledger](intervention-ledger.json),
+and [authenticated replay](evidence/replay.json). All 12 Stage-A observations
+remained matched; one MH timeout was repaired exactly once. No tuning followed.
