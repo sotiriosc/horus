@@ -576,6 +576,61 @@ class ProblemManager:
                 reason=record["explorer"].get("reason"),receipt=deepcopy(record.get("receipt")),
                 suffix_prefix_check=deepcopy(record.get("suffix_prefix_check")),
                 option_profile_controlled=False))
+        elif kind=="OPERATIONAL_REPAIR_LIFECYCLE":
+            p=state["problems"].get(record["problem_id"]); stage=record["stage"]
+            if not p or p["problem_id"]!="PR-0004" or \
+                    p["problem_type"]!="EXTERNAL_SERVICE_PROBLEM":
+                raise RoutingError("operational repair is not bound to PR-0004")
+            previous=p.get("operational_repair_state")
+            required={"REPAIR_REQUESTED":None,"REPAIR_AUTHORIZED":"REPAIR_REQUESTED",
+                "REPAIR_ATTEMPTED":"REPAIR_AUTHORIZED","REPAIR_SUCCEEDED":"REPAIR_ATTEMPTED",
+                "REISSUE_ATTEMPTED":"REPAIR_SUCCEEDED","RESUMED":"REISSUE_ATTEMPTED"}
+            if stage=="REPAIR_FAILED":
+                if previous not in ("REPAIR_ATTEMPTED","REISSUE_ATTEMPTED"):
+                    raise RoutingError("repair failure lacks an attempted repair or reissue")
+            elif stage not in required or previous!=required[stage]:
+                raise RoutingError("operational repair lifecycle order changed")
+            if stage=="REPAIR_REQUESTED":
+                if p.get("requested_capability")!="EXTERNAL_SERVICE_REPAIR" or \
+                        record["capabilities"]!=["RESTART_MODEL_SERVICE","VERIFY_MODEL_ARTIFACT",
+                            "REISSUE_UNEXECUTED_PREDICTION_REQUEST"]:
+                    raise RoutingError("unsupported operational repair request")
+                p["operational_repair_budget"]={"service_restarts":0,"reissues":0,
+                    "maximum_service_restarts":1,"maximum_reissues":1}
+            elif stage=="REPAIR_AUTHORIZED":
+                if len(record.get("authorization_sha256",""))!=64:
+                    raise RoutingError("operational repair authorization is not committed")
+            elif stage=="REPAIR_ATTEMPTED":
+                budget=p["operational_repair_budget"]
+                if budget["service_restarts"]>=budget["maximum_service_restarts"]:
+                    raise RoutingError("operational service-repair allowance consumed")
+                budget["service_restarts"]+=1
+            elif stage=="REISSUE_ATTEMPTED":
+                budget=p["operational_repair_budget"]
+                if budget["reissues"]>=budget["maximum_reissues"]:
+                    raise RoutingError("operational transport-reissue allowance consumed")
+                budget["reissues"]+=1
+            elif stage=="RESUMED":
+                if record["decision_sequence"]!=state["attempted_decisions"]+1 or \
+                        record["status"] not in ("AUTHORIZED","ABSTAINED","FRAMEWORK_REJECTED"):
+                    raise RoutingError("resumed ordinary decision does not continue the session")
+                state["attempted_decisions"]=record["decision_sequence"]
+                if record["status"]=="AUTHORIZED":
+                    if not record.get("receipt") or record["receipt"].get(
+                            "receipt_is_authenticated") is not True:
+                        raise RoutingError("resumed execution lacks authenticated receipt")
+                    state["authorized_executions"]+=1
+                p["lifecycle_state"]="CLOSED"; p["requested_capability"]=None
+                p["operational_repair_result"]=record["outcome"]
+            elif stage=="REPAIR_FAILED":
+                p["operational_repair_result"]="REPAIR_FAILED"
+                p["requested_capability"]=None
+            p["operational_repair_state"]=stage
+            p["history"].append(dict(lifecycle_state=p["lifecycle_state"],
+                decision_sequence=record.get("decision_sequence",state["attempted_decisions"]),
+                kind=stage,details=deepcopy(record.get("details")),
+                repair_is_behavioral_evidence=False,memory_mutated=False,
+                training_target_created=False))
         elif kind=="OPERATIONAL_PROBLEM_ATTACHED":
             cls._create_operational(state,record["decision_sequence"],record["problem_type"],
                 record["scope"],record["owner"],record.get("blocked_problem_id"))
@@ -746,6 +801,24 @@ class ProblemManager:
         self._apply(deepcopy(self.state),"OPTION_PROFILE_FOLLOWUP_OBSERVED",record)
         self._append("OPTION_PROFILE_FOLLOWUP_OBSERVED",record); self.bind_session(store)
         return deepcopy(record)
+
+    def record_operational_repair_event(self, *, problem_id: str, stage: str,
+                                        store=None, row: dict | None=None, **fields):
+        record=dict(problem_id=problem_id,stage=stage,**deepcopy(fields))
+        if stage=="RESUMED":
+            if row is None: raise RoutingError("resumed repair lacks ordinary decision")
+            receipt=row.get("receipt"); compact=None
+            if receipt is not None:
+                compact=dict(receipt_identity=[receipt[k] for k in (
+                    "source_identity","event_id","epoch","transaction_id")],
+                    action=receipt["action"],realized_consequence=receipt["realized_consequence"],
+                    realized_next_state=receipt["next_state"],receipt_is_authenticated=True)
+            record.update(decision_sequence=row["prediction_batch_sequence"],status=row["status"],
+                explorer=deepcopy(row["explorer"]),receipt=compact)
+        self._apply(deepcopy(self.state),"OPERATIONAL_REPAIR_LIFECYCLE",record)
+        result=self._append("OPERATIONAL_REPAIR_LIFECYCLE",record)
+        if store is not None: self.bind_session(store)
+        return result
 
     def prepare_one_step_execution(self, *, store, ordinary_decision: dict,
                                    pre_state: int, forecasts: dict,
