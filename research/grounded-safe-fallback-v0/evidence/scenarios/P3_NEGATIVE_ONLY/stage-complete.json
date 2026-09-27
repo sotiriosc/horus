@@ -1,0 +1,775 @@
+{
+  "conditions": {
+    "FORCED_GROUNDED": {
+      "current_state": 2,
+      "event_count": 5,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 1,
+          "candidate_support": [
+            "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:4:491662040b23f1ae\",1,2004,1]"
+          ],
+          "candidate_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "established_support": [
+            "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:3:48933f1676171936\",1,2003,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "UNRESOLVED_CHANGE",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:3:48933f1676171936\",1,2003,1]",
+              "receipt_sha256": "2b02041a3937864a4f0e6f27c1879eec3fb996415bcca2c19bca41b2f724c17d",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:4:491662040b23f1ae\",1,2004,1]",
+              "receipt_sha256": "941b4787e33fbc4884d8bf9917713c39ded1c8bb88eeb1dbf503a9d9948ae2b5",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "414f103c72ec667eb29af42bfa144baa59468a5ffd04c736d6dd0c3df6e2a664",
+        "event_count": 5,
+        "event_store_sha256": "35e3652293354e1c73d5f93c6c8f3c2f873b38677457fab3a44cf76198e4f756",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "1b0b4cf2791be88779ebf991b2baeab59a2a840ee0bd8a699431f0fe8c7d06c7",
+        "checkpoint.json": "df12fd5727f599a00cdec5a3f60acf0990d643f7394287096ff092b579e5271a",
+        "events.jsonl": "8d13268603aa230db0080c060d67ae42350af4d5c7a5702d03f0419b3d8b9963",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "7963921433efaa4ce84ff14ec2f00b2984a971f88c8ae2c77215379420f1596e"
+      }
+    },
+    "H_ABSTAIN": {
+      "current_state": 1,
+      "event_count": 4,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 1,
+          "candidate_support": [
+            "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:4:0058231bbcf0c5fe\",1,2004,1]"
+          ],
+          "candidate_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "established_support": [
+            "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:3:52e65d944dc12f84\",1,2003,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "UNRESOLVED_CHANGE",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:3:52e65d944dc12f84\",1,2003,1]",
+              "receipt_sha256": "e2e4fe1bdf17ecd4aa14302ce6794a26b88f476aab948a2ed850dffbf0bb1d8a",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:4:0058231bbcf0c5fe\",1,2004,1]",
+              "receipt_sha256": "e0b9667a4228b82e8260c271392b9cc2d5d2134b11b2ae05ae1e6d76063583e8",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "d3cd0e192fb40fdc4583376b3f8630da4c02a1e4dfd76bf8f4bd80df3e6384a3",
+        "event_count": 4,
+        "event_store_sha256": "3f08781fa601b04dcf9bd9376d24181ad62a58dff4a15a5fcfbd44b95dc13ad7",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "6dfff55292cab1cde83a71ec4cc46d1545df814ebfdba49840ac0156a68edac5",
+        "checkpoint.json": "5b73c7b6da48258ff014258b543efb3675ea28bc311bd2729a9e01587da90770",
+        "events.jsonl": "9772e31d5e95874e68649bbb3bfb5e1c6ec9d7aff81f90f5b3ee0a6a4ee0f8c2",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "2b0d2e865a3599de2ec18063102aebdfb932bccc61bac10b46d0ffa992736039"
+      }
+    },
+    "H_SAFE": {
+      "current_state": 1,
+      "event_count": 4,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 1,
+          "candidate_support": [
+            "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:4:3d4201ec66cac759\",1,2004,1]"
+          ],
+          "candidate_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "established_support": [
+            "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:3:dbc35a855f8caabf\",1,2003,1]"
+          ],
+          "established_value": {
+            "consequence": 1,
+            "next_state": 1
+          },
+          "kind": "UNRESOLVED_CHANGE",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:3:dbc35a855f8caabf\",1,2003,1]",
+              "receipt_sha256": "3facc6793ceba42fbc87f937c1b914a098d93fbcae75948126356759c4e4a8fa",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:4:3d4201ec66cac759\",1,2004,1]",
+              "receipt_sha256": "027441c5dcddb832fbb45b60ff7c2c1d86cc95c7f21a719e1d8f169977438e13",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "e70f3323731fc54869681a358d54157248a23b11a371150a75a3d9b347ee0faf",
+        "event_count": 4,
+        "event_store_sha256": "28ffc2234e5b3708afa4942682cad86375e547652d78f705e037e538c0f8a06b",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "ea02322762076bab02d7ca936889066711a1c2567d9cd2761a13d96155aa1923",
+        "checkpoint.json": "3bd189e93ecfd4ca9400172de700b59dd8cd2f1951b34c9f226afff259a6a165",
+        "events.jsonl": "3fc8f56f8c6988e1beb107c3e1958482193b48c3d375310e29c7c126ae94aa3f",
+        "model-calls.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "training-records.jsonl": "29ab1fc6ddb664bbc9334cd4a28adf56f056f30c35269efefc318689eff0dc81"
+      }
+    },
+    "MODEL": {
+      "current_state": 1,
+      "event_count": 5,
+      "grounded_states": {
+        "1:HOLD": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [
+            "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:4:196d7da5a9cc09b4\",1,2004,1]",
+            "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:5:f147c5f9b853268c\",1,2005,1]"
+          ],
+          "established_value": {
+            "consequence": -1,
+            "next_state": 1
+          },
+          "kind": "ESTABLISHED",
+          "receipt_provenance": [
+            {
+              "event_stream_sequence": 3,
+              "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:3:bc6530405b603b9e\",1,2003,1]",
+              "receipt_sha256": "ad7ac7d4982ecd3d72aef7db93d61de663cb6c4cbf864002649940efca7ed40e",
+              "value": {
+                "consequence": 1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 4,
+              "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:4:196d7da5a9cc09b4\",1,2004,1]",
+              "receipt_sha256": "9208ffada678f44d9758a600b693196d85d0517e3017e4c51eb68eb5513e19ee",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            },
+            {
+              "event_stream_sequence": 5,
+              "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:5:f147c5f9b853268c\",1,2005,1]",
+              "receipt_sha256": "768a6d60e87fd56ba4242e998ffd7420999dab292f4ca64935ce5d0f18505a02",
+              "value": {
+                "consequence": -1,
+                "next_state": 1
+              }
+            }
+          ]
+        },
+        "1:RETREAT": {
+          "alternatives": [],
+          "candidate_count": 0,
+          "candidate_support": [],
+          "candidate_value": null,
+          "established_support": [],
+          "established_value": null,
+          "kind": "UNSEEN",
+          "receipt_provenance": []
+        }
+      },
+      "memory": {
+        "database_sha256": "cfc689134b5615329e4dfecd1ae0b10573a53bb9365cd4e3de073278b5cc6524",
+        "event_count": 5,
+        "event_store_sha256": "b2d7c751a0a41a9a904ef73842696648981e6668bac576f3f8bc7560da18bbdc",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa"
+      },
+      "session_files_sha256": {
+        "authority.key": "5da292a4619ebbef21c537e42e3a5b861bebcef67a1a18c9e7df18999c37e235",
+        "checkpoint.json": "af6988975d98e01d3a4feafc37654e5bb7e1086b953a516cd57b0d88321b1870",
+        "events.jsonl": "24b9cb747a8aa34a4742e070dae66fae07403a3f023068a4ef7cc0210728e8cd",
+        "model-calls.private.jsonl": "f3f249dfa5bf995f91a6a4d64172d7286b8f278e48c14f4e2c3c33c0414bb47d",
+        "training-records.jsonl": "6ce41b76314dafca02b9ad611a97dda8da77748dc13584f7e4f78940c3e24a26"
+      }
+    }
+  },
+  "decisions": {
+    "FORCED_GROUNDED": [
+      {
+        "action_justified": false,
+        "arm": "FORCED_GROUNDED",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 8.015299681574106e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:1:b079ec316d99ef60\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 3.835200914181769e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:1:b079ec316d99ef60\",1,2001,1]",
+                "receipt_sha256": "d81f0819238f61bd1fed3d95cbaea90f03b49ded2c2955f1061a3ad39314e496",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 7.397399167530239e-05,
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:4:491662040b23f1ae\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:3:48933f1676171936\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "UNRESOLVED_CHANGE",
+            "mechanical_seconds": 3.0347000574693084e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:3:48933f1676171936\",1,2003,1]",
+                "receipt_sha256": "2b02041a3937864a4f0e6f27c1879eec3fb996415bcca2c19bca41b2f724c17d",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:1db5cdf88097f31d63111d7954be19dd:runtime:4:491662040b23f1ae\",1,2004,1]",
+                "receipt_sha256": "941b4787e33fbc4884d8bf9917713c39ded1c8bb88eeb1dbf503a9d9948ae2b5",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 901,
+            "source": "LATEST_AUTHENTICATED_RECEIPT",
+            "status": "FORCED_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 5,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.037423842994030565,
+        "index": 1,
+        "mechanical_seconds": 6.869900971651077e-05,
+        "model_calls": 0,
+        "optimality_established": false,
+        "pre_event_count": 4,
+        "pre_memory_sha256": "4c154a32db1c930032310af5e1c748d5c5c98e8a1f4ef1afe9ea56de7c1e5a98",
+        "pre_state": 1,
+        "realized": {
+          "consequence": 1,
+          "next_state": 2
+        },
+        "reason": "FORCED_POINT_MAX",
+        "scenario": "P3_NEGATIVE_ONLY",
+        "selected_action": "ADVANCE",
+        "unresolved_relations": []
+      }
+    ],
+    "H_ABSTAIN": [
+      {
+        "action_justified": false,
+        "arm": "H_ABSTAIN",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 6.417400436475873e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:1:ba1d75748d50a642\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 4.3544016079977155e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:1:ba1d75748d50a642\",1,2001,1]",
+                "receipt_sha256": "0ddbd97e3418bf56a07fe76fe39027af1b981eec528ba4b2687b03eb3af45305",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 5.317898467183113e-05,
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:4:0058231bbcf0c5fe\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:3:52e65d944dc12f84\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "UNRESOLVED_CHANGE",
+            "mechanical_seconds": 3.383198054507375e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:3:52e65d944dc12f84\",1,2003,1]",
+                "receipt_sha256": "e2e4fe1bdf17ecd4aa14302ce6794a26b88f476aab948a2ed850dffbf0bb1d8a",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:b3abd15cf5aea2b8b5236162706e0644:runtime:4:0058231bbcf0c5fe\",1,2004,1]",
+                "receipt_sha256": "e0b9667a4228b82e8260c271392b9cc2d5d2134b11b2ae05ae1e6d76063583e8",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 901,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "UNRESOLVED",
+            "value": null
+          }
+        ],
+        "authorized_event_sequence": null,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.015622175997123122,
+        "index": 1,
+        "mechanical_seconds": 7.73759966250509e-05,
+        "model_calls": 0,
+        "optimality_established": false,
+        "pre_event_count": 4,
+        "pre_memory_sha256": "3f08781fa601b04dcf9bd9376d24181ad62a58dff4a15a5fcfbd44b95dc13ad7",
+        "pre_state": 1,
+        "realized": null,
+        "reason": "ABSTAIN_UNRESOLVED_COULD_CHANGE_WINNER",
+        "scenario": "P3_NEGATIVE_ONLY",
+        "selected_action": null,
+        "unresolved_relations": [
+          "1:HOLD"
+        ]
+      }
+    ],
+    "H_SAFE": [
+      {
+        "action_justified": false,
+        "arm": "H_SAFE",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 3.7421996239572763e-05,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:1:58093bc177c2cbde\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.4309003492817283e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:1:58093bc177c2cbde\",1,2001,1]",
+                "receipt_sha256": "001d18aa2b422a79405f645997e524d4713767fbfcfdf076a7558b3586452d4f",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "GROUNDED",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 2.6321999030187726e-05,
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:4:3d4201ec66cac759\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "context_tokens": 0,
+            "established_support": [
+              "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:3:dbc35a855f8caabf\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "UNRESOLVED_CHANGE",
+            "mechanical_seconds": 1.5820987755432725e-05,
+            "model_calls": 0,
+            "preparation_seconds": 0.0,
+            "provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:3:dbc35a855f8caabf\",1,2003,1]",
+                "receipt_sha256": "3facc6793ceba42fbc87f937c1b914a098d93fbcae75948126356759c4e4a8fa",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:1e79e89195a73e6b9d015126183b9ea7:runtime:4:3d4201ec66cac759\",1,2004,1]",
+                "receipt_sha256": "027441c5dcddb832fbb45b60ff7c2c1d86cc95c7f21a719e1d8f169977438e13",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 901,
+            "source": "AUTHENTICATED_RECEIPT_STATE",
+            "status": "UNRESOLVED",
+            "value": null
+          }
+        ],
+        "authorized_event_sequence": null,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "context_tokens": 0,
+        "decision_seconds": 0.014314411993836984,
+        "index": 1,
+        "mechanical_seconds": 4.012999124825001e-05,
+        "model_calls": 0,
+        "optimality_established": false,
+        "pre_event_count": 4,
+        "pre_memory_sha256": "28ffc2234e5b3708afa4942682cad86375e547652d78f705e037e538c0f8a06b",
+        "pre_state": 1,
+        "realized": null,
+        "reason": "ABSTAIN_UNRESOLVED_COULD_CHANGE_WINNER",
+        "scenario": "P3_NEGATIVE_ONLY",
+        "selected_action": null,
+        "unresolved_relations": [
+          "1:HOLD"
+        ]
+      }
+    ],
+    "MODEL": [
+      {
+        "action_justified": false,
+        "arm": "MODEL",
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "assessment_seconds": 11.18883266398916,
+            "candidate_count": 0,
+            "candidate_support": [],
+            "candidate_value": null,
+            "context_tokens": 98,
+            "established_support": [
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:1:5ba5c7bce4284aef\",1,2001,1]"
+            ],
+            "established_value": {
+              "consequence": -1,
+              "next_state": 2
+            },
+            "grounded_state_kind": "ESTABLISHED",
+            "mechanical_seconds": 2.4415989173576236e-05,
+            "model_call_ids": [
+              "P3_NEGATIVE_ONLY:DECISION:1:MODEL:M:ADVANCE:J",
+              "P3_NEGATIVE_ONLY:DECISION:1:MODEL:M:ADVANCE:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:1:5ba5c7bce4284aef\",1,2001,1]"
+            ],
+            "preparation_seconds": 11.174146795005072,
+            "provenance": [
+              {
+                "event_stream_sequence": 1,
+                "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:1:5ba5c7bce4284aef\",1,2001,1]",
+                "receipt_sha256": "86f180065024e0d4168e7cbf2344111f25a46ac3fec1b1e2e916c1a44d32e81e",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 2
+                }
+              }
+            ],
+            "relation": "1:ADVANCE",
+            "serialized_grounded_state_bytes": 538,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": -1,
+              "next_state": 2
+            }
+          },
+          {
+            "action": "HOLD",
+            "assessment_seconds": 12.813361345004523,
+            "candidate_count": 1,
+            "candidate_support": [
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:4:196d7da5a9cc09b4\",1,2004,1]"
+            ],
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "context_tokens": 154,
+            "established_support": [
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:3:bc6530405b603b9e\",1,2003,1]"
+            ],
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "grounded_state_kind": "UNRESOLVED_CHANGE",
+            "mechanical_seconds": 9.669701103121042e-05,
+            "model_call_ids": [
+              "P3_NEGATIVE_ONLY:DECISION:1:MODEL:M:HOLD:J",
+              "P3_NEGATIVE_ONLY:DECISION:1:MODEL:M:HOLD:G2"
+            ],
+            "model_calls": 2,
+            "model_retrieved_identities": [
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:3:bc6530405b603b9e\",1,2003,1]",
+              "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:4:196d7da5a9cc09b4\",1,2004,1]"
+            ],
+            "preparation_seconds": 12.802136117010377,
+            "provenance": [
+              {
+                "event_stream_sequence": 3,
+                "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:3:bc6530405b603b9e\",1,2003,1]",
+                "receipt_sha256": "ad7ac7d4982ecd3d72aef7db93d61de663cb6c4cbf864002649940efca7ed40e",
+                "value": {
+                  "consequence": 1,
+                  "next_state": 1
+                }
+              },
+              {
+                "event_stream_sequence": 4,
+                "identity": "[\"HORUS:0d67d91f1dba16e05594fa02056df0cb:runtime:4:196d7da5a9cc09b4\",1,2004,1]",
+                "receipt_sha256": "9208ffada678f44d9758a600b693196d85d0517e3017e4c51eb68eb5513e19ee",
+                "value": {
+                  "consequence": -1,
+                  "next_state": 1
+                }
+              }
+            ],
+            "relation": "1:HOLD",
+            "serialized_grounded_state_bytes": 901,
+            "source": "FROZEN_JOINT_MAP_AND_G2_EXACT_RELATION",
+            "status": "MODEL_POINT",
+            "value": {
+              "consequence": 1,
+              "next_state": 1
+            }
+          }
+        ],
+        "authorized_event_sequence": 5,
+        "candidate_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "context_tokens": 252,
+        "decision_seconds": 24.039239709993126,
+        "index": 1,
+        "mechanical_seconds": 0.00012111300020478666,
+        "model_calls": 4,
+        "optimality_established": false,
+        "pre_event_count": 4,
+        "pre_memory_sha256": "e329d463312bdbb2892bc8a18f40b79f5e0ead5592316675214975ed58aefafb",
+        "pre_state": 1,
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "reason": "MODEL_POINT_MAX",
+        "scenario": "P3_NEGATIVE_ONLY",
+        "selected_action": "HOLD",
+        "unresolved_relations": []
+      }
+    ]
+  },
+  "matched_seed": 4,
+  "scenario": "P3_NEGATIVE_ONLY",
+  "stage": "single",
+  "status": "COMPLETE",
+  "wall_seconds": 24.740125626005465
+}
