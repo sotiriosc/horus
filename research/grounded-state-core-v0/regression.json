@@ -1,0 +1,30 @@
+{
+  "limitation": "Historical signed-stream verdicts are stored summaries in the publication root; raw HMAC replay requires the unchanged local archives.",
+  "model_calls_executed": 0,
+  "status": "PASS",
+  "studies": {
+    "grounded-hybrid-controller-v0": {
+      "classification": "GROUNDED_HYBRID_SUPPORTED",
+      "false_certainty": 0,
+      "model_to_grounded_handoff": true,
+      "stored_replay": "PASS"
+    },
+    "grounded-safe-fallback-v0": {
+      "classification": "SAFE_FALLBACK_SUPPORTED",
+      "justified_not_optimal_fallbacks": 6,
+      "stored_replay": "PASS"
+    },
+    "grounded-stochastic-relation-v0": {
+      "classification": "EMPIRICAL_GROUNDING_SUPPORTED",
+      "extracted_fold_parity_events": 432,
+      "information_boundary": "EVIDENCE_INSUFFICIENT_TO_DISTINGUISH",
+      "public_semantic_replay": "PASS",
+      "restart_integrity": "PASS"
+    },
+    "grounded-uncertainty-state-v0": {
+      "classification": "EXPLICIT_UNCERTAINTY_SUPPORTED",
+      "first_contradiction_count": 8,
+      "stored_replay": "PASS"
+    }
+  }
+}
