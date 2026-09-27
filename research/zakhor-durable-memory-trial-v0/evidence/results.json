@@ -1,0 +1,281 @@
+{
+  "conditions": {
+    "M": {
+      "adaptation_latency": null,
+      "consequence_accuracy": 0.5833333333333334,
+      "context_tokens": {
+        "maximum": 189,
+        "mean": 164.5,
+        "total": 3948
+      },
+      "contradiction_opportunities": 17,
+      "contradiction_preservation_rate": 1.0,
+      "contradictions_preserved": 17,
+      "correct": 14,
+      "error_causes": {
+        "CORRECT_MEMORY_RETRIEVED_MODEL_WRONG": 6,
+        "RETRIEVAL_AMBIGUOUS": 1,
+        "STALE_MEMORY_OVERWEIGHTED": 3
+      },
+      "events": 24,
+      "false_persistence_changed_regime": 0,
+      "false_persistence_old_regime": 10,
+      "invalid_outputs": 0,
+      "model_seconds": {
+        "maximum": 0.4538883300119778,
+        "mean": 0.0796055267904497,
+        "total": 1.910532642970793
+      },
+      "relevant_history_retrieval_rate": 0.9259259259259259,
+      "restoration_latency": 0,
+      "retrieval_questions": {
+        "contradictions_visible": 17,
+        "most_recent_event_retrieved": 23,
+        "recent_event_available": 23,
+        "relevant_current_phase_visible": 21
+      },
+      "retrieval_seconds": {
+        "maximum": 0.0002437819930491969,
+        "mean": 0.000150831831585189,
+        "total": 0.0036199639580445364
+      },
+      "stale_history_retrieval_rate": 0.3821138211382114,
+      "total_measured_seconds": 1.9141526069288375,
+      "windows": {
+        "early": {
+          "accuracy": 0.75,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 115.5,
+          "relevant_retrieval_rate": 1.0,
+          "stale_selection_rate": 0.4074074074074074
+        },
+        "late": {
+          "accuracy": 1.0,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 0.9259259259259259,
+          "stale_selection_rate": 0.4583333333333333
+        },
+        "middle": {
+          "accuracy": 0.0,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 0.8947368421052632,
+          "stale_selection_rate": 0.2916666666666667
+        },
+        "worst_rolling": {
+          "accuracy": 0.0,
+          "events": 6,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 1.0,
+          "stale_selection_rate": 0.5833333333333334,
+          "starts_at": 7
+        }
+      }
+    },
+    "Z": {
+      "adaptation_latency": null,
+      "consequence_accuracy": 0.5833333333333334,
+      "context_tokens": {
+        "maximum": 189,
+        "mean": 164.5,
+        "total": 3948
+      },
+      "contradiction_opportunities": 17,
+      "contradiction_preservation_rate": 1.0,
+      "contradictions_preserved": 17,
+      "correct": 14,
+      "error_causes": {
+        "CORRECT_MEMORY_RETRIEVED_MODEL_WRONG": 6,
+        "RETRIEVAL_AMBIGUOUS": 1,
+        "STALE_MEMORY_OVERWEIGHTED": 3
+      },
+      "events": 24,
+      "false_persistence_changed_regime": 0,
+      "false_persistence_old_regime": 10,
+      "invalid_outputs": 0,
+      "model_seconds": {
+        "maximum": 0.0654282420000527,
+        "mean": 0.04589775750052164,
+        "total": 1.1015461800125195
+      },
+      "relevant_history_retrieval_rate": 0.9259259259259259,
+      "restoration_latency": 0,
+      "retrieval_questions": {
+        "contradictions_visible": 17,
+        "most_recent_event_retrieved": 23,
+        "recent_event_available": 23,
+        "relevant_current_phase_visible": 21
+      },
+      "retrieval_seconds": {
+        "maximum": 0.00036061499849893153,
+        "mean": 0.00019101020734524354,
+        "total": 0.004584244976285845
+      },
+      "stale_history_retrieval_rate": 0.3821138211382114,
+      "total_measured_seconds": 1.1061304249888053,
+      "windows": {
+        "early": {
+          "accuracy": 0.75,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 115.5,
+          "relevant_retrieval_rate": 1.0,
+          "stale_selection_rate": 0.4074074074074074
+        },
+        "late": {
+          "accuracy": 1.0,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 0.9259259259259259,
+          "stale_selection_rate": 0.4583333333333333
+        },
+        "middle": {
+          "accuracy": 0.0,
+          "events": 8,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 0.8947368421052632,
+          "stale_selection_rate": 0.2916666666666667
+        },
+        "worst_rolling": {
+          "accuracy": 0.0,
+          "events": 6,
+          "invalid": 0,
+          "mean_context_tokens": 189,
+          "relevant_retrieval_rate": 1.0,
+          "stale_selection_rate": 0.5833333333333334,
+          "starts_at": 7
+        }
+      }
+    }
+  },
+  "decision_gate": "MODERN_MEMORY_SUFFICIENT",
+  "decision_gate_reason": "M and Z selected identical memories and produced identical predictions on all 24 opportunities; Z added a persistent regime index and slightly more retrieval time without a distinct retrieval or behavioral result.",
+  "event_count": 24,
+  "model_calls": 48,
+  "paired_differences": {
+    "accuracy": 0.0,
+    "adaptation_latency": null,
+    "context_tokens": 0,
+    "measured_seconds": -0.8080221819400322,
+    "restoration_latency": 0
+  },
+  "reporting_recovery": "v3 authoritative: duplicate-keyword, prior-evidence denominator, and non-vacuous most-recent count; zero inference",
+  "restart": {
+    "first_post_restart": {
+      "conditions": {
+        "M": {
+          "correct": false,
+          "prediction": 1,
+          "selected_memory_identities": [
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:1:375ffeeb3f334129\",6,2001,6]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",2,2002,2]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",3,2002,3]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",4,2002,4]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",5,2002,5]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",6,2002,6]"
+          ]
+        },
+        "Z": {
+          "correct": false,
+          "prediction": 1,
+          "selected_memory_identities": [
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:1:375ffeeb3f334129\",6,2001,6]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",2,2002,2]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",3,2002,3]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",4,2002,4]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",5,2002,5]",
+            "[\"HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:2:ad431e26e276ea14\",6,2002,6]"
+          ]
+        }
+      },
+      "event_number": 13,
+      "receipt_identity": [
+        "HORUS:f83f66d5a27e34e27f1ee1fafef90518:runtime:3:d99b838c3e1b5010",
+        1,
+        2003,
+        1
+      ]
+    },
+    "pre_restart": {
+      "call_record_count": 72,
+      "memory": {
+        "database_sha256": "f7b0f7d98e7eba8ade952206b61830329b6ca168cd4bf8cd1aafa633ef8f3dc4",
+        "event_count": 12,
+        "event_store_sha256": "b1f593fa9909c0611ff6aff9b248bf47102a797a4e88f81238e5ae2996449931",
+        "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa",
+        "zakhor_index_sha256": "8f0a614677f0dea7ec2de8aeafd77f526423cc437a61d34b04d780d08c854836",
+        "zakhor_state_sha256": "d4f36cc5457e2058388581c263286cbab05c261b05bfb42f3598cad43626fe75"
+      },
+      "protected_event_count": 12,
+      "protected_files_sha256": {
+        "authority.key": "24b888ca3cc953ad4a0d8a75b1f3b7bf2e0e743ffa2ee743a96f20201960d410",
+        "checkpoint.json": "d813a8518117d2d177238b9d8e8cab89fc230399f78a4fb544903d12d6304e3d",
+        "events.jsonl": "88c710cd2ae0d6b1c926d588bb78b6e242c2e50e6597ceb3125e323cf797de79",
+        "model-calls.private.jsonl": "8a8322f257a89638dcd2cd8ea046ac26b286badb45f97d1e74f39b4da7393a6b",
+        "training-records.jsonl": "3dc74813003de7cfba82258778d80e27a5d5f157945ac20417dfce8ec971391a"
+      },
+      "scoring_record_count": 12
+    },
+    "restore_verification": {
+      "exact_hash_match": true,
+      "expected": {
+        "call_record_count": 72,
+        "memory": {
+          "database_sha256": "f7b0f7d98e7eba8ade952206b61830329b6ca168cd4bf8cd1aafa633ef8f3dc4",
+          "event_count": 12,
+          "event_store_sha256": "b1f593fa9909c0611ff6aff9b248bf47102a797a4e88f81238e5ae2996449931",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa",
+          "zakhor_index_sha256": "8f0a614677f0dea7ec2de8aeafd77f526423cc437a61d34b04d780d08c854836",
+          "zakhor_state_sha256": "d4f36cc5457e2058388581c263286cbab05c261b05bfb42f3598cad43626fe75"
+        },
+        "protected_event_count": 12,
+        "protected_files_sha256": {
+          "authority.key": "24b888ca3cc953ad4a0d8a75b1f3b7bf2e0e743ffa2ee743a96f20201960d410",
+          "checkpoint.json": "d813a8518117d2d177238b9d8e8cab89fc230399f78a4fb544903d12d6304e3d",
+          "events.jsonl": "88c710cd2ae0d6b1c926d588bb78b6e242c2e50e6597ceb3125e323cf797de79",
+          "model-calls.private.jsonl": "8a8322f257a89638dcd2cd8ea046ac26b286badb45f97d1e74f39b4da7393a6b",
+          "training-records.jsonl": "3dc74813003de7cfba82258778d80e27a5d5f157945ac20417dfce8ec971391a"
+        },
+        "scoring_record_count": 12
+      },
+      "observed": {
+        "call_record_count": 72,
+        "memory": {
+          "database_sha256": "f7b0f7d98e7eba8ade952206b61830329b6ca168cd4bf8cd1aafa633ef8f3dc4",
+          "event_count": 12,
+          "event_store_sha256": "b1f593fa9909c0611ff6aff9b248bf47102a797a4e88f81238e5ae2996449931",
+          "modern_state_sha256": "c2d38b875739d8e1e3ce338a13a84d3a3333e96df165eff518767942789145aa",
+          "zakhor_index_sha256": "8f0a614677f0dea7ec2de8aeafd77f526423cc437a61d34b04d780d08c854836",
+          "zakhor_state_sha256": "d4f36cc5457e2058388581c263286cbab05c261b05bfb42f3598cad43626fe75"
+        },
+        "protected_event_count": 12,
+        "protected_files_sha256": {
+          "authority.key": "24b888ca3cc953ad4a0d8a75b1f3b7bf2e0e743ffa2ee743a96f20201960d410",
+          "checkpoint.json": "d813a8518117d2d177238b9d8e8cab89fc230399f78a4fb544903d12d6304e3d",
+          "events.jsonl": "88c710cd2ae0d6b1c926d588bb78b6e242c2e50e6597ceb3125e323cf797de79",
+          "model-calls.private.jsonl": "8a8322f257a89638dcd2cd8ea046ac26b286badb45f97d1e74f39b4da7393a6b",
+          "training-records.jsonl": "3dc74813003de7cfba82258778d80e27a5d5f157945ac20417dfce8ec971391a"
+        },
+        "scoring_record_count": 12
+      },
+      "reconciliation": {
+        "authenticated_events": 12,
+        "status": "PASS"
+      }
+    }
+  },
+  "retrieval_pair_audit": {
+    "different_internal_reason_labels": 23,
+    "identical_predictions": 24,
+    "identical_selected_identity_sets": 24,
+    "opportunities": 24
+  },
+  "status": "COMPLETE"
+}
