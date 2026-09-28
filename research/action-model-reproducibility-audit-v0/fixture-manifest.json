@@ -1,0 +1,99 @@
+{
+  "archival_sources": {
+    "C5_IDENTICAL_REQUEST": {
+      "case": "C5",
+      "decision": "D02",
+      "historical_I_action": "HOLD",
+      "historical_I_raw_output_canonical_sha256": "0e204dff6d53988bcf2753855c87e34e377d0401bd2de92f449a3748e124454f",
+      "historical_I_response_metadata": {
+        "eval_count": 9,
+        "load_duration_ns": 389006,
+        "prompt_eval_count": 495
+      },
+      "historical_S_action": "ADVANCE",
+      "historical_S_raw_output_canonical_sha256": "25e9c97d06cc22b95a3deb31eff5121bd82a09e4be903f69089e747452e8f576",
+      "historical_S_response_metadata": {
+        "eval_count": 10,
+        "load_duration_ns": 362125,
+        "prompt_eval_count": 495
+      },
+      "private_archive_commit": "85328f2e47aa6695479460c84a082e4dde2e0e86"
+    },
+    "G_STABLE_REQUEST": {
+      "case": "G",
+      "decision": "D01",
+      "historical_I_and_S_action": "HOLD",
+      "historical_raw_output_canonical_sha256": "0e204dff6d53988bcf2753855c87e34e377d0401bd82a09e4be903f69089e747452e8f576",
+      "private_archive_commit": "1f2166bcb5083cded52ce770db7b7b072273dbe3"
+    }
+  },
+  "fixtures": {
+    "C5_IDENTICAL_REQUEST": {
+      "allowed_actions": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "assessment_kinds": {
+        "ADVANCE": "UNSEEN",
+        "HOLD": "UNSEEN",
+        "RETREAT": "UNSEEN"
+      },
+      "byte_length": 2022,
+      "canonical_request_sha256": "0e5f079446e11a16bf6ec025101ac3131253552ca7cf791b3e0164e627fc3112",
+      "format": "json",
+      "history_length": 1,
+      "model": "dolphin-mixtral:latest",
+      "options": {
+        "num_ctx": 2048,
+        "num_predict": 48,
+        "repeat_penalty": 1.1,
+        "seed": 3305,
+        "temperature": 0.2,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "prompt_sha256": "b0aa36f8e2df552c68c9ba37e9ae5f2cbf7b315db7e50aabeb8bca04771db3d2",
+      "state": 3,
+      "stop_in_request": null,
+      "stream": false,
+      "system_sha256": "ca94790ddfaec9befd1cebe5a7e36281fbcabca676261b65521482816618db88",
+      "template_parameters_scope": "model-level; recorded separately",
+      "wire_request_sha256": "63931708f48b23ca51682acbee95a6099230d215861b5450918c566fdbe4d133"
+    },
+    "G_STABLE_REQUEST": {
+      "allowed_actions": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "assessment_kinds": {
+        "ADVANCE": "UNSEEN",
+        "HOLD": "ESTABLISHED",
+        "RETREAT": "UNSEEN"
+      },
+      "byte_length": 2120,
+      "canonical_request_sha256": "c03268648a2f639c1db95a3f998012429fc651e4133c1514dce3317a168ffd35",
+      "format": "json",
+      "history_length": 0,
+      "model": "dolphin-mixtral:latest",
+      "options": {
+        "num_ctx": 2048,
+        "num_predict": 48,
+        "repeat_penalty": 1.1,
+        "seed": 3304,
+        "temperature": 0.2,
+        "top_k": 40,
+        "top_p": 0.9
+      },
+      "prompt_sha256": "647549d1f156a1e882b0d4dbd55a8b7c6ed464bfaf7eba971b6375b67496a96d",
+      "state": 0,
+      "stop_in_request": null,
+      "stream": false,
+      "system_sha256": "ca94790ddfaec9befd1cebe5a7e36281fbcabca676261b65521482816618db88",
+      "template_parameters_scope": "model-level; recorded separately",
+      "wire_request_sha256": "3114960d6e873ec5a8dd195d057bd386cb80d6d79e9c8f90270a57df770414b3"
+    }
+  },
+  "study": "ACTION_MODEL_REPRODUCIBILITY_AUDIT_V0"
+}

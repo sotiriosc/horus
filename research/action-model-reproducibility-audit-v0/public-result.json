@@ -1,0 +1,371 @@
+{
+  "action_value_judged": false,
+  "classification": "ACTION_MODEL_STOCHASTIC_AS_CONFIGURED",
+  "classification_reason": "same-byte output variation within observed common warm runner under nonzero-temperature sampling",
+  "conditions": {
+    "fresh-runner": {
+      "completed": 20,
+      "reason": null,
+      "status": "PASS"
+    },
+    "fresh-server": {
+      "completed": 0,
+      "reason": "Shared runner observed using 20331 MiB of 24564 MiB GPU memory after fresh-runner condition; a second server could not match GPU offload without risk of evicting or disrupting the shared service. No owned server started.",
+      "status": "NOT_RUN"
+    }
+  },
+  "memory_writes": 0,
+  "pre_inference_configuration": "EXPLICITLY_STOCHASTIC",
+  "promotion_changed": false,
+  "runs": {
+    "fresh_runner": {
+      "C5_IDENTICAL_REQUEST": {
+        "action_frequencies": {
+          "ADVANCE": 10
+        },
+        "after_first_load_durations_ns": [
+          6205263749,
+          5155258099,
+          5160633968,
+          5162545847,
+          5161475938,
+          5390418664,
+          5375434527,
+          5353576484,
+          5158746220
+        ],
+        "call_count": 10,
+        "common_observed_runner_pids": [],
+        "eval_duration_ns": {
+          "count": 10,
+          "maximum": 1193237000,
+          "median": 1094156500.0,
+          "minimum": 1056656000
+        },
+        "invalid_action_outputs": 0,
+        "latency_seconds": {
+          "count": 10,
+          "maximum": 32.15007,
+          "median": 30.4815715,
+          "minimum": 28.031791
+        },
+        "load_duration_ns": {
+          "count": 10,
+          "maximum": 6205263749,
+          "median": 5258061165.5,
+          "minimum": 5155258099
+        },
+        "prompt_eval_duration_ns": {
+          "count": 10,
+          "maximum": 25045911000,
+          "median": 24021234000.0,
+          "minimum": 21775753000
+        },
+        "raw_output_hash_frequencies": {
+          "faddac04f6d95c8b96d0b439bddca642d654a4bb2fc50ac86a101f021b1adf5c": 10
+        },
+        "registered_count": 10,
+        "request_wire_sha256": "63931708f48b23ca51682acbee95a6099230d215861b5450918c566fdbe4d133",
+        "response_hash_frequencies": {
+          "0429cbc101ff9d36c8eb3de8edcc61d3d3f8606b0b448838fcbd71c1ec840bf0": 1,
+          "24a2f24a6c8806f83f7de8be4af9c2f14000dd54704adf74a5f5a432af04d979": 1,
+          "36a4a0c31132eeaadc1f3308e0ac63fe2b3195743be03131c6f80f7e203fabe8": 1,
+          "487f2ce75ed6b1b9c48876243a1362be0f067f695cd006da6ca706a12f4308fc": 1,
+          "5851b7870d64613a5f79e5e17bc9c28745c578baa551edfa1b5d859eb22ef734": 1,
+          "6a60a2b1d1de84ec145be09cdc07318581e615e0a760096212f28e3ecc2b8a19": 1,
+          "cacb55527c4ec1162fcd10bb830d9f1386413b88287fb220b44ab19ea590a656": 1,
+          "d5c2f6af93a51c44bed2454ce9f0b88fa33248643b178e804abc12462ca3d8ba": 1,
+          "e98c1a98a6900bd902e3dbb1952d79a4522122db4e86b9be334f84354120fd66": 1,
+          "fbdd596b79e362043f779f2b529a77f0b482b1c963d083fc6260c926976c9b1b": 1
+        },
+        "stable_runner_observed": false,
+        "transport_failures": 0,
+        "unique_raw_outputs": 1,
+        "unique_selected_actions": 1
+      },
+      "G_STABLE_REQUEST": {
+        "action_frequencies": {
+          "HOLD": 10
+        },
+        "after_first_load_durations_ns": [
+          5375533267,
+          5777682291,
+          5655094068,
+          5829259499,
+          5825002034,
+          5810003131,
+          6027009437,
+          5432028418,
+          5366982427
+        ],
+        "call_count": 10,
+        "common_observed_runner_pids": [],
+        "eval_duration_ns": {
+          "count": 10,
+          "maximum": 1098154000,
+          "median": 1018070500.0,
+          "minimum": 986530000
+        },
+        "invalid_action_outputs": 0,
+        "latency_seconds": {
+          "count": 10,
+          "maximum": 37.646884,
+          "median": 35.9284405,
+          "minimum": 34.457251
+        },
+        "load_duration_ns": {
+          "count": 10,
+          "maximum": 6027009437,
+          "median": 5716388179.5,
+          "minimum": 5366982427
+        },
+        "prompt_eval_duration_ns": {
+          "count": 10,
+          "maximum": 30499140000,
+          "median": 29287135500.0,
+          "minimum": 28025766000
+        },
+        "raw_output_hash_frequencies": {
+          "79ee7c831d6563a94485ea21a494cfffa786f5831a9513f8510fd77e88da431c": 10
+        },
+        "registered_count": 10,
+        "request_wire_sha256": "3114960d6e873ec5a8dd195d057bd386cb80d6d79e9c8f90270a57df770414b3",
+        "response_hash_frequencies": {
+          "07597f98d3f875906e2baecd9d1f4c4976febb81f25a90b615e02da7602e2436": 1,
+          "08e148cf539d083fc3ab6dc88e1214eb15b35538f3af43cac4e599b53c4ba131": 1,
+          "0a8f32b987bf222e008d72aabcf3a2b4adf08991aabfaaad3039d5b318f04fbb": 1,
+          "316e192a4acc80e8d7fb85c3b27e4d5547934aef879ad72fa6675e9d663ec189": 1,
+          "4d1146f7e3f93b938eac0e1f13b2a28d99ed740d0c53b4fd78011796bc91741d": 1,
+          "691cfd61c5d48864cedf80be10e03fd6671d468c89ca34d042019bece4298f96": 1,
+          "a1d7b57686f858b131b353e3da08b56eba493e5cf6e4837e291688af13a24f92": 1,
+          "c29029c35e3f87de46ab337fd3e6013c6efcad9f2b42e0e78e0993d77fd609c7": 1,
+          "d9fdff06c73abcef34e2e070d264f8c324383368f522abcc4ce022f2c7fed510": 1,
+          "f9785b832e5a2efdfaaac30b4d36f7c4399ac284c4964b93083a252777b69f8c": 1
+        },
+        "stable_runner_observed": false,
+        "transport_failures": 0,
+        "unique_raw_outputs": 1,
+        "unique_selected_actions": 1
+      }
+    },
+    "fresh_server": {
+      "C5_IDENTICAL_REQUEST": {
+        "action_frequencies": {},
+        "after_first_load_durations_ns": [],
+        "call_count": 0,
+        "common_observed_runner_pids": [],
+        "eval_duration_ns": null,
+        "invalid_action_outputs": 0,
+        "latency_seconds": null,
+        "load_duration_ns": null,
+        "prompt_eval_duration_ns": null,
+        "raw_output_hash_frequencies": {},
+        "registered_count": 3,
+        "request_wire_sha256": "63931708f48b23ca51682acbee95a6099230d215861b5450918c566fdbe4d133",
+        "response_hash_frequencies": {},
+        "stable_runner_observed": false,
+        "transport_failures": 0,
+        "unique_raw_outputs": 0,
+        "unique_selected_actions": 0
+      },
+      "G_STABLE_REQUEST": {
+        "action_frequencies": {},
+        "after_first_load_durations_ns": [],
+        "call_count": 0,
+        "common_observed_runner_pids": [],
+        "eval_duration_ns": null,
+        "invalid_action_outputs": 0,
+        "latency_seconds": null,
+        "load_duration_ns": null,
+        "prompt_eval_duration_ns": null,
+        "raw_output_hash_frequencies": {},
+        "registered_count": 3,
+        "request_wire_sha256": "3114960d6e873ec5a8dd195d057bd386cb80d6d79e9c8f90270a57df770414b3",
+        "response_hash_frequencies": {},
+        "stable_runner_observed": false,
+        "transport_failures": 0,
+        "unique_raw_outputs": 0,
+        "unique_selected_actions": 0
+      }
+    },
+    "warm": {
+      "C5_IDENTICAL_REQUEST": {
+        "action_frequencies": {
+          "ADVANCE": 20
+        },
+        "after_first_load_durations_ns": [
+          655291,
+          377928,
+          594613,
+          455458,
+          530750,
+          572137,
+          508709,
+          380016,
+          354332,
+          363861,
+          365642,
+          367462,
+          385936,
+          354693,
+          355302,
+          440349,
+          336113,
+          414024,
+          374450
+        ],
+        "call_count": 20,
+        "common_observed_runner_pids": [
+          2454010
+        ],
+        "eval_duration_ns": {
+          "count": 20,
+          "maximum": 1266007000,
+          "median": 1126479500.0,
+          "minimum": 1051116000
+        },
+        "invalid_action_outputs": 0,
+        "latency_seconds": {
+          "count": 20,
+          "maximum": 60.932456,
+          "median": 25.3404265,
+          "minimum": 24.723802
+        },
+        "load_duration_ns": {
+          "count": 20,
+          "maximum": 35502610017,
+          "median": 382976.0,
+          "minimum": 336113
+        },
+        "prompt_eval_duration_ns": {
+          "count": 20,
+          "maximum": 25418668000,
+          "median": 24229848000.0,
+          "minimum": 23576176000
+        },
+        "raw_output_hash_frequencies": {
+          "faddac04f6d95c8b96d0b439bddca642d654a4bb2fc50ac86a101f021b1adf5c": 20
+        },
+        "registered_count": 20,
+        "request_wire_sha256": "63931708f48b23ca51682acbee95a6099230d215861b5450918c566fdbe4d133",
+        "response_hash_frequencies": {
+          "0dbab965954ed086f333e55876a526b47a78ccde437f9dfcd9e518d6c6c04e2d": 1,
+          "16b5a85976927ec322b5fdcc7b0d9186e35e1085cecf3c5e547effa5c17079bd": 1,
+          "1c678a35deeb06fffa752160a5466a9e592ede9785a9d55fbe89a8b31d3c6ed5": 1,
+          "1fbfeed22d47ba46a9ffc79bb7b2c3213d34b7ec84e64c04e95637ec205a0292": 1,
+          "225432ca2b910e9346f3b44d174745f673494f5ae0aaa28ffd746036363a9ccc": 1,
+          "2629183065e7ceb598b48f5ec08934c8f2e699009d8e10ef56c257f0445b93a7": 1,
+          "2da80fcc8f5b16266834bf080ce13f7f43d201afc6d65714e107029dbdee583d": 1,
+          "413f1a93b6817786d7425b3531e1219b5f4c352364e2fe3765dbf0aaa3dee5f3": 1,
+          "5a9cc04aef88d57ca2642b61e9f9b9937758dee837ce9f76ce1d525e84efbe1a": 1,
+          "687af7c81b5207e8e4e629c58e49d44494c592e36386c204576e62aff4a50fdd": 1,
+          "801c299769e62e4b85fe03a581d15e95ec95952bdfe4348380765c3818956063": 1,
+          "97c9445a02eb4fbb0925d19fbcb6e9b8c88dfff7fd13815f1e79a0021c127947": 1,
+          "9dd378ba2a0ca984512b0621d27271c3483be300708f0c29d57d52dd45f4d8af": 1,
+          "a114fad2e389ab095016a93769dae00e2f30260e4f672119b3fb04efd6c955c1": 1,
+          "a222aaedf6ef3731e69f143cbc487a47f9312b0280cfeaeef86b1c3f4c060090": 1,
+          "a445b4a081b21e04225ee9c3004863b92370de7a0d6924065b51846743b29785": 1,
+          "a71897d367aeba93340ea082c1b49ac31b6cfd61775f9282c101e090aa205783": 1,
+          "b10d9c9ad41b5e85d2b5d0ad92dba0e43e1059f038ee891d061a37e87d6b1f46": 1,
+          "ba4a3274179e9110e19b393aa5a89a102fe2dd383064ac88401c8f00d97fd54d": 1,
+          "ffc13fa18cd350714fa66b846e004b5eeed4ddd0efb120cdafbf3c881810acaa": 1
+        },
+        "stable_runner_observed": true,
+        "transport_failures": 0,
+        "unique_raw_outputs": 1,
+        "unique_selected_actions": 1
+      },
+      "G_STABLE_REQUEST": {
+        "action_frequencies": {
+          "HOLD": 20
+        },
+        "after_first_load_durations_ns": [
+          419100,
+          498461,
+          325335,
+          329528,
+          393725,
+          372827,
+          362384,
+          366113,
+          348374,
+          444753,
+          399531,
+          562983,
+          359029,
+          393766,
+          367639,
+          346988,
+          531222,
+          320195,
+          426824
+        ],
+        "call_count": 20,
+        "common_observed_runner_pids": [
+          2454010
+        ],
+        "eval_duration_ns": {
+          "count": 20,
+          "maximum": 1142613000,
+          "median": 1044380000.0,
+          "minimum": 839222000
+        },
+        "invalid_action_outputs": 0,
+        "latency_seconds": {
+          "count": 20,
+          "maximum": 32.784485,
+          "median": 30.7408805,
+          "minimum": 29.673927
+        },
+        "load_duration_ns": {
+          "count": 20,
+          "maximum": 562983,
+          "median": 370233.0,
+          "minimum": 320195
+        },
+        "prompt_eval_duration_ns": {
+          "count": 20,
+          "maximum": 31735285000,
+          "median": 29702940500.0,
+          "minimum": 28629354000
+        },
+        "raw_output_hash_frequencies": {
+          "6be34fb8685691f546278b12cfc179e633da0a4efd53e070ba26d2fa7dbe9d36": 2,
+          "79ee7c831d6563a94485ea21a494cfffa786f5831a9513f8510fd77e88da431c": 18
+        },
+        "registered_count": 20,
+        "request_wire_sha256": "3114960d6e873ec5a8dd195d057bd386cb80d6d79e9c8f90270a57df770414b3",
+        "response_hash_frequencies": {
+          "0a6f30b9bb2a0bbf2e8532dfd61c411f62fb625eb1401cba37def2e2b8dbdc05": 1,
+          "15cf5224c613ee5c740b8763ad9b6b61ee7d6f794f5183053cbb2f597d19e43a": 1,
+          "43f8961f1da1e2517c168bce5c3a13ea5064cdea099072b9ae956fe0a7bcff22": 1,
+          "55b16bdd2519b4ce9ff1f437976cbd803a6ebb0de866f35fffdabc406632724d": 1,
+          "5f4e8314648bd549abfc78392fc6f46e0ff80684743d9fb3166992e297111a67": 1,
+          "660ee62cf41599947da025fe11fcfbe6cb145c8bff92d85b11d03924153fcdb1": 1,
+          "7bebf826d429db756f711eec1aa6b26465ef718de34d64821fd449925a4ed401": 1,
+          "8aa7f1bb04ec9e19a8910207521ba0ca63ec600d057a82d1dd5fbd14f127d771": 1,
+          "8cae33fc8617fe595327d32d75c300acc1e4462a2418f8fdfb63d716089dfbf5": 1,
+          "8e85ded52096232a8183564ee85c1ec10e36f4ec3ebea188df60aac2d693b0c0": 1,
+          "906de5fc33f9c65911a5b6ef2c2d08a9f83192da1464aaa845ea2d37e5f01ca5": 1,
+          "a4a4f3308ed652fd15f011e643a0284f07947da675206d32c7066ba37ad930f5": 1,
+          "aa8e1aa232466f78adedfc02b074f164516608f4d0eb0a4db6889c599813ca08": 1,
+          "bcc53b0d1fca4267dd9ad387c3b68fd469b3e5a72141c8733267bc9359edad9c": 1,
+          "c8cde038dd14130dacd487d77935123d2616127778db60bbef180b3601143f0b": 1,
+          "cd7fcec4e87ec55112f6af2ede13a3445e246240db3dfadf20da3312f2ea9c24": 1,
+          "d5cb5d82658001996cce37fbddc53edce9344264128ce3a94c5a23a1450f63cb": 1,
+          "eb6d5e71646bb9270de7f595cdf494d7c25314d0ba12734ae37e5728e849a460": 1,
+          "ed0b72d81af81d5f62c092dedceaf226d95a14da68baf546d492850150720f7d": 1,
+          "f1b28c0632c45df5753e888bb789f74e333003507a02a9e5643e0a3028274b5a": 1
+        },
+        "stable_runner_observed": true,
+        "transport_failures": 0,
+        "unique_raw_outputs": 2,
+        "unique_selected_actions": 1
+      }
+    }
+  },
+  "study": "ACTION_MODEL_REPRODUCIBILITY_AUDIT_V0",
+  "total_test_calls": 60,
+  "warm_schedule_complete": true,
+  "world_executions": 0
+}
