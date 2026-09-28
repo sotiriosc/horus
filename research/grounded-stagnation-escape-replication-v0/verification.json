@@ -1,0 +1,186 @@
+{
+  "C5_no_trigger_model_divergence": {
+    "I_action": "HOLD",
+    "I_and_S_request_sha256": "0e5f079446e11a16bf6ec025101ac3131253552ca7cf791b3e0164e627fc3112",
+    "I_raw_output_sha256": "0e204dff6d53988bcf2753855c87e34e377d0401bd2de92f449a3748e124454f",
+    "I_realized_consequence": 0,
+    "S_action": "ADVANCE",
+    "S_raw_output_sha256": "25e9c97d06cc22b95a3deb31eff5121bd82a09e4be903f69089e747452e8f576",
+    "S_realized_consequence": -1,
+    "candidate_escape_fired": false,
+    "decision": "C:D02",
+    "interpretation": "Same recorded model request, different recorded output and action; causal source of nondeterminism is not established."
+  },
+  "R4_observed_later_use": true,
+  "R6_any_new_relation_latency": {
+    "I_decision": 5,
+    "I_relation": "0:ADVANCE",
+    "S_decision": 4,
+    "S_relation": "3:RETREAT",
+    "difference_decisions": 1
+  },
+  "acquired_relations": [
+    "1:HOLD",
+    "1:RETREAT",
+    "2:HOLD",
+    "2:RETREAT",
+    "3:HOLD",
+    "3:RETREAT"
+  ],
+  "campaign_status": "VALID",
+  "classification": "COST_OR_SCOPE_BLOCKS_PROMOTION",
+  "control_action_mismatch": [
+    "C5"
+  ],
+  "fallback_actions": [
+    "ADVANCE",
+    "HOLD"
+  ],
+  "false_triggers": 0,
+  "incumbent_route_and_candidate_scope_replay": "PASS",
+  "matched_prefix": {
+    "C1": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 1,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "C2": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 3,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "C3": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "C4": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 1,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "C5": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 1,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "C6": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 3,
+      "shared_decisions": 0,
+      "status": "PASS"
+    },
+    "R1": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "R2": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "R3": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "R4": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "R5": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "R6": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 5,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "RA": {
+      "predivergence_model_inputs_identical": true,
+      "shared_authorized_events": 4,
+      "shared_decisions": 3,
+      "status": "PASS"
+    },
+    "RB": {
+      "shared_authorized_events": 5,
+      "shared_decisions": 4,
+      "status": "PASS"
+    }
+  },
+  "negative_downstream_cost_block": false,
+  "no_self_review_calls": true,
+  "no_transport_retries": true,
+  "preflight_excluded": true,
+  "private_archive_matches_working_evidence": true,
+  "private_artifact_count": 298,
+  "promotion_recommendation": "RETAIN_INCUMBENT",
+  "relative_acquisition_cases": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6"
+  ],
+  "restart": {
+    "RA": {
+      "expected_suffix": 2,
+      "no_model_inference_during_reconstruction": true,
+      "no_persisted_counter": true,
+      "observed_suffix": {
+        "count": 2,
+        "relation": [
+          3,
+          "ADVANCE"
+        ]
+      },
+      "reconstructed_from_signed_history": true,
+      "status": "PASS"
+    },
+    "RB": {
+      "no_model_inference_during_reconstruction": true,
+      "no_persisted_counter": true,
+      "observed_suffix": {
+        "count": 0,
+        "relation": null
+      },
+      "prior_escape": true,
+      "reconstructed_from_signed_history": true,
+      "status": "PASS"
+    }
+  },
+  "signed_receipt_authorization_and_grounded_replay": "PASS",
+  "source_manifest_verified": true,
+  "triggered_states": [
+    1,
+    2,
+    3
+  ],
+  "unique_action_model_calls": 98,
+  "unique_context_tokens": 91902,
+  "unique_executed_decisions": 122,
+  "unique_inference_latency_seconds": 4325.852,
+  "unique_mechanical_decisions": 13,
+  "unique_model_free_decisions": 24,
+  "unique_model_free_escape_decisions": 11,
+  "unique_output_tokens": 960,
+  "unique_physical_model_attempts": 98,
+  "unique_physical_world_executions": 140,
+  "unique_protected_setup_executions": 18
+}
