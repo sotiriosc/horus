@@ -1,0 +1,456 @@
+{
+  "audit_implementation_erratum": "The frozen analyzer conflated a model-driven ineligible D1-D3 prefix with candidate mechanism failure. The preregistration explicitly assigns an ineligible prefix with otherwise supported mechanism to MORE_EVIDENCE_REQUIRED.",
+  "campaign_status": "VALID",
+  "canonical_model_view_changes_historical_raw_prompt": true,
+  "control_pass": true,
+  "counts": {
+    "false_triggers": 0,
+    "independent_post_divergence_model_calls": 24,
+    "matched_inactive": 32,
+    "shared_model_draws": 30,
+    "total_physical_attempts": 58
+  },
+  "mechanism_pass": false,
+  "negative_cost_gate_pass": true,
+  "original_frozen_analyzer_recommendation": "RETAIN_INCUMBENT",
+  "per_case": {
+    "E1": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 3,
+      "S_total_consequence": 4,
+      "first_escape_realized": {
+        "consequence": 1,
+        "next_state": 0
+      },
+      "first_receipt_endpoint": true,
+      "horizon": 7,
+      "matched_boundaries": 4,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 7,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 7,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "055ddcef05e2e7a596b8979222ae893a3b38efe1f95ba46bc29ee6ae0adb2c58",
+          "11835bae23b697e2285496b6d36bc9c038d3b9b9c0e902a3e6d4a5d62337bf02",
+          "5692578e22fb33462eac4840c2d2ae99f5fb87657d52244298b05683673802b4",
+          "3e0b9d7208f7187dce22873d585541b635721526bd600713b1f6b485fe435266",
+          "fc382f7be9f0c862f73069cf1ba83b069bd3b7f208297edfce6c8c6be9542e67",
+          "b00208f491ea5ebbf4440050b3dc8cbcd1d78df7c953a9562d78ef825a1c99db",
+          "9d8fc2608d61d1a2326d7a9b56f594e50dc143337de51204f47c99bd4140bb92"
+        ],
+        "S": [
+          "c4b833e006dec081952a9c3c81a4c1096e7e597130fbcbc17e8f9364ede147dc",
+          "b00856b899b7c8ae04d44789633327fb8d38cf63ccef83f6122250cd21bae276",
+          "d98b9ba33f3213472a6343bde25309b8feca5aea3e359c29b5370136c025c69f",
+          "96129eac5da16daf17f6e1523930c0cd9e56d252cfdc1a88304f26ac1a3f49d4",
+          "a8949975edbee38499d7d3a3e55e5b56df03ff9381977d701d521930d0eccd4e",
+          "ba4d958cd82e401eae5cabe20da84aec0942ac180459adbe7ac863aa3f873230",
+          "26dd06313ed3da3e58063e63b75e19e9769a61bbeb6ac7c0818af048624c27fd"
+        ]
+      },
+      "shared_draws": 3,
+      "trigger_indices": [
+        4
+      ]
+    },
+    "E2": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": -1,
+      "first_escape_realized": {
+        "consequence": -1,
+        "next_state": 1
+      },
+      "first_receipt_endpoint": true,
+      "horizon": 8,
+      "matched_boundaries": 4,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 8,
+        "S": 3
+      },
+      "physical_attempts": {
+        "I": 8,
+        "S": 3
+      },
+      "receipt_hashes": {
+        "I": [
+          "0eb2999743668c1c223b327ddc1c7cd7247853cf063e775d3d9343a3ffb2e33f",
+          "3372d010a75b6d37e534aa47a8f99e10cdc3f576fdb5b4b1c9a86e867e78ad2e",
+          "1bea83a2e3d9d04c88b2c30911c487d034d6feca87793187398c5994c436cd55",
+          "18ecc723c2795f700f0a482fb699372300243c5a4b06fefae46e75b7228b2199",
+          "f6fed7f412c12c6de9c9e54248bb76f8babb38736b4a100d2c5e4f5d6a995fee",
+          "8ad5675ca6691081686f254478260ad8544176e50b0dadf55727f0f9dc088a79",
+          "e7217c031681e2de31bf3d0a7b9000c28acff0c25e542d54762fb71c35ebb51e",
+          "ebd1ea25a3c8e0e416391f66ee9138eb8f40dc61510f1ac1a8c3d4e4584a9d9d"
+        ],
+        "S": [
+          "58e9b7c3f5fa254b9689b08f8512e3169665a85f116cae1b799d363fed98946c",
+          "de6266f8ae77e981f5ccea67f1d86755ac272264e581f468769acf9a4734d032",
+          "f8fd2792c36edd76f33489a750c9f2136680a2ddf9e6ce02dedf835f7f5b8d8b",
+          "a4589c3c617b30dc25ee0c1c19c37b68293c758c47f672dc5bc953053142c43a",
+          "8b4014f4ba2219a8c4e78faa2e47ac578aee0642ebc7dd99dcf47ed62fc5bb70",
+          "5f9a02f5f168ccce1bdd8c26a99fb0c7489bc0c9ed092c976ea3a7a95872fc4d",
+          "976a599f95717b741ed429cf8459c2553756a2ca490ab215fb1994578ea0369c",
+          "e4296af0d3566a810ed006ff205f2bae08a3ef4cd5416f16dff7ac1a8ab3e7a5"
+        ]
+      },
+      "shared_draws": 3,
+      "trigger_indices": [
+        4,
+        8
+      ]
+    },
+    "E3": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 0,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": false,
+      "horizon": 9,
+      "matched_boundaries": 5,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 9,
+        "S": 4
+      },
+      "physical_attempts": {
+        "I": 9,
+        "S": 4
+      },
+      "receipt_hashes": {
+        "I": [
+          "f452e687c4b3388bfde585ef2f9b4443a65333422062a46c85d79edd18578a3a",
+          "ae7dd24dcea732820266eabb05053ddd26e2ea3b4da24b961e99ac90d118dd61",
+          "43965b45669c01cb4d67b75fe30ca100eba51dcbe9f47c1b4f9b16c3dd6ab898",
+          "5aef91696af701a7a701461754685e09cdf8aad2c9d57db4123b7a827c06cc89",
+          "e47b6b7c3568957d074b3d8318362ab673c2f8a6dc9f6d5e0ecc2b7c651d28cd",
+          "5dfb53e20278662b746cdc50b661ce253e4696a963029f25bcd58630a719cbe7",
+          "d93535e50bc6ba767a2e5a309ceb0028a9ab3bb714d4d426da07995e6d6f2ae3",
+          "8ddd8720e0999f62cddb639f3ae95be0ae454a40411c15988205c31fba8dc6d8",
+          "be2c962176cc3dccf266b518a9793acf341f5b363e8b97fcc10dfd47bf18194f"
+        ],
+        "S": [
+          "519b008c04f81db05b079ca78a976d2feec59532f005014fcee70a8ba84a6826",
+          "257fd7b3825e0261dce9c3d339cd670bd5a7c28a4b5863423be5f14f2946b5df",
+          "be551d4d27a52edee3c15ecc38321bd534f2e388dc06244511c6565838a28a88",
+          "b5dc6796ce6e50181eb87404220c9c1aefb057fafd9b6669ef87d2809b9d2d37",
+          "2c83b1df042f16a3ea5ba06a405efd4db45c615f9c822fb40087bd9a7da5d2e1",
+          "ee439be5c3ae24779916c9ac04a3045e39ff02041c435c5c01b9ef993484e077",
+          "10b808724e6ffe8aee61d52c6a02cb86eb2dc852fd929e99081fc7e70dd673ea",
+          "e23639b2d956522e8346ec4059fa71cdbc79c99754f48c0d27f0a75204b4afd9",
+          "9b9f4142b77e42bdd47ecdc25f908d06086182f8da3062c5c41679231ded494f"
+        ]
+      },
+      "shared_draws": 4,
+      "trigger_indices": [
+        5
+      ]
+    },
+    "E4": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 6,
+      "S_total_consequence": 7,
+      "first_escape_realized": {
+        "consequence": 1,
+        "next_state": 3
+      },
+      "first_receipt_endpoint": true,
+      "horizon": 10,
+      "matched_boundaries": 4,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 10,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 10,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "78199fc5dc673fe732f6b79ef022802907f0af922368daacc28f18584f246829",
+          "c013dcbdb838d9a1b21b9cccca476bffbd5dbbc5375098ca96ffa82d85b6262a",
+          "657622e478ca26dc8188eb81057011d7a1d5acb76bb32dde078cf8582c79bd74",
+          "681515836f19b7a2d12b85c5ce23d161805b19d90bad084b14c02a7c97c02c64",
+          "9bde1c27650df34e532aa1df9311f129388797110f15e0858a6ec0b5536127ef",
+          "b6181f896b0839cbaa0773a41c9206d95eeeedd7d5be49d42f7f9752eb821643",
+          "811bbd737262303075385f06fed046eaa525d15546137e64c1a0e465f43e26ea",
+          "3dfef673cf1ea267ac0b305e56cf54d3565f870a4287ebe253a0856e0fa9f71e",
+          "27516b4db28590115a8704d5608b47ea67ee46db1de8ad9d12f74169878473ec",
+          "ec9cf0c438436860d695eb28512382478bfa6ad51313c60878cf32af53b823f6"
+        ],
+        "S": [
+          "959f2b564a75cabccea9467c4e7a54932dfc053a7e219a181eead90535ebc699",
+          "35993ce83b87fd0f05b26c5398034e1879f530e6e34ee00839c9081aeac12ea2",
+          "da24705f124d4670c7aa785d31939005fb61284f19a857bbce3d8edae1384584",
+          "df3326ad287d8d7ee84d1fb4e442bea1298cb668927d1d39bf2e99b4990d104e",
+          "0550ae188f5e4a2c223e8f0c964ae58ff8c4bf23496d6a34bf47585404917fbf",
+          "4071c92ef6bb592b829bdaa6783e52cbc46f2cb8dc0543202c32c62bc69600a2",
+          "2bdc80d2c2827b86eb3182488ae9f975c6bc583abe138afaad466a105303b70b",
+          "cf589576a78e286fed1097a5cf0106d2ce6a8c89cfc80e44917e076399f4dda6",
+          "92f997b508045b92b3ccbf4d375063a00c67abeb70730df037553cf506428f2d",
+          "cc28b190f5e913bdd30d5916037b60bace96d507ed200a96bba3b0a21b19a53c"
+        ]
+      },
+      "shared_draws": 3,
+      "trigger_indices": [
+        4
+      ]
+    },
+    "N1": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 2,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 2,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 2,
+      "matched_boundaries": 2,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 0,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 0,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "9d31795af9de2e56a4aa92eb968ae859e8d87be0a13a023f5ef9801e692bf81c",
+          "7ca840d98640d9da26df8a269bf5835176357a7f77c586181abdcb3758f63323"
+        ],
+        "S": [
+          "28d6326d01c1d8c117635bae9ca8a19623e4d81315d537986ef69136992ed14a",
+          "9f34e2375e1704cd45e71c75e2d83938a9a54dc2f5a06adae619966f166ee574"
+        ]
+      },
+      "shared_draws": 0,
+      "trigger_indices": []
+    },
+    "N2": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": -2,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": -2,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 2,
+      "matched_boundaries": 2,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 2,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 2,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "fa308952b2226da1ced3761b4a31784ea04c26b70023232d82a9c63a2c5576b0",
+          "7b0f54e94639751d6dbc936522b4f3bc1527af4516a4f8c70827cfd54ba1560f"
+        ],
+        "S": [
+          "dab5a1d7994d7af4c0b6620540c6d5dbac72629fdbc9e37879dd37b74e51d791",
+          "0a8f23e8acfac45ed52eb2c8d86e7c21819faaf644b74d3a9be0348f37a86800"
+        ]
+      },
+      "shared_draws": 2,
+      "trigger_indices": []
+    },
+    "N3": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 0,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 2,
+      "matched_boundaries": 2,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 2,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 2,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "c4f9cfaaef835073ee5ee9df5adb1cbee2f065e873d2b527aefe557ca7ab73e6",
+          "eca78244d4a27f793509fed4831aa4e2ba0ed51feba2e2fdb73a7cd07fbadf1e"
+        ],
+        "S": [
+          "761afa2989eb8c504d8623889f0cf9c174cb6e34a0881ec9339f84e97672ed6a",
+          "8c4944b085aab67ab33fcd53d9b300d4988a7a098ace120fff2c7d5ffb832a41"
+        ]
+      },
+      "shared_draws": 2,
+      "trigger_indices": []
+    },
+    "N4": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 0,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 4,
+      "matched_boundaries": 4,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 4,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 4,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "c18ecba954988cd2bfea25257033cbd32e6b6c85e05044c28a600bfd2946943e",
+          "e42de1e2600fec6713aeadc6fd0a8c3651aa7c7c391aadccf5b3c132a70d4eaf",
+          "8d06fa4c1318ea063da3c4f10ef8ab142617e5793459629b8a5606b124388e6c",
+          "77d93fda4865329d8c9edc82cf41fea2819fb2eb4e4699475e9ed74db1316504"
+        ],
+        "S": [
+          "1bb682d5c2a5d30c777ccafa0b268979039be1ea1b2bacf49a85129f6b502cf1",
+          "b332a236e4581397d7511d7c7d7ec96d75e75bd116a8250c564ddbe609bf21b5",
+          "7053b10e05075c2b643e7e7a0a5cba2d2982ee9c425f765f78726e7fd713ee4b",
+          "a375d1882d749666a43d2b827bc063e8c0ed6b393c1dd38bba4835159c158f64"
+        ]
+      },
+      "shared_draws": 4,
+      "trigger_indices": []
+    },
+    "N5": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 0,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 3,
+      "matched_boundaries": 3,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 3,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 3,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "fa30507f3383475ea134e4041015f21b9ac90d2466ba9b21c7d6d8c528f57886",
+          "43b8a2054110d8e3841842694bffbcba41dd620d2a8aef4ec607881e43a647f3",
+          "dfb3fb1234d6537fd0cf0208fbc98ba0e5afbd3fc8b1638aa0b6309a10a5f146"
+        ],
+        "S": [
+          "7593f156e1482e16622069a8fec889b4f18b32dc466c990f16f533e599d00b33",
+          "148eebdaa1382508bdcb94e886cc727e7116d619b403ba30128838e4faa3f257",
+          "853fbf3c18ac2c09521f6bc2589a7ddcf9125b43df6142690e1bfdd66f70b4ee"
+        ]
+      },
+      "shared_draws": 3,
+      "trigger_indices": []
+    },
+    "N6": {
+      "I_post_D4_consequence": 0,
+      "I_total_consequence": 0,
+      "S_post_D4_consequence": 0,
+      "S_total_consequence": 0,
+      "first_escape_realized": null,
+      "first_receipt_endpoint": null,
+      "horizon": 6,
+      "matched_boundaries": 6,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 6,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 6,
+        "S": 0
+      },
+      "receipt_hashes": {
+        "I": [
+          "ddd1639df6b5ca0ae024f0fcacb6a822fc8dc7969cf3c07767a92001ba1da5d2",
+          "7abc60986abc5f12deaf8115b5e92c9a157e29eba51aefcc7b3a262089a6d695",
+          "c50863dfe6f1def8f606ef35e53aa7428edacc16aa8c591cc7bf87536a4a9bcf",
+          "15fab20ebd68e1ee06408ae5b8126d3f73058a923bbe7f9c007b895dd84b089b",
+          "6a70294025a11524a99846910852edac5e39c32190f7f720dc277b064e790c58",
+          "e34efa3f816a6d1e72a38a75fbd2da42a340ebc68a6c822e9ae5f306351956de"
+        ],
+        "S": [
+          "1f2fe78edcc931545d82c3f7aa677bbc75073828e0631f44c7d34cbcadf80148",
+          "cabbaf56be018ea587b7e7458fb259443ce4c56cdf503452e8557842e22c5b19",
+          "4f08a96ba4fadc54080545b8380a682480424fe4205be6ecdf8eac5368881825",
+          "69f27c297520c6dc65fd55de65d2f6b97361d432ab5fbf90b57be5688ab70650",
+          "3c7a18cd4ed92e066659919337d2ced0b7121b469095c84b70e1860eb0385632",
+          "a863485e88747f0a2b90961bc33d1ad3f2a6bcdb7b702bdf1846ecada1dd7c70"
+        ]
+      },
+      "shared_draws": 6,
+      "trigger_indices": []
+    }
+  },
+  "prior_action_model_audit": "ACTION_MODEL_STOCHASTIC_AS_CONFIGURED",
+  "prior_replication_recommendation": "RETAIN_INCUMBENT",
+  "prior_replication_status": "COST_OR_SCOPE_BLOCKS_PROMOTION",
+  "recommendation": "MORE_EVIDENCE_REQUIRED",
+  "recommendation_gate_provenance": "committed preregistration b8aa4062a06e3946fb313aa103de599ad9b16ca0",
+  "registered_D4_prefix_eligibility": {
+    "E1": {
+      "count": 3,
+      "eligible": true,
+      "first_trigger": 4,
+      "relation": [
+        0,
+        "HOLD"
+      ]
+    },
+    "E2": {
+      "count": 3,
+      "eligible": true,
+      "first_trigger": 4,
+      "relation": [
+        1,
+        "ADVANCE"
+      ]
+    },
+    "E3": {
+      "count": 2,
+      "eligible": false,
+      "first_trigger": 5,
+      "relation": [
+        2,
+        "ADVANCE"
+      ]
+    },
+    "E4": {
+      "count": 3,
+      "eligible": true,
+      "first_trigger": 4,
+      "relation": [
+        3,
+        "HOLD"
+      ]
+    }
+  },
+  "restart_pass": true
+}
