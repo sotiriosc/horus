@@ -1,0 +1,559 @@
+{
+  "campaign_status": "VALID",
+  "classification": "FOUR_NEW_ELIGIBLE_PREFIXES_OBTAINED",
+  "controls_completed": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "eligible_cases": [
+    "P01",
+    "P02",
+    "P04",
+    "P05"
+  ],
+  "eligible_first_endpoint_failures": [],
+  "eligible_prefix_count": 4,
+  "eligible_restart_passes": [
+    "P01",
+    "P02",
+    "P04",
+    "P05"
+  ],
+  "false_triggers": 0,
+  "generated_cases": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05"
+  ],
+  "independent_post_divergence_model_calls": 13,
+  "matched_inactive_decisions": 31,
+  "material_new_cost_flags": [],
+  "maximum_qualifying_streak": 3,
+  "per_case": {
+    "P01": {
+      "candidate_first_endpoint_pass": true,
+      "case": "P01",
+      "eligibility_reasons": [],
+      "eligible_prefix": true,
+      "escape_records": [
+        {
+          "I_action_call_id": "C:4:ACTION:1",
+          "I_ordinary_action": "HOLD",
+          "S_action_model_calls": 0,
+          "decision_index": 4,
+          "endpoint_pass": true,
+          "first_authenticated_receipt_sha256": "50478fe53ecf463db53471d9239ab604c239cfcc71e5c205753ead09265c83f4",
+          "first_unseen_before": true,
+          "grounded_after_kind": "ESTABLISHED",
+          "immediate_consequence": 1,
+          "later_grounded_relation_selections": [
+            5,
+            6
+          ],
+          "matched_prefix": true,
+          "observed_later_I_S_action_difference_on_relation": [
+            5,
+            6
+          ],
+          "prior_qualifying_suffix": 3,
+          "relation": "0:ADVANCE",
+          "remaining_S_consequences": [
+            1,
+            1
+          ]
+        }
+      ],
+      "false_triggers": 0,
+      "first_escape_decision": 4,
+      "horizon": 6,
+      "independent_post_divergence_calls": 2,
+      "kind": "OPPORTUNITY",
+      "matched_inactive_decisions": 3,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 6,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 6,
+        "S": 0
+      },
+      "prefix_status": "ELIGIBLE",
+      "receipt_hashes": {
+        "I": [
+          "5f6dabd7e5c2c37ae3c035739f16554354f0a52336cedaa394895cda7d7fb76c",
+          "5a1b3281f4227f627bf658097bd54e9bb70fad8af5effc5810a10dd543b72aab",
+          "4f3c50c5ec22c2e09fb4f6ed4ee71a09a166c5e2309cd826bb63e382437845fd",
+          "dcbd84e9e27b34a5fad2dc4a2a97c69a6bb6adb6b2ea60c99ae7de3e088f4069",
+          "7b973c92ac139ea56282d34fe231ad2cb2df20418990a9e13895a1e43c3422cd",
+          "d923f065d7437a3fd033e99a86e784686fb6eddca2f2cc5c1f036d60b5d2b6f0"
+        ],
+        "S": [
+          "51b5524f961cd729298b956423d205569c5ac831401915c311317877455e1f3a",
+          "716bee5abebad1b3e5c6dfa450e6917fecf6847e7bc49accb64af8f23ca1b9f3",
+          "7305b45adaf3a4bf9a7314780d1d77fb0144705748f7e967f8e6704059e8d3ae",
+          "50478fe53ecf463db53471d9239ab604c239cfcc71e5c205753ead09265c83f4",
+          "4c2a92f013fd04d9acd31823f2220ab84c0f13d06e9532702ac59d5c8a3c8cbd",
+          "95e7d35391a5f7d9ac30fa605cfddc9553c4b4553d447fd03a58a3fc8e8f1cf6"
+        ]
+      },
+      "restart_status": "PASS",
+      "shared_model_draws": 3,
+      "total_consequence": {
+        "I": 0,
+        "S": 3
+      }
+    },
+    "P02": {
+      "candidate_first_endpoint_pass": true,
+      "case": "P02",
+      "eligibility_reasons": [],
+      "eligible_prefix": true,
+      "escape_records": [
+        {
+          "I_action_call_id": "C:4:ACTION:1",
+          "I_ordinary_action": "ADVANCE",
+          "S_action_model_calls": 0,
+          "decision_index": 4,
+          "endpoint_pass": true,
+          "first_authenticated_receipt_sha256": "e308b4c6cae0c6ddf02b9fdb303d079460ce2a18965b783dff8fb003cdcb765d",
+          "first_unseen_before": true,
+          "grounded_after_kind": "EMPIRICALLY_STABLE",
+          "immediate_consequence": -1,
+          "later_grounded_relation_selections": [],
+          "matched_prefix": true,
+          "observed_later_I_S_action_difference_on_relation": [],
+          "prior_qualifying_suffix": 3,
+          "relation": "1:HOLD",
+          "remaining_S_consequences": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "false_triggers": 0,
+      "first_escape_decision": 4,
+      "horizon": 7,
+      "independent_post_divergence_calls": 6,
+      "kind": "OPPORTUNITY",
+      "matched_inactive_decisions": 3,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 7,
+        "S": 3
+      },
+      "physical_attempts": {
+        "I": 7,
+        "S": 3
+      },
+      "prefix_status": "ELIGIBLE",
+      "receipt_hashes": {
+        "I": [
+          "d9da13ac0583878f5aa78f274b688ede57b0c60470639ee81de0d77ded50bd35",
+          "984404cabbf74f8d44ce5fbf57a0fc189ea7d1997b4b157b53f56654818e1c22",
+          "42715861d01efc353f01048699100a62a9e81e853ff81dd0c118b0e2c36e4c99",
+          "023fdb1b85764711dbc8506aa927c9842ea7ce7334ced5aafd7d15751e58ae2b",
+          "cf7630d553d2d33bddb76a56129bc12267783ff930c10e30cf8f114f4d429f61",
+          "f073287dc5eca6530ede5ecc3e811057f68d1e5e58c1cc46ac4be9a420d3cc8f",
+          "fe81c3f04478ad806a3d31d282a632af45c093fa6b6815715e53884e5262f2f9"
+        ],
+        "S": [
+          "8b3aac77de0d8c1511ded61687e8dc6e5b363193fc0523c2841c4875435d042d",
+          "8fcd18162ab06bc262d70d2b179fed4452c748a1bbb9cc01eccee862a44b5a83",
+          "10fa1399ba296c9ea2620378b0ad635eaa72023f15a9d5a7f08039d19d191013",
+          "e308b4c6cae0c6ddf02b9fdb303d079460ce2a18965b783dff8fb003cdcb765d",
+          "5cbf5fb0c387aa9e97ba822ddb9d693c163ceb322b6379650d25044e5943bea8",
+          "2d8edc2b36ad24456a8e4c9e3bc309caadf1c4d7e68ec08aff7360fc9000cdd9",
+          "a88837d83a03dc30f06f3ffcec57cbb8f949422c8ee7254e2a661ad28b7f477f"
+        ]
+      },
+      "restart_status": "PASS",
+      "shared_model_draws": 3,
+      "total_consequence": {
+        "I": 0,
+        "S": -1
+      }
+    },
+    "P03": {
+      "candidate_first_endpoint_pass": null,
+      "case": "P03",
+      "eligibility_reasons": [
+        "MODEL_NATURALLY_EXPLORED_UNSEEN",
+        "FALLBACK_IDENTITY_CHANGED"
+      ],
+      "eligible_prefix": false,
+      "escape_records": [],
+      "false_triggers": 0,
+      "first_escape_decision": null,
+      "horizon": 8,
+      "independent_post_divergence_calls": 0,
+      "kind": "OPPORTUNITY",
+      "matched_inactive_decisions": 8,
+      "maximum_qualifying_streak": 1,
+      "model_calls": {
+        "I": 8,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 8,
+        "S": 0
+      },
+      "prefix_status": "PREFIX_INELIGIBLE",
+      "receipt_hashes": {
+        "I": [
+          "f2eca35df95a7c3396410c3ae1673c9308a4198add528d80e0c45d78bfc8898e",
+          "30294ffe0e88b3aa3f2beb0f557813541d5fa75738b54de300710ac3e843f7c8",
+          "d589c8929d40ca18bcf6d1275ee53991cc1677a95e2781596f32bfd95e7be7a5",
+          "4764b693a6c9ed37fbf1661258b64a0af264e51c8da27c4a560aee9871acface",
+          "e9087304b6514f243476dbce860b539e3feee1632f54e36923a9f0b2bf7efd09",
+          "57ed4d7051e99e7c0e824d0b12e53318d7d9a49dedf6e197579263c2de19f2cf",
+          "a71e73a04d3f4c0851492f6d93c0eb49b5f0c0a2d0d0bdfcac240e60c9f3d362",
+          "408acd14817b67de94ee1699196f28b49ae2f9c8f818f6624af43eba3b7cf1af"
+        ],
+        "S": [
+          "853f24459dba57f05b5c54177f819b5389ba61fa1acc47bbfae837ccf2a0778d",
+          "bf662e57fa11b2641fdc33cd7e73fd0784fa3fff36cf3f26f73a98f48ac0c65a",
+          "407de5d36cc75ea140f6ef134fdc43eb4e4760c3ee664e0fa3a33659ecfbfd30",
+          "8772dbbd1ecb881c5b04597fdbb826f4ca11332ce1e806f5e324155ed839d4a7",
+          "d493189209a2fbaf5e30c745ca9492e81055fb46bf31833d3cd83eb16628de65",
+          "2c5e7a75ad05ed0bf528d2cf3aea969b32b30cbc67fc93313a68ac00a174a269",
+          "b349c68e2d2cf4c5f2a62325db79e936e73cc99b01ede4c1395bfef7958c89a3",
+          "abc55194461c1b2a260dd0f03765be670303eacec740f5b6aa338ba83f3c3170"
+        ]
+      },
+      "restart_status": "NO_RESTART_OPPORTUNITY",
+      "shared_model_draws": 8,
+      "total_consequence": {
+        "I": 0,
+        "S": 0
+      }
+    },
+    "P04": {
+      "candidate_first_endpoint_pass": true,
+      "case": "P04",
+      "eligibility_reasons": [],
+      "eligible_prefix": true,
+      "escape_records": [
+        {
+          "I_action_call_id": "C:4:ACTION:1",
+          "I_ordinary_action": "ADVANCE",
+          "S_action_model_calls": 0,
+          "decision_index": 4,
+          "endpoint_pass": true,
+          "first_authenticated_receipt_sha256": "e46e559e296ea4406c9a914bf1b2430babcff65a281a53240795a237097064cf",
+          "first_unseen_before": true,
+          "grounded_after_kind": "ESTABLISHED",
+          "immediate_consequence": -1,
+          "later_grounded_relation_selections": [],
+          "matched_prefix": true,
+          "observed_later_I_S_action_difference_on_relation": [],
+          "prior_qualifying_suffix": 3,
+          "relation": "3:HOLD",
+          "remaining_S_consequences": [
+            0,
+            0
+          ]
+        }
+      ],
+      "false_triggers": 0,
+      "first_escape_decision": 4,
+      "horizon": 6,
+      "independent_post_divergence_calls": 2,
+      "kind": "OPPORTUNITY",
+      "matched_inactive_decisions": 3,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 6,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 6,
+        "S": 0
+      },
+      "prefix_status": "ELIGIBLE",
+      "receipt_hashes": {
+        "I": [
+          "b79f0cd9df13a0493723a9807d5debd6d7a02798170f48b53a6657026ac95e63",
+          "de47364a73df6985948464f2a49c646c8fdec7f15a12c846fc383c80e7795d4e",
+          "48adc168d5afba35965d435f78e4ba7baab02a600588d6986de58cb5dd169026",
+          "d2321017c081726ef23f168d4d203614db3841148d5318c82735f9000a8f4e6c",
+          "e89db784184749347676fd82931a7bd690f666930383cde6f9297572507d4ce7",
+          "1354e41b7a2f5c2a8a3ac6365df868cdffd6de9286c4eb53dcbbff76957c96df"
+        ],
+        "S": [
+          "a8db0b1071f07f65f812e919c5a6f82909a7ccbad2920bb4d1adc7b1c25d8eaf",
+          "18fa3cf50af195616ecbc44527454c59134c4d988a3dc32f3da3144a89a415a6",
+          "9074d44e3c174e6e1806b8991fced43581ae42815efcbaf43ff6af6ccd8d9403",
+          "e46e559e296ea4406c9a914bf1b2430babcff65a281a53240795a237097064cf",
+          "979f9be4f84b33f5ae3a11cf1631e8307dd13ea1585a65cce03e35c071ec8c85",
+          "0f243d585fc7d4887638143ed635a5cc18b84c914a1315641fb9b6caee9591f6"
+        ]
+      },
+      "restart_status": "PASS",
+      "shared_model_draws": 3,
+      "total_consequence": {
+        "I": 0,
+        "S": -1
+      }
+    },
+    "P05": {
+      "candidate_first_endpoint_pass": true,
+      "case": "P05",
+      "eligibility_reasons": [],
+      "eligible_prefix": true,
+      "escape_records": [
+        {
+          "I_action_call_id": "C:4:ACTION:1",
+          "I_ordinary_action": "ADVANCE",
+          "S_action_model_calls": 0,
+          "decision_index": 4,
+          "endpoint_pass": true,
+          "first_authenticated_receipt_sha256": "c405eb6a21f2eb7777b2f27628e14c5816e35685b6229bdc86eed8a68a02ab08",
+          "first_unseen_before": true,
+          "grounded_after_kind": "ESTABLISHED",
+          "immediate_consequence": 1,
+          "later_grounded_relation_selections": [
+            5,
+            6,
+            7
+          ],
+          "matched_prefix": true,
+          "observed_later_I_S_action_difference_on_relation": [
+            5,
+            6,
+            7
+          ],
+          "prior_qualifying_suffix": 3,
+          "relation": "0:RETREAT",
+          "remaining_S_consequences": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "false_triggers": 0,
+      "first_escape_decision": 4,
+      "horizon": 7,
+      "independent_post_divergence_calls": 3,
+      "kind": "OPPORTUNITY",
+      "matched_inactive_decisions": 3,
+      "maximum_qualifying_streak": 3,
+      "model_calls": {
+        "I": 7,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 7,
+        "S": 0
+      },
+      "prefix_status": "ELIGIBLE",
+      "receipt_hashes": {
+        "I": [
+          "c07be4651b847b719f608d3f7e5f23d0ba5568cbac0fcea9ebe50f0060fd9a5d",
+          "441ff21a5e0b767045aca49fa2775c9991921f8ae777b466be2913045bb1aa08",
+          "631ff24defa79a04ac645bb63ce676e0bce9144f869b4e937620e9120f5118c8",
+          "3e46adef4f37ed039f236c7e00a263a7ea84a77f83a8b4df7f6ba34176051f38",
+          "2baf4339030edba31e124197722d54cd20e8683c11b73a066ca61bf81b042641",
+          "4cfe512234458b369c0c2451f478ea9d5492de8568022b2fde3fdcf6360ae7ae",
+          "14b4619a24a08d0d375e2d85dddf9f2d95cacccff9199bc49988af7d5691b7c7"
+        ],
+        "S": [
+          "af5f8bd9a056c1d92442d6379515b4810747805d2d2845beff342165233e99a1",
+          "a0ab5dc433d255d3a0a0f96657ca04da21d55a60282e5ca4856b294bf6d4a756",
+          "609dc6aed708a58d39bd4747dc70c68243d161092c552342798f28e9c53c6bc1",
+          "c405eb6a21f2eb7777b2f27628e14c5816e35685b6229bdc86eed8a68a02ab08",
+          "c5d56545a6bb12f8ffd5d8f9eb0ce9bdc27a878d7e3b5f3a8ae2a8b8810be207",
+          "2ca0460e7f9176737baf92f7ced191415835e8de12abb1ac7895c337e132b125",
+          "392ddcaf88855284d8983091f3a009c784217b9914a145383e3e6fcd1197eb09"
+        ]
+      },
+      "restart_status": "PASS",
+      "shared_model_draws": 3,
+      "total_consequence": {
+        "I": 0,
+        "S": 4
+      }
+    },
+    "T1": {
+      "candidate_first_endpoint_pass": null,
+      "case": "T1",
+      "eligibility_reasons": [],
+      "eligible_prefix": false,
+      "escape_records": [],
+      "false_triggers": 0,
+      "first_escape_decision": null,
+      "horizon": 2,
+      "independent_post_divergence_calls": 0,
+      "kind": "CONTROL",
+      "matched_inactive_decisions": 2,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 0,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 0,
+        "S": 0
+      },
+      "prefix_status": "NO_TRIGGER_CONTROL",
+      "receipt_hashes": {
+        "I": [
+          "bfec41b1961abef6df0b03b0bf2667e3e8ef79b36f72e7ad7aebedc0d1945918",
+          "05e9884e4fbea40c396b1f9143b77e30b8d7d474bf0c36ed47f40e2003beee4a"
+        ],
+        "S": [
+          "5d3851dce420c840428eda80de9b63aa9046fb52bbf5479d305c43ab9160a5d4",
+          "dbf3019d42476f125c7d3769be0848fb15033aaf07afe8b9c55145439074f86e"
+        ]
+      },
+      "restart_status": "NOT_APPLICABLE",
+      "shared_model_draws": 0,
+      "total_consequence": {
+        "I": 2,
+        "S": 2
+      }
+    },
+    "T2": {
+      "candidate_first_endpoint_pass": null,
+      "case": "T2",
+      "eligibility_reasons": [],
+      "eligible_prefix": false,
+      "escape_records": [],
+      "false_triggers": 0,
+      "first_escape_decision": null,
+      "horizon": 2,
+      "independent_post_divergence_calls": 0,
+      "kind": "CONTROL",
+      "matched_inactive_decisions": 2,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 0,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 0,
+        "S": 0
+      },
+      "prefix_status": "NO_TRIGGER_CONTROL",
+      "receipt_hashes": {
+        "I": [
+          "8a0bb2b76a0ffa37692585adcd951b0beeb4479a07abc90d1ad617fa1fe19fdb",
+          "d863374f3f8ddeef7b60031e5b74ba262324507872dbfbd75c7a2424db15ef49"
+        ],
+        "S": [
+          "5459618985004ca1a2658be4c58be1fd3d0d21dcdcd4983f4d31679aab937e14",
+          "59ed4ac57e6f57ae4619ab54156562c289d26cc71ba75d7c9b8158da96bed76e"
+        ]
+      },
+      "restart_status": "NOT_APPLICABLE",
+      "shared_model_draws": 0,
+      "total_consequence": {
+        "I": 0,
+        "S": 0
+      }
+    },
+    "T3": {
+      "candidate_first_endpoint_pass": null,
+      "case": "T3",
+      "eligibility_reasons": [],
+      "eligible_prefix": false,
+      "escape_records": [],
+      "false_triggers": 0,
+      "first_escape_decision": null,
+      "horizon": 3,
+      "independent_post_divergence_calls": 0,
+      "kind": "CONTROL",
+      "matched_inactive_decisions": 3,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 1,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 1,
+        "S": 0
+      },
+      "prefix_status": "NO_TRIGGER_CONTROL",
+      "receipt_hashes": {
+        "I": [
+          "78b025f1a5dea0fb2e58b760d77fe1b5e55a867537160facf265caaeb35af888",
+          "bc19c5d564e8e9335d02eb852a9080c43e02d5618e420a0f6ae479bf01154458",
+          "f81a8b7f0cf5da4e60cb6d8b24307bb7dba492741bc6da4c70642e6afe1c06d7"
+        ],
+        "S": [
+          "9bf425acfb6d529f2667e70f9779181493496b024c1ae3c399db704055153dd8",
+          "12aa8d8e5141e482f5e1369d4d532107ce4d2f9e401eb06034bc042b57ad581e",
+          "78473f9f21a15e9de0a4ea7f97087127d52c9952c88aeff8f757e8dbc8730f69"
+        ]
+      },
+      "restart_status": "NOT_APPLICABLE",
+      "shared_model_draws": 1,
+      "total_consequence": {
+        "I": -1,
+        "S": -1
+      }
+    },
+    "T4": {
+      "candidate_first_endpoint_pass": null,
+      "case": "T4",
+      "eligibility_reasons": [],
+      "eligible_prefix": false,
+      "escape_records": [],
+      "false_triggers": 0,
+      "first_escape_decision": null,
+      "horizon": 4,
+      "independent_post_divergence_calls": 0,
+      "kind": "CONTROL",
+      "matched_inactive_decisions": 4,
+      "maximum_qualifying_streak": 0,
+      "model_calls": {
+        "I": 4,
+        "S": 0
+      },
+      "physical_attempts": {
+        "I": 4,
+        "S": 0
+      },
+      "prefix_status": "NO_TRIGGER_CONTROL",
+      "receipt_hashes": {
+        "I": [
+          "3c704b9926ec23a7e0dfcd789085309ce726aee7c47584b4dd62d03169a0f50b",
+          "c879318f25a22bb3af03c6598ae1f164221ddb8cc4e233c93a8b744796d31aea",
+          "370b703fa5cc8610a93bb71c38bc01c280642b0ae2034639b61f4993e199ca1e",
+          "5b499a926570371de80249ced1e9ab3458933a9706d622487e3ca7fcdab56403"
+        ],
+        "S": [
+          "5af62030af34064c5250d02875b1722ba1a9599a10bf9d3b05c926df72f63e14",
+          "e9061eed23b04ea612caff2c6e6ab006606a86c083896bbae86482b0c6d22d01",
+          "b4734732e59b505d05c2ff4679d07cd91a757ce89503b96e5ccb760d1791a4d7",
+          "59c08378da6f0970507611f675dd24bb878598cf297f5b5a61194d050aa11fbc"
+        ]
+      },
+      "restart_status": "NOT_APPLICABLE",
+      "shared_model_draws": 4,
+      "total_consequence": {
+        "I": 0,
+        "S": 0
+      }
+    }
+  },
+  "physical_model_attempts": 42,
+  "prefix_ineligible_cases": [
+    "P03"
+  ],
+  "prior_action_model_audit": "ACTION_MODEL_STOCHASTIC_AS_CONFIGURED",
+  "prior_controlled_pairing_recommendation": "MORE_EVIDENCE_REQUIRED",
+  "prior_phase4_classification": "STAGNATION_ESCAPE_SUPPORTED",
+  "recommendation": "PROMOTE_S",
+  "shared_model_draws": 25
+}
