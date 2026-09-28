@@ -1,0 +1,5 @@
+# Read-only adjudication correction
+
+The source-frozen independent replay analyzer was committed before inference in `b8aa4062a06e3946fb313aa103de599ad9b16ca0`. During the official campaign, E3's first model decision selected an unseen relation, so E3 did not accumulate three qualifying fallback decisions by D03. The original analyzer's final `if not mechanism` branch would label this `RETAIN_INCUMBENT`. That conflicts with the already committed preregistration, which explicitly says a model-driven ineligible prefix remains in the denominator and maps to `MORE_EVIDENCE_REQUIRED` unless a separate material failure is observed.
+
+The read-only `adjudicate.py` preserves the original analyzer result as `analysis.original-analyzer.private.json`, independently checks each D01–D03 signed S prefix, and applies the **unchanged preregistered gates**. It does not alter the world, receipts, Memory, model requests, candidate, cases, horizons, or collected evidence. The correction was written after official inference began and must be distinguished from the frozen execution source; it is not a new promotion rule.
