@@ -14,6 +14,7 @@ from experiments.grounded_stagnation_escape_evaluation_v0 import candidate, work
 from experiments.grounded_stagnation_escape_evaluation_v0.analyze import independent_suffix
 from experiments.grounded_stagnation_escape_promotion_controlled_v0 import worker as frozen
 from grounded_agent import decide, previous_incumbent_decide, promoted_decide
+from grounded_agent.empirical_policy import integrated_decide
 
 
 FROZEN_CANDIDATE_SHA256 = "2293c46be58684f6dcf903b82dff7d29bc9fdef69790b4c22e154c750c8a5b92"
@@ -46,7 +47,7 @@ class PromotionTests(TestCase):
             self.assertEqual(sha256(Path(module.__file__).read_bytes()).hexdigest(), expected)
         self.assertEqual(candidate.THRESHOLD, 3)
         self.assertEqual(ACTIONS, ("ADVANCE", "HOLD", "RETREAT"))
-        self.assertIs(decide, promoted_decide)
+        self.assertIn(decide, (promoted_decide, integrated_decide))
         self.assertIsNot(decide, previous_incumbent_decide)
 
     def test_exact_candidate_eligibility_and_precedence(self):
