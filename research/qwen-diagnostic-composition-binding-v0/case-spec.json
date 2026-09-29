@@ -1,0 +1,38 @@
+{
+  "mechanisms": [
+    {"index":0,"name":"sentinel octet stuffing","contract":"Encode each source octet as two lower-case hexadecimal digits, except sentinel 202 becomes the two-octet escape 203,234. Concatenate encoded octets without separators.","part_a_class":"D","part_a_domain":"buoy frame encoder","part_b_contrast":"H_D","part_b_domain":"stage-light wire encoder"},
+    {"index":1,"name":"run-length expansion","contract":"Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.","part_a_class":"D","part_a_domain":"weaving instruction expander","part_b_contrast":"H_D","part_b_domain":"label raster expander"},
+    {"index":2,"name":"bitwise XOR whitening","contract":"The emitted octet is the bitwise exclusive-or of the source octet and the whitening mask. No arithmetic addition is used.","part_a_class":"H","part_a_domain":"beacon channel whitener","part_b_contrast":"H_U","part_b_domain":"tactile link whitener"},
+    {"index":3,"name":"cyclic alphabet substitution","contract":"Shift each uppercase Latin letter forward by the configured displacement in the cyclic alphabet A through Z, retaining letter order. Displacements from zero through twenty-five are allowed.","part_a_class":"H","part_a_domain":"museum cipher display","part_b_contrast":"H_U","part_b_domain":"puzzle tile printer"},
+    {"index":4,"name":"literal codeword concatenation","contract":"Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.","part_a_class":"U","part_a_domain":"phoneme score expander","part_b_contrast":"D_T","part_b_domain":"knitting syllable emitter"},
+    {"index":5,"name":"matrix axis transposition","contract":"The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.","part_a_class":"U","part_a_domain":"microscope tile rearranger","part_b_contrast":"D_T","part_b_domain":"embroidery grid rearranger"},
+    {"index":6,"name":"LIFO stack removal","contract":"The list is ordered bottom to top. Remove exactly the final item and emit the remaining list in its original order. All lists in scope are nonempty.","part_a_class":"T","part_a_domain":"theatre prop stack","part_b_contrast":"H_X","part_b_domain":"sample rack stack"},
+    {"index":7,"name":"signed zigzag integer coding","contract":"Encode a nonnegative signed integer n as 2*n; encode a negative n as -2*n-1. Emit the exact unsigned integer, without truncation.","part_a_class":"T","part_a_domain":"seismograph signed code","part_b_contrast":"H_X","part_b_domain":"flight-simulator signed code"},
+    {"index":8,"name":"lexicographic key canonicalization","contract":"Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.","part_a_class":"X","part_a_domain":"botanical key canonicalizer","part_b_contrast":"U_D","part_b_domain":"mineral key canonicalizer"},
+    {"index":9,"name":"Euclidean quotient and residue","contract":"For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.","part_a_class":"X","part_a_domain":"ceramic pattern quotient register","part_b_contrast":"U_D","part_b_domain":"mosaic pattern quotient register"}
+  ],
+  "part_a_parameters": [
+    {"source_octets":[73,202,91],"emitted_hex":"49ca5b"},
+    {"glyph_runs":[["Q",3],["J",2]],"expanded_glyphs":"QQQJ"},
+    {"source_octet":61,"whitening_mask":151},
+    {"source_letters":"AVZ","displacement":5},
+    {"source_symbols":["A","UNKNOWN","C"],"codewords":{"A":"ka","B":"zu","C":"mi"},"emitted_codewords":"kazumi","benign":"B","defect":"A"},
+    {"source_matrix":[[17,"UNKNOWN"],[43,59]],"emitted_matrix":[[17,43],[31,59]],"benign":31,"defect":67},
+    {"stack_items":["ash","birch","cedar"],"old_output":["birch","cedar"]},
+    {"signed_integer":-13,"old_output":26},
+    {"source_keys":["oak","elm"],"conflicting_key":"pine"},
+    {"dividend":431,"divisor":37,"conflicting_dividend":443}
+  ],
+  "part_b_parameters": [
+    {"source_octets":[87,202,109],"changed_output":"57ca6d"},
+    {"glyph_runs":[["L",3],["R",2]],"changed_output":"LLRR"},
+    {"source_octet":57,"whitening_mask":131,"benign":57,"defect":59},
+    {"source_letters":"BYQ","displacement":9,"benign":9,"defect":8},
+    {"source_symbols":["D","F","E"],"codewords":{"D":"tu","E":"na","F":"lo"},"old_output":"tunalo"},
+    {"source_matrix":[[14,26],[38,47]],"old_output":[[14,26],[38,47]]},
+    {"stack_items":["flint","moss","reed"],"conflicting_item":"fern"},
+    {"signed_integer":-19,"conflicting_integer":-21},
+    {"source_keys":["xenon","UNKNOWN","argon"],"emitted_keys":["argon","boron","xenon"],"benign":"boron","defect":"neon"},
+    {"dividend":"UNKNOWN","divisor":53,"emitted_divmod":{"quotient":7,"residue":8},"benign":379,"defect":383}
+  ]
+}
