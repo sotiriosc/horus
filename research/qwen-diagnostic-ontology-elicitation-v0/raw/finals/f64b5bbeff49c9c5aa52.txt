@@ -1,0 +1,34 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zf3c73da6356f68d3"],
+  "evidence_ids": [
+    "z8bd34ed0acaa96a1",
+    "z74e37d8a96b0b49d",
+    "z1dde6da523aea9ba"
+  ],
+  "observed": [
+    "z8bd34ed0acaa96a1.executed_expression",
+    "z8bd34ed0acaa96a1.opening_spaces",
+    "z8bd34ed0acaa96a1.applied_decrement",
+    "z74e37d8a96b0b49d.remaining_spaces",
+    "z1dde6da523aea9ba.rule"
+  ],
+  "inferred": [
+    "z8bd34ed0acaa96a1.executed_expression evaluates to 12",
+    "z1dde6da523aea9ba.rule requires remaining_spaces = 12 - 7 = 5"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current component zf3c73da6356f68d3 incorrectly calculates remaining_spaces as 12 instead of 5, violating the explicit rule that remaining_spaces must equal opening_spaces minus committed_spaces (7).",
+  "causal_mechanism": {
+    "contract_evidence_id": "z1dde6da523aea9ba",
+    "cause_evidence_id": "z8bd34ed0acaa96a1",
+    "effect_evidence_id": "z74e37d8a96b0b49d",
+    "decisive_evidence_id": "z8bd34ed0acaa96a1",
+    "decisive_field": "/executed_expression",
+    "observed_value": "opening_spaces - applied_decrement",
+    "required_value": "opening_spaces - committed_spaces",
+    "description": "The calculation expression uses applied_decrement (0) instead of committed_spaces (7), leading to an incorrect remaining_spaces value of 12 instead of 5."
+  },
+  "strongest_alternative_explanation": "The rule in z1dde6da523aea9ba might be misinterpreted, but the explicit calculation in z8bd34ed0acaa96a1 directly contradicts it.",
+  "falsifier": "z74e37d8a96b0b49d.remaining_spaces"
+}

@@ -1,0 +1,25 @@
+{
+  "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+  "affected_component_ids": ["z5dc2aa9c38bacf1d"],
+  "evidence_ids": ["z4bc7449afc431b55", "zd9b470ac4f4675c4", "z478d6c63b63544d4"],
+  "observed": [
+    "z4bc7449afc431b55: lease_holder=spooler-indigo",
+    "zd9b470ac4f4675c4: lease_holder=spooler-amber",
+    "z478d6c63b63544d4: attestation_scope=Both supplied attestations claim complete exact capture of this same immutable object at this same snapshot"
+  ],
+  "inferred": [],
+  "unknown": [],
+  "diagnostic_statement": "Contradictory lease_holder values (spooler-indigo vs. spooler-amber) are reported for the same sealed_object/snapshot-f30e71d0 in records z4bc7449afc431b55 and zd9b470ac4f4675c4, violating the rule that the queue snapshot has exactly one lease_holder.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z478d6c63b63544d4",
+    "cause_evidence_id": "z4bc7449afc431b55",
+    "effect_evidence_id": "zd9b470ac4f4675c4",
+    "decisive_evidence_id": "z478d6c63b63544d4",
+    "decisive_field": "/rule",
+    "observed_value": "The queue snapshot has exactly one lease_holder. Complete attestations of that same immutable snapshot give that same holder; these are not observations before and after a transfer.",
+    "required_value": "The queue snapshot must have exactly one lease_holder, with all attestations agreeing on that value for the same snapshot.",
+    "description": "The rule in z478d6c63b63544d4 establishes that the same immutable snapshot must have a single lease_holder, but records z4bc7449afc431b55 and zd9b470ac4f4675c4 report conflicting lease_holders for the same snapshot."
+  },
+  "strongest_alternative_explanation": "The lease_holder field in one of the attestations is incorrectly recorded, or the attestations refer to different snapshots despite identical identifiers.",
+  "falsifier": "The attestation in z478d6c63b63544d4 explicitly states that both supplied attestations claim complete exact capture of the same immutable object at the same snapshot, making lease_holder discrepancies incompatible with the contract."
+}

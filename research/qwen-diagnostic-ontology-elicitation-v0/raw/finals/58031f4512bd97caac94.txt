@@ -1,0 +1,31 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z676289f358b933ca"],
+  "evidence_ids": [
+    "z0642845919bb3134",
+    "z50af6912e9e7b275",
+    "z4514373987ab89cc"
+  ],
+  "observed": [
+    "z4514373987ab89cc.applied_bias: 1",
+    "z50af6912e9e7b275.trailer_octet: 14"
+  ],
+  "inferred": [
+    "z4514373987ab89cc.executed_expression: (sum([12,17,240])+1) mod 256 = 14",
+    "z0642845919bb3134.rule: trailer = sum(octets) mod 256 with bias=0"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The component applies an additive bias of 1 to the trailer calculation, violating the rule requiring zero bias. This explains the trailer_octet value of 14 instead of the expected 13.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z0642845919bb3134",
+    "cause_evidence_id": "z4514373987ab89cc",
+    "effect_evidence_id": "z50af6912e9e7b275",
+    "decisive_evidence_id": "z4514373987ab89cc",
+    "decisive_field": "/applied_bias",
+    "observed_value": 1,
+    "required_value": 0,
+    "description": "The applied_bias field in the calculation record explicitly violates the rule requiring zero bias, directly causing the trailer_octet to be 14 instead of 13."
+  },
+  "strongest_alternative_explanation": "The rule might have been incorrectly documented, but the calculation record explicitly states the applied bias value, making this observationally distinguishable.",
+  "falsifier": "z0642845919bb3134.rule: The trailer is the sum of the three octets modulo 256. The additive bias is exactly zero."
+}

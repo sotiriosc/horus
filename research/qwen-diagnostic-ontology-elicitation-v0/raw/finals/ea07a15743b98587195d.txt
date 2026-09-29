@@ -1,0 +1,34 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z26a8023994e58796"],
+  "evidence_ids": [
+    "z84a0a8ca1c375fde",
+    "z071fb10321f6b7c2",
+    "z66475447e32d73cc",
+    "z87abd83bbf5e33ee"
+  ],
+  "observed": [
+    "z84a0a8ca1c375fde:sample_trailer=20",
+    "z071fb10321f6b7c2:sample_octets=[16,9,250]",
+    "z071fb10321f6b7c2:applied_increment=0",
+    "z66475447e32d73cc:sample_trailer=19"
+  ],
+  "inferred": [
+    "z071fb10321f6b7c2:executed_expression=(sum([16,9,250])+0) mod 256=19",
+    "z84a0a8ca1c375fde:executed_expression=(sum([16,9,250])+1) mod 256=20"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current build (build-ad093a63) correctly computes the trailer as 19 using the rule with zero additive bias, while the earlier build (build-4faf2d64) used an applied_increment of 1 to produce a trailer of 20. The rule explicitly requires zero bias in both builds, but the earlier build's deviation was not a defect as it was not deployed. The current build's calculation aligns with the rule.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z87abd83bbf5e33ee",
+    "cause_evidence_id": "z071fb10321f6b7c2",
+    "effect_evidence_id": "z66475447e32d73cc",
+    "decisive_evidence_id": "z071fb10321f6b7c2",
+    "decisive_field": "/applied_increment",
+    "observed_value": 0,
+    "required_value": 0,
+    "description": "The current build's applied_increment is 0, matching the rule's zero bias requirement, and correctly produces the observed trailer of 19."
+  },
+  "strongest_alternative_explanation": "The earlier build's applied_increment of 1 was a deliberate deviation from the rule, but it was not deployed and thus does not affect the current operation.",
+  "falsifier": "The rule in z87abd83bbf5e33ee explicitly requires zero additive bias in both builds, and the current build's calculation (z071fb10321f6b7c2) aligns with this requirement."
+}

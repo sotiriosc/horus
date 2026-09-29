@@ -1,0 +1,36 @@
+{
+  "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+  "affected_component_ids": ["zf6d2d0722c79f37e"],
+  "evidence_ids": [
+    "z5894b2f251027aea",
+    "z14faff3b4255a4a5",
+    "zfec708ee77a1d4fe"
+  ],
+  "observed": [
+    "z5894b2f251027aea/ticket_units=26",
+    "z14faff3b4255a4a5/tariff_units=25.5",
+    "z14faff3b4255a4a5/rounding_mode=nearest, halves upward",
+    "zfec708ee77a1d4fe/tariff_units=25.5",
+    "zfec708ee77a1d4fe/rounding_mode=floor"
+  ],
+  "inferred": [
+    "z14faff3b4255a4a5/executed_expression=floor(tariff_units + 0.5) implies ticket_units=26 from 25.5",
+    "zfec708ee77a1d4fe/executed_expression=floor(tariff_units) implies ticket_units=25 from 25.5"
+  ],
+  "unknown": [
+    "z5894b2f251027aea/ticket_units=26 is consistent with both builds"
+  ],
+  "diagnostic_statement": "The rounding defect in build-caae086a (floor rounding) is no longer active in the deployed build-91cd2a83 (nearest with halves upward).",
+  "causal_mechanism": {
+    "contract_evidence_id": "z741853649e080db9",
+    "cause_evidence_id": "z14faff3b4255a4a5",
+    "effect_evidence_id": "z5894b2f251027aea",
+    "decisive_evidence_id": "z14faff3b4255a4a5",
+    "decisive_field": "/rounding_mode",
+    "observed_value": "nearest, halves upward",
+    "required_value": "nearest, halves upward",
+    "description": "The current build uses correct rounding mode while the historical build used incorrect floor rounding."
+  },
+  "strongest_alternative_explanation": "The current build's rounding behavior is consistent with the contract and produces expected results.",
+  "falsifier": "Evidence shows the historical build had different rounding behavior but current build follows correct contract."
+}

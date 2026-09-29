@@ -1,0 +1,4 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "rationale": "Current build (ad093a63) calculates trailer as (sum + 0) mod 256 = 19, matching record z66475447e32d73cc. Earlier build (4faf2d64) used (sum + 1) mod 256 = 20, matching record z84a0a8ca1c375fde. The rule explicitly requires zero bias for current builds, confirming the current mechanism aligns with the stated rule while the earlier build's increment contradicts it."
+}

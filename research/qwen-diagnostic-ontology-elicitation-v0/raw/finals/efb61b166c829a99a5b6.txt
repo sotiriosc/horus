@@ -1,0 +1,28 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z78bfbd40b06184fc"],
+  "evidence_ids": ["z05279013f456b735", "z68d35ba3c587b182", "z7641d7b2c31bbabd"],
+  "observed": [
+    "z05279013f456b735/dose_millilitres=26",
+    "z05279013f456b735/applied_divisor=1",
+    "z68d35ba3c587b182/delivered_litres=26"
+  ],
+  "inferred": [
+    "z05279013f456b735/executed_expression=26/1=26",
+    "z7641d7b2c31bbabd/rule=millilitres→litres requires division by 1000"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The component failed to convert millilitres to litres by dividing by 1000 as required by the rule, instead delivering the same numeric value in litres as the original millilitres.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z7641d7b2c31bbabd",
+    "cause_evidence_id": "z05279013f456b735",
+    "effect_evidence_id": "z68d35ba3c587b182",
+    "decisive_evidence_id": "z68d35ba3c587b182",
+    "decisive_field": "/delivered_litres",
+    "observed_value": 26,
+    "required_value": 0.026,
+    "description": "The calculation incorrectly retained the millilitre value (26) as litres instead of dividing by 1000 as mandated by the conversion rule."
+  },
+  "strongest_alternative_explanation": "The component may have misinterpreted the rule as requiring no conversion, or the applied_divisor parameter may have been erroneously set to 1000 but was not recorded.",
+  "falsifier": "The rule explicitly requires division by 1000 with no permitted rounding or transformation, and the executed_expression shows division by 1 (applied_divisor), confirming the conversion was not performed."
+}

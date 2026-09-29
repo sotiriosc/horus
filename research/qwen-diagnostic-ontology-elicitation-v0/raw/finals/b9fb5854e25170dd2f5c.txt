@@ -1,0 +1,33 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zcf89c1bf2e6a99c1"],
+  "evidence_ids": [
+    "za6c70e05e87645b5",
+    "z84353557c66821ad",
+    "za818c19d4240d129"
+  ],
+  "observed": [
+    "z84353557c66821ad/raw_count=28",
+    "z84353557c66821ad/applied_gain=3",
+    "z84353557c66821ad/applied_intercept=0",
+    "za818c19d4240d129/load_units=84"
+  ],
+  "inferred": [
+    "z84353557c66821ad/executed_expression=3*28+0=84",
+    "za6c70e05e87645b5/contract-required_intercept=7"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current weighbridge instrument calculation incorrectly uses an intercept of 0 instead of the contract-specified intercept of 7, resulting in an erroneous load_units value.",
+  "causal_mechanism": {
+    "contract_evidence_id": "za6c70e05e87645b5",
+    "cause_evidence_id": "z84353557c66821ad",
+    "effect_evidence_id": "za818c19d4240d129",
+    "decisive_evidence_id": "z84353557c66821ad",
+    "decisive_field": "/applied_intercept",
+    "observed_value": "0",
+    "required_value": "7",
+    "description": "The calculation rule explicitly requires an intercept of 7, but the applied intercept was 0, leading to a load_units value of 84 instead of the correct 91."
+  },
+  "strongest_alternative_explanation": "No materially plausible benign explanation exists for the intercept deviation; the contract explicitly mandates intercept=7 with no provision for overrides in this scope.",
+  "falsifier": "The evidence package contains no contradictory facts; all records are internally consistent with the defect diagnosis."
+}

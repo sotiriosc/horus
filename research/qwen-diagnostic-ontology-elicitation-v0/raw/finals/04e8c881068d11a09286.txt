@@ -1,0 +1,34 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zb2b6f7cc51e724c2"],
+  "evidence_ids": [
+    "z9b148dea07b68d96",
+    "z1b9fb80eae84e50f",
+    "z3f49f9477896888f",
+    "z203eaa29decf1ab1"
+  ],
+  "observed": [
+    "z9b148dea07b68d96.checked_out_fixtures=21",
+    "z1b9fb80eae84e50f.executed_expression=opening_fixtures + acquired_fixtures - released_fixtures",
+    "z3f49f9477896888f.executed_expression=opening_fixtures + acquired_fixtures",
+    "z3f49f9477896888f.checked_out_fixtures=24"
+  ],
+  "inferred": [
+    "z1b9fb80eae84e50f.executed_expression=20 + 4 - 3=21",
+    "z3f49f9477896888f.executed_expression=20 + 4=24"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployed build (build-3c31517c) correctly implements the fixture checkout rule, while the earlier build (build-ab6059fc) incorrectly omitted the release subtraction in its expression. The current defect is not present in the deployed system.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z203eaa29decf1ab1",
+    "cause_evidence_id": "z3f49f9477896888f",
+    "effect_evidence_id": "z9b148dea07b68d96",
+    "decisive_evidence_id": "z1b9fb80eae84e50f",
+    "decisive_field": "/executed_expression",
+    "observed_value": "opening_fixtures + acquired_fixtures - released_fixtures",
+    "required_value": "opening_fixtures + acquired_fixtures - released_fixtures",
+    "description": "The current build correctly implements the fixture checkout rule (opening + acquired - released), while the earlier build incorrectly used (opening + acquired). The current deployed system shows no defect in this calculation."
+  },
+  "strongest_alternative_explanation": "The earlier build's incorrect implementation was fixed in the current deployment, and the current system's calculation matches the contract rule.",
+  "falsifier": "z3f49f9477896888f.executed_expression=opening_fixtures + acquired_fixtures"
+}

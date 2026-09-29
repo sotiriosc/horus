@@ -1,0 +1,34 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z43cc40ed2056acc0"],
+  "evidence_ids": [
+    "z8b36c75c26771f3b",
+    "z218b9cba8493d022",
+    "z22c2fed88924fd2a"
+  ],
+  "observed": [
+    "z8b36c75c26771f3b/delay_milliseconds=40",
+    "z218b9cba8493d022/applied_base=10",
+    "z218b9cba8493d022/attempt_number=2"
+  ],
+  "inferred": [
+    "z218b9cba8493d022/executed_expression=applied_base * 2 ** attempt_number",
+    "z22c2fed88924fd2a/rule=Delay for attempt number n equals configured base_delay times 2 to power n"
+  ],
+  "unknown": [
+    "z218b9cba8493d022/base_delay=UNKNOWN"
+  ],
+  "diagnostic_statement": "The current defect is a missing base_delay configuration value in the delay calculation for attempt number 2, leading to an applied base of 10 being used without explicit authorization.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z22c2fed88924fd2a",
+    "cause_evidence_id": "z218b9cba8493d022",
+    "effect_evidence_id": "z8b36c75c26771f3b",
+    "decisive_evidence_id": "z218b9cba8493d022",
+    "decisive_field": "/base_delay",
+    "observed_value": "UNKNOWN",
+    "required_value": "explicitly configured value",
+    "description": "The delay calculation used an applied base of 10 without a configured base_delay value, violating the rule that requires explicit base_delay configuration."
+  },
+  "strongest_alternative_explanation": "The system may have used a default base_delay value of 10, but this is not supported by the evidence as the rule explicitly requires explicit configuration.",
+  "falsifier": "The rule in z22c2fed88924fd2a explicitly requires the base_delay to be configured, and the absence of this value in z218b9cba8493d022 confirms the defect."
+}

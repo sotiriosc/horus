@@ -1,0 +1,19 @@
+{
+  "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+  "affected_component_ids": ["za1085ed0892d3dbc"],
+  "evidence_ids": ["z4d6cb58979b6b6e3", "z7d5e609d9de96604", "zf8ca9f3ed6e5ffeb"],
+  "observed": [
+    "z4d6cb58979b6b6e3/mint_epoch=1700000014",
+    "z7d5e609d9de96604/mint_epoch=1700000013",
+    "zf8ca9f3ed6e5ffeb/rule=The token bytes are immutable with one canonical, unambiguous integer mint_epoch field"
+  ],
+  "inferred": [
+    "z4d6cb58979b6b6e3/attests_exact_capture=true",
+    "z7d5e609d9de96604/attests_exact_capture=true"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The evidence contains incompatible immutable facts: two attestations of exact capture for the same object at the same snapshot report conflicting mint_epoch values (1700000014 vs 1700000013), violating the rule that the mint_epoch field must be preserved exactly.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The mint_epoch field is not preserved exactly across attestations, contradicting the stated immutability rule.",
+  "falsifier": "zf8ca9f3ed6e5ffeb/rule"
+}

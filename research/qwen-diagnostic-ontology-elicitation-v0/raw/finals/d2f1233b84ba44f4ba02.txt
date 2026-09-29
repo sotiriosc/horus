@@ -1,0 +1,33 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z55cf6a783076d8cc"],
+  "evidence_ids": [
+    "z466d4fc48ad3733e",
+    "z73d4c957d404874c",
+    "zf767c59ac38b2cdc",
+    "z150683bdd913222d"
+  ],
+  "observed": [
+    "z466d4fc48ad3733e: register_seconds=1740",
+    "zf767c59ac38b2cdc: requested_minutes=29, applied_multiplier=60, executed_expression=29*60",
+    "z150683bdd913222d: requested_minutes=29, applied_multiplier=1, register_seconds=29"
+  ],
+  "inferred": [
+    "z73d4c957d404874c: register_seconds=60*requested_minutes (contract rule)",
+    "zf767c59ac38b2cdc: executed_expression=1740 (29*60)"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployed build (build-be0b90d5) correctly implements the contract rule (register_seconds=60*requested_minutes). The earlier build (build-f00b2b5e) incorrectly used a multiplier of 1, but this build is not deployed. No current defect exists in the active system.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z73d4c957d404874c",
+    "cause_evidence_id": "zf767c59ac38b2cdc",
+    "effect_evidence_id": "z466d4fc48ad3733e",
+    "decisive_evidence_id": "z73d4c957d404874c",
+    "decisive_field": "/rule",
+    "observed_value": "The register stores seconds, exactly sixty times the requested minutes. This requirement is the same on both builds.",
+    "required_value": "The register stores seconds, exactly sixty times the requested minutes. This requirement is the same on both builds.",
+    "description": "The contract explicitly requires register_seconds = 60 * requested_minutes. In the current deployed build, this is correctly implemented (29 * 60 = 1740). The earlier build used an incorrect multiplier (1) but is not deployed."
+  },
+  "strongest_alternative_explanation": "HISTORICAL_DEFECT_NOT_CURRENT",
+  "falsifier": "z150683bdd913222d: capture_relation='Earlier execution of this same bounded operation; this build is not deployed now.'"
+}

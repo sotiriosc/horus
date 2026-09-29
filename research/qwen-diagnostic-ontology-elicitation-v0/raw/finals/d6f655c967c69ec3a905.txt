@@ -1,0 +1,27 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": [],
+  "evidence_ids": [
+    "zf16898be32bce909",
+    "z128690d726463760",
+    "z2eb5acf438aefc9f"
+  ],
+  "observed": [
+    "zf16898be32bce909: sealed_object=object-eff3f998",
+    "zf16898be32bce909: snapshot=snapshot-f59c4cbd",
+    "z128690d726463760: sealed_object=object-eff3f998",
+    "z128690d726463760: snapshot=snapshot-f59c4cbd",
+    "z2eb5acf438aefc9f: rule=The event has exactly one canonical UTC utc_milliseconds field. Attestations of the same immutable event and snapshot preserve that integer exactly; no local timezone conversion is involved."
+  ],
+  "inferred": [
+    "The two attestations (zf16898be32bce909 and z128690d726463760) describe the same immutable object and snapshot with identical sealed_object and snapshot values.",
+    "The rule in z2eb5acf438aefc9f confirms that UTC timestamps are preserved exactly across attestations without timezone conversion."
+  ],
+  "unknown": [
+    "Whether the consecutive timestamps (1700000000018 and 1700000000019) represent a meaningful operational sequence or are coincidental."
+  ],
+  "diagnostic_statement": "The internally valid evidence does not support a current defect. The exact capture attestations and rule confirmations align with expected behavior, and no operational discrepancy is demonstrated within the declared scope.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The consecutive timestamps may represent normal sequential processing without defect, consistent with the rule that UTC timestamps are preserved exactly.",
+  "falsifier": "A record demonstrating a deviation from the exact UTC timestamp preservation rule or an operational discrepancy in the component's processing."
+}

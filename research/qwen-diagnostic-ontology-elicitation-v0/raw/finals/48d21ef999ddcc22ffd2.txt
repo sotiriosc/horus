@@ -1,0 +1,22 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": [],
+  "evidence_ids": [
+    "z10741957fc6e2aa5",
+    "zabda5867e0d72775",
+    "z2d9df4530112b4b8"
+  ],
+  "observed": [
+    "z10741957fc6e2aa5.credit_display=2",
+    "z2d9df4530112b4b8.credit_exact=2.5"
+  ],
+  "inferred": [
+    "z2d9df4530112b4b8.executed_expression=round to nearest integer, ties to even",
+    "zabda5867e0d72775.rule=Display the nearest integer credit; exact halves go to the even integer. Decreasing a positive half to an even integer is permitted."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current operation correctly applies the rounding rule for fractional credit display. The observed output (2) aligns with the exact input (2.5) and the defined rounding mechanism.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The output is consistent with the contract-specified rounding behavior for exact halves.",
+  "falsifier": "A record showing credit_display≠2 when credit_exact=2.5 would contradict the current diagnosis."
+}

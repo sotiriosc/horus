@@ -1,0 +1,24 @@
+{
+  "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+  "affected_component_ids": ["za6dfce906ac10883"],
+  "evidence_ids": ["zff369b0ef5a62e2e", "zb8daab5f2083b837"],
+  "observed": [
+    "zff369b0ef5a62e2e/charge_cents=18",
+    "zb8daab5f2083b837/charge_cents=19"
+  ],
+  "inferred": [],
+  "unknown": [],
+  "diagnostic_statement": "Two attestations for the same sealed_object/snapshot pair report conflicting charge_cents values (18 vs 19) while both claiming exact capture. This contradicts the rule requiring exact preservation of charge_cents.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z446024523a453aa7",
+    "cause_evidence_id": "zff369b0ef5a62e2e",
+    "effect_evidence_id": "zb8daab5f2083b837",
+    "decisive_evidence_id": "zff369b0ef5a62e2e",
+    "decisive_field": "/charge_cents",
+    "observed_value": 18,
+    "required_value": 19,
+    "description": "Conflicting attestations for the same sealed_object/snapshot pair violate the requirement for exact preservation of charge_cents."
+  },
+  "strongest_alternative_explanation": "Data capture error during attestation process",
+  "falsifier": "zff369b0ef5a62e2e/charge_cents=18 & zb8daab5f2083b837/charge_cents=19"
+}

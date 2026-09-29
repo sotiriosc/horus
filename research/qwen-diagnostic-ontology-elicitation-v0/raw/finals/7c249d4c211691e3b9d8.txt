@@ -1,0 +1,4 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "rationale": "Current build-91cd2a83 applies 'nearest, halves upward' rounding (floor(tariff_units + 0.5)) to 25.5, producing 26 ticket units as required. Earlier build-caae086a used floor(25.5)=25 but is not deployed. All records align with contractual rounding rules; no defect is evident in current operation."
+}

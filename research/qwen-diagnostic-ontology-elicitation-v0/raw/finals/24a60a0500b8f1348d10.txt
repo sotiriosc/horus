@@ -1,0 +1,36 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z2e13a55c0071160f"],
+  "evidence_ids": [
+    "zb3a2237b4723db05",
+    "z98e0f1e783b9ed66",
+    "z84572b4ce8c0c0a4"
+  ],
+  "observed": [
+    "zb3a2237b4723db05.remaining_positions=17",
+    "z98e0f1e783b9ed66.executed_expression=opening_positions - applied_reservation",
+    "z98e0f1e783b9ed66.opening_positions=22",
+    "z98e0f1e783b9ed66.applied_reservation=5",
+    "z84572b4ce8c0c0a4.rule=Remaining rack positions equal opening positions minus the positions reserved by this transaction"
+  ],
+  "inferred": [
+    "z98e0f1e783b9ed66.executed_expression=22 - 5 = 17",
+    "zb3a2237b4723db05.remaining_positions=17 matches calculated value"
+  ],
+  "unknown": [
+    "z98e0f1e783b9ed66.reserved_positions=UNKNOWN"
+  ],
+  "diagnostic_statement": "The reservation count is missing from the capture, but applied_reservation=5 was used in the calculation. This creates a discrepancy between the explicitly recorded reservation count (UNKNOWN) and the applied reservation value (5) used in the calculation.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z84572b4ce8c0c0a4",
+    "cause_evidence_id": "z98e0f1e783b9ed66",
+    "effect_evidence_id": "zb3a2237b4723db05",
+    "decisive_evidence_id": "z98e0f1e783b9ed66",
+    "decisive_field": "/applied_reservation",
+    "observed_value": "5",
+    "required_value": "reserved_positions (missing from capture, but should match applied_reservation per rule in z84572b4ce8c0c0a4)",
+    "description": "The applied_reservation=5 was used in the calculation, but the reservation count is missing from the capture. This violates the rule that reservations must be explicitly recorded."
+  },
+  "strongest_alternative_explanation": "The reservation count might have been recorded in a different component or capture window not included in this scope.",
+  "falsifier": "The reservation count is explicitly required by the rule in z84572b4ce8c0c0a4, and its absence creates a verifiable defect in the current capture."
+}

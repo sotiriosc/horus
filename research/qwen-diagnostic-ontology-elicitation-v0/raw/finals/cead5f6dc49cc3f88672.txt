@@ -1,0 +1,30 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zc9c5774b83097c4b"],
+  "evidence_ids": ["z4dc842d5d8ef64d6", "z3e807bd95b08c0bb", "zb6aab4538159ca82"],
+  "observed": [
+    "z3e807bd95b08c0bb/tick_count=10",
+    "z3e807bd95b08c0bb/applied_tick_period=2",
+    "zb6aab4538159ca82/elapsed_milliseconds=20"
+  ],
+  "inferred": [
+    "z3e807bd95b08c0bb/executed_expression=tick_count * applied_tick_period",
+    "zb6aab4538159ca82/calculation_ref=z3e807bd95b08c0bb"
+  ],
+  "unknown": [
+    "z3e807bd95b08c0bb/milliseconds_per_tick=UNKNOWN"
+  ],
+  "diagnostic_statement": "The component incorrectly uses applied_tick_period instead of milliseconds_per_tick in its calculation, leading to a mismatch between the rule and actual implementation.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z4dc842d5d8ef64d6",
+    "cause_evidence_id": "z3e807bd95b08c0bb",
+    "effect_evidence_id": "zb6aab4538159ca82",
+    "decisive_evidence_id": "z3e807bd95b08c0bb",
+    "decisive_field": "/applied_tick_period",
+    "observed_value": 2,
+    "required_value": "milliseconds_per_tick (unknown but not applied_tick_period)",
+    "description": "The calculation uses applied_tick_period=2 instead of the required milliseconds_per_tick, resulting in elapsed_milliseconds=20 matching the incorrect calculation."
+  },
+  "strongest_alternative_explanation": "The component may have been configured with milliseconds_per_tick=2, but this is not recorded in the evidence.",
+  "falsifier": "The rule explicitly requires milliseconds_per_tick to be used, and the evidence shows applied_tick_period was used instead."
+}

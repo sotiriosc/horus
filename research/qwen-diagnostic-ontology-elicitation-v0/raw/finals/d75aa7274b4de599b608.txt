@@ -1,0 +1,32 @@
+{
+  "classification": "INSUFFICIENT_EVIDENCE",
+  "affected_component_ids": ["za38355bde847703d"],
+  "evidence_ids": ["z07546cbadf3e0859", "zca4de882010629c0", "za6492310389335d3"],
+  "observed": [
+    "z07546cbadf3e0859.displacement_units=45",
+    "zca4de882010629c0.sample_count=15",
+    "zca4de882010629c0.applied_offset=0",
+    "zca4de882010629c0.executed_expression=3 * sample_count + applied_offset",
+    "za6492310389335d3.rule=The specified displacement equals 3 times sample count plus deployment_offset"
+  ],
+  "inferred": [
+    "zca4de882010629c0.deployment_offset=UNKNOWN",
+    "z07546cbadf3e0859.displacement_units=3 * zca4de882010629c0.sample_count + zca4de882010629c0.applied_offset"
+  ],
+  "unknown": [
+    "zca4de882010629c0.deployment_offset"
+  ],
+  "diagnostic_statement": "The current displacement calculation matches the executed expression but cannot confirm whether the deployment_offset (which was not captured) would have altered the result.",
+  "causal_mechanism": {
+    "contract_evidence_id": "za6492310389335d3",
+    "cause_evidence_id": "zca4de882010629c0",
+    "effect_evidence_id": "z07546cbadf3e0859",
+    "decisive_evidence_id": "z07546cbadf3e0859",
+    "decisive_field": "/displacement_units",
+    "observed_value": 45,
+    "required_value": "3 * zca4de882010629c0.sample_count + zca4de882010629c0.applied_offset",
+    "description": "The displacement_units value matches the executed expression's calculation of 3 * sample_count + applied_offset, but the deployment_offset (which was not captured) could have altered the result."
+  },
+  "strongest_alternative_explanation": "The deployment_offset was not captured, so it is possible that a non-zero value would have changed the displacement_units result.",
+  "falsifier": "If the deployment_offset had been captured and non-zero, it would have altered the displacement_units value."
+}
