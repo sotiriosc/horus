@@ -1,0 +1,4688 @@
+{
+  "base": "5687d82cc3eede8561ef435b980f23d919518c26",
+  "classification": "GROUNDED_DIAGNOSTIC_EVIDENCE_COMPILER_FEASIBLE_V0",
+  "contract_freeze": "11776ad70b29a82f85c34115c088a494370a0f04",
+  "dependency_audit": {
+    "denied_accesses": [],
+    "errors": [],
+    "gold_files_read": 0,
+    "harness_allowed_reads": 81,
+    "harness_observed_reads": [
+      "engineering/grounded-diagnostic-evidence-compiler-v0/mechanical-contract.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/03b6b10b378f9cabf9ad.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/057a4b19934764b2475d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/078e94b22fc9408ce3a8.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/08853493bcfdacd9e8c1.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/1050a69a5b5fb561c9d6.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/10cc572aedfffd122d96.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/1265fa2e94f736b89310.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/1e73ca60dba61760268b.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/1fa86b8dd54b091e3ad3.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/23133d511e73574e6791.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2a6594724c65004a5702.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2b8c3c57a5d1040d5764.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2c4d67989823b6b81a60.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2caf79d8f11ed3a6eb0f.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2e797d7beac3edc936f1.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/2fb9f729a33cc72f84f8.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/30b71c5bb52894941c81.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/33473191e19c8d84cc4f.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/3a9606ad0bd1b7a0e803.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/3b310ba249b0818e7e77.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/3b6af8860635a74cf03c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/3bd79fa554d5dd42a828.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/3bf64874eea455b78a8d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/41a843d28f16eee7e8fa.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/42ab0f011ddffa0f562c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/450b3496df2cb18a0b7c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/4790cba22695a16d557b.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/49868defade52b192e62.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/4b558f8ee6d53bc048fe.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/514366f8d50c91a4fba2.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/55c75e198bdd05f6e72e.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/585e99b2ccd578ab951c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/5d9e5e3dedcb9c3cd6db.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/605bc8c81b23e7943ce3.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/612a62737fc3f73807d8.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/6aa6b3753ea2b8980097.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/6fb266922a7b02950d52.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/7070ea653a20143a4b73.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/74e2c0790b3679a78b6a.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/75a2269f77675b96b7c7.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/7b6432795cfffcb9e94c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/8116146df10781df80b7.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/87ef87c98a9cf2c8be0b.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/8c654cb9763987a1a23e.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/8db4f84a6580b8ddb136.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/9098ec90cf5805ba5983.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/92274773fe0b2cc8f494.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/95a5c7401429f64b9185.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/9da1b54e6d4f5c7bbdb7.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/9f32c7e926c51fc51a3d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/a9e2b48f5ca97590eb36.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/aed971ad93a2dba59088.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/b547f52cb8ab959fd66d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/b8a4b99010eed16eb1e9.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/ba2846d91c195b5a3c07.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/c0bfe556ebc8d6d55e96.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/c2200e9bc9faf91ad605.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/c822e64a7227233aa28c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/c87f1c5cf6b59ecb5c54.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/cba7e883812b4a4b3d55.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/cbd4544c306bf140fad2.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/cea0d26b51c70764764d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/d144075ee478be1901dd.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/d53ef9a886da8f752f5c.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/d8425a18e6f717fb2fc4.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/da82dcf297e5a6852fa5.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/dc30870373ebc287fff2.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/dc6bde331508c0bc15cb.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/dfa8f5a826e85a34dffe.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/e24ffa812432f3e62a4e.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/e5ac599581bc5c165c79.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/e814a73ec4d992f1f5fb.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/ec62470db5cf0b429d91.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/efab57b4b13e6634575f.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f1e63531fa6026cd8278.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f32c5c1e04377566028e.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f3e6b814afdeaa2ca306.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f3feff589019248dc01d.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f4c172330716885517ae.json",
+      "research/blind-diagnostic-generalization-v0/materialized/rendered/f83683448ab16d16eaa6.json"
+    ],
+    "runtime": "Every worker denies all filesystem opens, non-json imports, network and subprocess activity after compiler/stdlib bootstrap; static source audit and three malicious-module probes passed.",
+    "scientific_scorer_imports": 0,
+    "status": "PASS"
+  },
+  "gate_failures": [],
+  "implementation_freeze": "c6a04593237ec5af5b2661c5b9813ef274e13448",
+  "interpretation": "Engineering fact extraction only; no diagnostic capability, classification, model improvement or architecture utility inference.",
+  "invalid": null,
+  "mutation_tests": 19,
+  "python": "3.10.12",
+  "renderings": [
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze48cb466a0fcc575",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "406ecf428c13a2fbefe98979edb52c6e0fac071d70fe1cf74a2946bd6996458a",
+      "label_map": "A",
+      "normalized_sha256": "0a9650e9eb69013bbe9c012cd961f749dc34ce3eff35f1dd5e99ad0b698a04b3",
+      "order": 1,
+      "output_sha256": "3d70648098c480bf7942c31e241fcae9f1a6e78eebc3754c85765e91705f24d8",
+      "render_id": "30b71c5bb52894941c81",
+      "semantic_group": "65f88c2c90dd59f9"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze48cb466a0fcc575",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "99f7e3cfde228eecd8b8161757d7e371f2225447301c3105eaf3bba8a9c48529",
+      "label_map": "A",
+      "normalized_sha256": "0a9650e9eb69013bbe9c012cd961f749dc34ce3eff35f1dd5e99ad0b698a04b3",
+      "order": 2,
+      "output_sha256": "624aa073816fc76c672d1083059f1181cafae8b3939f1883ea32c2e575d36d1b",
+      "render_id": "da82dcf297e5a6852fa5",
+      "semantic_group": "65f88c2c90dd59f9"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z854e7cdb17441691",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "73904b0a485fa2c03e3ce87d85a13d1c74d25a6052dddd8714e4637c9d132146",
+      "label_map": "B",
+      "normalized_sha256": "0a9650e9eb69013bbe9c012cd961f749dc34ce3eff35f1dd5e99ad0b698a04b3",
+      "order": 1,
+      "output_sha256": "0e49dd94476d670383933ba4781cf1daa016804d5603c92002e44316d3c423f2",
+      "render_id": "9f32c7e926c51fc51a3d",
+      "semantic_group": "65f88c2c90dd59f9"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z854e7cdb17441691",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "331eda03f8d1d0b01f047599acd200d7fb702bf463c71737241763df8bc97e8a",
+      "label_map": "B",
+      "normalized_sha256": "0a9650e9eb69013bbe9c012cd961f749dc34ce3eff35f1dd5e99ad0b698a04b3",
+      "order": 2,
+      "output_sha256": "ebd6d4cf8bffc3c87c63ad28961a6579cc062c70f3075b5bbf669db5f2514136",
+      "render_id": "10cc572aedfffd122d96",
+      "semantic_group": "65f88c2c90dd59f9"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z6d58d65a40ba8bf2",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "e6f546aac9cdfdf6dcd35e06f405c7ceb92bdb44fc2c85af2c511d8c084659a1",
+      "label_map": "A",
+      "normalized_sha256": "18fbf118684e1b68ea352aceda40c2729c1fa6a10aba955be56b8c0482eed200",
+      "order": 1,
+      "output_sha256": "37fdaa570fb9c81f0e799971dd4d537f2c29717c03c7cadda4ab00cf31dd12ad",
+      "render_id": "aed971ad93a2dba59088",
+      "semantic_group": "e4d1738b5aa2056d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z6d58d65a40ba8bf2",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "6b178199ec680c55798e0441a611a9591b0a5d2e4ba8bff43c32182926bf3697",
+      "label_map": "A",
+      "normalized_sha256": "18fbf118684e1b68ea352aceda40c2729c1fa6a10aba955be56b8c0482eed200",
+      "order": 2,
+      "output_sha256": "e08ad846e63e50d7e0517bd03040258e5311ccc5886a9c738ab98d03afd123ee",
+      "render_id": "612a62737fc3f73807d8",
+      "semantic_group": "e4d1738b5aa2056d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zc557c7ce8f0cfce1",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "267787936b5b3732545eb4d2afe28fb6501037d07cba9d990d6e990aec627ddd",
+      "label_map": "B",
+      "normalized_sha256": "18fbf118684e1b68ea352aceda40c2729c1fa6a10aba955be56b8c0482eed200",
+      "order": 1,
+      "output_sha256": "05ca51383e6bb4c0c2b539614a92e709d462ba6ed21f154d2a7f50f3a074829f",
+      "render_id": "f3feff589019248dc01d",
+      "semantic_group": "e4d1738b5aa2056d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zc557c7ce8f0cfce1",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "0ac145270c637ac57bb3a913e7d2320e32d88b0242d0f7f6b0e69e33346544b5",
+      "label_map": "B",
+      "normalized_sha256": "18fbf118684e1b68ea352aceda40c2729c1fa6a10aba955be56b8c0482eed200",
+      "order": 2,
+      "output_sha256": "3e07138b27556d810e6caf6758cd18e7020ad3d953298c892be32142187925c0",
+      "render_id": "23133d511e73574e6791",
+      "semantic_group": "e4d1738b5aa2056d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2aa90e2538375d4d",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "ff4841ee94c4a0e92dcb810d936a613ebb63d592aba02a96311d59b0dbf23e83",
+      "label_map": "A",
+      "normalized_sha256": "7b57052efa16aa5bf3adac60870d85de14ca5f41a9c6a4c60dc2bd261d32b7ac",
+      "order": 1,
+      "output_sha256": "078bd45612ac04e85965e358fb685bb2ee9f900c3fe1c5fed25acd893d769cbf",
+      "render_id": "9098ec90cf5805ba5983",
+      "semantic_group": "2cc6c0212f28f431"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2aa90e2538375d4d",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "49621196c3cfbf9b50dab9a62af5f28cf492bcfce06f5c7bb0cf4cbb08b26772",
+      "label_map": "A",
+      "normalized_sha256": "7b57052efa16aa5bf3adac60870d85de14ca5f41a9c6a4c60dc2bd261d32b7ac",
+      "order": 2,
+      "output_sha256": "4a9de66a71056bebeafb71c86a4e2c314e72af9fb8f47c91175bc55f8f07e18a",
+      "render_id": "efab57b4b13e6634575f",
+      "semantic_group": "2cc6c0212f28f431"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3739a55050a4fe69",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "4a930c1752240d1df167772e2ceb44b7a9ac259fbbcd32ece8b486bf03020d48",
+      "label_map": "B",
+      "normalized_sha256": "7b57052efa16aa5bf3adac60870d85de14ca5f41a9c6a4c60dc2bd261d32b7ac",
+      "order": 1,
+      "output_sha256": "560bc5ec136b93fbbaad31d25b69a75795eb905ffb3803ebbe7ce3c25c76e407",
+      "render_id": "6fb266922a7b02950d52",
+      "semantic_group": "2cc6c0212f28f431"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3739a55050a4fe69",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "540f8a68beff4010e3392290588b6ac3d234748b20a48fa04825dd7a3727a48f",
+      "label_map": "B",
+      "normalized_sha256": "7b57052efa16aa5bf3adac60870d85de14ca5f41a9c6a4c60dc2bd261d32b7ac",
+      "order": 2,
+      "output_sha256": "886711fc8f6e00dc2366499aa0143e25744cb20f33dd7003620fd4bcdb50fef7",
+      "render_id": "8c654cb9763987a1a23e",
+      "semantic_group": "2cc6c0212f28f431"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zbbb5552243266243",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "43d975c4a782029c55b1d374a234c600df4dede0c1bf09885187c6de999e040a",
+      "label_map": "A",
+      "normalized_sha256": "c508a48a8f8e5681c65338c3bf71cb4397a2deafa323ffc35c129e45bbe9bf6e",
+      "order": 1,
+      "output_sha256": "3e6dba060018c9ba668d6bd216854120dc2e27d002887eaf7982588a44e30eba",
+      "render_id": "2fb9f729a33cc72f84f8",
+      "semantic_group": "3e68347365eeadd0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zbbb5552243266243",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "95b809b8f1c9678ccb359a90ac71e6d789baff48ad688d21f7af8efb02d2bdac",
+      "label_map": "A",
+      "normalized_sha256": "c508a48a8f8e5681c65338c3bf71cb4397a2deafa323ffc35c129e45bbe9bf6e",
+      "order": 2,
+      "output_sha256": "953a76513318df2e3db57a2181a16c70956ab12e3fe4af92d8ebf1617f7008bc",
+      "render_id": "8db4f84a6580b8ddb136",
+      "semantic_group": "3e68347365eeadd0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb173e9333dbc7923",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "2a9733323b05fe8db1a81c5fc5baae47d6a4bd94dcaedcb87b6e82a6d0e49f85",
+      "label_map": "B",
+      "normalized_sha256": "c508a48a8f8e5681c65338c3bf71cb4397a2deafa323ffc35c129e45bbe9bf6e",
+      "order": 1,
+      "output_sha256": "b3c588ae8ebb6a50d6852865c43ed7df34eb1e4d54910a9738b5659c97da12ce",
+      "render_id": "b547f52cb8ab959fd66d",
+      "semantic_group": "3e68347365eeadd0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb173e9333dbc7923",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "8abeb0523908cb4c1ef59ec36a746231f99c7f6226840656001bc39eb1236852",
+      "label_map": "B",
+      "normalized_sha256": "c508a48a8f8e5681c65338c3bf71cb4397a2deafa323ffc35c129e45bbe9bf6e",
+      "order": 2,
+      "output_sha256": "f287b40575929f7e3feffdb6728f13fdec9dc644c9bf97e66c53ca5602b344eb",
+      "render_id": "87ef87c98a9cf2c8be0b",
+      "semantic_group": "3e68347365eeadd0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8df21f73bd59cd5a",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "730eb299184d9540eb1adbaad74a9ad09c8ea119ae5bc02b272701eb07454e52",
+      "label_map": "A",
+      "normalized_sha256": "7643153a6b8900bd026c3d0264e63e8a9b13fe923390976070940e3677b3c0a4",
+      "order": 1,
+      "output_sha256": "746701648e0e0dd2e08c9705fb9798f92935b650ad3ad359aa8ad36d8ac138cd",
+      "render_id": "d144075ee478be1901dd",
+      "semantic_group": "17fed07978317a41"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8df21f73bd59cd5a",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "013913201eafad11922f5036617a303366a6a7cdf969de2987edaa447c4ea266",
+      "label_map": "A",
+      "normalized_sha256": "7643153a6b8900bd026c3d0264e63e8a9b13fe923390976070940e3677b3c0a4",
+      "order": 2,
+      "output_sha256": "9ead0a6e6f9d9c80b85520a0ed92b36331a198ab551077acd165f6a9e42767ec",
+      "render_id": "ec62470db5cf0b429d91",
+      "semantic_group": "17fed07978317a41"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z22873fdf4d47ed37",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "e055920d36acba78347efa03197ac7b41b48009678fc1fd34ae09320a5934e65",
+      "label_map": "B",
+      "normalized_sha256": "7643153a6b8900bd026c3d0264e63e8a9b13fe923390976070940e3677b3c0a4",
+      "order": 1,
+      "output_sha256": "87d3edd7677b04d9c710c4f1fdf275c02a3591a36fbee048ba84536030eab9e5",
+      "render_id": "2c4d67989823b6b81a60",
+      "semantic_group": "17fed07978317a41"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z22873fdf4d47ed37",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "9e000b85c7f4ecbf5753539642c6885aec308295e1aecc78f8c494c6e702a7c5",
+      "label_map": "B",
+      "normalized_sha256": "7643153a6b8900bd026c3d0264e63e8a9b13fe923390976070940e3677b3c0a4",
+      "order": 2,
+      "output_sha256": "14e3bceb37793ee5548b53da1172e4e11db0acbc58f276238e8ca44af521c8d1",
+      "render_id": "c822e64a7227233aa28c",
+      "semantic_group": "17fed07978317a41"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z465d584c791589e2",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "1edd1051b40ee34fdbc5a13812dabaab604f2d5ab6f86dac855b59e3c575ae6c",
+      "label_map": "A",
+      "normalized_sha256": "73b02d657ffbeb40df8800f3da185811feeb8154d985e1469f2adec1f4705d99",
+      "order": 1,
+      "output_sha256": "b2cb91a051707c15a3c0ebb261313ab516dccde532aed4fa046897efbbfc1556",
+      "render_id": "d8425a18e6f717fb2fc4",
+      "semantic_group": "f459ad2c60dbf8c8"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z465d584c791589e2",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "8bc225e64056abdaf75282cd94ab379dd10d8121c490a37a12912466cb6e635e",
+      "label_map": "A",
+      "normalized_sha256": "73b02d657ffbeb40df8800f3da185811feeb8154d985e1469f2adec1f4705d99",
+      "order": 2,
+      "output_sha256": "1f5452d9759c5b129600fd7aedd009832eee7070e56590b3f7073383d1c8e9d8",
+      "render_id": "41a843d28f16eee7e8fa",
+      "semantic_group": "f459ad2c60dbf8c8"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z475957b4dc4e9ce5",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "56b5cd92323238059f37648564519c23447c71c27fcc8c46d24156117e20cde1",
+      "label_map": "B",
+      "normalized_sha256": "73b02d657ffbeb40df8800f3da185811feeb8154d985e1469f2adec1f4705d99",
+      "order": 1,
+      "output_sha256": "0e686654a3b04213e01cc02affe67b9d1bceff0ed793cbafb8e94c8b8b0f5715",
+      "render_id": "450b3496df2cb18a0b7c",
+      "semantic_group": "f459ad2c60dbf8c8"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z475957b4dc4e9ce5",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b1ddf977e2e4a0d28ca383391f369a2c10a6e0fb0cb9d64da965b51e2e6e04af",
+      "label_map": "B",
+      "normalized_sha256": "73b02d657ffbeb40df8800f3da185811feeb8154d985e1469f2adec1f4705d99",
+      "order": 2,
+      "output_sha256": "7ece26b40a4445cd34a0d9a79b9dcb508cccfb12d25768cf4adb6c1256ce856d",
+      "render_id": "1fa86b8dd54b091e3ad3",
+      "semantic_group": "f459ad2c60dbf8c8"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8d7cb24e46c2f331",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "3e33c49fcdc5b2312e3963cf853f343d6d79526c04a1e110a5197342b5c069db",
+      "label_map": "A",
+      "normalized_sha256": "70925aec78feb4520135da0ff1f1e3654381f922a1aa2878bf617feba9bce545",
+      "order": 1,
+      "output_sha256": "779fe790f392f91acc5c0bddd771c46d5c33e8127ca08e63b561dabbbce9666e",
+      "render_id": "49868defade52b192e62",
+      "semantic_group": "f85e85b65e30b263"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8d7cb24e46c2f331",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "61bce811e5df3095a99ac6a8569f666334e8f611103e8ca858c765d0870c49fb",
+      "label_map": "A",
+      "normalized_sha256": "70925aec78feb4520135da0ff1f1e3654381f922a1aa2878bf617feba9bce545",
+      "order": 2,
+      "output_sha256": "6bf68f9a3df74cc6f59ed54574ec47c594b53f352c68e3d8bc9f86094a8b06a5",
+      "render_id": "514366f8d50c91a4fba2",
+      "semantic_group": "f85e85b65e30b263"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z35a6cd8e9724b5f8",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "c8bdc6fd9b0ef0a9394501e63130b630ab15511e00b262fa9fb75963f992b35a",
+      "label_map": "B",
+      "normalized_sha256": "70925aec78feb4520135da0ff1f1e3654381f922a1aa2878bf617feba9bce545",
+      "order": 1,
+      "output_sha256": "e5e416497a3809afd2309195c34f900fdb96dfcf773a9ca60f80b06cca633b6b",
+      "render_id": "75a2269f77675b96b7c7",
+      "semantic_group": "f85e85b65e30b263"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z35a6cd8e9724b5f8",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "212884a5517eaeede2b5676d1feb2cc729ea27377376276cbc4826db37c47427",
+      "label_map": "B",
+      "normalized_sha256": "70925aec78feb4520135da0ff1f1e3654381f922a1aa2878bf617feba9bce545",
+      "order": 2,
+      "output_sha256": "28d612a80cb6462ac95e2482af92d2f973bae9f79feecade41e509f9cb83328f",
+      "render_id": "2a6594724c65004a5702",
+      "semantic_group": "f85e85b65e30b263"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3d19d966ab70ced4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "852f83d87674f7233e5d374a6da9d8661e1335425bbe92402ba5d8c869260049",
+      "label_map": "A",
+      "normalized_sha256": "ba0339341e4a3b6274d047b98f4e817aaded9dd1eed851ab05cf3e6641087066",
+      "order": 1,
+      "output_sha256": "3b8c84e4e272f989d75bbb57a2ab4745dbedaa39a18d6be78670632802ad1d6c",
+      "render_id": "03b6b10b378f9cabf9ad",
+      "semantic_group": "c9f11305f6c154b0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3d19d966ab70ced4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "dfc24a76c3e2b161793ef9cd7085c232536ba6e1d31338cde46c51d78b020bcc",
+      "label_map": "A",
+      "normalized_sha256": "ba0339341e4a3b6274d047b98f4e817aaded9dd1eed851ab05cf3e6641087066",
+      "order": 2,
+      "output_sha256": "f21ee801a4b900beafc604c824c83757dfb33425a22eb33f1e1c5d409f85ddca",
+      "render_id": "7070ea653a20143a4b73",
+      "semantic_group": "c9f11305f6c154b0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zef2ea04c1674b182",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "1d7a25469fa36b06d06845aee33df780f72e84bd744def4e1242923577306b76",
+      "label_map": "B",
+      "normalized_sha256": "ba0339341e4a3b6274d047b98f4e817aaded9dd1eed851ab05cf3e6641087066",
+      "order": 1,
+      "output_sha256": "c34bec0e895a069d38782b5783d96dba928fc88181839aea77a7126c984897ae",
+      "render_id": "4790cba22695a16d557b",
+      "semantic_group": "c9f11305f6c154b0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zef2ea04c1674b182",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "17178a4951bf82d81ba3877c2479418f52852a8bb0c267931825fca03ac4eadd",
+      "label_map": "B",
+      "normalized_sha256": "ba0339341e4a3b6274d047b98f4e817aaded9dd1eed851ab05cf3e6641087066",
+      "order": 2,
+      "output_sha256": "501393f9fe980534f98b9df2e46043dfca7e0db804f123150adcef10dca42365",
+      "render_id": "7b6432795cfffcb9e94c",
+      "semantic_group": "c9f11305f6c154b0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za7156926cc619f72",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "aea98d2738964ee5dcfb9758f3b13be418c0ae6dc31df70eeebc3c47c7b8b96f",
+      "label_map": "A",
+      "normalized_sha256": "c067a5a09016ad7500bd9fb12298b42eb603e7352823e72aa80f1855580e6aba",
+      "order": 1,
+      "output_sha256": "a2ce876e25ae6c1a36a0f5bdc5f9e2c5ee468b278c29c9a05865a69291bac2e5",
+      "render_id": "a9e2b48f5ca97590eb36",
+      "semantic_group": "7c5505caaa71080c"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za7156926cc619f72",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "297f68bb5375058662a077530fc973b850f4a85a20952480b35b1494930baa10",
+      "label_map": "A",
+      "normalized_sha256": "c067a5a09016ad7500bd9fb12298b42eb603e7352823e72aa80f1855580e6aba",
+      "order": 2,
+      "output_sha256": "803d55ca8c0f2ac306cf59f325696f58b76beeaf865ce065c9844aff87ac29d8",
+      "render_id": "55c75e198bdd05f6e72e",
+      "semantic_group": "7c5505caaa71080c"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zf0507f4f6daac602",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "f0fc612faecd8e96b151f0f37a5a843399020e1ded68b38d6c621634b007773b",
+      "label_map": "B",
+      "normalized_sha256": "c067a5a09016ad7500bd9fb12298b42eb603e7352823e72aa80f1855580e6aba",
+      "order": 1,
+      "output_sha256": "1b32a39172421da597d4238cddb4158bad6ae491e647c97b0704da3c42b973df",
+      "render_id": "585e99b2ccd578ab951c",
+      "semantic_group": "7c5505caaa71080c"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zf0507f4f6daac602",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "2f81c962ecd10a7b7001c5cfa039c44f33eaef10b4c55d4ce10d7e1a2271d34e",
+      "label_map": "B",
+      "normalized_sha256": "c067a5a09016ad7500bd9fb12298b42eb603e7352823e72aa80f1855580e6aba",
+      "order": 2,
+      "output_sha256": "9668c15266caf9be62bf8b1836ba00c11a8fc66b49a6a2eb3fc3cf388b1ea2c1",
+      "render_id": "1050a69a5b5fb561c9d6",
+      "semantic_group": "7c5505caaa71080c"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za786357d12e01129",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "cbc257f7b156aa4bb749d9e29a7b37fde3588270d36176c5686e7baeb8d7e746",
+      "label_map": "A",
+      "normalized_sha256": "6260f6806ab11d5ac2cd13a6b589ab313f7c26d1682380a3a543ee378eea4045",
+      "order": 1,
+      "output_sha256": "6286e279e73c95732dbecf3bb9e3a67ea5ec2cbedc575a58b3bc38c69580e8f1",
+      "render_id": "078e94b22fc9408ce3a8",
+      "semantic_group": "d7b9f5cf78d25fe3"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za786357d12e01129",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "d920b89e89d2724c13fb93ac083a95b30f182d4f43c99d7c387db25ea4b9ec0e",
+      "label_map": "A",
+      "normalized_sha256": "6260f6806ab11d5ac2cd13a6b589ab313f7c26d1682380a3a543ee378eea4045",
+      "order": 2,
+      "output_sha256": "433d0cac9702b9dba54da2d965508a98807a183f95cabf112883202be9c21816",
+      "render_id": "c2200e9bc9faf91ad605",
+      "semantic_group": "d7b9f5cf78d25fe3"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z827d29253942a3b2",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "e7c7b98db7f678e2ed78a5d28c13071b42cfd4f26238b343c4080a69ce7dd2a4",
+      "label_map": "B",
+      "normalized_sha256": "6260f6806ab11d5ac2cd13a6b589ab313f7c26d1682380a3a543ee378eea4045",
+      "order": 1,
+      "output_sha256": "fe4e83eb0b9af55eacd80c93a992b4b5e8da1d2b3fe9340e625ad692e949caaa",
+      "render_id": "dc6bde331508c0bc15cb",
+      "semantic_group": "d7b9f5cf78d25fe3"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z827d29253942a3b2",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "d1582ecd77085f446b1e5afc8ce484afaaf24150ef26a9fa5d23c6244efa1fdd",
+      "label_map": "B",
+      "normalized_sha256": "6260f6806ab11d5ac2cd13a6b589ab313f7c26d1682380a3a543ee378eea4045",
+      "order": 2,
+      "output_sha256": "04e5f27cdc30ca6b9986e8f13e7c8c7d16f959ef84b322e7ff41c849daf63caa",
+      "render_id": "f4c172330716885517ae",
+      "semantic_group": "d7b9f5cf78d25fe3"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3251e020108b75f9",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 2,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b3d243b4c59fbf252afdb17eb80fb8fc9342f0a94cd967b057ae92d3ba8da3cb",
+      "label_map": "A",
+      "normalized_sha256": "745169562b773b6a432e3bada7bb79229dcc5b2ae3fd5c504738ec9cb1abca36",
+      "order": 1,
+      "output_sha256": "83b6a2761617487fd47e005e3f52d2cdabe40b5071b76726fa70b52746899fba",
+      "render_id": "f32c5c1e04377566028e",
+      "semantic_group": "040945b111a5b8f0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3251e020108b75f9",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 2,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "d8a79645829939ba2e05d129be9a8d466d57961a52c2d3d96eaf2a4ecf0abace",
+      "label_map": "A",
+      "normalized_sha256": "745169562b773b6a432e3bada7bb79229dcc5b2ae3fd5c504738ec9cb1abca36",
+      "order": 2,
+      "output_sha256": "2d6da976b235f0274cb94fdece29998ef8aa93f7d68b2515be9fc01e3c3fa2cb",
+      "render_id": "4b558f8ee6d53bc048fe",
+      "semantic_group": "040945b111a5b8f0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2d01ad027184f6c1",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 2,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "7e89ac6889753b2a42108c7793aeea6a3528e65a1d449522b57638e328c935e1",
+      "label_map": "B",
+      "normalized_sha256": "745169562b773b6a432e3bada7bb79229dcc5b2ae3fd5c504738ec9cb1abca36",
+      "order": 1,
+      "output_sha256": "879087489421cf89a507937781216b22b8c67272f7a74a5276d787f9fadbba29",
+      "render_id": "42ab0f011ddffa0f562c",
+      "semantic_group": "040945b111a5b8f0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2d01ad027184f6c1",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 2,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "6effeef474c832fd49f525cce9f1e3f641007bfab888e7902e21d605f954649c",
+      "label_map": "B",
+      "normalized_sha256": "745169562b773b6a432e3bada7bb79229dcc5b2ae3fd5c504738ec9cb1abca36",
+      "order": 2,
+      "output_sha256": "e8b3b9ce44757568e6fd002288f4996349c21fa1339fa53c68956fbe66de281a",
+      "render_id": "dc30870373ebc287fff2",
+      "semantic_group": "040945b111a5b8f0"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z143592bbf0479a48",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 1,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "753377fec7c77b801f0162439c3165fc26332e9dffa2cf69bbeb618b70558a0c",
+      "label_map": "A",
+      "normalized_sha256": "09429cfd3d6e34020d78ca612af082a6b72e8861556591bedfd1db2f1c567d74",
+      "order": 1,
+      "output_sha256": "3dd5d8d9630c109fb16dcc201cb0bc6e1d9272def81fe5a4b3e3f0ab5aa2d43f",
+      "render_id": "3a9606ad0bd1b7a0e803",
+      "semantic_group": "2c786859fc118dce"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z143592bbf0479a48",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 1,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "e2ddb5422a9873912fb34d9b147dea152dc54823638a7e224433637e884fd875",
+      "label_map": "A",
+      "normalized_sha256": "09429cfd3d6e34020d78ca612af082a6b72e8861556591bedfd1db2f1c567d74",
+      "order": 2,
+      "output_sha256": "0a60e27819a996b5a930221dc6a671daa306a49b1609eb20f7f5d42fe32627e3",
+      "render_id": "b8a4b99010eed16eb1e9",
+      "semantic_group": "2c786859fc118dce"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z21ce3d519b137b44",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 1,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "7b4b0e6812602abef1a800644c6f8a08839df3d6c34ba23c01a30a8c24579c51",
+      "label_map": "B",
+      "normalized_sha256": "09429cfd3d6e34020d78ca612af082a6b72e8861556591bedfd1db2f1c567d74",
+      "order": 1,
+      "output_sha256": "9946f6018e1fc8ba176be40c4f13da6eb18681af4d6ea37ccfa88d80bdabbc16",
+      "render_id": "92274773fe0b2cc8f494",
+      "semantic_group": "2c786859fc118dce"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z21ce3d519b137b44",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 1,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b527ec15749bcf4da75a0e2ce855bc78ee3f40b387b8775e5555807510bad7d7",
+      "label_map": "B",
+      "normalized_sha256": "09429cfd3d6e34020d78ca612af082a6b72e8861556591bedfd1db2f1c567d74",
+      "order": 2,
+      "output_sha256": "d8704f9411c58a37f0a644b3355a10cfbe3c434b272d615a742b3a4e95065637",
+      "render_id": "f83683448ab16d16eaa6",
+      "semantic_group": "2c786859fc118dce"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z472e2067745f5ded",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 3,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "a734338e885beb1a3434ba0eba41106992e2e97bde5592210b8fa48f0cde2f95",
+      "label_map": "A",
+      "normalized_sha256": "28f967074d22b3c6ff7367a695180b75adcdf9107aa0cbed102a653fc161d9a6",
+      "order": 1,
+      "output_sha256": "563fcc03e1583fe26e950e8a268d9c6dc6d0b02dd78f83e53b2e8d4ecdc44b8f",
+      "render_id": "e24ffa812432f3e62a4e",
+      "semantic_group": "b392eadd8e9b1982"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z472e2067745f5ded",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 3,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "2f1c22d3ad1b5704d1f10efdb30a0432ca616be8c2079a60a2c5c86afec7ca6d",
+      "label_map": "A",
+      "normalized_sha256": "28f967074d22b3c6ff7367a695180b75adcdf9107aa0cbed102a653fc161d9a6",
+      "order": 2,
+      "output_sha256": "d3f324f92a8cf466030798517f880ed8112da6a8facea016912c1edb971f29ad",
+      "render_id": "9da1b54e6d4f5c7bbdb7",
+      "semantic_group": "b392eadd8e9b1982"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z62a46a63c2ad1feb",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 3,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "bf5c8a9cb93ac54d93684d38953ef75ee1c1785f35631034f6e3e63e56aa3131",
+      "label_map": "B",
+      "normalized_sha256": "28f967074d22b3c6ff7367a695180b75adcdf9107aa0cbed102a653fc161d9a6",
+      "order": 1,
+      "output_sha256": "96f7252ccece9d48b8d369c2d3dbc9f99b6f66a690307da562926e2b9526fce4",
+      "render_id": "605bc8c81b23e7943ce3",
+      "semantic_group": "b392eadd8e9b1982"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z62a46a63c2ad1feb",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 3,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "c521fe468e58a9a9a3df53abbfe769d0ba5112daf6269a0cab8bebad021e666a",
+      "label_map": "B",
+      "normalized_sha256": "28f967074d22b3c6ff7367a695180b75adcdf9107aa0cbed102a653fc161d9a6",
+      "order": 2,
+      "output_sha256": "c518d8d587ed5a144b4c2a34c87e43f238e2316eae396100879b50c214a216dc",
+      "render_id": "ba2846d91c195b5a3c07",
+      "semantic_group": "b392eadd8e9b1982"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zd16703c74edcd27b",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 6,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "555f4f063ddf3c6300770f129cda605b84e902c4a1cf1589f5669905d8df2c86",
+      "label_map": "A",
+      "normalized_sha256": "ead1084051e4037bf2fc130857d4f8df43c2294e1c11b4fd59fc088c0c3dab9d",
+      "order": 1,
+      "output_sha256": "f12fa3cc394602b642204ad0eefa1a465700192d8b9ed6ad8a6f0070233e1eee",
+      "render_id": "3bf64874eea455b78a8d",
+      "semantic_group": "54205b70cddc091d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zd16703c74edcd27b",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 6,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "fda7cbef9bcb81209af07cd8787bdb1c24fda4a1c0dc6d615a77a644976318fb",
+      "label_map": "A",
+      "normalized_sha256": "ead1084051e4037bf2fc130857d4f8df43c2294e1c11b4fd59fc088c0c3dab9d",
+      "order": 2,
+      "output_sha256": "237b46df913c41ad12d4280d79bb5ef018e2801f9372467ddddf11e8d795af18",
+      "render_id": "e814a73ec4d992f1f5fb",
+      "semantic_group": "54205b70cddc091d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb1908e4b492bc008",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 6,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "1cdb20e5213a7bc11e6c1630e6d0ef1d661f9eed7a484d6eb4893f5464ab1f0e",
+      "label_map": "B",
+      "normalized_sha256": "ead1084051e4037bf2fc130857d4f8df43c2294e1c11b4fd59fc088c0c3dab9d",
+      "order": 1,
+      "output_sha256": "37cc8eb4cbc43906b3d179fe78580184b6b58dfc4af0146030a741622ef886a4",
+      "render_id": "cba7e883812b4a4b3d55",
+      "semantic_group": "54205b70cddc091d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb1908e4b492bc008",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 6,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b7fc03e72a144d1ec08db1a89426967e78eb7263363a08e90c642b56a7af9d40",
+      "label_map": "B",
+      "normalized_sha256": "ead1084051e4037bf2fc130857d4f8df43c2294e1c11b4fd59fc088c0c3dab9d",
+      "order": 2,
+      "output_sha256": "741ee4dbea32c519ce1fa758eab4e61ff347cab4593138a3ae2bcc89e8b8f783",
+      "render_id": "33473191e19c8d84cc4f",
+      "semantic_group": "54205b70cddc091d"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze7eb460a5b8fafa7",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "dd3f3e162329553f5a734da35cd8fc6ee7dfaa26e11c02d96d3e0527080b648e",
+      "label_map": "A",
+      "normalized_sha256": "a57ca21b5483428cdf2dd4e13a9866fae0a83963b7b886a226eaac0d7391e78f",
+      "order": 1,
+      "output_sha256": "ec80bc6214875eee21bc93a724466dc16bfff71ab943b16c5fc6101fcd9cea11",
+      "render_id": "2caf79d8f11ed3a6eb0f",
+      "semantic_group": "7727da4d5a85a7bb"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze7eb460a5b8fafa7",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "67d05e6c06a15a0d5f0b8a3e55db6a290d2427c566f92170da0ef5fa1b02723a",
+      "label_map": "A",
+      "normalized_sha256": "a57ca21b5483428cdf2dd4e13a9866fae0a83963b7b886a226eaac0d7391e78f",
+      "order": 2,
+      "output_sha256": "0e5d8f75dcb3a19f1042daf652b556aedc8c97ace2f311e93a8dbd674c328086",
+      "render_id": "c87f1c5cf6b59ecb5c54",
+      "semantic_group": "7727da4d5a85a7bb"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z210416c3375bcfad",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "d4f7c8203ece8daa341098f76aa19f056a37127756d9287e9c88b421992d0e19",
+      "label_map": "B",
+      "normalized_sha256": "a57ca21b5483428cdf2dd4e13a9866fae0a83963b7b886a226eaac0d7391e78f",
+      "order": 1,
+      "output_sha256": "f8e6423d079d45aeb503a4b25e175db4b25fb23381636014a598dcbbec1955f0",
+      "render_id": "2e797d7beac3edc936f1",
+      "semantic_group": "7727da4d5a85a7bb"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z210416c3375bcfad",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "7a32dd12bddad5d6b493fd48d837f65b88cfae179beee190d704fb2c597f5b9c",
+      "label_map": "B",
+      "normalized_sha256": "a57ca21b5483428cdf2dd4e13a9866fae0a83963b7b886a226eaac0d7391e78f",
+      "order": 2,
+      "output_sha256": "4ab2bc3ac7588556246639dcfe0e28f578a699816c386ff83fc81e02e8b794df",
+      "render_id": "74e2c0790b3679a78b6a",
+      "semantic_group": "7727da4d5a85a7bb"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z22902d8cb83d2cb3",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "3a1196a8f8c83f8d75974ad3c7fcd729f5ae3bf9233f56074fa86942652afdfb",
+      "label_map": "A",
+      "normalized_sha256": "97fcbed611a931a803b5b4805a0044b1a7c3c9417e0dfaed9b37bc605ad9be3b",
+      "order": 1,
+      "output_sha256": "d5005e12e1133b373e3569c2a9a08b2add017543d079589102e0c1c8157bfc75",
+      "render_id": "08853493bcfdacd9e8c1",
+      "semantic_group": "af66c1fc1d9c2d04"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z22902d8cb83d2cb3",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "5e0cea4e98f7005e1ed5a3c25a88f5fa7c6b0a97bae8b82b3d068003360230de",
+      "label_map": "A",
+      "normalized_sha256": "97fcbed611a931a803b5b4805a0044b1a7c3c9417e0dfaed9b37bc605ad9be3b",
+      "order": 2,
+      "output_sha256": "7fc477591895e275fc9d96245d818b1efdc6fec6d97d6061797580074e45a1f0",
+      "render_id": "6aa6b3753ea2b8980097",
+      "semantic_group": "af66c1fc1d9c2d04"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb54b169352458adb",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "cad19fc3377998dac0924cf90900bcc4ecda8d5b07f62d8eb37fb626a0af6f26",
+      "label_map": "B",
+      "normalized_sha256": "97fcbed611a931a803b5b4805a0044b1a7c3c9417e0dfaed9b37bc605ad9be3b",
+      "order": 1,
+      "output_sha256": "a4cc2eb2f3cde1b1682d2b61dd308b302aa3f1f6afe57c27a70498bb11120aef",
+      "render_id": "8116146df10781df80b7",
+      "semantic_group": "af66c1fc1d9c2d04"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb54b169352458adb",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "75834072e6f0291c7d099a7ff4b12dfbac60dc6b44a888229a7fafc6c6f651e9",
+      "label_map": "B",
+      "normalized_sha256": "97fcbed611a931a803b5b4805a0044b1a7c3c9417e0dfaed9b37bc605ad9be3b",
+      "order": 2,
+      "output_sha256": "60dfe0a5054e6b21554eaf92a05cfcfbdb28c74b3ab76b7aa4510ea999d866c2",
+      "render_id": "1e73ca60dba61760268b",
+      "semantic_group": "af66c1fc1d9c2d04"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z5940676b99bea3d0",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "3ef5e1c0b39e3984b56f5974fae9e9197679f82965838968debd359366f1c1e5",
+      "label_map": "A",
+      "normalized_sha256": "540ffc8e9b98427813956990faff67fed69dda80113365e0662591bce8f85491",
+      "order": 1,
+      "output_sha256": "60de46028f46d0175abb20103745cda0bfce62f83c92e7329263a703e694305c",
+      "render_id": "057a4b19934764b2475d",
+      "semantic_group": "d38c9cc0215d46a4"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z5940676b99bea3d0",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "c2f5df0cbf0c203901815daa1df06210194b887c24713bb85bf385eed93162e2",
+      "label_map": "A",
+      "normalized_sha256": "540ffc8e9b98427813956990faff67fed69dda80113365e0662591bce8f85491",
+      "order": 2,
+      "output_sha256": "8b17929d6de637e5013bed6f6c258c49dc6e71a55840a71220fc6b9bdc6828d3",
+      "render_id": "e5ac599581bc5c165c79",
+      "semantic_group": "d38c9cc0215d46a4"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2ac98142b3dcd534",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "c34fe25a9ba181b289f1abbdedbd2429d9e578e46acd06b35178ace059ac0daf",
+      "label_map": "B",
+      "normalized_sha256": "540ffc8e9b98427813956990faff67fed69dda80113365e0662591bce8f85491",
+      "order": 1,
+      "output_sha256": "d138ac911ab8f57c950d2debd0732350ce2c0e57a19a8d6d4b8e87403361cec4",
+      "render_id": "d53ef9a886da8f752f5c",
+      "semantic_group": "d38c9cc0215d46a4"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2ac98142b3dcd534",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b4efbb7fd3c2788e3b114f508d9c108cfb445576ba090725a09bf0ca89b06b72",
+      "label_map": "B",
+      "normalized_sha256": "540ffc8e9b98427813956990faff67fed69dda80113365e0662591bce8f85491",
+      "order": 2,
+      "output_sha256": "0f69495a1ccf2436941d264985cc3e932d15977f76032240dbce49a6585eae15",
+      "render_id": "1265fa2e94f736b89310",
+      "semantic_group": "d38c9cc0215d46a4"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zee749ec23daebb57",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:False": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "0ac05154ec1dc52f1d288289f564c300ac0501292bf7714588af6003731ad828",
+      "label_map": "A",
+      "normalized_sha256": "3c11f91431fad33a3a1067c6b8082030124a1dc194538de56508ebe2663015a3",
+      "order": 1,
+      "output_sha256": "ac5a9eb8fe7582352f306a655af37bfc3a51713a4b556acf686bfc7bc507c20a",
+      "render_id": "c0bfe556ebc8d6d55e96",
+      "semantic_group": "fb6138114f36a327"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zee749ec23daebb57",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:False": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "86ed8ae471f61ebea14672c615389ab74e200e1620600ef7024e6eed64c2be4c",
+      "label_map": "A",
+      "normalized_sha256": "3c11f91431fad33a3a1067c6b8082030124a1dc194538de56508ebe2663015a3",
+      "order": 2,
+      "output_sha256": "88d08608882be8d367f792c5c001e60ea89d82cc40a98fcb997bd168652765ef",
+      "render_id": "95a5c7401429f64b9185",
+      "semantic_group": "fb6138114f36a327"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb77051dfb668e240",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:False": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "b68d703710bf2562dc1de7a8e9fe39541fb5019eb9e6f72f315e76effbec1628",
+      "label_map": "B",
+      "normalized_sha256": "3c11f91431fad33a3a1067c6b8082030124a1dc194538de56508ebe2663015a3",
+      "order": 1,
+      "output_sha256": "aca2050e9f4782e4f3208ca4cc023648132cbede0fc8e4395faab4ea9a73ecd3",
+      "render_id": "5d9e5e3dedcb9c3cd6db",
+      "semantic_group": "fb6138114f36a327"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zb77051dfb668e240",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:False": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "47ee11b9b8ccdc3ddb4787591eb7ba04aa8426357ca6c6df4fbf4a12cdff5fb2",
+      "label_map": "B",
+      "normalized_sha256": "3c11f91431fad33a3a1067c6b8082030124a1dc194538de56508ebe2663015a3",
+      "order": 2,
+      "output_sha256": "f823af19e962826af68b6e6747cf4e3a37ac7fb2e5a12176be000ccd53761a93",
+      "render_id": "3b310ba249b0818e7e77",
+      "semantic_group": "fb6138114f36a327"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 2,
+        "current_version": "z5199d83cc2570f56",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 3,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:False": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "9e01611c4fdd0754d305f3c15885b9999dab8573700fb186a14c2c2dd6e68a0d",
+      "label_map": "A",
+      "normalized_sha256": "e0bcc2f30f210623930268de179b6ed4e266bb1bf14a65fb289f2badc63cd544",
+      "order": 1,
+      "output_sha256": "7c3c7a6236dcd1ad0e3f415db7a0202181488874d77a830005907ee6454c4ce8",
+      "render_id": "3b6af8860635a74cf03c",
+      "semantic_group": "8d6fd751951f44fc"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 2,
+        "current_version": "z5199d83cc2570f56",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 3,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:False": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "206172a6f2148c6550b640275c1ad430dfb713ed78b494e02a384f09e941e563",
+      "label_map": "A",
+      "normalized_sha256": "e0bcc2f30f210623930268de179b6ed4e266bb1bf14a65fb289f2badc63cd544",
+      "order": 2,
+      "output_sha256": "c9b8ad2b3da97d8c35cc7b525a771ecaa14e625d1f888373dc2cc2a84d3a58f0",
+      "render_id": "cea0d26b51c70764764d",
+      "semantic_group": "8d6fd751951f44fc"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 2,
+        "current_version": "zf92a34707e13dd49",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 3,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:False": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "80325b58a44040f9b06857150e52da99ac378afc399dc1ab54826a90bbaaff5f",
+      "label_map": "B",
+      "normalized_sha256": "e0bcc2f30f210623930268de179b6ed4e266bb1bf14a65fb289f2badc63cd544",
+      "order": 1,
+      "output_sha256": "0fd81107e5402870e911cb9e01a7ef2b8ed281076c9651f959ebc3f693fa4392",
+      "render_id": "cbd4544c306bf140fad2",
+      "semantic_group": "8d6fd751951f44fc"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 2,
+        "current_version": "zf92a34707e13dd49",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 3,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:False": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "6f8248aef26c3b1c94e7c52c7a7d5f241a4c631f865d36a226f8b58967424f2f",
+      "label_map": "B",
+      "normalized_sha256": "e0bcc2f30f210623930268de179b6ed4e266bb1bf14a65fb289f2badc63cd544",
+      "order": 2,
+      "output_sha256": "b3d7cb50f4acef5c96b507a2605a81fa6defc9a380ab70288a754241af283b29",
+      "render_id": "3bd79fa554d5dd42a828",
+      "semantic_group": "8d6fd751951f44fc"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z46a18fac4db0afb4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:False": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "42a0487837b0f3f825ced534d39777bcc43b8f41f778d5bdb3505496be1b0851",
+      "label_map": "A",
+      "normalized_sha256": "de8f477247a77ffe1c153d2abe415e089510276a746e87736193081cb4cb1ad4",
+      "order": 1,
+      "output_sha256": "5cf3d8976185ca5ed1d92a22935953a129be56cb35bc6caaae99c7d0d0f39ee9",
+      "render_id": "f1e63531fa6026cd8278",
+      "semantic_group": "c79676993d4cd050"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z46a18fac4db0afb4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:False": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "cf870444cfed443a784bd8d4066c270b0bda61643ca1d0fd613b7376e7c9ef61",
+      "label_map": "A",
+      "normalized_sha256": "de8f477247a77ffe1c153d2abe415e089510276a746e87736193081cb4cb1ad4",
+      "order": 2,
+      "output_sha256": "3bb2dfb091fe9a251b925d7b230ea3d2d9aa624590bcdedd5e90215e52530a25",
+      "render_id": "dfa8f5a826e85a34dffe",
+      "semantic_group": "c79676993d4cd050"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8c62d532fe77bb76",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:False": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "6bc20e4394a992e59f55a850e22ae4c4224422c74d4a8fe592b586c687f66967",
+      "label_map": "B",
+      "normalized_sha256": "de8f477247a77ffe1c153d2abe415e089510276a746e87736193081cb4cb1ad4",
+      "order": 1,
+      "output_sha256": "acb33bea490c3a5fcecfc26d7286a50a0c7772a7f87b527d9f3229baa41fe05e",
+      "render_id": "2b8c3c57a5d1040d5764",
+      "semantic_group": "c79676993d4cd050"
+    },
+    {
+      "checks": {
+        "deployment_binding": true,
+        "event_links": true,
+        "field_inventory": true,
+        "graph_provenance": true,
+        "opaque_ids": true,
+        "output_shape": true,
+        "record_ids": true,
+        "unknown_inventory": true
+      },
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8c62d532fe77bb76",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:False": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "input_sha256": "5e902fd2ac8e8ed68234fe1d44074c9174c2dfb39080b7f2b950f11993e84a3f",
+      "label_map": "B",
+      "normalized_sha256": "de8f477247a77ffe1c153d2abe415e089510276a746e87736193081cb4cb1ad4",
+      "order": 2,
+      "output_sha256": "6c5cbebee8744e063f271e10c604e3e496ce4099e7bab8f3bc3f997b2869687c",
+      "render_id": "f3e6b814afdeaa2ca306",
+      "semantic_group": "c79676993d4cd050"
+    }
+  ],
+  "semantic_packages": [
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3251e020108b75f9",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 2,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "f32c5c1e04377566028e",
+        "4b558f8ee6d53bc048fe",
+        "42ab0f011ddffa0f562c",
+        "dc30870373ebc287fff2"
+      ],
+      "representative": "f32c5c1e04377566028e",
+      "semantic_group": "040945b111a5b8f0"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8df21f73bd59cd5a",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "d144075ee478be1901dd",
+        "ec62470db5cf0b429d91",
+        "2c4d67989823b6b81a60",
+        "c822e64a7227233aa28c"
+      ],
+      "representative": "d144075ee478be1901dd",
+      "semantic_group": "17fed07978317a41"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z143592bbf0479a48",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 1,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "3a9606ad0bd1b7a0e803",
+        "b8a4b99010eed16eb1e9",
+        "92274773fe0b2cc8f494",
+        "f83683448ab16d16eaa6"
+      ],
+      "representative": "3a9606ad0bd1b7a0e803",
+      "semantic_group": "2c786859fc118dce"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z2aa90e2538375d4d",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "9098ec90cf5805ba5983",
+        "efab57b4b13e6634575f",
+        "6fb266922a7b02950d52",
+        "8c654cb9763987a1a23e"
+      ],
+      "representative": "9098ec90cf5805ba5983",
+      "semantic_group": "2cc6c0212f28f431"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zbbb5552243266243",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "2fb9f729a33cc72f84f8",
+        "8db4f84a6580b8ddb136",
+        "b547f52cb8ab959fd66d",
+        "87ef87c98a9cf2c8be0b"
+      ],
+      "representative": "2fb9f729a33cc72f84f8",
+      "semantic_group": "3e68347365eeadd0"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zd16703c74edcd27b",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 6,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "3bf64874eea455b78a8d",
+        "e814a73ec4d992f1f5fb",
+        "cba7e883812b4a4b3d55",
+        "33473191e19c8d84cc4f"
+      ],
+      "representative": "3bf64874eea455b78a8d",
+      "semantic_group": "54205b70cddc091d"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze48cb466a0fcc575",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "30b71c5bb52894941c81",
+        "da82dcf297e5a6852fa5",
+        "9f32c7e926c51fc51a3d",
+        "10cc572aedfffd122d96"
+      ],
+      "representative": "30b71c5bb52894941c81",
+      "semantic_group": "65f88c2c90dd59f9"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "ze7eb460a5b8fafa7",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "2caf79d8f11ed3a6eb0f",
+        "c87f1c5cf6b59ecb5c54",
+        "2e797d7beac3edc936f1",
+        "74e2c0790b3679a78b6a"
+      ],
+      "representative": "2caf79d8f11ed3a6eb0f",
+      "semantic_group": "7727da4d5a85a7bb"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za7156926cc619f72",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "a9e2b48f5ca97590eb36",
+        "55c75e198bdd05f6e72e",
+        "585e99b2ccd578ab951c",
+        "1050a69a5b5fb561c9d6"
+      ],
+      "representative": "a9e2b48f5ca97590eb36",
+      "semantic_group": "7c5505caaa71080c"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 2,
+        "current_version": "z5199d83cc2570f56",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 3,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:False": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "3b6af8860635a74cf03c",
+        "cea0d26b51c70764764d",
+        "cbd4544c306bf140fad2",
+        "3bd79fa554d5dd42a828"
+      ],
+      "representative": "3b6af8860635a74cf03c",
+      "semantic_group": "8d6fd751951f44fc"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z22902d8cb83d2cb3",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "08853493bcfdacd9e8c1",
+        "6aa6b3753ea2b8980097",
+        "8116146df10781df80b7",
+        "1e73ca60dba61760268b"
+      ],
+      "representative": "08853493bcfdacd9e8c1",
+      "semantic_group": "af66c1fc1d9c2d04"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z472e2067745f5ded",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 3,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "e24ffa812432f3e62a4e",
+        "9da1b54e6d4f5c7bbdb7",
+        "605bc8c81b23e7943ce3",
+        "ba2846d91c195b5a3c07"
+      ],
+      "representative": "e24ffa812432f3e62a4e",
+      "semantic_group": "b392eadd8e9b1982"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z46a18fac4db0afb4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:False": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "f1e63531fa6026cd8278",
+        "dfa8f5a826e85a34dffe",
+        "2b8c3c57a5d1040d5764",
+        "f3e6b814afdeaa2ca306"
+      ],
+      "representative": "f1e63531fa6026cd8278",
+      "semantic_group": "c79676993d4cd050"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z3d19d966ab70ced4",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "03b6b10b378f9cabf9ad",
+        "7070ea653a20143a4b73",
+        "4790cba22695a16d557b",
+        "7b6432795cfffcb9e94c"
+      ],
+      "representative": "03b6b10b378f9cabf9ad",
+      "semantic_group": "c9f11305f6c154b0"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z5940676b99bea3d0",
+        "event_links": 3,
+        "field_entries": 45,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "057a4b19934764b2475d",
+        "e5ac599581bc5c165c79",
+        "d53ef9a886da8f752f5c",
+        "1265fa2e94f736b89310"
+      ],
+      "representative": "057a4b19934764b2475d",
+      "semantic_group": "d38c9cc0215d46a4"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "za786357d12e01129",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "078e94b22fc9408ce3a8",
+        "c2200e9bc9faf91ad605",
+        "dc6bde331508c0bc15cb",
+        "f4c172330716885517ae"
+      ],
+      "representative": "078e94b22fc9408ce3a8",
+      "semantic_group": "d7b9f5cf78d25fe3"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z6d58d65a40ba8bf2",
+        "event_links": 3,
+        "field_entries": 31,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:False": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "aed971ad93a2dba59088",
+        "612a62737fc3f73807d8",
+        "f3feff589019248dc01d",
+        "23133d511e73574e6791"
+      ],
+      "representative": "aed971ad93a2dba59088",
+      "semantic_group": "e4d1738b5aa2056d"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z465d584c791589e2",
+        "event_links": 3,
+        "field_entries": 37,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "d8425a18e6f717fb2fc4",
+        "41a843d28f16eee7e8fa",
+        "450b3496df2cb18a0b7c",
+        "1fa86b8dd54b091e3ad3"
+      ],
+      "representative": "d8425a18e6f717fb2fc4",
+      "semantic_group": "f459ad2c60dbf8c8"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "z8d7cb24e46c2f331",
+        "event_links": 3,
+        "field_entries": 35,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:True": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": true,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "49868defade52b192e62",
+        "514366f8d50c91a4fba2",
+        "75a2269f77675b96b7c7",
+        "2a6594724c65004a5702"
+      ],
+      "representative": "49868defade52b192e62",
+      "semantic_group": "f85e85b65e30b263"
+    },
+    {
+      "all_four_normalized_identical": true,
+      "facts": {
+        "ambiguities": {},
+        "capture_links": 1,
+        "component_count": 3,
+        "current_records": 3,
+        "current_version": "zee749ec23daebb57",
+        "event_links": 3,
+        "field_entries": 36,
+        "graph_edges": 14,
+        "graph_nodes": 15,
+        "historical_records": 2,
+        "input_output_candidate_counts": [
+          1,
+          1
+        ],
+        "integrity_checks": {
+          "capture_snapshot_binding:True": 1,
+          "digest_equality:True": 1,
+          "immutable_event_payload:False": 1,
+          "linked_version:True": 1
+        },
+        "integrity_consistent": false,
+        "record_count": 8,
+        "unknown_count": 0,
+        "unresolved_records": 0,
+        "unversioned_records": 3,
+        "version_count": 2
+      },
+      "render_ids": [
+        "c0bfe556ebc8d6d55e96",
+        "95a5c7401429f64b9185",
+        "5d9e5e3dedcb9c3cd6db",
+        "3b310ba249b0818e7e77"
+      ],
+      "representative": "c0bfe556ebc8d6d55e96",
+      "semantic_group": "fb6138114f36a327"
+    }
+  ],
+  "synthetic_tests": 25,
+  "totals": {
+    "ambiguities": {},
+    "capture_links": 20,
+    "current_deployment_resolved": 20,
+    "event_links": 60,
+    "field_entries": 733,
+    "graph_edges": 280,
+    "graph_nodes": 300,
+    "integrity_checks": {
+      "capture_snapshot_binding:False": 1,
+      "capture_snapshot_binding:True": 19,
+      "digest_equality:False": 1,
+      "digest_equality:True": 19,
+      "immutable_event_payload:False": 1,
+      "immutable_event_payload:True": 19,
+      "linked_version:False": 2,
+      "linked_version:True": 18
+    },
+    "integrity_states": {
+      "False": 4,
+      "True": 16
+    },
+    "normalized_worlds": 20,
+    "records": 160,
+    "rendered_packages": 80,
+    "semantic_packages": 20,
+    "unknown_locations": 12
+  },
+  "zero_inference": {
+    "architecture_promotion": 0,
+    "horus_world_executions": 0,
+    "memory_writes": 0,
+    "model_server_starts": 0,
+    "other_model_calls": 0,
+    "policy_changes": 0,
+    "qwen_calls": 0,
+    "receipts": 0,
+    "self_improvement_proposals": 0,
+    "training": 0
+  }
+}
