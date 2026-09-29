@@ -142,13 +142,27 @@ def model_decision(private, name, arm, fixture):
             action,source,route,info,_,_=frozen.canonical_action_decision(store,ModelClient(),index,ctx)
         else:
             action,source,route,info,_,_=q_action(store,index,ctx)
+        if arm=='D':
+            results=[e['record'] for e in store.records['calls']
+                     if e['kind']=='TRANSPORT_ATTEMPT_RESULT' and e['record']['call_id']==info['call_id']]
+            if not results:raise RuntimeError('D physical call metadata missing')
+            meta=results[-1]['response']['response_metadata']
+            prompt_seconds=meta.get('prompt_eval_duration',0)/1e9
+            generation_seconds=meta.get('eval_duration',0)/1e9
+            load_seconds=meta.get('load_duration',0)/1e9
+            attempts=len(results)
+        else:
+            prompt_seconds=info['prompt_eval_duration_seconds']
+            generation_seconds=info['generation_duration_seconds']
+            load_seconds=0
+            attempts=1
         return dict(action=action,source=source,model_calls=1,
             action_parse_status=info['status'],allowed=route['candidates'],
             input_tokens=info['context_tokens'],output_tokens=info['output_tokens'],
             wall_seconds=info['latency_seconds'],raw_output_sha256=info['raw_output_sha256'],
-            request_sha256=info['request_sha256'],
-            prompt_eval_seconds=info.get('prompt_eval_duration_seconds'),
-            generation_seconds=info.get('generation_duration_seconds'))
+            request_sha256=info['request_sha256'],physical_attempts=attempts,
+            prompt_eval_seconds=prompt_seconds,generation_seconds=generation_seconds,
+            runner_load_seconds=load_seconds)
 
 
 def run_arm(private, arm):
