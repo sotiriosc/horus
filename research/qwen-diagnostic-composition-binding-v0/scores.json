@@ -1,0 +1,1631 @@
+{
+  "status": "QWEN_DIAGNOSTIC_COMPOSITION_BINDING_COMPLETE_V0",
+  "findings": [
+    "MINIMAL_CORE_COMPETENCE_NOT_ESTABLISHED",
+    "COMPOSITIONAL_INVARIANCE_NOT_ESTABLISHED",
+    "DECISIVE_COUNTERFACTUAL_SENSITIVITY_NOT_ESTABLISHED"
+  ],
+  "registered_patterns": [
+    "B_WEAK_CORES",
+    "D_BOTH_WEAK"
+  ],
+  "A": {
+    "levels": {
+      "0": {
+        "correct": 5,
+        "schema_valid": 10,
+        "per_class": {
+          "SUPPORTED_CURRENT_DEFECT": 1,
+          "NO_SUPPORTED_DIAGNOSIS": 1,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1
+        }
+      },
+      "1": {
+        "correct": 4,
+        "schema_valid": 10,
+        "per_class": {
+          "SUPPORTED_CURRENT_DEFECT": 1,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1
+        }
+      },
+      "2": {
+        "correct": 2,
+        "schema_valid": 10,
+        "per_class": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 1,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1
+        }
+      },
+      "3": {
+        "correct": 4,
+        "schema_valid": 10,
+        "per_class": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1
+        }
+      },
+      "4": {
+        "correct": 6,
+        "schema_valid": 10,
+        "per_class": {
+          "SUPPORTED_CURRENT_DEFECT": 2,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1
+        }
+      }
+    },
+    "minimal_core_gate": false,
+    "invariant_cores": 3,
+    "gold_preserving_invariant_cores": 1,
+    "compositional_invariance_gate": false,
+    "cores": [
+      {
+        "unit_id": "u0563ae27d6b3",
+        "gold": "NO_SUPPORTED_DIAGNOSIS",
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS"
+        ],
+        "correct": [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 1,
+        "first_incorrect_level": 0,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u073cdee833e0",
+        "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "selected": [
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INSUFFICIENT_EVIDENCE",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 1,
+        "first_incorrect_level": 1,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u1219d4152913",
+        "gold": "SUPPORTED_CURRENT_DEFECT",
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          true,
+          true,
+          false,
+          false,
+          true
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 2,
+        "first_incorrect_level": 2,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u1809f7af1dfe",
+        "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "selected": [
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "correct": [
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 1,
+        "first_incorrect_level": 1,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u4028529a5dd9",
+        "gold": "INSUFFICIENT_EVIDENCE",
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "invariant": true,
+        "correct_all_levels": false,
+        "first_changed_level": null,
+        "first_incorrect_level": 0,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u8a261494f62d",
+        "gold": "SUPPORTED_CURRENT_DEFECT",
+        "selected": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 1,
+        "first_incorrect_level": 0,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "u98cd1c26463e",
+        "gold": "INSUFFICIENT_EVIDENCE",
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "invariant": true,
+        "correct_all_levels": false,
+        "first_changed_level": null,
+        "first_incorrect_level": 0,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "ub9fbb567f9bd",
+        "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "selected": [
+          "INSUFFICIENT_EVIDENCE",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS"
+        ],
+        "correct": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 1,
+        "first_incorrect_level": 0,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "uea6e3ce0eafd",
+        "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "selected": [
+          "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ],
+        "correct": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "invariant": true,
+        "correct_all_levels": true,
+        "first_changed_level": null,
+        "first_incorrect_level": null,
+        "first_invalid_label_level": null
+      },
+      {
+        "unit_id": "uf22f3606eead",
+        "gold": "NO_SUPPORTED_DIAGNOSIS",
+        "selected": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "NO_SUPPORTED_DIAGNOSIS"
+        ],
+        "correct": [
+          true,
+          true,
+          false,
+          true,
+          true
+        ],
+        "invariant": false,
+        "correct_all_levels": false,
+        "first_changed_level": 2,
+        "first_incorrect_level": 2,
+        "first_invalid_label_level": null
+      }
+    ],
+    "transitions": {
+      "L0_L1": {
+        "counts": {
+          "correct_to_wrong": 2,
+          "wrong_to_correct": 1,
+          "wrong_to_different_wrong": 2,
+          "unchanged": 5
+        },
+        "unit_memberships": {
+          "correct_to_wrong": [
+            "u073cdee833e0",
+            "u1809f7af1dfe"
+          ],
+          "wrong_to_correct": [
+            "u0563ae27d6b3"
+          ],
+          "wrong_to_different_wrong": [
+            "u8a261494f62d",
+            "ub9fbb567f9bd"
+          ],
+          "unchanged": [
+            "u1219d4152913",
+            "u4028529a5dd9",
+            "u98cd1c26463e",
+            "uea6e3ce0eafd",
+            "uf22f3606eead"
+          ]
+        },
+        "selected_class_disagreements": 5,
+        "disagreement_units": [
+          "u0563ae27d6b3",
+          "u073cdee833e0",
+          "u1809f7af1dfe",
+          "u8a261494f62d",
+          "ub9fbb567f9bd"
+        ],
+        "missing_label_units": [],
+        "same_label_schema_flips": [],
+        "recognized_stable": 5,
+        "correct_at_both": 3
+      },
+      "L1_L2": {
+        "counts": {
+          "correct_to_wrong": 2,
+          "wrong_to_correct": 0,
+          "wrong_to_different_wrong": 3,
+          "unchanged": 5
+        },
+        "unit_memberships": {
+          "correct_to_wrong": [
+            "u1219d4152913",
+            "uf22f3606eead"
+          ],
+          "wrong_to_correct": [],
+          "wrong_to_different_wrong": [
+            "u073cdee833e0",
+            "u1809f7af1dfe",
+            "u8a261494f62d"
+          ],
+          "unchanged": [
+            "u0563ae27d6b3",
+            "u4028529a5dd9",
+            "u98cd1c26463e",
+            "ub9fbb567f9bd",
+            "uea6e3ce0eafd"
+          ]
+        },
+        "selected_class_disagreements": 5,
+        "disagreement_units": [
+          "u073cdee833e0",
+          "u1219d4152913",
+          "u1809f7af1dfe",
+          "u8a261494f62d",
+          "uf22f3606eead"
+        ],
+        "missing_label_units": [],
+        "same_label_schema_flips": [],
+        "recognized_stable": 5,
+        "correct_at_both": 2
+      },
+      "L2_L3": {
+        "counts": {
+          "correct_to_wrong": 0,
+          "wrong_to_correct": 2,
+          "wrong_to_different_wrong": 2,
+          "unchanged": 6
+        },
+        "unit_memberships": {
+          "correct_to_wrong": [],
+          "wrong_to_correct": [
+            "u1809f7af1dfe",
+            "uf22f3606eead"
+          ],
+          "wrong_to_different_wrong": [
+            "u073cdee833e0",
+            "u1219d4152913"
+          ],
+          "unchanged": [
+            "u0563ae27d6b3",
+            "u4028529a5dd9",
+            "u8a261494f62d",
+            "u98cd1c26463e",
+            "ub9fbb567f9bd",
+            "uea6e3ce0eafd"
+          ]
+        },
+        "selected_class_disagreements": 4,
+        "disagreement_units": [
+          "u073cdee833e0",
+          "u1219d4152913",
+          "u1809f7af1dfe",
+          "uf22f3606eead"
+        ],
+        "missing_label_units": [],
+        "same_label_schema_flips": [],
+        "recognized_stable": 6,
+        "correct_at_both": 2
+      },
+      "L3_L4": {
+        "counts": {
+          "correct_to_wrong": 0,
+          "wrong_to_correct": 2,
+          "wrong_to_different_wrong": 0,
+          "unchanged": 8
+        },
+        "unit_memberships": {
+          "correct_to_wrong": [],
+          "wrong_to_correct": [
+            "u1219d4152913",
+            "u8a261494f62d"
+          ],
+          "wrong_to_different_wrong": [],
+          "unchanged": [
+            "u0563ae27d6b3",
+            "u073cdee833e0",
+            "u1809f7af1dfe",
+            "u4028529a5dd9",
+            "u98cd1c26463e",
+            "ub9fbb567f9bd",
+            "uea6e3ce0eafd",
+            "uf22f3606eead"
+          ]
+        },
+        "selected_class_disagreements": 2,
+        "disagreement_units": [
+          "u1219d4152913",
+          "u8a261494f62d"
+        ],
+        "missing_label_units": [],
+        "same_label_schema_flips": [],
+        "recognized_stable": 8,
+        "correct_at_both": 4
+      },
+      "L0_L4": {
+        "counts": {
+          "correct_to_wrong": 1,
+          "wrong_to_correct": 2,
+          "wrong_to_different_wrong": 1,
+          "unchanged": 6
+        },
+        "unit_memberships": {
+          "correct_to_wrong": [
+            "u073cdee833e0"
+          ],
+          "wrong_to_correct": [
+            "u0563ae27d6b3",
+            "u8a261494f62d"
+          ],
+          "wrong_to_different_wrong": [
+            "ub9fbb567f9bd"
+          ],
+          "unchanged": [
+            "u1219d4152913",
+            "u1809f7af1dfe",
+            "u4028529a5dd9",
+            "u98cd1c26463e",
+            "uea6e3ce0eafd",
+            "uf22f3606eead"
+          ]
+        },
+        "selected_class_disagreements": 4,
+        "disagreement_units": [
+          "u0563ae27d6b3",
+          "u073cdee833e0",
+          "u8a261494f62d",
+          "ub9fbb567f9bd"
+        ],
+        "missing_label_units": [],
+        "same_label_schema_flips": [],
+        "recognized_stable": 6,
+        "correct_at_both": 4
+      }
+    },
+    "nonincreasing_aggregate_accuracy": false,
+    "tags": {
+      "COMPONENT_BINDING": {
+        "level": 1,
+        "accuracy": 4,
+        "denominator": 10,
+        "recognized_class_stability": 5,
+        "correct_both_levels": 3
+      },
+      "VERSION_BINDING": {
+        "level": 2,
+        "accuracy": 2,
+        "denominator": 10,
+        "recognized_class_stability": 5,
+        "correct_both_levels": 2
+      },
+      "REDUNDANT_EVIDENCE": {
+        "level": 3,
+        "accuracy": 4,
+        "denominator": 10,
+        "recognized_class_stability": 6,
+        "correct_both_levels": 2
+      },
+      "TARGET_VS_DISTRACTOR": {
+        "level": 4,
+        "accuracy": 6,
+        "denominator": 10,
+        "recognized_class_stability": 8,
+        "correct_both_levels": 4
+      }
+    }
+  },
+  "B": {
+    "endpoint_accuracy": 12,
+    "pair_passes": 4,
+    "per_family": {
+      "H_D": 1,
+      "H_U": 0,
+      "D_T": 1,
+      "H_X": 1,
+      "U_D": 1
+    },
+    "sensitivity_gate": false,
+    "pairs": [
+      {
+        "unit_id": "u06bf9798528e",
+        "family": "H_U",
+        "tag": "UNKNOWN_DEPENDENCY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE"
+        ],
+        "selected": [
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "NO_SUPPORTED_DIAGNOSIS"
+        ],
+        "correct": [
+          false,
+          false
+        ],
+        "class_changed": true,
+        "passed": false
+      },
+      {
+        "unit_id": "u160a48853b52",
+        "family": "H_D",
+        "tag": "VALUE_DEPENDENCY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "selected": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          true,
+          true
+        ],
+        "class_changed": true,
+        "passed": true
+      },
+      {
+        "unit_id": "u2a1e70b9cba7",
+        "family": "H_X",
+        "tag": "PROVENANCE_IDENTITY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ],
+        "selected": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "correct": [
+          true,
+          false
+        ],
+        "class_changed": true,
+        "passed": false
+      },
+      {
+        "unit_id": "u383e79d99206",
+        "family": "H_D",
+        "tag": "VALUE_DEPENDENCY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "selected": [
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "correct": [
+          false,
+          false
+        ],
+        "class_changed": false,
+        "passed": false
+      },
+      {
+        "unit_id": "u4d9ce97bf19f",
+        "family": "U_D",
+        "tag": "UNKNOWN_DEPENDENCY",
+        "gold": [
+          "INSUFFICIENT_EVIDENCE",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "selected": [
+          "INSUFFICIENT_EVIDENCE",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          true,
+          true
+        ],
+        "class_changed": true,
+        "passed": true
+      },
+      {
+        "unit_id": "u74bbfc5ce7f1",
+        "family": "D_T",
+        "tag": "CURRENTNESS",
+        "gold": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "correct": [
+          true,
+          true
+        ],
+        "class_changed": true,
+        "passed": true
+      },
+      {
+        "unit_id": "u80ad2516f7d1",
+        "family": "H_X",
+        "tag": "PROVENANCE_IDENTITY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ],
+        "selected": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ],
+        "correct": [
+          true,
+          true
+        ],
+        "class_changed": true,
+        "passed": true
+      },
+      {
+        "unit_id": "u80f17f629701",
+        "family": "H_U",
+        "tag": "UNKNOWN_DEPENDENCY",
+        "gold": [
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE"
+        ],
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "INSUFFICIENT_EVIDENCE"
+        ],
+        "correct": [
+          false,
+          true
+        ],
+        "class_changed": true,
+        "passed": false
+      },
+      {
+        "unit_id": "ua7e435ac2c53",
+        "family": "U_D",
+        "tag": "UNKNOWN_DEPENDENCY",
+        "gold": [
+          "INSUFFICIENT_EVIDENCE",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "SUPPORTED_CURRENT_DEFECT"
+        ],
+        "correct": [
+          false,
+          true
+        ],
+        "class_changed": false,
+        "passed": false
+      },
+      {
+        "unit_id": "uc53c91ee87ff",
+        "family": "D_T",
+        "tag": "CURRENTNESS",
+        "gold": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "HISTORICAL_DEFECT_NOT_CURRENT"
+        ],
+        "selected": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS"
+        ],
+        "correct": [
+          true,
+          false
+        ],
+        "class_changed": true,
+        "passed": false
+      }
+    ],
+    "tags": {
+      "CURRENTNESS": {
+        "pairs": 2,
+        "pair_passes": 1,
+        "class_changes": 2,
+        "endpoint_correct": 3,
+        "endpoint_denominator": 4
+      },
+      "PROVENANCE_IDENTITY": {
+        "pairs": 2,
+        "pair_passes": 1,
+        "class_changes": 2,
+        "endpoint_correct": 3,
+        "endpoint_denominator": 4
+      },
+      "UNKNOWN_DEPENDENCY": {
+        "pairs": 4,
+        "pair_passes": 1,
+        "class_changes": 3,
+        "endpoint_correct": 4,
+        "endpoint_denominator": 8
+      },
+      "VALUE_DEPENDENCY": {
+        "pairs": 2,
+        "pair_passes": 1,
+        "class_changes": 1,
+        "endpoint_correct": 2,
+        "endpoint_denominator": 4
+      }
+    }
+  },
+  "schema_valid": 70,
+  "rows": [
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "b630790b9259d9005ea6",
+      "unit_id": "u8a261494f62d",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "render_id": "577869c2acbc3cda9efc",
+      "unit_id": "u8a261494f62d",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "28cc5ef0f622580f7c1e",
+      "unit_id": "u8a261494f62d",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "4984780a5985e522c352",
+      "unit_id": "u8a261494f62d",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "17ed57969036185c20d7",
+      "unit_id": "u8a261494f62d",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "23083509ae2034f3ddf4",
+      "unit_id": "u1219d4152913",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "d32d14ce8a717947d9bb",
+      "unit_id": "u1219d4152913",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "render_id": "c276e6b2932d36d5f4b1",
+      "unit_id": "u1219d4152913",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "60fe0c9ede84999bac3d",
+      "unit_id": "u1219d4152913",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "f95fd7ccd043cb2a3dc7",
+      "unit_id": "u1219d4152913",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "ec85e1cd08be4e849d7d",
+      "unit_id": "uf22f3606eead",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "d832c0d3bac7c889f82f",
+      "unit_id": "uf22f3606eead",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "9f17415344876afede81",
+      "unit_id": "uf22f3606eead",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "31fcb1d382935ff1216e",
+      "unit_id": "uf22f3606eead",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "f3aa2def11a1093dcc75",
+      "unit_id": "uf22f3606eead",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "e77aabade98c0f349133",
+      "unit_id": "u0563ae27d6b3",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "19377268685536dfa96b",
+      "unit_id": "u0563ae27d6b3",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "d60355e17ad7a64a6c2a",
+      "unit_id": "u0563ae27d6b3",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "c5f600644adb73cb1aad",
+      "unit_id": "u0563ae27d6b3",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "3b95c3cee273c704f8cb",
+      "unit_id": "u0563ae27d6b3",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "c23e5f9f78f0e0dc67c4",
+      "unit_id": "u4028529a5dd9",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "0be1467844526a91fd3e",
+      "unit_id": "u4028529a5dd9",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "1ac77c8dc6674017792a",
+      "unit_id": "u4028529a5dd9",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "c8ed9772867df5fa8b81",
+      "unit_id": "u4028529a5dd9",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "4ff7b7c93011272dea9d",
+      "unit_id": "u4028529a5dd9",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "57b1323eb2bd0f39a436",
+      "unit_id": "u98cd1c26463e",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "56a7bd32d0ae1290014e",
+      "unit_id": "u98cd1c26463e",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "bfce1d15f55769facb53",
+      "unit_id": "u98cd1c26463e",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "158960179c45c0c61b2f",
+      "unit_id": "u98cd1c26463e",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "f21e1e54e56a83b8ddc9",
+      "unit_id": "u98cd1c26463e",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "render_id": "6fd3ff06525364959b55",
+      "unit_id": "u073cdee833e0",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "render_id": "f5207e973344493adc09",
+      "unit_id": "u073cdee833e0",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "95955b08bf7ade08a844",
+      "unit_id": "u073cdee833e0",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "20dbb6c267e6118de20b",
+      "unit_id": "u073cdee833e0",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "3468c7d82e3f44ce0f67",
+      "unit_id": "u073cdee833e0",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "render_id": "991d36491d0d7f54827b",
+      "unit_id": "u1809f7af1dfe",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "7c86dead27c8498be179",
+      "unit_id": "u1809f7af1dfe",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "6c6e0cf083cdbd2382f2",
+      "unit_id": "u1809f7af1dfe",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "render_id": "8ee0eb0c68d671c8f90d",
+      "unit_id": "u1809f7af1dfe",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "render_id": "0866f638e740bb8b8360",
+      "unit_id": "u1809f7af1dfe",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "8a0cbe17d9372b3cf563",
+      "unit_id": "uea6e3ce0eafd",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "2d3c0f7f7b20c419623f",
+      "unit_id": "uea6e3ce0eafd",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "6c46eb55ea732a59faeb",
+      "unit_id": "uea6e3ce0eafd",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "3c659f424d505aadd638",
+      "unit_id": "uea6e3ce0eafd",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "560b5062c0adf6f7a818",
+      "unit_id": "uea6e3ce0eafd",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "render_id": "6570bf88e2bd1a6c7a7b",
+      "unit_id": "ub9fbb567f9bd",
+      "part": "A",
+      "level": 0,
+      "tag": null,
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "350ed333719064d934bd",
+      "unit_id": "ub9fbb567f9bd",
+      "part": "A",
+      "level": 1,
+      "tag": "COMPONENT_BINDING",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "8ca0d3615da56d4c8e6d",
+      "unit_id": "ub9fbb567f9bd",
+      "part": "A",
+      "level": 2,
+      "tag": "VERSION_BINDING",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "61140536d2cb01085938",
+      "unit_id": "ub9fbb567f9bd",
+      "part": "A",
+      "level": 3,
+      "tag": "REDUNDANT_EVIDENCE",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "9f54d7671144f7cbedfe",
+      "unit_id": "ub9fbb567f9bd",
+      "part": "A",
+      "level": 4,
+      "tag": "TARGET_VS_DISTRACTOR",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "d87e9ca7742d2c0fe71d",
+      "unit_id": "u160a48853b52",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_D",
+      "tag": "VALUE_DEPENDENCY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "8d46a956f5a892fc9a71",
+      "unit_id": "u160a48853b52",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_D",
+      "tag": "VALUE_DEPENDENCY",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "629c84927fc09cbb2832",
+      "unit_id": "u383e79d99206",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_D",
+      "tag": "VALUE_DEPENDENCY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "25a1e54699d202338902",
+      "unit_id": "u383e79d99206",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_D",
+      "tag": "VALUE_DEPENDENCY",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "cecc16bea90d211b7961",
+      "unit_id": "u06bf9798528e",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_U",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "77123a56932ca41977e9",
+      "unit_id": "u06bf9798528e",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_U",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "c531c5a4475829339293",
+      "unit_id": "u80f17f629701",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_U",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "render_id": "60b558f67d0824490ae7",
+      "unit_id": "u80f17f629701",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_U",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "0c8872ec6e44c3c8493a",
+      "unit_id": "u74bbfc5ce7f1",
+      "part": "B",
+      "endpoint": "A",
+      "family": "D_T",
+      "tag": "CURRENTNESS",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "render_id": "17e54752eac0c886c3b7",
+      "unit_id": "u74bbfc5ce7f1",
+      "part": "B",
+      "endpoint": "B",
+      "family": "D_T",
+      "tag": "CURRENTNESS",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "ab81d39e1dd306fea216",
+      "unit_id": "uc53c91ee87ff",
+      "part": "B",
+      "endpoint": "A",
+      "family": "D_T",
+      "tag": "CURRENTNESS",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "render_id": "2d6d439722defb59cb4c",
+      "unit_id": "uc53c91ee87ff",
+      "part": "B",
+      "endpoint": "B",
+      "family": "D_T",
+      "tag": "CURRENTNESS",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "1df449f546cbc0f4ae04",
+      "unit_id": "u2a1e70b9cba7",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_X",
+      "tag": "PROVENANCE_IDENTITY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": false,
+      "render_id": "633e464b2ce25cd51d15",
+      "unit_id": "u2a1e70b9cba7",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_X",
+      "tag": "PROVENANCE_IDENTITY",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "render_id": "ca331090f315ada06e7d",
+      "unit_id": "u80ad2516f7d1",
+      "part": "B",
+      "endpoint": "A",
+      "family": "H_X",
+      "tag": "PROVENANCE_IDENTITY",
+      "gold": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "render_id": "ae24db86b8374b23fd8c",
+      "unit_id": "u80ad2516f7d1",
+      "part": "B",
+      "endpoint": "B",
+      "family": "H_X",
+      "tag": "PROVENANCE_IDENTITY",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "render_id": "22c3168391d602d4bab3",
+      "unit_id": "ua7e435ac2c53",
+      "part": "B",
+      "endpoint": "A",
+      "family": "U_D",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "4940c9a7229825dc7d20",
+      "unit_id": "ua7e435ac2c53",
+      "part": "B",
+      "endpoint": "B",
+      "family": "U_D",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "render_id": "528410992725156a6bda",
+      "unit_id": "u4d9ce97bf19f",
+      "part": "B",
+      "endpoint": "A",
+      "family": "U_D",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "render_id": "3064a9b18f05d55d3550",
+      "unit_id": "u4d9ce97bf19f",
+      "part": "B",
+      "endpoint": "B",
+      "family": "U_D",
+      "tag": "UNKNOWN_DEPENDENCY",
+      "gold": "SUPPORTED_CURRENT_DEFECT"
+    }
+  ],
+  "attempted": 70,
+  "completed": 70,
+  "raw_commit_before_scoring": "f17e4053e95219152da6ab6fae733155033e425f"
+}
