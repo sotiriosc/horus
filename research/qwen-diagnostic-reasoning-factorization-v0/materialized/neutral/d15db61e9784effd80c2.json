@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Perform only the specified bounded operation for each supplied input. Return exactly one JSON object satisfying the response schema. Results must use the exact output convention specified by the operational rule. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Compute both results in the supplied input order. Return only {\"results\":[\"first result\",\"second result\"]}.\n\nTask data:\n{\n  \"operational_rule\": \"For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.\",\n  \"inputs\": [\n    {\n      \"a\": [\n        1,\n        4,\n        2\n      ],\n      \"b\": [\n        3,\n        -1\n      ]\n    },\n    {\n      \"a\": [\n        1,\n        4,\n        2\n      ],\n      \"b\": [\n        -1,\n        3\n      ]\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "results"
+    ],
+    "additionalProperties": false
+  }
+}

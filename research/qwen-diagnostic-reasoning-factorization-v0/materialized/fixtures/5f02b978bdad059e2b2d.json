@@ -1,0 +1,236 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-e17cf733c",
+      "operation": "repeat position counter",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f57f25373c1b888cf": {
+        "kind": "operand",
+        "component_id": "fecd6971b953aa121",
+        "inputs": {
+          "text": "aaaa",
+          "pattern": "aa"
+        }
+      },
+      "fbe251e233263b54e": {
+        "kind": "deployment",
+        "component_id": "f094c3362df3e3817",
+        "build_id": "f946b483f9946c718"
+      },
+      "f3ae4ddf26d942229": {
+        "kind": "source",
+        "component_id": "fecd6971b953aa121",
+        "capture_id": "f58be1a8ec162229e",
+        "input_ref": "fc6b11fa7012adadb"
+      },
+      "f7f6c33a62b1e9cdb": {
+        "kind": "receipt",
+        "component_id": "fecd6971b953aa121",
+        "build_id": "f3ef8fc79233e4c3c",
+        "source_ref": "f3ae4ddf26d942229",
+        "emitted_value": "2"
+      },
+      "f1424fba989ce5b23": {
+        "kind": "build",
+        "component_id": "f4ac06dab9913b475",
+        "creation_order": 2
+      },
+      "f4ac06dab9913b475": {
+        "kind": "component",
+        "unit_code": "unit-bf0c0dbde",
+        "serving_manifest": "fa53067a65f01c0e3",
+        "contract_ref": "fe0ff2aa46be4cbd8"
+      },
+      "fa53067a65f01c0e3": {
+        "kind": "deployment",
+        "component_id": "f4ac06dab9913b475",
+        "build_id": "f1424fba989ce5b23"
+      },
+      "f56f234be7a646c4d": {
+        "kind": "receipt",
+        "component_id": "f094c3362df3e3817",
+        "build_id": "f946b483f9946c718",
+        "source_ref": "ffa8d1bdcd7785129",
+        "emitted_value": "3"
+      },
+      "ff53e12786d21e276": {
+        "kind": "receipt",
+        "component_id": "f4ac06dab9913b475",
+        "build_id": "fc0ddd670264d8353",
+        "source_ref": "f7c7b4f9ce03e4c85",
+        "emitted_value": "2"
+      },
+      "faaf03dae0f631e44": {
+        "kind": "source",
+        "component_id": "f094c3362df3e3817",
+        "capture_id": "fe549bb13c6a1b6b9",
+        "input_ref": "feb23fb5e93d7aaed"
+      },
+      "f4cd78a19eca29c4f": {
+        "kind": "contract",
+        "component_id": "f094c3362df3e3817",
+        "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+        "admissible_input_ids": [
+          "fffb1552020caacc7",
+          "feb23fb5e93d7aaed"
+        ]
+      },
+      "fecd6971b953aa121": {
+        "kind": "component",
+        "unit_code": "unit-e435fa8b3",
+        "serving_manifest": "f326258b49ca056d3",
+        "contract_ref": "f69909a3c40d2977d"
+      },
+      "f7eda904644079621": {
+        "kind": "source",
+        "component_id": "f094c3362df3e3817",
+        "capture_id": "f2516382a2bc41177",
+        "input_ref": "fffb1552020caacc7"
+      },
+      "f946b483f9946c718": {
+        "kind": "build",
+        "component_id": "f094c3362df3e3817",
+        "creation_order": 2
+      },
+      "f8a831921e1c491c9": {
+        "kind": "receipt",
+        "component_id": "f094c3362df3e3817",
+        "build_id": "f919c8b7787a3a480",
+        "source_ref": "faaf03dae0f631e44",
+        "emitted_value": "3"
+      },
+      "fffb1552020caacc7": {
+        "kind": "operand",
+        "component_id": "f094c3362df3e3817",
+        "inputs": {
+          "text": "aaaa",
+          "pattern": "aa"
+        }
+      },
+      "f3ef8fc79233e4c3c": {
+        "kind": "build",
+        "component_id": "fecd6971b953aa121",
+        "creation_order": 2
+      },
+      "fc0ddd670264d8353": {
+        "kind": "build",
+        "component_id": "f4ac06dab9913b475",
+        "creation_order": 1
+      },
+      "f7672170a4a690592": {
+        "kind": "receipt",
+        "component_id": "f4ac06dab9913b475",
+        "build_id": "f1424fba989ce5b23",
+        "source_ref": "f7c7b4f9ce03e4c85",
+        "emitted_value": "3"
+      },
+      "f69909a3c40d2977d": {
+        "kind": "contract",
+        "component_id": "fecd6971b953aa121",
+        "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+        "admissible_input_ids": [
+          "f57f25373c1b888cf",
+          "fc6b11fa7012adadb"
+        ]
+      },
+      "fe30cf3ea06eb7e61": {
+        "kind": "operand",
+        "component_id": "f4ac06dab9913b475",
+        "inputs": {
+          "text": "aabaa",
+          "pattern": "aa"
+        }
+      },
+      "f094c3362df3e3817": {
+        "kind": "component",
+        "unit_code": "unit-e17cf733c",
+        "serving_manifest": "fbe251e233263b54e",
+        "contract_ref": "f4cd78a19eca29c4f"
+      },
+      "fe0ff2aa46be4cbd8": {
+        "kind": "contract",
+        "component_id": "f4ac06dab9913b475",
+        "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+        "admissible_input_ids": [
+          "fccbeb20574605e53",
+          "fe30cf3ea06eb7e61"
+        ]
+      },
+      "f326258b49ca056d3": {
+        "kind": "deployment",
+        "component_id": "fecd6971b953aa121",
+        "build_id": "f3ef8fc79233e4c3c"
+      },
+      "fccbeb20574605e53": {
+        "kind": "operand",
+        "component_id": "f4ac06dab9913b475",
+        "inputs": {
+          "text": "aaaa",
+          "pattern": "aa"
+        }
+      },
+      "ffa8d1bdcd7785129": {
+        "kind": "source",
+        "component_id": "f094c3362df3e3817",
+        "capture_id": "f2516382a2bc41177",
+        "input_ref": "fffb1552020caacc7"
+      },
+      "fc6b11fa7012adadb": {
+        "kind": "operand",
+        "component_id": "fecd6971b953aa121",
+        "inputs": {
+          "text": "aabaa",
+          "pattern": "aa"
+        }
+      },
+      "feb23fb5e93d7aaed": {
+        "kind": "operand",
+        "component_id": "f094c3362df3e3817",
+        "inputs": {
+          "text": "aabaa",
+          "pattern": "aa"
+        }
+      },
+      "f7c7b4f9ce03e4c85": {
+        "kind": "source",
+        "component_id": "f4ac06dab9913b475",
+        "capture_id": "f44aa7e9d92f3decd",
+        "input_ref": "fccbeb20574605e53"
+      },
+      "f919c8b7787a3a480": {
+        "kind": "build",
+        "component_id": "f094c3362df3e3817",
+        "creation_order": 1
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "f57f25373c1b888cf",
+      "required_output": "3"
+    },
+    {
+      "input_record_id": "fffb1552020caacc7",
+      "required_output": "3"
+    },
+    {
+      "input_record_id": "fe30cf3ea06eb7e61",
+      "required_output": "2"
+    },
+    {
+      "input_record_id": "fccbeb20574605e53",
+      "required_output": "3"
+    },
+    {
+      "input_record_id": "fc6b11fa7012adadb",
+      "required_output": "2"
+    },
+    {
+      "input_record_id": "feb23fb5e93d7aaed",
+      "required_output": "2"
+    }
+  ]
+}

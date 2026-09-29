@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Perform only the specified bounded operation for each supplied input. Return exactly one JSON object satisfying the response schema. Results must use the exact output convention specified by the operational rule. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Compute both results in the supplied input order. Return only {\"results\":[\"first result\",\"second result\"]}.\n\nTask data:\n{\n  \"operational_rule\": \"Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.\",\n  \"inputs\": [\n    {\n      \"left\": \"sail\",\n      \"right\": \"salt\"\n    },\n    {\n      \"left\": \"stone\",\n      \"right\": \"stony\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "results"
+    ],
+    "additionalProperties": false
+  }
+}

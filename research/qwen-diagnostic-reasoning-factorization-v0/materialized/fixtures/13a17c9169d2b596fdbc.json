@@ -1,0 +1,182 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-de26c6ac9",
+      "operation": "peak-window scanner",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f871b34c2e99647ad": {
+        "kind": "operand",
+        "component_id": "f6ae99815977f4c71",
+        "inputs": {
+          "values": [
+            8,
+            1,
+            6,
+            3,
+            10
+          ]
+        }
+      },
+      "f45e360df966574ab": {
+        "kind": "source",
+        "component_id": "fa427527a84747bdb",
+        "capture_id": "fe78ccd734480324a",
+        "input_ref": "ff90a2bbdc3067a0d"
+      },
+      "f6ae99815977f4c71": {
+        "kind": "component",
+        "unit_code": "unit-964127cd4",
+        "serving_manifest": "f62c555ef5382d562",
+        "contract_ref": "f8b85b0f7f97d9e72"
+      },
+      "f6831fcbdc3b74b69": {
+        "kind": "build",
+        "component_id": "fa427527a84747bdb",
+        "creation_order": 2
+      },
+      "f8b85b0f7f97d9e72": {
+        "kind": "contract",
+        "component_id": "f6ae99815977f4c71",
+        "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+        "admissible_input_ids": [
+          "f78eb9c80b65df0b6",
+          "f871b34c2e99647ad"
+        ]
+      },
+      "f0017b1d293d6dddc": {
+        "kind": "operand",
+        "component_id": "fa427527a84747bdb",
+        "inputs": {
+          "values": [
+            8,
+            1,
+            6,
+            3,
+            10
+          ]
+        }
+      },
+      "f34ffb4f4d421d071": {
+        "kind": "build",
+        "component_id": "fa427527a84747bdb",
+        "creation_order": 1
+      },
+      "f1ed5760a33945a76": {
+        "kind": "source",
+        "component_id": "fa427527a84747bdb",
+        "capture_id": "fe78ccd734480324a",
+        "input_ref": "ff90a2bbdc3067a0d"
+      },
+      "f539d2886c9ca537f": {
+        "kind": "source",
+        "component_id": "fa427527a84747bdb",
+        "capture_id": "f519aeb704b4d778f",
+        "input_ref": "f0017b1d293d6dddc"
+      },
+      "fe1ff89235ee4adae": {
+        "kind": "deployment",
+        "component_id": "fa427527a84747bdb",
+        "build_id": "f6831fcbdc3b74b69"
+      },
+      "ff0d153b85a7b7a3c": {
+        "kind": "receipt",
+        "component_id": "f6ae99815977f4c71",
+        "build_id": "ffb4f342939d5caf7",
+        "source_ref": "f66a0985a20a4ffa0",
+        "emitted_value": "9,9,7"
+      },
+      "fa427527a84747bdb": {
+        "kind": "component",
+        "unit_code": "unit-de26c6ac9",
+        "serving_manifest": "fe1ff89235ee4adae",
+        "contract_ref": "fdc5da76e125ec749"
+      },
+      "f66a0985a20a4ffa0": {
+        "kind": "source",
+        "component_id": "f6ae99815977f4c71",
+        "capture_id": "ff4d0b7330f2f4f7b",
+        "input_ref": "f78eb9c80b65df0b6"
+      },
+      "f78eb9c80b65df0b6": {
+        "kind": "operand",
+        "component_id": "f6ae99815977f4c71",
+        "inputs": {
+          "values": [
+            4,
+            9,
+            2,
+            7,
+            5
+          ]
+        }
+      },
+      "ff90a2bbdc3067a0d": {
+        "kind": "operand",
+        "component_id": "fa427527a84747bdb",
+        "inputs": {
+          "values": [
+            4,
+            9,
+            2,
+            7,
+            5
+          ]
+        }
+      },
+      "f02d6b6302b9089a4": {
+        "kind": "receipt",
+        "component_id": "fa427527a84747bdb",
+        "build_id": "f6831fcbdc3b74b69",
+        "source_ref": "f1ed5760a33945a76",
+        "emitted_value": "8,6,10"
+      },
+      "ffb4f342939d5caf7": {
+        "kind": "build",
+        "component_id": "f6ae99815977f4c71",
+        "creation_order": 2
+      },
+      "fdc5da76e125ec749": {
+        "kind": "contract",
+        "component_id": "fa427527a84747bdb",
+        "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+        "admissible_input_ids": [
+          "ff90a2bbdc3067a0d",
+          "f0017b1d293d6dddc"
+        ]
+      },
+      "f62c555ef5382d562": {
+        "kind": "deployment",
+        "component_id": "f6ae99815977f4c71",
+        "build_id": "ffb4f342939d5caf7"
+      },
+      "f1093e9a719e0f212": {
+        "kind": "receipt",
+        "component_id": "fa427527a84747bdb",
+        "build_id": "f34ffb4f4d421d071",
+        "source_ref": "f539d2886c9ca537f",
+        "emitted_value": "8,6,10"
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "f871b34c2e99647ad",
+      "required_output": "8,6,10"
+    },
+    {
+      "input_record_id": "f0017b1d293d6dddc",
+      "required_output": "8,6,10"
+    },
+    {
+      "input_record_id": "f78eb9c80b65df0b6",
+      "required_output": "9,9,7"
+    },
+    {
+      "input_record_id": "ff90a2bbdc3067a0d",
+      "required_output": "9,9,7"
+    }
+  ]
+}

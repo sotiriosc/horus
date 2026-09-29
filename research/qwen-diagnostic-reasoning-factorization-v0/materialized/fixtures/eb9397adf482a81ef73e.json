@@ -1,0 +1,138 @@
+{
+  "scope": {
+    "requested_unit": "unit-326744280",
+    "operation": "consonant stencil writer",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f16617a7b35c503d0": {
+      "kind": "operand",
+      "component_id": "f803fb9811872aab3",
+      "inputs": {
+        "text": "ORCHARD"
+      }
+    },
+    "fdc21ef5b1be6f25c": {
+      "kind": "deployment",
+      "component_id": "f803fb9811872aab3",
+      "build_id": "f0779a427414615c8"
+    },
+    "f0c522e9355463040": {
+      "kind": "build",
+      "component_id": "f803fb9811872aab3",
+      "creation_order": 1
+    },
+    "f8f48687d42f05948": {
+      "kind": "contract",
+      "component_id": "fe093e5a05df3c23f",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_input_ids": [
+        "f991deed3522161d3",
+        "f2712da9916665683"
+      ]
+    },
+    "f5d2529b3728edc49": {
+      "kind": "deployment",
+      "component_id": "fe093e5a05df3c23f",
+      "build_id": "f78bfa44cb03ebdb3"
+    },
+    "f705da2f55fd27bcc": {
+      "kind": "source",
+      "component_id": "f803fb9811872aab3",
+      "capture_id": "f7cabe901b66cb5c6",
+      "input_ref": "f16617a7b35c503d0"
+    },
+    "f642875563534ed8a": {
+      "kind": "contract",
+      "component_id": "f803fb9811872aab3",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_input_ids": [
+        "f571b71498641aa76",
+        "f16617a7b35c503d0"
+      ]
+    },
+    "ff7b03a24ed7239c1": {
+      "kind": "receipt",
+      "component_id": "f803fb9811872aab3",
+      "build_id": "f0c522e9355463040",
+      "source_ref": "f705da2f55fd27bcc",
+      "emitted_value": "RCHRD"
+    },
+    "f991deed3522161d3": {
+      "kind": "operand",
+      "component_id": "fe093e5a05df3c23f",
+      "inputs": {
+        "text": "ORCHID"
+      }
+    },
+    "f82c20788b9136c7e": {
+      "kind": "source",
+      "component_id": "f803fb9811872aab3",
+      "capture_id": "f2eef039b733f18f2",
+      "input_ref": "f16617a7b35c503d0"
+    },
+    "f2b88f64d12d424e3": {
+      "kind": "source",
+      "component_id": "f803fb9811872aab3",
+      "capture_id": "f2eef039b733f18f2",
+      "input_ref": "f571b71498641aa76"
+    },
+    "f0779a427414615c8": {
+      "kind": "build",
+      "component_id": "f803fb9811872aab3",
+      "creation_order": 2
+    },
+    "f78bfa44cb03ebdb3": {
+      "kind": "build",
+      "component_id": "fe093e5a05df3c23f",
+      "creation_order": 2
+    },
+    "f571b71498641aa76": {
+      "kind": "operand",
+      "component_id": "f803fb9811872aab3",
+      "inputs": {
+        "text": "ORCHID"
+      }
+    },
+    "f803fb9811872aab3": {
+      "kind": "component",
+      "unit_code": "unit-326744280",
+      "serving_manifest": "fdc21ef5b1be6f25c",
+      "contract_ref": "f642875563534ed8a"
+    },
+    "f2712da9916665683": {
+      "kind": "operand",
+      "component_id": "fe093e5a05df3c23f",
+      "inputs": {
+        "text": "ORCHARD"
+      }
+    },
+    "fe093e5a05df3c23f": {
+      "kind": "component",
+      "unit_code": "unit-a7dd11662",
+      "serving_manifest": "f5d2529b3728edc49",
+      "contract_ref": "f8f48687d42f05948"
+    },
+    "ffc13e4b4a9b7fd35": {
+      "kind": "receipt",
+      "component_id": "f803fb9811872aab3",
+      "build_id": "f0779a427414615c8",
+      "source_ref": "f2b88f64d12d424e3",
+      "emitted_value": "RCHD"
+    },
+    "fdefd9858b6e0ace2": {
+      "kind": "source",
+      "component_id": "fe093e5a05df3c23f",
+      "capture_id": "f3c7226ad0046a0c3",
+      "input_ref": "f991deed3522161d3"
+    },
+    "fc634783112a9d2c8": {
+      "kind": "receipt",
+      "component_id": "fe093e5a05df3c23f",
+      "build_id": "f78bfa44cb03ebdb3",
+      "source_ref": "fdefd9858b6e0ace2",
+      "emitted_value": "RCHD"
+    }
+  }
+}

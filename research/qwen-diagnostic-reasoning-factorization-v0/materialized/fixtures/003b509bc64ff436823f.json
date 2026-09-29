@@ -1,0 +1,78 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "1",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "left": "flame",
+              "right": "frame"
+            },
+            "required_result_for_claim": "1"
+          },
+          {
+            "claimed_input": {
+              "left": "clay",
+              "right": "playful"
+            },
+            "required_result_for_claim": "4"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "left": "flame",
+            "right": "frame"
+          },
+          "required_result": "1"
+        },
+        {
+          "input_value": {
+            "left": "clay",
+            "right": "playful"
+          },
+          "required_result": "4"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "4",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "left": "clay",
+              "right": "playful"
+            },
+            "required_result_for_claim": "4"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "left": "flame",
+            "right": "frame"
+          },
+          "required_result": "1"
+        },
+        {
+          "input_value": {
+            "left": "clay",
+            "right": "playful"
+          },
+          "required_result": "4"
+        }
+      ]
+    }
+  ]
+}

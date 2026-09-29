@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-2f89610ba\",\n      \"operation\": \"panel combination enumerator\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f6f2b77ecea7d4700\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"build_id\": \"f090bf8a344da917d\",\n        \"source_ref\": \"f8b0961e2fa2722f9\",\n        \"emitted_value\": \"36\"\n      },\n      \"f64030b9ecf0f8cc2\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"build_id\": \"feac964015a0adb31\"\n      },\n      \"f6f51e09acac8c1d2\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-2f89610ba\",\n        \"serving_manifest\": \"f6329b81d710e7ee3\",\n        \"contract_ref\": \"f461356c87542c2e4\"\n      },\n      \"f8508e405019f9387\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"capture_id\": \"f047d58b8c40c350e\",\n        \"input_ref\": \"f3144478654f7ea8a\"\n      },\n      \"f0f150190af1e3c20\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 2\n        }\n      },\n      \"f089abb39bd7f54c2\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"capture_id\": \"ffc9480a452a078a6\",\n        \"input_ref\": \"f0f2e575c8f2a41d9\"\n      },\n      \"f8b0961e2fa2722f9\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"capture_id\": \"f75f8b206271bef90\",\n        \"input_ref\": \"f7705a7da2747b9fc\"\n      },\n      \"fbc68bcfbabbefef6\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"build_id\": \"f86ce57216fc6cb8c\",\n        \"source_ref\": \"f8b0961e2fa2722f9\",\n        \"emitted_value\": \"126\"\n      },\n      \"fb7271395b8e70dae\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-91df95ad0\",\n        \"serving_manifest\": \"f63a7bcd132821a7d\",\n        \"contract_ref\": \"f75d13127201eb54d\"\n      },\n      \"f3144478654f7ea8a\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 4\n        }\n      },\n      \"f2a4269718706e7af\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"build_id\": \"fdb965683e97fe349\",\n        \"source_ref\": \"f0d3725e7db4fd486\",\n        \"emitted_value\": \"126\"\n      },\n      \"f10958e8df9c401b2\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"build_id\": \"feac964015a0adb31\",\n        \"source_ref\": \"f8508e405019f9387\",\n        \"emitted_value\": \"126\"\n      },\n      \"fda69a108db3161bd\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-b442e48c0\",\n        \"serving_manifest\": \"f64030b9ecf0f8cc2\",\n        \"contract_ref\": \"f6804ab3a8a1f8e36\"\n      },\n      \"fd574ad60cad9b643\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"build_id\": \"f7f17e0b14c2b4d10\",\n        \"source_ref\": \"f089abb39bd7f54c2\",\n        \"emitted_value\": \"36\"\n      },\n      \"fe17cd41c19aaeace\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 4\n        }\n      },\n      \"f9c64aa536b993170\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"capture_id\": \"ffc9480a452a078a6\",\n        \"input_ref\": \"f7a3c442fbcdfc986\"\n      },\n      \"f7a3c442fbcdfc986\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 4\n        }\n      },\n      \"f461356c87542c2e4\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"rule\": \"Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.\",\n        \"admissible_input_ids\": [\n          \"f0f2e575c8f2a41d9\",\n          \"f7a3c442fbcdfc986\"\n        ]\n      },\n      \"f75d13127201eb54d\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"rule\": \"Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.\",\n        \"admissible_input_ids\": [\n          \"f7705a7da2747b9fc\",\n          \"fe17cd41c19aaeace\"\n        ]\n      },\n      \"fdb965683e97fe349\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"creation_order\": 1\n      },\n      \"f0f2e575c8f2a41d9\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 2\n        }\n      },\n      \"f6329b81d710e7ee3\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"build_id\": \"f7f17e0b14c2b4d10\"\n      },\n      \"f7705a7da2747b9fc\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"inputs\": {\n          \"n\": 9,\n          \"k\": 2\n        }\n      },\n      \"f0d3725e7db4fd486\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"capture_id\": \"f4f22024d7a534cc3\",\n        \"input_ref\": \"f7a3c442fbcdfc986\"\n      },\n      \"f63a7bcd132821a7d\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"build_id\": \"f090bf8a344da917d\"\n      },\n      \"f090bf8a344da917d\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"creation_order\": 2\n      },\n      \"feac964015a0adb31\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"creation_order\": 2\n      },\n      \"f86ce57216fc6cb8c\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb7271395b8e70dae\",\n        \"creation_order\": 1\n      },\n      \"f6804ab3a8a1f8e36\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fda69a108db3161bd\",\n        \"rule\": \"Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.\",\n        \"admissible_input_ids\": [\n          \"f0f150190af1e3c20\",\n          \"f3144478654f7ea8a\"\n        ]\n      },\n      \"f7f17e0b14c2b4d10\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f6f51e09acac8c1d2\",\n        \"creation_order\": 2\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f0f150190af1e3c20\",\n      \"required_output\": \"36\"\n    },\n    {\n      \"input_record_id\": \"f3144478654f7ea8a\",\n      \"required_output\": \"126\"\n    },\n    {\n      \"input_record_id\": \"fe17cd41c19aaeace\",\n      \"required_output\": \"126\"\n    },\n    {\n      \"input_record_id\": \"f7a3c442fbcdfc986\",\n      \"required_output\": \"126\"\n    },\n    {\n      \"input_record_id\": \"f0f2e575c8f2a41d9\",\n      \"required_output\": \"36\"\n    },\n    {\n      \"input_record_id\": \"f7705a7da2747b9fc\",\n      \"required_output\": \"36\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-987b74eff",
+      "operation": "interlock relay evaluator",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f1554a1525796ac55": {
+        "kind": "source",
+        "component_id": "f503610179c67280f",
+        "capture_id": "f179e69112049691b",
+        "input_ref": "f39db014b99ffdfb8"
+      },
+      "f3abc09e63461db27": {
+        "kind": "contract",
+        "component_id": "fbfdd841c12c772a5",
+        "rule": "Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.",
+        "admissible_input_ids": [
+          "f30483154df4eda25",
+          "f2fbcebf95c047900"
+        ]
+      },
+      "f2fbcebf95c047900": {
+        "kind": "operand",
+        "component_id": "fbfdd841c12c772a5",
+        "inputs": {
+          "a": 0,
+          "b": 0,
+          "c": 1
+        }
+      },
+      "fd8ab526bd4f5dc7b": {
+        "kind": "source",
+        "component_id": "f503610179c67280f",
+        "capture_id": "f9837627926517f68",
+        "input_ref": "f5f60aa93842fc69c"
+      },
+      "f2ebf861329fe5882": {
+        "kind": "receipt",
+        "component_id": "f503610179c67280f",
+        "build_id": "f0654a4071a5c4dcc",
+        "source_ref": "fd8ab526bd4f5dc7b",
+        "emitted_value": "1"
+      },
+      "f746e338bd4e75015": {
+        "kind": "deployment",
+        "component_id": "f503610179c67280f",
+        "build_id": "f1899e85f12ee3698"
+      },
+      "f39db014b99ffdfb8": {
+        "kind": "operand",
+        "component_id": "f503610179c67280f",
+        "inputs": {
+          "a": 1,
+          "b": 0,
+          "c": 0
+        }
+      },
+      "f3ce60b65c3b19afb": {
+        "kind": "receipt",
+        "component_id": "f503610179c67280f",
+        "build_id": "f1899e85f12ee3698",
+        "source_ref": "f1554a1525796ac55",
+        "emitted_value": "1"
+      },
+      "fbfdd841c12c772a5": {
+        "kind": "component",
+        "unit_code": "unit-63bb36581",
+        "serving_manifest": "f8330bc61aa5fef40",
+        "contract_ref": "f3abc09e63461db27"
+      },
+      "f8330bc61aa5fef40": {
+        "kind": "deployment",
+        "component_id": "fbfdd841c12c772a5",
+        "build_id": "fe5c1dd55100349fc"
+      },
+      "f1899e85f12ee3698": {
+        "kind": "build",
+        "component_id": "f503610179c67280f",
+        "creation_order": 2
+      },
+      "fc74bbc4dd14ffa0a": {
+        "kind": "contract",
+        "component_id": "f503610179c67280f",
+        "rule": "Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.",
+        "admissible_input_ids": [
+          "f39db014b99ffdfb8",
+          "f5f60aa93842fc69c"
+        ]
+      },
+      "fe5c1dd55100349fc": {
+        "kind": "build",
+        "component_id": "fbfdd841c12c772a5",
+        "creation_order": 2
+      },
+      "f503610179c67280f": {
+        "kind": "component",
+        "unit_code": "unit-987b74eff",
+        "serving_manifest": "f746e338bd4e75015",
+        "contract_ref": "fc74bbc4dd14ffa0a"
+      },
+      "f0654a4071a5c4dcc": {
+        "kind": "build",
+        "component_id": "f503610179c67280f",
+        "creation_order": 1
+      },
+      "f7126886902e060a8": {
+        "kind": "source",
+        "component_id": "f503610179c67280f",
+        "capture_id": "f179e69112049691b",
+        "input_ref": "f39db014b99ffdfb8"
+      },
+      "f5f60aa93842fc69c": {
+        "kind": "operand",
+        "component_id": "f503610179c67280f",
+        "inputs": {
+          "a": 0,
+          "b": 0,
+          "c": 1
+        }
+      },
+      "f30483154df4eda25": {
+        "kind": "operand",
+        "component_id": "fbfdd841c12c772a5",
+        "inputs": {
+          "a": 1,
+          "b": 0,
+          "c": 0
+        }
+      },
+      "fa985db8df742b5bf": {
+        "kind": "receipt",
+        "component_id": "fbfdd841c12c772a5",
+        "build_id": "fe5c1dd55100349fc",
+        "source_ref": "f306508ecc46c1753",
+        "emitted_value": "0"
+      },
+      "f306508ecc46c1753": {
+        "kind": "source",
+        "component_id": "fbfdd841c12c772a5",
+        "capture_id": "f6c32bea928634b09",
+        "input_ref": "f30483154df4eda25"
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "f2fbcebf95c047900",
+      "required_output": "1"
+    },
+    {
+      "input_record_id": "f39db014b99ffdfb8",
+      "required_output": "0"
+    },
+    {
+      "input_record_id": "f5f60aa93842fc69c",
+      "required_output": "1"
+    },
+    {
+      "input_record_id": "f30483154df4eda25",
+      "required_output": "0"
+    }
+  ]
+}

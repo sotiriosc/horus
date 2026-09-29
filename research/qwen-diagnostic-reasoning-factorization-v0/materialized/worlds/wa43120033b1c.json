@@ -1,0 +1,202 @@
+{
+  "scope": {
+    "requested_unit": "unit-e52fe082b",
+    "operation": "consonant mask writer",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f1e7b3392c547c25d": {
+      "kind": "operand",
+      "component_id": "f7b51199992db7dd0",
+      "inputs": {
+        "text": "SEQUOIA"
+      }
+    },
+    "ff0c79df20179eb45": {
+      "kind": "source",
+      "component_id": "f111b109ebd984a7b",
+      "capture_id": "f3870065743d0cb6a",
+      "input_ref": "fc8ac10f28e4107cb"
+    },
+    "f59c25f10c95e52e6": {
+      "kind": "receipt",
+      "component_id": "f111b109ebd984a7b",
+      "build_id": "f3249dff125011177",
+      "source_ref": "ff0c79df20179eb45",
+      "emitted_value": "SPRC"
+    },
+    "f5e798749ac48302a": {
+      "kind": "deployment",
+      "component_id": "ffbe70e499a7e6b3d",
+      "build_id": "f7a11104f44ae8ac6"
+    },
+    "f036db7d68f3a16ab": {
+      "kind": "operand",
+      "component_id": "f7b51199992db7dd0",
+      "inputs": {
+        "text": "SPRUCE"
+      }
+    },
+    "fe8d61db644099127": {
+      "kind": "contract",
+      "component_id": "f111b109ebd984a7b",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_input_ids": [
+        "fc8ac10f28e4107cb",
+        "fa7d71c91e55b8d06"
+      ]
+    },
+    "fc8ac10f28e4107cb": {
+      "kind": "operand",
+      "component_id": "f111b109ebd984a7b",
+      "inputs": {
+        "text": "SEQUOIA"
+      }
+    },
+    "fc99708c362e0e81f": {
+      "kind": "deployment",
+      "component_id": "f111b109ebd984a7b",
+      "build_id": "fee15645cae1f15c5"
+    },
+    "f111b109ebd984a7b": {
+      "kind": "component",
+      "unit_code": "unit-735e86ddb",
+      "serving_manifest": "fc99708c362e0e81f",
+      "contract_ref": "fe8d61db644099127"
+    },
+    "f31cbed974b51b698": {
+      "kind": "build",
+      "component_id": "ffbe70e499a7e6b3d",
+      "creation_order": 1
+    },
+    "f995aec26828c2b0b": {
+      "kind": "source",
+      "component_id": "f7b51199992db7dd0",
+      "capture_id": "f92bbef9127f8acdf",
+      "input_ref": "f036db7d68f3a16ab"
+    },
+    "fa7d71c91e55b8d06": {
+      "kind": "operand",
+      "component_id": "f111b109ebd984a7b",
+      "inputs": {
+        "text": "SPRUCE"
+      }
+    },
+    "fb686ae50ea6f914c": {
+      "kind": "operand",
+      "component_id": "ffbe70e499a7e6b3d",
+      "inputs": {
+        "text": "SPRUCE"
+      }
+    },
+    "fee15645cae1f15c5": {
+      "kind": "build",
+      "component_id": "f111b109ebd984a7b",
+      "creation_order": 2
+    },
+    "f2b22f60021bfe975": {
+      "kind": "contract",
+      "component_id": "ffbe70e499a7e6b3d",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_input_ids": [
+        "f73ee930cfeb6a33c",
+        "fb686ae50ea6f914c"
+      ]
+    },
+    "f0578559b6ea2cc66": {
+      "kind": "deployment",
+      "component_id": "f7b51199992db7dd0",
+      "build_id": "f39722c0f0c551733"
+    },
+    "f39722c0f0c551733": {
+      "kind": "build",
+      "component_id": "f7b51199992db7dd0",
+      "creation_order": 2
+    },
+    "f7b51199992db7dd0": {
+      "kind": "component",
+      "unit_code": "unit-4adea2270",
+      "serving_manifest": "f0578559b6ea2cc66",
+      "contract_ref": "f6870fe110c3a1611"
+    },
+    "f7a11104f44ae8ac6": {
+      "kind": "build",
+      "component_id": "ffbe70e499a7e6b3d",
+      "creation_order": 2
+    },
+    "f6870fe110c3a1611": {
+      "kind": "contract",
+      "component_id": "f7b51199992db7dd0",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_input_ids": [
+        "f1e7b3392c547c25d",
+        "f036db7d68f3a16ab"
+      ]
+    },
+    "f6b718dc4a49c03f9": {
+      "kind": "receipt",
+      "component_id": "ffbe70e499a7e6b3d",
+      "build_id": "f7a11104f44ae8ac6",
+      "source_ref": "ffe5e1d4bbf032eae",
+      "emitted_value": "SPRC"
+    },
+    "fc1a015000448138e": {
+      "kind": "source",
+      "component_id": "ffbe70e499a7e6b3d",
+      "capture_id": "f856516763602b136",
+      "input_ref": "f73ee930cfeb6a33c"
+    },
+    "ffbe70e499a7e6b3d": {
+      "kind": "component",
+      "unit_code": "unit-e52fe082b",
+      "serving_manifest": "f5e798749ac48302a",
+      "contract_ref": "f2b22f60021bfe975"
+    },
+    "f114ddfdc76011054": {
+      "kind": "receipt",
+      "component_id": "f7b51199992db7dd0",
+      "build_id": "f39722c0f0c551733",
+      "source_ref": "f995aec26828c2b0b",
+      "emitted_value": "SPRC"
+    },
+    "f0a8380140d33337a": {
+      "kind": "receipt",
+      "component_id": "f111b109ebd984a7b",
+      "build_id": "fee15645cae1f15c5",
+      "source_ref": "ff0c79df20179eb45",
+      "emitted_value": "SQ"
+    },
+    "f4e7ceef7f0e33b80": {
+      "kind": "source",
+      "component_id": "ffbe70e499a7e6b3d",
+      "capture_id": "f5184139eeb2dfde9",
+      "input_ref": "fb686ae50ea6f914c"
+    },
+    "ffe5e1d4bbf032eae": {
+      "kind": "source",
+      "component_id": "ffbe70e499a7e6b3d",
+      "capture_id": "f856516763602b136",
+      "input_ref": "f73ee930cfeb6a33c"
+    },
+    "ffbe98e2323644e66": {
+      "kind": "receipt",
+      "component_id": "ffbe70e499a7e6b3d",
+      "build_id": "f31cbed974b51b698",
+      "source_ref": "f4e7ceef7f0e33b80",
+      "emitted_value": "SPRC"
+    },
+    "f3249dff125011177": {
+      "kind": "build",
+      "component_id": "f111b109ebd984a7b",
+      "creation_order": 1
+    },
+    "f73ee930cfeb6a33c": {
+      "kind": "operand",
+      "component_id": "ffbe70e499a7e6b3d",
+      "inputs": {
+        "text": "SEQUOIA"
+      }
+    }
+  }
+}

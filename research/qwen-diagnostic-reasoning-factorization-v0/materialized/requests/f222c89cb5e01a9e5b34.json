@@ -1,0 +1,43 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Perform only the specified bounded operation for each supplied input. Return exactly one JSON object satisfying the response schema. Results must use the exact output convention specified by the operational rule. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Compute both results in the supplied input order. Return only {\"results\":[\"first result\",\"second result\"]}.\n\nTask data:\n{\n  \"operational_rule\": \"Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.\",\n  \"inputs\": [\n    {\n      \"text\": \"banana\",\n      \"pattern\": \"ana\"\n    },\n    {\n      \"text\": \"bandana\",\n      \"pattern\": \"ana\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "required": [
+        "results"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

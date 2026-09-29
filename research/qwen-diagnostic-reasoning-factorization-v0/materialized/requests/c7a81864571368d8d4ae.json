@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-4e8f907c9\",\n      \"operation\": \"annotation correction counter\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f1f7578a78d54f11c\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"inputs\": {\n          \"left\": \"clay\",\n          \"right\": \"playful\"\n        }\n      },\n      \"fc724f27dd08e5dc3\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"rule\": \"Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.\",\n        \"admissible_input_ids\": [\n          \"f076486dfc1f83c4f\",\n          \"fc470859c0add2ed7\"\n        ]\n      },\n      \"fe901b301adbf9188\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-4e8f907c9\",\n        \"serving_manifest\": \"ff72d02b796f5c61c\",\n        \"contract_ref\": \"fc724f27dd08e5dc3\"\n      },\n      \"f9dc77145cf5ac761\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"build_id\": \"f509409dfbdbfca85\"\n      },\n      \"f2581d4a7b751f0aa\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"build_id\": \"fa57ee70c239f9f57\",\n        \"source_ref\": \"f695e00ce6f6dfc72\",\n        \"emitted_value\": \"4\"\n      },\n      \"f6e1b780c9bd63959\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"rule\": \"Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.\",\n        \"admissible_input_ids\": [\n          \"ffc0aa3f6bd2aae6f\",\n          \"f1f7578a78d54f11c\"\n        ]\n      },\n      \"fcf47149ff662ffd8\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"inputs\": {\n          \"left\": \"flame\",\n          \"right\": \"frame\"\n        }\n      },\n      \"f695e00ce6f6dfc72\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"capture_id\": \"f1b00985fa06d3b5a\",\n        \"input_ref\": \"fcf47149ff662ffd8\"\n      },\n      \"fa57ee70c239f9f57\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"creation_order\": 1\n      },\n      \"ffc0aa3f6bd2aae6f\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"inputs\": {\n          \"left\": \"flame\",\n          \"right\": \"frame\"\n        }\n      },\n      \"f58479f43fd07b652\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"rule\": \"Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.\",\n        \"admissible_input_ids\": [\n          \"fcf47149ff662ffd8\",\n          \"f775ec93c2373f0d5\"\n        ]\n      },\n      \"f18aa23c4cab89e81\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-cbb16b5bf\",\n        \"serving_manifest\": \"f05a99c64272db094\",\n        \"contract_ref\": \"f6e1b780c9bd63959\"\n      },\n      \"fe6ac13ff0055f105\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"build_id\": \"fce76d196b1b1e41c\",\n        \"source_ref\": \"f4376473f7facacaf\",\n        \"emitted_value\": \"4\"\n      },\n      \"f775ec93c2373f0d5\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"inputs\": {\n          \"left\": \"clay\",\n          \"right\": \"playful\"\n        }\n      },\n      \"f05a99c64272db094\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"build_id\": \"fce76d196b1b1e41c\"\n      },\n      \"f4376473f7facacaf\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"capture_id\": \"ffb420a4a91fca415\",\n        \"input_ref\": \"f1f7578a78d54f11c\"\n      },\n      \"ffdf1716d2074e938\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"build_id\": \"f4187bce5d07d3971\",\n        \"source_ref\": \"f05a0ec862ae459b2\",\n        \"emitted_value\": \"1\"\n      },\n      \"f543b01986d48bf71\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"creation_order\": 1\n      },\n      \"f4187bce5d07d3971\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"creation_order\": 2\n      },\n      \"fc470859c0add2ed7\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"inputs\": {\n          \"left\": \"clay\",\n          \"right\": \"playful\"\n        }\n      },\n      \"fa827d895466ef775\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"build_id\": \"f543b01986d48bf71\",\n        \"source_ref\": \"f93e89239ee13f34d\",\n        \"emitted_value\": \"4\"\n      },\n      \"f763be6bc7b87094c\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"build_id\": \"f509409dfbdbfca85\",\n        \"source_ref\": \"f695e00ce6f6dfc72\",\n        \"emitted_value\": \"1\"\n      },\n      \"fce76d196b1b1e41c\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f18aa23c4cab89e81\",\n        \"creation_order\": 2\n      },\n      \"fed1b83ce7be17755\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"capture_id\": \"f7c976abc8827076f\",\n        \"input_ref\": \"fc470859c0add2ed7\"\n      },\n      \"f93e89239ee13f34d\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"capture_id\": \"f32826bb429f8c9f2\",\n        \"input_ref\": \"fc470859c0add2ed7\"\n      },\n      \"f076486dfc1f83c4f\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"inputs\": {\n          \"left\": \"flame\",\n          \"right\": \"frame\"\n        }\n      },\n      \"f05a0ec862ae459b2\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"capture_id\": \"f7c976abc8827076f\",\n        \"input_ref\": \"f076486dfc1f83c4f\"\n      },\n      \"f783aa6c3fed9124f\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-69f541e5f\",\n        \"serving_manifest\": \"f9dc77145cf5ac761\",\n        \"contract_ref\": \"f58479f43fd07b652\"\n      },\n      \"ff72d02b796f5c61c\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fe901b301adbf9188\",\n        \"build_id\": \"f4187bce5d07d3971\"\n      },\n      \"f509409dfbdbfca85\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f783aa6c3fed9124f\",\n        \"creation_order\": 2\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f1f7578a78d54f11c\",\n      \"required_output\": \"4\"\n    },\n    {\n      \"input_record_id\": \"fcf47149ff662ffd8\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"ffc0aa3f6bd2aae6f\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f775ec93c2373f0d5\",\n      \"required_output\": \"4\"\n    },\n    {\n      \"input_record_id\": \"fc470859c0add2ed7\",\n      \"required_output\": \"4\"\n    },\n    {\n      \"input_record_id\": \"f076486dfc1f83c4f\",\n      \"required_output\": \"1\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

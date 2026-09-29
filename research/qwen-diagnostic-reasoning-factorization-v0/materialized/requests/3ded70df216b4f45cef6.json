@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-326744280\",\n      \"operation\": \"consonant stencil writer\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f16617a7b35c503d0\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"inputs\": {\n          \"text\": \"ORCHARD\"\n        }\n      },\n      \"fdc21ef5b1be6f25c\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"build_id\": \"f0779a427414615c8\"\n      },\n      \"f0c522e9355463040\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"creation_order\": 1\n      },\n      \"f8f48687d42f05948\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"rule\": \"Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.\",\n        \"admissible_input_ids\": [\n          \"f991deed3522161d3\",\n          \"f2712da9916665683\"\n        ]\n      },\n      \"f5d2529b3728edc49\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"build_id\": \"f78bfa44cb03ebdb3\"\n      },\n      \"f705da2f55fd27bcc\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"capture_id\": \"f7cabe901b66cb5c6\",\n        \"input_ref\": \"f16617a7b35c503d0\"\n      },\n      \"f642875563534ed8a\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"rule\": \"Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.\",\n        \"admissible_input_ids\": [\n          \"f571b71498641aa76\",\n          \"f16617a7b35c503d0\"\n        ]\n      },\n      \"ff7b03a24ed7239c1\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"build_id\": \"f0c522e9355463040\",\n        \"source_ref\": \"f705da2f55fd27bcc\",\n        \"emitted_value\": \"RCHRD\"\n      },\n      \"f991deed3522161d3\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"inputs\": {\n          \"text\": \"ORCHID\"\n        }\n      },\n      \"f82c20788b9136c7e\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"capture_id\": \"f2eef039b733f18f2\",\n        \"input_ref\": \"f16617a7b35c503d0\"\n      },\n      \"f2b88f64d12d424e3\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"capture_id\": \"f2eef039b733f18f2\",\n        \"input_ref\": \"f571b71498641aa76\"\n      },\n      \"f0779a427414615c8\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"creation_order\": 2\n      },\n      \"f78bfa44cb03ebdb3\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"creation_order\": 2\n      },\n      \"f571b71498641aa76\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"inputs\": {\n          \"text\": \"ORCHID\"\n        }\n      },\n      \"f803fb9811872aab3\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-326744280\",\n        \"serving_manifest\": \"fdc21ef5b1be6f25c\",\n        \"contract_ref\": \"f642875563534ed8a\"\n      },\n      \"f2712da9916665683\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"inputs\": {\n          \"text\": \"ORCHARD\"\n        }\n      },\n      \"fe093e5a05df3c23f\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-a7dd11662\",\n        \"serving_manifest\": \"f5d2529b3728edc49\",\n        \"contract_ref\": \"f8f48687d42f05948\"\n      },\n      \"ffc13e4b4a9b7fd35\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f803fb9811872aab3\",\n        \"build_id\": \"f0779a427414615c8\",\n        \"source_ref\": \"f2b88f64d12d424e3\",\n        \"emitted_value\": \"RCHD\"\n      },\n      \"fdefd9858b6e0ace2\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"capture_id\": \"f3c7226ad0046a0c3\",\n        \"input_ref\": \"f991deed3522161d3\"\n      },\n      \"fc634783112a9d2c8\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fe093e5a05df3c23f\",\n        \"build_id\": \"f78bfa44cb03ebdb3\",\n        \"source_ref\": \"fdefd9858b6e0ace2\",\n        \"emitted_value\": \"RCHD\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f16617a7b35c503d0\",\n      \"required_output\": \"RCHRD\"\n    },\n    {\n      \"input_record_id\": \"f991deed3522161d3\",\n      \"required_output\": \"RCHD\"\n    },\n    {\n      \"input_record_id\": \"f571b71498641aa76\",\n      \"required_output\": \"RCHD\"\n    },\n    {\n      \"input_record_id\": \"f2712da9916665683\",\n      \"required_output\": \"RCHRD\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

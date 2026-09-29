@@ -1,0 +1,71 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "RCHD",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "ORCHID"
+            },
+            "required_result_for_claim": "RCHD"
+          },
+          {
+            "claimed_input": {
+              "text": "ORCHARD"
+            },
+            "required_result_for_claim": "RCHRD"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "ORCHID"
+          },
+          "required_result": "RCHD"
+        },
+        {
+          "input_value": {
+            "text": "ORCHARD"
+          },
+          "required_result": "RCHRD"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "RCHRD",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "ORCHARD"
+            },
+            "required_result_for_claim": "RCHRD"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "ORCHID"
+          },
+          "required_result": "RCHD"
+        },
+        {
+          "input_value": {
+            "text": "ORCHARD"
+          },
+          "required_result": "RCHRD"
+        }
+      ]
+    }
+  ]
+}

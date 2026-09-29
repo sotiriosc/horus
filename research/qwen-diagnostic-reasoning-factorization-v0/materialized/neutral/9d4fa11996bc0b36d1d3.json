@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Perform only the specified bounded operation for each supplied input. Return exactly one JSON object satisfying the response schema. Results must use the exact output convention specified by the operational rule. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Compute both results in the supplied input order. Return only {\"results\":[\"first result\",\"second result\"]}.\n\nTask data:\n{\n  \"operational_rule\": \"Emit the greatest positive integer dividing both positive integers x and y exactly.\",\n  \"inputs\": [\n    {\n      \"x\": 84,\n      \"y\": 126\n    },\n    {\n      \"x\": 85,\n      \"y\": 126\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "results"
+    ],
+    "additionalProperties": false
+  }
+}

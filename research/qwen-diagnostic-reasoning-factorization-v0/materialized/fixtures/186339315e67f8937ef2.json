@@ -1,0 +1,142 @@
+{
+  "scope": {
+    "requested_unit": "unit-803241ca1",
+    "operation": "tag correction counter",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "fa27ad222063ef3ea": {
+      "kind": "receipt",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "build_id": "fb07adff89b2817dd",
+      "source_ref": "f1ab627ea433342bc",
+      "emitted_value": "2"
+    },
+    "f059d9c6cd0954c42": {
+      "kind": "build",
+      "component_id": "f3298d0a457da2876",
+      "creation_order": 2
+    },
+    "f1ab627ea433342bc": {
+      "kind": "source",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "capture_id": "f2b5bf4f1be36c33f",
+      "input_ref": "f4389c2c10fa12b9f"
+    },
+    "f892959439602951e": {
+      "kind": "receipt",
+      "component_id": "f3298d0a457da2876",
+      "build_id": "f059d9c6cd0954c42",
+      "source_ref": "f2ce075dfa070fa15",
+      "emitted_value": "2"
+    },
+    "fcff2e2f3c2861536": {
+      "kind": "build",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "creation_order": 2
+    },
+    "fb07adff89b2817dd": {
+      "kind": "build",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "creation_order": 1
+    },
+    "f72adc1762d5f35ff": {
+      "kind": "operand",
+      "component_id": "f3298d0a457da2876",
+      "inputs": {
+        "left": "sail",
+        "right": "salt"
+      }
+    },
+    "f0d64ca8b96421419": {
+      "kind": "source",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "capture_id": "f65cd8a37c80a3e2b",
+      "input_ref": "f5c8fa318a53cecd1"
+    },
+    "f0b4ee95c5360b0f8": {
+      "kind": "operand",
+      "component_id": "f3298d0a457da2876",
+      "inputs": {
+        "left": "stone",
+        "right": "stony"
+      }
+    },
+    "f2ce075dfa070fa15": {
+      "kind": "source",
+      "component_id": "f3298d0a457da2876",
+      "capture_id": "f5519e76adbbafeee",
+      "input_ref": "f72adc1762d5f35ff"
+    },
+    "f04e7afc95ee6bd76": {
+      "kind": "receipt",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "build_id": "fcff2e2f3c2861536",
+      "source_ref": "f0d64ca8b96421419",
+      "emitted_value": "2"
+    },
+    "f62e7f0ca7dbf5ff0": {
+      "kind": "component",
+      "unit_code": "unit-803241ca1",
+      "serving_manifest": "fe728130a7d6289f9",
+      "contract_ref": "fabbf2ff01b99f3b1"
+    },
+    "f4389c2c10fa12b9f": {
+      "kind": "operand",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "inputs": {
+        "left": "stone",
+        "right": "stony"
+      }
+    },
+    "f8bf7b632d2f2ef59": {
+      "kind": "contract",
+      "component_id": "f3298d0a457da2876",
+      "rule": "Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.",
+      "admissible_input_ids": [
+        "f72adc1762d5f35ff",
+        "f0b4ee95c5360b0f8"
+      ]
+    },
+    "fabbf2ff01b99f3b1": {
+      "kind": "contract",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "rule": "Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.",
+      "admissible_input_ids": [
+        "f5c8fa318a53cecd1",
+        "f4389c2c10fa12b9f"
+      ]
+    },
+    "fcd95226cd17f4b5c": {
+      "kind": "source",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "capture_id": "f65cd8a37c80a3e2b",
+      "input_ref": "f5c8fa318a53cecd1"
+    },
+    "f3298d0a457da2876": {
+      "kind": "component",
+      "unit_code": "unit-f97163bb9",
+      "serving_manifest": "f5725c7cceef8f800",
+      "contract_ref": "f8bf7b632d2f2ef59"
+    },
+    "f5c8fa318a53cecd1": {
+      "kind": "operand",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "inputs": {
+        "left": "sail",
+        "right": "salt"
+      }
+    },
+    "f5725c7cceef8f800": {
+      "kind": "deployment",
+      "component_id": "f3298d0a457da2876",
+      "build_id": "f059d9c6cd0954c42"
+    },
+    "fe728130a7d6289f9": {
+      "kind": "deployment",
+      "component_id": "f62e7f0ca7dbf5ff0",
+      "build_id": "fcff2e2f3c2861536"
+    }
+  }
+}

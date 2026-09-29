@@ -1,0 +1,160 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-a7bc399b3\",\n      \"operation\": \"serial grammar monitor\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f0aaae274594be729\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"capture_id\": \"ffb8b211285f872b7\",\n        \"input_ref\": \"f70a946c6a8019deb\"\n      },\n      \"fdf2530a92de52126\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"creation_order\": 1\n      },\n      \"f533f9af3e0d90b91\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"rule\": \"Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.\",\n        \"admissible_input_ids\": [\n          \"f70a946c6a8019deb\",\n          \"fdce4d17323ec72f7\"\n        ]\n      },\n      \"f70a946c6a8019deb\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"inputs\": {\n          \"word\": \"abba\"\n        }\n      },\n      \"ff95dc6dea6e03d15\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"build_id\": \"fdf2530a92de52126\",\n        \"source_ref\": \"f8d5469e7981a7bfb\",\n        \"emitted_value\": \"q3\"\n      },\n      \"f9d2dc3481a3bc0e4\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f022651836886310c\",\n        \"build_id\": \"feeb4854ee5bdf273\",\n        \"source_ref\": \"fadda233c4298c4eb\",\n        \"emitted_value\": \"q1\"\n      },\n      \"f8d5469e7981a7bfb\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"capture_id\": \"ff400742730ae6143\",\n        \"input_ref\": \"fdce4d17323ec72f7\"\n      },\n      \"f965cbe7469569f16\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-a7bc399b3\",\n        \"serving_manifest\": \"ff5c29c43ff413bdb\",\n        \"contract_ref\": \"f533f9af3e0d90b91\"\n      },\n      \"feeb4854ee5bdf273\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f022651836886310c\",\n        \"creation_order\": 2\n      },\n      \"f9fb669ab8bf86836\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"build_id\": \"f4d963ed10ab4c6d7\",\n        \"source_ref\": \"f999b7869c64a44c3\",\n        \"emitted_value\": \"q1\"\n      },\n      \"f999b7869c64a44c3\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"capture_id\": \"ffb8b211285f872b7\",\n        \"input_ref\": \"f70a946c6a8019deb\"\n      },\n      \"f022651836886310c\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-f2d20417d\",\n        \"serving_manifest\": \"ff9d2b067fcb7bba9\",\n        \"contract_ref\": \"f9969beb064d11d96\"\n      },\n      \"f4d963ed10ab4c6d7\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"creation_order\": 2\n      },\n      \"ff5c29c43ff413bdb\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"build_id\": \"f4d963ed10ab4c6d7\"\n      },\n      \"f7a28d3d6c7e10b93\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f022651836886310c\",\n        \"inputs\": {\n          \"word\": \"ababa\"\n        }\n      },\n      \"feb21be676b8795e7\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f022651836886310c\",\n        \"inputs\": {\n          \"word\": \"abba\"\n        }\n      },\n      \"ff9d2b067fcb7bba9\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f022651836886310c\",\n        \"build_id\": \"feeb4854ee5bdf273\"\n      },\n      \"fadda233c4298c4eb\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f022651836886310c\",\n        \"capture_id\": \"ff69f89dca0f1dca2\",\n        \"input_ref\": \"feb21be676b8795e7\"\n      },\n      \"f9969beb064d11d96\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f022651836886310c\",\n        \"rule\": \"Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.\",\n        \"admissible_input_ids\": [\n          \"feb21be676b8795e7\",\n          \"f7a28d3d6c7e10b93\"\n        ]\n      },\n      \"fdce4d17323ec72f7\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f965cbe7469569f16\",\n        \"inputs\": {\n          \"word\": \"ababa\"\n        }\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f70a946c6a8019deb\",\n      \"required_output\": \"q1\"\n    },\n    {\n      \"input_record_id\": \"f7a28d3d6c7e10b93\",\n      \"required_output\": \"q3\"\n    },\n    {\n      \"input_record_id\": \"feb21be676b8795e7\",\n      \"required_output\": \"q1\"\n    },\n    {\n      \"input_record_id\": \"fdce4d17323ec72f7\",\n      \"required_output\": \"q3\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "target_component_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_build_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_build_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_component_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "receipt_source_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "receipt_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            }
+          },
+          "required": [
+            "receipt_id",
+            "source_record_id"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "capture_groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "source_record_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "source_knowledge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "status": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN",
+                "DISAGREEING"
+              ]
+            },
+            "input_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "status",
+            "input_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "conflicting_capture_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "target_component_id",
+      "in_service_build_id",
+      "in_service_receipt_ids",
+      "other_build_receipt_ids",
+      "other_component_receipt_ids",
+      "receipt_source_links",
+      "capture_groups",
+      "source_knowledge",
+      "conflicting_capture_ids"
+    ],
+    "additionalProperties": false
+  }
+}

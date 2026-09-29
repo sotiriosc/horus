@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Perform only the specified bounded operation for each supplied input. Return exactly one JSON object satisfying the response schema. Results must use the exact output convention specified by the operational rule. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Compute both results in the supplied input order. Return only {\"results\":[\"first result\",\"second result\"]}.\n\nTask data:\n{\n  \"operational_rule\": \"For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.\",\n  \"inputs\": [\n    {\n      \"values\": [\n        12,\n        5,\n        14,\n        2,\n        9\n      ]\n    },\n    {\n      \"values\": [\n        3,\n        11,\n        4,\n        15,\n        6\n      ]\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "results"
+    ],
+    "additionalProperties": false
+  }
+}

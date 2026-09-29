@@ -1,0 +1,127 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "2,5,5,6",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "a": [
+                2,
+                1,
+                3
+              ],
+              "b": [
+                1,
+                2
+              ]
+            },
+            "required_result_for_claim": "2,5,5,6"
+          },
+          {
+            "claimed_input": {
+              "a": [
+                2,
+                1,
+                3
+              ],
+              "b": [
+                1,
+                2
+              ]
+            },
+            "required_result_for_claim": "2,5,5,6"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              1,
+              2
+            ]
+          },
+          "required_result": "2,5,5,6"
+        },
+        {
+          "input_value": {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              2,
+              1
+            ]
+          },
+          "required_result": "4,4,7,3"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "4,4,7,3",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "a": [
+                2,
+                1,
+                3
+              ],
+              "b": [
+                2,
+                1
+              ]
+            },
+            "required_result_for_claim": "4,4,7,3"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              1,
+              2
+            ]
+          },
+          "required_result": "2,5,5,6"
+        },
+        {
+          "input_value": {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              2,
+              1
+            ]
+          },
+          "required_result": "4,4,7,3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "3",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "aaaa",
+              "pattern": "aa"
+            },
+            "required_result_for_claim": "3"
+          },
+          {
+            "claimed_input": {
+              "text": "aaaa",
+              "pattern": "aa"
+            },
+            "required_result_for_claim": "3"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "aaaa",
+            "pattern": "aa"
+          },
+          "required_result": "3"
+        },
+        {
+          "input_value": {
+            "text": "aabaa",
+            "pattern": "aa"
+          },
+          "required_result": "2"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "3",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "aabaa",
+              "pattern": "aa"
+            },
+            "required_result_for_claim": "2"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "aaaa",
+            "pattern": "aa"
+          },
+          "required_result": "3"
+        },
+        {
+          "input_value": {
+            "text": "aabaa",
+            "pattern": "aa"
+          },
+          "required_result": "2"
+        }
+      ]
+    }
+  ]
+}

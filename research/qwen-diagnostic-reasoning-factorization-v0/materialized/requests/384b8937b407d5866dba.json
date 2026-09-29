@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nTask data:\n{\n  \"scope\": {\n    \"requested_unit\": \"unit-de26c6ac9\",\n    \"operation\": \"peak-window scanner\",\n    \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n    \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n  },\n  \"records\": {\n    \"f871b34c2e99647ad\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"inputs\": {\n        \"values\": [\n          8,\n          1,\n          6,\n          3,\n          10\n        ]\n      }\n    },\n    \"f45e360df966574ab\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"capture_id\": \"fe78ccd734480324a\",\n      \"input_ref\": \"ff90a2bbdc3067a0d\"\n    },\n    \"f6ae99815977f4c71\": {\n      \"kind\": \"component\",\n      \"unit_code\": \"unit-964127cd4\",\n      \"serving_manifest\": \"f62c555ef5382d562\",\n      \"contract_ref\": \"f8b85b0f7f97d9e72\"\n    },\n    \"f6831fcbdc3b74b69\": {\n      \"kind\": \"build\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"creation_order\": 2\n    },\n    \"f8b85b0f7f97d9e72\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"rule\": \"For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.\",\n      \"admissible_input_ids\": [\n        \"f78eb9c80b65df0b6\",\n        \"f871b34c2e99647ad\"\n      ]\n    },\n    \"f0017b1d293d6dddc\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"inputs\": {\n        \"values\": [\n          8,\n          1,\n          6,\n          3,\n          10\n        ]\n      }\n    },\n    \"f34ffb4f4d421d071\": {\n      \"kind\": \"build\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"creation_order\": 1\n    },\n    \"f1ed5760a33945a76\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"capture_id\": \"fe78ccd734480324a\",\n      \"input_ref\": \"ff90a2bbdc3067a0d\"\n    },\n    \"f539d2886c9ca537f\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"capture_id\": \"f519aeb704b4d778f\",\n      \"input_ref\": \"f0017b1d293d6dddc\"\n    },\n    \"fe1ff89235ee4adae\": {\n      \"kind\": \"deployment\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"build_id\": \"f6831fcbdc3b74b69\"\n    },\n    \"ff0d153b85a7b7a3c\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"build_id\": \"ffb4f342939d5caf7\",\n      \"source_ref\": \"f66a0985a20a4ffa0\",\n      \"emitted_value\": \"9,9,7\"\n    },\n    \"fa427527a84747bdb\": {\n      \"kind\": \"component\",\n      \"unit_code\": \"unit-de26c6ac9\",\n      \"serving_manifest\": \"fe1ff89235ee4adae\",\n      \"contract_ref\": \"fdc5da76e125ec749\"\n    },\n    \"f66a0985a20a4ffa0\": {\n      \"kind\": \"source\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"capture_id\": \"ff4d0b7330f2f4f7b\",\n      \"input_ref\": \"f78eb9c80b65df0b6\"\n    },\n    \"f78eb9c80b65df0b6\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"inputs\": {\n        \"values\": [\n          4,\n          9,\n          2,\n          7,\n          5\n        ]\n      }\n    },\n    \"ff90a2bbdc3067a0d\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"inputs\": {\n        \"values\": [\n          4,\n          9,\n          2,\n          7,\n          5\n        ]\n      }\n    },\n    \"f02d6b6302b9089a4\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"build_id\": \"f6831fcbdc3b74b69\",\n      \"source_ref\": \"f1ed5760a33945a76\",\n      \"emitted_value\": \"8,6,10\"\n    },\n    \"ffb4f342939d5caf7\": {\n      \"kind\": \"build\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"creation_order\": 2\n    },\n    \"fdc5da76e125ec749\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"rule\": \"For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.\",\n      \"admissible_input_ids\": [\n        \"ff90a2bbdc3067a0d\",\n        \"f0017b1d293d6dddc\"\n      ]\n    },\n    \"f62c555ef5382d562\": {\n      \"kind\": \"deployment\",\n      \"component_id\": \"f6ae99815977f4c71\",\n      \"build_id\": \"ffb4f342939d5caf7\"\n    },\n    \"f1093e9a719e0f212\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"fa427527a84747bdb\",\n      \"build_id\": \"f34ffb4f4d421d071\",\n      \"source_ref\": \"f539d2886c9ca537f\",\n      \"emitted_value\": \"8,6,10\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

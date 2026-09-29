@@ -1,0 +1,160 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-3fef9b3e7\",\n      \"operation\": \"ventilation logic evaluator\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"fb0839eb64a6ba77b\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-3fef9b3e7\",\n        \"serving_manifest\": \"fb14fac2eb9a19349\",\n        \"contract_ref\": \"f317de59090ce6a8c\"\n      },\n      \"fe087199c1ac19225\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f34858036791bf253\",\n        \"creation_order\": 2\n      },\n      \"f6f111d615e1a6052\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f34858036791bf253\",\n        \"inputs\": {\n          \"a\": 0,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"feffbc32a8f9e4ae8\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f34858036791bf253\",\n        \"rule\": \"Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.\",\n        \"admissible_input_ids\": [\n          \"f07ff32d2b7dbefc3\",\n          \"f6f111d615e1a6052\"\n        ]\n      },\n      \"fcdf59e07cfe0facf\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"inputs\": {\n          \"a\": 0,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"f5ed5d6b80b736bdb\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"capture_id\": \"f39b02656d2c0799f\",\n        \"input_ref\": \"fcdf59e07cfe0facf\"\n      },\n      \"fb14fac2eb9a19349\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"build_id\": \"f6f54c0e7c9ef10d5\"\n      },\n      \"ffb4fe64df0676774\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"rule\": \"Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.\",\n        \"admissible_input_ids\": [\n          \"f8a853ad23da0c4a1\",\n          \"f794d38d614595b7e\"\n        ]\n      },\n      \"f903eaa5cff9b04db\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"capture_id\": \"f0961e7103ab81ae2\",\n        \"input_ref\": \"f8a853ad23da0c4a1\"\n      },\n      \"fa9456fff10d2bcc1\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"build_id\": \"fb6b8c285572f9e62\"\n      },\n      \"fc133f3483eb5eef5\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"capture_id\": \"fe179fd9a5c2eaaf3\",\n        \"input_ref\": \"f646d8fa2cdac56f2\"\n      },\n      \"f646d8fa2cdac56f2\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"inputs\": {\n          \"a\": 1,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"f6f54c0e7c9ef10d5\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"creation_order\": 2\n      },\n      \"f5fbcd7a6208fa2c1\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f34858036791bf253\",\n        \"build_id\": \"fe087199c1ac19225\"\n      },\n      \"f07ff32d2b7dbefc3\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f34858036791bf253\",\n        \"inputs\": {\n          \"a\": 1,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"fb6b8c285572f9e62\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"creation_order\": 2\n      },\n      \"f8fd06d04b9f548ce\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"creation_order\": 1\n      },\n      \"f3cf8271235a11cce\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"build_id\": \"f8fd06d04b9f548ce\",\n        \"source_ref\": \"f903eaa5cff9b04db\",\n        \"emitted_value\": \"0\"\n      },\n      \"f8a853ad23da0c4a1\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"inputs\": {\n          \"a\": 1,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"f317de59090ce6a8c\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"rule\": \"Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.\",\n        \"admissible_input_ids\": [\n          \"f646d8fa2cdac56f2\",\n          \"fcdf59e07cfe0facf\"\n        ]\n      },\n      \"fd946d6d66bf7990d\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"capture_id\": \"fe179fd9a5c2eaaf3\",\n        \"input_ref\": \"f646d8fa2cdac56f2\"\n      },\n      \"f3998925df377e183\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f34858036791bf253\",\n        \"build_id\": \"fe087199c1ac19225\",\n        \"source_ref\": \"f32fe6379b4a73f7e\",\n        \"emitted_value\": \"0\"\n      },\n      \"f8632bc5811b448d1\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"creation_order\": 1\n      },\n      \"f34858036791bf253\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-e9f126cd1\",\n        \"serving_manifest\": \"f5fbcd7a6208fa2c1\",\n        \"contract_ref\": \"feffbc32a8f9e4ae8\"\n      },\n      \"f32fe6379b4a73f7e\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f34858036791bf253\",\n        \"capture_id\": \"f12b4ebc87b341ead\",\n        \"input_ref\": \"f6f111d615e1a6052\"\n      },\n      \"f794d38d614595b7e\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"inputs\": {\n          \"a\": 0,\n          \"b\": 1,\n          \"c\": 0\n        }\n      },\n      \"ff884cf8991b84a37\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"build_id\": \"f6f54c0e7c9ef10d5\",\n        \"source_ref\": \"fd946d6d66bf7990d\",\n        \"emitted_value\": \"1\"\n      },\n      \"f33e09e6b23f7fc62\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f081710fb47f4a97a\",\n        \"build_id\": \"fb6b8c285572f9e62\",\n        \"source_ref\": \"f903eaa5cff9b04db\",\n        \"emitted_value\": \"1\"\n      },\n      \"f5961a04f3099e4b8\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb0839eb64a6ba77b\",\n        \"build_id\": \"f8632bc5811b448d1\",\n        \"source_ref\": \"f5ed5d6b80b736bdb\",\n        \"emitted_value\": \"0\"\n      },\n      \"f081710fb47f4a97a\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-ea62e00b0\",\n        \"serving_manifest\": \"fa9456fff10d2bcc1\",\n        \"contract_ref\": \"ffb4fe64df0676774\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f6f111d615e1a6052\",\n      \"required_output\": \"0\"\n    },\n    {\n      \"input_record_id\": \"fcdf59e07cfe0facf\",\n      \"required_output\": \"0\"\n    },\n    {\n      \"input_record_id\": \"f646d8fa2cdac56f2\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f07ff32d2b7dbefc3\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f8a853ad23da0c4a1\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f794d38d614595b7e\",\n      \"required_output\": \"0\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "target_component_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_build_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_build_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_component_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "receipt_source_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "receipt_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            }
+          },
+          "required": [
+            "receipt_id",
+            "source_record_id"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "capture_groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "source_record_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "source_knowledge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "status": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN",
+                "DISAGREEING"
+              ]
+            },
+            "input_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "status",
+            "input_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "conflicting_capture_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "target_component_id",
+      "in_service_build_id",
+      "in_service_receipt_ids",
+      "other_build_receipt_ids",
+      "other_component_receipt_ids",
+      "receipt_source_links",
+      "capture_groups",
+      "source_knowledge",
+      "conflicting_capture_ids"
+    ],
+    "additionalProperties": false
+  }
+}

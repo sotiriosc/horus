@@ -1,0 +1,142 @@
+{
+  "scope": {
+    "requested_unit": "unit-beb86bd48",
+    "operation": "sample combination enumerator",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "faceb5bcfccff4968": {
+      "kind": "component",
+      "unit_code": "unit-13b73ae11",
+      "serving_manifest": "fcd0e3d28b7b3d379",
+      "contract_ref": "f94e26a01d655ad2c"
+    },
+    "f2f729d7f56c5912f": {
+      "kind": "receipt",
+      "component_id": "f56eff963c2010a84",
+      "build_id": "f8e6fe611c1d91270",
+      "source_ref": "f8caa039b151f77a4",
+      "emitted_value": "21"
+    },
+    "f36b03cf9b8dfc94f": {
+      "kind": "source",
+      "component_id": "f56eff963c2010a84",
+      "capture_id": "fd97d34686aba59da",
+      "input_ref": "fce700092e2a9f01a"
+    },
+    "fce700092e2a9f01a": {
+      "kind": "operand",
+      "component_id": "f56eff963c2010a84",
+      "inputs": {
+        "n": 7,
+        "k": 2
+      }
+    },
+    "ff46671261f92a87d": {
+      "kind": "deployment",
+      "component_id": "f56eff963c2010a84",
+      "build_id": "f8e6fe611c1d91270"
+    },
+    "f8e6fe611c1d91270": {
+      "kind": "build",
+      "component_id": "f56eff963c2010a84",
+      "creation_order": 2
+    },
+    "f5c1b9a033b6ffdcd": {
+      "kind": "build",
+      "component_id": "f56eff963c2010a84",
+      "creation_order": 1
+    },
+    "f3b7e78d3b86aebbb": {
+      "kind": "build",
+      "component_id": "faceb5bcfccff4968",
+      "creation_order": 2
+    },
+    "fbdec1e6fd1e745c3": {
+      "kind": "operand",
+      "component_id": "faceb5bcfccff4968",
+      "inputs": {
+        "n": 7,
+        "k": 3
+      }
+    },
+    "f94e26a01d655ad2c": {
+      "kind": "contract",
+      "component_id": "faceb5bcfccff4968",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_input_ids": [
+        "fe0d27e2207f84c45",
+        "fbdec1e6fd1e745c3"
+      ]
+    },
+    "f8306c91af1515849": {
+      "kind": "receipt",
+      "component_id": "f56eff963c2010a84",
+      "build_id": "f5c1b9a033b6ffdcd",
+      "source_ref": "fd09430bf7280fc40",
+      "emitted_value": "21"
+    },
+    "f427429d62648f739": {
+      "kind": "receipt",
+      "component_id": "faceb5bcfccff4968",
+      "build_id": "f3b7e78d3b86aebbb",
+      "source_ref": "f999cec687b28a25b",
+      "emitted_value": "21"
+    },
+    "fcd0e3d28b7b3d379": {
+      "kind": "deployment",
+      "component_id": "faceb5bcfccff4968",
+      "build_id": "f3b7e78d3b86aebbb"
+    },
+    "f999cec687b28a25b": {
+      "kind": "source",
+      "component_id": "faceb5bcfccff4968",
+      "capture_id": "f04b0cbcbff1d2414",
+      "input_ref": "fe0d27e2207f84c45"
+    },
+    "ff41d894e4d4a03b9": {
+      "kind": "contract",
+      "component_id": "f56eff963c2010a84",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_input_ids": [
+        "fce700092e2a9f01a",
+        "fe4133d590c1e2b7c"
+      ]
+    },
+    "fe4133d590c1e2b7c": {
+      "kind": "operand",
+      "component_id": "f56eff963c2010a84",
+      "inputs": {
+        "n": 7,
+        "k": 3
+      }
+    },
+    "f8caa039b151f77a4": {
+      "kind": "source",
+      "component_id": "f56eff963c2010a84",
+      "capture_id": "fd97d34686aba59da",
+      "input_ref": "fce700092e2a9f01a"
+    },
+    "fe0d27e2207f84c45": {
+      "kind": "operand",
+      "component_id": "faceb5bcfccff4968",
+      "inputs": {
+        "n": 7,
+        "k": 2
+      }
+    },
+    "fd09430bf7280fc40": {
+      "kind": "source",
+      "component_id": "f56eff963c2010a84",
+      "capture_id": "fc95d998c81557d26",
+      "input_ref": "fe4133d590c1e2b7c"
+    },
+    "f56eff963c2010a84": {
+      "kind": "component",
+      "unit_code": "unit-beb86bd48",
+      "serving_manifest": "ff46671261f92a87d",
+      "contract_ref": "ff41d894e4d4a03b9"
+    }
+  }
+}

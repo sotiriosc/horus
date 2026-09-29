@@ -1,0 +1,194 @@
+{
+  "scope": {
+    "requested_unit": "unit-096a77e60",
+    "operation": "inspection-route closure",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "fef7df363470359bf": {
+      "kind": "contract",
+      "component_id": "f78e394980f554ed8",
+      "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+      "admissible_input_ids": [
+        "f76cc7b0d235a7368",
+        "fb9656c1c5974f621"
+      ]
+    },
+    "fa70344e661bb83e2": {
+      "kind": "operand",
+      "component_id": "f96d26cc119107e5d",
+      "inputs": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "start": 3
+      }
+    },
+    "f19208ebd36739cb0": {
+      "kind": "receipt",
+      "component_id": "f96d26cc119107e5d",
+      "build_id": "f1192506237508bf1",
+      "source_ref": "ffe32276a49a52195",
+      "emitted_value": "11100"
+    },
+    "f4c271f67cad69bd6": {
+      "kind": "contract",
+      "component_id": "f96d26cc119107e5d",
+      "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+      "admissible_input_ids": [
+        "f40f400ffdc601d4b",
+        "fa70344e661bb83e2"
+      ]
+    },
+    "f3adb070ffc4b1703": {
+      "kind": "receipt",
+      "component_id": "f78e394980f554ed8",
+      "build_id": "fc7e2e40ba0d72d00",
+      "source_ref": "f026ba162db16b6c7",
+      "emitted_value": "11100"
+    },
+    "f026ba162db16b6c7": {
+      "kind": "source",
+      "component_id": "f78e394980f554ed8",
+      "capture_id": "f683b977db18a485e",
+      "input_ref": "UNKNOWN"
+    },
+    "ffe32276a49a52195": {
+      "kind": "source",
+      "component_id": "f96d26cc119107e5d",
+      "capture_id": "f2119be5e0f1bfa5f",
+      "input_ref": "f40f400ffdc601d4b"
+    },
+    "f96d26cc119107e5d": {
+      "kind": "component",
+      "unit_code": "unit-36e7a1f5c",
+      "serving_manifest": "feb7d80aec686365b",
+      "contract_ref": "f4c271f67cad69bd6"
+    },
+    "f78e394980f554ed8": {
+      "kind": "component",
+      "unit_code": "unit-096a77e60",
+      "serving_manifest": "f68fba01ef2f7f3c8",
+      "contract_ref": "fef7df363470359bf"
+    },
+    "fc7e2e40ba0d72d00": {
+      "kind": "build",
+      "component_id": "f78e394980f554ed8",
+      "creation_order": 2
+    },
+    "fb9656c1c5974f621": {
+      "kind": "operand",
+      "component_id": "f78e394980f554ed8",
+      "inputs": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "start": 3
+      }
+    },
+    "f8e0acea46ea6bf8e": {
+      "kind": "source",
+      "component_id": "f78e394980f554ed8",
+      "capture_id": "f683b977db18a485e",
+      "input_ref": "UNKNOWN"
+    },
+    "feb7d80aec686365b": {
+      "kind": "deployment",
+      "component_id": "f96d26cc119107e5d",
+      "build_id": "f1192506237508bf1"
+    },
+    "f878f7bfd328f2a82": {
+      "kind": "source",
+      "component_id": "f78e394980f554ed8",
+      "capture_id": "fb561a3ef339a5863",
+      "input_ref": "fb9656c1c5974f621"
+    },
+    "fb88a4a45635e5425": {
+      "kind": "receipt",
+      "component_id": "f78e394980f554ed8",
+      "build_id": "f693ea47be4296261",
+      "source_ref": "f878f7bfd328f2a82",
+      "emitted_value": "00011"
+    },
+    "f76cc7b0d235a7368": {
+      "kind": "operand",
+      "component_id": "f78e394980f554ed8",
+      "inputs": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "start": 0
+      }
+    },
+    "f1192506237508bf1": {
+      "kind": "build",
+      "component_id": "f96d26cc119107e5d",
+      "creation_order": 2
+    },
+    "f68fba01ef2f7f3c8": {
+      "kind": "deployment",
+      "component_id": "f78e394980f554ed8",
+      "build_id": "fc7e2e40ba0d72d00"
+    },
+    "f40f400ffdc601d4b": {
+      "kind": "operand",
+      "component_id": "f96d26cc119107e5d",
+      "inputs": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "start": 0
+      }
+    },
+    "f693ea47be4296261": {
+      "kind": "build",
+      "component_id": "f78e394980f554ed8",
+      "creation_order": 1
+    }
+  }
+}

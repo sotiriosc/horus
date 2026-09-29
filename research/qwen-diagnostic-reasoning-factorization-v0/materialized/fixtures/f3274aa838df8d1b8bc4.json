@@ -1,0 +1,314 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-c09cf59cd",
+      "operation": "conduit-route closure",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "fd124075ebe099ead": {
+        "kind": "build",
+        "component_id": "fc3c576206234e53c",
+        "creation_order": 2
+      },
+      "f889d7bacda206eae": {
+        "kind": "contract",
+        "component_id": "fc3c576206234e53c",
+        "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+        "admissible_input_ids": [
+          "f993056c368581c69",
+          "ffc3408f229ef1838"
+        ]
+      },
+      "fd85bade1641c3863": {
+        "kind": "source",
+        "component_id": "f301584b882646d80",
+        "capture_id": "fceeb8bb47fafffce",
+        "input_ref": "fa28649dd106d6c13"
+      },
+      "ffebc157a86b652d6": {
+        "kind": "contract",
+        "component_id": "f49633c60b4b175b3",
+        "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+        "admissible_input_ids": [
+          "f1eae996b42d269a4",
+          "fb6d443ed50f3e3ab"
+        ]
+      },
+      "fc0598bc8ca9df0de": {
+        "kind": "build",
+        "component_id": "f301584b882646d80",
+        "creation_order": 2
+      },
+      "fc3c576206234e53c": {
+        "kind": "component",
+        "unit_code": "unit-e1a1de7d2",
+        "serving_manifest": "f98220a21d69ab470",
+        "contract_ref": "f889d7bacda206eae"
+      },
+      "f5540720b5b995b29": {
+        "kind": "receipt",
+        "component_id": "f49633c60b4b175b3",
+        "build_id": "f750c8196a8467d6a",
+        "source_ref": "fb252d0901065f0b1",
+        "emitted_value": "00010"
+      },
+      "f4b0a9de2c6b2cda3": {
+        "kind": "source",
+        "component_id": "f301584b882646d80",
+        "capture_id": "f9e403ec5210af828",
+        "input_ref": "fee3d935b292d8eea"
+      },
+      "f0e8fb578fd86e171": {
+        "kind": "source",
+        "component_id": "fc3c576206234e53c",
+        "capture_id": "f7eb5d6267f9f3bb7",
+        "input_ref": "ffc3408f229ef1838"
+      },
+      "fb6d443ed50f3e3ab": {
+        "kind": "operand",
+        "component_id": "f49633c60b4b175b3",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 3
+        }
+      },
+      "f993056c368581c69": {
+        "kind": "operand",
+        "component_id": "fc3c576206234e53c",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 0
+        }
+      },
+      "f11da3abf1ea6d370": {
+        "kind": "contract",
+        "component_id": "f301584b882646d80",
+        "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+        "admissible_input_ids": [
+          "fa28649dd106d6c13",
+          "fee3d935b292d8eea"
+        ]
+      },
+      "f51f6729759bd1fbe": {
+        "kind": "source",
+        "component_id": "f301584b882646d80",
+        "capture_id": "fceeb8bb47fafffce",
+        "input_ref": "fa28649dd106d6c13"
+      },
+      "f09e92fa1c9559cba": {
+        "kind": "deployment",
+        "component_id": "f301584b882646d80",
+        "build_id": "fc0598bc8ca9df0de"
+      },
+      "f1eae996b42d269a4": {
+        "kind": "operand",
+        "component_id": "f49633c60b4b175b3",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 0
+        }
+      },
+      "ffc3408f229ef1838": {
+        "kind": "operand",
+        "component_id": "fc3c576206234e53c",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 3
+        }
+      },
+      "fe32beff563b479b5": {
+        "kind": "build",
+        "component_id": "f49633c60b4b175b3",
+        "creation_order": 2
+      },
+      "f750c8196a8467d6a": {
+        "kind": "build",
+        "component_id": "f49633c60b4b175b3",
+        "creation_order": 1
+      },
+      "fa28649dd106d6c13": {
+        "kind": "operand",
+        "component_id": "f301584b882646d80",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 0
+        }
+      },
+      "f98220a21d69ab470": {
+        "kind": "deployment",
+        "component_id": "fc3c576206234e53c",
+        "build_id": "fd124075ebe099ead"
+      },
+      "f8924413405dea5cc": {
+        "kind": "build",
+        "component_id": "f301584b882646d80",
+        "creation_order": 1
+      },
+      "f8d9f3a4c48081a39": {
+        "kind": "receipt",
+        "component_id": "f301584b882646d80",
+        "build_id": "f8924413405dea5cc",
+        "source_ref": "f4b0a9de2c6b2cda3",
+        "emitted_value": "11101"
+      },
+      "f5b3d0fb45c153896": {
+        "kind": "receipt",
+        "component_id": "f49633c60b4b175b3",
+        "build_id": "fe32beff563b479b5",
+        "source_ref": "fb252d0901065f0b1",
+        "emitted_value": "11101"
+      },
+      "fb252d0901065f0b1": {
+        "kind": "source",
+        "component_id": "f49633c60b4b175b3",
+        "capture_id": "f1900d75efbb2bbf9",
+        "input_ref": "f1eae996b42d269a4"
+      },
+      "f912adba6c55844af": {
+        "kind": "receipt",
+        "component_id": "f301584b882646d80",
+        "build_id": "fc0598bc8ca9df0de",
+        "source_ref": "f51f6729759bd1fbe",
+        "emitted_value": "11101"
+      },
+      "f301584b882646d80": {
+        "kind": "component",
+        "unit_code": "unit-c09cf59cd",
+        "serving_manifest": "f09e92fa1c9559cba",
+        "contract_ref": "f11da3abf1ea6d370"
+      },
+      "f49633c60b4b175b3": {
+        "kind": "component",
+        "unit_code": "unit-2f11f7434",
+        "serving_manifest": "fbdc394a1880f4acb",
+        "contract_ref": "ffebc157a86b652d6"
+      },
+      "fee3d935b292d8eea": {
+        "kind": "operand",
+        "component_id": "f301584b882646d80",
+        "inputs": {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 3
+        }
+      },
+      "f03e9d98620069cf8": {
+        "kind": "receipt",
+        "component_id": "fc3c576206234e53c",
+        "build_id": "fd124075ebe099ead",
+        "source_ref": "f0e8fb578fd86e171",
+        "emitted_value": "00010"
+      },
+      "fbdc394a1880f4acb": {
+        "kind": "deployment",
+        "component_id": "f49633c60b4b175b3",
+        "build_id": "fe32beff563b479b5"
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "fb6d443ed50f3e3ab",
+      "required_output": "00010"
+    },
+    {
+      "input_record_id": "f993056c368581c69",
+      "required_output": "11101"
+    },
+    {
+      "input_record_id": "f1eae996b42d269a4",
+      "required_output": "11101"
+    },
+    {
+      "input_record_id": "ffc3408f229ef1838",
+      "required_output": "00010"
+    },
+    {
+      "input_record_id": "fa28649dd106d6c13",
+      "required_output": "11101"
+    },
+    {
+      "input_record_id": "fee3d935b292d8eea",
+      "required_output": "00010"
+    }
+  ]
+}

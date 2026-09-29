@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-f814da426\",\n      \"operation\": \"tooth pitch calculator\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f8f3960ddc022d569\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"creation_order\": 2\n      },\n      \"f694307ae19ba7c2a\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"capture_id\": \"f65af39919f3deca0\",\n        \"input_ref\": \"f086165a8173af44a\"\n      },\n      \"fb62c623e1b477810\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"capture_id\": \"f9bafee67c81c4a46\",\n        \"input_ref\": \"f2b2f91b8fa8263b7\"\n      },\n      \"fdb8a81c2d867cb61\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"build_id\": \"faad00f8ba9fa25fd\",\n        \"source_ref\": \"fef4386c2cc01d83f\",\n        \"emitted_value\": \"1\"\n      },\n      \"fcec800b720b90298\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"rule\": \"Emit the greatest positive integer dividing both positive integers x and y exactly.\",\n        \"admissible_input_ids\": [\n          \"f086165a8173af44a\",\n          \"f148b4069a0fba509\"\n        ]\n      },\n      \"fe5c59790ae721202\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"creation_order\": 1\n      },\n      \"ff2bb076c20d0ddb1\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"build_id\": \"fe5c59790ae721202\",\n        \"source_ref\": \"f694307ae19ba7c2a\",\n        \"emitted_value\": \"1\"\n      },\n      \"fce48826d8edf191f\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"build_id\": \"f3e8aa4d1fbbcc995\",\n        \"source_ref\": \"f694307ae19ba7c2a\",\n        \"emitted_value\": \"13\"\n      },\n      \"f086165a8173af44a\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"inputs\": {\n          \"x\": 143,\n          \"y\": 221\n        }\n      },\n      \"f1072cb3e2e505084\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"build_id\": \"f8f3960ddc022d569\"\n      },\n      \"fbd1d75163d3e6daa\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-67653138a\",\n        \"serving_manifest\": \"f69f9dcdfb883b91e\",\n        \"contract_ref\": \"f4f2ca0af764002bf\"\n      },\n      \"f5f19304c7e8341cc\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"inputs\": {\n          \"x\": 143,\n          \"y\": 221\n        }\n      },\n      \"ffcf2a4eeb7ab2d21\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"capture_id\": \"ff734aafc29636546\",\n        \"input_ref\": \"fd3f1c0b9372269f2\"\n      },\n      \"fd3f1c0b9372269f2\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"inputs\": {\n          \"x\": 143,\n          \"y\": 221\n        }\n      },\n      \"fef4386c2cc01d83f\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"capture_id\": \"fa53ad5938a0def50\",\n        \"input_ref\": \"feceb8f4ac471003e\"\n      },\n      \"fde0cfa4256d72af5\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"build_id\": \"f3e8aa4d1fbbcc995\"\n      },\n      \"f343f3afa8e4c4da8\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"build_id\": \"f8f3960ddc022d569\",\n        \"source_ref\": \"ffcf2a4eeb7ab2d21\",\n        \"emitted_value\": \"1\"\n      },\n      \"f69f9dcdfb883b91e\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"build_id\": \"faad00f8ba9fa25fd\"\n      },\n      \"fa886e69f5cf5754a\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"creation_order\": 1\n      },\n      \"f6cba55fdc9bc0903\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-f7ffe6a9d\",\n        \"serving_manifest\": \"fde0cfa4256d72af5\",\n        \"contract_ref\": \"fcec800b720b90298\"\n      },\n      \"f4a4591f5b90514b6\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-f814da426\",\n        \"serving_manifest\": \"f1072cb3e2e505084\",\n        \"contract_ref\": \"f5df888d2c5fb0237\"\n      },\n      \"f4f2ca0af764002bf\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"rule\": \"Emit the greatest positive integer dividing both positive integers x and y exactly.\",\n        \"admissible_input_ids\": [\n          \"f5f19304c7e8341cc\",\n          \"feceb8f4ac471003e\"\n        ]\n      },\n      \"feceb8f4ac471003e\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"inputs\": {\n          \"x\": 144,\n          \"y\": 221\n        }\n      },\n      \"f148b4069a0fba509\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"inputs\": {\n          \"x\": 144,\n          \"y\": 221\n        }\n      },\n      \"f9017c7bb7d9fff89\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"capture_id\": \"ff734aafc29636546\",\n        \"input_ref\": \"fd3f1c0b9372269f2\"\n      },\n      \"f5df888d2c5fb0237\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"rule\": \"Emit the greatest positive integer dividing both positive integers x and y exactly.\",\n        \"admissible_input_ids\": [\n          \"fd3f1c0b9372269f2\",\n          \"f2b2f91b8fa8263b7\"\n        ]\n      },\n      \"faad00f8ba9fa25fd\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fbd1d75163d3e6daa\",\n        \"creation_order\": 2\n      },\n      \"f2b2f91b8fa8263b7\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"inputs\": {\n          \"x\": 144,\n          \"y\": 221\n        }\n      },\n      \"f3e8aa4d1fbbcc995\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f6cba55fdc9bc0903\",\n        \"creation_order\": 2\n      },\n      \"f6a82fc0b72f77915\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f4a4591f5b90514b6\",\n        \"build_id\": \"fa886e69f5cf5754a\",\n        \"source_ref\": \"fb62c623e1b477810\",\n        \"emitted_value\": \"1\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f086165a8173af44a\",\n      \"required_output\": \"13\"\n    },\n    {\n      \"input_record_id\": \"f5f19304c7e8341cc\",\n      \"required_output\": \"13\"\n    },\n    {\n      \"input_record_id\": \"fd3f1c0b9372269f2\",\n      \"required_output\": \"13\"\n    },\n    {\n      \"input_record_id\": \"feceb8f4ac471003e\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f148b4069a0fba509\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f2b2f91b8fa8263b7\",\n      \"required_output\": \"1\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "1",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "a": 1,
+              "b": 0,
+              "c": 0
+            },
+            "required_result_for_claim": "0"
+          },
+          {
+            "claimed_input": {
+              "a": 1,
+              "b": 0,
+              "c": 0
+            },
+            "required_result_for_claim": "0"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "required_result": "0"
+        },
+        {
+          "input_value": {
+            "a": 0,
+            "b": 0,
+            "c": 1
+          },
+          "required_result": "1"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "1",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "a": 0,
+              "b": 0,
+              "c": 1
+            },
+            "required_result_for_claim": "1"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          "required_result": "0"
+        },
+        {
+          "input_value": {
+            "a": 0,
+            "b": 0,
+            "c": 1
+          },
+          "required_result": "1"
+        }
+      ]
+    }
+  ]
+}

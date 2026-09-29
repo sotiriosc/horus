@@ -1,0 +1,3152 @@
+[
+  {
+    "world_id": "w4045154ea61d",
+    "index": 0,
+    "operation": 0,
+    "family": "conjunctive-disjunctive Boolean circuit",
+    "class": "SUPPORTED_CURRENT_DEFECT",
+    "composition": "simpler",
+    "phase": 0,
+    "O": {
+      "results": [
+        "0",
+        "1"
+      ]
+    },
+    "S": {
+      "target_component_id": "f503610179c67280f",
+      "in_service_build_id": "f1899e85f12ee3698",
+      "in_service_receipt_ids": [
+        "f3ce60b65c3b19afb"
+      ],
+      "other_build_receipt_ids": [
+        "f2ebf861329fe5882"
+      ],
+      "other_component_receipt_ids": [
+        "fa985db8df742b5bf"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f2ebf861329fe5882",
+          "source_record_id": "fd8ab526bd4f5dc7b"
+        },
+        {
+          "receipt_id": "f3ce60b65c3b19afb",
+          "source_record_id": "f1554a1525796ac55"
+        },
+        {
+          "receipt_id": "fa985db8df742b5bf",
+          "source_record_id": "f306508ecc46c1753"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f179e69112049691b",
+          "source_record_ids": [
+            "f1554a1525796ac55",
+            "f7126886902e060a8"
+          ]
+        },
+        {
+          "capture_id": "f6c32bea928634b09",
+          "source_record_ids": [
+            "f306508ecc46c1753"
+          ]
+        },
+        {
+          "capture_id": "f9837627926517f68",
+          "source_record_ids": [
+            "fd8ab526bd4f5dc7b"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f179e69112049691b",
+          "status": "KNOWN",
+          "input_ids": [
+            "f39db014b99ffdfb8"
+          ]
+        },
+        {
+          "capture_id": "f6c32bea928634b09",
+          "status": "KNOWN",
+          "input_ids": [
+            "f30483154df4eda25"
+          ]
+        },
+        {
+          "capture_id": "f9837627926517f68",
+          "status": "KNOWN",
+          "input_ids": [
+            "f5f60aa93842fc69c"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "E": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "proof": {
+      "contract": "Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.",
+      "admissible_inputs": [
+        {
+          "a": 1,
+          "b": 0,
+          "c": 0
+        },
+        {
+          "a": 0,
+          "b": 0,
+          "c": 1
+        }
+      ],
+      "mechanically_required_results": [
+        "0",
+        "1"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "1",
+      "other_build_input": 1,
+      "other_build_observed": "1",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "SUPPORTED_CURRENT_DEFECT",
+      "argument": "Known agreeing service input requires one result but the exact service observation is the other; hidden transformations are excluded."
+    },
+    "metadata": {
+      "index": 0,
+      "target": "f503610179c67280f",
+      "service_build": "f1899e85f12ee3698",
+      "other_build": "f0654a4071a5c4dcc",
+      "input_ids": [
+        "f39db014b99ffdfb8",
+        "f5f60aa93842fc69c"
+      ],
+      "current_sources": [
+        "f1554a1525796ac55",
+        "f7126886902e060a8"
+      ],
+      "current_capture": "f179e69112049691b",
+      "other_source": "fd8ab526bd4f5dc7b",
+      "current_receipt": "f3ce60b65c3b19afb",
+      "other_receipt": "f2ebf861329fe5882"
+    }
+  },
+  {
+    "world_id": "wd440bda21d29",
+    "index": 1,
+    "operation": 1,
+    "family": "finite-state sequence recognizer",
+    "class": "NO_SUPPORTED_DIAGNOSIS",
+    "composition": "simpler",
+    "phase": 0,
+    "O": {
+      "results": [
+        "q1",
+        "q3"
+      ]
+    },
+    "S": {
+      "target_component_id": "f965cbe7469569f16",
+      "in_service_build_id": "f4d963ed10ab4c6d7",
+      "in_service_receipt_ids": [
+        "f9fb669ab8bf86836"
+      ],
+      "other_build_receipt_ids": [
+        "ff95dc6dea6e03d15"
+      ],
+      "other_component_receipt_ids": [
+        "f9d2dc3481a3bc0e4"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f9d2dc3481a3bc0e4",
+          "source_record_id": "fadda233c4298c4eb"
+        },
+        {
+          "receipt_id": "f9fb669ab8bf86836",
+          "source_record_id": "f999b7869c64a44c3"
+        },
+        {
+          "receipt_id": "ff95dc6dea6e03d15",
+          "source_record_id": "f8d5469e7981a7bfb"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "ff400742730ae6143",
+          "source_record_ids": [
+            "f8d5469e7981a7bfb"
+          ]
+        },
+        {
+          "capture_id": "ff69f89dca0f1dca2",
+          "source_record_ids": [
+            "fadda233c4298c4eb"
+          ]
+        },
+        {
+          "capture_id": "ffb8b211285f872b7",
+          "source_record_ids": [
+            "f0aaae274594be729",
+            "f999b7869c64a44c3"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "ff400742730ae6143",
+          "status": "KNOWN",
+          "input_ids": [
+            "fdce4d17323ec72f7"
+          ]
+        },
+        {
+          "capture_id": "ff69f89dca0f1dca2",
+          "status": "KNOWN",
+          "input_ids": [
+            "feb21be676b8795e7"
+          ]
+        },
+        {
+          "capture_id": "ffb8b211285f872b7",
+          "status": "KNOWN",
+          "input_ids": [
+            "f70a946c6a8019deb"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "E": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "proof": {
+      "contract": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_inputs": [
+        {
+          "word": "abba"
+        },
+        {
+          "word": "ababa"
+        }
+      ],
+      "mechanically_required_results": [
+        "q1",
+        "q3"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "q1",
+      "other_build_input": 1,
+      "other_build_observed": "q3",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "argument": "Current and earlier observations match their known requirements; the bounded input and capture evidence is complete and agreeing."
+    },
+    "metadata": {
+      "index": 1,
+      "target": "f965cbe7469569f16",
+      "service_build": "f4d963ed10ab4c6d7",
+      "other_build": "fdf2530a92de52126",
+      "input_ids": [
+        "f70a946c6a8019deb",
+        "fdce4d17323ec72f7"
+      ],
+      "current_sources": [
+        "f999b7869c64a44c3",
+        "f0aaae274594be729"
+      ],
+      "current_capture": "ffb8b211285f872b7",
+      "other_source": "f8d5469e7981a7bfb",
+      "current_receipt": "f9fb669ab8bf86836",
+      "other_receipt": "ff95dc6dea6e03d15"
+    }
+  },
+  {
+    "world_id": "wb465decd9d84",
+    "index": 2,
+    "operation": 2,
+    "family": "directed reachability closure",
+    "class": "INSUFFICIENT_EVIDENCE",
+    "composition": "simpler",
+    "phase": 0,
+    "O": {
+      "results": [
+        "11100",
+        "00011"
+      ]
+    },
+    "S": {
+      "target_component_id": "f78e394980f554ed8",
+      "in_service_build_id": "fc7e2e40ba0d72d00",
+      "in_service_receipt_ids": [
+        "f3adb070ffc4b1703"
+      ],
+      "other_build_receipt_ids": [
+        "fb88a4a45635e5425"
+      ],
+      "other_component_receipt_ids": [
+        "f19208ebd36739cb0"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f19208ebd36739cb0",
+          "source_record_id": "ffe32276a49a52195"
+        },
+        {
+          "receipt_id": "f3adb070ffc4b1703",
+          "source_record_id": "f026ba162db16b6c7"
+        },
+        {
+          "receipt_id": "fb88a4a45635e5425",
+          "source_record_id": "f878f7bfd328f2a82"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f2119be5e0f1bfa5f",
+          "source_record_ids": [
+            "ffe32276a49a52195"
+          ]
+        },
+        {
+          "capture_id": "f683b977db18a485e",
+          "source_record_ids": [
+            "f026ba162db16b6c7",
+            "f8e0acea46ea6bf8e"
+          ]
+        },
+        {
+          "capture_id": "fb561a3ef339a5863",
+          "source_record_ids": [
+            "f878f7bfd328f2a82"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f2119be5e0f1bfa5f",
+          "status": "KNOWN",
+          "input_ids": [
+            "f40f400ffdc601d4b"
+          ]
+        },
+        {
+          "capture_id": "f683b977db18a485e",
+          "status": "UNKNOWN",
+          "input_ids": []
+        },
+        {
+          "capture_id": "fb561a3ef339a5863",
+          "status": "KNOWN",
+          "input_ids": [
+            "fb9656c1c5974f621"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "E": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+      "admissible_inputs": [
+        {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "start": 0
+        },
+        {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "start": 3
+        }
+      ],
+      "mechanically_required_results": [
+        "11100",
+        "00011"
+      ],
+      "service_claims": [
+        null,
+        null
+      ],
+      "service_observed": "11100",
+      "other_build_input": 1,
+      "other_build_observed": "00011",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INSUFFICIENT_EVIDENCE",
+      "argument": "The service input is uncaptured. Both supplied admissible inputs remain possible, but only one yields the observed result; no declaration distinguishes them."
+    },
+    "metadata": {
+      "index": 2,
+      "target": "f78e394980f554ed8",
+      "service_build": "fc7e2e40ba0d72d00",
+      "other_build": "f693ea47be4296261",
+      "input_ids": [
+        "f76cc7b0d235a7368",
+        "fb9656c1c5974f621"
+      ],
+      "current_sources": [
+        "f026ba162db16b6c7",
+        "f8e0acea46ea6bf8e"
+      ],
+      "current_capture": "f683b977db18a485e",
+      "other_source": "f878f7bfd328f2a82",
+      "current_receipt": "f3adb070ffc4b1703",
+      "other_receipt": "fb88a4a45635e5425"
+    }
+  },
+  {
+    "world_id": "w8778803bb730",
+    "index": 3,
+    "operation": 3,
+    "family": "unit-cost string edit distance",
+    "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "composition": "simpler",
+    "phase": 0,
+    "O": {
+      "results": [
+        "2",
+        "1"
+      ]
+    },
+    "S": {
+      "target_component_id": "f62e7f0ca7dbf5ff0",
+      "in_service_build_id": "fcff2e2f3c2861536",
+      "in_service_receipt_ids": [
+        "f04e7afc95ee6bd76"
+      ],
+      "other_build_receipt_ids": [
+        "fa27ad222063ef3ea"
+      ],
+      "other_component_receipt_ids": [
+        "f892959439602951e"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f04e7afc95ee6bd76",
+          "source_record_id": "f0d64ca8b96421419"
+        },
+        {
+          "receipt_id": "f892959439602951e",
+          "source_record_id": "f2ce075dfa070fa15"
+        },
+        {
+          "receipt_id": "fa27ad222063ef3ea",
+          "source_record_id": "f1ab627ea433342bc"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f2b5bf4f1be36c33f",
+          "source_record_ids": [
+            "f1ab627ea433342bc"
+          ]
+        },
+        {
+          "capture_id": "f5519e76adbbafeee",
+          "source_record_ids": [
+            "f2ce075dfa070fa15"
+          ]
+        },
+        {
+          "capture_id": "f65cd8a37c80a3e2b",
+          "source_record_ids": [
+            "f0d64ca8b96421419",
+            "fcd95226cd17f4b5c"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f2b5bf4f1be36c33f",
+          "status": "KNOWN",
+          "input_ids": [
+            "f4389c2c10fa12b9f"
+          ]
+        },
+        {
+          "capture_id": "f5519e76adbbafeee",
+          "status": "KNOWN",
+          "input_ids": [
+            "f72adc1762d5f35ff"
+          ]
+        },
+        {
+          "capture_id": "f65cd8a37c80a3e2b",
+          "status": "KNOWN",
+          "input_ids": [
+            "f5c8fa318a53cecd1"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "E": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "proof": {
+      "contract": "Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.",
+      "admissible_inputs": [
+        {
+          "left": "sail",
+          "right": "salt"
+        },
+        {
+          "left": "stone",
+          "right": "stony"
+        }
+      ],
+      "mechanically_required_results": [
+        "2",
+        "1"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "2",
+      "other_build_input": 1,
+      "other_build_observed": "2",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "argument": "The earlier build observation violates its known requirement; the explicitly in-service newer build matches its requirement."
+    },
+    "metadata": {
+      "index": 3,
+      "target": "f62e7f0ca7dbf5ff0",
+      "service_build": "fcff2e2f3c2861536",
+      "other_build": "fb07adff89b2817dd",
+      "input_ids": [
+        "f5c8fa318a53cecd1",
+        "f4389c2c10fa12b9f"
+      ],
+      "current_sources": [
+        "f0d64ca8b96421419",
+        "fcd95226cd17f4b5c"
+      ],
+      "current_capture": "f65cd8a37c80a3e2b",
+      "other_source": "f1ab627ea433342bc",
+      "current_receipt": "f04e7afc95ee6bd76",
+      "other_receipt": "fa27ad222063ef3ea"
+    }
+  },
+  {
+    "world_id": "w2d40dc1ef9ab",
+    "index": 4,
+    "operation": 4,
+    "family": "greatest common divisor",
+    "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "composition": "simpler",
+    "phase": 0,
+    "O": {
+      "results": [
+        "42",
+        "1"
+      ]
+    },
+    "S": {
+      "target_component_id": "ff5028bde62f44f53",
+      "in_service_build_id": "f9678b56a15cedffc",
+      "in_service_receipt_ids": [
+        "f601ea591b640e637"
+      ],
+      "other_build_receipt_ids": [
+        "fd91c10caf2f442c6"
+      ],
+      "other_component_receipt_ids": [
+        "fe339d4a2343f2368"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f601ea591b640e637",
+          "source_record_id": "f5e7813b067148fb4"
+        },
+        {
+          "receipt_id": "fd91c10caf2f442c6",
+          "source_record_id": "fd1aa2de39bd6d5f7"
+        },
+        {
+          "receipt_id": "fe339d4a2343f2368",
+          "source_record_id": "f9b37b710c1498551"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f7e0c37c2501907f8",
+          "source_record_ids": [
+            "f9b37b710c1498551"
+          ]
+        },
+        {
+          "capture_id": "f7f6b0fd67f4fd054",
+          "source_record_ids": [
+            "f4aa57efe8620f8cd",
+            "f5e7813b067148fb4"
+          ]
+        },
+        {
+          "capture_id": "f9307e27b46c0be5e",
+          "source_record_ids": [
+            "fd1aa2de39bd6d5f7"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f7e0c37c2501907f8",
+          "status": "KNOWN",
+          "input_ids": [
+            "fd79738fe1a99ff03"
+          ]
+        },
+        {
+          "capture_id": "f7f6b0fd67f4fd054",
+          "status": "DISAGREEING",
+          "input_ids": [
+            "f71338dfb5d0ad89b",
+            "febbe1b8cb25fcff8"
+          ]
+        },
+        {
+          "capture_id": "f9307e27b46c0be5e",
+          "status": "KNOWN",
+          "input_ids": [
+            "f71338dfb5d0ad89b"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": [
+        "f7f6b0fd67f4fd054"
+      ]
+    },
+    "R": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "E": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "admissible_inputs": [
+        {
+          "x": 84,
+          "y": 126
+        },
+        {
+          "x": 85,
+          "y": 126
+        }
+      ],
+      "mechanically_required_results": [
+        "42",
+        "1"
+      ],
+      "service_claims": [
+        0,
+        1
+      ],
+      "service_observed": "42",
+      "other_build_input": 1,
+      "other_build_observed": "1",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "argument": "Two equal-standing declarations of one immutable service-input event identify different operands, with no additional source to resolve the incompatibility."
+    },
+    "metadata": {
+      "index": 4,
+      "target": "ff5028bde62f44f53",
+      "service_build": "f9678b56a15cedffc",
+      "other_build": "fab08073aeb48a932",
+      "input_ids": [
+        "febbe1b8cb25fcff8",
+        "f71338dfb5d0ad89b"
+      ],
+      "current_sources": [
+        "f5e7813b067148fb4",
+        "f4aa57efe8620f8cd"
+      ],
+      "current_capture": "f7f6b0fd67f4fd054",
+      "other_source": "fd1aa2de39bd6d5f7",
+      "current_receipt": "f601ea591b640e637",
+      "other_receipt": "fd91c10caf2f442c6"
+    }
+  },
+  {
+    "world_id": "w50e12a812eb3",
+    "index": 5,
+    "operation": 5,
+    "family": "sliding window maximum",
+    "class": "SUPPORTED_CURRENT_DEFECT",
+    "composition": "simpler",
+    "phase": 1,
+    "O": {
+      "results": [
+        "9,9,7",
+        "8,6,10"
+      ]
+    },
+    "S": {
+      "target_component_id": "fa427527a84747bdb",
+      "in_service_build_id": "f6831fcbdc3b74b69",
+      "in_service_receipt_ids": [
+        "f02d6b6302b9089a4"
+      ],
+      "other_build_receipt_ids": [
+        "f1093e9a719e0f212"
+      ],
+      "other_component_receipt_ids": [
+        "ff0d153b85a7b7a3c"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f02d6b6302b9089a4",
+          "source_record_id": "f1ed5760a33945a76"
+        },
+        {
+          "receipt_id": "f1093e9a719e0f212",
+          "source_record_id": "f539d2886c9ca537f"
+        },
+        {
+          "receipt_id": "ff0d153b85a7b7a3c",
+          "source_record_id": "f66a0985a20a4ffa0"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f519aeb704b4d778f",
+          "source_record_ids": [
+            "f539d2886c9ca537f"
+          ]
+        },
+        {
+          "capture_id": "fe78ccd734480324a",
+          "source_record_ids": [
+            "f1ed5760a33945a76",
+            "f45e360df966574ab"
+          ]
+        },
+        {
+          "capture_id": "ff4d0b7330f2f4f7b",
+          "source_record_ids": [
+            "f66a0985a20a4ffa0"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f519aeb704b4d778f",
+          "status": "KNOWN",
+          "input_ids": [
+            "f0017b1d293d6dddc"
+          ]
+        },
+        {
+          "capture_id": "fe78ccd734480324a",
+          "status": "KNOWN",
+          "input_ids": [
+            "ff90a2bbdc3067a0d"
+          ]
+        },
+        {
+          "capture_id": "ff4d0b7330f2f4f7b",
+          "status": "KNOWN",
+          "input_ids": [
+            "f78eb9c80b65df0b6"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "E": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "proof": {
+      "contract": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+      "admissible_inputs": [
+        {
+          "values": [
+            4,
+            9,
+            2,
+            7,
+            5
+          ]
+        },
+        {
+          "values": [
+            8,
+            1,
+            6,
+            3,
+            10
+          ]
+        }
+      ],
+      "mechanically_required_results": [
+        "9,9,7",
+        "8,6,10"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "8,6,10",
+      "other_build_input": 1,
+      "other_build_observed": "8,6,10",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "SUPPORTED_CURRENT_DEFECT",
+      "argument": "Known agreeing service input requires one result but the exact service observation is the other; hidden transformations are excluded."
+    },
+    "metadata": {
+      "index": 5,
+      "target": "fa427527a84747bdb",
+      "service_build": "f6831fcbdc3b74b69",
+      "other_build": "f34ffb4f4d421d071",
+      "input_ids": [
+        "ff90a2bbdc3067a0d",
+        "f0017b1d293d6dddc"
+      ],
+      "current_sources": [
+        "f1ed5760a33945a76",
+        "f45e360df966574ab"
+      ],
+      "current_capture": "fe78ccd734480324a",
+      "other_source": "f539d2886c9ca537f",
+      "current_receipt": "f02d6b6302b9089a4",
+      "other_receipt": "f1093e9a719e0f212"
+    }
+  },
+  {
+    "world_id": "wc615b7a5117f",
+    "index": 6,
+    "operation": 6,
+    "family": "finite linear convolution",
+    "class": "NO_SUPPORTED_DIAGNOSIS",
+    "composition": "simpler",
+    "phase": 1,
+    "O": {
+      "results": [
+        "2,5,5,6",
+        "4,4,7,3"
+      ]
+    },
+    "S": {
+      "target_component_id": "f86ec89f09f6c4a0a",
+      "in_service_build_id": "f190a836f030beaf5",
+      "in_service_receipt_ids": [
+        "f2f0d959ac36096d5"
+      ],
+      "other_build_receipt_ids": [
+        "fff914dcf4d9b56df"
+      ],
+      "other_component_receipt_ids": [
+        "fd9ace7716845a695"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f2f0d959ac36096d5",
+          "source_record_id": "fc45f84a3c0fca67e"
+        },
+        {
+          "receipt_id": "fd9ace7716845a695",
+          "source_record_id": "f3a93acb80c17d236"
+        },
+        {
+          "receipt_id": "fff914dcf4d9b56df",
+          "source_record_id": "f8637252dfe9b0dc6"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "fa41f46f40a73ffac",
+          "source_record_ids": [
+            "f3a93acb80c17d236"
+          ]
+        },
+        {
+          "capture_id": "fcfbc581410e3dd83",
+          "source_record_ids": [
+            "f8637252dfe9b0dc6"
+          ]
+        },
+        {
+          "capture_id": "fd56eb4a7a34ac06c",
+          "source_record_ids": [
+            "f26fdb22f8210a9c5",
+            "fc45f84a3c0fca67e"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "fa41f46f40a73ffac",
+          "status": "KNOWN",
+          "input_ids": [
+            "f164d523079478eed"
+          ]
+        },
+        {
+          "capture_id": "fcfbc581410e3dd83",
+          "status": "KNOWN",
+          "input_ids": [
+            "fb8bd8579a84dc164"
+          ]
+        },
+        {
+          "capture_id": "fd56eb4a7a34ac06c",
+          "status": "KNOWN",
+          "input_ids": [
+            "f3ba86330c2a4dc63"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "E": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "proof": {
+      "contract": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "admissible_inputs": [
+        {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            1,
+            2
+          ]
+        },
+        {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            2,
+            1
+          ]
+        }
+      ],
+      "mechanically_required_results": [
+        "2,5,5,6",
+        "4,4,7,3"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "2,5,5,6",
+      "other_build_input": 1,
+      "other_build_observed": "4,4,7,3",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "argument": "Current and earlier observations match their known requirements; the bounded input and capture evidence is complete and agreeing."
+    },
+    "metadata": {
+      "index": 6,
+      "target": "f86ec89f09f6c4a0a",
+      "service_build": "f190a836f030beaf5",
+      "other_build": "f4d3067f5030e7045",
+      "input_ids": [
+        "f3ba86330c2a4dc63",
+        "fb8bd8579a84dc164"
+      ],
+      "current_sources": [
+        "fc45f84a3c0fca67e",
+        "f26fdb22f8210a9c5"
+      ],
+      "current_capture": "fd56eb4a7a34ac06c",
+      "other_source": "f8637252dfe9b0dc6",
+      "current_receipt": "f2f0d959ac36096d5",
+      "other_receipt": "fff914dcf4d9b56df"
+    }
+  },
+  {
+    "world_id": "w84507bf62726",
+    "index": 7,
+    "operation": 7,
+    "family": "overlapping substring occurrence count",
+    "class": "INSUFFICIENT_EVIDENCE",
+    "composition": "simpler",
+    "phase": 1,
+    "O": {
+      "results": [
+        "2",
+        "1"
+      ]
+    },
+    "S": {
+      "target_component_id": "fb74c2ebfcf99d8a9",
+      "in_service_build_id": "f6b242855cf20fc0d",
+      "in_service_receipt_ids": [
+        "f4cbee948e4403679"
+      ],
+      "other_build_receipt_ids": [
+        "f61aed0b7203708f3"
+      ],
+      "other_component_receipt_ids": [
+        "f55b091c19fa811f1"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f4cbee948e4403679",
+          "source_record_id": "f0aac0dbb40dfe41a"
+        },
+        {
+          "receipt_id": "f55b091c19fa811f1",
+          "source_record_id": "ff91f8ed0d50be3a2"
+        },
+        {
+          "receipt_id": "f61aed0b7203708f3",
+          "source_record_id": "f194d79be779e5065"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f78d7a7f9288024da",
+          "source_record_ids": [
+            "f194d79be779e5065"
+          ]
+        },
+        {
+          "capture_id": "f820b8096774bd585",
+          "source_record_ids": [
+            "f04fa90e61d454cb0",
+            "f0aac0dbb40dfe41a"
+          ]
+        },
+        {
+          "capture_id": "fdbd30360e741179f",
+          "source_record_ids": [
+            "ff91f8ed0d50be3a2"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f78d7a7f9288024da",
+          "status": "KNOWN",
+          "input_ids": [
+            "f855e1f3e38318895"
+          ]
+        },
+        {
+          "capture_id": "f820b8096774bd585",
+          "status": "UNKNOWN",
+          "input_ids": []
+        },
+        {
+          "capture_id": "fdbd30360e741179f",
+          "status": "KNOWN",
+          "input_ids": [
+            "fe07f142182095f00"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "E": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+      "admissible_inputs": [
+        {
+          "text": "banana",
+          "pattern": "ana"
+        },
+        {
+          "text": "bandana",
+          "pattern": "ana"
+        }
+      ],
+      "mechanically_required_results": [
+        "2",
+        "1"
+      ],
+      "service_claims": [
+        null,
+        null
+      ],
+      "service_observed": "2",
+      "other_build_input": 1,
+      "other_build_observed": "1",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INSUFFICIENT_EVIDENCE",
+      "argument": "The service input is uncaptured. Both supplied admissible inputs remain possible, but only one yields the observed result; no declaration distinguishes them."
+    },
+    "metadata": {
+      "index": 7,
+      "target": "fb74c2ebfcf99d8a9",
+      "service_build": "f6b242855cf20fc0d",
+      "other_build": "f29bf68d900b5fd49",
+      "input_ids": [
+        "f2c50232472c1c6a8",
+        "f855e1f3e38318895"
+      ],
+      "current_sources": [
+        "f0aac0dbb40dfe41a",
+        "f04fa90e61d454cb0"
+      ],
+      "current_capture": "f820b8096774bd585",
+      "other_source": "f194d79be779e5065",
+      "current_receipt": "f4cbee948e4403679",
+      "other_receipt": "f61aed0b7203708f3"
+    }
+  },
+  {
+    "world_id": "wc7e52e7d1b96",
+    "index": 8,
+    "operation": 8,
+    "family": "binomial selection count",
+    "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "composition": "simpler",
+    "phase": 1,
+    "O": {
+      "results": [
+        "21",
+        "35"
+      ]
+    },
+    "S": {
+      "target_component_id": "f56eff963c2010a84",
+      "in_service_build_id": "f8e6fe611c1d91270",
+      "in_service_receipt_ids": [
+        "f2f729d7f56c5912f"
+      ],
+      "other_build_receipt_ids": [
+        "f8306c91af1515849"
+      ],
+      "other_component_receipt_ids": [
+        "f427429d62648f739"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f2f729d7f56c5912f",
+          "source_record_id": "f8caa039b151f77a4"
+        },
+        {
+          "receipt_id": "f427429d62648f739",
+          "source_record_id": "f999cec687b28a25b"
+        },
+        {
+          "receipt_id": "f8306c91af1515849",
+          "source_record_id": "fd09430bf7280fc40"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f04b0cbcbff1d2414",
+          "source_record_ids": [
+            "f999cec687b28a25b"
+          ]
+        },
+        {
+          "capture_id": "fc95d998c81557d26",
+          "source_record_ids": [
+            "fd09430bf7280fc40"
+          ]
+        },
+        {
+          "capture_id": "fd97d34686aba59da",
+          "source_record_ids": [
+            "f36b03cf9b8dfc94f",
+            "f8caa039b151f77a4"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f04b0cbcbff1d2414",
+          "status": "KNOWN",
+          "input_ids": [
+            "fe0d27e2207f84c45"
+          ]
+        },
+        {
+          "capture_id": "fc95d998c81557d26",
+          "status": "KNOWN",
+          "input_ids": [
+            "fe4133d590c1e2b7c"
+          ]
+        },
+        {
+          "capture_id": "fd97d34686aba59da",
+          "status": "KNOWN",
+          "input_ids": [
+            "fce700092e2a9f01a"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "E": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "proof": {
+      "contract": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_inputs": [
+        {
+          "n": 7,
+          "k": 2
+        },
+        {
+          "n": 7,
+          "k": 3
+        }
+      ],
+      "mechanically_required_results": [
+        "21",
+        "35"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "21",
+      "other_build_input": 1,
+      "other_build_observed": "21",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "argument": "The earlier build observation violates its known requirement; the explicitly in-service newer build matches its requirement."
+    },
+    "metadata": {
+      "index": 8,
+      "target": "f56eff963c2010a84",
+      "service_build": "f8e6fe611c1d91270",
+      "other_build": "f5c1b9a033b6ffdcd",
+      "input_ids": [
+        "fce700092e2a9f01a",
+        "fe4133d590c1e2b7c"
+      ],
+      "current_sources": [
+        "f8caa039b151f77a4",
+        "f36b03cf9b8dfc94f"
+      ],
+      "current_capture": "fd97d34686aba59da",
+      "other_source": "fd09430bf7280fc40",
+      "current_receipt": "f2f729d7f56c5912f",
+      "other_receipt": "f8306c91af1515849"
+    }
+  },
+  {
+    "world_id": "wc0f27af52686",
+    "index": 9,
+    "operation": 9,
+    "family": "stable vowel deletion",
+    "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "composition": "simpler",
+    "phase": 1,
+    "O": {
+      "results": [
+        "RCHD",
+        "RCHRD"
+      ]
+    },
+    "S": {
+      "target_component_id": "f803fb9811872aab3",
+      "in_service_build_id": "f0779a427414615c8",
+      "in_service_receipt_ids": [
+        "ffc13e4b4a9b7fd35"
+      ],
+      "other_build_receipt_ids": [
+        "ff7b03a24ed7239c1"
+      ],
+      "other_component_receipt_ids": [
+        "fc634783112a9d2c8"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "fc634783112a9d2c8",
+          "source_record_id": "fdefd9858b6e0ace2"
+        },
+        {
+          "receipt_id": "ff7b03a24ed7239c1",
+          "source_record_id": "f705da2f55fd27bcc"
+        },
+        {
+          "receipt_id": "ffc13e4b4a9b7fd35",
+          "source_record_id": "f2b88f64d12d424e3"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f2eef039b733f18f2",
+          "source_record_ids": [
+            "f2b88f64d12d424e3",
+            "f82c20788b9136c7e"
+          ]
+        },
+        {
+          "capture_id": "f3c7226ad0046a0c3",
+          "source_record_ids": [
+            "fdefd9858b6e0ace2"
+          ]
+        },
+        {
+          "capture_id": "f7cabe901b66cb5c6",
+          "source_record_ids": [
+            "f705da2f55fd27bcc"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f2eef039b733f18f2",
+          "status": "DISAGREEING",
+          "input_ids": [
+            "f16617a7b35c503d0",
+            "f571b71498641aa76"
+          ]
+        },
+        {
+          "capture_id": "f3c7226ad0046a0c3",
+          "status": "KNOWN",
+          "input_ids": [
+            "f991deed3522161d3"
+          ]
+        },
+        {
+          "capture_id": "f7cabe901b66cb5c6",
+          "status": "KNOWN",
+          "input_ids": [
+            "f16617a7b35c503d0"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": [
+        "f2eef039b733f18f2"
+      ]
+    },
+    "R": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "E": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_inputs": [
+        {
+          "text": "ORCHID"
+        },
+        {
+          "text": "ORCHARD"
+        }
+      ],
+      "mechanically_required_results": [
+        "RCHD",
+        "RCHRD"
+      ],
+      "service_claims": [
+        0,
+        1
+      ],
+      "service_observed": "RCHD",
+      "other_build_input": 1,
+      "other_build_observed": "RCHRD",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "argument": "Two equal-standing declarations of one immutable service-input event identify different operands, with no additional source to resolve the incompatibility."
+    },
+    "metadata": {
+      "index": 9,
+      "target": "f803fb9811872aab3",
+      "service_build": "f0779a427414615c8",
+      "other_build": "f0c522e9355463040",
+      "input_ids": [
+        "f571b71498641aa76",
+        "f16617a7b35c503d0"
+      ],
+      "current_sources": [
+        "f2b88f64d12d424e3",
+        "f82c20788b9136c7e"
+      ],
+      "current_capture": "f2eef039b733f18f2",
+      "other_source": "f705da2f55fd27bcc",
+      "current_receipt": "ffc13e4b4a9b7fd35",
+      "other_receipt": "ff7b03a24ed7239c1"
+    }
+  },
+  {
+    "world_id": "wd0562a3af7f3",
+    "index": 10,
+    "operation": 0,
+    "family": "conjunctive-disjunctive Boolean circuit",
+    "class": "NO_SUPPORTED_DIAGNOSIS",
+    "composition": "composition-dependent",
+    "phase": 2,
+    "O": {
+      "results": [
+        "1",
+        "0"
+      ]
+    },
+    "S": {
+      "target_component_id": "fb0839eb64a6ba77b",
+      "in_service_build_id": "f6f54c0e7c9ef10d5",
+      "in_service_receipt_ids": [
+        "ff884cf8991b84a37"
+      ],
+      "other_build_receipt_ids": [
+        "f5961a04f3099e4b8"
+      ],
+      "other_component_receipt_ids": [
+        "f33e09e6b23f7fc62",
+        "f3998925df377e183",
+        "f3cf8271235a11cce"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f33e09e6b23f7fc62",
+          "source_record_id": "f903eaa5cff9b04db"
+        },
+        {
+          "receipt_id": "f3998925df377e183",
+          "source_record_id": "f32fe6379b4a73f7e"
+        },
+        {
+          "receipt_id": "f3cf8271235a11cce",
+          "source_record_id": "f903eaa5cff9b04db"
+        },
+        {
+          "receipt_id": "f5961a04f3099e4b8",
+          "source_record_id": "f5ed5d6b80b736bdb"
+        },
+        {
+          "receipt_id": "ff884cf8991b84a37",
+          "source_record_id": "fd946d6d66bf7990d"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f0961e7103ab81ae2",
+          "source_record_ids": [
+            "f903eaa5cff9b04db"
+          ]
+        },
+        {
+          "capture_id": "f12b4ebc87b341ead",
+          "source_record_ids": [
+            "f32fe6379b4a73f7e"
+          ]
+        },
+        {
+          "capture_id": "f39b02656d2c0799f",
+          "source_record_ids": [
+            "f5ed5d6b80b736bdb"
+          ]
+        },
+        {
+          "capture_id": "fe179fd9a5c2eaaf3",
+          "source_record_ids": [
+            "fc133f3483eb5eef5",
+            "fd946d6d66bf7990d"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f0961e7103ab81ae2",
+          "status": "KNOWN",
+          "input_ids": [
+            "f8a853ad23da0c4a1"
+          ]
+        },
+        {
+          "capture_id": "f12b4ebc87b341ead",
+          "status": "KNOWN",
+          "input_ids": [
+            "f6f111d615e1a6052"
+          ]
+        },
+        {
+          "capture_id": "f39b02656d2c0799f",
+          "status": "KNOWN",
+          "input_ids": [
+            "fcdf59e07cfe0facf"
+          ]
+        },
+        {
+          "capture_id": "fe179fd9a5c2eaaf3",
+          "status": "KNOWN",
+          "input_ids": [
+            "f646d8fa2cdac56f2"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "E": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "proof": {
+      "contract": "Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.",
+      "admissible_inputs": [
+        {
+          "a": 1,
+          "b": 1,
+          "c": 0
+        },
+        {
+          "a": 0,
+          "b": 1,
+          "c": 0
+        }
+      ],
+      "mechanically_required_results": [
+        "1",
+        "0"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "1",
+      "other_build_input": 1,
+      "other_build_observed": "0",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "argument": "Current and earlier observations match their known requirements; the bounded input and capture evidence is complete and agreeing."
+    },
+    "metadata": {
+      "index": 10,
+      "target": "fb0839eb64a6ba77b",
+      "service_build": "f6f54c0e7c9ef10d5",
+      "other_build": "f8632bc5811b448d1",
+      "input_ids": [
+        "f646d8fa2cdac56f2",
+        "fcdf59e07cfe0facf"
+      ],
+      "current_sources": [
+        "fd946d6d66bf7990d",
+        "fc133f3483eb5eef5"
+      ],
+      "current_capture": "fe179fd9a5c2eaaf3",
+      "other_source": "f5ed5d6b80b736bdb",
+      "current_receipt": "ff884cf8991b84a37",
+      "other_receipt": "f5961a04f3099e4b8"
+    }
+  },
+  {
+    "world_id": "w80751078b01a",
+    "index": 11,
+    "operation": 1,
+    "family": "finite-state sequence recognizer",
+    "class": "INSUFFICIENT_EVIDENCE",
+    "composition": "composition-dependent",
+    "phase": 2,
+    "O": {
+      "results": [
+        "q2",
+        "q3"
+      ]
+    },
+    "S": {
+      "target_component_id": "f5a4d38d027e310ad",
+      "in_service_build_id": "fe09b4cf7415b9234",
+      "in_service_receipt_ids": [
+        "f8f19825208f0d038"
+      ],
+      "other_build_receipt_ids": [
+        "f03686fad3b7afe80"
+      ],
+      "other_component_receipt_ids": [
+        "f2e6e57cee63faf67",
+        "f5bdbc1602711e85e",
+        "f6b62c634c3ade187"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f03686fad3b7afe80",
+          "source_record_id": "fc8f2b89a5845c356"
+        },
+        {
+          "receipt_id": "f2e6e57cee63faf67",
+          "source_record_id": "f2a55f925544cc4f7"
+        },
+        {
+          "receipt_id": "f5bdbc1602711e85e",
+          "source_record_id": "fc1f246dfa188dbc0"
+        },
+        {
+          "receipt_id": "f6b62c634c3ade187",
+          "source_record_id": "fc1f246dfa188dbc0"
+        },
+        {
+          "receipt_id": "f8f19825208f0d038",
+          "source_record_id": "fad247e5ab54daa23"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f1edce75efb46f3c4",
+          "source_record_ids": [
+            "fc1f246dfa188dbc0"
+          ]
+        },
+        {
+          "capture_id": "f6ab8b031b240c991",
+          "source_record_ids": [
+            "f23865e4934ce3fea",
+            "fad247e5ab54daa23"
+          ]
+        },
+        {
+          "capture_id": "f8a6baed7622776bc",
+          "source_record_ids": [
+            "fc8f2b89a5845c356"
+          ]
+        },
+        {
+          "capture_id": "faf58a725f2a80dd1",
+          "source_record_ids": [
+            "f2a55f925544cc4f7"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f1edce75efb46f3c4",
+          "status": "KNOWN",
+          "input_ids": [
+            "fb0134a567edf3097"
+          ]
+        },
+        {
+          "capture_id": "f6ab8b031b240c991",
+          "status": "UNKNOWN",
+          "input_ids": []
+        },
+        {
+          "capture_id": "f8a6baed7622776bc",
+          "status": "KNOWN",
+          "input_ids": [
+            "f97aca1299bdaa0cc"
+          ]
+        },
+        {
+          "capture_id": "faf58a725f2a80dd1",
+          "status": "KNOWN",
+          "input_ids": [
+            "f0be6614a18b60d03"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "E": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_inputs": [
+        {
+          "word": "baaab"
+        },
+        {
+          "word": "bbaba"
+        }
+      ],
+      "mechanically_required_results": [
+        "q2",
+        "q3"
+      ],
+      "service_claims": [
+        null,
+        null
+      ],
+      "service_observed": "q2",
+      "other_build_input": 1,
+      "other_build_observed": "q3",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INSUFFICIENT_EVIDENCE",
+      "argument": "The service input is uncaptured. Both supplied admissible inputs remain possible, but only one yields the observed result; no declaration distinguishes them."
+    },
+    "metadata": {
+      "index": 11,
+      "target": "f5a4d38d027e310ad",
+      "service_build": "fe09b4cf7415b9234",
+      "other_build": "f20681c42239b20f7",
+      "input_ids": [
+        "f8d3c8e5132a23d22",
+        "f97aca1299bdaa0cc"
+      ],
+      "current_sources": [
+        "fad247e5ab54daa23",
+        "f23865e4934ce3fea"
+      ],
+      "current_capture": "f6ab8b031b240c991",
+      "other_source": "fc8f2b89a5845c356",
+      "current_receipt": "f8f19825208f0d038",
+      "other_receipt": "f03686fad3b7afe80"
+    }
+  },
+  {
+    "world_id": "wcaafc1a41315",
+    "index": 12,
+    "operation": 2,
+    "family": "directed reachability closure",
+    "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "composition": "composition-dependent",
+    "phase": 2,
+    "O": {
+      "results": [
+        "11101",
+        "00010"
+      ]
+    },
+    "S": {
+      "target_component_id": "f301584b882646d80",
+      "in_service_build_id": "fc0598bc8ca9df0de",
+      "in_service_receipt_ids": [
+        "f912adba6c55844af"
+      ],
+      "other_build_receipt_ids": [
+        "f8d9f3a4c48081a39"
+      ],
+      "other_component_receipt_ids": [
+        "f03e9d98620069cf8",
+        "f5540720b5b995b29",
+        "f5b3d0fb45c153896"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f03e9d98620069cf8",
+          "source_record_id": "f0e8fb578fd86e171"
+        },
+        {
+          "receipt_id": "f5540720b5b995b29",
+          "source_record_id": "fb252d0901065f0b1"
+        },
+        {
+          "receipt_id": "f5b3d0fb45c153896",
+          "source_record_id": "fb252d0901065f0b1"
+        },
+        {
+          "receipt_id": "f8d9f3a4c48081a39",
+          "source_record_id": "f4b0a9de2c6b2cda3"
+        },
+        {
+          "receipt_id": "f912adba6c55844af",
+          "source_record_id": "f51f6729759bd1fbe"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f1900d75efbb2bbf9",
+          "source_record_ids": [
+            "fb252d0901065f0b1"
+          ]
+        },
+        {
+          "capture_id": "f7eb5d6267f9f3bb7",
+          "source_record_ids": [
+            "f0e8fb578fd86e171"
+          ]
+        },
+        {
+          "capture_id": "f9e403ec5210af828",
+          "source_record_ids": [
+            "f4b0a9de2c6b2cda3"
+          ]
+        },
+        {
+          "capture_id": "fceeb8bb47fafffce",
+          "source_record_ids": [
+            "f51f6729759bd1fbe",
+            "fd85bade1641c3863"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f1900d75efbb2bbf9",
+          "status": "KNOWN",
+          "input_ids": [
+            "f1eae996b42d269a4"
+          ]
+        },
+        {
+          "capture_id": "f7eb5d6267f9f3bb7",
+          "status": "KNOWN",
+          "input_ids": [
+            "ffc3408f229ef1838"
+          ]
+        },
+        {
+          "capture_id": "f9e403ec5210af828",
+          "status": "KNOWN",
+          "input_ids": [
+            "fee3d935b292d8eea"
+          ]
+        },
+        {
+          "capture_id": "fceeb8bb47fafffce",
+          "status": "KNOWN",
+          "input_ids": [
+            "fa28649dd106d6c13"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "E": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "proof": {
+      "contract": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+      "admissible_inputs": [
+        {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 0
+        },
+        {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              1
+            ]
+          ],
+          "start": 3
+        }
+      ],
+      "mechanically_required_results": [
+        "11101",
+        "00010"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "11101",
+      "other_build_input": 1,
+      "other_build_observed": "11101",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "argument": "The earlier build observation violates its known requirement; the explicitly in-service newer build matches its requirement."
+    },
+    "metadata": {
+      "index": 12,
+      "target": "f301584b882646d80",
+      "service_build": "fc0598bc8ca9df0de",
+      "other_build": "f8924413405dea5cc",
+      "input_ids": [
+        "fa28649dd106d6c13",
+        "fee3d935b292d8eea"
+      ],
+      "current_sources": [
+        "f51f6729759bd1fbe",
+        "fd85bade1641c3863"
+      ],
+      "current_capture": "fceeb8bb47fafffce",
+      "other_source": "f4b0a9de2c6b2cda3",
+      "current_receipt": "f912adba6c55844af",
+      "other_receipt": "f8d9f3a4c48081a39"
+    }
+  },
+  {
+    "world_id": "w1e04f7b3754e",
+    "index": 13,
+    "operation": 3,
+    "family": "unit-cost string edit distance",
+    "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "composition": "composition-dependent",
+    "phase": 2,
+    "O": {
+      "results": [
+        "1",
+        "4"
+      ]
+    },
+    "S": {
+      "target_component_id": "fe901b301adbf9188",
+      "in_service_build_id": "f4187bce5d07d3971",
+      "in_service_receipt_ids": [
+        "ffdf1716d2074e938"
+      ],
+      "other_build_receipt_ids": [
+        "fa827d895466ef775"
+      ],
+      "other_component_receipt_ids": [
+        "f2581d4a7b751f0aa",
+        "f763be6bc7b87094c",
+        "fe6ac13ff0055f105"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f2581d4a7b751f0aa",
+          "source_record_id": "f695e00ce6f6dfc72"
+        },
+        {
+          "receipt_id": "f763be6bc7b87094c",
+          "source_record_id": "f695e00ce6f6dfc72"
+        },
+        {
+          "receipt_id": "fa827d895466ef775",
+          "source_record_id": "f93e89239ee13f34d"
+        },
+        {
+          "receipt_id": "fe6ac13ff0055f105",
+          "source_record_id": "f4376473f7facacaf"
+        },
+        {
+          "receipt_id": "ffdf1716d2074e938",
+          "source_record_id": "f05a0ec862ae459b2"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f1b00985fa06d3b5a",
+          "source_record_ids": [
+            "f695e00ce6f6dfc72"
+          ]
+        },
+        {
+          "capture_id": "f32826bb429f8c9f2",
+          "source_record_ids": [
+            "f93e89239ee13f34d"
+          ]
+        },
+        {
+          "capture_id": "f7c976abc8827076f",
+          "source_record_ids": [
+            "f05a0ec862ae459b2",
+            "fed1b83ce7be17755"
+          ]
+        },
+        {
+          "capture_id": "ffb420a4a91fca415",
+          "source_record_ids": [
+            "f4376473f7facacaf"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f1b00985fa06d3b5a",
+          "status": "KNOWN",
+          "input_ids": [
+            "fcf47149ff662ffd8"
+          ]
+        },
+        {
+          "capture_id": "f32826bb429f8c9f2",
+          "status": "KNOWN",
+          "input_ids": [
+            "fc470859c0add2ed7"
+          ]
+        },
+        {
+          "capture_id": "f7c976abc8827076f",
+          "status": "DISAGREEING",
+          "input_ids": [
+            "f076486dfc1f83c4f",
+            "fc470859c0add2ed7"
+          ]
+        },
+        {
+          "capture_id": "ffb420a4a91fca415",
+          "status": "KNOWN",
+          "input_ids": [
+            "f1f7578a78d54f11c"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": [
+        "f7c976abc8827076f"
+      ]
+    },
+    "R": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "E": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.",
+      "admissible_inputs": [
+        {
+          "left": "flame",
+          "right": "frame"
+        },
+        {
+          "left": "clay",
+          "right": "playful"
+        }
+      ],
+      "mechanically_required_results": [
+        "1",
+        "4"
+      ],
+      "service_claims": [
+        0,
+        1
+      ],
+      "service_observed": "1",
+      "other_build_input": 1,
+      "other_build_observed": "4",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "argument": "Two equal-standing declarations of one immutable service-input event identify different operands, with no additional source to resolve the incompatibility."
+    },
+    "metadata": {
+      "index": 13,
+      "target": "fe901b301adbf9188",
+      "service_build": "f4187bce5d07d3971",
+      "other_build": "f543b01986d48bf71",
+      "input_ids": [
+        "f076486dfc1f83c4f",
+        "fc470859c0add2ed7"
+      ],
+      "current_sources": [
+        "f05a0ec862ae459b2",
+        "fed1b83ce7be17755"
+      ],
+      "current_capture": "f7c976abc8827076f",
+      "other_source": "f93e89239ee13f34d",
+      "current_receipt": "ffdf1716d2074e938",
+      "other_receipt": "fa827d895466ef775"
+    }
+  },
+  {
+    "world_id": "wcde36fb724f5",
+    "index": 14,
+    "operation": 4,
+    "family": "greatest common divisor",
+    "class": "SUPPORTED_CURRENT_DEFECT",
+    "composition": "composition-dependent",
+    "phase": 2,
+    "O": {
+      "results": [
+        "13",
+        "1"
+      ]
+    },
+    "S": {
+      "target_component_id": "f4a4591f5b90514b6",
+      "in_service_build_id": "f8f3960ddc022d569",
+      "in_service_receipt_ids": [
+        "f343f3afa8e4c4da8"
+      ],
+      "other_build_receipt_ids": [
+        "f6a82fc0b72f77915"
+      ],
+      "other_component_receipt_ids": [
+        "fce48826d8edf191f",
+        "fdb8a81c2d867cb61",
+        "ff2bb076c20d0ddb1"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f343f3afa8e4c4da8",
+          "source_record_id": "ffcf2a4eeb7ab2d21"
+        },
+        {
+          "receipt_id": "f6a82fc0b72f77915",
+          "source_record_id": "fb62c623e1b477810"
+        },
+        {
+          "receipt_id": "fce48826d8edf191f",
+          "source_record_id": "f694307ae19ba7c2a"
+        },
+        {
+          "receipt_id": "fdb8a81c2d867cb61",
+          "source_record_id": "fef4386c2cc01d83f"
+        },
+        {
+          "receipt_id": "ff2bb076c20d0ddb1",
+          "source_record_id": "f694307ae19ba7c2a"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f65af39919f3deca0",
+          "source_record_ids": [
+            "f694307ae19ba7c2a"
+          ]
+        },
+        {
+          "capture_id": "f9bafee67c81c4a46",
+          "source_record_ids": [
+            "fb62c623e1b477810"
+          ]
+        },
+        {
+          "capture_id": "fa53ad5938a0def50",
+          "source_record_ids": [
+            "fef4386c2cc01d83f"
+          ]
+        },
+        {
+          "capture_id": "ff734aafc29636546",
+          "source_record_ids": [
+            "f9017c7bb7d9fff89",
+            "ffcf2a4eeb7ab2d21"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f65af39919f3deca0",
+          "status": "KNOWN",
+          "input_ids": [
+            "f086165a8173af44a"
+          ]
+        },
+        {
+          "capture_id": "f9bafee67c81c4a46",
+          "status": "KNOWN",
+          "input_ids": [
+            "f2b2f91b8fa8263b7"
+          ]
+        },
+        {
+          "capture_id": "fa53ad5938a0def50",
+          "status": "KNOWN",
+          "input_ids": [
+            "feceb8f4ac471003e"
+          ]
+        },
+        {
+          "capture_id": "ff734aafc29636546",
+          "status": "KNOWN",
+          "input_ids": [
+            "fd3f1c0b9372269f2"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "E": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "proof": {
+      "contract": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "admissible_inputs": [
+        {
+          "x": 143,
+          "y": 221
+        },
+        {
+          "x": 144,
+          "y": 221
+        }
+      ],
+      "mechanically_required_results": [
+        "13",
+        "1"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "1",
+      "other_build_input": 1,
+      "other_build_observed": "1",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "SUPPORTED_CURRENT_DEFECT",
+      "argument": "Known agreeing service input requires one result but the exact service observation is the other; hidden transformations are excluded."
+    },
+    "metadata": {
+      "index": 14,
+      "target": "f4a4591f5b90514b6",
+      "service_build": "f8f3960ddc022d569",
+      "other_build": "fa886e69f5cf5754a",
+      "input_ids": [
+        "fd3f1c0b9372269f2",
+        "f2b2f91b8fa8263b7"
+      ],
+      "current_sources": [
+        "ffcf2a4eeb7ab2d21",
+        "f9017c7bb7d9fff89"
+      ],
+      "current_capture": "ff734aafc29636546",
+      "other_source": "fb62c623e1b477810",
+      "current_receipt": "f343f3afa8e4c4da8",
+      "other_receipt": "f6a82fc0b72f77915"
+    }
+  },
+  {
+    "world_id": "wf0649f5ed7c1",
+    "index": 15,
+    "operation": 5,
+    "family": "sliding window maximum",
+    "class": "NO_SUPPORTED_DIAGNOSIS",
+    "composition": "composition-dependent",
+    "phase": 3,
+    "O": {
+      "results": [
+        "14,14,14",
+        "11,15,15"
+      ]
+    },
+    "S": {
+      "target_component_id": "fec1edeb7b4f00d0e",
+      "in_service_build_id": "fc2dc1ddc7edaf035",
+      "in_service_receipt_ids": [
+        "f7079b0b79ba0d7bc"
+      ],
+      "other_build_receipt_ids": [
+        "f8dce92dcc8cddfdd"
+      ],
+      "other_component_receipt_ids": [
+        "f32823e554a55327d",
+        "f4a60173f38e5fdbe",
+        "f9dbd805b4d0d410f"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f32823e554a55327d",
+          "source_record_id": "fd62b137a29d7e358"
+        },
+        {
+          "receipt_id": "f4a60173f38e5fdbe",
+          "source_record_id": "f3285d33d33ab74fc"
+        },
+        {
+          "receipt_id": "f7079b0b79ba0d7bc",
+          "source_record_id": "f8a1b4efd285889fa"
+        },
+        {
+          "receipt_id": "f8dce92dcc8cddfdd",
+          "source_record_id": "fba0f384f5dc00be8"
+        },
+        {
+          "receipt_id": "f9dbd805b4d0d410f",
+          "source_record_id": "fd62b137a29d7e358"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f1aad46e70f5d5378",
+          "source_record_ids": [
+            "fd62b137a29d7e358"
+          ]
+        },
+        {
+          "capture_id": "f2c94bce8e31b9dc2",
+          "source_record_ids": [
+            "f3285d33d33ab74fc"
+          ]
+        },
+        {
+          "capture_id": "f572cd07ed1b7af62",
+          "source_record_ids": [
+            "f866f1058c77ba104",
+            "f8a1b4efd285889fa"
+          ]
+        },
+        {
+          "capture_id": "feff409613fd2a846",
+          "source_record_ids": [
+            "fba0f384f5dc00be8"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f1aad46e70f5d5378",
+          "status": "KNOWN",
+          "input_ids": [
+            "f80444e87c255d2af"
+          ]
+        },
+        {
+          "capture_id": "f2c94bce8e31b9dc2",
+          "status": "KNOWN",
+          "input_ids": [
+            "f9d17d9e96d4602f1"
+          ]
+        },
+        {
+          "capture_id": "f572cd07ed1b7af62",
+          "status": "KNOWN",
+          "input_ids": [
+            "fde638b371cd63f0d"
+          ]
+        },
+        {
+          "capture_id": "feff409613fd2a846",
+          "status": "KNOWN",
+          "input_ids": [
+            "f21de376a5bafc255"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "E": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "proof": {
+      "contract": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+      "admissible_inputs": [
+        {
+          "values": [
+            12,
+            5,
+            14,
+            2,
+            9
+          ]
+        },
+        {
+          "values": [
+            3,
+            11,
+            4,
+            15,
+            6
+          ]
+        }
+      ],
+      "mechanically_required_results": [
+        "14,14,14",
+        "11,15,15"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "14,14,14",
+      "other_build_input": 1,
+      "other_build_observed": "11,15,15",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "argument": "Current and earlier observations match their known requirements; the bounded input and capture evidence is complete and agreeing."
+    },
+    "metadata": {
+      "index": 15,
+      "target": "fec1edeb7b4f00d0e",
+      "service_build": "fc2dc1ddc7edaf035",
+      "other_build": "f5cd1b5973886fc90",
+      "input_ids": [
+        "fde638b371cd63f0d",
+        "f21de376a5bafc255"
+      ],
+      "current_sources": [
+        "f8a1b4efd285889fa",
+        "f866f1058c77ba104"
+      ],
+      "current_capture": "f572cd07ed1b7af62",
+      "other_source": "fba0f384f5dc00be8",
+      "current_receipt": "f7079b0b79ba0d7bc",
+      "other_receipt": "f8dce92dcc8cddfdd"
+    }
+  },
+  {
+    "world_id": "w207cc12f3c2e",
+    "index": 16,
+    "operation": 6,
+    "family": "finite linear convolution",
+    "class": "INSUFFICIENT_EVIDENCE",
+    "composition": "composition-dependent",
+    "phase": 3,
+    "O": {
+      "results": [
+        "3,11,2,-2",
+        "-1,-1,10,6"
+      ]
+    },
+    "S": {
+      "target_component_id": "fe3055c01ba7750c1",
+      "in_service_build_id": "fb034de77380ad250",
+      "in_service_receipt_ids": [
+        "fb74d40e1512083e5"
+      ],
+      "other_build_receipt_ids": [
+        "f6d968d2077c4ff04"
+      ],
+      "other_component_receipt_ids": [
+        "f7b1eba69f583eb6d",
+        "f98e7d7811b5de32d",
+        "fc0cebf5dda3301c9"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f6d968d2077c4ff04",
+          "source_record_id": "f4b9b3925b6dcca2c"
+        },
+        {
+          "receipt_id": "f7b1eba69f583eb6d",
+          "source_record_id": "f6e470c549c9b0d44"
+        },
+        {
+          "receipt_id": "f98e7d7811b5de32d",
+          "source_record_id": "f6e470c549c9b0d44"
+        },
+        {
+          "receipt_id": "fb74d40e1512083e5",
+          "source_record_id": "f5ce2b9ab297a968b"
+        },
+        {
+          "receipt_id": "fc0cebf5dda3301c9",
+          "source_record_id": "f8ca68f950f64ce56"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f4c37d5cb24ac05f5",
+          "source_record_ids": [
+            "f5ce2b9ab297a968b",
+            "fd068b81b20d4aeb2"
+          ]
+        },
+        {
+          "capture_id": "f57ce6da140a6792e",
+          "source_record_ids": [
+            "f6e470c549c9b0d44"
+          ]
+        },
+        {
+          "capture_id": "f8687940d2897d382",
+          "source_record_ids": [
+            "f4b9b3925b6dcca2c"
+          ]
+        },
+        {
+          "capture_id": "fc3caf5e08a7ca2f3",
+          "source_record_ids": [
+            "f8ca68f950f64ce56"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f4c37d5cb24ac05f5",
+          "status": "UNKNOWN",
+          "input_ids": []
+        },
+        {
+          "capture_id": "f57ce6da140a6792e",
+          "status": "KNOWN",
+          "input_ids": [
+            "f850d627b1d6f9fce"
+          ]
+        },
+        {
+          "capture_id": "f8687940d2897d382",
+          "status": "KNOWN",
+          "input_ids": [
+            "f39d467b57a2d2cf0"
+          ]
+        },
+        {
+          "capture_id": "fc3caf5e08a7ca2f3",
+          "status": "KNOWN",
+          "input_ids": [
+            "f4d65fdee49265a83"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "E": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "proof": {
+      "contract": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "admissible_inputs": [
+        {
+          "a": [
+            1,
+            4,
+            2
+          ],
+          "b": [
+            3,
+            -1
+          ]
+        },
+        {
+          "a": [
+            1,
+            4,
+            2
+          ],
+          "b": [
+            -1,
+            3
+          ]
+        }
+      ],
+      "mechanically_required_results": [
+        "3,11,2,-2",
+        "-1,-1,10,6"
+      ],
+      "service_claims": [
+        null,
+        null
+      ],
+      "service_observed": "3,11,2,-2",
+      "other_build_input": 1,
+      "other_build_observed": "-1,-1,10,6",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INSUFFICIENT_EVIDENCE",
+      "argument": "The service input is uncaptured. Both supplied admissible inputs remain possible, but only one yields the observed result; no declaration distinguishes them."
+    },
+    "metadata": {
+      "index": 16,
+      "target": "fe3055c01ba7750c1",
+      "service_build": "fb034de77380ad250",
+      "other_build": "f135adff693d27089",
+      "input_ids": [
+        "f1f97eb0e43324155",
+        "f39d467b57a2d2cf0"
+      ],
+      "current_sources": [
+        "f5ce2b9ab297a968b",
+        "fd068b81b20d4aeb2"
+      ],
+      "current_capture": "f4c37d5cb24ac05f5",
+      "other_source": "f4b9b3925b6dcca2c",
+      "current_receipt": "fb74d40e1512083e5",
+      "other_receipt": "f6d968d2077c4ff04"
+    }
+  },
+  {
+    "world_id": "wcf8ac40be9b1",
+    "index": 17,
+    "operation": 7,
+    "family": "overlapping substring occurrence count",
+    "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "composition": "composition-dependent",
+    "phase": 3,
+    "O": {
+      "results": [
+        "3",
+        "2"
+      ]
+    },
+    "S": {
+      "target_component_id": "f094c3362df3e3817",
+      "in_service_build_id": "f946b483f9946c718",
+      "in_service_receipt_ids": [
+        "f56f234be7a646c4d"
+      ],
+      "other_build_receipt_ids": [
+        "f8a831921e1c491c9"
+      ],
+      "other_component_receipt_ids": [
+        "f7672170a4a690592",
+        "f7f6c33a62b1e9cdb",
+        "ff53e12786d21e276"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f56f234be7a646c4d",
+          "source_record_id": "ffa8d1bdcd7785129"
+        },
+        {
+          "receipt_id": "f7672170a4a690592",
+          "source_record_id": "f7c7b4f9ce03e4c85"
+        },
+        {
+          "receipt_id": "f7f6c33a62b1e9cdb",
+          "source_record_id": "f3ae4ddf26d942229"
+        },
+        {
+          "receipt_id": "f8a831921e1c491c9",
+          "source_record_id": "faaf03dae0f631e44"
+        },
+        {
+          "receipt_id": "ff53e12786d21e276",
+          "source_record_id": "f7c7b4f9ce03e4c85"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f2516382a2bc41177",
+          "source_record_ids": [
+            "f7eda904644079621",
+            "ffa8d1bdcd7785129"
+          ]
+        },
+        {
+          "capture_id": "f44aa7e9d92f3decd",
+          "source_record_ids": [
+            "f7c7b4f9ce03e4c85"
+          ]
+        },
+        {
+          "capture_id": "f58be1a8ec162229e",
+          "source_record_ids": [
+            "f3ae4ddf26d942229"
+          ]
+        },
+        {
+          "capture_id": "fe549bb13c6a1b6b9",
+          "source_record_ids": [
+            "faaf03dae0f631e44"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f2516382a2bc41177",
+          "status": "KNOWN",
+          "input_ids": [
+            "fffb1552020caacc7"
+          ]
+        },
+        {
+          "capture_id": "f44aa7e9d92f3decd",
+          "status": "KNOWN",
+          "input_ids": [
+            "fccbeb20574605e53"
+          ]
+        },
+        {
+          "capture_id": "f58be1a8ec162229e",
+          "status": "KNOWN",
+          "input_ids": [
+            "fc6b11fa7012adadb"
+          ]
+        },
+        {
+          "capture_id": "fe549bb13c6a1b6b9",
+          "status": "KNOWN",
+          "input_ids": [
+            "feb23fb5e93d7aaed"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "E": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "proof": {
+      "contract": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+      "admissible_inputs": [
+        {
+          "text": "aaaa",
+          "pattern": "aa"
+        },
+        {
+          "text": "aabaa",
+          "pattern": "aa"
+        }
+      ],
+      "mechanically_required_results": [
+        "3",
+        "2"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "3",
+      "other_build_input": 1,
+      "other_build_observed": "3",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "argument": "The earlier build observation violates its known requirement; the explicitly in-service newer build matches its requirement."
+    },
+    "metadata": {
+      "index": 17,
+      "target": "f094c3362df3e3817",
+      "service_build": "f946b483f9946c718",
+      "other_build": "f919c8b7787a3a480",
+      "input_ids": [
+        "fffb1552020caacc7",
+        "feb23fb5e93d7aaed"
+      ],
+      "current_sources": [
+        "ffa8d1bdcd7785129",
+        "f7eda904644079621"
+      ],
+      "current_capture": "f2516382a2bc41177",
+      "other_source": "faaf03dae0f631e44",
+      "current_receipt": "f56f234be7a646c4d",
+      "other_receipt": "f8a831921e1c491c9"
+    }
+  },
+  {
+    "world_id": "wffd7271aa8b2",
+    "index": 18,
+    "operation": 8,
+    "family": "binomial selection count",
+    "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "composition": "composition-dependent",
+    "phase": 3,
+    "O": {
+      "results": [
+        "36",
+        "126"
+      ]
+    },
+    "S": {
+      "target_component_id": "f6f51e09acac8c1d2",
+      "in_service_build_id": "f7f17e0b14c2b4d10",
+      "in_service_receipt_ids": [
+        "fd574ad60cad9b643"
+      ],
+      "other_build_receipt_ids": [
+        "f2a4269718706e7af"
+      ],
+      "other_component_receipt_ids": [
+        "f10958e8df9c401b2",
+        "f6f2b77ecea7d4700",
+        "fbc68bcfbabbefef6"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f10958e8df9c401b2",
+          "source_record_id": "f8508e405019f9387"
+        },
+        {
+          "receipt_id": "f2a4269718706e7af",
+          "source_record_id": "f0d3725e7db4fd486"
+        },
+        {
+          "receipt_id": "f6f2b77ecea7d4700",
+          "source_record_id": "f8b0961e2fa2722f9"
+        },
+        {
+          "receipt_id": "fbc68bcfbabbefef6",
+          "source_record_id": "f8b0961e2fa2722f9"
+        },
+        {
+          "receipt_id": "fd574ad60cad9b643",
+          "source_record_id": "f089abb39bd7f54c2"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f047d58b8c40c350e",
+          "source_record_ids": [
+            "f8508e405019f9387"
+          ]
+        },
+        {
+          "capture_id": "f4f22024d7a534cc3",
+          "source_record_ids": [
+            "f0d3725e7db4fd486"
+          ]
+        },
+        {
+          "capture_id": "f75f8b206271bef90",
+          "source_record_ids": [
+            "f8b0961e2fa2722f9"
+          ]
+        },
+        {
+          "capture_id": "ffc9480a452a078a6",
+          "source_record_ids": [
+            "f089abb39bd7f54c2",
+            "f9c64aa536b993170"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f047d58b8c40c350e",
+          "status": "KNOWN",
+          "input_ids": [
+            "f3144478654f7ea8a"
+          ]
+        },
+        {
+          "capture_id": "f4f22024d7a534cc3",
+          "status": "KNOWN",
+          "input_ids": [
+            "f7a3c442fbcdfc986"
+          ]
+        },
+        {
+          "capture_id": "f75f8b206271bef90",
+          "status": "KNOWN",
+          "input_ids": [
+            "f7705a7da2747b9fc"
+          ]
+        },
+        {
+          "capture_id": "ffc9480a452a078a6",
+          "status": "DISAGREEING",
+          "input_ids": [
+            "f0f2e575c8f2a41d9",
+            "f7a3c442fbcdfc986"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": [
+        "ffc9480a452a078a6"
+      ]
+    },
+    "R": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "E": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "proof": {
+      "contract": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_inputs": [
+        {
+          "n": 9,
+          "k": 2
+        },
+        {
+          "n": 9,
+          "k": 4
+        }
+      ],
+      "mechanically_required_results": [
+        "36",
+        "126"
+      ],
+      "service_claims": [
+        0,
+        1
+      ],
+      "service_observed": "36",
+      "other_build_input": 1,
+      "other_build_observed": "126",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "argument": "Two equal-standing declarations of one immutable service-input event identify different operands, with no additional source to resolve the incompatibility."
+    },
+    "metadata": {
+      "index": 18,
+      "target": "f6f51e09acac8c1d2",
+      "service_build": "f7f17e0b14c2b4d10",
+      "other_build": "fdb965683e97fe349",
+      "input_ids": [
+        "f0f2e575c8f2a41d9",
+        "f7a3c442fbcdfc986"
+      ],
+      "current_sources": [
+        "f089abb39bd7f54c2",
+        "f9c64aa536b993170"
+      ],
+      "current_capture": "ffc9480a452a078a6",
+      "other_source": "f0d3725e7db4fd486",
+      "current_receipt": "fd574ad60cad9b643",
+      "other_receipt": "f2a4269718706e7af"
+    }
+  },
+  {
+    "world_id": "wa43120033b1c",
+    "index": 19,
+    "operation": 9,
+    "family": "stable vowel deletion",
+    "class": "SUPPORTED_CURRENT_DEFECT",
+    "composition": "composition-dependent",
+    "phase": 3,
+    "O": {
+      "results": [
+        "SQ",
+        "SPRC"
+      ]
+    },
+    "S": {
+      "target_component_id": "ffbe70e499a7e6b3d",
+      "in_service_build_id": "f7a11104f44ae8ac6",
+      "in_service_receipt_ids": [
+        "f6b718dc4a49c03f9"
+      ],
+      "other_build_receipt_ids": [
+        "ffbe98e2323644e66"
+      ],
+      "other_component_receipt_ids": [
+        "f0a8380140d33337a",
+        "f114ddfdc76011054",
+        "f59c25f10c95e52e6"
+      ],
+      "receipt_source_links": [
+        {
+          "receipt_id": "f0a8380140d33337a",
+          "source_record_id": "ff0c79df20179eb45"
+        },
+        {
+          "receipt_id": "f114ddfdc76011054",
+          "source_record_id": "f995aec26828c2b0b"
+        },
+        {
+          "receipt_id": "f59c25f10c95e52e6",
+          "source_record_id": "ff0c79df20179eb45"
+        },
+        {
+          "receipt_id": "f6b718dc4a49c03f9",
+          "source_record_id": "ffe5e1d4bbf032eae"
+        },
+        {
+          "receipt_id": "ffbe98e2323644e66",
+          "source_record_id": "f4e7ceef7f0e33b80"
+        }
+      ],
+      "capture_groups": [
+        {
+          "capture_id": "f3870065743d0cb6a",
+          "source_record_ids": [
+            "ff0c79df20179eb45"
+          ]
+        },
+        {
+          "capture_id": "f5184139eeb2dfde9",
+          "source_record_ids": [
+            "f4e7ceef7f0e33b80"
+          ]
+        },
+        {
+          "capture_id": "f856516763602b136",
+          "source_record_ids": [
+            "fc1a015000448138e",
+            "ffe5e1d4bbf032eae"
+          ]
+        },
+        {
+          "capture_id": "f92bbef9127f8acdf",
+          "source_record_ids": [
+            "f995aec26828c2b0b"
+          ]
+        }
+      ],
+      "source_knowledge": [
+        {
+          "capture_id": "f3870065743d0cb6a",
+          "status": "KNOWN",
+          "input_ids": [
+            "fc8ac10f28e4107cb"
+          ]
+        },
+        {
+          "capture_id": "f5184139eeb2dfde9",
+          "status": "KNOWN",
+          "input_ids": [
+            "fb686ae50ea6f914c"
+          ]
+        },
+        {
+          "capture_id": "f856516763602b136",
+          "status": "KNOWN",
+          "input_ids": [
+            "f73ee930cfeb6a33c"
+          ]
+        },
+        {
+          "capture_id": "f92bbef9127f8acdf",
+          "status": "KNOWN",
+          "input_ids": [
+            "f036db7d68f3a16ab"
+          ]
+        }
+      ],
+      "conflicting_capture_ids": []
+    },
+    "R": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "E": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "proof": {
+      "contract": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "admissible_inputs": [
+        {
+          "text": "SEQUOIA"
+        },
+        {
+          "text": "SPRUCE"
+        }
+      ],
+      "mechanically_required_results": [
+        "SQ",
+        "SPRC"
+      ],
+      "service_claims": [
+        0,
+        0
+      ],
+      "service_observed": "SPRC",
+      "other_build_input": 1,
+      "other_build_observed": "SPRC",
+      "current_build_creation_order": 2,
+      "other_build_creation_order": 1,
+      "same_immutable_capture_for_service_claims": true,
+      "no_claim_priority": true,
+      "declared_gold": "SUPPORTED_CURRENT_DEFECT",
+      "argument": "Known agreeing service input requires one result but the exact service observation is the other; hidden transformations are excluded."
+    },
+    "metadata": {
+      "index": 19,
+      "target": "ffbe70e499a7e6b3d",
+      "service_build": "f7a11104f44ae8ac6",
+      "other_build": "f31cbed974b51b698",
+      "input_ids": [
+        "f73ee930cfeb6a33c",
+        "fb686ae50ea6f914c"
+      ],
+      "current_sources": [
+        "ffe5e1d4bbf032eae",
+        "fc1a015000448138e"
+      ],
+      "current_capture": "f856516763602b136",
+      "other_source": "f4e7ceef7f0e33b80",
+      "current_receipt": "f6b718dc4a49c03f9",
+      "other_receipt": "ffbe98e2323644e66"
+    }
+  }
+]

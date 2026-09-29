@@ -1,0 +1,78 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "36",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "n": 9,
+              "k": 2
+            },
+            "required_result_for_claim": "36"
+          },
+          {
+            "claimed_input": {
+              "n": 9,
+              "k": 4
+            },
+            "required_result_for_claim": "126"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "n": 9,
+            "k": 2
+          },
+          "required_result": "36"
+        },
+        {
+          "input_value": {
+            "n": 9,
+            "k": 4
+          },
+          "required_result": "126"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "126",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "n": 9,
+              "k": 4
+            },
+            "required_result_for_claim": "126"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "n": 9,
+            "k": 2
+          },
+          "required_result": "36"
+        },
+        {
+          "input_value": {
+            "n": 9,
+            "k": 4
+          },
+          "required_result": "126"
+        }
+      ]
+    }
+  ]
+}

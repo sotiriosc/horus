@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nTask data:\n{\n  \"scope\": \"Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.\",\n  \"trials\": [\n    {\n      \"in_service\": true,\n      \"creation_order\": 2,\n      \"observed_result\": \"1\",\n      \"source_capture\": {\n        \"scope\": \"All declarations below concern the very same immutable event. None has priority and no further declaration is available.\",\n        \"input_declarations\": [\n          {\n            \"claimed_input\": {\n              \"left\": \"flame\",\n              \"right\": \"frame\"\n            },\n            \"required_result_for_claim\": \"1\"\n          },\n          {\n            \"claimed_input\": {\n              \"left\": \"clay\",\n              \"right\": \"playful\"\n            },\n            \"required_result_for_claim\": \"4\"\n          }\n        ]\n      },\n      \"admissible_completions\": [\n        {\n          \"input_value\": {\n            \"left\": \"flame\",\n            \"right\": \"frame\"\n          },\n          \"required_result\": \"1\"\n        },\n        {\n          \"input_value\": {\n            \"left\": \"clay\",\n            \"right\": \"playful\"\n          },\n          \"required_result\": \"4\"\n        }\n      ]\n    },\n    {\n      \"in_service\": false,\n      \"creation_order\": 1,\n      \"observed_result\": \"4\",\n      \"source_capture\": {\n        \"scope\": \"All declarations below concern the very same immutable event. None has priority and no further declaration is available.\",\n        \"input_declarations\": [\n          {\n            \"claimed_input\": {\n              \"left\": \"clay\",\n              \"right\": \"playful\"\n            },\n            \"required_result_for_claim\": \"4\"\n          }\n        ]\n      },\n      \"admissible_completions\": [\n        {\n          \"input_value\": {\n            \"left\": \"flame\",\n            \"right\": \"frame\"\n          },\n          \"required_result\": \"1\"\n        },\n        {\n          \"input_value\": {\n            \"left\": \"clay\",\n            \"right\": \"playful\"\n          },\n          \"required_result\": \"4\"\n        }\n      ]\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

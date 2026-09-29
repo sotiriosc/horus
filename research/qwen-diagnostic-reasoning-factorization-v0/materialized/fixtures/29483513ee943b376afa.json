@@ -1,0 +1,266 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-33233f16b",
+      "operation": "crest-window scanner",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f80444e87c255d2af": {
+        "kind": "operand",
+        "component_id": "f6b4c726c343ddf9a",
+        "inputs": {
+          "values": [
+            12,
+            5,
+            14,
+            2,
+            9
+          ]
+        }
+      },
+      "f4a60173f38e5fdbe": {
+        "kind": "receipt",
+        "component_id": "f7de235c11ea974e3",
+        "build_id": "feb59a1d0742b66dc",
+        "source_ref": "f3285d33d33ab74fc",
+        "emitted_value": "11,15,15"
+      },
+      "f8a1b4efd285889fa": {
+        "kind": "source",
+        "component_id": "fec1edeb7b4f00d0e",
+        "capture_id": "f572cd07ed1b7af62",
+        "input_ref": "fde638b371cd63f0d"
+      },
+      "f21de376a5bafc255": {
+        "kind": "operand",
+        "component_id": "fec1edeb7b4f00d0e",
+        "inputs": {
+          "values": [
+            3,
+            11,
+            4,
+            15,
+            6
+          ]
+        }
+      },
+      "f5cd1b5973886fc90": {
+        "kind": "build",
+        "component_id": "fec1edeb7b4f00d0e",
+        "creation_order": 1
+      },
+      "f97860c77ac2b80b8": {
+        "kind": "contract",
+        "component_id": "f6b4c726c343ddf9a",
+        "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+        "admissible_input_ids": [
+          "f80444e87c255d2af",
+          "faabb3c87c4b14002"
+        ]
+      },
+      "f319821e9f22f31cd": {
+        "kind": "deployment",
+        "component_id": "f6b4c726c343ddf9a",
+        "build_id": "f77d5ba1496d49d64"
+      },
+      "fc2dc1ddc7edaf035": {
+        "kind": "build",
+        "component_id": "fec1edeb7b4f00d0e",
+        "creation_order": 2
+      },
+      "f9dbd805b4d0d410f": {
+        "kind": "receipt",
+        "component_id": "f6b4c726c343ddf9a",
+        "build_id": "f77d5ba1496d49d64",
+        "source_ref": "fd62b137a29d7e358",
+        "emitted_value": "14,14,14"
+      },
+      "f7de235c11ea974e3": {
+        "kind": "component",
+        "unit_code": "unit-172cd6b2a",
+        "serving_manifest": "f39ea4309c9cc3183",
+        "contract_ref": "fa99561fcb759bb26"
+      },
+      "fec1edeb7b4f00d0e": {
+        "kind": "component",
+        "unit_code": "unit-33233f16b",
+        "serving_manifest": "fb48c3c6c6567fffc",
+        "contract_ref": "f93e3855358034725"
+      },
+      "fd62b137a29d7e358": {
+        "kind": "source",
+        "component_id": "f6b4c726c343ddf9a",
+        "capture_id": "f1aad46e70f5d5378",
+        "input_ref": "f80444e87c255d2af"
+      },
+      "f7079b0b79ba0d7bc": {
+        "kind": "receipt",
+        "component_id": "fec1edeb7b4f00d0e",
+        "build_id": "fc2dc1ddc7edaf035",
+        "source_ref": "f8a1b4efd285889fa",
+        "emitted_value": "14,14,14"
+      },
+      "f39ea4309c9cc3183": {
+        "kind": "deployment",
+        "component_id": "f7de235c11ea974e3",
+        "build_id": "feb59a1d0742b66dc"
+      },
+      "f9d17d9e96d4602f1": {
+        "kind": "operand",
+        "component_id": "f7de235c11ea974e3",
+        "inputs": {
+          "values": [
+            3,
+            11,
+            4,
+            15,
+            6
+          ]
+        }
+      },
+      "f6b4c726c343ddf9a": {
+        "kind": "component",
+        "unit_code": "unit-20837660d",
+        "serving_manifest": "f319821e9f22f31cd",
+        "contract_ref": "f97860c77ac2b80b8"
+      },
+      "f8dce92dcc8cddfdd": {
+        "kind": "receipt",
+        "component_id": "fec1edeb7b4f00d0e",
+        "build_id": "f5cd1b5973886fc90",
+        "source_ref": "fba0f384f5dc00be8",
+        "emitted_value": "11,15,15"
+      },
+      "f43c7080c51647487": {
+        "kind": "operand",
+        "component_id": "f7de235c11ea974e3",
+        "inputs": {
+          "values": [
+            12,
+            5,
+            14,
+            2,
+            9
+          ]
+        }
+      },
+      "f3285d33d33ab74fc": {
+        "kind": "source",
+        "component_id": "f7de235c11ea974e3",
+        "capture_id": "f2c94bce8e31b9dc2",
+        "input_ref": "f9d17d9e96d4602f1"
+      },
+      "fc098940895facbfb": {
+        "kind": "build",
+        "component_id": "f6b4c726c343ddf9a",
+        "creation_order": 1
+      },
+      "f93e3855358034725": {
+        "kind": "contract",
+        "component_id": "fec1edeb7b4f00d0e",
+        "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+        "admissible_input_ids": [
+          "fde638b371cd63f0d",
+          "f21de376a5bafc255"
+        ]
+      },
+      "f32823e554a55327d": {
+        "kind": "receipt",
+        "component_id": "f6b4c726c343ddf9a",
+        "build_id": "fc098940895facbfb",
+        "source_ref": "fd62b137a29d7e358",
+        "emitted_value": "11,15,15"
+      },
+      "fde638b371cd63f0d": {
+        "kind": "operand",
+        "component_id": "fec1edeb7b4f00d0e",
+        "inputs": {
+          "values": [
+            12,
+            5,
+            14,
+            2,
+            9
+          ]
+        }
+      },
+      "fa99561fcb759bb26": {
+        "kind": "contract",
+        "component_id": "f7de235c11ea974e3",
+        "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+        "admissible_input_ids": [
+          "f43c7080c51647487",
+          "f9d17d9e96d4602f1"
+        ]
+      },
+      "fb48c3c6c6567fffc": {
+        "kind": "deployment",
+        "component_id": "fec1edeb7b4f00d0e",
+        "build_id": "fc2dc1ddc7edaf035"
+      },
+      "faabb3c87c4b14002": {
+        "kind": "operand",
+        "component_id": "f6b4c726c343ddf9a",
+        "inputs": {
+          "values": [
+            3,
+            11,
+            4,
+            15,
+            6
+          ]
+        }
+      },
+      "feb59a1d0742b66dc": {
+        "kind": "build",
+        "component_id": "f7de235c11ea974e3",
+        "creation_order": 2
+      },
+      "fba0f384f5dc00be8": {
+        "kind": "source",
+        "component_id": "fec1edeb7b4f00d0e",
+        "capture_id": "feff409613fd2a846",
+        "input_ref": "f21de376a5bafc255"
+      },
+      "f866f1058c77ba104": {
+        "kind": "source",
+        "component_id": "fec1edeb7b4f00d0e",
+        "capture_id": "f572cd07ed1b7af62",
+        "input_ref": "fde638b371cd63f0d"
+      },
+      "f77d5ba1496d49d64": {
+        "kind": "build",
+        "component_id": "f6b4c726c343ddf9a",
+        "creation_order": 2
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "f80444e87c255d2af",
+      "required_output": "14,14,14"
+    },
+    {
+      "input_record_id": "f21de376a5bafc255",
+      "required_output": "11,15,15"
+    },
+    {
+      "input_record_id": "f9d17d9e96d4602f1",
+      "required_output": "11,15,15"
+    },
+    {
+      "input_record_id": "f43c7080c51647487",
+      "required_output": "14,14,14"
+    },
+    {
+      "input_record_id": "fde638b371cd63f0d",
+      "required_output": "14,14,14"
+    },
+    {
+      "input_record_id": "faabb3c87c4b14002",
+      "required_output": "11,15,15"
+    }
+  ]
+}

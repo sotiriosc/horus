@@ -1,0 +1,202 @@
+{
+  "scope": {
+    "requested_unit": "unit-bbcda096d",
+    "operation": "rhythm grammar monitor",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f73d5a67d667f09f8": {
+      "kind": "build",
+      "component_id": "ffcee2747f213bc3b",
+      "creation_order": 1
+    },
+    "fb319126935dddfbd": {
+      "kind": "contract",
+      "component_id": "ffcee2747f213bc3b",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_input_ids": [
+        "fb0134a567edf3097",
+        "f19c1311cdc0a485c"
+      ]
+    },
+    "ffc1557a14b06d098": {
+      "kind": "build",
+      "component_id": "ffcee2747f213bc3b",
+      "creation_order": 2
+    },
+    "fc1f246dfa188dbc0": {
+      "kind": "source",
+      "component_id": "ffcee2747f213bc3b",
+      "capture_id": "f1edce75efb46f3c4",
+      "input_ref": "fb0134a567edf3097"
+    },
+    "f19c1311cdc0a485c": {
+      "kind": "operand",
+      "component_id": "ffcee2747f213bc3b",
+      "inputs": {
+        "word": "bbaba"
+      }
+    },
+    "fe09b4cf7415b9234": {
+      "kind": "build",
+      "component_id": "f5a4d38d027e310ad",
+      "creation_order": 2
+    },
+    "f5bdbc1602711e85e": {
+      "kind": "receipt",
+      "component_id": "ffcee2747f213bc3b",
+      "build_id": "f73d5a67d667f09f8",
+      "source_ref": "fc1f246dfa188dbc0",
+      "emitted_value": "q3"
+    },
+    "ff76e36cad3d902c3": {
+      "kind": "component",
+      "unit_code": "unit-b7c6cf0e5",
+      "serving_manifest": "f9017df9dc8de4fbc",
+      "contract_ref": "f7572cdea13a6b1b6"
+    },
+    "f97aca1299bdaa0cc": {
+      "kind": "operand",
+      "component_id": "f5a4d38d027e310ad",
+      "inputs": {
+        "word": "bbaba"
+      }
+    },
+    "fc8f2b89a5845c356": {
+      "kind": "source",
+      "component_id": "f5a4d38d027e310ad",
+      "capture_id": "f8a6baed7622776bc",
+      "input_ref": "f97aca1299bdaa0cc"
+    },
+    "fad247e5ab54daa23": {
+      "kind": "source",
+      "component_id": "f5a4d38d027e310ad",
+      "capture_id": "f6ab8b031b240c991",
+      "input_ref": "UNKNOWN"
+    },
+    "f5a4d38d027e310ad": {
+      "kind": "component",
+      "unit_code": "unit-bbcda096d",
+      "serving_manifest": "fa3ce1a264a5f3dee",
+      "contract_ref": "f3706af4980997245"
+    },
+    "f20681c42239b20f7": {
+      "kind": "build",
+      "component_id": "f5a4d38d027e310ad",
+      "creation_order": 1
+    },
+    "fcac04d314138d49b": {
+      "kind": "build",
+      "component_id": "ff76e36cad3d902c3",
+      "creation_order": 2
+    },
+    "fa3ce1a264a5f3dee": {
+      "kind": "deployment",
+      "component_id": "f5a4d38d027e310ad",
+      "build_id": "fe09b4cf7415b9234"
+    },
+    "f3706af4980997245": {
+      "kind": "contract",
+      "component_id": "f5a4d38d027e310ad",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_input_ids": [
+        "f8d3c8e5132a23d22",
+        "f97aca1299bdaa0cc"
+      ]
+    },
+    "fd31c1f8151f24f67": {
+      "kind": "operand",
+      "component_id": "ff76e36cad3d902c3",
+      "inputs": {
+        "word": "baaab"
+      }
+    },
+    "f8d3c8e5132a23d22": {
+      "kind": "operand",
+      "component_id": "f5a4d38d027e310ad",
+      "inputs": {
+        "word": "baaab"
+      }
+    },
+    "f8f19825208f0d038": {
+      "kind": "receipt",
+      "component_id": "f5a4d38d027e310ad",
+      "build_id": "fe09b4cf7415b9234",
+      "source_ref": "fad247e5ab54daa23",
+      "emitted_value": "q2"
+    },
+    "ff42d2c5a84d8e1bc": {
+      "kind": "deployment",
+      "component_id": "ffcee2747f213bc3b",
+      "build_id": "ffc1557a14b06d098"
+    },
+    "f2a55f925544cc4f7": {
+      "kind": "source",
+      "component_id": "ff76e36cad3d902c3",
+      "capture_id": "faf58a725f2a80dd1",
+      "input_ref": "f0be6614a18b60d03"
+    },
+    "f7572cdea13a6b1b6": {
+      "kind": "contract",
+      "component_id": "ff76e36cad3d902c3",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_input_ids": [
+        "fd31c1f8151f24f67",
+        "f0be6614a18b60d03"
+      ]
+    },
+    "f6b62c634c3ade187": {
+      "kind": "receipt",
+      "component_id": "ffcee2747f213bc3b",
+      "build_id": "ffc1557a14b06d098",
+      "source_ref": "fc1f246dfa188dbc0",
+      "emitted_value": "q2"
+    },
+    "f9017df9dc8de4fbc": {
+      "kind": "deployment",
+      "component_id": "ff76e36cad3d902c3",
+      "build_id": "fcac04d314138d49b"
+    },
+    "f0be6614a18b60d03": {
+      "kind": "operand",
+      "component_id": "ff76e36cad3d902c3",
+      "inputs": {
+        "word": "bbaba"
+      }
+    },
+    "fb0134a567edf3097": {
+      "kind": "operand",
+      "component_id": "ffcee2747f213bc3b",
+      "inputs": {
+        "word": "baaab"
+      }
+    },
+    "f23865e4934ce3fea": {
+      "kind": "source",
+      "component_id": "f5a4d38d027e310ad",
+      "capture_id": "f6ab8b031b240c991",
+      "input_ref": "UNKNOWN"
+    },
+    "f2e6e57cee63faf67": {
+      "kind": "receipt",
+      "component_id": "ff76e36cad3d902c3",
+      "build_id": "fcac04d314138d49b",
+      "source_ref": "f2a55f925544cc4f7",
+      "emitted_value": "q3"
+    },
+    "ffcee2747f213bc3b": {
+      "kind": "component",
+      "unit_code": "unit-a8bd2729c",
+      "serving_manifest": "ff42d2c5a84d8e1bc",
+      "contract_ref": "fb319126935dddfbd"
+    },
+    "f03686fad3b7afe80": {
+      "kind": "receipt",
+      "component_id": "f5a4d38d027e310ad",
+      "build_id": "f20681c42239b20f7",
+      "source_ref": "fc8f2b89a5845c356",
+      "emitted_value": "q3"
+    }
+  }
+}

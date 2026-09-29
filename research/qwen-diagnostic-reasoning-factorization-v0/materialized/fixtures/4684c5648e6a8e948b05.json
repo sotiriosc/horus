@@ -1,0 +1,11 @@
+{
+  "operational_rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+  "inputs": [
+    {
+      "word": "baaab"
+    },
+    {
+      "word": "bbaba"
+    }
+  ]
+}

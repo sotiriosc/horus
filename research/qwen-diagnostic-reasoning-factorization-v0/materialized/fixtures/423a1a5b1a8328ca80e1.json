@@ -1,0 +1,71 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "SPRC",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "SEQUOIA"
+            },
+            "required_result_for_claim": "SQ"
+          },
+          {
+            "claimed_input": {
+              "text": "SEQUOIA"
+            },
+            "required_result_for_claim": "SQ"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "SEQUOIA"
+          },
+          "required_result": "SQ"
+        },
+        {
+          "input_value": {
+            "text": "SPRUCE"
+          },
+          "required_result": "SPRC"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "SPRC",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "text": "SPRUCE"
+            },
+            "required_result_for_claim": "SPRC"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "text": "SEQUOIA"
+          },
+          "required_result": "SQ"
+        },
+        {
+          "input_value": {
+            "text": "SPRUCE"
+          },
+          "required_result": "SPRC"
+        }
+      ]
+    }
+  ]
+}

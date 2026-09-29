@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-0dea3f51f\",\n      \"operation\": \"impulse-response mixer\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f8637252dfe9b0dc6\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"capture_id\": \"fcfbc581410e3dd83\",\n        \"input_ref\": \"fb8bd8579a84dc164\"\n      },\n      \"f23f4aacaf711a48c\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"rule\": \"For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.\",\n        \"admissible_input_ids\": [\n          \"f164d523079478eed\",\n          \"f821be78b1514003d\"\n        ]\n      },\n      \"f164d523079478eed\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"inputs\": {\n          \"a\": [\n            2,\n            1,\n            3\n          ],\n          \"b\": [\n            1,\n            2\n          ]\n        }\n      },\n      \"fff914dcf4d9b56df\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"build_id\": \"f4d3067f5030e7045\",\n        \"source_ref\": \"f8637252dfe9b0dc6\",\n        \"emitted_value\": \"4,4,7,3\"\n      },\n      \"fb381d63def4fccd5\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"build_id\": \"f4add3aba984b9bb4\"\n      },\n      \"f4d3067f5030e7045\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"creation_order\": 1\n      },\n      \"f4add3aba984b9bb4\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"creation_order\": 2\n      },\n      \"f03f78e004028070f\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-73a90528c\",\n        \"serving_manifest\": \"fb381d63def4fccd5\",\n        \"contract_ref\": \"f23f4aacaf711a48c\"\n      },\n      \"f86ec89f09f6c4a0a\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-0dea3f51f\",\n        \"serving_manifest\": \"fb6e3e35997ef8e6d\",\n        \"contract_ref\": \"f6a65ab42f9320988\"\n      },\n      \"f6a65ab42f9320988\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"rule\": \"For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.\",\n        \"admissible_input_ids\": [\n          \"f3ba86330c2a4dc63\",\n          \"fb8bd8579a84dc164\"\n        ]\n      },\n      \"fb6e3e35997ef8e6d\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"build_id\": \"f190a836f030beaf5\"\n      },\n      \"f190a836f030beaf5\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"creation_order\": 2\n      },\n      \"fd9ace7716845a695\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"build_id\": \"f4add3aba984b9bb4\",\n        \"source_ref\": \"f3a93acb80c17d236\",\n        \"emitted_value\": \"2,5,5,6\"\n      },\n      \"f3ba86330c2a4dc63\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"inputs\": {\n          \"a\": [\n            2,\n            1,\n            3\n          ],\n          \"b\": [\n            1,\n            2\n          ]\n        }\n      },\n      \"fb8bd8579a84dc164\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"inputs\": {\n          \"a\": [\n            2,\n            1,\n            3\n          ],\n          \"b\": [\n            2,\n            1\n          ]\n        }\n      },\n      \"f3a93acb80c17d236\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"capture_id\": \"fa41f46f40a73ffac\",\n        \"input_ref\": \"f164d523079478eed\"\n      },\n      \"f2f0d959ac36096d5\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"build_id\": \"f190a836f030beaf5\",\n        \"source_ref\": \"fc45f84a3c0fca67e\",\n        \"emitted_value\": \"2,5,5,6\"\n      },\n      \"fc45f84a3c0fca67e\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"capture_id\": \"fd56eb4a7a34ac06c\",\n        \"input_ref\": \"f3ba86330c2a4dc63\"\n      },\n      \"f26fdb22f8210a9c5\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f86ec89f09f6c4a0a\",\n        \"capture_id\": \"fd56eb4a7a34ac06c\",\n        \"input_ref\": \"f3ba86330c2a4dc63\"\n      },\n      \"f821be78b1514003d\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f03f78e004028070f\",\n        \"inputs\": {\n          \"a\": [\n            2,\n            1,\n            3\n          ],\n          \"b\": [\n            2,\n            1\n          ]\n        }\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f164d523079478eed\",\n      \"required_output\": \"2,5,5,6\"\n    },\n    {\n      \"input_record_id\": \"f3ba86330c2a4dc63\",\n      \"required_output\": \"2,5,5,6\"\n    },\n    {\n      \"input_record_id\": \"fb8bd8579a84dc164\",\n      \"required_output\": \"4,4,7,3\"\n    },\n    {\n      \"input_record_id\": \"f821be78b1514003d\",\n      \"required_output\": \"4,4,7,3\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

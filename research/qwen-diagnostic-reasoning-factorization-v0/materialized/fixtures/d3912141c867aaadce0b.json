@@ -1,0 +1,190 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-0dea3f51f",
+      "operation": "impulse-response mixer",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f8637252dfe9b0dc6": {
+        "kind": "source",
+        "component_id": "f86ec89f09f6c4a0a",
+        "capture_id": "fcfbc581410e3dd83",
+        "input_ref": "fb8bd8579a84dc164"
+      },
+      "f23f4aacaf711a48c": {
+        "kind": "contract",
+        "component_id": "f03f78e004028070f",
+        "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+        "admissible_input_ids": [
+          "f164d523079478eed",
+          "f821be78b1514003d"
+        ]
+      },
+      "f164d523079478eed": {
+        "kind": "operand",
+        "component_id": "f03f78e004028070f",
+        "inputs": {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            1,
+            2
+          ]
+        }
+      },
+      "fff914dcf4d9b56df": {
+        "kind": "receipt",
+        "component_id": "f86ec89f09f6c4a0a",
+        "build_id": "f4d3067f5030e7045",
+        "source_ref": "f8637252dfe9b0dc6",
+        "emitted_value": "4,4,7,3"
+      },
+      "fb381d63def4fccd5": {
+        "kind": "deployment",
+        "component_id": "f03f78e004028070f",
+        "build_id": "f4add3aba984b9bb4"
+      },
+      "f4d3067f5030e7045": {
+        "kind": "build",
+        "component_id": "f86ec89f09f6c4a0a",
+        "creation_order": 1
+      },
+      "f4add3aba984b9bb4": {
+        "kind": "build",
+        "component_id": "f03f78e004028070f",
+        "creation_order": 2
+      },
+      "f03f78e004028070f": {
+        "kind": "component",
+        "unit_code": "unit-73a90528c",
+        "serving_manifest": "fb381d63def4fccd5",
+        "contract_ref": "f23f4aacaf711a48c"
+      },
+      "f86ec89f09f6c4a0a": {
+        "kind": "component",
+        "unit_code": "unit-0dea3f51f",
+        "serving_manifest": "fb6e3e35997ef8e6d",
+        "contract_ref": "f6a65ab42f9320988"
+      },
+      "f6a65ab42f9320988": {
+        "kind": "contract",
+        "component_id": "f86ec89f09f6c4a0a",
+        "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+        "admissible_input_ids": [
+          "f3ba86330c2a4dc63",
+          "fb8bd8579a84dc164"
+        ]
+      },
+      "fb6e3e35997ef8e6d": {
+        "kind": "deployment",
+        "component_id": "f86ec89f09f6c4a0a",
+        "build_id": "f190a836f030beaf5"
+      },
+      "f190a836f030beaf5": {
+        "kind": "build",
+        "component_id": "f86ec89f09f6c4a0a",
+        "creation_order": 2
+      },
+      "fd9ace7716845a695": {
+        "kind": "receipt",
+        "component_id": "f03f78e004028070f",
+        "build_id": "f4add3aba984b9bb4",
+        "source_ref": "f3a93acb80c17d236",
+        "emitted_value": "2,5,5,6"
+      },
+      "f3ba86330c2a4dc63": {
+        "kind": "operand",
+        "component_id": "f86ec89f09f6c4a0a",
+        "inputs": {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            1,
+            2
+          ]
+        }
+      },
+      "fb8bd8579a84dc164": {
+        "kind": "operand",
+        "component_id": "f86ec89f09f6c4a0a",
+        "inputs": {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            2,
+            1
+          ]
+        }
+      },
+      "f3a93acb80c17d236": {
+        "kind": "source",
+        "component_id": "f03f78e004028070f",
+        "capture_id": "fa41f46f40a73ffac",
+        "input_ref": "f164d523079478eed"
+      },
+      "f2f0d959ac36096d5": {
+        "kind": "receipt",
+        "component_id": "f86ec89f09f6c4a0a",
+        "build_id": "f190a836f030beaf5",
+        "source_ref": "fc45f84a3c0fca67e",
+        "emitted_value": "2,5,5,6"
+      },
+      "fc45f84a3c0fca67e": {
+        "kind": "source",
+        "component_id": "f86ec89f09f6c4a0a",
+        "capture_id": "fd56eb4a7a34ac06c",
+        "input_ref": "f3ba86330c2a4dc63"
+      },
+      "f26fdb22f8210a9c5": {
+        "kind": "source",
+        "component_id": "f86ec89f09f6c4a0a",
+        "capture_id": "fd56eb4a7a34ac06c",
+        "input_ref": "f3ba86330c2a4dc63"
+      },
+      "f821be78b1514003d": {
+        "kind": "operand",
+        "component_id": "f03f78e004028070f",
+        "inputs": {
+          "a": [
+            2,
+            1,
+            3
+          ],
+          "b": [
+            2,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "f164d523079478eed",
+      "required_output": "2,5,5,6"
+    },
+    {
+      "input_record_id": "f3ba86330c2a4dc63",
+      "required_output": "2,5,5,6"
+    },
+    {
+      "input_record_id": "fb8bd8579a84dc164",
+      "required_output": "4,4,7,3"
+    },
+    {
+      "input_record_id": "f821be78b1514003d",
+      "required_output": "4,4,7,3"
+    }
+  ]
+}

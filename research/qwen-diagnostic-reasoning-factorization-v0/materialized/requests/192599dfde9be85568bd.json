@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nTask data:\n{\n  \"scope\": {\n    \"requested_unit\": \"unit-454877819\",\n    \"operation\": \"motif position counter\",\n    \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n    \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n  },\n  \"records\": {\n    \"f1708173de0caab26\": {\n      \"kind\": \"component\",\n      \"unit_code\": \"unit-a32db7bd5\",\n      \"serving_manifest\": \"f058e33a754b0f5ef\",\n      \"contract_ref\": \"ffb39c92c654475b3\"\n    },\n    \"fe07f142182095f00\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"inputs\": {\n        \"text\": \"banana\",\n        \"pattern\": \"ana\"\n      }\n    },\n    \"ff91f8ed0d50be3a2\": {\n      \"kind\": \"source\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"capture_id\": \"fdbd30360e741179f\",\n      \"input_ref\": \"fe07f142182095f00\"\n    },\n    \"f55b091c19fa811f1\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"build_id\": \"f1562aa0118796b1e\",\n      \"source_ref\": \"ff91f8ed0d50be3a2\",\n      \"emitted_value\": \"2\"\n    },\n    \"f29bf68d900b5fd49\": {\n      \"kind\": \"build\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"creation_order\": 1\n    },\n    \"f1562aa0118796b1e\": {\n      \"kind\": \"build\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"creation_order\": 2\n    },\n    \"f855e1f3e38318895\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"inputs\": {\n        \"text\": \"bandana\",\n        \"pattern\": \"ana\"\n      }\n    },\n    \"f194d79be779e5065\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"capture_id\": \"f78d7a7f9288024da\",\n      \"input_ref\": \"f855e1f3e38318895\"\n    },\n    \"fb74c2ebfcf99d8a9\": {\n      \"kind\": \"component\",\n      \"unit_code\": \"unit-454877819\",\n      \"serving_manifest\": \"fe5ce8cf29aa95bd2\",\n      \"contract_ref\": \"ff048f09bab3829ab\"\n    },\n    \"ffb39c92c654475b3\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"rule\": \"Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.\",\n      \"admissible_input_ids\": [\n        \"fe07f142182095f00\",\n        \"f6eb9b50e382e796e\"\n      ]\n    },\n    \"f4cbee948e4403679\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"build_id\": \"f6b242855cf20fc0d\",\n      \"source_ref\": \"f0aac0dbb40dfe41a\",\n      \"emitted_value\": \"2\"\n    },\n    \"f2c50232472c1c6a8\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"inputs\": {\n        \"text\": \"banana\",\n        \"pattern\": \"ana\"\n      }\n    },\n    \"f0aac0dbb40dfe41a\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"capture_id\": \"f820b8096774bd585\",\n      \"input_ref\": \"UNKNOWN\"\n    },\n    \"fe5ce8cf29aa95bd2\": {\n      \"kind\": \"deployment\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"build_id\": \"f6b242855cf20fc0d\"\n    },\n    \"f6eb9b50e382e796e\": {\n      \"kind\": \"operand\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"inputs\": {\n        \"text\": \"bandana\",\n        \"pattern\": \"ana\"\n      }\n    },\n    \"f04fa90e61d454cb0\": {\n      \"kind\": \"source\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"capture_id\": \"f820b8096774bd585\",\n      \"input_ref\": \"UNKNOWN\"\n    },\n    \"ff048f09bab3829ab\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"rule\": \"Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.\",\n      \"admissible_input_ids\": [\n        \"f2c50232472c1c6a8\",\n        \"f855e1f3e38318895\"\n      ]\n    },\n    \"f058e33a754b0f5ef\": {\n      \"kind\": \"deployment\",\n      \"component_id\": \"f1708173de0caab26\",\n      \"build_id\": \"f1562aa0118796b1e\"\n    },\n    \"f6b242855cf20fc0d\": {\n      \"kind\": \"build\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"creation_order\": 2\n    },\n    \"f61aed0b7203708f3\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"fb74c2ebfcf99d8a9\",\n      \"build_id\": \"f29bf68d900b5fd49\",\n      \"source_ref\": \"f194d79be779e5065\",\n      \"emitted_value\": \"1\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

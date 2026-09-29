@@ -1,0 +1,162 @@
+{
+  "raw_evidence": {
+    "scope": {
+      "requested_unit": "unit-454877819",
+      "operation": "motif position counter",
+      "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+      "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+    },
+    "records": {
+      "f1708173de0caab26": {
+        "kind": "component",
+        "unit_code": "unit-a32db7bd5",
+        "serving_manifest": "f058e33a754b0f5ef",
+        "contract_ref": "ffb39c92c654475b3"
+      },
+      "fe07f142182095f00": {
+        "kind": "operand",
+        "component_id": "f1708173de0caab26",
+        "inputs": {
+          "text": "banana",
+          "pattern": "ana"
+        }
+      },
+      "ff91f8ed0d50be3a2": {
+        "kind": "source",
+        "component_id": "f1708173de0caab26",
+        "capture_id": "fdbd30360e741179f",
+        "input_ref": "fe07f142182095f00"
+      },
+      "f55b091c19fa811f1": {
+        "kind": "receipt",
+        "component_id": "f1708173de0caab26",
+        "build_id": "f1562aa0118796b1e",
+        "source_ref": "ff91f8ed0d50be3a2",
+        "emitted_value": "2"
+      },
+      "f29bf68d900b5fd49": {
+        "kind": "build",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "creation_order": 1
+      },
+      "f1562aa0118796b1e": {
+        "kind": "build",
+        "component_id": "f1708173de0caab26",
+        "creation_order": 2
+      },
+      "f855e1f3e38318895": {
+        "kind": "operand",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "inputs": {
+          "text": "bandana",
+          "pattern": "ana"
+        }
+      },
+      "f194d79be779e5065": {
+        "kind": "source",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "capture_id": "f78d7a7f9288024da",
+        "input_ref": "f855e1f3e38318895"
+      },
+      "fb74c2ebfcf99d8a9": {
+        "kind": "component",
+        "unit_code": "unit-454877819",
+        "serving_manifest": "fe5ce8cf29aa95bd2",
+        "contract_ref": "ff048f09bab3829ab"
+      },
+      "ffb39c92c654475b3": {
+        "kind": "contract",
+        "component_id": "f1708173de0caab26",
+        "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+        "admissible_input_ids": [
+          "fe07f142182095f00",
+          "f6eb9b50e382e796e"
+        ]
+      },
+      "f4cbee948e4403679": {
+        "kind": "receipt",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "build_id": "f6b242855cf20fc0d",
+        "source_ref": "f0aac0dbb40dfe41a",
+        "emitted_value": "2"
+      },
+      "f2c50232472c1c6a8": {
+        "kind": "operand",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "inputs": {
+          "text": "banana",
+          "pattern": "ana"
+        }
+      },
+      "f0aac0dbb40dfe41a": {
+        "kind": "source",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "capture_id": "f820b8096774bd585",
+        "input_ref": "UNKNOWN"
+      },
+      "fe5ce8cf29aa95bd2": {
+        "kind": "deployment",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "build_id": "f6b242855cf20fc0d"
+      },
+      "f6eb9b50e382e796e": {
+        "kind": "operand",
+        "component_id": "f1708173de0caab26",
+        "inputs": {
+          "text": "bandana",
+          "pattern": "ana"
+        }
+      },
+      "f04fa90e61d454cb0": {
+        "kind": "source",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "capture_id": "f820b8096774bd585",
+        "input_ref": "UNKNOWN"
+      },
+      "ff048f09bab3829ab": {
+        "kind": "contract",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+        "admissible_input_ids": [
+          "f2c50232472c1c6a8",
+          "f855e1f3e38318895"
+        ]
+      },
+      "f058e33a754b0f5ef": {
+        "kind": "deployment",
+        "component_id": "f1708173de0caab26",
+        "build_id": "f1562aa0118796b1e"
+      },
+      "f6b242855cf20fc0d": {
+        "kind": "build",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "creation_order": 2
+      },
+      "f61aed0b7203708f3": {
+        "kind": "receipt",
+        "component_id": "fb74c2ebfcf99d8a9",
+        "build_id": "f29bf68d900b5fd49",
+        "source_ref": "f194d79be779e5065",
+        "emitted_value": "1"
+      }
+    }
+  },
+  "supplied_computations": [
+    {
+      "input_record_id": "fe07f142182095f00",
+      "required_output": "2"
+    },
+    {
+      "input_record_id": "f855e1f3e38318895",
+      "required_output": "1"
+    },
+    {
+      "input_record_id": "f2c50232472c1c6a8",
+      "required_output": "2"
+    },
+    {
+      "input_record_id": "f6eb9b50e382e796e",
+      "required_output": "1"
+    }
+  ]
+}

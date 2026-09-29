@@ -1,0 +1,138 @@
+{
+  "scope": {
+    "requested_unit": "unit-a7bc399b3",
+    "operation": "serial grammar monitor",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f0aaae274594be729": {
+      "kind": "source",
+      "component_id": "f965cbe7469569f16",
+      "capture_id": "ffb8b211285f872b7",
+      "input_ref": "f70a946c6a8019deb"
+    },
+    "fdf2530a92de52126": {
+      "kind": "build",
+      "component_id": "f965cbe7469569f16",
+      "creation_order": 1
+    },
+    "f533f9af3e0d90b91": {
+      "kind": "contract",
+      "component_id": "f965cbe7469569f16",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_input_ids": [
+        "f70a946c6a8019deb",
+        "fdce4d17323ec72f7"
+      ]
+    },
+    "f70a946c6a8019deb": {
+      "kind": "operand",
+      "component_id": "f965cbe7469569f16",
+      "inputs": {
+        "word": "abba"
+      }
+    },
+    "ff95dc6dea6e03d15": {
+      "kind": "receipt",
+      "component_id": "f965cbe7469569f16",
+      "build_id": "fdf2530a92de52126",
+      "source_ref": "f8d5469e7981a7bfb",
+      "emitted_value": "q3"
+    },
+    "f9d2dc3481a3bc0e4": {
+      "kind": "receipt",
+      "component_id": "f022651836886310c",
+      "build_id": "feeb4854ee5bdf273",
+      "source_ref": "fadda233c4298c4eb",
+      "emitted_value": "q1"
+    },
+    "f8d5469e7981a7bfb": {
+      "kind": "source",
+      "component_id": "f965cbe7469569f16",
+      "capture_id": "ff400742730ae6143",
+      "input_ref": "fdce4d17323ec72f7"
+    },
+    "f965cbe7469569f16": {
+      "kind": "component",
+      "unit_code": "unit-a7bc399b3",
+      "serving_manifest": "ff5c29c43ff413bdb",
+      "contract_ref": "f533f9af3e0d90b91"
+    },
+    "feeb4854ee5bdf273": {
+      "kind": "build",
+      "component_id": "f022651836886310c",
+      "creation_order": 2
+    },
+    "f9fb669ab8bf86836": {
+      "kind": "receipt",
+      "component_id": "f965cbe7469569f16",
+      "build_id": "f4d963ed10ab4c6d7",
+      "source_ref": "f999b7869c64a44c3",
+      "emitted_value": "q1"
+    },
+    "f999b7869c64a44c3": {
+      "kind": "source",
+      "component_id": "f965cbe7469569f16",
+      "capture_id": "ffb8b211285f872b7",
+      "input_ref": "f70a946c6a8019deb"
+    },
+    "f022651836886310c": {
+      "kind": "component",
+      "unit_code": "unit-f2d20417d",
+      "serving_manifest": "ff9d2b067fcb7bba9",
+      "contract_ref": "f9969beb064d11d96"
+    },
+    "f4d963ed10ab4c6d7": {
+      "kind": "build",
+      "component_id": "f965cbe7469569f16",
+      "creation_order": 2
+    },
+    "ff5c29c43ff413bdb": {
+      "kind": "deployment",
+      "component_id": "f965cbe7469569f16",
+      "build_id": "f4d963ed10ab4c6d7"
+    },
+    "f7a28d3d6c7e10b93": {
+      "kind": "operand",
+      "component_id": "f022651836886310c",
+      "inputs": {
+        "word": "ababa"
+      }
+    },
+    "feb21be676b8795e7": {
+      "kind": "operand",
+      "component_id": "f022651836886310c",
+      "inputs": {
+        "word": "abba"
+      }
+    },
+    "ff9d2b067fcb7bba9": {
+      "kind": "deployment",
+      "component_id": "f022651836886310c",
+      "build_id": "feeb4854ee5bdf273"
+    },
+    "fadda233c4298c4eb": {
+      "kind": "source",
+      "component_id": "f022651836886310c",
+      "capture_id": "ff69f89dca0f1dca2",
+      "input_ref": "feb21be676b8795e7"
+    },
+    "f9969beb064d11d96": {
+      "kind": "contract",
+      "component_id": "f022651836886310c",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "admissible_input_ids": [
+        "feb21be676b8795e7",
+        "f7a28d3d6c7e10b93"
+      ]
+    },
+    "fdce4d17323ec72f7": {
+      "kind": "operand",
+      "component_id": "f965cbe7469569f16",
+      "inputs": {
+        "word": "ababa"
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "scope": {
+    "requested_unit": "unit-f814da426",
+    "operation": "tooth pitch calculator",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f8f3960ddc022d569": {
+      "kind": "build",
+      "component_id": "f4a4591f5b90514b6",
+      "creation_order": 2
+    },
+    "f694307ae19ba7c2a": {
+      "kind": "source",
+      "component_id": "f6cba55fdc9bc0903",
+      "capture_id": "f65af39919f3deca0",
+      "input_ref": "f086165a8173af44a"
+    },
+    "fb62c623e1b477810": {
+      "kind": "source",
+      "component_id": "f4a4591f5b90514b6",
+      "capture_id": "f9bafee67c81c4a46",
+      "input_ref": "f2b2f91b8fa8263b7"
+    },
+    "fdb8a81c2d867cb61": {
+      "kind": "receipt",
+      "component_id": "fbd1d75163d3e6daa",
+      "build_id": "faad00f8ba9fa25fd",
+      "source_ref": "fef4386c2cc01d83f",
+      "emitted_value": "1"
+    },
+    "fcec800b720b90298": {
+      "kind": "contract",
+      "component_id": "f6cba55fdc9bc0903",
+      "rule": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "admissible_input_ids": [
+        "f086165a8173af44a",
+        "f148b4069a0fba509"
+      ]
+    },
+    "fe5c59790ae721202": {
+      "kind": "build",
+      "component_id": "f6cba55fdc9bc0903",
+      "creation_order": 1
+    },
+    "ff2bb076c20d0ddb1": {
+      "kind": "receipt",
+      "component_id": "f6cba55fdc9bc0903",
+      "build_id": "fe5c59790ae721202",
+      "source_ref": "f694307ae19ba7c2a",
+      "emitted_value": "1"
+    },
+    "fce48826d8edf191f": {
+      "kind": "receipt",
+      "component_id": "f6cba55fdc9bc0903",
+      "build_id": "f3e8aa4d1fbbcc995",
+      "source_ref": "f694307ae19ba7c2a",
+      "emitted_value": "13"
+    },
+    "f086165a8173af44a": {
+      "kind": "operand",
+      "component_id": "f6cba55fdc9bc0903",
+      "inputs": {
+        "x": 143,
+        "y": 221
+      }
+    },
+    "f1072cb3e2e505084": {
+      "kind": "deployment",
+      "component_id": "f4a4591f5b90514b6",
+      "build_id": "f8f3960ddc022d569"
+    },
+    "fbd1d75163d3e6daa": {
+      "kind": "component",
+      "unit_code": "unit-67653138a",
+      "serving_manifest": "f69f9dcdfb883b91e",
+      "contract_ref": "f4f2ca0af764002bf"
+    },
+    "f5f19304c7e8341cc": {
+      "kind": "operand",
+      "component_id": "fbd1d75163d3e6daa",
+      "inputs": {
+        "x": 143,
+        "y": 221
+      }
+    },
+    "ffcf2a4eeb7ab2d21": {
+      "kind": "source",
+      "component_id": "f4a4591f5b90514b6",
+      "capture_id": "ff734aafc29636546",
+      "input_ref": "fd3f1c0b9372269f2"
+    },
+    "fd3f1c0b9372269f2": {
+      "kind": "operand",
+      "component_id": "f4a4591f5b90514b6",
+      "inputs": {
+        "x": 143,
+        "y": 221
+      }
+    },
+    "fef4386c2cc01d83f": {
+      "kind": "source",
+      "component_id": "fbd1d75163d3e6daa",
+      "capture_id": "fa53ad5938a0def50",
+      "input_ref": "feceb8f4ac471003e"
+    },
+    "fde0cfa4256d72af5": {
+      "kind": "deployment",
+      "component_id": "f6cba55fdc9bc0903",
+      "build_id": "f3e8aa4d1fbbcc995"
+    },
+    "f343f3afa8e4c4da8": {
+      "kind": "receipt",
+      "component_id": "f4a4591f5b90514b6",
+      "build_id": "f8f3960ddc022d569",
+      "source_ref": "ffcf2a4eeb7ab2d21",
+      "emitted_value": "1"
+    },
+    "f69f9dcdfb883b91e": {
+      "kind": "deployment",
+      "component_id": "fbd1d75163d3e6daa",
+      "build_id": "faad00f8ba9fa25fd"
+    },
+    "fa886e69f5cf5754a": {
+      "kind": "build",
+      "component_id": "f4a4591f5b90514b6",
+      "creation_order": 1
+    },
+    "f6cba55fdc9bc0903": {
+      "kind": "component",
+      "unit_code": "unit-f7ffe6a9d",
+      "serving_manifest": "fde0cfa4256d72af5",
+      "contract_ref": "fcec800b720b90298"
+    },
+    "f4a4591f5b90514b6": {
+      "kind": "component",
+      "unit_code": "unit-f814da426",
+      "serving_manifest": "f1072cb3e2e505084",
+      "contract_ref": "f5df888d2c5fb0237"
+    },
+    "f4f2ca0af764002bf": {
+      "kind": "contract",
+      "component_id": "fbd1d75163d3e6daa",
+      "rule": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "admissible_input_ids": [
+        "f5f19304c7e8341cc",
+        "feceb8f4ac471003e"
+      ]
+    },
+    "feceb8f4ac471003e": {
+      "kind": "operand",
+      "component_id": "fbd1d75163d3e6daa",
+      "inputs": {
+        "x": 144,
+        "y": 221
+      }
+    },
+    "f148b4069a0fba509": {
+      "kind": "operand",
+      "component_id": "f6cba55fdc9bc0903",
+      "inputs": {
+        "x": 144,
+        "y": 221
+      }
+    },
+    "f9017c7bb7d9fff89": {
+      "kind": "source",
+      "component_id": "f4a4591f5b90514b6",
+      "capture_id": "ff734aafc29636546",
+      "input_ref": "fd3f1c0b9372269f2"
+    },
+    "f5df888d2c5fb0237": {
+      "kind": "contract",
+      "component_id": "f4a4591f5b90514b6",
+      "rule": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "admissible_input_ids": [
+        "fd3f1c0b9372269f2",
+        "f2b2f91b8fa8263b7"
+      ]
+    },
+    "faad00f8ba9fa25fd": {
+      "kind": "build",
+      "component_id": "fbd1d75163d3e6daa",
+      "creation_order": 2
+    },
+    "f2b2f91b8fa8263b7": {
+      "kind": "operand",
+      "component_id": "f4a4591f5b90514b6",
+      "inputs": {
+        "x": 144,
+        "y": 221
+      }
+    },
+    "f3e8aa4d1fbbcc995": {
+      "kind": "build",
+      "component_id": "f6cba55fdc9bc0903",
+      "creation_order": 2
+    },
+    "f6a82fc0b72f77915": {
+      "kind": "receipt",
+      "component_id": "f4a4591f5b90514b6",
+      "build_id": "fa886e69f5cf5754a",
+      "source_ref": "fb62c623e1b477810",
+      "emitted_value": "1"
+    }
+  }
+}

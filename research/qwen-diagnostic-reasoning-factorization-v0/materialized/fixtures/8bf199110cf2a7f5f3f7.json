@@ -1,0 +1,250 @@
+{
+  "scope": {
+    "requested_unit": "unit-e8f50f7ff",
+    "operation": "filter-response mixer",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "fb531403e3d789522": {
+      "kind": "build",
+      "component_id": "f18b9e55023f278ee",
+      "creation_order": 2
+    },
+    "f4d65fdee49265a83": {
+      "kind": "operand",
+      "component_id": "f1ff7453f75feb650",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          -1,
+          3
+        ]
+      }
+    },
+    "f942b530f8fd49f89": {
+      "kind": "contract",
+      "component_id": "f18b9e55023f278ee",
+      "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "admissible_input_ids": [
+        "f850d627b1d6f9fce",
+        "f4b41d165ad97e961"
+      ]
+    },
+    "f5ce2b9ab297a968b": {
+      "kind": "source",
+      "component_id": "fe3055c01ba7750c1",
+      "capture_id": "f4c37d5cb24ac05f5",
+      "input_ref": "UNKNOWN"
+    },
+    "feb4f85914934a0d3": {
+      "kind": "operand",
+      "component_id": "f1ff7453f75feb650",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          3,
+          -1
+        ]
+      }
+    },
+    "f18b9e55023f278ee": {
+      "kind": "component",
+      "unit_code": "unit-c460436d9",
+      "serving_manifest": "f23d515af35cb6495",
+      "contract_ref": "f942b530f8fd49f89"
+    },
+    "fd068b81b20d4aeb2": {
+      "kind": "source",
+      "component_id": "fe3055c01ba7750c1",
+      "capture_id": "f4c37d5cb24ac05f5",
+      "input_ref": "UNKNOWN"
+    },
+    "f8ca68f950f64ce56": {
+      "kind": "source",
+      "component_id": "f1ff7453f75feb650",
+      "capture_id": "fc3caf5e08a7ca2f3",
+      "input_ref": "f4d65fdee49265a83"
+    },
+    "f98e7d7811b5de32d": {
+      "kind": "receipt",
+      "component_id": "f18b9e55023f278ee",
+      "build_id": "fb531403e3d789522",
+      "source_ref": "f6e470c549c9b0d44",
+      "emitted_value": "3,11,2,-2"
+    },
+    "f135adff693d27089": {
+      "kind": "build",
+      "component_id": "fe3055c01ba7750c1",
+      "creation_order": 1
+    },
+    "fe3055c01ba7750c1": {
+      "kind": "component",
+      "unit_code": "unit-e8f50f7ff",
+      "serving_manifest": "ff3dc751569db9e01",
+      "contract_ref": "fcad8dbde5fb62dd5"
+    },
+    "f918e4d0e27722d36": {
+      "kind": "build",
+      "component_id": "f18b9e55023f278ee",
+      "creation_order": 1
+    },
+    "f7b1eba69f583eb6d": {
+      "kind": "receipt",
+      "component_id": "f18b9e55023f278ee",
+      "build_id": "f918e4d0e27722d36",
+      "source_ref": "f6e470c549c9b0d44",
+      "emitted_value": "-1,-1,10,6"
+    },
+    "fcad8dbde5fb62dd5": {
+      "kind": "contract",
+      "component_id": "fe3055c01ba7750c1",
+      "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "admissible_input_ids": [
+        "f1f97eb0e43324155",
+        "f39d467b57a2d2cf0"
+      ]
+    },
+    "f6e470c549c9b0d44": {
+      "kind": "source",
+      "component_id": "f18b9e55023f278ee",
+      "capture_id": "f57ce6da140a6792e",
+      "input_ref": "f850d627b1d6f9fce"
+    },
+    "f1f97eb0e43324155": {
+      "kind": "operand",
+      "component_id": "fe3055c01ba7750c1",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          3,
+          -1
+        ]
+      }
+    },
+    "f6d968d2077c4ff04": {
+      "kind": "receipt",
+      "component_id": "fe3055c01ba7750c1",
+      "build_id": "f135adff693d27089",
+      "source_ref": "f4b9b3925b6dcca2c",
+      "emitted_value": "-1,-1,10,6"
+    },
+    "f4b9b3925b6dcca2c": {
+      "kind": "source",
+      "component_id": "fe3055c01ba7750c1",
+      "capture_id": "f8687940d2897d382",
+      "input_ref": "f39d467b57a2d2cf0"
+    },
+    "fb74d40e1512083e5": {
+      "kind": "receipt",
+      "component_id": "fe3055c01ba7750c1",
+      "build_id": "fb034de77380ad250",
+      "source_ref": "f5ce2b9ab297a968b",
+      "emitted_value": "3,11,2,-2"
+    },
+    "f850d627b1d6f9fce": {
+      "kind": "operand",
+      "component_id": "f18b9e55023f278ee",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          3,
+          -1
+        ]
+      }
+    },
+    "fc0cebf5dda3301c9": {
+      "kind": "receipt",
+      "component_id": "f1ff7453f75feb650",
+      "build_id": "f21ffb65335a0083e",
+      "source_ref": "f8ca68f950f64ce56",
+      "emitted_value": "-1,-1,10,6"
+    },
+    "ff3dc751569db9e01": {
+      "kind": "deployment",
+      "component_id": "fe3055c01ba7750c1",
+      "build_id": "fb034de77380ad250"
+    },
+    "f21ffb65335a0083e": {
+      "kind": "build",
+      "component_id": "f1ff7453f75feb650",
+      "creation_order": 2
+    },
+    "f39d467b57a2d2cf0": {
+      "kind": "operand",
+      "component_id": "fe3055c01ba7750c1",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          -1,
+          3
+        ]
+      }
+    },
+    "fc63d9154c1d7d5d1": {
+      "kind": "contract",
+      "component_id": "f1ff7453f75feb650",
+      "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "admissible_input_ids": [
+        "feb4f85914934a0d3",
+        "f4d65fdee49265a83"
+      ]
+    },
+    "f23d515af35cb6495": {
+      "kind": "deployment",
+      "component_id": "f18b9e55023f278ee",
+      "build_id": "fb531403e3d789522"
+    },
+    "fb034de77380ad250": {
+      "kind": "build",
+      "component_id": "fe3055c01ba7750c1",
+      "creation_order": 2
+    },
+    "fa1ff1045eec18542": {
+      "kind": "deployment",
+      "component_id": "f1ff7453f75feb650",
+      "build_id": "f21ffb65335a0083e"
+    },
+    "f4b41d165ad97e961": {
+      "kind": "operand",
+      "component_id": "f18b9e55023f278ee",
+      "inputs": {
+        "a": [
+          1,
+          4,
+          2
+        ],
+        "b": [
+          -1,
+          3
+        ]
+      }
+    },
+    "f1ff7453f75feb650": {
+      "kind": "component",
+      "unit_code": "unit-546a79dab",
+      "serving_manifest": "fa1ff1045eec18542",
+      "contract_ref": "fc63d9154c1d7d5d1"
+    }
+  }
+}

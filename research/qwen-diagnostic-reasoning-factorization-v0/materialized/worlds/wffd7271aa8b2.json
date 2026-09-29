@@ -1,0 +1,208 @@
+{
+  "scope": {
+    "requested_unit": "unit-2f89610ba",
+    "operation": "panel combination enumerator",
+    "scope_rule": "Judge only the requested unit and its two supplied target executions.",
+    "evidence_convention": "UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped."
+  },
+  "records": {
+    "f6f2b77ecea7d4700": {
+      "kind": "receipt",
+      "component_id": "fb7271395b8e70dae",
+      "build_id": "f090bf8a344da917d",
+      "source_ref": "f8b0961e2fa2722f9",
+      "emitted_value": "36"
+    },
+    "f64030b9ecf0f8cc2": {
+      "kind": "deployment",
+      "component_id": "fda69a108db3161bd",
+      "build_id": "feac964015a0adb31"
+    },
+    "f6f51e09acac8c1d2": {
+      "kind": "component",
+      "unit_code": "unit-2f89610ba",
+      "serving_manifest": "f6329b81d710e7ee3",
+      "contract_ref": "f461356c87542c2e4"
+    },
+    "f8508e405019f9387": {
+      "kind": "source",
+      "component_id": "fda69a108db3161bd",
+      "capture_id": "f047d58b8c40c350e",
+      "input_ref": "f3144478654f7ea8a"
+    },
+    "f0f150190af1e3c20": {
+      "kind": "operand",
+      "component_id": "fda69a108db3161bd",
+      "inputs": {
+        "n": 9,
+        "k": 2
+      }
+    },
+    "f089abb39bd7f54c2": {
+      "kind": "source",
+      "component_id": "f6f51e09acac8c1d2",
+      "capture_id": "ffc9480a452a078a6",
+      "input_ref": "f0f2e575c8f2a41d9"
+    },
+    "f8b0961e2fa2722f9": {
+      "kind": "source",
+      "component_id": "fb7271395b8e70dae",
+      "capture_id": "f75f8b206271bef90",
+      "input_ref": "f7705a7da2747b9fc"
+    },
+    "fbc68bcfbabbefef6": {
+      "kind": "receipt",
+      "component_id": "fb7271395b8e70dae",
+      "build_id": "f86ce57216fc6cb8c",
+      "source_ref": "f8b0961e2fa2722f9",
+      "emitted_value": "126"
+    },
+    "fb7271395b8e70dae": {
+      "kind": "component",
+      "unit_code": "unit-91df95ad0",
+      "serving_manifest": "f63a7bcd132821a7d",
+      "contract_ref": "f75d13127201eb54d"
+    },
+    "f3144478654f7ea8a": {
+      "kind": "operand",
+      "component_id": "fda69a108db3161bd",
+      "inputs": {
+        "n": 9,
+        "k": 4
+      }
+    },
+    "f2a4269718706e7af": {
+      "kind": "receipt",
+      "component_id": "f6f51e09acac8c1d2",
+      "build_id": "fdb965683e97fe349",
+      "source_ref": "f0d3725e7db4fd486",
+      "emitted_value": "126"
+    },
+    "f10958e8df9c401b2": {
+      "kind": "receipt",
+      "component_id": "fda69a108db3161bd",
+      "build_id": "feac964015a0adb31",
+      "source_ref": "f8508e405019f9387",
+      "emitted_value": "126"
+    },
+    "fda69a108db3161bd": {
+      "kind": "component",
+      "unit_code": "unit-b442e48c0",
+      "serving_manifest": "f64030b9ecf0f8cc2",
+      "contract_ref": "f6804ab3a8a1f8e36"
+    },
+    "fd574ad60cad9b643": {
+      "kind": "receipt",
+      "component_id": "f6f51e09acac8c1d2",
+      "build_id": "f7f17e0b14c2b4d10",
+      "source_ref": "f089abb39bd7f54c2",
+      "emitted_value": "36"
+    },
+    "fe17cd41c19aaeace": {
+      "kind": "operand",
+      "component_id": "fb7271395b8e70dae",
+      "inputs": {
+        "n": 9,
+        "k": 4
+      }
+    },
+    "f9c64aa536b993170": {
+      "kind": "source",
+      "component_id": "f6f51e09acac8c1d2",
+      "capture_id": "ffc9480a452a078a6",
+      "input_ref": "f7a3c442fbcdfc986"
+    },
+    "f7a3c442fbcdfc986": {
+      "kind": "operand",
+      "component_id": "f6f51e09acac8c1d2",
+      "inputs": {
+        "n": 9,
+        "k": 4
+      }
+    },
+    "f461356c87542c2e4": {
+      "kind": "contract",
+      "component_id": "f6f51e09acac8c1d2",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_input_ids": [
+        "f0f2e575c8f2a41d9",
+        "f7a3c442fbcdfc986"
+      ]
+    },
+    "f75d13127201eb54d": {
+      "kind": "contract",
+      "component_id": "fb7271395b8e70dae",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_input_ids": [
+        "f7705a7da2747b9fc",
+        "fe17cd41c19aaeace"
+      ]
+    },
+    "fdb965683e97fe349": {
+      "kind": "build",
+      "component_id": "f6f51e09acac8c1d2",
+      "creation_order": 1
+    },
+    "f0f2e575c8f2a41d9": {
+      "kind": "operand",
+      "component_id": "f6f51e09acac8c1d2",
+      "inputs": {
+        "n": 9,
+        "k": 2
+      }
+    },
+    "f6329b81d710e7ee3": {
+      "kind": "deployment",
+      "component_id": "f6f51e09acac8c1d2",
+      "build_id": "f7f17e0b14c2b4d10"
+    },
+    "f7705a7da2747b9fc": {
+      "kind": "operand",
+      "component_id": "fb7271395b8e70dae",
+      "inputs": {
+        "n": 9,
+        "k": 2
+      }
+    },
+    "f0d3725e7db4fd486": {
+      "kind": "source",
+      "component_id": "f6f51e09acac8c1d2",
+      "capture_id": "f4f22024d7a534cc3",
+      "input_ref": "f7a3c442fbcdfc986"
+    },
+    "f63a7bcd132821a7d": {
+      "kind": "deployment",
+      "component_id": "fb7271395b8e70dae",
+      "build_id": "f090bf8a344da917d"
+    },
+    "f090bf8a344da917d": {
+      "kind": "build",
+      "component_id": "fb7271395b8e70dae",
+      "creation_order": 2
+    },
+    "feac964015a0adb31": {
+      "kind": "build",
+      "component_id": "fda69a108db3161bd",
+      "creation_order": 2
+    },
+    "f86ce57216fc6cb8c": {
+      "kind": "build",
+      "component_id": "fb7271395b8e70dae",
+      "creation_order": 1
+    },
+    "f6804ab3a8a1f8e36": {
+      "kind": "contract",
+      "component_id": "fda69a108db3161bd",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "admissible_input_ids": [
+        "f0f150190af1e3c20",
+        "f3144478654f7ea8a"
+      ]
+    },
+    "f7f17e0b14c2b4d10": {
+      "kind": "build",
+      "component_id": "f6f51e09acac8c1d2",
+      "creation_order": 2
+    }
+  }
+}

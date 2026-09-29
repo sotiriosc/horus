@@ -1,0 +1,137 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "11100",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": "UNKNOWN",
+            "required_result_for_claim": "UNKNOWN"
+          },
+          {
+            "claimed_input": "UNKNOWN",
+            "required_result_for_claim": "UNKNOWN"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 0
+          },
+          "required_result": "11100"
+        },
+        {
+          "input_value": {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 3
+          },
+          "required_result": "00011"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "00011",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "edges": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  3,
+                  4
+                ]
+              ],
+              "start": 3
+            },
+            "required_result_for_claim": "00011"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 0
+          },
+          "required_result": "11100"
+        },
+        {
+          "input_value": {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 3
+          },
+          "required_result": "00011"
+        }
+      ]
+    }
+  ]
+}

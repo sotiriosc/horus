@@ -1,0 +1,160 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-de26c6ac9\",\n      \"operation\": \"peak-window scanner\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f871b34c2e99647ad\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"inputs\": {\n          \"values\": [\n            8,\n            1,\n            6,\n            3,\n            10\n          ]\n        }\n      },\n      \"f45e360df966574ab\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"capture_id\": \"fe78ccd734480324a\",\n        \"input_ref\": \"ff90a2bbdc3067a0d\"\n      },\n      \"f6ae99815977f4c71\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-964127cd4\",\n        \"serving_manifest\": \"f62c555ef5382d562\",\n        \"contract_ref\": \"f8b85b0f7f97d9e72\"\n      },\n      \"f6831fcbdc3b74b69\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"creation_order\": 2\n      },\n      \"f8b85b0f7f97d9e72\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"rule\": \"For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.\",\n        \"admissible_input_ids\": [\n          \"f78eb9c80b65df0b6\",\n          \"f871b34c2e99647ad\"\n        ]\n      },\n      \"f0017b1d293d6dddc\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"inputs\": {\n          \"values\": [\n            8,\n            1,\n            6,\n            3,\n            10\n          ]\n        }\n      },\n      \"f34ffb4f4d421d071\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"creation_order\": 1\n      },\n      \"f1ed5760a33945a76\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"capture_id\": \"fe78ccd734480324a\",\n        \"input_ref\": \"ff90a2bbdc3067a0d\"\n      },\n      \"f539d2886c9ca537f\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"capture_id\": \"f519aeb704b4d778f\",\n        \"input_ref\": \"f0017b1d293d6dddc\"\n      },\n      \"fe1ff89235ee4adae\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"build_id\": \"f6831fcbdc3b74b69\"\n      },\n      \"ff0d153b85a7b7a3c\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"build_id\": \"ffb4f342939d5caf7\",\n        \"source_ref\": \"f66a0985a20a4ffa0\",\n        \"emitted_value\": \"9,9,7\"\n      },\n      \"fa427527a84747bdb\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-de26c6ac9\",\n        \"serving_manifest\": \"fe1ff89235ee4adae\",\n        \"contract_ref\": \"fdc5da76e125ec749\"\n      },\n      \"f66a0985a20a4ffa0\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"capture_id\": \"ff4d0b7330f2f4f7b\",\n        \"input_ref\": \"f78eb9c80b65df0b6\"\n      },\n      \"f78eb9c80b65df0b6\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"inputs\": {\n          \"values\": [\n            4,\n            9,\n            2,\n            7,\n            5\n          ]\n        }\n      },\n      \"ff90a2bbdc3067a0d\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"inputs\": {\n          \"values\": [\n            4,\n            9,\n            2,\n            7,\n            5\n          ]\n        }\n      },\n      \"f02d6b6302b9089a4\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"build_id\": \"f6831fcbdc3b74b69\",\n        \"source_ref\": \"f1ed5760a33945a76\",\n        \"emitted_value\": \"8,6,10\"\n      },\n      \"ffb4f342939d5caf7\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"creation_order\": 2\n      },\n      \"fdc5da76e125ec749\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"rule\": \"For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.\",\n        \"admissible_input_ids\": [\n          \"ff90a2bbdc3067a0d\",\n          \"f0017b1d293d6dddc\"\n        ]\n      },\n      \"f62c555ef5382d562\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f6ae99815977f4c71\",\n        \"build_id\": \"ffb4f342939d5caf7\"\n      },\n      \"f1093e9a719e0f212\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fa427527a84747bdb\",\n        \"build_id\": \"f34ffb4f4d421d071\",\n        \"source_ref\": \"f539d2886c9ca537f\",\n        \"emitted_value\": \"8,6,10\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"f871b34c2e99647ad\",\n      \"required_output\": \"8,6,10\"\n    },\n    {\n      \"input_record_id\": \"f0017b1d293d6dddc\",\n      \"required_output\": \"8,6,10\"\n    },\n    {\n      \"input_record_id\": \"f78eb9c80b65df0b6\",\n      \"required_output\": \"9,9,7\"\n    },\n    {\n      \"input_record_id\": \"ff90a2bbdc3067a0d\",\n      \"required_output\": \"9,9,7\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "target_component_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_build_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_build_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_component_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "receipt_source_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "receipt_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            }
+          },
+          "required": [
+            "receipt_id",
+            "source_record_id"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "capture_groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "source_record_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "source_knowledge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "status": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN",
+                "DISAGREEING"
+              ]
+            },
+            "input_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "status",
+            "input_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "conflicting_capture_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "target_component_id",
+      "in_service_build_id",
+      "in_service_receipt_ids",
+      "other_build_receipt_ids",
+      "other_component_receipt_ids",
+      "receipt_source_links",
+      "capture_groups",
+      "source_knowledge",
+      "conflicting_capture_ids"
+    ],
+    "additionalProperties": false
+  }
+}

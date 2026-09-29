@@ -1,0 +1,113 @@
+{
+  "scope": "Both trials concern the requested unit only. UNKNOWN denotes an uncaptured value, not a literal operating input. Observed results are exact, with no hidden transformations.",
+  "trials": [
+    {
+      "in_service": true,
+      "creation_order": 2,
+      "observed_result": "14,14,14",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "values": [
+                12,
+                5,
+                14,
+                2,
+                9
+              ]
+            },
+            "required_result_for_claim": "14,14,14"
+          },
+          {
+            "claimed_input": {
+              "values": [
+                12,
+                5,
+                14,
+                2,
+                9
+              ]
+            },
+            "required_result_for_claim": "14,14,14"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "values": [
+              12,
+              5,
+              14,
+              2,
+              9
+            ]
+          },
+          "required_result": "14,14,14"
+        },
+        {
+          "input_value": {
+            "values": [
+              3,
+              11,
+              4,
+              15,
+              6
+            ]
+          },
+          "required_result": "11,15,15"
+        }
+      ]
+    },
+    {
+      "in_service": false,
+      "creation_order": 1,
+      "observed_result": "11,15,15",
+      "source_capture": {
+        "scope": "All declarations below concern the very same immutable event. None has priority and no further declaration is available.",
+        "input_declarations": [
+          {
+            "claimed_input": {
+              "values": [
+                3,
+                11,
+                4,
+                15,
+                6
+              ]
+            },
+            "required_result_for_claim": "11,15,15"
+          }
+        ]
+      },
+      "admissible_completions": [
+        {
+          "input_value": {
+            "values": [
+              12,
+              5,
+              14,
+              2,
+              9
+            ]
+          },
+          "required_result": "14,14,14"
+        },
+        {
+          "input_value": {
+            "values": [
+              3,
+              11,
+              4,
+              15,
+              6
+            ]
+          },
+          "required_result": "11,15,15"
+        }
+      ]
+    }
+  ]
+}

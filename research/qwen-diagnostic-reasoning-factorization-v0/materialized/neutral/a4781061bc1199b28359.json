@@ -1,0 +1,160 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-454877819\",\n      \"operation\": \"motif position counter\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"f1708173de0caab26\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-a32db7bd5\",\n        \"serving_manifest\": \"f058e33a754b0f5ef\",\n        \"contract_ref\": \"ffb39c92c654475b3\"\n      },\n      \"fe07f142182095f00\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"inputs\": {\n          \"text\": \"banana\",\n          \"pattern\": \"ana\"\n        }\n      },\n      \"ff91f8ed0d50be3a2\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"capture_id\": \"fdbd30360e741179f\",\n        \"input_ref\": \"fe07f142182095f00\"\n      },\n      \"f55b091c19fa811f1\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"build_id\": \"f1562aa0118796b1e\",\n        \"source_ref\": \"ff91f8ed0d50be3a2\",\n        \"emitted_value\": \"2\"\n      },\n      \"f29bf68d900b5fd49\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"creation_order\": 1\n      },\n      \"f1562aa0118796b1e\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"creation_order\": 2\n      },\n      \"f855e1f3e38318895\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"inputs\": {\n          \"text\": \"bandana\",\n          \"pattern\": \"ana\"\n        }\n      },\n      \"f194d79be779e5065\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"capture_id\": \"f78d7a7f9288024da\",\n        \"input_ref\": \"f855e1f3e38318895\"\n      },\n      \"fb74c2ebfcf99d8a9\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-454877819\",\n        \"serving_manifest\": \"fe5ce8cf29aa95bd2\",\n        \"contract_ref\": \"ff048f09bab3829ab\"\n      },\n      \"ffb39c92c654475b3\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"rule\": \"Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.\",\n        \"admissible_input_ids\": [\n          \"fe07f142182095f00\",\n          \"f6eb9b50e382e796e\"\n        ]\n      },\n      \"f4cbee948e4403679\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"build_id\": \"f6b242855cf20fc0d\",\n        \"source_ref\": \"f0aac0dbb40dfe41a\",\n        \"emitted_value\": \"2\"\n      },\n      \"f2c50232472c1c6a8\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"inputs\": {\n          \"text\": \"banana\",\n          \"pattern\": \"ana\"\n        }\n      },\n      \"f0aac0dbb40dfe41a\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"capture_id\": \"f820b8096774bd585\",\n        \"input_ref\": \"UNKNOWN\"\n      },\n      \"fe5ce8cf29aa95bd2\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"build_id\": \"f6b242855cf20fc0d\"\n      },\n      \"f6eb9b50e382e796e\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"inputs\": {\n          \"text\": \"bandana\",\n          \"pattern\": \"ana\"\n        }\n      },\n      \"f04fa90e61d454cb0\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"capture_id\": \"f820b8096774bd585\",\n        \"input_ref\": \"UNKNOWN\"\n      },\n      \"ff048f09bab3829ab\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"rule\": \"Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.\",\n        \"admissible_input_ids\": [\n          \"f2c50232472c1c6a8\",\n          \"f855e1f3e38318895\"\n        ]\n      },\n      \"f058e33a754b0f5ef\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f1708173de0caab26\",\n        \"build_id\": \"f1562aa0118796b1e\"\n      },\n      \"f6b242855cf20fc0d\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"creation_order\": 2\n      },\n      \"f61aed0b7203708f3\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fb74c2ebfcf99d8a9\",\n        \"build_id\": \"f29bf68d900b5fd49\",\n        \"source_ref\": \"f194d79be779e5065\",\n        \"emitted_value\": \"1\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"fe07f142182095f00\",\n      \"required_output\": \"2\"\n    },\n    {\n      \"input_record_id\": \"f855e1f3e38318895\",\n      \"required_output\": \"1\"\n    },\n    {\n      \"input_record_id\": \"f2c50232472c1c6a8\",\n      \"required_output\": \"2\"\n    },\n    {\n      \"input_record_id\": \"f6eb9b50e382e796e\",\n      \"required_output\": \"1\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "target_component_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_build_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_build_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_component_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "receipt_source_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "receipt_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            }
+          },
+          "required": [
+            "receipt_id",
+            "source_record_id"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "capture_groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "source_record_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "source_knowledge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "status": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN",
+                "DISAGREEING"
+              ]
+            },
+            "input_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "status",
+            "input_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "conflicting_capture_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "target_component_id",
+      "in_service_build_id",
+      "in_service_receipt_ids",
+      "other_build_receipt_ids",
+      "other_component_receipt_ids",
+      "receipt_source_links",
+      "capture_groups",
+      "source_knowledge",
+      "conflicting_capture_ids"
+    ],
+    "additionalProperties": false
+  }
+}

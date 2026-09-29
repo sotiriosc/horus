@@ -1,0 +1,174 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Organize the supplied records into the requested structured state. Required operational results are already supplied; do not recompute arithmetic and do not produce a diagnostic classification. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Identify the component matching requested_unit and follow its serving_manifest to the in-service build. Partition target receipts into that build versus other builds; separately list receipts of all other components. Link every receipt to its source record. Group every source declaration by immutable capture_id. For each capture use status KNOWN if all declarations agree on one concrete input reference, UNKNOWN if every declaration is UNKNOWN, or DISAGREEING if different concrete input references are asserted. input_ids lists distinct concrete references, excluding UNKNOWN. List DISAGREEING capture IDs in conflicting_capture_ids. Include all receipts and source captures in links/groups/knowledge. Array order is irrelevant; no duplicates. Return only the nine fields in the schema.\n\nTask data:\n{\n  \"raw_evidence\": {\n    \"scope\": {\n      \"requested_unit\": \"unit-c09cf59cd\",\n      \"operation\": \"conduit-route closure\",\n      \"scope_rule\": \"Judge only the requested unit and its two supplied target executions.\",\n      \"evidence_convention\": \"UNKNOWN denotes an uncaptured reference or value, never a literal operating input. Source declarations with the same capture_id describe one immutable event and must name the same operand record; no declaration has priority. Receipts are exact observed outputs, not promises that a contract was obeyed. No hidden transforms, lost data or unlisted target operations apply. Different components are separately scoped.\"\n    },\n    \"records\": {\n      \"fd124075ebe099ead\": {\n        \"kind\": \"build\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"creation_order\": 2\n      },\n      \"f889d7bacda206eae\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"rule\": \"Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.\",\n        \"admissible_input_ids\": [\n          \"f993056c368581c69\",\n          \"ffc3408f229ef1838\"\n        ]\n      },\n      \"fd85bade1641c3863\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f301584b882646d80\",\n        \"capture_id\": \"fceeb8bb47fafffce\",\n        \"input_ref\": \"fa28649dd106d6c13\"\n      },\n      \"ffebc157a86b652d6\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"rule\": \"Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.\",\n        \"admissible_input_ids\": [\n          \"f1eae996b42d269a4\",\n          \"fb6d443ed50f3e3ab\"\n        ]\n      },\n      \"fc0598bc8ca9df0de\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f301584b882646d80\",\n        \"creation_order\": 2\n      },\n      \"fc3c576206234e53c\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-e1a1de7d2\",\n        \"serving_manifest\": \"f98220a21d69ab470\",\n        \"contract_ref\": \"f889d7bacda206eae\"\n      },\n      \"f5540720b5b995b29\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"build_id\": \"f750c8196a8467d6a\",\n        \"source_ref\": \"fb252d0901065f0b1\",\n        \"emitted_value\": \"00010\"\n      },\n      \"f4b0a9de2c6b2cda3\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f301584b882646d80\",\n        \"capture_id\": \"f9e403ec5210af828\",\n        \"input_ref\": \"fee3d935b292d8eea\"\n      },\n      \"f0e8fb578fd86e171\": {\n        \"kind\": \"source\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"capture_id\": \"f7eb5d6267f9f3bb7\",\n        \"input_ref\": \"ffc3408f229ef1838\"\n      },\n      \"fb6d443ed50f3e3ab\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 3\n        }\n      },\n      \"f993056c368581c69\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 0\n        }\n      },\n      \"f11da3abf1ea6d370\": {\n        \"kind\": \"contract\",\n        \"component_id\": \"f301584b882646d80\",\n        \"rule\": \"Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.\",\n        \"admissible_input_ids\": [\n          \"fa28649dd106d6c13\",\n          \"fee3d935b292d8eea\"\n        ]\n      },\n      \"f51f6729759bd1fbe\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f301584b882646d80\",\n        \"capture_id\": \"fceeb8bb47fafffce\",\n        \"input_ref\": \"fa28649dd106d6c13\"\n      },\n      \"f09e92fa1c9559cba\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f301584b882646d80\",\n        \"build_id\": \"fc0598bc8ca9df0de\"\n      },\n      \"f1eae996b42d269a4\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 0\n        }\n      },\n      \"ffc3408f229ef1838\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 3\n        }\n      },\n      \"fe32beff563b479b5\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"creation_order\": 2\n      },\n      \"f750c8196a8467d6a\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"creation_order\": 1\n      },\n      \"fa28649dd106d6c13\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f301584b882646d80\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 0\n        }\n      },\n      \"f98220a21d69ab470\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"build_id\": \"fd124075ebe099ead\"\n      },\n      \"f8924413405dea5cc\": {\n        \"kind\": \"build\",\n        \"component_id\": \"f301584b882646d80\",\n        \"creation_order\": 1\n      },\n      \"f8d9f3a4c48081a39\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f301584b882646d80\",\n        \"build_id\": \"f8924413405dea5cc\",\n        \"source_ref\": \"f4b0a9de2c6b2cda3\",\n        \"emitted_value\": \"11101\"\n      },\n      \"f5b3d0fb45c153896\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"build_id\": \"fe32beff563b479b5\",\n        \"source_ref\": \"fb252d0901065f0b1\",\n        \"emitted_value\": \"11101\"\n      },\n      \"fb252d0901065f0b1\": {\n        \"kind\": \"source\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"capture_id\": \"f1900d75efbb2bbf9\",\n        \"input_ref\": \"f1eae996b42d269a4\"\n      },\n      \"f912adba6c55844af\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"f301584b882646d80\",\n        \"build_id\": \"fc0598bc8ca9df0de\",\n        \"source_ref\": \"f51f6729759bd1fbe\",\n        \"emitted_value\": \"11101\"\n      },\n      \"f301584b882646d80\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-c09cf59cd\",\n        \"serving_manifest\": \"f09e92fa1c9559cba\",\n        \"contract_ref\": \"f11da3abf1ea6d370\"\n      },\n      \"f49633c60b4b175b3\": {\n        \"kind\": \"component\",\n        \"unit_code\": \"unit-2f11f7434\",\n        \"serving_manifest\": \"fbdc394a1880f4acb\",\n        \"contract_ref\": \"ffebc157a86b652d6\"\n      },\n      \"fee3d935b292d8eea\": {\n        \"kind\": \"operand\",\n        \"component_id\": \"f301584b882646d80\",\n        \"inputs\": {\n          \"edges\": [\n            [\n              0,\n              2\n            ],\n            [\n              2,\n              4\n            ],\n            [\n              4,\n              1\n            ]\n          ],\n          \"start\": 3\n        }\n      },\n      \"f03e9d98620069cf8\": {\n        \"kind\": \"receipt\",\n        \"component_id\": \"fc3c576206234e53c\",\n        \"build_id\": \"fd124075ebe099ead\",\n        \"source_ref\": \"f0e8fb578fd86e171\",\n        \"emitted_value\": \"00010\"\n      },\n      \"fbdc394a1880f4acb\": {\n        \"kind\": \"deployment\",\n        \"component_id\": \"f49633c60b4b175b3\",\n        \"build_id\": \"fe32beff563b479b5\"\n      }\n    }\n  },\n  \"supplied_computations\": [\n    {\n      \"input_record_id\": \"fb6d443ed50f3e3ab\",\n      \"required_output\": \"00010\"\n    },\n    {\n      \"input_record_id\": \"f993056c368581c69\",\n      \"required_output\": \"11101\"\n    },\n    {\n      \"input_record_id\": \"f1eae996b42d269a4\",\n      \"required_output\": \"11101\"\n    },\n    {\n      \"input_record_id\": \"ffc3408f229ef1838\",\n      \"required_output\": \"00010\"\n    },\n    {\n      \"input_record_id\": \"fa28649dd106d6c13\",\n      \"required_output\": \"11101\"\n    },\n    {\n      \"input_record_id\": \"fee3d935b292d8eea\",\n      \"required_output\": \"00010\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "target_component_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_build_id": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "in_service_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_build_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "other_component_receipt_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        },
+        "receipt_source_links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "receipt_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              }
+            },
+            "required": [
+              "receipt_id",
+              "source_record_id"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "capture_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "source_record_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "source_record_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "source_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "capture_id": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "status": {
+                "enum": [
+                  "KNOWN",
+                  "UNKNOWN",
+                  "DISAGREEING"
+                ]
+              },
+              "input_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^f[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 12
+              }
+            },
+            "required": [
+              "capture_id",
+              "status",
+              "input_ids"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true,
+          "maxItems": 8
+        },
+        "conflicting_capture_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^f[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      },
+      "required": [
+        "target_component_id",
+        "in_service_build_id",
+        "in_service_receipt_ids",
+        "other_build_receipt_ids",
+        "other_component_receipt_ids",
+        "receipt_source_links",
+        "capture_groups",
+        "source_knowledge",
+        "conflicting_capture_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 862540719,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}
