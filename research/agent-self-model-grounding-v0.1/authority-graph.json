@@ -1,0 +1,60 @@
+{
+  "source_ids": [
+    "SRC-ENTRY",
+    "SRC-SELECTOR",
+    "SRC-ADAPTER",
+    "SRC-ROUTING"
+  ],
+  "precondition": "AUTHENTICATED_CONTEXT_VALIDATED_BEFORE_ROUTING",
+  "ordered_decision_layers": [
+    "GROUNDED_MECHANICAL_AUTHORITY",
+    "S_BOUNDED_STAGNATION_ESCAPE",
+    "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+    "ORDINARY_MODEL_ROUTE"
+  ],
+  "model_route_position": "AFTER_MECHANICAL_S_E",
+  "rollback_component": "ROLLBACK_SELECTOR",
+  "distinctions": [
+    {
+      "a": "GROUNDED_MECHANICAL_AUTHORITY",
+      "b": "S_BOUNDED_STAGNATION_ESCAPE",
+      "relationship": "DISTINCT_COMPONENTS",
+      "evidence_ids": [
+        "SRC-ROUTING",
+        "SRC-S",
+        "SRC-SELECTOR"
+      ]
+    },
+    {
+      "a": "S_BOUNDED_STAGNATION_ESCAPE",
+      "b": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+      "relationship": "DISTINCT_COMPONENTS",
+      "evidence_ids": [
+        "SRC-S",
+        "SRC-E"
+      ]
+    }
+  ],
+  "failure_behavior": [
+    {
+      "condition": "SIMULTANEOUS_S_AND_E_ELIGIBILITY",
+      "behavior": "INTEGRATION_INVARIANT_ERROR",
+      "action_emitted": false,
+      "model_called": false,
+      "evidence_ids": [
+        "SRC-SELECTOR"
+      ]
+    },
+    {
+      "condition": "MALFORMED_AUTHENTICATED_E_HISTORY",
+      "behavior": "FAIL_CLOSED",
+      "action_emitted": false,
+      "model_called": false,
+      "evidence_ids": [
+        "SRC-ADAPTER",
+        "SRC-SELECTOR"
+      ]
+    }
+  ],
+  "mutual_exclusivity": "Valid S repeats deterministic established-zero; valid E repeats an explicitly empirical relation. An inconsistent joint report aborts rather than choosing a winner."
+}

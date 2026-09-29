@@ -1,0 +1,634 @@
+{
+  "mode": "SYNTHETIC_READ_ONLY_DESCRIPTIONS",
+  "no_simulator": true,
+  "no_Memory": true,
+  "no_receipts": true,
+  "cases": [
+    {
+      "case_id": "T1",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "assessments": [
+          {
+            "action": "RETREAT",
+            "relation_type": "DETERMINISTIC",
+            "kind": "ESTABLISHED",
+            "consequence": 1
+          },
+          {
+            "action": "ADVANCE",
+            "kind": "UNSEEN"
+          },
+          {
+            "action": "HOLD",
+            "kind": "UNSEEN"
+          }
+        ]
+      },
+      "expected": {
+        "owning_component": "GROUNDED_MECHANICAL_AUTHORITY",
+        "model_called": false,
+        "action_authority_type": "MECHANICAL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2a",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "repeated_action": "ADVANCE",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3a",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "display_action_order": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "EMPIRICALLY_STABLE",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "recent_sum": -4,
+        "cumulative_sum": -4,
+        "unseen_alternatives": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "other_observed_alternative": null,
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2b",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "ADVANCE",
+          "RETREAT",
+          "HOLD"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3b",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 2,
+        "display_action_order": [
+          "ADVANCE",
+          "RETREAT",
+          "HOLD"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "VARIABLE_RELATION",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          0,
+          -1,
+          0
+        ],
+        "recent_sum": -2,
+        "cumulative_sum": -2,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "other_observed_alternative": {
+          "action": "ADVANCE",
+          "kind": "ESTABLISHED",
+          "relation_type": "DETERMINISTIC",
+          "consequence": 0
+        },
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2c",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "HOLD",
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "repeated_action": "RETREAT",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "HOLD",
+          "ADVANCE"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3c",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "display_action_order": [
+          "HOLD",
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "EMPIRICALLY_STABLE",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "recent_sum": -4,
+        "cumulative_sum": -4,
+        "unseen_alternatives": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "other_observed_alternative": null,
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2d",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "repeated_action": "ADVANCE",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "HOLD",
+          "RETREAT"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3d",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 2,
+        "display_action_order": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "VARIABLE_RELATION",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          0,
+          -1,
+          0
+        ],
+        "recent_sum": -2,
+        "cumulative_sum": -2,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "other_observed_alternative": {
+          "action": "ADVANCE",
+          "kind": "ESTABLISHED",
+          "relation_type": "DETERMINISTIC",
+          "consequence": 0
+        },
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2e",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "RETREAT",
+          "ADVANCE",
+          "HOLD"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3e",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "display_action_order": [
+          "RETREAT",
+          "ADVANCE",
+          "HOLD"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "EMPIRICALLY_STABLE",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "recent_sum": -4,
+        "cumulative_sum": -4,
+        "unseen_alternatives": [
+          "ADVANCE",
+          "RETREAT"
+        ],
+        "other_observed_alternative": null,
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T2f",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 0,
+        "display_action_order": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "repeated_action": "RETREAT",
+        "repeated_relation_type": "DETERMINISTIC",
+        "repeated_kind": "ESTABLISHED",
+        "repeated_consequence": 0,
+        "consecutive_safe_fallback_self_loop_count": 3,
+        "prior_choice_source": "SAFE_GROUNDED_FALLBACK",
+        "prior_policy_route": "MODEL",
+        "prior_parse_status": "VALID",
+        "unseen_alternatives": [
+          "HOLD",
+          "ADVANCE"
+        ],
+        "established_plus_one_available": false
+      },
+      "expected": {
+        "owning_component": "S_BOUNDED_STAGNATION_ESCAPE",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_DETERMINISTIC_ESCAPE",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T3f",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 2,
+        "display_action_order": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "VARIABLE_RELATION",
+        "same_relation_self_loop_suffix_count": 4,
+        "recent_consequences": [
+          -1,
+          0,
+          -1,
+          0
+        ],
+        "recent_sum": -2,
+        "cumulative_sum": -2,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "other_observed_alternative": {
+          "action": "ADVANCE",
+          "kind": "ESTABLISHED",
+          "relation_type": "DETERMINISTIC",
+          "consequence": 0
+        },
+        "established_plus_one_available": false,
+        "possible_change": null
+      },
+      "expected": {
+        "owning_component": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_called": false,
+        "action_authority_type": "BOUNDED_EMPIRICAL_ACQUISITION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T4",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "mechanical_resolvable": false,
+        "S_eligible": false,
+        "E_eligible": false,
+        "uncertain_kind": "UNRESOLVED_CHANGE",
+        "admissible_actions": [
+          "HOLD",
+          "RETREAT"
+        ]
+      },
+      "expected": {
+        "owning_component": "ORDINARY_MODEL_ROUTE",
+        "model_called": true,
+        "action_authority_type": "MODEL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T5",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "mechanical_resolvable": false,
+        "S_eligible": true,
+        "E_eligible": true,
+        "description": "Intentionally inconsistent adapter report"
+      },
+      "expected": {
+        "owning_component": "INTEGRATION_INVARIANT_ERROR",
+        "model_called": false,
+        "action_authority_type": "NO_ACTION",
+        "failure_mode_if_any": "INTEGRATION_INVARIANT_ERROR"
+      },
+      "expected_action_emitted": false
+    },
+    {
+      "case_id": "T6",
+      "synthetic_context": {
+        "authenticated_projection_valid": false,
+        "defect": "Missing authenticated history sequence; do not infer missing receipts",
+        "mechanical_resolvable": false
+      },
+      "expected": {
+        "owning_component": "FAIL_CLOSED",
+        "model_called": false,
+        "action_authority_type": "NO_ACTION",
+        "failure_mode_if_any": "FAIL_CLOSED"
+      },
+      "expected_action_emitted": false
+    },
+    {
+      "case_id": "T7",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "mechanical_resolvable": false,
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "VARIABLE_RELATION",
+        "same_relation_self_loop_suffix_count": 6,
+        "recent_sum": 1,
+        "cumulative_sum": -1,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "established_plus_one_available": false,
+        "S_eligible": false
+      },
+      "expected": {
+        "owning_component": "ORDINARY_MODEL_ROUTE",
+        "model_called": true,
+        "action_authority_type": "MODEL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T8",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "mechanical_resolvable": false,
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "VARIABLE_RELATION",
+        "same_relation_self_loop_suffix_count": 6,
+        "recent_sum": -1,
+        "cumulative_sum": 1,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "established_plus_one_available": false,
+        "S_eligible": false
+      },
+      "expected": {
+        "owning_component": "ORDINARY_MODEL_ROUTE",
+        "model_called": true,
+        "action_authority_type": "MODEL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T9",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "current_state": 1,
+        "mechanical_resolvable": false,
+        "repeated_action": "HOLD",
+        "repeated_relation_type": "EMPIRICAL",
+        "repeated_kind": "POSSIBLE_REGIME_CHANGE",
+        "same_relation_self_loop_suffix_count": 6,
+        "recent_sum": -4,
+        "cumulative_sum": -2,
+        "unseen_alternatives": [
+          "RETREAT"
+        ],
+        "established_plus_one_available": false,
+        "S_eligible": false
+      },
+      "expected": {
+        "owning_component": "ORDINARY_MODEL_ROUTE",
+        "model_called": true,
+        "action_authority_type": "MODEL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    },
+    {
+      "case_id": "T10",
+      "synthetic_context": {
+        "authenticated_projection_valid": true,
+        "assessments": [
+          {
+            "action": "ADVANCE",
+            "relation_type": "DETERMINISTIC",
+            "kind": "ESTABLISHED",
+            "consequence": -1
+          },
+          {
+            "action": "HOLD",
+            "relation_type": "DETERMINISTIC",
+            "kind": "ESTABLISHED",
+            "consequence": 0
+          },
+          {
+            "action": "RETREAT",
+            "relation_type": "DETERMINISTIC",
+            "kind": "ESTABLISHED",
+            "consequence": -1
+          }
+        ],
+        "unseen_alternatives": []
+      },
+      "expected": {
+        "owning_component": "GROUNDED_MECHANICAL_AUTHORITY",
+        "model_called": false,
+        "action_authority_type": "MECHANICAL_SELECTION",
+        "failure_mode_if_any": null
+      },
+      "expected_action_emitted": true
+    }
+  ]
+}

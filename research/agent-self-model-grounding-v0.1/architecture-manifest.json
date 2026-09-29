@@ -1,0 +1,948 @@
+{
+  "snapshot_commit": "69947aa243a69e7ae26db534727a7122922d978d",
+  "publication_parent": "ba698e948e2ae27427bac1e9f772cf6c8b485de8",
+  "definition": "Current factual interface only; no diagnosis, future candidate or hidden outcome.",
+  "field_semantics": {
+    "can_select_action": "Can choose/dispatch the policy action, excluding merely executing an already frozen action.",
+    "can_write_memory": "Can admit observations to core or durable grounded Memory; choice/checkpoint journals alone do not count.",
+    "can_authenticate_receipt": "Can grant original protected receipt/package authorization, not merely verify stored provenance.",
+    "can_modify_grounded_state": "Owns evidence-derived state computation; never permission to invent evidence or retune the fold.",
+    "uses_model_call_when_triggered": "True if a valid invocation may make/delegate a model call. For dispatchers this is conditional, not every invocation. False means no inference in that component."
+  },
+  "components": [
+    {
+      "component_id": "ACTIVE_SELECTOR",
+      "status": "ACTIVE",
+      "role": "DECISION_ORCHESTRATOR",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": true,
+      "scope_summary": "Dispatches authenticated context to existing mechanical authority, S, E, or ordinary route; journals choices but does not execute or write grounded Memory.",
+      "inputs": [
+        "authenticated context",
+        "admissible actions"
+      ],
+      "outputs": [
+        "selected action tuple or fail-closed error"
+      ],
+      "facts": {
+        "callable": "grounded_agent.empirical_policy.integrated_decide",
+        "entry_point": "grounded_agent.decide"
+      },
+      "source_ids": [
+        "SRC-ENTRY",
+        "SRC-SELECTOR"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "status": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "role": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "can_select_action": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "can_execute_world": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "can_write_memory": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "scope_summary": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "inputs": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "outputs": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ],
+        "facts": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ]
+      }
+    },
+    {
+      "component_id": "GROUNDED_MECHANICAL_AUTHORITY",
+      "status": "ACTIVE",
+      "role": "GROUNDED_MECHANICAL_SELECTION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Uses authenticated deterministic established values to resolve an established +1 ceiling, or the best value when all actions are established. Distinct from S.",
+      "inputs": [
+        "grounded assessments"
+      ],
+      "outputs": [
+        "mechanical action or unresolved route"
+      ],
+      "facts": {
+        "is_S": false,
+        "precedes": [
+          "S_BOUNDED_STAGNATION_ESCAPE",
+          "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+          "ORDINARY_MODEL_ROUTE"
+        ],
+        "established_ceiling": 1,
+        "all_established_resolution": true
+      },
+      "source_ids": [
+        "SRC-ROUTING",
+        "SRC-SELECTOR"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "status": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "role": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "can_select_action": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "can_execute_world": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "can_write_memory": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "scope_summary": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "inputs": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "outputs": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ],
+        "facts": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ]
+      }
+    },
+    {
+      "component_id": "S_BOUNDED_STAGNATION_ESCAPE",
+      "status": "PROMOTED_ACTIVE",
+      "role": "DETERMINISTIC_STAGNATION_ESCAPE",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Frozen deterministic established-zero repeated fallback escape; chooses one canonical truly unseen alternative. Not grounded mechanical authority and not E.",
+      "inputs": [
+        "authenticated signed decisions",
+        "grounded deterministic assessments"
+      ],
+      "outputs": [
+        "one unseen target or no trigger"
+      ],
+      "facts": {
+        "threshold": 3,
+        "repeated_relation_type": "DETERMINISTIC",
+        "required_kind": "ESTABLISHED",
+        "required_consequence": 0,
+        "requires_same_state_action_self_loop": true,
+        "requires_safe_fallback_decisions": true,
+        "requires_true_unseen": true,
+        "excluded_established_ceiling": 1,
+        "canonical_action_order": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "reset": "RECONSTRUCT_FROM_AUTHENTICATED_SUFFIX",
+        "can_create_receipt": false
+      },
+      "source_ids": [
+        "SRC-S",
+        "SRC-SELECTOR",
+        "SRC-PROMOTION"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "status": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "role": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_select_action": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_execute_world": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_write_memory": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "scope_summary": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "inputs": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "outputs": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "facts": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ]
+      }
+    },
+    {
+      "component_id": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+      "status": "PROMOTED_ACTIVE",
+      "role": "EMPIRICAL_EVIDENCE_ACQUISITION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Frozen empirical deterioration plus missing-evidence rule. Selects one canonical unseen relation after qualifying self-loop suffix. Distinct from S.",
+      "inputs": [
+        "verified chronological history",
+        "grounded empirical assessments",
+        "admissible actions"
+      ],
+      "outputs": [
+        "one unseen target or no trigger"
+      ],
+      "facts": {
+        "window": 4,
+        "recent_sum_max": 0,
+        "cumulative_sum_max": 0,
+        "allowed_kinds": [
+          "EMPIRICALLY_STABLE",
+          "VARIABLE_RELATION"
+        ],
+        "excluded_kind": "POSSIBLE_REGIME_CHANGE",
+        "requires_same_state_action_self_loop": true,
+        "requires_true_unseen": true,
+        "excluded_established_ceiling": 1,
+        "canonical_action_order": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "reset": "RECONSTRUCT_FROM_AUTHENTICATED_SUFFIX",
+        "can_create_receipt": false
+      },
+      "source_ids": [
+        "SRC-E",
+        "SRC-ADAPTER",
+        "SRC-SELECTOR",
+        "SRC-PROMOTION"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "status": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "role": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_select_action": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_execute_world": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_write_memory": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "scope_summary": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "inputs": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "outputs": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ],
+        "facts": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ]
+      }
+    },
+    {
+      "component_id": "ORDINARY_MODEL_ROUTE",
+      "status": "ACTIVE_INCUMBENT",
+      "role": "ADMISSIBLE_MODEL_SELECTION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": true,
+      "scope_summary": "Existing ordinary incumbent model/mixed path chooses only within admissible actions when mechanical/S/E do not resolve. It cannot rewrite authenticated grounded state.",
+      "inputs": [
+        "goal",
+        "admissible actions",
+        "grounded assessments",
+        "bounded history"
+      ],
+      "outputs": [
+        "validated selected action or error"
+      ],
+      "facts": {
+        "model_incumbent": "DOLPHIN",
+        "Qwen_action_substitution": "NOT_PROMOTED",
+        "position": "AFTER_MECHANICAL_S_E",
+        "can_overwrite_authenticated_experience": false
+      },
+      "source_ids": [
+        "SRC-ORDINARY",
+        "SRC-ROUTING",
+        "SRC-MODEL-STATUS"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "status": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "role": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "can_select_action": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "can_execute_world": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "can_write_memory": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "scope_summary": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "inputs": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "outputs": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ],
+        "facts": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ]
+      }
+    },
+    {
+      "component_id": "GROUNDED_DETERMINISTIC_STATE",
+      "status": "ACTIVE",
+      "role": "DETERMINISTIC_EVIDENCE_DERIVATION",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": true,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Derives deterministic relation state from authenticated exact-relation observations; exposes contradiction as unresolved.",
+      "inputs": [
+        "authenticated exact-relation Memory rows"
+      ],
+      "outputs": [
+        "UNSEEN",
+        "ESTABLISHED",
+        "UNRESOLVED_CHANGE"
+      ],
+      "facts": {},
+      "source_ids": [
+        "SRC-DETERMINISTIC",
+        "SRC-GROUNDED-CORE"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "status": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "role": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_select_action": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_execute_world": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_write_memory": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "scope_summary": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "inputs": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "outputs": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ],
+        "facts": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ]
+      }
+    },
+    {
+      "component_id": "GROUNDED_EMPIRICAL_STATE",
+      "status": "ACTIVE",
+      "role": "EMPIRICAL_EVIDENCE_DERIVATION",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": true,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Derives empirical observations/windows/classifications from authenticated rows and explicitly configured relation type; no automatic type discovery.",
+      "inputs": [
+        "authenticated exact-relation Memory rows",
+        "explicit relation type"
+      ],
+      "outputs": [
+        "UNSEEN",
+        "EMPIRICALLY_STABLE",
+        "VARIABLE_RELATION",
+        "POSSIBLE_REGIME_CHANGE"
+      ],
+      "facts": {},
+      "source_ids": [
+        "SRC-EMPIRICAL",
+        "SRC-GROUNDED-CORE",
+        "SRC-TYPE-MAP"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "status": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "role": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "can_select_action": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "can_execute_world": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "can_write_memory": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "scope_summary": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "inputs": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "outputs": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ],
+        "facts": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ]
+      }
+    },
+    {
+      "component_id": "AUTHENTICATED_MEMORY",
+      "status": "ACTIVE",
+      "role": "AUTHORIZED_DURABLE_EVIDENCE_STORE",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": true,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Owns durable admission of already authorized receipts and signed-history reconciliation; verifies stored provenance, but does not originate protected receipt authorization.",
+      "inputs": [
+        "current authorized receipt event",
+        "signed checkpoint and streams"
+      ],
+      "outputs": [
+        "durable exact-relation rows",
+        "verified provenance or error"
+      ],
+      "facts": {
+        "authorization_required_before_admission": true,
+        "can_verify_stored_signed_provenance": true,
+        "can_originate_receipt": false
+      },
+      "source_ids": [
+        "SRC-MEMORY",
+        "SRC-REPLAY",
+        "SRC-GROUNDED-CORE"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "status": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "role": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_select_action": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_execute_world": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_write_memory": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "scope_summary": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "inputs": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "outputs": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ],
+        "facts": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ]
+      }
+    },
+    {
+      "component_id": "PROTECTED_EXECUTION",
+      "status": "ACTIVE",
+      "role": "PROTECTED_WORLD_AND_AUTHORIZATION",
+      "can_select_action": false,
+      "can_execute_world": true,
+      "can_write_memory": true,
+      "can_authenticate_receipt": true,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": false,
+      "scope_summary": "Existing protected worker executes the selected action, preserves its original receipt, runs Measure/authorization and admits authorized evidence to core/durable Memory. It does not choose the policy action.",
+      "inputs": [
+        "frozen selected action"
+      ],
+      "outputs": [
+        "original receipt",
+        "authorization result",
+        "authorized Memory admission"
+      ],
+      "facts": {
+        "can_create_original_receipt": true,
+        "unauthorized_memory_admission": false
+      },
+      "source_ids": [
+        "SRC-EXECUTION",
+        "SRC-AUTHORIZATION"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "status": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "role": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "can_select_action": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "can_execute_world": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "can_write_memory": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "scope_summary": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "inputs": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "outputs": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ],
+        "facts": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ]
+      }
+    },
+    {
+      "component_id": "ROLLBACK_SELECTOR",
+      "status": "AVAILABLE_ROLLBACK",
+      "role": "PRE_E_AUTHORITY_PLUS_S_SELECTOR",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "can_authenticate_receipt": false,
+      "can_modify_grounded_state": false,
+      "uses_model_call_when_triggered": true,
+      "scope_summary": "Callable exact pre-E grounded authority plus S selector; ordinary model fallback remains. Not the older authority-only previous_incumbent_decide.",
+      "inputs": [
+        "same authenticated incumbent context"
+      ],
+      "outputs": [
+        "pre-E selected action tuple"
+      ],
+      "facts": {
+        "callable": "grounded_agent.policy.promoted_decide",
+        "includes_E": false,
+        "includes_S": true
+      },
+      "source_ids": [
+        "SRC-ROLLBACK",
+        "SRC-PROMOTION"
+      ],
+      "field_source_ids": {
+        "component_id": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "status": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "role": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "can_select_action": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "can_execute_world": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "can_write_memory": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "can_authenticate_receipt": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "can_modify_grounded_state": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "uses_model_call_when_triggered": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "scope_summary": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "inputs": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "outputs": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ],
+        "facts": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ]
+      }
+    }
+  ]
+}
