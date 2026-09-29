@@ -1,0 +1,166 @@
+{
+  "candidate_source_sha256": "fcef478a02beb69a1d29988c5ce12929ad2ba077591131e0dcd114e7ccab99b4",
+  "diagnosis_crosscheck_sha256": "4c72afb69156525fca3627ec6763ad99fff9eff6178260f611130cc94e902818",
+  "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+  "method": "E-arm pre-observation empirical component only; registered phase is an analysis label and is never passed to the candidate.",
+  "no_hidden_unexecuted_outcomes_used": true,
+  "schedules": {
+    "A_DETERMINISTIC": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 12,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 0,
+      "signals": [],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/A_DETERMINISTIC/public.json",
+      "source_sha256": "346bfbef0bf41129e6715a5180ae71080f245900eaa51a733d1ed99b785e8868"
+    },
+    "B_STATIONARY_VARIABLE": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 20,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 0,
+      "signals": [],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/B_STATIONARY_VARIABLE/public.json",
+      "source_sha256": "7fbb43f3e3ae7bb7df4d83bbf7c53621f9ec8190b74db7bbbb2b61c1e470458c"
+    },
+    "C_RARE_ANOMALY": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 14,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 0,
+      "signals": [],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/C_RARE_ANOMALY/public.json",
+      "source_sha256": "537f54e148c7b48faa51752af1c0d49e0542ceb624483327d001d67863f6af45"
+    },
+    "D_PERSISTENT_SHIFT": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 18,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 3,
+      "signals": [
+        {
+          "cumulative_sum": 0,
+          "index": 15,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -3,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": -1,
+          "index": 16,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -3,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": -2,
+          "index": 17,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -3,
+          "relation": "1:HOLD"
+        }
+      ],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/D_PERSISTENT_SHIFT/public.json",
+      "source_sha256": "49987f00b79130e149ed743ddadba0c942f43b761b8e23cba55c24fa12d06e12"
+    },
+    "E_SHIFT_RESTORE": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 23,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 3,
+      "signals": [
+        {
+          "cumulative_sum": 0,
+          "index": 15,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -3,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": -1,
+          "index": 16,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "restoration",
+          "recent_sum": -3,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": 0,
+          "index": 17,
+          "kind": "VARIABLE_RELATION",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "restoration",
+          "recent_sum": -1,
+          "relation": "1:HOLD"
+        }
+      ],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/E_SHIFT_RESTORE/public.json",
+      "source_sha256": "ec2b9b2ee80c7c772509ce9748d6191c8d8ea547aa7a7bfc6bd41b0cf0284114"
+    },
+    "F_SHIFT_FUTURE": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 17,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 3,
+      "signals": [
+        {
+          "cumulative_sum": 0,
+          "index": 14,
+          "kind": "EMPIRICALLY_STABLE",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -4,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": -1,
+          "index": 15,
+          "kind": "EMPIRICALLY_STABLE",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -4,
+          "relation": "1:HOLD"
+        },
+        {
+          "cumulative_sum": -2,
+          "index": 16,
+          "kind": "EMPIRICALLY_STABLE",
+          "label": "CONDITIONAL_EMPIRICAL_SIGNAL",
+          "phase_analysis_only": "shift",
+          "recent_sum": -4,
+          "relation": "1:HOLD"
+        }
+      ],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/F_SHIFT_FUTURE/public.json",
+      "source_sha256": "5c9c5ff12ef30621f2c064f70c69c4a766a26bb7303d02283ebbc8f1fc4ee2e9"
+    },
+    "F_STATIONARY_FUTURE": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 17,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 0,
+      "signals": [],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/F_STATIONARY_FUTURE/public.json",
+      "source_sha256": "753173c8f161ef7bd97511739e29a633e3b86beb5df6a103a0ca76657ed98919"
+    },
+    "G_RESTART": {
+      "alternative_availability": "NOT_RECORDED",
+      "empirical_arm_pre_observation_rows": 23,
+      "full_policy_trigger_status": "NOT_TESTABLE_FROM_RELATION_ONLY_TRACE",
+      "signal_count": 0,
+      "signals": [],
+      "source": "research/grounded-stochastic-relation-v0/evidence/schedules/G_RESTART/public.json",
+      "source_sha256": "95fe2da6e148044667a94fd037d60b85e30d241d65aaf3a2cc643064a72a3978"
+    }
+  },
+  "status": "PASS"
+}
