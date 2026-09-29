@@ -1,0 +1,1352 @@
+{
+  "cases": {
+    "E1": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:36e03527e8d0f13f952a29a280db1660:runtime:5:b49cb05498e21748",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "3216668c554cb13c5e5628b7c2e7c5dfe595fbdd4e192d48862381ddb6e87d8c",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d1b10493c989064170984741988bfd1a:runtime:5:e777db459eaedc4e",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "f92f327f9345ef15177a8926219ac386ed5d0c3120c6f7e27f860d8924b70243",
+        "selected_action": "ADVANCE"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": true,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 4,
+        "target_action": "ADVANCE",
+        "unseen_candidates": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      },
+      "case": "E1",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "e68782b274c4699a195526cbd56d0168068be46317ff53f5d37fa2dca8ce2b72"
+    },
+    "E2": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:34f6f8aeebca40e09a38a9b9d311fb23:runtime:6:4b1cccb61000f286",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "e9d71e8e864aa998fa15d441d9bbc78aaba9c3b4c21461826d4acb81ace08c98",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:1acc3459cef6ac7012d61e17235f8750:runtime:6:ad8eae358edde9de",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "feeaeec6e07e9142a3b075eb68a573a62d3f725a69f0333cee6fef68f6f11efd",
+        "selected_action": "RETREAT"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": true,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 4,
+        "target_action": "RETREAT",
+        "unseen_candidates": [
+          "RETREAT"
+        ]
+      },
+      "case": "E2",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "f8cb5705e85db904f0a51b0ea761c3823a6cf13a585248733f45b4ca37f893a9"
+    },
+    "E3": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:084ac77be9b76852e7d0cf3750d29bbc:runtime:5:8fa56b8fa1afd6a9",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "3eb44a94bfae4b3525eaeab4ceb86efadf9bffca95e2e6c734498de00bc7cb4e",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:4bdfdb42e7a091c9ce8dea73264b3e7b:runtime:5:5bb5ab7545869235",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "647749a643711a2fa7dc882b083c185f3ef9a8f5925ddb1026b26dc33dca5abc",
+        "selected_action": "ADVANCE"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -3,
+        "eligible": true,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -3,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 4,
+        "target_action": "ADVANCE",
+        "unseen_candidates": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      },
+      "case": "E3",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": [
+        {
+          "consequence": -1,
+          "eligible": false,
+          "fresh_suffix_count": 1,
+          "receipt_sha256": "fade77f79aa1834ead9596b9beb59267eba8fce6c50b5e3d6d4a0ae10d437127",
+          "target_action": null
+        },
+        {
+          "consequence": 0,
+          "eligible": false,
+          "fresh_suffix_count": 2,
+          "receipt_sha256": "8d19d452840ec76ba99fd72ab1c12fae22b577103b83938d4341ecc0e0655bae",
+          "target_action": null
+        },
+        {
+          "consequence": -1,
+          "eligible": false,
+          "fresh_suffix_count": 3,
+          "receipt_sha256": "892e73d5bd00a70be7fbe18236af0eff7d0b55057240c31241f3c0275b1219f3",
+          "target_action": null
+        },
+        {
+          "consequence": 0,
+          "eligible": true,
+          "fresh_suffix_count": 4,
+          "receipt_sha256": "c570044fbdc85aecd5adbd684b9c6d549ba62f43008037ae88415cfafa8bbe64",
+          "target_action": "RETREAT"
+        }
+      ],
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "27c19ffcf760b287f402864f1b439a32b1001d630f5c90bc01e385dbf8905c42"
+    },
+    "E4": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 7,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:f563e4a96d947471f2337081cb1644de:runtime:7:e311719fa3ac201d",
+          1,
+          2007,
+          1
+        ],
+        "receipt_sha256": "61a70ef30f9a036c023879ef8ac20c4cf21e8ca31fd5604872fcb519d56d8839",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 0,
+          "next_state": 2
+        },
+        "receipt_identity": [
+          "HORUS:be78a86b367bb826582cd45c26c92fcb:runtime:7:3c11cb9f52c3bfed",
+          1,
+          2007,
+          1
+        ],
+        "receipt_sha256": "4056154c583e93136683789292dd6c1e68d8aa029d2bc31a13b0d7e7ab2f7bb8",
+        "selected_action": "ADVANCE"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": true,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -4,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 6,
+        "target_action": "ADVANCE",
+        "unseen_candidates": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      },
+      "case": "E4",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "7d5394f3e214ee2b469aeff838dab119377a198bf190327859b079db0f587e6b"
+    },
+    "E5": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:831ca030ff281dbd2de29c404e048ef8:runtime:5:2a988817c0c2188e",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "4d68ac9fa2815c24f014a7deef537a3f7b3aae99ab57a971d9b1b9f7fdfa5806",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:18c0d6593e9de7a63db7371d38a7d16f:runtime:5:4ba5f93763633e74",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "f64b7c85cd964e70df3297f76b87df8ed2d42bc4d45031d136ce0da5fe7a6837",
+        "selected_action": "ADVANCE"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": true,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 4,
+        "target_action": "ADVANCE",
+        "unseen_candidates": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      },
+      "case": "E5",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "3dacc2c2de763adfbe0965b5d7b463ca5b4fd3ca59262677a7efad241d36b4e9"
+    },
+    "E6": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 2
+        },
+        "receipt_identity": [
+          "HORUS:d2678a4fedf6e3574046b842779a77d2:runtime:5:cbb110a8c31a1ddf",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "d8cc7402318112cae0c595d392dfc0d767bef37abaf32f97397db8835d50099b",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "model_calls": 0,
+        "post_selected_kind": "ESTABLISHED",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 1,
+          "next_state": 2
+        },
+        "receipt_identity": [
+          "HORUS:4ea3fb7a516e84113d51321a2f8108e7:runtime:5:3e874d021d73260e",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "ed2e0264c47fd2fcd13ff7137c954ba1c93c2ee7bcfa84b2e02a66fb37f64543",
+        "selected_action": "ADVANCE"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": true,
+        "qualifying_relation": [
+          2,
+          "HOLD"
+        ],
+        "reason": "DETERIORATED_EMPIRICAL_RELATION_WITH_MISSING_EVIDENCE",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "suffix_count": 4,
+        "target_action": "ADVANCE",
+        "unseen_candidates": [
+          "ADVANCE",
+          "RETREAT"
+        ]
+      },
+      "case": "E6",
+      "expected_eligible": true,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "aadeb5edffc476e0e3e21922d41fefff8f9aa7e2b25b8bd40bd7d4c33762cab0"
+    },
+    "N1": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "EMPIRICALLY_STABLE",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:df5f92cc637a2cd08536869e0571b6b8:runtime:5:262d9c9874a544a5",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "96502fdff577e36e4ef9eb7bcb4026851bfc6b7b06734e37ae3fe45a1e671394",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "EMPIRICALLY_STABLE",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:efe61363c70dea8b01b116505de6534c:runtime:5:854efd15de3757bc",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "195d7c44ba646a1d6265010c33b5e71bd6246b6e475abb7826b79d0793a9e4e5",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": 4,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": 4,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 4,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N1",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "0b01d83bd1e6a82ed40c208f3a66a3f9fa8018976e4dab073349d4ca79061655"
+    },
+    "N10": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "EMPIRICALLY_STABLE",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 0,
+          "next_state": 2
+        },
+        "receipt_identity": [
+          "HORUS:4f520c54d30083953e117e70cdbd7df2:runtime:5:fc7a0131d58afd57",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "a59b90d61fdf628f8d8ccea635bee3fb018bc7718d6506010fb4c004627fb044",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "EMPIRICALLY_STABLE",
+        "post_selected_observation_count": 1,
+        "pre_selected_kind": "UNSEEN",
+        "realized": {
+          "consequence": 0,
+          "next_state": 2
+        },
+        "receipt_identity": [
+          "HORUS:04388cf0363765132d12726b6308e5ee:runtime:5:7985282b899ba9b5",
+          1,
+          2005,
+          1
+        ],
+        "receipt_sha256": "d78931949746955bce87849da026bc92f724a3ba0ba0252777786809c33e75dc",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": null,
+        "eligible": false,
+        "qualifying_relation": [
+          2,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": null,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 0,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N10",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "4980febeb0836738dc14f13b90aa0eca030d9a468b130ef0beb891ead54de54e"
+    },
+    "N11": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:bc2dbe745d9fe0c7e5ad2c0655bf6e47:runtime:6:474f8c134dfca7cd",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "9ce6a59f012fd47fc2b13b98a464f397b5650a6e56ac0e1428afb150232713ed",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:4f14b51c7870847554740c21cb0339bc:runtime:6:346cba7888255574",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "e287679add82f65b3ad49b1896d89d6829041e76e0bd746ba96d8935ac97d7c0",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": null,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "ADVANCE"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": null,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 1,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N11",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "3b251b5492bb18e29cce720a64c9222c730d24b64ee3214f4ab771557c139e93"
+    },
+    "N12": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 4,
+        "pre_selected_kind": "EMPIRICALLY_STABLE",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:83737a81974c8ed172d084e5e75323b3:runtime:4:0908c460651558ef",
+          1,
+          2004,
+          1
+        ],
+        "receipt_sha256": "82fa80c2fcfef0aeddace611bc147aab7eed1e08417b4f10b8ec1d9b49e02219",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 4,
+        "pre_selected_kind": "EMPIRICALLY_STABLE",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:e3c070896e51a01ebddcc2f92a6cb7d6:runtime:4:b590c90a65db0819",
+          1,
+          2004,
+          1
+        ],
+        "receipt_sha256": "84cfdaeca9a62c7921e13235facb5fea3c415091f54c39d06253a80e3d41fb40",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": null,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": null,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 3,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N12",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": true,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "fc3cf1da4ff4e8bd5b4304e66c7f1d040c2a89c434eae901532e834377ddfc35"
+    },
+    "N2": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:1c22b9ee18a67f4bd847c172ff9652e1:runtime:13:c2597cd75285afd1",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "6db3cab15f4f624dd2ad1dbb280576d4a29e6815ce38db62c27996c7cd5af261",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:5f153e1c4f864af3321d19b9f0e85573:runtime:13:9494a7381ba88a17",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "d22e43e41f23e81a2d677d292989d27bd48c4ce1be71244ae1d2b519e75ed7ba",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": 6,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 12,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N2",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "52514322a4a0e423e534d7872ff176d83ff19392af7890444d93a0b858bbd9de"
+    },
+    "N3": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 9,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:644235937ca90268d3087390781c0930:runtime:9:47028b71c0e8f249",
+          1,
+          2009,
+          1
+        ],
+        "receipt_sha256": "d7744030a2d6519c85e4005c62a5c59ea8728b1e6248a45b59980aa1678115bd",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 9,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:7056f0a3bf9ea8cf80390cc52b27e26b:runtime:9:2b5f9ffa71606fb4",
+          1,
+          2009,
+          1
+        ],
+        "receipt_sha256": "791e346eeae648107e52f30c1fdb06c8b55aa6f89defdcab3bf81965fa220fe3",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": 0,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": 4,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 8,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N3",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "a830b3fe0fd1ee637b198c66813c345fe6cc598fd8fd4861379cc47169d285f9"
+    },
+    "N4": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:769d8e3c39bb736687bf828fcd650277:runtime:13:c4325ce07292830a",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "abc70c4988c9b62f3f643204e354b4b2de6446da4c3f709f8db17bf29d5a6578",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:0cd0c9818a4cdc0e2a3cc5bd2bd25d41:runtime:13:ec7f07dcfe368536",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "1ca9e68de1aa36f0ac726835e621793cce2b5b1a140ac788b93f206d39e8b009",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": 7,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": 3,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 12,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N4",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "46b3b34bfd7ac6536b70a4c94eeaef2ae5637bb6345e3c291f79667526e9430a"
+    },
+    "N5": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:ddc7e52a827c40f2d734d7bb4e2aa24f:runtime:13:97716c12b78a2b0e",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "c1b2590aa7cb7d163ddf0d765315211f83fc184f2f81b354227fe05ce2841fc6",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 13,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:abc267f9ad1ec8d868262d765af9e705:runtime:13:c72d29682c9d4f5b",
+          1,
+          2013,
+          1
+        ],
+        "receipt_sha256": "5bb24392778f236916036b7e7cc3486da4797b74cd51f6939f56d91ea9769469",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": 10,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": 4,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 12,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N5",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "5cee1952ac5b5aa2038aed32ae1168e335d8370edd886fc4f75fb75677d9c268"
+    },
+    "N6": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "EMPIRICALLY_STABLE",
+        "post_selected_observation_count": 11,
+        "pre_selected_kind": "POSSIBLE_REGIME_CHANGE",
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:48e1bbc861dcb9ed76074260e8f411e7:runtime:11:11624a7e253c1f25",
+          1,
+          2011,
+          1
+        ],
+        "receipt_sha256": "beb5e1c74ff697ffca8c0ade353e5b7c09354aa455cb659b5403fae31a140b03",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "EMPIRICALLY_STABLE",
+        "post_selected_observation_count": 11,
+        "pre_selected_kind": "POSSIBLE_REGIME_CHANGE",
+        "realized": {
+          "consequence": -1,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:db10c019bc5ab87c3bd70c93ae526735:runtime:11:c5908889504f009f",
+          1,
+          2011,
+          1
+        ],
+        "receipt_sha256": "8cc5307aedf71a7cfdb2d3b0bad577761c9f37281c9298b92e39aee795c1fec6",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": null,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": null,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 10,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N6",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": true,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "545ed40879a5db5f606c1266bd2f368836aaf8a6dc1d4e64504f12fc4ae636d1"
+    },
+    "N7": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:fe0041b26863a115c938770e725a5a43:runtime:7:bcc1265942435419",
+          1,
+          2007,
+          1
+        ],
+        "receipt_sha256": "8b741a82fd7016f60eb78af701dab5037aec2c4c1e0dd5dd47254df37bc3cd20",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:4d01c332ef3b7d65089f5cfc35e23bc5:runtime:7:3d95f7cffde29e71",
+          1,
+          2007,
+          1
+        ],
+        "receipt_sha256": "feea626b1aa3126f1d6ac5b48488dc8b8abe9bd7ed374e62dcc0f5ed11905ceb",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 4,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N7",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "63dbfe7cf6db8f85212283dac851b9d9dccdb1a7f3fdb420de21ee66c3bc2a83"
+    },
+    "N8": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:d2c832a26d5fbf90ebb7a73f33002b46:runtime:8:7010d5161fa9acf7",
+          1,
+          2008,
+          1
+        ],
+        "receipt_sha256": "d4d640a47a537bb9ed846a780641871e595ec1c7d70e248b48e35dd3dab31dd4",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:bfdd82ef6476afd07affa462d52262ce:runtime:8:44991b4c1aee6550",
+          1,
+          2008,
+          1
+        ],
+        "receipt_sha256": "a791179d3c9bd0468a8ed8f5a536768f3aa8fcd76ffeff17873ee16838669d82",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 4,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N8",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "ae9db67c0f35a636eee80b3e07e366e06d6e31c853d31c39cb2281c270c94770"
+    },
+    "N9": {
+      "C": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:ae7965e533af846a95fe6871ea8e42c7:runtime:6:a43c18bc6761ed38",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "e81cbd0a28edf7368d8c6d0b167dbd0b4ea548dc2df4d3e050440cd6791ca45a",
+        "selected_action": "HOLD"
+      },
+      "E": {
+        "decision_source": "REGISTERED_EMPIRICAL_CONTINUATION",
+        "model_calls": 0,
+        "post_selected_kind": "VARIABLE_RELATION",
+        "post_selected_observation_count": 5,
+        "pre_selected_kind": "VARIABLE_RELATION",
+        "realized": {
+          "consequence": 0,
+          "next_state": 1
+        },
+        "receipt_identity": [
+          "HORUS:f40cdaaf27e90fd2daf02508a813f519:runtime:6:f236b38587f03d8d",
+          1,
+          2006,
+          1
+        ],
+        "receipt_sha256": "5ef7f1ec0445233bde732d79cd773dabb57694924be7318c9e04231964f985ce",
+        "selected_action": "HOLD"
+      },
+      "candidate_before": {
+        "candidate": "BOUNDED_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "cumulative_sum": -2,
+        "eligible": false,
+        "qualifying_relation": [
+          1,
+          "HOLD"
+        ],
+        "reason": "NO_TRIGGER",
+        "recent_sum": -2,
+        "short_id": "E",
+        "source": null,
+        "suffix_count": 4,
+        "target_action": null,
+        "unseen_candidates": []
+      },
+      "case": "N9",
+      "expected_eligible": false,
+      "fresh_prefix_recurrence": null,
+      "immediate_E_eligible": false,
+      "matched_predecision_checks": {
+        "E_eligibility": true,
+        "admissible_candidate_set": true,
+        "authorized_event_projection": true,
+        "cumulative_empirical_sum": true,
+        "current_state": true,
+        "empirical_recent_window": true,
+        "independent_raw_provenance": true,
+        "semantic_grounded_assessments": true,
+        "unseen_alternatives": true
+      },
+      "semantic_predecision_sha256": "15549b6301d6b221b3b1aabdbcdca6cf4da7cd7f00947fe7f864e868e6040ccc"
+    }
+  },
+  "control_case_count": 12,
+  "eligible_case_count": 6,
+  "mode": "PROSPECTIVE_MODEL_FREE_PROTECTED_PAIRED_EVALUATION",
+  "model_calls": 0,
+  "no_reward_improvement_claim": true,
+  "status": "PASS"
+}
