@@ -1,0 +1,776 @@
+{
+  "replacement_id": "R1",
+  "classification": "INVALID_STUDY",
+  "original_campaign": {
+    "classification": "INVALID_STUDY",
+    "requests": 0,
+    "completions": 0
+  },
+  "completion": {
+    "attempted": 0,
+    "completed": 0,
+    "not_run": 80
+  },
+  "schema_valid": {
+    "count": 0,
+    "returned_answers": 0,
+    "measured": false
+  },
+  "confusion_matrix": {
+    "SUPPORTED_CURRENT_DEFECT": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "UNPARSEABLE": 0,
+      "NOT_RUN": 24
+    },
+    "NO_SUPPORTED_DIAGNOSIS": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "UNPARSEABLE": 0,
+      "NOT_RUN": 16
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "UNPARSEABLE": 0,
+      "NOT_RUN": 16
+    },
+    "HISTORICAL_DEFECT_NOT_CURRENT": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "UNPARSEABLE": 0,
+      "NOT_RUN": 12
+    },
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "UNPARSEABLE": 0,
+      "NOT_RUN": 12
+    }
+  },
+  "semantic_metrics": {
+    "semantic_classification": null,
+    "current_defects": null,
+    "localization": null,
+    "healthy_controls": null,
+    "healthy_false_positives": null,
+    "historical_controls": null,
+    "historical_false_positives": null,
+    "insufficient_evidence": null,
+    "invalid_evidence": null,
+    "matched_pairs": null,
+    "representation_consistency": null,
+    "evidence_grounding": null,
+    "invented_ids": null
+  },
+  "label_map_performance": {
+    "A": {
+      "completed": 0,
+      "scheduled": 40,
+      "accuracy": null
+    },
+    "B": {
+      "completed": 0,
+      "scheduled": 40,
+      "accuracy": null
+    }
+  },
+  "presentation_order_performance": {
+    "1": {
+      "completed": 0,
+      "scheduled": 40,
+      "accuracy": null
+    },
+    "2": {
+      "completed": 0,
+      "scheduled": 40,
+      "accuracy": null
+    }
+  },
+  "classification_disagreements": {
+    "label_map": null,
+    "presentation_order": null
+  },
+  "families": {
+    "version_selection": {
+      "semantic_worlds": 5,
+      "scheduled_renderings": 20,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    },
+    "authority_precedence": {
+      "semantic_worlds": 2,
+      "scheduled_renderings": 8,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    },
+    "entity_binding": {
+      "semantic_worlds": 3,
+      "scheduled_renderings": 12,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    },
+    "publication_update": {
+      "semantic_worlds": 4,
+      "scheduled_renderings": 16,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    },
+    "operation_idempotence": {
+      "semantic_worlds": 3,
+      "scheduled_renderings": 12,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    },
+    "boundary_comparison": {
+      "semantic_worlds": 3,
+      "scheduled_renderings": 12,
+      "completed": 0,
+      "classification": null,
+      "localization": null,
+      "status": "NOT_RUN"
+    }
+  },
+  "mandatory_gates": {
+    "semantic_classification_min": {
+      "threshold": 17,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "current_defect_classification_min": {
+      "threshold": 5,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "current_defect_localization_min": {
+      "threshold": 4,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "healthy_semantic_avoid_current": {
+      "threshold": 4,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "healthy_rendering_current_false_positives_max": {
+      "threshold": 0,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "historical_semantic_avoid_current": {
+      "threshold": 3,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "historical_rendering_current_false_positives_max": {
+      "threshold": 0,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "insufficient_classification_min": {
+      "threshold": 3,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "invalid_classification_min": {
+      "threshold": 3,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "counterfactual_pairs_min": {
+      "threshold": 5,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "representation_consistent_min": {
+      "threshold": 16,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "evidence_grounded_semantics_min": {
+      "threshold": 17,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    },
+    "invented_ids_max": {
+      "threshold": 0,
+      "measured": null,
+      "status": "NOT_EVALUATED",
+      "reason": "Validity stop before first completion dispatch; inherited scorer returns INVALID_STUDY before evaluating scientific gates"
+    }
+  },
+  "renderings": [
+    {
+      "render_id": "e24ffa812432f3e62a4e",
+      "call_order": 1,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f83683448ab16d16eaa6",
+      "call_order": 2,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "e814a73ec4d992f1f5fb",
+      "call_order": 3,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2a6594724c65004a5702",
+      "call_order": 4,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "3b310ba249b0818e7e77",
+      "call_order": 5,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2b8c3c57a5d1040d5764",
+      "call_order": 6,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "1fa86b8dd54b091e3ad3",
+      "call_order": 7,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "4b558f8ee6d53bc048fe",
+      "call_order": 8,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "c0bfe556ebc8d6d55e96",
+      "call_order": 9,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "92274773fe0b2cc8f494",
+      "call_order": 10,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "c87f1c5cf6b59ecb5c54",
+      "call_order": 11,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "75a2269f77675b96b7c7",
+      "call_order": 12,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f32c5c1e04377566028e",
+      "call_order": 13,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2e797d7beac3edc936f1",
+      "call_order": 14,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "8c654cb9763987a1a23e",
+      "call_order": 15,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "30b71c5bb52894941c81",
+      "call_order": 16,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "cbd4544c306bf140fad2",
+      "call_order": 17,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "3b6af8860635a74cf03c",
+      "call_order": 18,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "41a843d28f16eee7e8fa",
+      "call_order": 19,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "514366f8d50c91a4fba2",
+      "call_order": 20,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "605bc8c81b23e7943ce3",
+      "call_order": 21,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "9098ec90cf5805ba5983",
+      "call_order": 22,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "612a62737fc3f73807d8",
+      "call_order": 23,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "a9e2b48f5ca97590eb36",
+      "call_order": 24,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "8db4f84a6580b8ddb136",
+      "call_order": 25,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "1e73ca60dba61760268b",
+      "call_order": 26,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "efab57b4b13e6634575f",
+      "call_order": 27,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "6fb266922a7b02950d52",
+      "call_order": 28,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "08853493bcfdacd9e8c1",
+      "call_order": 29,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "74e2c0790b3679a78b6a",
+      "call_order": 30,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "3a9606ad0bd1b7a0e803",
+      "call_order": 31,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "c2200e9bc9faf91ad605",
+      "call_order": 32,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "33473191e19c8d84cc4f",
+      "call_order": 33,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f3feff589019248dc01d",
+      "call_order": 34,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "aed971ad93a2dba59088",
+      "call_order": 35,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "10cc572aedfffd122d96",
+      "call_order": 36,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "5d9e5e3dedcb9c3cd6db",
+      "call_order": 37,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "7070ea653a20143a4b73",
+      "call_order": 38,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "d144075ee478be1901dd",
+      "call_order": 39,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "078e94b22fc9408ce3a8",
+      "call_order": 40,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "dc30870373ebc287fff2",
+      "call_order": 41,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "b547f52cb8ab959fd66d",
+      "call_order": 42,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "3bf64874eea455b78a8d",
+      "call_order": 43,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2fb9f729a33cc72f84f8",
+      "call_order": 44,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f3e6b814afdeaa2ca306",
+      "call_order": 45,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "8116146df10781df80b7",
+      "call_order": 46,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "ec62470db5cf0b429d91",
+      "call_order": 47,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "c822e64a7227233aa28c",
+      "call_order": 48,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "03b6b10b378f9cabf9ad",
+      "call_order": 49,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "cba7e883812b4a4b3d55",
+      "call_order": 50,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "9f32c7e926c51fc51a3d",
+      "call_order": 51,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "9da1b54e6d4f5c7bbdb7",
+      "call_order": 52,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "e5ac599581bc5c165c79",
+      "call_order": 53,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "cea0d26b51c70764764d",
+      "call_order": 54,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "1265fa2e94f736b89310",
+      "call_order": 55,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "da82dcf297e5a6852fa5",
+      "call_order": 56,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "4790cba22695a16d557b",
+      "call_order": 57,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "55c75e198bdd05f6e72e",
+      "call_order": 58,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "23133d511e73574e6791",
+      "call_order": 59,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f4c172330716885517ae",
+      "call_order": 60,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "585e99b2ccd578ab951c",
+      "call_order": 61,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "057a4b19934764b2475d",
+      "call_order": 62,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "6aa6b3753ea2b8980097",
+      "call_order": 63,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "87ef87c98a9cf2c8be0b",
+      "call_order": 64,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "d8425a18e6f717fb2fc4",
+      "call_order": 65,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "ba2846d91c195b5a3c07",
+      "call_order": 66,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "dc6bde331508c0bc15cb",
+      "call_order": 67,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "49868defade52b192e62",
+      "call_order": 68,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "dfa8f5a826e85a34dffe",
+      "call_order": 69,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2caf79d8f11ed3a6eb0f",
+      "call_order": 70,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "d53ef9a886da8f752f5c",
+      "call_order": 71,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "42ab0f011ddffa0f562c",
+      "call_order": 72,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "7b6432795cfffcb9e94c",
+      "call_order": 73,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "f1e63531fa6026cd8278",
+      "call_order": 74,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "450b3496df2cb18a0b7c",
+      "call_order": 75,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "b8a4b99010eed16eb1e9",
+      "call_order": 76,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "95a5c7401429f64b9185",
+      "call_order": 77,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "2c4d67989823b6b81a60",
+      "call_order": 78,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "1050a69a5b5fb561c9d6",
+      "call_order": 79,
+      "status": "NOT_RUN"
+    },
+    {
+      "render_id": "3bd79fa554d5dd42a828",
+      "call_order": 80,
+      "status": "NOT_RUN"
+    }
+  ],
+  "semantic_cases": [
+    {
+      "case_id": "65f88c2c90dd59f9",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "e4d1738b5aa2056d",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "2cc6c0212f28f431",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "3e68347365eeadd0",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "17fed07978317a41",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "f459ad2c60dbf8c8",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "f85e85b65e30b263",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "c9f11305f6c154b0",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "7c5505caaa71080c",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "d7b9f5cf78d25fe3",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "040945b111a5b8f0",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "2c786859fc118dce",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "b392eadd8e9b1982",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "54205b70cddc091d",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "7727da4d5a85a7bb",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "af66c1fc1d9c2d04",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "d38c9cc0215d46a4",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "fb6138114f36a327",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "8d6fd751951f44fc",
+      "status": "NOT_RUN",
+      "correct": null
+    },
+    {
+      "case_id": "c79676993d4cd050",
+      "status": "NOT_RUN",
+      "correct": null
+    }
+  ],
+  "matched_pairs": [
+    {
+      "pair_id": "P1",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    },
+    {
+      "pair_id": "P2",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    },
+    {
+      "pair_id": "P3",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    },
+    {
+      "pair_id": "P4",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    },
+    {
+      "pair_id": "P5",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    },
+    {
+      "pair_id": "P6",
+      "status": "NOT_RUN",
+      "correct_direction": null
+    }
+  ],
+  "interpretation": "No model behavior was observed. Component/witness errors, ID mistakes, false positives, abstention and representation sensitivity cannot be assessed."
+}
