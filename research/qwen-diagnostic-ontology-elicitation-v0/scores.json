@@ -1,0 +1,1725 @@
+{
+  "status": "QWEN_DIAGNOSTIC_ONTOLOGY_ELICITATION_COMPLETE_V0",
+  "attempted": 100,
+  "completed": 100,
+  "findings": [
+    "MINIMAL_ONTOLOGY_GATE_FAILED",
+    "EPISTEMIC_DISTINCTION_GATE_FAILED",
+    "ORDER_SENSITIVITY_PRESENT",
+    "LABEL_SENSITIVITY_PRESENT",
+    "RATIONALE_BURDEN_PRESENT",
+    "STRUCTURED_CLASSIFICATION_BURDEN_PRESENT"
+  ],
+  "arms": {
+    "A": {
+      "correct": 16,
+      "schema_valid": 20,
+      "parsed": 20,
+      "by_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 3,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 3,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+      },
+      "critical_epistemic": 9,
+      "by_difficulty": {
+        "primitive": 10,
+        "composite": 6
+      },
+      "by_class_difficulty": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "primitive": 2,
+          "composite": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "primitive": 2,
+          "composite": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        }
+      },
+      "ontology_gate": false,
+      "epistemic_gate": false
+    },
+    "B": {
+      "correct": 12,
+      "schema_valid": 20,
+      "parsed": 20,
+      "by_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 2,
+        "INSUFFICIENT_EVIDENCE": 1,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+      },
+      "critical_epistemic": 6,
+      "by_difficulty": {
+        "primitive": 8,
+        "composite": 4
+      },
+      "by_class_difficulty": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "primitive": 2,
+          "composite": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "primitive": 1,
+          "composite": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "primitive": 1,
+          "composite": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        }
+      },
+      "ontology_gate": false,
+      "epistemic_gate": false
+    },
+    "C": {
+      "correct": 16,
+      "schema_valid": 20,
+      "parsed": 20,
+      "by_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 4,
+        "INSUFFICIENT_EVIDENCE": 3,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+      },
+      "critical_epistemic": 8,
+      "by_difficulty": {
+        "primitive": 9,
+        "composite": 7
+      },
+      "by_class_difficulty": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "primitive": 1,
+          "composite": 2
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "primitive": 2,
+          "composite": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        }
+      },
+      "ontology_gate": false,
+      "epistemic_gate": false
+    },
+    "D": {
+      "correct": 12,
+      "schema_valid": 20,
+      "parsed": 20,
+      "by_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 2,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+      },
+      "critical_epistemic": 5,
+      "by_difficulty": {
+        "primitive": 8,
+        "composite": 4
+      },
+      "by_class_difficulty": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "primitive": 2,
+          "composite": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "primitive": 2,
+          "composite": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "primitive": 0,
+          "composite": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        }
+      },
+      "ontology_gate": false,
+      "epistemic_gate": false
+    },
+    "E": {
+      "correct": 12,
+      "schema_valid": 20,
+      "parsed": 20,
+      "by_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 1,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+      },
+      "critical_epistemic": 5,
+      "by_difficulty": {
+        "primitive": 7,
+        "composite": 5
+      },
+      "by_class_difficulty": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "primitive": 2,
+          "composite": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "primitive": 2,
+          "composite": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "primitive": 1,
+          "composite": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "primitive": 0,
+          "composite": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "primitive": 2,
+          "composite": 1
+        }
+      },
+      "ontology_gate": false,
+      "epistemic_gate": false
+    }
+  },
+  "contrasts": {
+    "A_B": {
+      "accuracy_delta_count": -4,
+      "class_disagreements": 6,
+      "disagreement_worlds": [
+        "w50ad03b1ff9a",
+        "w6c05ad6d73ce",
+        "wb2954c1dc4ce",
+        "wc614d594a5b0",
+        "wc65d5a638652",
+        "wd6abcd641feb"
+      ],
+      "missing_label_worlds": [],
+      "same_label_schema_flips": [],
+      "transitions": {
+        "correct_to_wrong": 4,
+        "wrong_to_correct": 0,
+        "wrong_to_different_wrong": 2,
+        "unchanged": 14
+      },
+      "transition_worlds": {
+        "correct_to_wrong": [
+          "w50ad03b1ff9a",
+          "w6c05ad6d73ce",
+          "wc614d594a5b0",
+          "wd6abcd641feb"
+        ],
+        "wrong_to_correct": [],
+        "wrong_to_different_wrong": [
+          "wb2954c1dc4ce",
+          "wc65d5a638652"
+        ],
+        "unchanged": [
+          "w06e0432275b1",
+          "w186968d18fa2",
+          "w5bacb9bef603",
+          "w668df094eea9",
+          "w75875ab34a58",
+          "wa959649c47ea",
+          "wb2e948d94563",
+          "wb9c8647a850a",
+          "wc269b28bcc86",
+          "wcc394ab59a28",
+          "wd740c8e8683d",
+          "wd7da6f4b65be",
+          "we353a63e0d7b",
+          "wfb20acb4b078"
+        ]
+      }
+    },
+    "A_C": {
+      "accuracy_delta_count": 0,
+      "class_disagreements": 6,
+      "disagreement_worlds": [
+        "w50ad03b1ff9a",
+        "w5bacb9bef603",
+        "wa959649c47ea",
+        "wb2954c1dc4ce",
+        "wb9c8647a850a",
+        "wc65d5a638652"
+      ],
+      "missing_label_worlds": [],
+      "same_label_schema_flips": [],
+      "transitions": {
+        "correct_to_wrong": 2,
+        "wrong_to_correct": 2,
+        "wrong_to_different_wrong": 2,
+        "unchanged": 14
+      },
+      "transition_worlds": {
+        "correct_to_wrong": [
+          "w50ad03b1ff9a",
+          "wb9c8647a850a"
+        ],
+        "wrong_to_correct": [
+          "w5bacb9bef603",
+          "wc65d5a638652"
+        ],
+        "wrong_to_different_wrong": [
+          "wa959649c47ea",
+          "wb2954c1dc4ce"
+        ],
+        "unchanged": [
+          "w06e0432275b1",
+          "w186968d18fa2",
+          "w668df094eea9",
+          "w6c05ad6d73ce",
+          "w75875ab34a58",
+          "wb2e948d94563",
+          "wc269b28bcc86",
+          "wc614d594a5b0",
+          "wcc394ab59a28",
+          "wd6abcd641feb",
+          "wd740c8e8683d",
+          "wd7da6f4b65be",
+          "we353a63e0d7b",
+          "wfb20acb4b078"
+        ]
+      }
+    },
+    "A_D": {
+      "accuracy_delta_count": -4,
+      "class_disagreements": 5,
+      "disagreement_worlds": [
+        "w186968d18fa2",
+        "w6c05ad6d73ce",
+        "wa959649c47ea",
+        "wb9c8647a850a",
+        "wc614d594a5b0"
+      ],
+      "missing_label_worlds": [],
+      "same_label_schema_flips": [],
+      "transitions": {
+        "correct_to_wrong": 4,
+        "wrong_to_correct": 0,
+        "wrong_to_different_wrong": 1,
+        "unchanged": 15
+      },
+      "transition_worlds": {
+        "correct_to_wrong": [
+          "w186968d18fa2",
+          "w6c05ad6d73ce",
+          "wb9c8647a850a",
+          "wc614d594a5b0"
+        ],
+        "wrong_to_correct": [],
+        "wrong_to_different_wrong": [
+          "wa959649c47ea"
+        ],
+        "unchanged": [
+          "w06e0432275b1",
+          "w50ad03b1ff9a",
+          "w5bacb9bef603",
+          "w668df094eea9",
+          "w75875ab34a58",
+          "wb2954c1dc4ce",
+          "wb2e948d94563",
+          "wc269b28bcc86",
+          "wc65d5a638652",
+          "wcc394ab59a28",
+          "wd6abcd641feb",
+          "wd740c8e8683d",
+          "wd7da6f4b65be",
+          "we353a63e0d7b",
+          "wfb20acb4b078"
+        ]
+      }
+    },
+    "A_E": {
+      "accuracy_delta_count": -4,
+      "class_disagreements": 9,
+      "disagreement_worlds": [
+        "w186968d18fa2",
+        "w50ad03b1ff9a",
+        "w5bacb9bef603",
+        "w6c05ad6d73ce",
+        "wa959649c47ea",
+        "wb9c8647a850a",
+        "wc614d594a5b0",
+        "wc65d5a638652",
+        "wd6abcd641feb"
+      ],
+      "missing_label_worlds": [],
+      "same_label_schema_flips": [],
+      "transitions": {
+        "correct_to_wrong": 6,
+        "wrong_to_correct": 2,
+        "wrong_to_different_wrong": 1,
+        "unchanged": 11
+      },
+      "transition_worlds": {
+        "correct_to_wrong": [
+          "w186968d18fa2",
+          "w50ad03b1ff9a",
+          "w6c05ad6d73ce",
+          "wb9c8647a850a",
+          "wc614d594a5b0",
+          "wd6abcd641feb"
+        ],
+        "wrong_to_correct": [
+          "w5bacb9bef603",
+          "wa959649c47ea"
+        ],
+        "wrong_to_different_wrong": [
+          "wc65d5a638652"
+        ],
+        "unchanged": [
+          "w06e0432275b1",
+          "w668df094eea9",
+          "w75875ab34a58",
+          "wb2954c1dc4ce",
+          "wb2e948d94563",
+          "wc269b28bcc86",
+          "wcc394ab59a28",
+          "wd740c8e8683d",
+          "wd7da6f4b65be",
+          "we353a63e0d7b",
+          "wfb20acb4b078"
+        ]
+      }
+    }
+  },
+  "structured_metrics": {
+    "current_denominator": 4,
+    "full_witness": 1,
+    "exact_field_value_localization": 1,
+    "current_criteria": {
+      "primary_classification": 4,
+      "affected_component": 4,
+      "citation_complete": 4,
+      "contract_evidence_id": 4,
+      "cause_evidence_id": 4,
+      "effect_evidence_id": 4,
+      "decisive_evidence_id": 3,
+      "decisive_field": 2,
+      "observed_value": 1,
+      "required_value": 1
+    },
+    "current_required_citations": 12,
+    "current_present_required_citations": 12,
+    "all_complete_citations": 18,
+    "all_required_citations": 64,
+    "all_present_required_citations": 62,
+    "nonexistent_citation_outputs": 0
+  },
+  "all_arms_strong": false,
+  "rows": [
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wcc394ab59a28",
+      "render_id": "585b34fd86cf91a9bcc0",
+      "arm": "A",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wcc394ab59a28",
+      "render_id": "f37fd17b483f9e2a2164",
+      "arm": "B",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wcc394ab59a28",
+      "render_id": "f92134e152ef2608a5ba",
+      "arm": "C",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wcc394ab59a28",
+      "render_id": "ed9fe2a9551d5ccb1032",
+      "arm": "D",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wcc394ab59a28",
+      "render_id": "efb61b166c829a99a5b6",
+      "arm": "E",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": [],
+        "criteria": {
+          "primary_classification": true,
+          "affected_component": true,
+          "citation_complete": true,
+          "contract_evidence_id": true,
+          "cause_evidence_id": true,
+          "effect_evidence_id": true,
+          "decisive_evidence_id": false,
+          "decisive_field": false,
+          "observed_value": false,
+          "required_value": false
+        },
+        "full_witness": false,
+        "exact_field_value_localization": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w75875ab34a58",
+      "render_id": "2361e97c5e44e20b771a",
+      "arm": "A",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w75875ab34a58",
+      "render_id": "64c8d59fc49fcea6f526",
+      "arm": "B",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w75875ab34a58",
+      "render_id": "33613da73b9f5fb9ae3c",
+      "arm": "C",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w75875ab34a58",
+      "render_id": "9f93a94b088ca072cc29",
+      "arm": "D",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w75875ab34a58",
+      "render_id": "58031f4512bd97caac94",
+      "arm": "E",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": [],
+        "criteria": {
+          "primary_classification": true,
+          "affected_component": true,
+          "citation_complete": true,
+          "contract_evidence_id": true,
+          "cause_evidence_id": true,
+          "effect_evidence_id": true,
+          "decisive_evidence_id": true,
+          "decisive_field": true,
+          "observed_value": true,
+          "required_value": true
+        },
+        "full_witness": true,
+        "exact_field_value_localization": true
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w06e0432275b1",
+      "render_id": "ae8736bc17cf9d270722",
+      "arm": "A",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w06e0432275b1",
+      "render_id": "27e92a6a7f7097092e53",
+      "arm": "B",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w06e0432275b1",
+      "render_id": "8b5a0084801d33a8de73",
+      "arm": "C",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w06e0432275b1",
+      "render_id": "d1cfec1aaae98796cee4",
+      "arm": "D",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "w06e0432275b1",
+      "render_id": "f64b5bbeff49c9c5aa52",
+      "arm": "E",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": [],
+        "criteria": {
+          "primary_classification": true,
+          "affected_component": true,
+          "citation_complete": true,
+          "contract_evidence_id": true,
+          "cause_evidence_id": true,
+          "effect_evidence_id": true,
+          "decisive_evidence_id": true,
+          "decisive_field": false,
+          "observed_value": false,
+          "required_value": false
+        },
+        "full_witness": false,
+        "exact_field_value_localization": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wfb20acb4b078",
+      "render_id": "5c95bc92ea48bbbef623",
+      "arm": "A",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wfb20acb4b078",
+      "render_id": "139324073857dbb31709",
+      "arm": "B",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wfb20acb4b078",
+      "render_id": "e76cfdc4e910e8bb38fa",
+      "arm": "C",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wfb20acb4b078",
+      "render_id": "843e94aa6e3da5ec1c79",
+      "arm": "D",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": true,
+      "world_id": "wfb20acb4b078",
+      "render_id": "b9fb5854e25170dd2f5c",
+      "arm": "E",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": [],
+        "criteria": {
+          "primary_classification": true,
+          "affected_component": true,
+          "citation_complete": true,
+          "contract_evidence_id": true,
+          "cause_evidence_id": true,
+          "effect_evidence_id": true,
+          "decisive_evidence_id": true,
+          "decisive_field": true,
+          "observed_value": false,
+          "required_value": false
+        },
+        "full_witness": false,
+        "exact_field_value_localization": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd7da6f4b65be",
+      "render_id": "7133260ce9b2cd2c09b0",
+      "arm": "A",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd7da6f4b65be",
+      "render_id": "534a3e9f8f1cfcf572fc",
+      "arm": "B",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd7da6f4b65be",
+      "render_id": "1e7d6e7db71bfc112079",
+      "arm": "C",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd7da6f4b65be",
+      "render_id": "bc57f4637a99d9f69d10",
+      "arm": "D",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd7da6f4b65be",
+      "render_id": "48d21ef999ddcc22ffd2",
+      "arm": "E",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wc269b28bcc86",
+      "render_id": "23f182a04f7cf8e40355",
+      "arm": "A",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wc269b28bcc86",
+      "render_id": "a69f4d9b4ce1d59cd151",
+      "arm": "B",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wc269b28bcc86",
+      "render_id": "dc360d20504f299e71a5",
+      "arm": "C",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wc269b28bcc86",
+      "render_id": "77fe2e029836581331e5",
+      "arm": "D",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wc269b28bcc86",
+      "render_id": "61f695d6f395a82ce8ae",
+      "arm": "E",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w5bacb9bef603",
+      "render_id": "c240fc9104148953825b",
+      "arm": "A",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w5bacb9bef603",
+      "render_id": "118c632848c46573c5d2",
+      "arm": "B",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "w5bacb9bef603",
+      "render_id": "fe8adfafe942ae7470f9",
+      "arm": "C",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w5bacb9bef603",
+      "render_id": "e66d0dd933b74169496e",
+      "arm": "D",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "w5bacb9bef603",
+      "render_id": "ebe540cc75e8ff825bf9",
+      "arm": "E",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd6abcd641feb",
+      "render_id": "68a3b284815e8058e502",
+      "arm": "A",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wd6abcd641feb",
+      "render_id": "6ae9bc655316ae11e0c5",
+      "arm": "B",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd6abcd641feb",
+      "render_id": "0fff226dbeae2441d6d4",
+      "arm": "C",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": true,
+      "world_id": "wd6abcd641feb",
+      "render_id": "de634659eb1f32eb5fbe",
+      "arm": "D",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wd6abcd641feb",
+      "render_id": "daccefbdbce155a5efc1",
+      "arm": "E",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w668df094eea9",
+      "render_id": "313d13dd8f66be96d552",
+      "arm": "A",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w668df094eea9",
+      "render_id": "fdaa41d4e9b83135ff26",
+      "arm": "B",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w668df094eea9",
+      "render_id": "f2d10568b6908eddfa51",
+      "arm": "C",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w668df094eea9",
+      "render_id": "53d10586865bf7eadda0",
+      "arm": "D",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w668df094eea9",
+      "render_id": "d75aa7274b4de599b608",
+      "arm": "E",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w50ad03b1ff9a",
+      "render_id": "9d014c2d55845bfeee74",
+      "arm": "A",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w50ad03b1ff9a",
+      "render_id": "ee18445453eb3192ed15",
+      "arm": "B",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "w50ad03b1ff9a",
+      "render_id": "25652fd39adb31b8b3cc",
+      "arm": "C",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w50ad03b1ff9a",
+      "render_id": "8fb266ed92d8ed02ac8a",
+      "arm": "D",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w50ad03b1ff9a",
+      "render_id": "cead5f6dc49cc3f88672",
+      "arm": "E",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wc65d5a638652",
+      "render_id": "5d97d60421c6767af693",
+      "arm": "A",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wc65d5a638652",
+      "render_id": "a7a33ced67e8fd829195",
+      "arm": "B",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "wc65d5a638652",
+      "render_id": "e3788c13f7a253cb7f20",
+      "arm": "C",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wc65d5a638652",
+      "render_id": "afca5e6f511b3dc4a33f",
+      "arm": "D",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wc65d5a638652",
+      "render_id": "57250f0ddedc6603335f",
+      "arm": "E",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w6c05ad6d73ce",
+      "render_id": "4f2523029590eefba0f5",
+      "arm": "A",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w6c05ad6d73ce",
+      "render_id": "1e1de194c4cffd2ed013",
+      "arm": "B",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": true,
+      "world_id": "w6c05ad6d73ce",
+      "render_id": "13e3c732619c73879aae",
+      "arm": "C",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "w6c05ad6d73ce",
+      "render_id": "488646f1433c34ec48ab",
+      "arm": "D",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w6c05ad6d73ce",
+      "render_id": "24a60a0500b8f1348d10",
+      "arm": "E",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "wc614d594a5b0",
+      "render_id": "b48477ccccb17a225f98",
+      "arm": "A",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wc614d594a5b0",
+      "render_id": "8e3716bfa00f89b0cb5e",
+      "arm": "B",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "wc614d594a5b0",
+      "render_id": "152e3f8b0f2a5ed115b9",
+      "arm": "C",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wc614d594a5b0",
+      "render_id": "07794b568d07d7e5b4f7",
+      "arm": "D",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wc614d594a5b0",
+      "render_id": "ea07a15743b98587195d",
+      "arm": "E",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 4,
+        "present_required_citations": 4,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "w186968d18fa2",
+      "render_id": "961e510a355564c85c84",
+      "arm": "A",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "w186968d18fa2",
+      "render_id": "397b19b5282fc4b315b0",
+      "arm": "B",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "w186968d18fa2",
+      "render_id": "5936f2e35af5c16a1b4e",
+      "arm": "C",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "w186968d18fa2",
+      "render_id": "c08d6391df457453c9c1",
+      "arm": "D",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "w186968d18fa2",
+      "render_id": "d2f1233b84ba44f4ba02",
+      "arm": "E",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 4,
+        "present_required_citations": 4,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wa959649c47ea",
+      "render_id": "29095afaa34a4c1cb78b",
+      "arm": "A",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wa959649c47ea",
+      "render_id": "292cfc69e31b35932c2b",
+      "arm": "B",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wa959649c47ea",
+      "render_id": "63c915cd727eed5cdce9",
+      "arm": "C",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wa959649c47ea",
+      "render_id": "7c249d4c211691e3b9d8",
+      "arm": "D",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "wa959649c47ea",
+      "render_id": "a8af0dccbb38061faa21",
+      "arm": "E",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 4,
+        "present_required_citations": 3,
+        "citation_complete": false,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "wb9c8647a850a",
+      "render_id": "4f29fca6f955748d47b4",
+      "arm": "A",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correct": true,
+      "world_id": "wb9c8647a850a",
+      "render_id": "61ea8116c37163bed8cf",
+      "arm": "B",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "world_id": "wb9c8647a850a",
+      "render_id": "ddda0d6f6fd33da93012",
+      "arm": "C",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wb9c8647a850a",
+      "render_id": "b045cb8b26a2d1ed59a1",
+      "arm": "D",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wb9c8647a850a",
+      "render_id": "04e8c881068d11a09286",
+      "arm": "E",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 4,
+        "present_required_citations": 4,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wd740c8e8683d",
+      "render_id": "c40ddd1a600ed7a3deff",
+      "arm": "A",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wd740c8e8683d",
+      "render_id": "ab803e21857dc40c5cea",
+      "arm": "B",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wd740c8e8683d",
+      "render_id": "6ec8fd582efdf9ae9ee7",
+      "arm": "C",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wd740c8e8683d",
+      "render_id": "25a25089712942654d03",
+      "arm": "D",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wd740c8e8683d",
+      "render_id": "f1136043d4a054a7f38b",
+      "arm": "E",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 2,
+        "citation_complete": false,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "we353a63e0d7b",
+      "render_id": "fc29843a1f70ca10b33a",
+      "arm": "A",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "we353a63e0d7b",
+      "render_id": "cec8b8fb779d15be4043",
+      "arm": "B",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "we353a63e0d7b",
+      "render_id": "bb2e5418af631b4da84a",
+      "arm": "C",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "we353a63e0d7b",
+      "render_id": "d73ae001d31503926343",
+      "arm": "D",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "we353a63e0d7b",
+      "render_id": "14b1b6fbdeca87e596d2",
+      "arm": "E",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "primitive",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wb2e948d94563",
+      "render_id": "50cbabd6f31d7b5f3e46",
+      "arm": "A",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wb2e948d94563",
+      "render_id": "9bdf53319c919b424724",
+      "arm": "B",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wb2e948d94563",
+      "render_id": "4847762578c342ea7014",
+      "arm": "C",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wb2e948d94563",
+      "render_id": "65493aedc8ce0f23acaf",
+      "arm": "D",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correct": true,
+      "world_id": "wb2e948d94563",
+      "render_id": "1d0ad7da1b157ade4312",
+      "arm": "E",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wb2954c1dc4ce",
+      "render_id": "b28683b664a64e8fe6c1",
+      "arm": "A",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "correct": false,
+      "world_id": "wb2954c1dc4ce",
+      "render_id": "1d0309c12c95d3e7534a",
+      "arm": "B",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "correct": false,
+      "world_id": "wb2954c1dc4ce",
+      "render_id": "96049e847e04037f065b",
+      "arm": "C",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wb2954c1dc4ce",
+      "render_id": "a626ccd1bec7d1918ac9",
+      "arm": "D",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "correct": false,
+      "world_id": "wb2954c1dc4ce",
+      "render_id": "d6f655c967c69ec3a905",
+      "arm": "E",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "difficulty": "composite",
+      "evidence": {
+        "required_citations": 3,
+        "present_required_citations": 3,
+        "citation_complete": true,
+        "nonexistent_evidence_ids": []
+      }
+    }
+  ],
+  "raw_commit_before_scoring": "d9df1ee407b79f8e6dd5492f9677248946c32487"
+}
