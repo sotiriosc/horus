@@ -1,0 +1,130 @@
+{
+  "source_repository": "https://github.com/ggml-org/llama.cpp",
+  "source_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+  "archive_url": "https://codeload.github.com/ggml-org/llama.cpp/tar.gz/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+  "archive_commit_comment": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+  "archive_sha256": "2d29400e5386f0b1603fe87a676892979685b47ac674251daf0134c8fcd2429b",
+  "files": {
+    "tools/server/server.cpp": {
+      "sha256": "9cf6bf6f464fad94172c09b2f9e6a4eea3e69b96117ed1b14b31e0de094c130e",
+      "git_blob_sha1": "4568a11fb958e3b1c794bf74067cebd306bd1aa6"
+    },
+    "tools/server/server-context.cpp": {
+      "sha256": "9661214669507b14f35b53e65f6a0fd0496b0f79fc142ee5bb843bb31f7a6109",
+      "git_blob_sha1": "2036319c13810c2bc229d22672f0f66f93bbbdb2"
+    },
+    "tools/server/server-common.cpp": {
+      "sha256": "28e058d1ab9f290b35d382fcd8869012f6d40276cb440ddf7a585ca33a8367fb",
+      "git_blob_sha1": "8cf794f1e24f39d1fda8d3ae2a39babbc107cbcd"
+    },
+    "tools/server/server-task.cpp": {
+      "sha256": "0fd5c8df2525e61214986e8abe3fc4edbb92f5dd652c9c2bfd1bc2712218a585",
+      "git_blob_sha1": "0d3beb313ceabbb903de57d185140a8e5a079e4b"
+    },
+    "common/arg.cpp": {
+      "sha256": "8ef15365dd8fd2001f3c328e81ca8be11de1ac25029a7a3a07c1ab0944079c41",
+      "git_blob_sha1": "2acac3b5cfbde1feafa027bcfdf83e9bdfff209b"
+    },
+    "tools/server/README.md": {
+      "sha256": "37866b6b348e49a44205f776467afc16322d136bfa06c4448354a6c93b74f52e",
+      "git_blob_sha1": "09fdb87e5dafd45e421ca4cd23f52f6e5b88952c"
+    }
+  },
+  "references": [
+    {
+      "finding": "route",
+      "path": "tools/server/server.cpp",
+      "line_start": 289,
+      "line_end": 291,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server.cpp#L289-L291",
+      "excerpt": "    // Save & load slots\n    ctx_http.get (\"/slots\",                    ex_wrapper(routes.get_slots));\n    ctx_http.post(\"/slots/:id_slot\",           ex_wrapper(routes.post_slots));"
+    },
+    {
+      "finding": "empty_path_gate",
+      "path": "tools/server/server-context.cpp",
+      "line_start": 4752,
+      "line_end": 4757,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-context.cpp#L4752-L4757",
+      "excerpt": "    this->post_slots = [this](const server_http_req & req) {\n        auto res = create_response();\n        if (params.slot_save_path.empty()) {\n            res->error(format_error_response(\"This server does not support slots action. Start it with `--slot-save-path`\", ERROR_TYPE_NOT_SUPPORTED));\n            return res;\n        }"
+    },
+    {
+      "finding": "erase_route",
+      "path": "tools/server/server-context.cpp",
+      "line_start": 4769,
+      "line_end": 4779,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-context.cpp#L4769-L4779",
+      "excerpt": "        std::string action = req.get_param(\"action\");\n\n        if (action == \"save\") {\n            return handle_slots_save(req, id_slot);\n        }\n        if (action == \"restore\") {\n            return handle_slots_restore(req, id_slot);\n        }\n        if (action == \"erase\") {\n            return handle_slots_erase(req, id_slot);\n        }"
+    },
+    {
+      "finding": "not_supported_501",
+      "path": "tools/server/server-common.cpp",
+      "line_start": 60,
+      "line_end": 63,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-common.cpp#L60-L63",
+      "excerpt": "        case ERROR_TYPE_NOT_SUPPORTED:\n            type_str = \"not_supported_error\";\n            code = 501;\n            break;"
+    },
+    {
+      "finding": "erase_handler",
+      "path": "tools/server/server-context.cpp",
+      "line_start": 5344,
+      "line_end": 5368,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-context.cpp#L5344-L5368",
+      "excerpt": "std::unique_ptr<server_res_generator> server_routes::handle_slots_erase(const server_http_req & req, int id_slot) {\n    auto res = create_response();\n    auto & rd = res->rd;\n    {\n        server_task task(SERVER_TASK_TYPE_SLOT_ERASE);\n        task.id = rd.get_new_id();\n        task.slot_action.id_slot = id_slot;\n        rd.post_task(std::move(task));\n    }\n\n    auto result = rd.next(req.should_stop);\n    if (!result) {\n        // connection was closed\n        GGML_ASSERT(req.should_stop());\n        return res;\n    }\n\n    if (result->is_error()) {\n        res->error(result->to_json());\n        return res;\n    }\n\n    GGML_ASSERT(dynamic_cast<server_task_result_slot_erase*>(result.get()) != nullptr);\n    res->ok(result->to_json());\n    return res;"
+    },
+    {
+      "finding": "erase_task",
+      "path": "tools/server/server-context.cpp",
+      "line_start": 2641,
+      "line_end": 2666,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-context.cpp#L2641-L2666",
+      "excerpt": "            case SERVER_TASK_TYPE_SLOT_ERASE:\n                {\n                    const int id_slot = task.slot_action.id_slot;\n                    server_slot * slot = get_slot_by_id(id_slot);\n                    if (slot == nullptr) {\n                        send_error(task, \"Invalid slot ID\", ERROR_TYPE_INVALID_REQUEST);\n                        break;\n                    }\n                    if (slot->is_processing()) {\n                        // if requested slot is unavailable, we defer this task for processing later\n                        SRV_DBG(\"requested slot is unavailable, defer task, id_task = %d\\n\", task.id);\n                        queue_tasks.defer(std::move(task));\n                        break;\n                    }\n\n                    // Erase token cache\n                    const size_t n_erased = slot->prompt.tokens.size();\n\n                    slot->prompt_clear();\n\n                    auto res = std::make_unique<server_task_result_slot_erase>();\n                    res->id       = task.id;\n                    res->id_slot  = id_slot;\n                    res->n_erased = n_erased;\n                    queue_results.send(std::move(res));\n                } break;"
+    },
+    {
+      "finding": "erase_response",
+      "path": "tools/server/server-task.cpp",
+      "line_start": 1649,
+      "line_end": 1653,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-task.cpp#L1649-L1653",
+      "excerpt": "json server_task_result_slot_erase::to_json() {\n    return json {\n        { \"id_slot\",  id_slot },\n        { \"n_erased\", n_erased },\n    };"
+    },
+    {
+      "finding": "flag_parser",
+      "path": "common/arg.cpp",
+      "line_start": 3610,
+      "line_end": 3623,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/common/arg.cpp#L3610-L3623",
+      "excerpt": "    add_opt(common_arg(\n        {\"--slot-save-path\"}, \"PATH\",\n        \"path to save slot kv cache (default: disabled)\",\n        [](common_params & params, const std::string & value) {\n            params.slot_save_path = value;\n            if (!fs_is_directory(params.slot_save_path)) {\n                throw std::invalid_argument(\"not a directory: \" + value);\n            }\n            // if doesn't end with DIRECTORY_SEPARATOR, add it\n            if (!params.slot_save_path.empty() && params.slot_save_path[params.slot_save_path.size() - 1] != DIRECTORY_SEPARATOR) {\n                params.slot_save_path += DIRECTORY_SEPARATOR;\n            }\n        }\n    ).set_examples({LLAMA_EXAMPLE_SERVER}));"
+    },
+    {
+      "finding": "flag_documentation",
+      "path": "tools/server/README.md",
+      "line_start": 225,
+      "line_end": 225,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/README.md#L225-L225",
+      "excerpt": "| `--slot-save-path PATH` | path to save slot kv cache (default: disabled) |"
+    },
+    {
+      "finding": "erase_api_documentation",
+      "path": "tools/server/README.md",
+      "line_start": 1188,
+      "line_end": 1197,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/README.md#L1188-L1197",
+      "excerpt": "### POST `/slots/{id_slot}?action=erase`: Erase the prompt cache of the specified slot.\n\n**Response format**\n\n```json\n{\n    \"id_slot\": 0,\n    \"n_erased\": 1745\n}\n```"
+    },
+    {
+      "finding": "startup_signal",
+      "path": "tools/server/server.cpp",
+      "line_start": 501,
+      "line_end": 519,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server.cpp#L501-L519",
+      "excerpt": "        sigaction(SIGINT, &sigint_action, NULL);\n        sigaction(SIGTERM, &sigint_action, NULL);\n#elif defined (_WIN32)\n        auto console_ctrl_handler = +[](DWORD ctrl_type) -> BOOL {\n            return (ctrl_type == CTRL_C_EVENT) ? (signal_handler(SIGINT), true) : false;\n        };\n        SetConsoleCtrlHandler(reinterpret_cast<PHANDLER_ROUTINE>(console_ctrl_handler), true);\n#endif\n    }\n\n    bool uses_default_port = false;\n    for (const auto & address : ctx_http.listening_addresses) {\n        SRV_INF(\"listening on %s\\n\", address.c_str());\n        uses_default_port |= string_ends_with(address, \":8080\");\n    }\n\n    // TODO: remove this in the future\n    // check the string to also handle the .sock case\n    if (uses_default_port) {"
+    }
+  ],
+  "source_established": "POST slots action gate rejects empty slot_save_path with NOT_SUPPORTED, mapped to 501; erase dispatch is after the gate",
+  "r1_observed": "HTTP 501 for first POST /slots/0?action=erase; missing body was not observed",
+  "inference": "R1 launch omitted --slot-save-path, matching the source-established empty-path rejection condition. This links source behavior to observed status without reconstructing R1 body.",
+  "second_erase": {
+    "planned": false,
+    "reason": "Pinned API documentation describes erase and its response but does not explicitly document repeated-empty idempotence; no optional second request"
+  }
+}
