@@ -1,0 +1,978 @@
+[
+  {
+    "pair_id": "P1",
+    "original_pair": {
+      "pair_id": "P1",
+      "left": "65f88c2c90dd59f9",
+      "right": "f85e85b65e30b263",
+      "left_spec": "d1",
+      "right_spec": "h1",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "NO_SUPPORTED_DIAGNOSIS"
+      ],
+      "changed_paths": [
+        "/records/4/data/used_config",
+        "/records/5/data/returned_value",
+        "/records/6/data/captured_event_data/returned_value"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "65f88c2c90dd59f9",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "f85e85b65e30b263",
+        "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+        "classification_credit": false
+      }
+    },
+    "semantic_failed_endpoints": [
+      "right"
+    ],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "30b71c5bb52894941c81",
+            "semantic_case_id": "65f88c2c90dd59f9",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "49868defade52b192e62",
+            "semantic_case_id": "f85e85b65e30b263",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "da82dcf297e5a6852fa5",
+            "semantic_case_id": "65f88c2c90dd59f9",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "514366f8d50c91a4fba2",
+            "semantic_case_id": "f85e85b65e30b263",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "9f32c7e926c51fc51a3d",
+            "semantic_case_id": "65f88c2c90dd59f9",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "75a2269f77675b96b7c7",
+            "semantic_case_id": "f85e85b65e30b263",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "10cc572aedfffd122d96",
+            "semantic_case_id": "65f88c2c90dd59f9",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "2a6594724c65004a5702",
+            "semantic_case_id": "f85e85b65e30b263",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      }
+    ],
+    "original_pair_pass": false,
+    "original_scorer_credit": {
+      "pair_id": "P1",
+      "correct_direction": false,
+      "correct_cells": 2
+    },
+    "failed_cell_reasons": {
+      "classification_only": 2
+    }
+  },
+  {
+    "pair_id": "P2",
+    "original_pair": {
+      "pair_id": "P2",
+      "left": "e4d1738b5aa2056d",
+      "right": "7727da4d5a85a7bb",
+      "left_spec": "d2",
+      "right_spec": "t1",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "HISTORICAL_DEFECT_NOT_CURRENT"
+      ],
+      "changed_paths": [
+        "/records/1/data/current_version",
+        "/records/6/data/deployment_version"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "e4d1738b5aa2056d",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "7727da4d5a85a7bb",
+        "gold_classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "classification_credit": false
+      }
+    },
+    "semantic_failed_endpoints": [
+      "right"
+    ],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "aed971ad93a2dba59088",
+            "semantic_case_id": "e4d1738b5aa2056d",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "2caf79d8f11ed3a6eb0f",
+            "semantic_case_id": "7727da4d5a85a7bb",
+            "gold_classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "612a62737fc3f73807d8",
+            "semantic_case_id": "e4d1738b5aa2056d",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "c87f1c5cf6b59ecb5c54",
+            "semantic_case_id": "7727da4d5a85a7bb",
+            "gold_classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "f3feff589019248dc01d",
+            "semantic_case_id": "e4d1738b5aa2056d",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "2e797d7beac3edc936f1",
+            "semantic_case_id": "7727da4d5a85a7bb",
+            "gold_classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "23133d511e73574e6791",
+            "semantic_case_id": "e4d1738b5aa2056d",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "74e2c0790b3679a78b6a",
+            "semantic_case_id": "7727da4d5a85a7bb",
+            "gold_classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      }
+    ],
+    "original_pair_pass": false,
+    "original_scorer_credit": {
+      "pair_id": "P2",
+      "correct_direction": false,
+      "correct_cells": 0
+    },
+    "failed_cell_reasons": {
+      "classification_only": 4
+    }
+  },
+  {
+    "pair_id": "P3",
+    "original_pair": {
+      "pair_id": "P3",
+      "left": "2cc6c0212f28f431",
+      "right": "c9f11305f6c154b0",
+      "left_spec": "d3",
+      "right_spec": "h2",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "NO_SUPPORTED_DIAGNOSIS"
+      ],
+      "changed_paths": [
+        "/records/4/data/record_owner"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "2cc6c0212f28f431",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "c9f11305f6c154b0",
+        "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+        "classification_credit": true
+      }
+    },
+    "semantic_failed_endpoints": [],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "9098ec90cf5805ba5983",
+            "semantic_case_id": "2cc6c0212f28f431",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "03b6b10b378f9cabf9ad",
+            "semantic_case_id": "c9f11305f6c154b0",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "efab57b4b13e6634575f",
+            "semantic_case_id": "2cc6c0212f28f431",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "7070ea653a20143a4b73",
+            "semantic_case_id": "c9f11305f6c154b0",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "6fb266922a7b02950d52",
+            "semantic_case_id": "2cc6c0212f28f431",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "4790cba22695a16d557b",
+            "semantic_case_id": "c9f11305f6c154b0",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "8c654cb9763987a1a23e",
+            "semantic_case_id": "2cc6c0212f28f431",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "7b6432795cfffcb9e94c",
+            "semantic_case_id": "c9f11305f6c154b0",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      }
+    ],
+    "original_pair_pass": true,
+    "original_scorer_credit": {
+      "pair_id": "P3",
+      "correct_direction": true,
+      "correct_cells": 4
+    },
+    "failed_cell_reasons": {}
+  },
+  {
+    "pair_id": "P4",
+    "original_pair": {
+      "pair_id": "P4",
+      "left": "3e68347365eeadd0",
+      "right": "7c5505caaa71080c",
+      "left_spec": "d4",
+      "right_spec": "h3",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "NO_SUPPORTED_DIAGNOSIS"
+      ],
+      "changed_paths": [
+        "/records/4/data/publication_fields",
+        "/records/5/data/attempt_total_after",
+        "/records/6/data/captured_event_data/attempt_total_after"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "3e68347365eeadd0",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "7c5505caaa71080c",
+        "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+        "classification_credit": true
+      }
+    },
+    "semantic_failed_endpoints": [],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "2fb9f729a33cc72f84f8",
+            "semantic_case_id": "3e68347365eeadd0",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "a9e2b48f5ca97590eb36",
+            "semantic_case_id": "7c5505caaa71080c",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "8db4f84a6580b8ddb136",
+            "semantic_case_id": "3e68347365eeadd0",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "55c75e198bdd05f6e72e",
+            "semantic_case_id": "7c5505caaa71080c",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": false,
+            "ids_valid": false,
+            "classification_correct": false,
+            "failure_reason": "both"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "both"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "b547f52cb8ab959fd66d",
+            "semantic_case_id": "3e68347365eeadd0",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "585e99b2ccd578ab951c",
+            "semantic_case_id": "7c5505caaa71080c",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "87ef87c98a9cf2c8be0b",
+            "semantic_case_id": "3e68347365eeadd0",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "1050a69a5b5fb561c9d6",
+            "semantic_case_id": "7c5505caaa71080c",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      }
+    ],
+    "original_pair_pass": true,
+    "original_scorer_credit": {
+      "pair_id": "P4",
+      "correct_direction": true,
+      "correct_cells": 3
+    },
+    "failed_cell_reasons": {
+      "both": 1
+    }
+  },
+  {
+    "pair_id": "P5",
+    "original_pair": {
+      "pair_id": "P5",
+      "left": "17fed07978317a41",
+      "right": "040945b111a5b8f0",
+      "left_spec": "d5",
+      "right_spec": "u1",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "changed_paths": [
+        "/records/4/data/entries/1/operation_token",
+        "/records/4/data/key_column"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "17fed07978317a41",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "040945b111a5b8f0",
+        "gold_classification": "INSUFFICIENT_EVIDENCE",
+        "classification_credit": false
+      }
+    },
+    "semantic_failed_endpoints": [
+      "right"
+    ],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "d144075ee478be1901dd",
+            "semantic_case_id": "17fed07978317a41",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "f32c5c1e04377566028e",
+            "semantic_case_id": "040945b111a5b8f0",
+            "gold_classification": "INSUFFICIENT_EVIDENCE",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "ec62470db5cf0b429d91",
+            "semantic_case_id": "17fed07978317a41",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "4b558f8ee6d53bc048fe",
+            "semantic_case_id": "040945b111a5b8f0",
+            "gold_classification": "INSUFFICIENT_EVIDENCE",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "2c4d67989823b6b81a60",
+            "semantic_case_id": "17fed07978317a41",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "42ab0f011ddffa0f562c",
+            "semantic_case_id": "040945b111a5b8f0",
+            "gold_classification": "INSUFFICIENT_EVIDENCE",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": false,
+            "failure_reason": "classification_only"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "classification_only"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "c822e64a7227233aa28c",
+            "semantic_case_id": "17fed07978317a41",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "dc30870373ebc287fff2",
+            "semantic_case_id": "040945b111a5b8f0",
+            "gold_classification": "INSUFFICIENT_EVIDENCE",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": false,
+            "classification_correct": false,
+            "failure_reason": "both"
+          }
+        },
+        "failed_endpoints": [
+          "right"
+        ],
+        "both_correct": false,
+        "failure_reason": "both"
+      }
+    ],
+    "original_pair_pass": false,
+    "original_scorer_credit": {
+      "pair_id": "P5",
+      "correct_direction": false,
+      "correct_cells": 0
+    },
+    "failed_cell_reasons": {
+      "classification_only": 3,
+      "both": 1
+    }
+  },
+  {
+    "pair_id": "P6",
+    "original_pair": {
+      "pair_id": "P6",
+      "left": "f459ad2c60dbf8c8",
+      "right": "d7b9f5cf78d25fe3",
+      "left_spec": "d6",
+      "right_spec": "h4",
+      "classes": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "NO_SUPPORTED_DIAGNOSIS"
+      ],
+      "changed_paths": [
+        "/records/4/data/comparison_result",
+        "/records/4/data/implemented_comparator",
+        "/records/5/data/command_issued",
+        "/records/6/data/captured_event_data/command_issued"
+      ]
+    },
+    "semantic_endpoints": {
+      "left": {
+        "semantic_case_id": "f459ad2c60dbf8c8",
+        "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+        "classification_credit": true
+      },
+      "right": {
+        "semantic_case_id": "d7b9f5cf78d25fe3",
+        "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+        "classification_credit": true
+      }
+    },
+    "semantic_failed_endpoints": [],
+    "cells": [
+      {
+        "label_map": "A",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "d8425a18e6f717fb2fc4",
+            "semantic_case_id": "f459ad2c60dbf8c8",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "078e94b22fc9408ce3a8",
+            "semantic_case_id": "d7b9f5cf78d25fe3",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "A",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "41a843d28f16eee7e8fa",
+            "semantic_case_id": "f459ad2c60dbf8c8",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "c2200e9bc9faf91ad605",
+            "semantic_case_id": "d7b9f5cf78d25fe3",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 1,
+        "endpoints": {
+          "left": {
+            "render_id": "450b3496df2cb18a0b7c",
+            "semantic_case_id": "f459ad2c60dbf8c8",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "dc6bde331508c0bc15cb",
+            "semantic_case_id": "d7b9f5cf78d25fe3",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      },
+      {
+        "label_map": "B",
+        "presentation_order": 2,
+        "endpoints": {
+          "left": {
+            "render_id": "1fa86b8dd54b091e3ad3",
+            "semantic_case_id": "f459ad2c60dbf8c8",
+            "gold_classification": "SUPPORTED_CURRENT_DEFECT",
+            "selected_classification": "SUPPORTED_CURRENT_DEFECT",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          },
+          "right": {
+            "render_id": "f4c172330716885517ae",
+            "semantic_case_id": "d7b9f5cf78d25fe3",
+            "gold_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "selected_classification": "NO_SUPPORTED_DIAGNOSIS",
+            "schema_valid": true,
+            "ids_valid": true,
+            "classification_correct": true,
+            "failure_reason": "none"
+          }
+        },
+        "failed_endpoints": [],
+        "both_correct": true,
+        "failure_reason": "none"
+      }
+    ],
+    "original_pair_pass": true,
+    "original_scorer_credit": {
+      "pair_id": "P6",
+      "correct_direction": true,
+      "correct_cells": 4
+    },
+    "failed_cell_reasons": {}
+  }
+]

@@ -1,0 +1,2704 @@
+{
+  "status": "R2_DETERMINISTIC_POSTMORTEM_COMPLETE",
+  "status_meaning": "Mechanical descriptive decomposition completed; not a capability classification",
+  "original_primary_classification": "BLIND_DIAGNOSTIC_CAPABILITY_NOT_ESTABLISHED_V0",
+  "original_score_sha256": "961dbaec40add7673aba15328efe9fd3f8d8eae5cd676b7da0c9043dc52f1883",
+  "total": {
+    "renderings": 80,
+    "semantic_cases": 20,
+    "code_counts": {
+      "HEALTHY_FALSE_CURRENT": {
+        "renderings": 3,
+        "semantic_cases": 2
+      },
+      "INSUFFICIENT_AS_CURRENT": {
+        "renderings": 14,
+        "semantic_cases": 4
+      },
+      "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+        "renderings": 2,
+        "semantic_cases": 2
+      },
+      "HISTORICAL_AS_CURRENT": {
+        "renderings": 10,
+        "semantic_cases": 3
+      },
+      "HISTORICAL_OTHER_MISCLASSIFICATION": {
+        "renderings": 1,
+        "semantic_cases": 1
+      },
+      "INVALID_EVIDENCE_AS_CURRENT": {
+        "renderings": 8,
+        "semantic_cases": 3
+      },
+      "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+        "renderings": 2,
+        "semantic_cases": 2
+      },
+      "CURRENT_DEFECT_MISSED": {
+        "renderings": 0,
+        "semantic_cases": 0
+      },
+      "COMPONENT_MISMATCH": {
+        "renderings": 1,
+        "semantic_cases": 1
+      },
+      "STRUCTURED_WITNESS_MISMATCH": {
+        "renderings": 24,
+        "semantic_cases": 6
+      },
+      "DECISIVE_FIELD_MISMATCH": {
+        "renderings": 24,
+        "semantic_cases": 6
+      },
+      "CAUSE_WITNESS_MISMATCH": {
+        "renderings": 0,
+        "semantic_cases": 0
+      },
+      "EFFECT_WITNESS_MISMATCH": {
+        "renderings": 4,
+        "semantic_cases": 2
+      },
+      "CONTRACT_WITNESS_MISMATCH": {
+        "renderings": 0,
+        "semantic_cases": 0
+      },
+      "DECISIVE_EVIDENCE_MISMATCH": {
+        "renderings": 12,
+        "semantic_cases": 4
+      },
+      "OBSERVED_VALUE_MISMATCH": {
+        "renderings": 24,
+        "semantic_cases": 6
+      },
+      "REQUIRED_VALUE_MISMATCH": {
+        "renderings": 24,
+        "semantic_cases": 6
+      },
+      "MISSING_REQUIRED_EVIDENCE": {
+        "renderings": 77,
+        "semantic_cases": 20
+      },
+      "INVENTED_ID": {
+        "renderings": 2,
+        "semantic_cases": 2
+      },
+      "EVIDENCE_GROUNDING_PASS": {
+        "renderings": 2,
+        "semantic_cases": 1
+      },
+      "STRICT_JSON_FAILURE": {
+        "renderings": 0,
+        "semantic_cases": 0
+      },
+      "SCHEMA_FAILURE": {
+        "renderings": 3,
+        "semantic_cases": 3
+      },
+      "CLASSIFICATION_SCHEMA_PASS": {
+        "renderings": 77,
+        "semantic_cases": 20
+      },
+      "LABEL_MAP_CLASS_DISAGREEMENT": {
+        "renderings": 18,
+        "semantic_cases": 7
+      },
+      "ORDER_CLASS_DISAGREEMENT": {
+        "renderings": 14,
+        "semantic_cases": 6
+      },
+      "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+        "renderings": 36,
+        "semantic_cases": 9
+      }
+    },
+    "selected_classes": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 59,
+        "semantic_cases_with_any": 18
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 17,
+        "semantic_cases_with_any": 8
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 2,
+        "semantic_cases_with_any": 2
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 2,
+        "semantic_cases_with_any": 1
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    },
+    "original_classification_renderings": 40,
+    "original_classification_semantics": 9,
+    "original_grounded_renderings": 2,
+    "original_grounded_semantics": 0,
+    "localization": {
+      "renderings": 24,
+      "semantic_cases": 6,
+      "exact": {
+        "affected_component_exact": {
+          "renderings": 23,
+          "semantic_cases_any": 6,
+          "semantic_cases_all_four": 5
+        },
+        "contract_evidence_id": {
+          "renderings": 24,
+          "semantic_cases_any": 6,
+          "semantic_cases_all_four": 6
+        },
+        "cause_evidence_id": {
+          "renderings": 24,
+          "semantic_cases_any": 6,
+          "semantic_cases_all_four": 6
+        },
+        "effect_evidence_id": {
+          "renderings": 20,
+          "semantic_cases_any": 6,
+          "semantic_cases_all_four": 4
+        },
+        "decisive_evidence_id": {
+          "renderings": 12,
+          "semantic_cases_any": 4,
+          "semantic_cases_all_four": 2
+        },
+        "decisive_field": {
+          "renderings": 0,
+          "semantic_cases_any": 0,
+          "semantic_cases_all_four": 0
+        },
+        "observed_value": {
+          "renderings": 0,
+          "semantic_cases_any": 0,
+          "semantic_cases_all_four": 0
+        },
+        "required_value": {
+          "renderings": 0,
+          "semantic_cases_any": 0,
+          "semantic_cases_all_four": 0
+        },
+        "all_required_evidence_cited": {
+          "renderings": 0,
+          "semantic_cases_any": 0,
+          "semantic_cases_all_four": 0
+        },
+        "structured_witness_exact": {
+          "renderings": 0,
+          "semantic_cases_any": 0,
+          "semantic_cases_all_four": 0
+        }
+      },
+      "field_mismatch_count_distribution": {
+        "3": 10,
+        "4": 12,
+        "5": 2
+      }
+    },
+    "representation": {
+      "label_map_disagreements": 9,
+      "order_disagreements": 7,
+      "contrasts_each_factor": 40,
+      "inconsistent_semantic_worlds": 9
+    }
+  },
+  "by_gold_class": {
+    "SUPPORTED_CURRENT_DEFECT": {
+      "renderings": 24,
+      "semantic_cases": 6,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 2
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 12,
+          "semantic_cases": 4
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 24,
+          "semantic_cases": 6
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 24,
+          "semantic_cases_with_any": 6
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 24,
+      "original_classification_semantics": 6,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 24,
+        "semantic_cases": 6,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 23,
+            "semantic_cases_any": 6,
+            "semantic_cases_all_four": 5
+          },
+          "contract_evidence_id": {
+            "renderings": 24,
+            "semantic_cases_any": 6,
+            "semantic_cases_all_four": 6
+          },
+          "cause_evidence_id": {
+            "renderings": 24,
+            "semantic_cases_any": 6,
+            "semantic_cases_all_four": 6
+          },
+          "effect_evidence_id": {
+            "renderings": 20,
+            "semantic_cases_any": 6,
+            "semantic_cases_all_four": 4
+          },
+          "decisive_evidence_id": {
+            "renderings": 12,
+            "semantic_cases_any": 4,
+            "semantic_cases_all_four": 2
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "3": 10,
+          "4": 12,
+          "5": 2
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 0,
+        "order_disagreements": 0,
+        "contrasts_each_factor": 12,
+        "inconsistent_semantic_worlds": 0
+      }
+    },
+    "NO_SUPPORTED_DIAGNOSIS": {
+      "renderings": 16,
+      "semantic_cases": 4,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 3,
+          "semantic_cases": 2
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 16,
+          "semantic_cases": 4
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 15,
+          "semantic_cases": 4
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 6,
+          "semantic_cases": 2
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 8,
+          "semantic_cases": 2
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 3,
+          "semantic_cases_with_any": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 13,
+          "semantic_cases_with_any": 4
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 13,
+      "original_classification_semantics": 3,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 0,
+        "semantic_cases": 0,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "contract_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "cause_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "effect_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {}
+      },
+      "representation": {
+        "label_map_disagreements": 3,
+        "order_disagreements": 1,
+        "contrasts_each_factor": 8,
+        "inconsistent_semantic_worlds": 2
+      }
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "renderings": 16,
+      "semantic_cases": 4,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 14,
+          "semantic_cases": 4
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 2,
+          "semantic_cases": 2
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 16,
+          "semantic_cases": 4
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 16,
+          "semantic_cases": 4
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 2
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 2
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 12,
+          "semantic_cases": 3
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 14,
+          "semantic_cases_with_any": 4
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 0,
+      "original_classification_semantics": 0,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 0,
+        "semantic_cases": 0,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "contract_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "cause_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "effect_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {}
+      },
+      "representation": {
+        "label_map_disagreements": 2,
+        "order_disagreements": 2,
+        "contrasts_each_factor": 8,
+        "inconsistent_semantic_worlds": 3
+      }
+    },
+    "HISTORICAL_DEFECT_NOT_CURRENT": {
+      "renderings": 12,
+      "semantic_cases": 3,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 10,
+          "semantic_cases": 3
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "INVENTED_ID": {
+          "renderings": 2,
+          "semantic_cases": 2
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 11,
+          "semantic_cases": 3
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 8,
+          "semantic_cases": 2
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 10,
+          "semantic_cases_with_any": 3
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 1,
+      "original_classification_semantics": 0,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 0,
+        "semantic_cases": 0,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "contract_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "cause_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "effect_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {}
+      },
+      "representation": {
+        "label_map_disagreements": 2,
+        "order_disagreements": 1,
+        "contrasts_each_factor": 6,
+        "inconsistent_semantic_worlds": 2
+      }
+    },
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+      "renderings": 12,
+      "semantic_cases": 3,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 8,
+          "semantic_cases": 3
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 2,
+          "semantic_cases": 2
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 9,
+          "semantic_cases": 3
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 11,
+          "semantic_cases": 3
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 2
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 6,
+          "semantic_cases": 2
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 8,
+          "semantic_cases": 2
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 8,
+          "semantic_cases_with_any": 3
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 2,
+          "semantic_cases_with_any": 2
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 2,
+          "semantic_cases_with_any": 1
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 2,
+      "original_classification_semantics": 0,
+      "original_grounded_renderings": 2,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 0,
+        "semantic_cases": 0,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "contract_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "cause_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "effect_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {}
+      },
+      "representation": {
+        "label_map_disagreements": 2,
+        "order_disagreements": 3,
+        "contrasts_each_factor": 6,
+        "inconsistent_semantic_worlds": 2
+      }
+    }
+  },
+  "by_family": {
+    "version_selection": {
+      "renderings": 20,
+      "semantic_cases": 5,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 3,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 3,
+          "semantic_cases": 1
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 19,
+          "semantic_cases": 5
+        },
+        "INVENTED_ID": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 2,
+          "semantic_cases": 2
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 18,
+          "semantic_cases": 5
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 8,
+          "semantic_cases": 3
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 2
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 16,
+          "semantic_cases": 4
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 16,
+          "semantic_cases_with_any": 5
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 3,
+          "semantic_cases_with_any": 2
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 6,
+      "original_classification_semantics": 1,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 2,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "3": 2,
+          "4": 2
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 4,
+        "order_disagreements": 2,
+        "contrasts_each_factor": 10,
+        "inconsistent_semantic_worlds": 4
+      }
+    },
+    "authority_precedence": {
+      "renderings": 8,
+      "semantic_cases": 2,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 8,
+          "semantic_cases": 2
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 8,
+          "semantic_cases": 2
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 8,
+          "semantic_cases_with_any": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 4,
+      "original_classification_semantics": 1,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_evidence_id": {
+            "renderings": 2,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "3": 2,
+          "4": 2
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 0,
+        "order_disagreements": 0,
+        "contrasts_each_factor": 4,
+        "inconsistent_semantic_worlds": 0
+      }
+    },
+    "entity_binding": {
+      "renderings": 12,
+      "semantic_cases": 3,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 8,
+          "semantic_cases_with_any": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 4,
+          "semantic_cases_with_any": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 8,
+      "original_classification_semantics": 2,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "3": 4
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 0,
+        "order_disagreements": 0,
+        "contrasts_each_factor": 6,
+        "inconsistent_semantic_worlds": 0
+      }
+    },
+    "publication_update": {
+      "renderings": 16,
+      "semantic_cases": 4,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 3,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 14,
+          "semantic_cases": 4
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 15,
+          "semantic_cases": 4
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 6,
+          "semantic_cases": 3
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 8,
+          "semantic_cases": 3
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 12,
+          "semantic_cases": 3
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 9,
+          "semantic_cases_with_any": 4
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 5,
+          "semantic_cases_with_any": 3
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 2,
+          "semantic_cases_with_any": 1
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 9,
+      "original_classification_semantics": 2,
+      "original_grounded_renderings": 2,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_evidence_id": {
+            "renderings": 2,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "3": 2,
+          "4": 2
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 3,
+        "order_disagreements": 4,
+        "contrasts_each_factor": 8,
+        "inconsistent_semantic_worlds": 3
+      }
+    },
+    "operation_idempotence": {
+      "renderings": 12,
+      "semantic_cases": 3,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "INVENTED_ID": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 8,
+          "semantic_cases": 2
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 10,
+          "semantic_cases_with_any": 3
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 1,
+          "semantic_cases_with_any": 1
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 5,
+      "original_classification_semantics": 1,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "4": 4
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 2,
+        "order_disagreements": 1,
+        "contrasts_each_factor": 6,
+        "inconsistent_semantic_worlds": 2
+      }
+    },
+    "boundary_comparison": {
+      "renderings": 12,
+      "semantic_cases": 3,
+      "code_counts": {
+        "HEALTHY_FALSE_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INSUFFICIENT_AS_CURRENT": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "HISTORICAL_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_AS_CURRENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CURRENT_DEFECT_MISSED": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "COMPONENT_MISMATCH": {
+          "renderings": 1,
+          "semantic_cases": 1
+        },
+        "STRUCTURED_WITNESS_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "DECISIVE_FIELD_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "CAUSE_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EFFECT_WITNESS_MISMATCH": {
+          "renderings": 2,
+          "semantic_cases": 1
+        },
+        "CONTRACT_WITNESS_MISMATCH": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "DECISIVE_EVIDENCE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "OBSERVED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "REQUIRED_VALUE_MISMATCH": {
+          "renderings": 4,
+          "semantic_cases": 1
+        },
+        "MISSING_REQUIRED_EVIDENCE": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "INVENTED_ID": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "EVIDENCE_GROUNDING_PASS": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "STRICT_JSON_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SCHEMA_FAILURE": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "CLASSIFICATION_SCHEMA_PASS": {
+          "renderings": 12,
+          "semantic_cases": 3
+        },
+        "LABEL_MAP_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "ORDER_CLASS_DISAGREEMENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        },
+        "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+          "renderings": 0,
+          "semantic_cases": 0
+        }
+      },
+      "selected_classes": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "renderings": 8,
+          "semantic_cases_with_any": 2
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "renderings": 4,
+          "semantic_cases_with_any": 1
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        },
+        "null": {
+          "renderings": 0,
+          "semantic_cases_with_any": 0
+        }
+      },
+      "original_classification_renderings": 8,
+      "original_classification_semantics": 2,
+      "original_grounded_renderings": 0,
+      "original_grounded_semantics": 0,
+      "localization": {
+        "renderings": 4,
+        "semantic_cases": 1,
+        "exact": {
+          "affected_component_exact": {
+            "renderings": 3,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 0
+          },
+          "contract_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "cause_evidence_id": {
+            "renderings": 4,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 1
+          },
+          "effect_evidence_id": {
+            "renderings": 2,
+            "semantic_cases_any": 1,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_evidence_id": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "decisive_field": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "observed_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "required_value": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "all_required_evidence_cited": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          },
+          "structured_witness_exact": {
+            "renderings": 0,
+            "semantic_cases_any": 0,
+            "semantic_cases_all_four": 0
+          }
+        },
+        "field_mismatch_count_distribution": {
+          "4": 2,
+          "5": 2
+        }
+      },
+      "representation": {
+        "label_map_disagreements": 0,
+        "order_disagreements": 0,
+        "contrasts_each_factor": 6,
+        "inconsistent_semantic_worlds": 0
+      }
+    }
+  },
+  "confusion": {
+    "SUPPORTED_CURRENT_DEFECT": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 24,
+        "semantic_cases_with_any": 6
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    },
+    "NO_SUPPORTED_DIAGNOSIS": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 3,
+        "semantic_cases_with_any": 2
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 13,
+        "semantic_cases_with_any": 4
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 14,
+        "semantic_cases_with_any": 4
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 1,
+        "semantic_cases_with_any": 1
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 1,
+        "semantic_cases_with_any": 1
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    },
+    "HISTORICAL_DEFECT_NOT_CURRENT": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 10,
+        "semantic_cases_with_any": 3
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 1,
+        "semantic_cases_with_any": 1
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 1,
+        "semantic_cases_with_any": 1
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    },
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "renderings": 8,
+        "semantic_cases_with_any": 3
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "renderings": 2,
+        "semantic_cases_with_any": 2
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "renderings": 2,
+        "semantic_cases_with_any": 1
+      },
+      "null": {
+        "renderings": 0,
+        "semantic_cases_with_any": 0
+      }
+    }
+  },
+  "evidence": {
+    "missing_required_renderings": 77,
+    "missing_required_semantic_cases": 20,
+    "total_missing_required_id_occurrences": 121,
+    "missing_count_distribution": {
+      "0": 3,
+      "1": 46,
+      "2": 19,
+      "3": 11,
+      "4": 1
+    },
+    "invented_id_renderings": 2,
+    "invented_id_semantic_cases": 2,
+    "invented_id_rendering_pairs": 2,
+    "distinct_invented_ids": [
+      "z7c07a05ecc99376d",
+      "zef9e7c395c2dc489"
+    ],
+    "invented_textual_occurrences": 4,
+    "original_bad_or_invented_id_renderings": 3
+  },
+  "original_mandatory_gates": {
+    "semantic_classification_min": false,
+    "current_defect_classification_min": true,
+    "current_defect_localization_min": false,
+    "healthy_semantic_avoid_current": false,
+    "healthy_rendering_current_false_positives_max": false,
+    "historical_semantic_avoid_current": false,
+    "historical_rendering_current_false_positives_max": false,
+    "insufficient_classification_min": false,
+    "invalid_classification_min": false,
+    "counterfactual_pairs_min": false,
+    "representation_consistent_min": false,
+    "evidence_grounded_semantics_min": false,
+    "invented_ids_max": false
+  },
+  "original_measured": {
+    "semantic_classification_min": 9,
+    "current_defect_classification_min": 6,
+    "current_defect_localization_min": 0,
+    "healthy_semantic_avoid_current": 2,
+    "healthy_rendering_current_false_positives_max": 3,
+    "historical_semantic_avoid_current": 0,
+    "historical_rendering_current_false_positives_max": 10,
+    "insufficient_classification_min": 0,
+    "invalid_classification_min": 0,
+    "counterfactual_pairs_min": 3,
+    "representation_consistent_min": 11,
+    "evidence_grounded_semantics_min": 0,
+    "invented_ids_max": 3
+  },
+  "original_factor_accuracy": {
+    "labels_A": {
+      "correct": 19,
+      "total": 40
+    },
+    "labels_B": {
+      "correct": 21,
+      "total": 40
+    },
+    "order_1": {
+      "correct": 21,
+      "total": 40
+    },
+    "order_2": {
+      "correct": 19,
+      "total": 40
+    }
+  },
+  "matched_pairs": {
+    "passed": 3,
+    "total": 6
+  },
+  "no_new_execution": {
+    "qwen_calls": 0,
+    "other_model_calls": 0,
+    "horus_world_executions": 0,
+    "receipts": 0,
+    "memory_writes": 0,
+    "policy_changes": 0,
+    "training": 0,
+    "improvement_proposals": 0,
+    "hidden_semantic_grader_calls": 0
+  },
+  "counting_notes": {
+    "scientific_units": "20 designed semantic cases; four correlated renderings each; no inferential statistics",
+    "authoritative_credits": "Copy all original rendering, semantic and matched-pair credits from scores.json. Never call score_benchmark or score_rendering. No upgrade/downgrade.",
+    "selected_classification": "Original recognized selected enum or null from scores.json; null is a wrong selected class for classification-layer rules. Healthy non-current errors are not assigned a new unauthorized code.",
+    "invalid_or_missing_structure": "Strict parse failure/non-object gives absent structured fields; missing witness/component values mismatch for gold D. Missing/non-list evidence_ids gives empty returned evidence set; keep only string elements in lists. All original credit fields remain unchanged.",
+    "component_exact": "Use original exact-list equality, not sorting/deduplication. Frozen gold current component list is singleton, and schema maxItems is 1.",
+    "witness_alternatives": "mechanism_witness plus mechanism_alternatives only; field marginals accept any alternative for that field; full witness must match one entire alternative. Scalars require identical Python type as in original scorer; bool is not int, int is not float.",
+    "invented_vs_original_ids": "INVENTED_ID means nonexistent opaque ID only. Original ids_valid and original invented_ids are copied separately because frozen scorer also flags wrong-category IDs and stops ID-slot validation after schema failure. No conflation of schema failure with an invented ID.",
+    "opaque_id_scan": "Use original scorer all_strings traversal semantics and regex. Allowed IDs are whole-string z[0-9a-f]{16} strings anywhere in rendered JSON, including keys. Returned occurrences are word-boundary matches in JSON string keys/values; record JSON Pointer plus key/value location kind and character span. No meaning of prose is interpreted.",
+    "schema": "Use published schema_valid and error paths, confirm parse/validation using original strict parser and jsonschema 3.2.0 with frozen schema, no schema changes.",
+    "code_counts": "Codes overlap and must not be summed as distinct errors. Rendering count = rows bearing code. Semantic count = distinct worlds with at least one row bearing code, not >=3/4. Native representation counts separately count contrasts/worlds.",
+    "classification_behavior": "For each gold/selected class cell report rendering count and distinct semantic cases with any such selection. A world may appear in multiple selected columns. Separately copy original semantic classification credit.",
+    "localization_field_counts": "Report exact fields in the 24 gold-D renderings, plus semantic worlds with any exact and with all four exact. These are descriptive field counts, not localization credit.",
+    "evidence_counts": "Missing-ID total counts one missing ID per rendering (gold set difference). Invented-ID total counts distinct bad IDs per rendering; also report globally distinct IDs and textual occurrence count.",
+    "pair_failure": "Per cell retain both endpoints, selected and gold classes, frozen credit. Wrong selected label = classification failure. schema_valid false OR ids_valid false = validity failure. Report classification_only / validity_only / both / none per endpoint and union per failed cell. A schema-invalid original ids_valid=false is not an independently observed ID defect. Semantic failed endpoint means original semantic classification_correct=false; failed-cell contributors may include endpoints that pass semantically. Copy original pair result and correct_cells.",
+    "provenance": "Only tracked public files at the R2 published base, plus this analysis codebook/implementation. No private paths, envelopes, native reasoning or inference APIs. Source records are public rendered cases.",
+    "qualitative_boundary": "Do not display/read selected example prose for qualitative interpretation until deterministic outputs and hashes are committed. Numeric analysis scans prose only for the exact opaque-ID regex, without semantic interpretation."
+  }
+}
