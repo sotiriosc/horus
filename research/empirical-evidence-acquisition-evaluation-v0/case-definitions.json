@@ -1,0 +1,1840 @@
+{
+  "arms": [
+    "C",
+    "E"
+  ],
+  "canonical_order": [
+    "ADVANCE",
+    "HOLD",
+    "RETREAT"
+  ],
+  "cases": {
+    "E1": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": {
+        "consequence": 1,
+        "next_state": 1
+      },
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": "ADVANCE",
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": "AFTER_THREE",
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "E2": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": "RETREAT",
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "E3": {
+      "C_boundary_outcome": {
+        "consequence": -1,
+        "next_state": 1
+      },
+      "E_target_outcome": {
+        "consequence": -1,
+        "next_state": 1
+      },
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": "ADVANCE",
+      "fresh_recurrence_consequences": [
+        -1,
+        0,
+        -1,
+        0
+      ],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "E4": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": {
+        "consequence": 0,
+        "next_state": 2
+      },
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": "ADVANCE",
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": "AFTER_ELIGIBLE",
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "E5": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "expected_E_target": "ADVANCE",
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "E6": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 2
+      },
+      "E_target_outcome": {
+        "consequence": 1,
+        "next_state": 2
+      },
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": "ADVANCE",
+      "fresh_recurrence_consequences": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "primary_exclusion": null,
+      "registered_empirical_continuation": "HOLD",
+      "restart": "AFTER_THREE",
+      "setup": [],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "N1": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "POSITIVE_RECENT_AND_CUMULATIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N10": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 2
+      },
+      "E_target_outcome": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "STATE_CHANGE_BREAKS_SUFFIX",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "N11": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "ACTION_CHANGE_BREAKS_SUFFIX",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N12": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "ONLY_THREE_REPETITIONS",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N2": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "CUMULATIVE_POSITIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N3": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "RECENT_POSITIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N4": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "BENIGN_STATIONARY_VARIABLE_POSITIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N5": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "ISOLATED_ANOMALY_POSITIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N6": {
+      "C_boundary_outcome": {
+        "consequence": -1,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "POSSIBLE_REGIME_CHANGE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N7": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "NO_UNSEEN_ALTERNATIVE",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N8": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "UNRESOLVED_ALTERNATIVE_ONLY",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "N9": {
+      "C_boundary_outcome": {
+        "consequence": 0,
+        "next_state": 1
+      },
+      "E_target_outcome": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "expected_E_target": null,
+      "fresh_recurrence_consequences": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "primary_exclusion": "ESTABLISHED_POSITIVE_CEILING",
+      "registered_empirical_continuation": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    }
+  },
+  "control_cases": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5",
+    "N6",
+    "N7",
+    "N8",
+    "N9",
+    "N10",
+    "N11",
+    "N12"
+  ],
+  "eligible_cases": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "frozen_candidate_sha256": "fcef478a02beb69a1d29988c5ce12929ad2ba077591131e0dcd114e7ccab99b4",
+  "model_calls_allowed": 0,
+  "parent_proposal_commit": "e2d3dcce6a292d32037aca769578dfb53833cb57",
+  "schema": "prospective_phase4_case_definitions_v0",
+  "world_rule": "For each case, exact pre-state/action visit index selects the matching frozen world_outcomes entry; no unspecified action is executed."
+}
