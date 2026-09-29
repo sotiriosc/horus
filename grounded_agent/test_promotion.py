@@ -39,14 +39,15 @@ def row(index, state=0, action="HOLD", next_state=None, assessments=None):
 
 
 class PromotionTests(TestCase):
-    def test_frozen_source_and_pre_activation_rollback(self):
+    def test_frozen_source_and_active_selector(self):
         for module, expected in ((candidate, FROZEN_CANDIDATE_SHA256),
                 (frozen, FROZEN_CONTROLLED_WORKER_SHA256),
                 (base, FROZEN_PROTECTED_EXECUTION_SHA256)):
             self.assertEqual(sha256(Path(module.__file__).read_bytes()).hexdigest(), expected)
         self.assertEqual(candidate.THRESHOLD, 3)
         self.assertEqual(ACTIONS, ("ADVANCE", "HOLD", "RETREAT"))
-        self.assertIs(decide, previous_incumbent_decide)
+        self.assertIs(decide, promoted_decide)
+        self.assertIsNot(decide, previous_incumbent_decide)
 
     def test_exact_candidate_eligibility_and_precedence(self):
         suffix = dict(count=3, relation=[0, "HOLD"])
