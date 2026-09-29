@@ -154,7 +154,8 @@ def run_audit(private, arm, pair):
                 state=d['state'], assessments={a: visible_assessment(v) for a, v in
                     d['grounded_assessments_before'].items()},
                 admissible_actions=d['admissible_actions'], action=d['selected_action'],
-                decision_source=d['decision_source'], parse_status=d['action_parse_status'],
+                decision_source=d['decision_source'], audit_source=step['audit_source'],
+                parse_status=d['action_parse_status'],
                 selected_kind=selected['kind'], selected_relation_type=selected['relation_type'],
                 consequence=d['realized']['consequence'], next_state=d['realized']['next_state'],
                 grounded_change=d['grounded_state_change'],
