@@ -1,0 +1,39 @@
+{
+  "B_changed_matched_orders": 3,
+  "action_counts": {
+    "ADVANCE": 7,
+    "HOLD": 12
+  },
+  "behavior_gate": "PASS",
+  "checks": {
+    "A_grounded_plus_one_swap_directional_all_orders": true,
+    "A_order_stability": true,
+    "B_established_unseen_status_swap_changes_at_least_two_orders": true,
+    "all_strict_final_actions": true,
+    "at_least_two_action_names": true,
+    "frozen_request_digests": true,
+    "no_universal_HOLD": true
+  },
+  "classification": "QWEN_BOUNDED_THINKING_SEMANTIC_GATE_PASSED",
+  "established_negative_selections": [],
+  "frozen_latency_ceiling_seconds": 15,
+  "latency_gate": "PASS",
+  "median_warm_action_wall_seconds": 3.8046307759941556,
+  "read_only_verdict": {
+    "forbidden_artifacts": [],
+    "memory_write_count": 0,
+    "new_receipt_count": 0,
+    "protected_controller_execution_count": 0,
+    "status": "PASS",
+    "world_execution_count": 0
+  },
+  "stage_b_authorized": false,
+  "unresolved_selections": [
+    "C2_O1"
+  ],
+  "unseen_selections": [
+    "D_O0",
+    "D_O1",
+    "D_O2"
+  ]
+}
