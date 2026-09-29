@@ -1,0 +1,305 @@
+{
+  "version": "R2-postmortem-v0",
+  "role": "Retrospective descriptive codebook frozen before generating postmortem aggregates; published R2 summary results are already known. Not a blind preregistration or a new scorer.",
+  "base_commit": "f4becaf11220f853a87e741fa84009bd0de715b2",
+  "completion_status": "R2_DETERMINISTIC_POSTMORTEM_COMPLETE",
+  "classes": [
+    "SUPPORTED_CURRENT_DEFECT",
+    "NO_SUPPORTED_DIAGNOSIS",
+    "INSUFFICIENT_EVIDENCE",
+    "HISTORICAL_DEFECT_NOT_CURRENT",
+    "INVALID_OR_CONTRADICTORY_EVIDENCE"
+  ],
+  "codes": {
+    "HEALTHY_FALSE_CURRENT": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "NO_SUPPORTED_DIAGNOSIS",
+        "selected": "== D"
+      },
+      "kind": "failure"
+    },
+    "INSUFFICIENT_AS_CURRENT": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "INSUFFICIENT_EVIDENCE",
+        "selected": "== D"
+      },
+      "kind": "failure"
+    },
+    "INSUFFICIENT_OTHER_MISCLASSIFICATION": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "INSUFFICIENT_EVIDENCE",
+        "selected": "not in [gold, D]"
+      },
+      "kind": "failure"
+    },
+    "HISTORICAL_AS_CURRENT": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "selected": "== D"
+      },
+      "kind": "failure"
+    },
+    "HISTORICAL_OTHER_MISCLASSIFICATION": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "selected": "not in [gold, D]"
+      },
+      "kind": "failure"
+    },
+    "INVALID_EVIDENCE_AS_CURRENT": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "selected": "== D"
+      },
+      "kind": "failure"
+    },
+    "INVALID_EVIDENCE_OTHER_MISCLASSIFICATION": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "selected": "not in [gold, D]"
+      },
+      "kind": "failure"
+    },
+    "CURRENT_DEFECT_MISSED": {
+      "layer": "classification",
+      "native_unit": "rendering",
+      "predicate": {
+        "gold": "SUPPORTED_CURRENT_DEFECT",
+        "selected": "!= D"
+      },
+      "kind": "failure"
+    },
+    "COMPONENT_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "test": "returned affected_component_ids != frozen gold affected_components using the original exact-list comparison; no normalization"
+      },
+      "kind": "failure"
+    },
+    "STRUCTURED_WITNESS_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "test": "No single frozen accepted witness has every field present with identical Python type and value; description is unscored; no cross-alternative field assembly"
+      },
+      "kind": "failure"
+    },
+    "DECISIVE_FIELD_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "decisive_field",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "CAUSE_WITNESS_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "cause_evidence_id",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "EFFECT_WITNESS_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "effect_evidence_id",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "CONTRACT_WITNESS_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "contract_evidence_id",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "DECISIVE_EVIDENCE_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "decisive_evidence_id",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "OBSERVED_VALUE_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "observed_value",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "REQUIRED_VALUE_MISMATCH": {
+      "layer": "localization",
+      "native_unit": "rendering",
+      "predicate": {
+        "applies": "gold == D",
+        "field": "required_value",
+        "test": "Returned field missing or does not match that field in ANY frozen accepted witness by identical Python type and value"
+      },
+      "kind": "failure"
+    },
+    "MISSING_REQUIRED_EVIDENCE": {
+      "layer": "evidence",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "frozen required_evidence is not a subset of returned string evidence_ids",
+        "record": "exact sorted missing IDs"
+      },
+      "kind": "failure"
+    },
+    "INVENTED_ID": {
+      "layer": "evidence",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "a returned opaque ID matching word-boundary z[0-9a-f]{16} is absent from the rendered case allowed opaque-ID set",
+        "record": "exact sorted IDs; every deterministically found JSON-pointer value/key location"
+      },
+      "kind": "failure"
+    },
+    "EVIDENCE_GROUNDING_PASS": {
+      "layer": "evidence",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "original scores.json rendering evidence_grounded == true"
+      },
+      "kind": "pass_marker"
+    },
+    "STRICT_JSON_FAILURE": {
+      "layer": "output_validity",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "original scorer.strict_json rejects the raw final; no stripping/extraction/repair"
+      },
+      "kind": "failure"
+    },
+    "SCHEMA_FAILURE": {
+      "layer": "output_validity",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "strict parse succeeds and original schema_valid == false",
+        "record": "validator keyword and instance/schema paths copied exactly from published R2 secondary diagnostics"
+      },
+      "kind": "failure"
+    },
+    "CLASSIFICATION_SCHEMA_PASS": {
+      "layer": "output_validity",
+      "native_unit": "rendering",
+      "predicate": {
+        "test": "original schema_valid == true and original selected classification in frozen class enum"
+      },
+      "kind": "pass_marker"
+    },
+    "LABEL_MAP_CLASS_DISAGREEMENT": {
+      "layer": "representation",
+      "native_unit": "contrast",
+      "predicate": {
+        "test": "same case and order: frozen selected class A != B",
+        "rendering_attribution": "attach to both participating renderings"
+      },
+      "kind": "failure"
+    },
+    "ORDER_CLASS_DISAGREEMENT": {
+      "layer": "representation",
+      "native_unit": "contrast",
+      "predicate": {
+        "test": "same case and label: frozen selected class order 1 != order 2",
+        "rendering_attribution": "attach to both participating renderings"
+      },
+      "kind": "failure"
+    },
+    "SEMANTIC_REPRESENTATION_INCONSISTENT": {
+      "layer": "representation",
+      "native_unit": "semantic_case",
+      "predicate": {
+        "test": "original scores.json semantic consistent == false",
+        "rendering_attribution": "attach to all four renderings; native count remains worlds"
+      },
+      "kind": "failure"
+    }
+  },
+  "conventions": {
+    "scientific_units": "20 designed semantic cases; four correlated renderings each; no inferential statistics",
+    "authoritative_credits": "Copy all original rendering, semantic and matched-pair credits from scores.json. Never call score_benchmark or score_rendering. No upgrade/downgrade.",
+    "selected_classification": "Original recognized selected enum or null from scores.json; null is a wrong selected class for classification-layer rules. Healthy non-current errors are not assigned a new unauthorized code.",
+    "invalid_or_missing_structure": "Strict parse failure/non-object gives absent structured fields; missing witness/component values mismatch for gold D. Missing/non-list evidence_ids gives empty returned evidence set; keep only string elements in lists. All original credit fields remain unchanged.",
+    "component_exact": "Use original exact-list equality, not sorting/deduplication. Frozen gold current component list is singleton, and schema maxItems is 1.",
+    "witness_alternatives": "mechanism_witness plus mechanism_alternatives only; field marginals accept any alternative for that field; full witness must match one entire alternative. Scalars require identical Python type as in original scorer; bool is not int, int is not float.",
+    "invented_vs_original_ids": "INVENTED_ID means nonexistent opaque ID only. Original ids_valid and original invented_ids are copied separately because frozen scorer also flags wrong-category IDs and stops ID-slot validation after schema failure. No conflation of schema failure with an invented ID.",
+    "opaque_id_scan": "Use original scorer all_strings traversal semantics and regex. Allowed IDs are whole-string z[0-9a-f]{16} strings anywhere in rendered JSON, including keys. Returned occurrences are word-boundary matches in JSON string keys/values; record JSON Pointer plus key/value location kind and character span. No meaning of prose is interpreted.",
+    "schema": "Use published schema_valid and error paths, confirm parse/validation using original strict parser and jsonschema 3.2.0 with frozen schema, no schema changes.",
+    "code_counts": "Codes overlap and must not be summed as distinct errors. Rendering count = rows bearing code. Semantic count = distinct worlds with at least one row bearing code, not >=3/4. Native representation counts separately count contrasts/worlds.",
+    "classification_behavior": "For each gold/selected class cell report rendering count and distinct semantic cases with any such selection. A world may appear in multiple selected columns. Separately copy original semantic classification credit.",
+    "localization_field_counts": "Report exact fields in the 24 gold-D renderings, plus semantic worlds with any exact and with all four exact. These are descriptive field counts, not localization credit.",
+    "evidence_counts": "Missing-ID total counts one missing ID per rendering (gold set difference). Invented-ID total counts distinct bad IDs per rendering; also report globally distinct IDs and textual occurrence count.",
+    "pair_failure": "Per cell retain both endpoints, selected and gold classes, frozen credit. Wrong selected label = classification failure. schema_valid false OR ids_valid false = validity failure. Report classification_only / validity_only / both / none per endpoint and union per failed cell. A schema-invalid original ids_valid=false is not an independently observed ID defect. Semantic failed endpoint means original semantic classification_correct=false; failed-cell contributors may include endpoints that pass semantically. Copy original pair result and correct_cells.",
+    "provenance": "Only tracked public files at the R2 published base, plus this analysis codebook/implementation. No private paths, envelopes, native reasoning or inference APIs. Source records are public rendered cases.",
+    "qualitative_boundary": "Do not display/read selected example prose for qualitative interpretation until deterministic outputs and hashes are committed. Numeric analysis scans prose only for the exact opaque-ID regex, without semantic interpretation."
+  },
+  "qualitative_selection": [
+    {
+      "example": "historical_current",
+      "first_in_frozen_schedule_with": "HISTORICAL_AS_CURRENT"
+    },
+    {
+      "example": "insufficient_current",
+      "first_in_frozen_schedule_with": "INSUFFICIENT_AS_CURRENT"
+    },
+    {
+      "example": "invalid_current",
+      "first_in_frozen_schedule_with": "INVALID_EVIDENCE_AS_CURRENT"
+    },
+    {
+      "example": "component_without_witness",
+      "first_in_frozen_schedule_with": "gold == D and affected_component_exact and not structured_witness_exact"
+    },
+    {
+      "example": "healthy_current",
+      "first_in_frozen_schedule_with": "HEALTHY_FALSE_CURRENT"
+    }
+  ],
+  "qualitative_rules": "Exactly the first qualifying rendering per rule, or absent if none. Examples may overlap. Quote only public final/source excerpts after deterministic freeze. No new counted categories, rescoring or semantic grading.",
+  "runtime_prohibitions": [
+    "No new model calls",
+    "No server launch",
+    "No Horus execution",
+    "No private evidence",
+    "No output repairs",
+    "No scoring changes",
+    "No architecture implementation",
+    "No training",
+    "No improvement proposal"
+  ]
+}
