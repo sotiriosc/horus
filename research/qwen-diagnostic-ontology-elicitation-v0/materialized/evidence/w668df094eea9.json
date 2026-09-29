@@ -1,0 +1,31 @@
+{
+  "scope": {
+    "component_id": "za38355bde847703d",
+    "deployed_build": "build-11e7c580",
+    "operation": "optical displacement meter",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z07546cbadf3e0859",
+      "component_id": "za38355bde847703d",
+      "build": "build-11e7c580",
+      "calculation_ref": "zca4de882010629c0",
+      "displacement_units": 45
+    },
+    {
+      "id": "zca4de882010629c0",
+      "component_id": "za38355bde847703d",
+      "build": "build-11e7c580",
+      "sample_count": 15,
+      "deployment_offset": "UNKNOWN",
+      "applied_offset": 0,
+      "executed_expression": "3 * sample_count + applied_offset"
+    },
+    {
+      "id": "za6492310389335d3",
+      "component_id": "za38355bde847703d",
+      "rule": "The specified displacement equals 3 times sample count plus deployment_offset. The contract permits any integer deployment_offset from 0 through 10; its configured value for this deployment was not captured."
+    }
+  ]
+}

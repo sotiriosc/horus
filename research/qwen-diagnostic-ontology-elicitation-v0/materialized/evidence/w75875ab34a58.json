@@ -1,0 +1,34 @@
+{
+  "scope": {
+    "component_id": "z676289f358b933ca",
+    "deployed_build": "build-d5957277",
+    "operation": "telemetry trailer",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z0642845919bb3134",
+      "component_id": "z676289f358b933ca",
+      "rule": "The trailer is the sum of the three octets modulo 256. The additive bias is exactly zero."
+    },
+    {
+      "id": "z50af6912e9e7b275",
+      "component_id": "z676289f358b933ca",
+      "build": "build-d5957277",
+      "calculation_ref": "z4514373987ab89cc",
+      "trailer_octet": 14
+    },
+    {
+      "id": "z4514373987ab89cc",
+      "component_id": "z676289f358b933ca",
+      "build": "build-d5957277",
+      "frame_octets": [
+        12,
+        17,
+        240
+      ],
+      "applied_bias": 1,
+      "executed_expression": "(sum(frame_octets) + applied_bias) modulo 256"
+    }
+  ]
+}

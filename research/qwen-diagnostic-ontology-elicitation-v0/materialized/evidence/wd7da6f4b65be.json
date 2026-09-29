@@ -1,0 +1,29 @@
+{
+  "scope": {
+    "component_id": "z6b971f92db0fb174",
+    "deployed_build": "build-dd7a7ac7",
+    "operation": "fractional credit display",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z10741957fc6e2aa5",
+      "component_id": "z6b971f92db0fb174",
+      "build": "build-dd7a7ac7",
+      "calculation_ref": "z2d9df4530112b4b8",
+      "credit_display": 2
+    },
+    {
+      "id": "zabda5867e0d72775",
+      "component_id": "z6b971f92db0fb174",
+      "rule": "Display the nearest integer credit; exact halves go to the even integer. Decreasing a positive half to an even integer is permitted."
+    },
+    {
+      "id": "z2d9df4530112b4b8",
+      "component_id": "z6b971f92db0fb174",
+      "build": "build-dd7a7ac7",
+      "credit_exact": 2.5,
+      "executed_expression": "round to nearest integer, ties to even"
+    }
+  ]
+}

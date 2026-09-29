@@ -1,0 +1,49 @@
+{
+  "scope": {
+    "component_id": "z26a8023994e58796",
+    "deployed_build": "build-ad093a63",
+    "operation": "subsea sample frame",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.",
+    "earlier_build": "build-4faf2d64"
+  },
+  "records": [
+    {
+      "id": "z66475447e32d73cc",
+      "component_id": "z26a8023994e58796",
+      "build": "build-ad093a63",
+      "calculation_ref": "z071fb10321f6b7c2",
+      "sample_trailer": 19
+    },
+    {
+      "id": "z84a0a8ca1c375fde",
+      "component_id": "z26a8023994e58796",
+      "build": "build-4faf2d64",
+      "capture_relation": "Earlier execution of this same bounded operation; this build is not deployed now.",
+      "sample_octets": [
+        16,
+        9,
+        250
+      ],
+      "applied_increment": 1,
+      "executed_expression": "(sum(sample_octets) + applied_increment) modulo 256",
+      "sample_trailer": 20
+    },
+    {
+      "id": "z071fb10321f6b7c2",
+      "component_id": "z26a8023994e58796",
+      "build": "build-ad093a63",
+      "sample_octets": [
+        16,
+        9,
+        250
+      ],
+      "applied_increment": 0,
+      "executed_expression": "(sum(sample_octets) + applied_increment) modulo 256"
+    },
+    {
+      "id": "z87abd83bbf5e33ee",
+      "component_id": "z26a8023994e58796",
+      "rule": "Compute the trailer as sum of the three sample octets modulo 256, with zero additive bias, on either build."
+    }
+  ]
+}

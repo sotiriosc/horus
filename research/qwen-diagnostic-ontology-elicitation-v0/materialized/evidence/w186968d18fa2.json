@@ -1,0 +1,41 @@
+{
+  "scope": {
+    "component_id": "z55cf6a783076d8cc",
+    "deployed_build": "build-be0b90d5",
+    "operation": "kiln duration register",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.",
+    "earlier_build": "build-f00b2b5e"
+  },
+  "records": [
+    {
+      "id": "z466d4fc48ad3733e",
+      "component_id": "z55cf6a783076d8cc",
+      "build": "build-be0b90d5",
+      "calculation_ref": "zf767c59ac38b2cdc",
+      "register_seconds": 1740
+    },
+    {
+      "id": "z73d4c957d404874c",
+      "component_id": "z55cf6a783076d8cc",
+      "rule": "The register stores seconds, exactly sixty times the requested minutes. This requirement is the same on both builds."
+    },
+    {
+      "id": "zf767c59ac38b2cdc",
+      "component_id": "z55cf6a783076d8cc",
+      "build": "build-be0b90d5",
+      "requested_minutes": 29,
+      "applied_multiplier": 60,
+      "executed_expression": "requested_minutes * applied_multiplier"
+    },
+    {
+      "id": "z150683bdd913222d",
+      "component_id": "z55cf6a783076d8cc",
+      "build": "build-f00b2b5e",
+      "capture_relation": "Earlier execution of this same bounded operation; this build is not deployed now.",
+      "requested_minutes": 29,
+      "applied_multiplier": 1,
+      "executed_expression": "requested_minutes * applied_multiplier",
+      "register_seconds": 29
+    }
+  ]
+}

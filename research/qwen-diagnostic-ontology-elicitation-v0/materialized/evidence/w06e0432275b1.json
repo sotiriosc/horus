@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "component_id": "zf3c73da6356f68d3",
+    "deployed_build": "build-553283b3",
+    "operation": "cold-room pallet reservation",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z5629eb59aa34208c",
+      "component_id": "ze8cdf1035baecce0",
+      "counter_window": "later",
+      "previous_receipt_ref": "z7cc744ec6d503c67",
+      "completed_units": 17,
+      "dropped_units": 0
+    },
+    {
+      "id": "z34c4fe5c6a80110b",
+      "component_id": "ze8cdf1035baecce0",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "z8bd34ed0acaa96a1",
+      "component_id": "zf3c73da6356f68d3",
+      "build": "build-553283b3",
+      "opening_spaces": 12,
+      "committed_spaces": 7,
+      "applied_decrement": 0,
+      "executed_expression": "opening_spaces - applied_decrement"
+    },
+    {
+      "id": "z74e37d8a96b0b49d",
+      "component_id": "zf3c73da6356f68d3",
+      "build": "build-553283b3",
+      "calculation_ref": "z8bd34ed0acaa96a1",
+      "remaining_spaces": 12
+    },
+    {
+      "id": "z7cc744ec6d503c67",
+      "component_id": "ze8cdf1035baecce0",
+      "counter_window": "earlier",
+      "completed_units": 14,
+      "dropped_units": 0
+    },
+    {
+      "id": "z1dde6da523aea9ba",
+      "component_id": "zf3c73da6356f68d3",
+      "rule": "For this reservation, remaining pallet spaces must equal opening spaces minus all seven newly committed spaces. No release, expiry or other transaction occurred in this operation."
+    }
+  ]
+}

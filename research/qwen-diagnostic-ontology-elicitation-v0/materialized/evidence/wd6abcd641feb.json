@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "component_id": "z24dc64fb3a7be113",
+    "deployed_build": "build-815b81c0",
+    "operation": "seed store accounting",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "ze164509b86a2fdb3",
+      "component_id": "z24dc64fb3a7be113",
+      "rule": "Closing seed packs equal opening packs plus all received packs minus all dispatched packs. All flows for this operation are listed; no losses or adjustments occurred."
+    },
+    {
+      "id": "z24b40bdd10de0adb",
+      "component_id": "z4035317b46d70088",
+      "counter_window": "earlier",
+      "completed_units": 30,
+      "dropped_units": 0
+    },
+    {
+      "id": "z9fd53a0ed8ac1f49",
+      "component_id": "z24dc64fb3a7be113",
+      "build": "build-815b81c0",
+      "calculation_ref": "z4a5e94dd0121401b",
+      "closing_packs": 33
+    },
+    {
+      "id": "zf821ef3788f54687",
+      "component_id": "z4035317b46d70088",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "zcb64ab0aaf004363",
+      "component_id": "z4035317b46d70088",
+      "counter_window": "later",
+      "previous_receipt_ref": "z24b40bdd10de0adb",
+      "completed_units": 33,
+      "dropped_units": 0
+    },
+    {
+      "id": "z4a5e94dd0121401b",
+      "component_id": "z24dc64fb3a7be113",
+      "build": "build-815b81c0",
+      "opening_packs": 28,
+      "received_packs": 9,
+      "dispatched_packs": 4,
+      "executed_expression": "opening_packs + received_packs - dispatched_packs"
+    }
+  ]
+}

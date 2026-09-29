@@ -1,0 +1,256 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn classification, affected_component_ids (one responsible component for a current defect), evidence_ids, observed, inferred, unknown, diagnostic_statement, causal_mechanism, strongest_alternative_explanation and falsifier, satisfying the schema. Separate observed facts from inference and unknowns. For a current defect link the governing contract, operative input/calculation and resulting receipt with exact record IDs; identify one decisive field as a top-level JSON pointer within its record, its observed value and contract-required value. Cite all witness records in evidence_ids. For other classes cite the records establishing the conclusion; for a historical conclusion include earlier and deployed traces. Give no solution or modification. Prose cannot override structured fields.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"zb2b6f7cc51e724c2\",\n    \"deployed_build\": \"build-3c31517c\",\n    \"operation\": \"reusable fixture checkout\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\",\n    \"earlier_build\": \"build-ab6059fc\"\n  },\n  \"records\": [\n    {\n      \"id\": \"z9b148dea07b68d96\",\n      \"component_id\": \"zb2b6f7cc51e724c2\",\n      \"build\": \"build-3c31517c\",\n      \"calculation_ref\": \"z1b9fb80eae84e50f\",\n      \"checked_out_fixtures\": 21\n    },\n    {\n      \"id\": \"z203eaa29decf1ab1\",\n      \"component_id\": \"zb2b6f7cc51e724c2\",\n      \"rule\": \"At completion the checked-out fixture count equals opening count plus four acquisitions minus three releases. All acquisitions and releases completed exactly once, no other transactions or failures occurred. Same rule on both builds.\"\n    },\n    {\n      \"id\": \"zd8a2b473ab1437a6\",\n      \"component_id\": \"zc3b669bbc0f58dea\",\n      \"counter_window\": \"later\",\n      \"previous_receipt_ref\": \"z049e2f70fb79d07f\",\n      \"completed_units\": 25,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"z3f49f9477896888f\",\n      \"component_id\": \"zb2b6f7cc51e724c2\",\n      \"build\": \"build-ab6059fc\",\n      \"capture_relation\": \"Earlier execution of this same bounded operation; this build is not deployed now.\",\n      \"opening_fixtures\": 20,\n      \"acquired_fixtures\": 4,\n      \"released_fixtures\": 3,\n      \"executed_expression\": \"opening_fixtures + acquired_fixtures\",\n      \"checked_out_fixtures\": 24\n    },\n    {\n      \"id\": \"z6f21e0aed4605be0\",\n      \"component_id\": \"zc3b669bbc0f58dea\",\n      \"rule\": \"This independent component reports local processing counters; its settings do not govern the scoped component.\",\n      \"neighbor_setting\": 513\n    },\n    {\n      \"id\": \"z049e2f70fb79d07f\",\n      \"component_id\": \"zc3b669bbc0f58dea\",\n      \"counter_window\": \"earlier\",\n      \"completed_units\": 22,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"z1b9fb80eae84e50f\",\n      \"component_id\": \"zb2b6f7cc51e724c2\",\n      \"build\": \"build-3c31517c\",\n      \"opening_fixtures\": 20,\n      \"acquired_fixtures\": 4,\n      \"released_fixtures\": 3,\n      \"executed_expression\": \"opening_fixtures + acquired_fixtures - released_fixtures\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "affected_component_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^z[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^z[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "observed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "inferred": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "unknown": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "diagnostic_statement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "causal_mechanism": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "contract_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "cause_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "effect_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "decisive_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "decisive_field": {
+                  "type": "string",
+                  "pattern": "^/[a-z_]+$"
+                },
+                "observed_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                },
+                "required_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1500
+                }
+              },
+              "required": [
+                "contract_evidence_id",
+                "cause_evidence_id",
+                "effect_evidence_id",
+                "decisive_evidence_id",
+                "decisive_field",
+                "observed_value",
+                "required_value",
+                "description"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "strongest_alternative_explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "falsifier": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        }
+      },
+      "required": [
+        "classification",
+        "affected_component_ids",
+        "evidence_ids",
+        "observed",
+        "inferred",
+        "unknown",
+        "diagnostic_statement",
+        "causal_mechanism",
+        "strongest_alternative_explanation",
+        "falsifier"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "SUPPORTED_CURRENT_DEFECT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "affected_component_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 1,
+                "minItems": 1
+              },
+              "causal_mechanism": {
+                "type": "object",
+                "properties": {
+                  "contract_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "cause_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "effect_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "decisive_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "decisive_field": {
+                    "type": "string",
+                    "pattern": "^/[a-z_]+$"
+                  },
+                  "observed_value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  },
+                  "required_value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1500
+                  }
+                },
+                "required": [
+                  "contract_evidence_id",
+                  "cause_evidence_id",
+                  "effect_evidence_id",
+                  "decisive_evidence_id",
+                  "decisive_field",
+                  "observed_value",
+                  "required_value",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

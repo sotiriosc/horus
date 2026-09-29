@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only classification and a rationale of at most 500 characters. No witness IDs, JSON pointers, intervention or solution.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"z2e13a55c0071160f\",\n    \"deployed_build\": \"build-0b323977\",\n    \"operation\": \"greenhouse rack allocation\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\"\n  },\n  \"records\": [\n    {\n      \"id\": \"z51b94437a9abc327\",\n      \"component_id\": \"za94365040a42ca88\",\n      \"counter_window\": \"earlier\",\n      \"completed_units\": 24,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"zd7af23bd6994e8e0\",\n      \"component_id\": \"za94365040a42ca88\",\n      \"counter_window\": \"later\",\n      \"previous_receipt_ref\": \"z51b94437a9abc327\",\n      \"completed_units\": 27,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"zb3a2237b4723db05\",\n      \"component_id\": \"z2e13a55c0071160f\",\n      \"build\": \"build-0b323977\",\n      \"calculation_ref\": \"z98e0f1e783b9ed66\",\n      \"remaining_positions\": 17\n    },\n    {\n      \"id\": \"z45f917ed0189c700\",\n      \"component_id\": \"za94365040a42ca88\",\n      \"rule\": \"This independent component reports local processing counters; its settings do not govern the scoped component.\",\n      \"neighbor_setting\": 513\n    },\n    {\n      \"id\": \"z98e0f1e783b9ed66\",\n      \"component_id\": \"z2e13a55c0071160f\",\n      \"build\": \"build-0b323977\",\n      \"opening_positions\": 22,\n      \"reserved_positions\": \"UNKNOWN\",\n      \"applied_reservation\": 5,\n      \"executed_expression\": \"opening_positions - applied_reservation\"\n    },\n    {\n      \"id\": \"z84572b4ce8c0c0a4\",\n      \"component_id\": \"z2e13a55c0071160f\",\n      \"rule\": \"Remaining rack positions equal opening positions minus the positions reserved by this transaction. Reservations are nonnegative integers no greater than opening positions. The reservation count is missing from this capture; no release or other change occurred.\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "classification",
+        "rationale"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

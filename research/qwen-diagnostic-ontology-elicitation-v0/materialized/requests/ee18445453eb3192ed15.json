@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"zc9c5774b83097c4b\",\n    \"deployed_build\": \"build-0a1bb61b\",\n    \"operation\": \"acoustic tick recorder\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\"\n  },\n  \"records\": [\n    {\n      \"id\": \"z4dc842d5d8ef64d6\",\n      \"component_id\": \"zc9c5774b83097c4b\",\n      \"rule\": \"Elapsed milliseconds must equal tick count times the configured milliseconds_per_tick. Any positive integer period is permitted, but this package does not record which period was configured.\"\n    },\n    {\n      \"id\": \"z3e807bd95b08c0bb\",\n      \"component_id\": \"zc9c5774b83097c4b\",\n      \"build\": \"build-0a1bb61b\",\n      \"tick_count\": 10,\n      \"milliseconds_per_tick\": \"UNKNOWN\",\n      \"applied_tick_period\": 2,\n      \"executed_expression\": \"tick_count * applied_tick_period\"\n    },\n    {\n      \"id\": \"zb6aab4538159ca82\",\n      \"component_id\": \"zc9c5774b83097c4b\",\n      \"build\": \"build-0a1bb61b\",\n      \"calculation_ref\": \"z3e807bd95b08c0bb\",\n      \"elapsed_milliseconds\": 20\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

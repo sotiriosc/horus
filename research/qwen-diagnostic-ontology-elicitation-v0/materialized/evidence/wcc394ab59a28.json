@@ -1,0 +1,30 @@
+{
+  "scope": {
+    "component_id": "z78bfbd40b06184fc",
+    "deployed_build": "build-7beb0167",
+    "operation": "liquid dispenser",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z05279013f456b735",
+      "component_id": "z78bfbd40b06184fc",
+      "build": "build-7beb0167",
+      "dose_millilitres": 26,
+      "applied_divisor": 1,
+      "executed_expression": "dose_millilitres / applied_divisor"
+    },
+    {
+      "id": "z68d35ba3c587b182",
+      "component_id": "z78bfbd40b06184fc",
+      "build": "build-7beb0167",
+      "calculation_ref": "z05279013f456b735",
+      "delivered_litres": 26
+    },
+    {
+      "id": "z7641d7b2c31bbabd",
+      "component_id": "z78bfbd40b06184fc",
+      "rule": "Convert measured millilitres to litres by division by exactly 1000. No rounding, clamping or other transformation is permitted."
+    }
+  ]
+}

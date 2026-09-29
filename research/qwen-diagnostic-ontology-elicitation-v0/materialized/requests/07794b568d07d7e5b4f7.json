@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only classification and a rationale of at most 500 characters. No witness IDs, JSON pointers, intervention or solution.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"z26a8023994e58796\",\n    \"deployed_build\": \"build-ad093a63\",\n    \"operation\": \"subsea sample frame\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\",\n    \"earlier_build\": \"build-4faf2d64\"\n  },\n  \"records\": [\n    {\n      \"id\": \"z66475447e32d73cc\",\n      \"component_id\": \"z26a8023994e58796\",\n      \"build\": \"build-ad093a63\",\n      \"calculation_ref\": \"z071fb10321f6b7c2\",\n      \"sample_trailer\": 19\n    },\n    {\n      \"id\": \"z84a0a8ca1c375fde\",\n      \"component_id\": \"z26a8023994e58796\",\n      \"build\": \"build-4faf2d64\",\n      \"capture_relation\": \"Earlier execution of this same bounded operation; this build is not deployed now.\",\n      \"sample_octets\": [\n        16,\n        9,\n        250\n      ],\n      \"applied_increment\": 1,\n      \"executed_expression\": \"(sum(sample_octets) + applied_increment) modulo 256\",\n      \"sample_trailer\": 20\n    },\n    {\n      \"id\": \"z071fb10321f6b7c2\",\n      \"component_id\": \"z26a8023994e58796\",\n      \"build\": \"build-ad093a63\",\n      \"sample_octets\": [\n        16,\n        9,\n        250\n      ],\n      \"applied_increment\": 0,\n      \"executed_expression\": \"(sum(sample_octets) + applied_increment) modulo 256\"\n    },\n    {\n      \"id\": \"z87abd83bbf5e33ee\",\n      \"component_id\": \"z26a8023994e58796\",\n      \"rule\": \"Compute the trailer as sum of the three sample octets modulo 256, with zero additive bias, on either build.\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "classification",
+        "rationale"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

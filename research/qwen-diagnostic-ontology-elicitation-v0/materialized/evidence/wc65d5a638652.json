@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "component_id": "z43cc40ed2056acc0",
+    "deployed_build": "build-1e13b229",
+    "operation": "satellite resend timer",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "ze03734e1e1c565c6",
+      "component_id": "z8ad4f657a9b48a35",
+      "counter_window": "earlier",
+      "completed_units": 23,
+      "dropped_units": 0
+    },
+    {
+      "id": "zad736e42cb8e5a2a",
+      "component_id": "z8ad4f657a9b48a35",
+      "counter_window": "later",
+      "previous_receipt_ref": "ze03734e1e1c565c6",
+      "completed_units": 26,
+      "dropped_units": 0
+    },
+    {
+      "id": "z8b36c75c26771f3b",
+      "component_id": "z43cc40ed2056acc0",
+      "build": "build-1e13b229",
+      "calculation_ref": "z218b9cba8493d022",
+      "delay_milliseconds": 40
+    },
+    {
+      "id": "z22c2fed88924fd2a",
+      "component_id": "z43cc40ed2056acc0",
+      "rule": "Delay for attempt number n equals configured base_delay times 2 to power n. Any positive integer base is allowed. The configured base for this transmission stream was not retained; no jitter or cap applies."
+    },
+    {
+      "id": "z218b9cba8493d022",
+      "component_id": "z43cc40ed2056acc0",
+      "build": "build-1e13b229",
+      "attempt_number": 2,
+      "base_delay": "UNKNOWN",
+      "applied_base": 10,
+      "executed_expression": "applied_base * 2 ** attempt_number"
+    },
+    {
+      "id": "z81d7d74dce6a03ee",
+      "component_id": "z8ad4f657a9b48a35",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    }
+  ]
+}

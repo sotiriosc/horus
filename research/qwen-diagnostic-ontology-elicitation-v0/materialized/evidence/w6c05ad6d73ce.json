@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "component_id": "z2e13a55c0071160f",
+    "deployed_build": "build-0b323977",
+    "operation": "greenhouse rack allocation",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z51b94437a9abc327",
+      "component_id": "za94365040a42ca88",
+      "counter_window": "earlier",
+      "completed_units": 24,
+      "dropped_units": 0
+    },
+    {
+      "id": "zd7af23bd6994e8e0",
+      "component_id": "za94365040a42ca88",
+      "counter_window": "later",
+      "previous_receipt_ref": "z51b94437a9abc327",
+      "completed_units": 27,
+      "dropped_units": 0
+    },
+    {
+      "id": "zb3a2237b4723db05",
+      "component_id": "z2e13a55c0071160f",
+      "build": "build-0b323977",
+      "calculation_ref": "z98e0f1e783b9ed66",
+      "remaining_positions": 17
+    },
+    {
+      "id": "z45f917ed0189c700",
+      "component_id": "za94365040a42ca88",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "z98e0f1e783b9ed66",
+      "component_id": "z2e13a55c0071160f",
+      "build": "build-0b323977",
+      "opening_positions": 22,
+      "reserved_positions": "UNKNOWN",
+      "applied_reservation": 5,
+      "executed_expression": "opening_positions - applied_reservation"
+    },
+    {
+      "id": "z84572b4ce8c0c0a4",
+      "component_id": "z2e13a55c0071160f",
+      "rule": "Remaining rack positions equal opening positions minus the positions reserved by this transaction. Reservations are nonnegative integers no greater than opening positions. The reservation count is missing from this capture; no release or other change occurred."
+    }
+  ]
+}

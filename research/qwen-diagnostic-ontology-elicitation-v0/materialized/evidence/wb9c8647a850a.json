@@ -1,0 +1,64 @@
+{
+  "scope": {
+    "component_id": "zb2b6f7cc51e724c2",
+    "deployed_build": "build-3c31517c",
+    "operation": "reusable fixture checkout",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.",
+    "earlier_build": "build-ab6059fc"
+  },
+  "records": [
+    {
+      "id": "z9b148dea07b68d96",
+      "component_id": "zb2b6f7cc51e724c2",
+      "build": "build-3c31517c",
+      "calculation_ref": "z1b9fb80eae84e50f",
+      "checked_out_fixtures": 21
+    },
+    {
+      "id": "z203eaa29decf1ab1",
+      "component_id": "zb2b6f7cc51e724c2",
+      "rule": "At completion the checked-out fixture count equals opening count plus four acquisitions minus three releases. All acquisitions and releases completed exactly once, no other transactions or failures occurred. Same rule on both builds."
+    },
+    {
+      "id": "zd8a2b473ab1437a6",
+      "component_id": "zc3b669bbc0f58dea",
+      "counter_window": "later",
+      "previous_receipt_ref": "z049e2f70fb79d07f",
+      "completed_units": 25,
+      "dropped_units": 0
+    },
+    {
+      "id": "z3f49f9477896888f",
+      "component_id": "zb2b6f7cc51e724c2",
+      "build": "build-ab6059fc",
+      "capture_relation": "Earlier execution of this same bounded operation; this build is not deployed now.",
+      "opening_fixtures": 20,
+      "acquired_fixtures": 4,
+      "released_fixtures": 3,
+      "executed_expression": "opening_fixtures + acquired_fixtures",
+      "checked_out_fixtures": 24
+    },
+    {
+      "id": "z6f21e0aed4605be0",
+      "component_id": "zc3b669bbc0f58dea",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "z049e2f70fb79d07f",
+      "component_id": "zc3b669bbc0f58dea",
+      "counter_window": "earlier",
+      "completed_units": 22,
+      "dropped_units": 0
+    },
+    {
+      "id": "z1b9fb80eae84e50f",
+      "component_id": "zb2b6f7cc51e724c2",
+      "build": "build-3c31517c",
+      "opening_fixtures": 20,
+      "acquired_fixtures": 4,
+      "released_fixtures": 3,
+      "executed_expression": "opening_fixtures + acquired_fixtures - released_fixtures"
+    }
+  ]
+}

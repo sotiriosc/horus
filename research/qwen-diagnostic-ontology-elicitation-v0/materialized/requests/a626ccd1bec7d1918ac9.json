@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only classification and a rationale of at most 500 characters. No witness IDs, JSON pointers, intervention or solution.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"z8e89c47338569e3e\",\n    \"deployed_build\": \"build-8f4ee32f\",\n    \"operation\": \"geophysical event journal\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\"\n  },\n  \"records\": [\n    {\n      \"id\": \"zf16898be32bce909\",\n      \"component_id\": \"z8e89c47338569e3e\",\n      \"build\": \"build-8f4ee32f\",\n      \"sealed_object\": \"object-eff3f998\",\n      \"snapshot\": \"snapshot-f59c4cbd\",\n      \"attests_exact_capture\": true,\n      \"utc_milliseconds\": 1700000000018\n    },\n    {\n      \"id\": \"z128690d726463760\",\n      \"component_id\": \"z8e89c47338569e3e\",\n      \"build\": \"build-8f4ee32f\",\n      \"sealed_object\": \"object-eff3f998\",\n      \"snapshot\": \"snapshot-f59c4cbd\",\n      \"attests_exact_capture\": true,\n      \"utc_milliseconds\": 1700000000019\n    },\n    {\n      \"id\": \"zcd201535b1d3bc0b\",\n      \"component_id\": \"z8212624aba38a336\",\n      \"counter_window\": \"later\",\n      \"previous_receipt_ref\": \"ze3c85f87c6a1cb2f\",\n      \"completed_units\": 23,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"z2eb5acf438aefc9f\",\n      \"component_id\": \"z8e89c47338569e3e\",\n      \"rule\": \"The event has exactly one canonical UTC utc_milliseconds field. Attestations of the same immutable event and snapshot preserve that integer exactly; no local timezone conversion is involved.\",\n      \"attestation_scope\": \"Both supplied attestations claim complete exact capture of this same immutable object at this same snapshot. Neither is designated as preferred, superseded or provisional. No further source is available.\"\n    },\n    {\n      \"id\": \"ze3c85f87c6a1cb2f\",\n      \"component_id\": \"z8212624aba38a336\",\n      \"counter_window\": \"earlier\",\n      \"completed_units\": 20,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"zdab4d62e95cd8bd0\",\n      \"component_id\": \"z8212624aba38a336\",\n      \"rule\": \"This independent component reports local processing counters; its settings do not govern the scoped component.\",\n      \"neighbor_setting\": 513\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "classification",
+        "rationale"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

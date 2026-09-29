@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only classification and a rationale of at most 500 characters. No witness IDs, JSON pointers, intervention or solution.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"zcf89c1bf2e6a99c1\",\n    \"deployed_build\": \"build-7e923f02\",\n    \"operation\": \"weighbridge instrument\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\"\n  },\n  \"records\": [\n    {\n      \"id\": \"za6c70e05e87645b5\",\n      \"component_id\": \"zcf89c1bf2e6a99c1\",\n      \"rule\": \"This calibration converts the raw count to load units by 3 times raw count plus 7. Exact integer arithmetic; intercept must be 7.\"\n    },\n    {\n      \"id\": \"z84353557c66821ad\",\n      \"component_id\": \"zcf89c1bf2e6a99c1\",\n      \"build\": \"build-7e923f02\",\n      \"raw_count\": 28,\n      \"applied_gain\": 3,\n      \"applied_intercept\": 0,\n      \"executed_expression\": \"applied_gain * raw_count + applied_intercept\"\n    },\n    {\n      \"id\": \"zb15aaf8987180ae4\",\n      \"component_id\": \"zd34ce25dfd39bc75\",\n      \"counter_window\": \"later\",\n      \"previous_receipt_ref\": \"z809d5534c51e37d6\",\n      \"completed_units\": 33,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"za818c19d4240d129\",\n      \"component_id\": \"zcf89c1bf2e6a99c1\",\n      \"build\": \"build-7e923f02\",\n      \"calculation_ref\": \"z84353557c66821ad\",\n      \"load_units\": 84\n    },\n    {\n      \"id\": \"z809d5534c51e37d6\",\n      \"component_id\": \"zd34ce25dfd39bc75\",\n      \"counter_window\": \"earlier\",\n      \"completed_units\": 30,\n      \"dropped_units\": 0\n    },\n    {\n      \"id\": \"z455b395f21e82961\",\n      \"component_id\": \"zd34ce25dfd39bc75\",\n      \"rule\": \"This independent component reports local processing counters; its settings do not govern the scoped component.\",\n      \"neighbor_setting\": 513\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "classification",
+        "rationale"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

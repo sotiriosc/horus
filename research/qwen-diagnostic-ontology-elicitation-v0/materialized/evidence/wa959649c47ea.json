@@ -1,0 +1,62 @@
+{
+  "scope": {
+    "component_id": "zf6d2d0722c79f37e",
+    "deployed_build": "build-91cd2a83",
+    "operation": "ticket tariff rounding",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.",
+    "earlier_build": "build-caae086a"
+  },
+  "records": [
+    {
+      "id": "z7aebd6c18236c877",
+      "component_id": "z9d9079bc2f64e88a",
+      "counter_window": "later",
+      "previous_receipt_ref": "zcb116d4af1db73e1",
+      "completed_units": 30,
+      "dropped_units": 0
+    },
+    {
+      "id": "zcb116d4af1db73e1",
+      "component_id": "z9d9079bc2f64e88a",
+      "counter_window": "earlier",
+      "completed_units": 27,
+      "dropped_units": 0
+    },
+    {
+      "id": "z7a0f1af588f15389",
+      "component_id": "z9d9079bc2f64e88a",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "z5894b2f251027aea",
+      "component_id": "zf6d2d0722c79f37e",
+      "build": "build-91cd2a83",
+      "calculation_ref": "z14faff3b4255a4a5",
+      "ticket_units": 26
+    },
+    {
+      "id": "z741853649e080db9",
+      "component_id": "zf6d2d0722c79f37e",
+      "rule": "Round positive fractional tariff units to nearest integer, with exact halves rounded upward. Both builds have this contract."
+    },
+    {
+      "id": "z14faff3b4255a4a5",
+      "component_id": "zf6d2d0722c79f37e",
+      "build": "build-91cd2a83",
+      "tariff_units": 25.5,
+      "rounding_mode": "nearest, halves upward",
+      "executed_expression": "floor(tariff_units + 0.5)"
+    },
+    {
+      "id": "zfec708ee77a1d4fe",
+      "component_id": "zf6d2d0722c79f37e",
+      "build": "build-caae086a",
+      "capture_relation": "Earlier execution of this same bounded operation; this build is not deployed now.",
+      "tariff_units": 25.5,
+      "rounding_mode": "floor",
+      "executed_expression": "floor(tariff_units)",
+      "ticket_units": 25
+    }
+  ]
+}

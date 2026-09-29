@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nK7: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nV6: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nR9: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nT4: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nM2: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"za1085ed0892d3dbc\",\n    \"deployed_build\": \"build-ce81ecc3\",\n    \"operation\": \"sealed admission token\",\n    \"boundary\": \"Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped.\"\n  },\n  \"records\": [\n    {\n      \"id\": \"z4d6cb58979b6b6e3\",\n      \"component_id\": \"za1085ed0892d3dbc\",\n      \"build\": \"build-ce81ecc3\",\n      \"sealed_object\": \"object-fa0868ae\",\n      \"snapshot\": \"snapshot-c1b3cf0c\",\n      \"attests_exact_capture\": true,\n      \"mint_epoch\": 1700000014\n    },\n    {\n      \"id\": \"z7d5e609d9de96604\",\n      \"component_id\": \"za1085ed0892d3dbc\",\n      \"build\": \"build-ce81ecc3\",\n      \"sealed_object\": \"object-fa0868ae\",\n      \"snapshot\": \"snapshot-c1b3cf0c\",\n      \"attests_exact_capture\": true,\n      \"mint_epoch\": 1700000013\n    },\n    {\n      \"id\": \"zf8ca9f3ed6e5ffeb\",\n      \"component_id\": \"za1085ed0892d3dbc\",\n      \"rule\": \"The token bytes are immutable with one canonical, unambiguous integer mint_epoch field. Decodings of the identical token bytes and snapshot preserve that field exactly.\",\n      \"attestation_scope\": \"Both supplied attestations claim complete exact capture of this same immutable object at this same snapshot. Neither is designated as preferred, superseded or provisional. No further source is available.\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "K7",
+            "V6",
+            "R9",
+            "T4",
+            "M2"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 731926581,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

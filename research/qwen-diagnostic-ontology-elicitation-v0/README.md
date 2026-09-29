@@ -1,0 +1,9 @@
+# Qwen diagnostic ontology elicitation v0
+
+This branch contains the prospectively frozen 20-world, five-arm, 100-call ontology study. Base: `0193ae2e9241a6675dbb6d61e47feea026bc3e11`. Method Freeze: `bb0713afeaf2d0c42a6999322f06572e6d974698`.
+
+`method.md` defines all questions, thresholds, mappings, generation rules, interpretation and stop rules. `case-spec.json` fixes twenty independent template slots. `schema-E.json` is byte-identical to R2. `generate.py` reads only these new method assets; `materialized/` contains 20 raw evidence packages, 100 exact payloads, gold, mappings and schedule. Gold never enters the runner or requests. `audit.py` performs exact regeneration, arithmetic/epistemic construction, non-reuse and arm-isolation checks. `preflight.json` records 123 materialized file hashes.
+
+`transport.py` is adapted from the qualified R2 transport with only study namespace, call count and public presentation metadata changes. `run_campaign.py` dispatches all exact requests once after validating its Case Freeze, model identity and preservation. `qualification.json` records zero-model tests. `score.py` requires an already committed raw freeze and implements mechanical scoring. No analysis reads private reasoning. The full E schema retains the pinned llama grammar's known limitations; Python Draft7 validation remains authoritative.
+
+After Case Freeze, execute exactly once with `python research/qwen-diagnostic-ontology-elicitation-v0/run_campaign.py --case-freeze <SHA>`. Any transport/runtime or discovered generator defect stops; do not rerun. Commit raw outputs and raw-freeze.json before running score.py. Replay scoring changes no inputs and makes no model call. Publish this branch only after full history audit; leave all preserved branches and Horus state unchanged.

@@ -1,0 +1,31 @@
+{
+  "scope": {
+    "component_id": "zbc423d7b46ce5f2d",
+    "deployed_build": "build-a2c30010",
+    "operation": "parcel tray loading",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z39938f9ad996458d",
+      "component_id": "zbc423d7b46ce5f2d",
+      "build": "build-a2c30010",
+      "parcel_quantity": 7,
+      "tray_capacity": 3,
+      "executed_expression": "ceiling(parcel_quantity / tray_capacity)"
+    },
+    {
+      "id": "zf49445dbefe8bc47",
+      "component_id": "zbc423d7b46ce5f2d",
+      "rule": "Use the fewest trays holding at most three parcels each. A partially occupied final tray is allowed and must count as one tray."
+    },
+    {
+      "id": "z4e10e050a747ac79",
+      "component_id": "zbc423d7b46ce5f2d",
+      "build": "build-a2c30010",
+      "calculation_ref": "z39938f9ad996458d",
+      "trays_used": 3,
+      "last_tray_occupancy": 1
+    }
+  ]
+}

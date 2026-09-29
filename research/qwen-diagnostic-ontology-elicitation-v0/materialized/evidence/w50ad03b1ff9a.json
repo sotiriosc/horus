@@ -1,0 +1,31 @@
+{
+  "scope": {
+    "component_id": "zc9c5774b83097c4b",
+    "deployed_build": "build-0a1bb61b",
+    "operation": "acoustic tick recorder",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z4dc842d5d8ef64d6",
+      "component_id": "zc9c5774b83097c4b",
+      "rule": "Elapsed milliseconds must equal tick count times the configured milliseconds_per_tick. Any positive integer period is permitted, but this package does not record which period was configured."
+    },
+    {
+      "id": "z3e807bd95b08c0bb",
+      "component_id": "zc9c5774b83097c4b",
+      "build": "build-0a1bb61b",
+      "tick_count": 10,
+      "milliseconds_per_tick": "UNKNOWN",
+      "applied_tick_period": 2,
+      "executed_expression": "tick_count * applied_tick_period"
+    },
+    {
+      "id": "zb6aab4538159ca82",
+      "component_id": "zc9c5774b83097c4b",
+      "build": "build-0a1bb61b",
+      "calculation_ref": "z3e807bd95b08c0bb",
+      "elapsed_milliseconds": 20
+    }
+  ]
+}

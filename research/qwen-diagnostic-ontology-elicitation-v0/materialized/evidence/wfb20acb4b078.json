@@ -1,0 +1,52 @@
+{
+  "scope": {
+    "component_id": "zcf89c1bf2e6a99c1",
+    "deployed_build": "build-7e923f02",
+    "operation": "weighbridge instrument",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "za6c70e05e87645b5",
+      "component_id": "zcf89c1bf2e6a99c1",
+      "rule": "This calibration converts the raw count to load units by 3 times raw count plus 7. Exact integer arithmetic; intercept must be 7."
+    },
+    {
+      "id": "z84353557c66821ad",
+      "component_id": "zcf89c1bf2e6a99c1",
+      "build": "build-7e923f02",
+      "raw_count": 28,
+      "applied_gain": 3,
+      "applied_intercept": 0,
+      "executed_expression": "applied_gain * raw_count + applied_intercept"
+    },
+    {
+      "id": "zb15aaf8987180ae4",
+      "component_id": "zd34ce25dfd39bc75",
+      "counter_window": "later",
+      "previous_receipt_ref": "z809d5534c51e37d6",
+      "completed_units": 33,
+      "dropped_units": 0
+    },
+    {
+      "id": "za818c19d4240d129",
+      "component_id": "zcf89c1bf2e6a99c1",
+      "build": "build-7e923f02",
+      "calculation_ref": "z84353557c66821ad",
+      "load_units": 84
+    },
+    {
+      "id": "z809d5534c51e37d6",
+      "component_id": "zd34ce25dfd39bc75",
+      "counter_window": "earlier",
+      "completed_units": 30,
+      "dropped_units": 0
+    },
+    {
+      "id": "z455b395f21e82961",
+      "component_id": "zd34ce25dfd39bc75",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    }
+  ]
+}

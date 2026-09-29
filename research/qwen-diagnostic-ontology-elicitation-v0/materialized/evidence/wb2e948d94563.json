@@ -1,0 +1,55 @@
+{
+  "scope": {
+    "component_id": "z5dc2aa9c38bacf1d",
+    "deployed_build": "build-8dbae51a",
+    "operation": "single-consumer print queue",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "z4bc7449afc431b55",
+      "component_id": "z5dc2aa9c38bacf1d",
+      "build": "build-8dbae51a",
+      "sealed_object": "object-f4e24529",
+      "snapshot": "snapshot-f30e71d0",
+      "attests_exact_capture": true,
+      "lease_holder": "spooler-indigo"
+    },
+    {
+      "id": "z246652031a54dce4",
+      "component_id": "zfd456370ee99c2f7",
+      "counter_window": "earlier",
+      "completed_units": 24,
+      "dropped_units": 0
+    },
+    {
+      "id": "z73182b86363e43e2",
+      "component_id": "zfd456370ee99c2f7",
+      "counter_window": "later",
+      "previous_receipt_ref": "z246652031a54dce4",
+      "completed_units": 27,
+      "dropped_units": 0
+    },
+    {
+      "id": "zd9b470ac4f4675c4",
+      "component_id": "z5dc2aa9c38bacf1d",
+      "build": "build-8dbae51a",
+      "sealed_object": "object-f4e24529",
+      "snapshot": "snapshot-f30e71d0",
+      "attests_exact_capture": true,
+      "lease_holder": "spooler-amber"
+    },
+    {
+      "id": "zbd89efe1fb4f7537",
+      "component_id": "zfd456370ee99c2f7",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": 513
+    },
+    {
+      "id": "z478d6c63b63544d4",
+      "component_id": "z5dc2aa9c38bacf1d",
+      "rule": "The queue snapshot has exactly one lease_holder. Complete attestations of that same immutable snapshot give that same holder; these are not observations before and after a transfer.",
+      "attestation_scope": "Both supplied attestations claim complete exact capture of this same immutable object at this same snapshot. Neither is designated as preferred, superseded or provisional. No further source is available."
+    }
+  ]
+}

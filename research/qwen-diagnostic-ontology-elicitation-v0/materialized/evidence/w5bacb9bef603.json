@@ -1,0 +1,51 @@
+{
+  "scope": {
+    "component_id": "z6364858bf5a698e4",
+    "deployed_build": "build-d556c8a2",
+    "operation": "two-octet instrument word",
+    "boundary": "Exactly the supplied target operation and its stated inputs. The executed expressions and recorded outputs are exact; no hidden postprocessing, rounding, transport loss or unlisted adjustment applies except rounding explicitly required by the contract. Other components are separately scoped."
+  },
+  "records": [
+    {
+      "id": "zcab398562643813b",
+      "component_id": "z6364858bf5a698e4",
+      "rule": "For this component the first octet is the high octet and the second is low. The unsigned word equals 256 times first plus second. Neighboring components have their own independent encoding."
+    },
+    {
+      "id": "zc712cf1a40ef0964",
+      "component_id": "zb46063e33990471b",
+      "counter_window": "later",
+      "previous_receipt_ref": "z7f68c05c8beeea56",
+      "completed_units": 30,
+      "dropped_units": 0
+    },
+    {
+      "id": "z994d7605c1b36323",
+      "component_id": "zb46063e33990471b",
+      "rule": "This independent component reports local processing counters; its settings do not govern the scoped component.",
+      "neighbor_setting": "low octet first"
+    },
+    {
+      "id": "z02dbebf02568ab15",
+      "component_id": "z6364858bf5a698e4",
+      "build": "build-d556c8a2",
+      "calculation_ref": "z293e3a3425cffde7",
+      "unsigned_word": 258
+    },
+    {
+      "id": "z7f68c05c8beeea56",
+      "component_id": "zb46063e33990471b",
+      "counter_window": "earlier",
+      "completed_units": 27,
+      "dropped_units": 0
+    },
+    {
+      "id": "z293e3a3425cffde7",
+      "component_id": "z6364858bf5a698e4",
+      "build": "build-d556c8a2",
+      "first_octet": 1,
+      "second_octet": 2,
+      "executed_expression": "256 * first_octet + second_octet"
+    }
+  ]
+}
