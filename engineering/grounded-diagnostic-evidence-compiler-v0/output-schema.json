@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "format_version",
+    "case_identity",
+    "record_index",
+    "component_index",
+    "version_index",
+    "current_version",
+    "current_record_ids",
+    "historical_record_ids",
+    "unversioned_record_ids",
+    "unresolved_record_ids",
+    "unknown_locations",
+    "event_links",
+    "capture_links",
+    "integrity_consistent",
+    "integrity_findings",
+    "input_output_candidates",
+    "field_inventory",
+    "evidence_graph",
+    "ambiguities",
+    "candidate_witness_material"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ambiguities": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "field_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "record_id",
+          "json_pointer_relative_to_data",
+          "full_json_pointer",
+          "value",
+          "exact_type",
+          "is_container"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "record_id": {
+            "type": "string"
+          },
+          "json_pointer_relative_to_data": {
+            "type": "string"
+          },
+          "full_json_pointer": {
+            "type": "string"
+          },
+          "value": {},
+          "exact_type": {
+            "enum": [
+              "null",
+              "boolean",
+              "integer",
+              "number",
+              "string",
+              "array",
+              "object"
+            ]
+          },
+          "is_container": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "candidate_witness_material": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "version_index": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "historical_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknown_locations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "event_links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "input_output_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "unresolved_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "current_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unversioned_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "record_index": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "capture_links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "integrity_findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "component_index": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "format_version": {
+      "const": "grounded-evidence-format-v0"
+    },
+    "case_identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "integrity_consistent": {
+      "enum": [
+        true,
+        false,
+        "unknown"
+      ]
+    },
+    "evidence_graph": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}
