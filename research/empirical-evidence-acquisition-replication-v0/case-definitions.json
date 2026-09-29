@@ -1,0 +1,2798 @@
+{
+  "arms": [
+    "C",
+    "E"
+  ],
+  "cases": {
+    "C1": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Recent +1; cumulative -1 restoration",
+      "empirical_relations": [
+        "0:ADVANCE"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "0:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "C10": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Unresolved alternatives only",
+      "empirical_relations": [
+        "0:ADVANCE"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "world_outcomes": {
+        "0:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ],
+        "0:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          }
+        ],
+        "0:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "C11": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Both alternatives empirical and observed",
+      "empirical_relations": [
+        "2:RETREAT",
+        "2:ADVANCE",
+        "2:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          }
+        ],
+        "2:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C12": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Only three repeated observations",
+      "empirical_relations": [
+        "1:ADVANCE"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "C13": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Transition breaks suffix",
+      "empirical_relations": [
+        "0:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 0
+        }
+      ],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "0:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "C14": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Action change breaks suffix",
+      "empirical_relations": [
+        "2:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C15": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Actual protected rejected evidence submission at tail; excluded from Memory",
+      "empirical_relations": [
+        "1:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": "REJECTED_TAIL",
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "C16": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Incomplete projection fails closed before action selection",
+      "empirical_relations": [
+        "0:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": "OMIT_FIRST",
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "0:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "C17": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Restoration turns recent sum positive",
+      "empirical_relations": [
+        "2:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C2": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Cumulative +1; recent -1",
+      "empirical_relations": [
+        "2:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C3": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Both signs positive",
+      "empirical_relations": [
+        "1:ADVANCE"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "C4": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Many strongly positive empirical observations; unseen alternatives",
+      "empirical_relations": [
+        "0:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "0:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "C5": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Isolated anomaly",
+      "empirical_relations": [
+        "2:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C6": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Benign alternating empirical variability",
+      "empirical_relations": [
+        "1:RETREAT"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "C7": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Active possible regime change",
+      "empirical_relations": [
+        "0:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "0:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "C8": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Deterministic established +1 alternative",
+      "empirical_relations": [
+        "2:ADVANCE"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "C9": {
+      "acquisition_consequence": null,
+      "acquisition_next_state": null,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Both alternatives observed once",
+      "empirical_relations": [
+        "1:HOLD"
+      ],
+      "expected_eligible": false,
+      "expected_target": null,
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "R1": {
+      "acquisition_consequence": 1,
+      "acquisition_next_state": 0,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Minimum window; ADVANCE empirical",
+      "empirical_relations": [
+        "0:ADVANCE"
+      ],
+      "expected_eligible": true,
+      "expected_target": "HOLD",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": "THREE",
+      "setup": [],
+      "world_outcomes": {
+        "0:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ],
+        "0:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "R2": {
+      "acquisition_consequence": 0,
+      "acquisition_next_state": 2,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Ten observations; long-history deterioration",
+      "empirical_relations": [
+        "2:RETREAT"
+      ],
+      "expected_eligible": true,
+      "expected_target": "ADVANCE",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": "ELIGIBLE",
+      "setup": [],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "2:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "R3": {
+      "acquisition_consequence": -1,
+      "acquisition_next_state": 1,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Cumulative exactly zero",
+      "empirical_relations": [
+        "1:HOLD"
+      ],
+      "expected_eligible": true,
+      "expected_target": "ADVANCE",
+      "fault": null,
+      "fresh": [
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "R4": {
+      "acquisition_consequence": 1,
+      "acquisition_next_state": 0,
+      "boundary_state": 0,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Recent exactly zero; cumulative negative",
+      "empirical_relations": [
+        "0:RETREAT"
+      ],
+      "expected_eligible": true,
+      "expected_target": "HOLD",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 0,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 0,
+          "pre_state": 0
+        }
+      ],
+      "world_outcomes": {
+        "0:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ],
+        "0:HOLD": [
+          {
+            "consequence": 1,
+            "next_state": 0
+          }
+        ],
+        "0:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 1,
+            "next_state": 0
+          },
+          {
+            "consequence": -1,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          },
+          {
+            "consequence": 0,
+            "next_state": 0
+          }
+        ]
+      }
+    },
+    "R5": {
+      "acquisition_consequence": 0,
+      "acquisition_next_state": 2,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Both sums exactly zero",
+      "empirical_relations": [
+        "2:ADVANCE"
+      ],
+      "expected_eligible": true,
+      "expected_target": "HOLD",
+      "fault": null,
+      "fresh": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "R6": {
+      "acquisition_consequence": -1,
+      "acquisition_next_state": 1,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Two unseen alternatives; reversed display order",
+      "empirical_relations": [
+        "1:RETREAT"
+      ],
+      "expected_eligible": true,
+      "expected_target": "ADVANCE",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          }
+        ],
+        "1:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ]
+      }
+    },
+    "R7": {
+      "acquisition_consequence": -1,
+      "acquisition_next_state": 2,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Negative acquisition with only RETREAT unseen",
+      "empirical_relations": [
+        "2:HOLD"
+      ],
+      "expected_eligible": true,
+      "expected_target": "RETREAT",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "HOLD",
+      "restart": null,
+      "setup": [
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "2:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ],
+        "2:RETREAT": [
+          {
+            "consequence": -1,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "R8": {
+      "acquisition_consequence": 0,
+      "acquisition_next_state": 2,
+      "boundary_state": 1,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "State-changing acquisition",
+      "empirical_relations": [
+        "1:ADVANCE"
+      ],
+      "expected_eligible": true,
+      "expected_target": "HOLD",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 1,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": 0,
+          "next_state": 1,
+          "pre_state": 1
+        },
+        {
+          "action": "ADVANCE",
+          "consequence": -1,
+          "next_state": 1,
+          "pre_state": 1
+        }
+      ],
+      "repeated_action": "ADVANCE",
+      "restart": "POST",
+      "setup": [],
+      "world_outcomes": {
+        "1:ADVANCE": [
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          },
+          {
+            "consequence": -1,
+            "next_state": 1
+          },
+          {
+            "consequence": 0,
+            "next_state": 1
+          }
+        ],
+        "1:HOLD": [
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    },
+    "R9": {
+      "acquisition_consequence": 1,
+      "acquisition_next_state": 2,
+      "boundary_state": 2,
+      "candidate_input_order": [
+        "RETREAT",
+        "HOLD",
+        "ADVANCE"
+      ],
+      "description": "Persistent deterioration after confirmed change",
+      "empirical_relations": [
+        "2:RETREAT"
+      ],
+      "expected_eligible": true,
+      "expected_target": "ADVANCE",
+      "fault": null,
+      "fresh": [],
+      "initial_state": 2,
+      "interrupt": [],
+      "prefix": [
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": 1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        },
+        {
+          "action": "RETREAT",
+          "consequence": -1,
+          "next_state": 2,
+          "pre_state": 2
+        }
+      ],
+      "repeated_action": "RETREAT",
+      "restart": null,
+      "setup": [],
+      "world_outcomes": {
+        "2:ADVANCE": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          }
+        ],
+        "2:RETREAT": [
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": 1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": 0,
+            "next_state": 2
+          }
+        ]
+      }
+    }
+  },
+  "control_cases": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17"
+  ],
+  "eligible_cases": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9"
+  ],
+  "frozen_candidate_sha256": "fcef478a02beb69a1d29988c5ce12929ad2ba077591131e0dcd114e7ccab99b4",
+  "schema": "empirical_evidence_acquisition_replication_v0"
+}
