@@ -125,7 +125,10 @@ def direct_action(projection,allowed,seed,private_path):
         semantic_projection_sha256=digest(projection),wall_seconds=wall,
         raw_response_sha256=digest(response) if response is not None else None,
         transport_error=error)
-    if error:raise RuntimeError('thinking transport failure: '+error)
+    if error:
+        result.update(status='INTERFACE_INCOMPATIBLE',parse_error='transport: '+error)
+        _atomic_write(private_path/'verdict.private.json',result)
+        return result
     try:action,content,reasoning=parse_final(response,allowed)
     except (ValueError,KeyError,TypeError) as exc:
         result.update(status='INTERFACE_INCOMPATIBLE',parse_error=repr(exc))
