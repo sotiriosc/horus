@@ -1,0 +1,110 @@
+{
+  "status": "PASS_WITH_PROSPECTIVE_LIMITATIONS",
+  "source_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+  "source_sha256": {
+    "tools/server/server.cpp": "9cf6bf6f464fad94172c09b2f9e6a4eea3e69b96117ed1b14b31e0de094c130e",
+    "tools/server/server-common.cpp": "28e058d1ab9f290b35d382fcd8869012f6d40276cb440ddf7a585ca33a8367fb",
+    "tools/server/README.md": "37866b6b348e49a44205f776467afc16322d136bfa06c4448354a6c93b74f52e",
+    "grammars/README.md": "e1874c0f08abbcfe45eff0b7b0290faa58f630981bf94274e2d99751ef3b0208",
+    "common/json-schema-to-grammar.cpp": "d5a82fff5d611abd1198ff27c328b20376ffe9f110b4771d579c8bd20c70541f",
+    "common/json-schema.cpp": "68ba2adbb6e0578c0d89e99cc9a9a7aa9c0b554b555bcd3908da71789045509d"
+  },
+  "references": [
+    {
+      "finding": "endpoint",
+      "path": "tools/server/server.cpp",
+      "line_start": 260,
+      "line_end": 264,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server.cpp#L260-L264",
+      "excerpt": "    ctx_http.post(\"/v1/completions\",           ex_wrapper(routes.post_completions_oai));\n    ctx_http.post(\"/chat/completions\",         ex_wrapper(routes.post_chat_completions));\n    ctx_http.post(\"/v1/chat/completions\",      ex_wrapper(routes.post_chat_completions));\n    ctx_http.post(\"/v1/chat/completions/control\", ex_wrapper(routes.post_control));\n    ctx_http.post(\"/v1/responses\",             ex_wrapper(routes.post_responses_oai));"
+    },
+    {
+      "finding": "response_format",
+      "path": "tools/server/server-common.cpp",
+      "line_start": 1258,
+      "line_end": 1277,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/server-common.cpp#L1258-L1277",
+      "excerpt": "    // Handle \"response_format\" field\n    if (body.contains(\"response_format\")) {\n        json response_format      = json_value(body, \"response_format\", json::object());\n        std::string response_type = json_value(response_format, \"type\", std::string());\n        if (response_type == \"json_object\") {\n            if (response_format.contains(\"schema\") || json_schema.empty()) {\n                json_schema = json_value(response_format, \"schema\", json::object());\n            }\n        } else if (response_type == \"json_schema\") {\n            auto schema_wrapper = json_value(response_format, \"json_schema\", json::object());\n            json_schema = json_value(schema_wrapper, \"schema\", json::object());\n        } else if (!response_type.empty() && response_type != \"text\") {\n            throw std::invalid_argument(\"response_format type must be one of \\\"text\\\" or \\\"json_object\\\", but got: \" + response_type);\n        }\n    }\n\n    // an absent or empty schema means any object\n    if (json_schema.is_object() && json_schema.empty()) {\n        json_schema[\"type\"] = \"object\";\n    }"
+    },
+    {
+      "finding": "api_docs",
+      "path": "tools/server/README.md",
+      "line_start": 1308,
+      "line_end": 1318,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/tools/server/README.md#L1308-L1318",
+      "excerpt": "### POST `/v1/chat/completions`: OpenAI-compatible Chat Completions API\n\nGiven a ChatML-formatted json description in `messages`, it returns the predicted completion. Both synchronous and streaming mode are supported, so scripted and interactive applications work fine. While no strong claims of compatibility with OpenAI API spec is being made, in our experience it suffices to support many apps. Only models with a [supported chat template](https://github.com/ggml-org/llama.cpp/wiki/Templates-supported-by-llama_chat_apply_template) can be used optimally with this endpoint. By default, the ChatML template will be used.\n\n*Options:*\n\nSee [OpenAI Chat Completions API documentation](https://platform.openai.com/docs/api-reference/chat). llama.cpp `/completion`-specific features such as `mirostat` are also supported.\n\nThe `response_format` parameter supports both plain JSON output (e.g. `{\"type\": \"json_object\"}`) and schema-constrained JSON (e.g. `{\"type\": \"json_object\", \"schema\": {\"type\": \"string\", \"minLength\": 10, \"maxLength\": 100}}` or `{\"type\": \"json_schema\", \"schema\": {\"properties\": { \"name\": { \"title\": \"Name\",  \"type\": \"string\" }, \"date\": { \"title\": \"Date\",  \"type\": \"string\" }, \"participants\": { \"items\": {\"type: \"string\" }, \"title\": \"Participants\",  \"type\": \"string\" } } } }`), similar to other OpenAI-inspired API providers.\n\n`chat_template_kwargs`: Allows sending additional parameters to the json templating system. For example: `{\"enable_thinking\": false}`"
+    },
+    {
+      "finding": "grammar_limitations",
+      "path": "grammars/README.md",
+      "line_start": 203,
+      "line_end": 223,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/grammars/README.md#L203-L223",
+      "excerpt": "Here is also a list of known limitations (contributions welcome):\n\n- `additionalProperties` defaults to `false` (produces faster grammars + reduces hallucinations).\n- `\"additionalProperties\": true` may produce keys that contain unescaped newlines.\n- Unsupported features are skipped silently. It is currently advised to use the command-line Python converter (see above) to see any warnings, and to inspect the resulting grammar / test it w/ [llama-gbnf-validator](../examples/gbnf-validator/gbnf-validator.cpp).\n- Can't mix `properties` w/ `anyOf` / `oneOf` in the same type (https://github.com/ggml-org/llama.cpp/issues/7703)\n- [prefixItems](https://json-schema.org/draft/2020-12/json-schema-core#name-prefixitems) is broken (but [items](https://json-schema.org/draft/2020-12/json-schema-core#name-items) works)\n- `minimum`, `exclusiveMinimum`, `maximum`, `exclusiveMaximum`: only supported for `\"type\": \"integer\"` for now, not `number`\n- Nested `$ref`s are broken (https://github.com/ggml-org/llama.cpp/issues/8073)\n- [pattern](https://json-schema.org/draft/2020-12/json-schema-validation#name-pattern)s must start with `^` and end with `$`\n- Remote `$ref`s not supported in the C++ version (Python & JavaScript versions fetch https refs)\n- `string` [formats](https://json-schema.org/draft/2020-12/json-schema-validation#name-defined-formats) lack `uri`, `email`\n- No [`patternProperties`](https://json-schema.org/draft/2020-12/json-schema-core#name-patternproperties)\n\nAnd a non-exhaustive list of other unsupported features that are unlikely to be implemented (hard and/or too slow to support w/ stateless grammars):\n\n- [`uniqueItems`](https://json-schema.org/draft/2020-12/json-schema-validation#name-uniqueitems)\n- [`contains`](https://json-schema.org/draft/2020-12/json-schema-core#name-contains) / `minContains`\n- `$anchor` (cf. [dereferencing](https://json-schema.org/draft/2020-12/json-schema-core#name-dereferencing))\n- [`not`](https://json-schema.org/draft/2020-12/json-schema-core#name-not)\n- [Conditionals](https://json-schema.org/draft/2020-12/json-schema-core#name-keywords-for-applying-subsche) `if` / `then` / `else` / `dependentSchemas`"
+    },
+    {
+      "finding": "converter",
+      "path": "common/json-schema-to-grammar.cpp",
+      "line_start": 993,
+      "line_end": 1013,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/common/json-schema-to-grammar.cpp#L993-L1013",
+      "excerpt": "std::string json_schema_to_grammar(const common_json & schema, bool force_gbnf) {\n#ifdef LLAMA_USE_LLGUIDANCE\n    if (!force_gbnf) {\n        return \"%llguidance {}\\nstart: %json \" + schema.dump();\n    }\n#else\n    (void)force_gbnf;\n#endif // LLAMA_USE_LLGUIDANCE\n    try {\n        return json_schema_to_grammar(common_chat_schema_from_json(schema));\n    } catch (const std::runtime_error & e) {\n        throw std::invalid_argument(std::string(\"JSON schema conversion failed:\\n\") + e.what());\n    }\n}\n\nstd::string json_schema_to_grammar(const common_chat_schema_document & schema) {\n    common_chat_schema_converter converter(false);\n    converter.visit(*schema.root, \"\");\n    converter.check_errors();\n    return converter.format_grammar();\n}"
+    },
+    {
+      "finding": "schema_parser",
+      "path": "common/json-schema.cpp",
+      "line_start": 273,
+      "line_end": 313,
+      "url": "https://github.com/ggml-org/llama.cpp/blob/526c43b8f7dfea9032e9f35e7a1be9183ca7cc20/common/json-schema.cpp#L273-L313",
+      "excerpt": "        }\n\n        const std::string type_name = type.is_string() ? type.get<std::string>() : \"\";\n        const bool has_properties = schema.contains(\"properties\") ||\n            (schema.contains(\"additionalProperties\") && schema.at(\"additionalProperties\") != true);\n\n        if (type_name.empty()) {\n            // without a type the structural keywords decide, in the same order as the converter\n            if (has_properties) {\n                return build_object(schema, path);\n            }\n            if (schema.contains(\"allOf\")) {\n                return build_alternatives<common_chat_schema_all_of>(schema.at(\"allOf\"), path + \"/allOf\");\n            }\n            if (schema.contains(\"items\") || schema.contains(\"prefixItems\")) {\n                return build_array(schema, path);\n            }\n            if (schema.contains(\"pattern\") || schema.contains(\"minLength\") || schema.contains(\"maxLength\") || get_format(schema, path) != common_chat_schema::FORMAT_NONE) {\n                return build_string(schema, path);\n            }\n            return std::make_unique<common_chat_schema_any>();\n        }\n        if (type_name == \"object\") {\n            if (!has_properties && schema.contains(\"allOf\")) {\n                return build_alternatives<common_chat_schema_all_of>(schema.at(\"allOf\"), path + \"/allOf\");\n            }\n            return build_object(schema, path);\n        }\n        if (type_name == \"string\") {\n            if (schema.contains(\"allOf\")) {\n                return build_alternatives<common_chat_schema_all_of>(schema.at(\"allOf\"), path + \"/allOf\");\n            }\n            return build_string(schema, path);\n        }\n        if (type_name == \"array\") {\n            return build_array(schema, path);\n        }\n        if (type_name == \"integer\") {\n            return build_integer(schema, path);\n        }\n        if (type_name == \"number\") {"
+    }
+  ],
+  "frozen_schema_sha256": "a3aaded8a99b2d6671b86a0822cd830d9ec437ff26df1d6521640f9dbb9586d0",
+  "frozen_unsupported_keyword_paths": [
+    "/properties/affected_component_ids/uniqueItems",
+    "/properties/evidence_ids/uniqueItems",
+    "/allOf/0/if",
+    "/allOf/0/then",
+    "/allOf/0/then/properties/affected_component_ids/uniqueItems"
+  ],
+  "interpretation": "response_format json_object with schema is supported, but grammar is only a generation constraint. uniqueItems and if/then/else are documented unsupported/skipped. The unchanged Python scorer fully validates every raw final. Constraint violations are wrong responses, not study invalidity. Rejected HTTP requests or unusable envelopes remain runtime validity stops.",
+  "validator": {
+    "python": "3.10.12",
+    "jsonschema": "3.2.0",
+    "full_schema_check": "PASS",
+    "valid_fixture": "PASS",
+    "uniqueItems_violation": "REJECTED",
+    "conditional_violation": "REJECTED",
+    "fixtures_are_not_model_responses": true
+  },
+  "prior_interface_evidence": {
+    "study": "agent-led-diagnosis-verified-introspection-v0",
+    "model_sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+    "llama_cpp_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+    "endpoint_family": "/v1/chat/completions",
+    "response_format": "json_object with schema",
+    "native_reasoning": "deepseek; separated content read in run_study.py:85",
+    "python_validation": "run_study.py:90; phase-a-audit.json schema_valid true",
+    "completed_call_metadata": {
+      "phase": "A",
+      "request_sha256": "1ea5edd8a5432f075781ab2d491baf1e7b64a88f7ca13437408154ebce66f82a",
+      "response_sha256": "156fc877a796eb97803c41bf3238fe9284c1ae9eba76641ba6b0b6a034d8e6a8",
+      "reasoning_sha256": "ab415418904fbbd33ea28b236f4a8f7443be34f380a0b620ba268f7c1a8046c7",
+      "final_sha256": "1785a89ac3c59320801941588d77eca52bb742021718f3ac2d190314468dce5e",
+      "usage": {
+        "completion_tokens": 936,
+        "prompt_tokens": 7797,
+        "total_tokens": 8733,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "wall_seconds": 14.843147617008071,
+      "prompt_tokens_proxy": 7784
+    },
+    "scope": "Prior interface evidence only; different prompt/schema/seed/output cap; not an R2 observation or guarantee that the exact R2 request will be accepted"
+  },
+  "runtime_probe_calls": 0,
+  "scientific_inputs_changed": false
+}
