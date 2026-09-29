@@ -1,0 +1,84 @@
+{
+  "diagnoses": [
+    {
+      "diagnosis_id": "GAP-POST-E",
+      "statement": "No autonomous scientific campaign using the newly promoted S+E incumbent exists in the preserved publication lineage.",
+      "type": "EVIDENCE_GAP",
+      "current_relevance": "CURRENT_ARCHITECTURE",
+      "evidence_ids": [
+        "EVID-E-PROMOTION",
+        "EVID-SELF-V0",
+        "EVID-SELF-V01"
+      ],
+      "system_versions_used": [
+        "S_PLUS_E_ACTIVE"
+      ],
+      "already_addressed_by_S": false,
+      "already_addressed_by_E": false,
+      "observed": [
+        "EVID-E-PROMOTION"
+      ],
+      "inferred": [
+        "No post-promotion autonomous execution records"
+      ],
+      "unknown": [
+        "External campaigns outside the lineage"
+      ],
+      "falsifier": "Presence of any autonomous campaign using S+E in the lineage",
+      "minimum_new_evidence_needed": "One autonomous campaign record with S+E as active selector"
+    },
+    {
+      "diagnosis_id": "SELF-MODEL-FAILURE",
+      "statement": "Architecture reconstruction failed due to quotation fidelity issues and mechanical-authority/S conflation.",
+      "type": "EVIDENCE_GAP",
+      "current_relevance": "CURRENT_ARCHITECTURE",
+      "evidence_ids": [
+        "EVID-SELF-V0",
+        "EVID-SELF-V01"
+      ],
+      "system_versions_used": [
+        "S_PLUS_E_ACTIVE"
+      ],
+      "already_addressed_by_S": false,
+      "already_addressed_by_E": false,
+      "observed": [
+        "AGENT_SELF_MODEL_GROUNDING_FAILED"
+      ],
+      "inferred": [
+        "Phase B routing/model-call predicate failures"
+      ],
+      "unknown": [
+        "Autonomous execution outcomes"
+      ],
+      "falsifier": "Successful architecture reconstruction with distinct mechanical authority/S roles",
+      "minimum_new_evidence_needed": "Validated architecture reconstruction with clear authority distinctions"
+    },
+    {
+      "diagnosis_id": "QWEN-SUBSTITUTION-FAILURE",
+      "statement": "Autonomous Qwen substitution collapsed to HOLD in all runs despite being faster than Dolphin.",
+      "type": "EVIDENCE_GAP",
+      "current_relevance": "S_ACTIVE",
+      "evidence_ids": [
+        "EVID-QWEN-SUB",
+        "EVID-QWEN-R128"
+      ],
+      "system_versions_used": [
+        "S_ACTIVE"
+      ],
+      "already_addressed_by_S": false,
+      "already_addressed_by_E": false,
+      "observed": [
+        "QWEN_FAST_BUT_BEHAVIORALLY_UNSUITABLE"
+      ],
+      "inferred": [
+        "No deterministic S opportunity arose during Qwen runs"
+      ],
+      "unknown": [
+        "Alternative model candidates"
+      ],
+      "falsifier": "Qwen substitution achieving non-HOLD outcomes in >=1 run",
+      "minimum_new_evidence_needed": "Single Qwen run with non-HOLD action selection"
+    }
+  ],
+  "no_supported_diagnosis": false
+}

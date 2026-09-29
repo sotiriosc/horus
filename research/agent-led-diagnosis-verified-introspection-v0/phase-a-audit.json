@@ -1,0 +1,196 @@
+{
+  "phase": "A",
+  "schema_valid": true,
+  "empty_answer_consistent": true,
+  "diagnoses": [
+    {
+      "diagnosis_id": "GAP-POST-E",
+      "mechanical_status": "PASS",
+      "checks": [
+        {
+          "check": "all_evidence_ids_exist",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "cited_versions_declared",
+          "passed": true,
+          "detail": [
+            "S_PLUS_E_ACTIVE"
+          ]
+        },
+        {
+          "check": "current_evidence_anchor_present",
+          "passed": true,
+          "detail": "Historical evidence alone cannot establish current persistence."
+        },
+        {
+          "check": "not_marked_already_addressed",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "falsifier_and_information_request_present",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "numeric_literals_occur_in_cited_public_evidence",
+          "passed": true,
+          "detail": {
+            "claimed_numbers": [],
+            "missing": [],
+            "limit": "Literal check only; contextual correspondence must also pass the external source-linked gate."
+          }
+        },
+        {
+          "check": "no_invented_code_paths",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_invented_commit_identifier",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_hidden_outcome_identifiers",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "semantic_gate": "PASS",
+      "full_status": "PASS"
+    },
+    {
+      "diagnosis_id": "SELF-MODEL-FAILURE",
+      "mechanical_status": "PASS",
+      "checks": [
+        {
+          "check": "all_evidence_ids_exist",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "cited_versions_declared",
+          "passed": true,
+          "detail": [
+            "S_PLUS_E_ACTIVE"
+          ]
+        },
+        {
+          "check": "current_evidence_anchor_present",
+          "passed": true,
+          "detail": "Historical evidence alone cannot establish current persistence."
+        },
+        {
+          "check": "not_marked_already_addressed",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "falsifier_and_information_request_present",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "numeric_literals_occur_in_cited_public_evidence",
+          "passed": true,
+          "detail": {
+            "claimed_numbers": [],
+            "missing": [],
+            "limit": "Literal check only; contextual correspondence must also pass the external source-linked gate."
+          }
+        },
+        {
+          "check": "no_invented_code_paths",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_invented_commit_identifier",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_hidden_outcome_identifiers",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "semantic_gate": "FAIL",
+      "full_status": "FAIL"
+    },
+    {
+      "diagnosis_id": "QWEN-SUBSTITUTION-FAILURE",
+      "mechanical_status": "FAIL",
+      "checks": [
+        {
+          "check": "all_evidence_ids_exist",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "cited_versions_declared",
+          "passed": true,
+          "detail": [
+            "S_ACTIVE"
+          ]
+        },
+        {
+          "check": "current_evidence_anchor_present",
+          "passed": false,
+          "detail": "Historical evidence alone cannot establish current persistence."
+        },
+        {
+          "check": "not_marked_already_addressed",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "falsifier_and_information_request_present",
+          "passed": true,
+          "detail": null
+        },
+        {
+          "check": "numeric_literals_occur_in_cited_public_evidence",
+          "passed": true,
+          "detail": {
+            "claimed_numbers": [],
+            "missing": [],
+            "limit": "Literal check only; contextual correspondence must also pass the external source-linked gate."
+          }
+        },
+        {
+          "check": "no_invented_code_paths",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_invented_commit_identifier",
+          "passed": true,
+          "detail": []
+        },
+        {
+          "check": "no_hidden_outcome_identifiers",
+          "passed": true,
+          "detail": null
+        }
+      ],
+      "semantic_gate": "FAIL",
+      "full_status": "FAIL"
+    }
+  ],
+  "full_gate": "PASS",
+  "no_output_repair": true,
+  "limitations": "Free-text entailment, scope, novelty and causal relevance are not proved by token matching. A mandatory source-linked external review must verify every assertion before selection; ambiguous or unsupported factual claims cannot pass. No additional model grades or repairs Phase A.",
+  "surviving_diagnosis_ids": [
+    "GAP-POST-E"
+  ],
+  "rejected_diagnosis_ids": [
+    "SELF-MODEL-FAILURE",
+    "QWEN-SUBSTITUTION-FAILURE"
+  ],
+  "source_review": "phase-a-source-review.json",
+  "gate_meaning": "At least one candidate survives; this is not a claim that every Phase A diagnosis passed."
+}

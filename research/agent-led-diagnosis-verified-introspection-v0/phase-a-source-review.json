@@ -1,0 +1,115 @@
+{
+  "method": "External source-linked factual adjudication, supported by explicit deterministic repository assertions; not a second model call and not output repair.",
+  "model_output_sha256": "078bf59f1fbfdd18e780ecac0adafc1d99693ae116efd1ea10e041fe802b055a",
+  "diagnosis_reviews": [
+    {
+      "diagnosis_id": "GAP-POST-E",
+      "status": "PASS",
+      "claim_reviews": [
+        {
+          "claim": "No autonomous S+E scientific campaign in the preserved publication lineage",
+          "verdict": "SUPPORTED",
+          "sources": [
+            "EVID-E-PROMOTION",
+            "EVID-SELF-V0",
+            "EVID-SELF-V01"
+          ],
+          "verification": "Promotion records zero scientific campaigns; both subsequent studies are read-only analysis. Full promotion-to-parent changed-path inventory contains only those study directories."
+        },
+        {
+          "claim": "Current relevance and no S/E solution to the absence",
+          "verdict": "SUPPORTED",
+          "sources": [
+            "EVID-E-PROMOTION"
+          ],
+          "verification": "The active alias is S+E. Promoting a mechanism and running engineering fixtures does not supply an autonomous scientific campaign."
+        },
+        {
+          "claim": "Unknown external campaigns and falsifier",
+          "verdict": "SUPPORTED_SCOPE_LIMIT",
+          "sources": [
+            "EVID-SELF-V0",
+            "EVID-SELF-V01"
+          ],
+          "verification": "Claim is bounded to the preserved lineage; external work is explicitly unknown. Presence of a qualifying current campaign would falsify the absence."
+        },
+        {
+          "claim": "One autonomous campaign record is minimum information requested",
+          "verdict": "DIAGNOSIS_ONLY",
+          "sources": [
+            "EVID-E-PROMOTION"
+          ],
+          "verification": "A record of the missing observation is requested; no policy, model, threshold or experimental design is proposed. It would resolve existence, not establish general performance."
+        }
+      ],
+      "gates": {
+        "factual": true,
+        "current_relevance": true,
+        "novelty": true,
+        "numerical_meaning": true,
+        "invalid_study_handling": true,
+        "version_persistence": true,
+        "promoted_scope": true,
+        "known_components_commits": true,
+        "no_hidden_outcomes": true,
+        "diagnosis_only": true
+      }
+    },
+    {
+      "diagnosis_id": "SELF-MODEL-FAILURE",
+      "status": "FAIL",
+      "claim_reviews": [
+        {
+          "claim": "Architecture reconstruction remains a current gap",
+          "verdict": "CONTRADICTED_BY_CITED_EVIDENCE",
+          "sources": [
+            "EVID-SELF-V0",
+            "EVID-SELF-V01"
+          ],
+          "verification": "The quotation/conflation statement describes v0 accurately, but v0.1 Phase A already passed 104 checks with distinct mechanical authority/S. Its stated falsifier was already met. Phase B application failure does not turn reconstruction into an unresolved gap. Do not repair this diagnosis into a different claim."
+        }
+      ],
+      "gates": {
+        "factual": false,
+        "current_relevance": false,
+        "novelty": false,
+        "numerical_meaning": true,
+        "invalid_study_handling": true,
+        "version_persistence": false,
+        "promoted_scope": true,
+        "known_components_commits": true,
+        "no_hidden_outcomes": true,
+        "diagnosis_only": true
+      }
+    },
+    {
+      "diagnosis_id": "QWEN-SUBSTITUTION-FAILURE",
+      "status": "FAIL",
+      "claim_reviews": [
+        {
+          "claim": "Historical Qwen HOLD collapse",
+          "verdict": "HISTORICALLY_SUPPORTED_NOT_CURRENT_DIAGNOSIS",
+          "sources": [
+            "EVID-QWEN-SUB",
+            "EVID-QWEN-R128"
+          ],
+          "verification": "Both cited campaigns are S_ACTIVE and pre-E. Qwen is not the current action model. The record supplies neither current S+E behavioral persistence nor a clearly defined current information gap; historical observed failure is labeled EVIDENCE_GAP. Its current_relevance field explicitly names the old architecture. The supplied E addressed-scope annotation is not discussed. No repair or new current evidence may be added."
+        }
+      ],
+      "gates": {
+        "factual": false,
+        "current_relevance": false,
+        "novelty": false,
+        "numerical_meaning": true,
+        "invalid_study_handling": true,
+        "version_persistence": false,
+        "promoted_scope": false,
+        "known_components_commits": true,
+        "no_hidden_outcomes": true,
+        "diagnosis_only": true
+      }
+    }
+  ],
+  "reviewer_added_diagnoses": 0,
+  "rewritten_diagnoses": 0
+}
