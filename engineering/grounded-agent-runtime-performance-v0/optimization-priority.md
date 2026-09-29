@@ -1,0 +1,17 @@
+# Optimization priority
+
+This ranks measured latency components for the frozen local runtime. The measurement baseline is the warm 559-token public-safe action shape: 32.800 s wall, 31.818 s prompt evaluation, 0.974 s for eight output tokens, and less than 0.001 s load. The completed eligibility campaign independently had a 564-token median and 32.08 s median prompt evaluation across 42 archived action attempts. Private request/response material was not copied. A separate public-safe 6321-token review input returned no response within 900 s even with output capped at eight tokens; this is a censored result with no Ollama phase timings.
+
+| Priority | Category | Evidence and contribution | Status |
+| ---: | --- | --- | --- |
+| 1 | PROMPT_PREFILL_LENGTH | 97.0% of representative warm action wall time; 98.8% of bounded 1554-token retrospective wall time. Synthetic 75 to 1925 tokens grew from 3.962 to 58.704 s. | Largest directly measured warm bottleneck. |
+| 2 | MODEL_PARTIAL_CPU_OFFLOAD | Current runner placed 20/33 layers on GPU; earlier logs showed 21/33. The 26.4 GB artifact exceeds 24,564 MiB GPU capacity. | Observed structural limitation and likely throughput cause; an independent fully resident comparison was not run, so its separate speed penalty is unquantified. |
+| 3 | MODEL_RELOAD | First cold tiny call loaded for 37.701 s, versus about 0.0004 s warm. Each of two completed paired campaigns had one load over 1 s, not repeated per decision. Changing context to 8192 in the review probe replaced the runner. | Large intermittent cost, not dominant over warm calls within the completed campaigns. |
+| 4 | OUTPUT_GENERATION | Eight action tokens took about 0.93–1.05 s in the diverse probes; completed campaigns had median ten output tokens and about 1.0–1.24 s generation. | Small for action replies; not measured for long reviews because historical full reviews timed out. |
+| 5 | QUEUE_WAIT | Current warm wall-minus-Ollama total was about 0.002–0.047 s; 100 unique archived attempts had no external wait over one second. | Not a measured campaign bottleneck; remains a shared-service risk. |
+| — | GROUNDING/MEMORY | The benchmark intentionally performs no Memory work. | Contribution not measured here; cannot rank against inference. |
+| — | OTHER | API, tokenization, scheduling and GPU sampling are within small unaccounted wall intervals for completed calls. | No separate material contribution established. |
+
+The smallest scientifically safe operational path is to retain the frozen model, prompt bytes, sampling and protected authority while avoiding avoidable cold starts and overlapping service users. Group work by required runner context where possible, but do not force the historical 8192-token retrospective input into 2048. That preserves request semantics and can save a measured reload event; any changed scheduling still needs a recorded verification run.
+
+A compact view can reduce tokens, but it changes the model-visible text. Its token and timing result is in compact-model-view.md; behavioral equivalence is not established and would require a separate matched validation before active use. A new fully resident model/engine could target more than eightfold prompt throughput relative to 17.6 tokens/s on this action shape, but that is an acceptance target, not a measured speedup. A new decision model, runtime sampling behavior or constrained-output implementation requires separate scientific validation; historical claims cannot be transferred to it.

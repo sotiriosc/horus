@@ -1,0 +1,603 @@
+{
+  "archived_timing_aggregates_no_raw_calls": {
+    "controlled_pairing": {
+      "loads_over_1s": 1,
+      "maximum_load_s": 35.488,
+      "median_input_tokens": 559.5,
+      "median_prompt_eval_s": 25.06,
+      "physical_attempts": 58
+    },
+    "eligibility_completion": {
+      "loads_over_1s": 1,
+      "maximum_load_s": 38.917,
+      "median_input_tokens": 564,
+      "median_prompt_eval_s": 32.08,
+      "physical_attempts": 42
+    }
+  },
+  "benchmark_model_calls_made": 14,
+  "calls": [
+    {
+      "cold_or_warm": "cold",
+      "eval_duration_s": 0.947238,
+      "generation_tokens_per_s": 8.446,
+      "gpu_memory_used_mib_peak": 19648,
+      "gpu_samples": 56,
+      "gpu_utilization_pct_mean": 35.6,
+      "gpu_utilization_pct_peak": 81,
+      "group": "B1",
+      "input_tokens": 55,
+      "load_duration_s": 37.700966,
+      "memory_writes": 0,
+      "name": "B1_tiny_cold",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 95,
+      "prompt_eval_duration_s": 3.524526,
+      "prompt_shape": "tiny",
+      "prompt_tokens_per_s": 15.605,
+      "request_sha256": "eaf3921b24af71a717dd226c67db9fd8c70cb681979b6f236a6c282802866615",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {},
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 42.177784,
+      "unaccounted_wall_s": 0.003069,
+      "wall_time_s": 42.180854,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 0.948492,
+      "generation_tokens_per_s": 8.434,
+      "gpu_memory_used_mib_peak": 19647,
+      "gpu_samples": 6,
+      "gpu_utilization_pct_mean": 46.0,
+      "gpu_utilization_pct_peak": 98,
+      "group": "B1",
+      "input_tokens": 55,
+      "load_duration_s": 0.000394,
+      "memory_writes": 0,
+      "name": "B1_tiny_warm",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 95,
+      "prompt_eval_duration_s": 3.524326,
+      "prompt_shape": "tiny",
+      "prompt_tokens_per_s": 15.606,
+      "request_sha256": "eaf3921b24af71a717dd226c67db9fd8c70cb681979b6f236a6c282802866615",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 4.477888,
+      "unaccounted_wall_s": 0.002845,
+      "wall_time_s": 4.480733,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 0.93323,
+      "generation_tokens_per_s": 8.572,
+      "gpu_memory_used_mib_peak": 19625,
+      "gpu_samples": 10,
+      "gpu_utilization_pct_mean": 39.4,
+      "gpu_utilization_pct_peak": 98,
+      "group": "B2",
+      "input_tokens": 107,
+      "load_duration_s": 0.000394,
+      "memory_writes": 0,
+      "name": "B2_compact",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 271,
+      "prompt_eval_duration_s": 6.446339,
+      "prompt_shape": "compact",
+      "prompt_tokens_per_s": 16.599,
+      "request_sha256": "9c9a6785ae7321a669cc71ec7ca8791eeae1f69d3da85e4895bc8a79b5693556",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 7.384839,
+      "unaccounted_wall_s": 0.00176,
+      "wall_time_s": 7.386599,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 0.973523,
+      "generation_tokens_per_s": 8.218,
+      "gpu_memory_used_mib_peak": 19977,
+      "gpu_samples": 42,
+      "gpu_utilization_pct_mean": 39.7,
+      "gpu_utilization_pct_peak": 99,
+      "group": "B3",
+      "input_tokens": 559,
+      "load_duration_s": 0.000436,
+      "memory_writes": 0,
+      "name": "B3_representative_action",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 1326,
+      "prompt_eval_duration_s": 31.81815,
+      "prompt_shape": "representative",
+      "prompt_tokens_per_s": 17.569,
+      "request_sha256": "308138db1dabef3ec7eef8b84d53074fff0d8a1e769d03b6b186ccb67b4f5753",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 594,
+      "total_duration_s": 32.796327,
+      "unaccounted_wall_s": 0.003876,
+      "wall_time_s": 32.800203,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1.050354,
+      "generation_tokens_per_s": 7.616,
+      "gpu_memory_used_mib_peak": 20034,
+      "gpu_samples": 114,
+      "gpu_utilization_pct_mean": 39.5,
+      "gpu_utilization_pct_peak": 99,
+      "group": "B4",
+      "input_tokens": 1554,
+      "load_duration_s": 0.000397,
+      "memory_writes": 0,
+      "name": "B4_retrospective",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 4461,
+      "prompt_eval_duration_s": 88.819928,
+      "prompt_shape": "retrospective",
+      "prompt_tokens_per_s": 17.496,
+      "request_sha256": "9798421d26afcaacb148a51bfadfb9359d174b813d004c6f0d601b7e58d34000",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 253,
+      "total_duration_s": 89.874435,
+      "unaccounted_wall_s": 0.046504,
+      "wall_time_s": 89.920939,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1e-05,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19857,
+      "gpu_samples": 6,
+      "gpu_utilization_pct_mean": 38.5,
+      "gpu_utilization_pct_peak": 61,
+      "group": "SCALING",
+      "input_tokens": 75,
+      "load_duration_s": 0.000423,
+      "memory_writes": 0,
+      "name": "S50",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 260,
+      "prompt_eval_duration_s": 3.961804,
+      "prompt_shape": "50",
+      "prompt_tokens_per_s": 18.931,
+      "request_sha256": "265c5639211d06588f1c20afac2fc201edc77969fd3e56cf210b60b0b227fc8b",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 3.963667,
+      "unaccounted_wall_s": 0.045954,
+      "wall_time_s": 4.009621,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 0.965482,
+      "generation_tokens_per_s": 8.286,
+      "gpu_memory_used_mib_peak": 19857,
+      "gpu_samples": 9,
+      "gpu_utilization_pct_mean": 41.6,
+      "gpu_utilization_pct_peak": 85,
+      "group": "SCALING",
+      "input_tokens": 125,
+      "load_duration_s": 0.000403,
+      "memory_writes": 0,
+      "name": "S100",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 560,
+      "prompt_eval_duration_s": 5.317743,
+      "prompt_shape": "100",
+      "prompt_tokens_per_s": 23.506,
+      "request_sha256": "31d2770c57acc752d13877b6313ebb233b7ae08d714fe85b02dc9ee6ca52a901",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 6.285841,
+      "unaccounted_wall_s": 0.046726,
+      "wall_time_s": 6.332567,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1.1e-05,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19857,
+      "gpu_samples": 13,
+      "gpu_utilization_pct_mean": 38.7,
+      "gpu_utilization_pct_peak": 94,
+      "group": "SCALING",
+      "input_tokens": 275,
+      "load_duration_s": 0.000541,
+      "memory_writes": 0,
+      "name": "S250",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 1460,
+      "prompt_eval_duration_s": 9.67341,
+      "prompt_shape": "250",
+      "prompt_tokens_per_s": 28.428,
+      "request_sha256": "bcc5aff508867a9fefc2db15105b7d5404495dd12938803fe891b8d1dddf5d71",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 9.675468,
+      "unaccounted_wall_s": 0.002064,
+      "wall_time_s": 9.677532,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1.1e-05,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19921,
+      "gpu_samples": 22,
+      "gpu_utilization_pct_mean": 35.4,
+      "gpu_utilization_pct_peak": 95,
+      "group": "SCALING",
+      "input_tokens": 525,
+      "load_duration_s": 0.000433,
+      "memory_writes": 0,
+      "name": "S500",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 2960,
+      "prompt_eval_duration_s": 17.019821,
+      "prompt_shape": "500",
+      "prompt_tokens_per_s": 30.846,
+      "request_sha256": "7506725900d7dd130374b03043ce52b21800c08396bb794fea15ca2a9ba148d5",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 17.023835,
+      "unaccounted_wall_s": 0.004586,
+      "wall_time_s": 17.028421,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1.3e-05,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19932,
+      "gpu_samples": 41,
+      "gpu_utilization_pct_mean": 34.9,
+      "gpu_utilization_pct_peak": 95,
+      "group": "SCALING",
+      "input_tokens": 1025,
+      "load_duration_s": 0.000457,
+      "memory_writes": 0,
+      "name": "S1000",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 5960,
+      "prompt_eval_duration_s": 31.67625,
+      "prompt_shape": "1000",
+      "prompt_tokens_per_s": 32.359,
+      "request_sha256": "e314c39efdf037694ac6d7eefc0e665f5cb3b1d683b58f1125bf724e72d938bf",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 31.679716,
+      "unaccounted_wall_s": 0.045625,
+      "wall_time_s": 31.725341,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 9e-06,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19991,
+      "gpu_samples": 76,
+      "gpu_utilization_pct_mean": 36.4,
+      "gpu_utilization_pct_peak": 94,
+      "group": "SCALING",
+      "input_tokens": 1925,
+      "load_duration_s": 0.000517,
+      "memory_writes": 0,
+      "name": "S1900",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 11360,
+      "prompt_eval_duration_s": 58.704351,
+      "prompt_shape": "1900",
+      "prompt_tokens_per_s": 32.791,
+      "request_sha256": "e3ed3cd1a2b0b0570d7d505f21c35a6763bf85792a14353e65ac7633eb062ed5",
+      "runner_after": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_before": {
+        "2902435": {
+          "ctx_size": 2048,
+          "gpu_layers": 20
+        }
+      },
+      "runner_pid": "2902435",
+      "system_chars": 0,
+      "total_duration_s": 58.710999,
+      "unaccounted_wall_s": 0.006403,
+      "wall_time_s": 58.717402,
+      "world_executions": 0
+    },
+    {
+      "client_timeout_s": 900,
+      "cold_or_warm": "runner_context_reload",
+      "elapsed_at_least_s": 900,
+      "eval_duration_s": null,
+      "gpu_memory_used_mib_observed_at_least": 23721,
+      "gpu_utilization_pct_observed": 100,
+      "group": "B4",
+      "input_token_count_source": "Direct runner tokenization of rendered public-safe prompt; not Ollama response metadata. Comparable nonempty-system B3 differed from API count by one token.",
+      "input_tokens": 6321,
+      "load_duration_s": null,
+      "memory_writes": 0,
+      "name": "B4_full_historical_review",
+      "notes": "No response or Ollama phase metadata; cannot attribute the full 900 seconds to prefill alone. The historical study remains INVALID.",
+      "output_stored": false,
+      "output_tokens": null,
+      "prompt_chars": 17697,
+      "prompt_eval_duration_s": null,
+      "prompt_shape": "public_30_decisions",
+      "public_safe_input_sha256": "27e747ada8abf5536b03c9007d4cc56f16921fe6e2a4cea316f0f3f810411613",
+      "request_sha256": "76cc7989972063ff739f23abda0d7521465f6762baf48c541814eb47301f505c",
+      "runner_ctx_size": 8192,
+      "runner_gpu_layers": 20,
+      "runner_pid": "2909789",
+      "runner_startup_s_from_server_log": 6.201109,
+      "server_logged_duration": "15m0s",
+      "server_status": 500,
+      "status": "TIMEOUT_NO_RESPONSE",
+      "system_chars": 591,
+      "total_duration_s": null,
+      "wall_time_s": null,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "cold",
+      "eval_duration_s": 0.819194,
+      "generation_tokens_per_s": 9.766,
+      "gpu_memory_used_mib_peak": 23511,
+      "gpu_samples": 13,
+      "gpu_utilization_pct_mean": 38.5,
+      "gpu_utilization_pct_peak": 100,
+      "group": "RESTORE",
+      "input_tokens": 55,
+      "load_duration_s": 5.117208,
+      "memory_writes": 0,
+      "name": "B1_restore_ctx2048",
+      "output_stored": false,
+      "output_tokens": 8,
+      "prompt_chars": 95,
+      "prompt_eval_duration_s": 3.063202,
+      "prompt_shape": "tiny",
+      "prompt_tokens_per_s": 17.955,
+      "purpose": "Restore original action runner context after full review probe",
+      "request_sha256": "eaf3921b24af71a717dd226c67db9fd8c70cb681979b6f236a6c282802866615",
+      "runner_after": {
+        "2925004": {
+          "ctx_size": 2048,
+          "gpu_layers": 21
+        }
+      },
+      "runner_before": {},
+      "runner_pid": "2925004",
+      "system_chars": 0,
+      "total_duration_s": 9.004462,
+      "unaccounted_wall_s": 0.706524,
+      "wall_time_s": 9.710986,
+      "world_executions": 0
+    },
+    {
+      "cold_or_warm": "warm",
+      "eval_duration_s": 1.2e-05,
+      "generation_rate_note": "Too few generated tokens for a stable rate.",
+      "generation_tokens_per_s": null,
+      "gpu_memory_used_mib_peak": 19726,
+      "gpu_samples": 3,
+      "gpu_utilization_pct_mean": 18.7,
+      "gpu_utilization_pct_peak": 19,
+      "group": "B1",
+      "input_tokens": 30,
+      "load_duration_s": 0.000579,
+      "memory_writes": 0,
+      "name": "B1_tiny_30_warm",
+      "output_stored": false,
+      "output_tokens": 1,
+      "prompt_chars": 10,
+      "prompt_eval_duration_s": 1.868645,
+      "prompt_shape": "tiny_30",
+      "prompt_tokens_per_s": 16.054,
+      "request_sha256": "4a2269debb0739ae48e4b3ff25b2e92f6b73764970b666d77017ccb7ef10a38b",
+      "runner_after": {
+        "2925004": {
+          "ctx_size": 2048,
+          "gpu_layers": 21
+        }
+      },
+      "runner_before": {
+        "2925004": {
+          "ctx_size": 2048,
+          "gpu_layers": 21
+        }
+      },
+      "runner_pid": "2925004",
+      "system_chars": 0,
+      "total_duration_s": 1.873689,
+      "unaccounted_wall_s": 0.046643,
+      "wall_time_s": 1.920331,
+      "world_executions": 0
+    }
+  ],
+  "compact_candidate_prompt_sha256": "3a6390124630f99af8aa63bb792b1944657c5a0f96b8de4220374fd92e9c3c2e",
+  "digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+  "exact_public_projection_sha256": "1bbd86e8e85d39686106fdbffb9fa9e00d775c84657ffcfa5101ad5a4b3b4566",
+  "finished_utc": "2026-09-29T00:36:31.545508+00:00",
+  "full_review_probe_options": {
+    "format": null,
+    "historical_num_predict": 1024,
+    "num_ctx": 8192,
+    "num_predict": 8,
+    "repeat_penalty": 1.1,
+    "seed": 54003,
+    "temperature": 0.2,
+    "top_k": 40,
+    "top_p": 0.9
+  },
+  "historical_context_restored": true,
+  "measurement_notes": [
+    "No model output or private historical request body is stored.",
+    "A completed response supplies API token and phase timings; the full-review timeout has no Ollama phase timings.",
+    "Synthetic scaling prompts repeat one word and may not predict diverse-prompt throughput.",
+    "The current benchmark capped outputs at eight tokens; historical action and review caps were 48 and 1024."
+  ],
+  "model": "dolphin-mixtral:latest",
+  "no_world_or_memory": true,
+  "note": "Input tokens include model template and system field; outputs capped at 8 tokens.",
+  "server": "local Ollama 0.1.16",
+  "source_parent_commit": "8bc396b96662ff7fa04b87a7a3300008e12228b9",
+  "stable_options": {
+    "num_ctx": 2048,
+    "num_predict": 8,
+    "repeat_penalty": 1.1,
+    "seed": 9071,
+    "temperature": 0.2,
+    "top_k": 40,
+    "top_p": 0.9
+  },
+  "started_utc": "2026-09-29T00:31:27.254813+00:00",
+  "status": "COMPLETE_WITH_CENSORED_FULL_REVIEW",
+  "tokenizer_only_checks": {
+    "B1_tiny_30_rendered_tokens": 17,
+    "B3_public_canonical_rendered_tokens": 550,
+    "B4_full_rendered_tokens": 6321,
+    "C1_candidate_compact_rendered_tokens": 448,
+    "method": "Local runner /tokenize, without generation; four counts retained here."
+  }
+}
