@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zaf2aa726e84a28df"],
+  "evidence_ids": ["zd0c7388e83e45b1b", "z4ed5ab5ee4c1760c", "z3791596501678e69"],
+  "observed": [
+    "execution_input zd0c7388e83e45b1b: attempt_total_before=14, batch_size=5, remote_delivery=DROPPED_BY_LINK, other_writes_in_interval=0",
+    "execution_output z4ed5ab5ee4c1760c: attempt_total_after=14"
+  ],
+  "inferred": [
+    "The contract (z3791596501678e69) requires attempt_total_after = attempt_total_before + batch_size (14 + 5 = 19) when acknowledgment occurs",
+    "The current version (zb173e9333dbc7923) fails to satisfy this rule, while version z591d7040a146a9ee (execution_output za71725fc383380da) satisfies it"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version zb173e9333dbc7923) violates the contract rule that attempt_total_after must equal attempt_total_before + batch_size when acknowledgment occurs. This defect is distinguishable from benign alternatives because version z591d7040a146a9ee satisfies the rule.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z3791596501678e69",
+    "cause_evidence_id": "zd0c7388e83e45b1b",
+    "effect_evidence_id": "z4ed5ab5ee4c1760c",
+    "decisive_evidence_id": "z4ed5ab5ee4c1760c",
+    "decisive_field": "/data",
+    "observed_value": "attempt_total_after=14",
+    "required_value": "attempt_total_after=19",
+    "description": "The publication worker (zaf2aa726e84a28df) in version zb173e9333dbc7923 failed to increment attempt_total_after by batch_size (5) when acknowledgment occurred, violating the contract rule."
+  },
+  "strongest_alternative_explanation": "The system may have been misconfigured to ignore batch_size when remote_delivery is DROPPED_BY_LINK, but this would require a documented exception in the contract which is not present.",
+  "falsifier": "The version z591d7040a146a9ee satisfies the contract rule with the same input parameters (execution_input z1bdba4a3155e580d and output za71725fc383380da)."
+}

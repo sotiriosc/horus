@@ -1,0 +1,21 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zd139e1c156ec9002"],
+  "evidence_ids": ["z4eafaa4b642aa04b", "zc87bd211b4160614", "z146c9762e6cc305d", "zc92c761e68dd3370", "z6263b111c2364a4b", "za2ef784af20479f6", "z634e798c34a57a8a", "ze0be6f4d04f43e65"],
+  "observed": [
+    "Execution input and output for version za2139f07b5968153 (v1) and zf92a34707e13dd49 (v2) both return 23 for identical configuration and request parameters.",
+    "The capture record for v1 shows identical recorded_digest and recomputed_digest, confirming data integrity."
+  ],
+  "inferred": [
+    "The publication worker (zd139e1c156ec9002) consistently returns 23 for the same configuration across versions, suggesting no change in behavior.",
+    "The contract requires that active_config determines the configuration used, and this is fulfilled in both versions."
+  ],
+  "unknown": [
+    "No evidence of configuration drift or input variation between versions.",
+    "No evidence of external factors affecting the returned value."
+  ],
+  "diagnostic_statement": "The system's current deployment (version zf92a34707e13dd49) shows no structural or mechanical defect. The observed behavior aligns with the contract, and no current defect is supported by the evidence.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The system's behavior is consistent with the contract and no defect is supported by the evidence."
+}

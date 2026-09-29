@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z1df4c2f1ac5dba1e"],
+  "evidence_ids": ["zd0cefe511aa0c214", "za67e6de3d29eb580", "z60164439247da5a3", "z72f73615b04100be"],
+  "observed": [
+    "At version z140d1ccf7481da0e (release ordinal 1), execution_input zd0cefe511aa0c214 used active_config zfee930bb64dbd891 (value 23) and returned_value 23.",
+    "At version z854e7cdb17441691 (release ordinal 2), execution_input za67e6de3d29eb580 used active_config zfee930bb64dbd891 (value 23) but used_config zdc97af92b566af38 (value 16) and returned_value 16."
+  ],
+  "inferred": [
+    "The contract (z72f73615b04100be) requires that active_config determines the configuration for a given execution version.",
+    "The capture record (z60164439247da5a3) confirms that the returned_value 16 was captured for event zcb816203f04206f2 in version z854e7cdb17441691."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z854e7cdb17441691) violates the contract by using a different configuration (zdc97af92b566af38) than the active_config (zfee930bb64dbd891) for the same component and request, resulting in a returned_value of 16 instead of the expected 23.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z72f73615b04100be",
+    "cause_evidence_id": "za67e6de3d29eb580",
+    "effect_evidence_id": "z60164439247da5a3",
+    "decisive_evidence_id": "za67e6de3d29eb580",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'zfee930bb64dbd891', 'used_config': 'zdc97af92b566af38'}",
+    "required_value": "{'active_config': 'zfee930bb64dbd891', 'used_config': 'zfee930bb64dbd891'}",
+    "description": "The component used a different configuration than the active_config, violating the contract rule that active_config determines the configuration for a given execution version."
+  },
+  "strongest_alternative_explanation": "The system may have a bug in the configuration resolution logic that incorrectly selects the used_config instead of the active_config for the current version.",
+  "falsifier": "The capture record (z60164439247da5a3) confirms the returned_value of 16, which directly contradicts the expected value of 23 based on the active_config."
+}

@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z3926f7ad3ad3a70e"],
+  "evidence_ids": ["z540a56a9e59c9d04", "zba8e4aaf6efb15a6", "z1e6c33f619016243"],
+  "observed": [
+    "Execution input z540a56a9e59c9d04 (version z1b8e3efe9b37f5e7) has amount=22 and 1 distinct operation_token, but posted_units=44.",
+    "Execution input zba8e4aaf6efb15a6 (version z2ac98142b3dcd534) has amount=22 and 1 distinct operation_token, and posted_units=22."
+  ],
+  "inferred": [
+    "The contract requires posted_units = amount * count(distinct operation_tokens)."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The system's current deployment (version z2ac98142b3dcd534) correctly implements the contract, but version z1b8e3efe9b37f5e7 has a defect where posted_units was incorrectly calculated as 44 instead of 22 for a single distinct operation_token. This defect is no longer active in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zba8e4aaf6efb15a6",
+    "cause_evidence_id": "z540a56a9e59c9d04",
+    "effect_evidence_id": "z1e6c33f619016243",
+    "decisive_evidence_id": "z540a56a9e59c9d04",
+    "decisive_field": "/data",
+    "observed_value": 44,
+    "required_value": 22,
+    "description": "The execution input z540a56a9e59c9d04 (version z1b8e3efe9b37f5e7) incorrectly calculated posted_units as 44 instead of 22, violating the contract rule. This defect was fixed in version z2ac98142b3dcd534."
+  },
+  "strongest_alternative_explanation": "The system may have been misconfigured in version z1b8e3efe9b37f5e7, but the current deployment (version z2ac98142b3dcd534) adheres to the contract.",
+  "falsifier": "The current deployment (version z2ac98142b3dcd534) correctly implements the contract, as evidenced by the capture record zae5f7c55f8a90eae and execution output z1e6c33f619016243."
+}

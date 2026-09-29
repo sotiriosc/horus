@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z3926f7ad3ad3a70e"],
+  "evidence_ids": ["zef9e7c395c2dc489", "z1e6c33f619016243", "zba8e4aaf6efb15a6"],
+  "observed": [
+    "execution_input zef9e7c395c2dc489d (version z2ac98142b3dcd534) has 1 distinct operation_token",
+    "execution_output z1e6c33f619016243 (version z2ac98142b3dcd534) reports posted_units=22"
+  ],
+  "inferred": [
+    "contract zba8e4aaf6efb15a6 requires posted_units = amount * distinct_operation_tokens"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z2ac98142b3dcd534) correctly implements the contract for operation_token-based postings. The version 1 defect (double-counting attempt_tokens) is not active in the current version.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zba8e4aaf6efb15a6",
+    "cause_evidence_id": "zef9e7c395c2dc489",
+    "effect_evidence_id": "z1e6c33f619016243",
+    "decisive_evidence_id": "zef9e7c395c2dc489",
+    "decisive_field": "/data",
+    "observed_value": "key_column: operation_token, amount: 22, entries: 2 distinct operation_tokens (but only 1 unique value)",
+    "required_value": "key_column: operation_token, amount: 22, entries: 1 distinct operation_token (correctly counted once)",
+    "description": "The decision worker correctly counted 1 distinct operation_token in the current version, aligning with the contract."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The current version's execution_output matches the contract's expected value for operation_token-based postings."
+}

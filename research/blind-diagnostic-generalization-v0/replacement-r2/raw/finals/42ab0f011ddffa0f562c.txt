@@ -1,0 +1,30 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z59fe799b77469f35"],
+  "evidence_ids": ["za5bf090a3a751a89", "zadddfb8076cb8833", "z8e80c6634d001490"],
+  "observed": [
+    "execution_input za5bf090a3a751a89 has key_column 'UNKNOWN' with two entries: one with operation_token 'z004b8dd686da2b22' and another with operation_token 'UNKNOWN'",
+    "execution_output zadddfb8076cb8833 reports posted_units=44 for this input"
+  ],
+  "inferred": [
+    "The contract requires posted_units = amount * distinct(operation_token values in complete listing)",
+    "In za5bf090a3a751a89, the listing contains two operation_token values: 'z004b8dd686da2b22' and 'UNKNOWN' (assuming UNKNOWN is treated as a valid distinct value here)",
+    "22 * 2 = 44 matches the posted_units output, suggesting the system treats 'UNKNOWN' as a distinct operation_token"
+  ],
+  "unknown": [
+    "Whether 'UNKNOWN' is intended as a valid operation_token or represents omitted information per the contract's explicit rule"
+  ],
+  "diagnostic_statement": "The system's decision worker (z59fe799b77469f35) appears to treat 'UNKNOWN' as a valid distinct operation_token value in the current deployment (version z2d01ad027184f6c1), violating the contract's explicit rule that 'UNKNOWN denotes omitted information, never a default value'. This explains the 44 posted_units output for an input with key_column='UNKNOWN' and amount=22.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z8e80c6634d001490",
+    "cause_evidence_id": "za5bf090a3a751a89",
+    "effect_evidence_id": "zadddfb8076cb8833",
+    "decisive_evidence_id": "za5bf090a3a751a89",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'UNKNOWN', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf3519af797c0c87d', 'operation_token': 'z004b8dd686da2b22'}, {'sequence': 2, 'attempt_token': 'z4d015407805a8a0e', 'operation_token': 'UNKNOWN'}], 'listing_complete': true}",
+    "required_value": "{'key_column': 'operation_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf3519af797c0c87d', 'operation_token': 'z004b8dd686da2b22'}, {'sequence': 2, 'attempt_token': 'z4d015407805a8a0e', 'operation_token': 'z004b8dd686da2b22'}], 'listing_complete': true}",
+    "description": "The input record explicitly contains 'UNKNOWN' as an operation_token value, which violates the contract's rule that 'UNKNOWN denotes omitted information, never a default value'. This directly caused the decision worker to count 'UNKNOWN' as a distinct operation_token, resulting in the 44 posted_units output."
+  },
+  "strongest_alternative_explanation": "The system might have a bug where it treats 'UNKNOWN' as a valid operation_token when it should be ignored, but this would still constitute a defect under the contract's explicit rules.",
+  "falsifier": "If the system had correctly ignored 'UNKNOWN' as omitted information, the posted_units would have been 22 (22 * 1), matching the first execution output (zbe64cd555d67547a)."
+}

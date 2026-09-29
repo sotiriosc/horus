@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z9a4e86e296c969ea"],
+  "evidence_ids": ["z3ecf08a688624f6e", "z9d7118273524aa8f", "z03945b226246fe35"],
+  "observed": [
+    "execution_input z3ecf08a688624f6e shows 2 distinct operation_token values for amount 22",
+    "execution_output z9d7118273524aa8f shows posted_units 44 for same input"
+  ],
+  "inferred": [
+    "Contract rule requires posted_units = amount * distinct operation_tokens",
+    "22 * 2 = 44 matches observed output"
+  ],
+  "unknown": [
+    "No evidence of alternative explanations for the calculation"
+  ],
+  "diagnostic_statement": "The current deployment version z22873fdf4d47ed37 (release ordinal 2) shows a supported current defect in component z9a4e86e296c969ea. The execution input z3ecf08a688624f6e specifies 2 distinct operation_token values for amount 22, but the execution output z9d7118273524aa8f shows posted_units 44, which violates the contract rule requiring posted_units = amount * distinct operation_tokens (22 * 2 = 44). This matches the calculation but the system is failing to distinguish between operation_tokens and attempt_tokens as required by the contract.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z03945b226246fe35",
+    "cause_evidence_id": "z3ecf08a688624f6e",
+    "effect_evidence_id": "z9d7118273524aa8f",
+    "decisive_evidence_id": "z3ecf08a688624f6e",
+    "decisive_field": "/data",
+    "observed_value": "key_column: attempt_token",
+    "required_value": "key_column: operation_token",
+    "description": "The component is using attempt_token as the key_column instead of operation_token as required by the contract, leading to incorrect calculation of distinct operation_tokens."
+  },
+  "strongest_alternative_explanation": "The system may be misconfigured to use attempt_token instead of operation_token as the key column for counting distinct operation tokens.",
+  "falsifier": "The execution output z9d7118273524aa8f shows posted_units 44, which matches the calculation 22 * 2 = 44, but this is only possible if the system correctly counted 2 distinct operation_tokens. However, the execution input z3ecf08a688624f6e specifies attempt_token as the key_column, which would not count distinct operation_tokens correctly."
+}

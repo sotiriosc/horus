@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z6c19d603b7a3da6a"],
+  "evidence_ids": ["z6aedd99a74d5e2fd", "zcdd0e440cb8384a4"],
+  "observed": [
+    "execution_input at 20 for version z3739a55050a4fe69 has requested_entity zd8811c92d172941f but record_owner zc476ce7ebb98faae"
+  ],
+  "inferred": [
+    "The contract requires record_owner to match requested_entity for attributed readings"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current version's input worker violates the contract by attributing a reading to zd8811c92d172941f while the record_owner is zc476ce7ebb98faae, which is a structural defect distinguishable from benign alternatives.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z6aedd99a74d5e2fd",
+    "cause_evidence_id": "zcdd0e440cb8384a4",
+    "effect_evidence_id": "zb2f0d58af93ea1c4",
+    "decisive_evidence_id": "zcdd0e440cb8384a4",
+    "decisive_field": "/data",
+    "observed_value": "{\"requested_entity\":\"zd8811c92d172941f\",\"record_owner\":\"zc476ce7ebb98faae\"}",
+    "required_value": "{\"requested_entity\":\"zd8811c92d172941f\",\"record_owner\":\"zd8811c92d172941f\"}",
+    "description": "The input worker's execution input shows a mismatch between requested_entity and record_owner, violating the contract's ownership rule."
+  },
+  "strongest_alternative_explanation": "The system may have been configured with incorrect ownership mappings, but this does not align with the contract's explicit requirement for ownership consistency.",
+  "falsifier": "The current version's execution input for z6c19d603b7a3da6a shows a record_owner different from requested_entity, directly contradicting the contract's rule."
+}

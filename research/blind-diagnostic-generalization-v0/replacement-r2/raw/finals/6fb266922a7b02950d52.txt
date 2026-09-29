@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z6c19d603b7a3da6a"],
+  "evidence_ids": ["zcdd0e440cb8384a4", "z6aedd99a74d5e2fd"],
+  "observed": [
+    "execution_input for version z3739a55050a4fe69 has requested_entity zd8811c92d172941f but record_owner zc476ce7ebb98faae"
+  ],
+  "inferred": [
+    "record_owner must match requested_entity per contract rule"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment violates the contract rule that a reading attributed to requested_entity must originate from a record with the same record_owner. The mismatch between requested_entity (zd8811c92d172941f) and record_owner (zc476ce7ebb98faae) in execution_input zcdd0e440cb8384a4 constitutes a structural defect.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z6aedd99a74d5e2fd",
+    "cause_evidence_id": "zcdd0e440cb8384a4",
+    "effect_evidence_id": "zb2f0d58af93ea1c4",
+    "decisive_evidence_id": "zcdd0e440cb8384a4",
+    "decisive_field": "/data",
+    "observed_value": "{\"requested_entity\":\"zd8811c92d172941f\",\"record_owner\":\"zc476ce7ebb98faae\"}",
+    "required_value": "{\"requested_entity\":\"zd8811c92d172941f\",\"record_owner\":\"zd8811c92d172941f\"}",
+    "description": "The record_owner field must match the requested_entity field in execution_input records according to the contract rule."
+  },
+  "strongest_alternative_explanation": "The system may have been configured to accept mismatched record_owner values, but this would violate the contract's explicit requirement for ownership consistency.",
+  "falsifier": "The capture record z9078f26b2e2f11f9 confirms the published_reading was 27, but does not override the contract requirement for record_owner matching requested_entity."
+}

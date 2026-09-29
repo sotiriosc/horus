@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z4fbc2303a8615fce"],
+  "evidence_ids": ["zf81323408e70c23a", "zc7eac25c79c94a17", "z36c8b4974cf8c429", "z3ec27b8fab07fa3e"],
+  "observed": [
+    "In current version z143592bbf0479a48, active_config is UNKNOWN but used_config is z1ac933d74e82f207 with value 16, yet returned_value is 16.",
+    "In older version z4b985592796585db, active_config is zb9a525df4233c266 with value 23, and returned_value is 23."
+  ],
+  "inferred": [
+    "The contract requires active_config to determine the configuration used for a response.",
+    "The current version's active_config is UNKNOWN, but the used_config is explicitly set to z1ac933d74e82f207 with value 16, which matches the returned_value."
+  ],
+  "unknown": [
+    "The reason active_config is UNKNOWN in the current version."
+  ],
+  "diagnostic_statement": "The current version (z143592bbf0479a48) has a defect where active_config is UNKNOWN but the used_config is explicitly set to z1ac933d74e82f207 with value 16, which matches the returned_value. This contradicts the contract requirement that active_config must be used for responses. The older version (z4b985592796585db) correctly uses active_config zb9a525df4233c266 with value 23, which matches the returned_value.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z3ec27b8fab07fa3e",
+    "cause_evidence_id": "zf81323408e70c23a",
+    "effect_evidence_id": "zc7eac25c79c94a17",
+    "decisive_evidence_id": "zf81323408e70c23a",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'UNKNOWN', 'used_config': 'z1ac933d74e82f207', 'config_values': {'z1ac933d74e82f207': 16, 'zb9a525df4233c266': 23}, 'request_template': 'zd075ff7c708a50df', 'repeat_count': 5}",
+    "required_value": "{'active_config': 'z1ac933d74e82f207', 'used_config': 'z1ac933d74e82f207', 'config_values': {'z1ac933d74e82f207': 16, 'zb9a525df4233c266': 23}, 'request_template': 'zd075ff7c708a50df', 'repeat_count': 5}",
+    "description": "The current version's active_config is UNKNOWN, but the used_config is explicitly set to z1ac933d74e82f207 with value 16, which matches the returned_value. This contradicts the contract requirement that active_config must be used for responses."
+  },
+  "strongest_alternative_explanation": "The active_config being UNKNOWN might be due to an omitted or incomplete configuration value, but the used_config is explicitly set to z1ac933d74e82f207 with value 16, which matches the returned_value. This suggests that the system is using the used_config instead of the active_config, which is a defect according to the contract.",
+  "falsifier": "The current version's active_config is UNKNOWN, but the used_config is explicitly set to z1ac933d74e82f207 with value 16, which matches the returned_value. This contradicts the contract requirement that active_config must be used for responses."
+}

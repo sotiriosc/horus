@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z450b64b1327e0b06"],
+  "evidence_ids": ["zb7c631456c9a76c3", "z874fa1252e493e1d", "zf1dc7d2c3e69503f", "z2fe91a415c108790"],
+  "observed": [
+    "For version ze48cb466a0fcc575 (current deployment), execution_input uses active_config z3bd8720fd5ff3e90 but used_config za179ca278d01417e with value 16",
+    "For version za398ff730d717f84, execution_input uses active_config z3bd8720fd5ff3e90 and used_config z3bd8720fd5ff3e90 with value 23"
+  ],
+  "inferred": [
+    "The active_config for version ze48cb466a0fcc575 is not being used as required by the contract"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version ze48cb466a0fcc575 is using a different configuration than specified by its active_config, violating the contract rule that 'for every response, use the configuration named by active_config for that execution version'.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z1080b272883a92f5",
+    "cause_evidence_id": "zb7c631456c9a76c3",
+    "effect_evidence_id": "zf1dc7d2c3e69503f",
+    "decisive_evidence_id": "zb7c631456c9a76c3",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'z3bd8720fd5ff3e90', 'used_config': 'za179ca278d01417e'}",
+    "required_value": "{'active_config': 'z3bd8720fd5ff3e90', 'used_config': 'z3bd8720fd5ff3e90'}",
+    "description": "The active_config for version ze48cb466a0fcc575 is not being used as required by the contract"
+  },
+  "strongest_alternative_explanation": "The system may be using a different configuration due to an implementation error or misconfiguration, but this is observationally distinguishable from the contract requirement that active_config must be used.",
+  "falsifier": "The contract rule that 'for every response, use the configuration named by active_config for that execution version' is explicitly stated in record z1080b272883a92f5."
+}

@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zd13981c19efa6651"],
+  "evidence_ids": ["z21ed54d1703d5d46", "z32c71342f8d144f6", "z452dfb1d8c56efe3"],
+  "observed": [
+    "execution_input z21ed54d1703d5d46 reports batch_size: UNKNOWN and publication_fields: UNKNOWN for component zd13981c19efa6651",
+    "execution_output z32c71342f8d144f6 shows attempt_total_after: 19 despite input batch_size: UNKNOWN"
+  ],
+  "inferred": [
+    "The contract requires attempt_total_after = attempt_total_before + batch_size (z452dfb1d8c56efe3)",
+    "The input records show attempt_total_before: 14 and batch_size: UNKNOWN (z21ed54d1703d5d46)"
+  ],
+  "unknown": [
+    "The actual value of batch_size in z21ed54d1703d5d46"
+  ],
+  "diagnostic_statement": "The system's publication worker (zd13981c19efa6651) produces an output (z32c71342f8d144f6) with attempt_total_after: 19 despite the input (z21ed54d1703d5d46) reporting batch_size: UNKNOWN. This violates the contract (z452dfb1d8c56efe3) which requires attempt_total_after to equal attempt_total_before + batch_size. The input's batch_size: UNKNOWN makes the calculation indeterminate, but the output's attempt_total_after: 19 implies a specific value was used, creating a structural defect.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z452dfb1d8c56efe3",
+    "cause_evidence_id": "z21ed54d1703d5d46",
+    "effect_evidence_id": "z32c71342f8d144f6",
+    "decisive_evidence_id": "z21ed54d1703d5d46",
+    "decisive_field": "/data",
+    "observed_value": "batch_size: UNKNOWN",
+    "required_value": "batch_size: known numeric value matching attempt_total_after - attempt_total_before (19 - 14 = 5)",
+    "description": "The contract (z452dfb1d8c56efe3) requires batch_size to be known and determinable from attempt_total_after - attempt_total_before. The input (z21ed54d1703d5d46) reports batch_size: UNKNOWN, which violates the contract's requirement for known values."
+  },
+  "strongest_alternative_explanation": "The UNKNOWN value for batch_size might represent omitted information rather than an actual unknown value, but the contract (z452dfb1d8c56efe3) explicitly states that UNKNOWN denotes omitted information, not a default value. This makes the input's batch_size: UNKNOWN incompatible with the contract's requirement for known values.",
+  "falsifier": "The contract (z452dfb1d8c56efe3) explicitly states that UNKNOWN denotes omitted information, not a default value. This makes the input's batch_size: UNKNOWN incompatible with the contract's requirement for known values."
+}

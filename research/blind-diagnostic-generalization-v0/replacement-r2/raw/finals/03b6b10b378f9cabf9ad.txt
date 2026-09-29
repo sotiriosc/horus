@@ -1,0 +1,21 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["z47660bfce301c439"],
+  "evidence_ids": ["z51b9c21b819a47fe", "z76ec9ccce08dea19", "z8c5b60578c294927"],
+  "observed": [
+    "execution_input for current version z3d19d966ab70ced4 has requested_entity and record_owner matching (z670bb3f072900a83)",
+    "execution_output for current version z3d19d966ab70ced4 publishes reading 27 with attributed_entity z670bb3f072900a83",
+    "capture record for current version has matching recorded_digest and recomputed_digest"
+  ],
+  "inferred": [
+    "BACKUP source path is valid when primary_source_available is false per contract rule",
+    "execution_input for older version z6edf77641de8eaeb also complies with contract but is not current"
+  ],
+  "unknown": [
+    "Whether the published_reading of 27 represents an unusual outcome outside the contract's scope"
+  ],
+  "diagnostic_statement": "The current deployment complies with the contract's requirements for entity ownership and source validity. No active defect is supported by the evidence within the declared scope.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "Unusual outcome may be benign and within contract-allowed behavior",
+  "falsifier": "A reading attributed to requested_entity that does not originate from a record with the same record_owner"
+}

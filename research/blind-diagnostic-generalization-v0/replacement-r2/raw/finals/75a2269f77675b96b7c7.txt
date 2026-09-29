@@ -1,0 +1,20 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["za93c6610bcbb86af"],
+  "evidence_ids": ["z1ec44525fc6e4452", "z7a9a51566e6db5d9", "zb9aaad8ea9e16feb", "z0c63b89077506ba6", "z43035840fc0ebe9f"],
+  "observed": [
+    "Both versions z35a6cd8e9724b5f8 (current) and zf9690ca813d9dddc (older) show identical returned_value=23 for the same config_values and request_template.",
+    "Capture record zb9aaad8ea9e16feb for current version z35a6cd8e9724b5f8 shows consistent returned_value=23 with matching recorded/recomputed digests."
+  ],
+  "inferred": [
+    "The identical returned_value across versions suggests the publication worker's behavior is consistent with its configuration.",
+    "No evidence of configuration drift or execution divergence between versions."
+  ],
+  "unknown": [
+    "Whether the returned_value=23 is expected or unexpected for the given config_values and request_template."
+  ],
+  "diagnostic_statement": "The evidence does not support a current defect. The publication worker's output is consistent across versions and configurations, and no contradictory or invalid evidence is present.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The returned_value=23 may be a normal operational outcome for the given configuration and request template.",
+  "falsifier": "A defect would require evidence of inconsistent behavior, configuration misapplication, or contract violation not observed here."
+}

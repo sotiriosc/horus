@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zcbb97c249dc431ba"],
+  "evidence_ids": ["zfe1fa33da7045cfc", "zca9f61db6863941c", "zc4fe1d5173e00b67"],
+  "observed": [
+    "execution_input zfe1fa33da7045cfc shows attempt_total_before=14 and batch_size=5 but no attempt_total_after in input",
+    "execution_output zca9f61db6863941c shows attempt_total_after=19 matching 14+5"
+  ],
+  "inferred": [
+    "The contract requires attempt_total_after = attempt_total_before + batch_size (14+5=19) which was observed",
+    "The capture record zc4fe1d5173e00b67 has mismatched recorded_digest and recomputed_digest, indicating data integrity failure"
+  ],
+  "unknown": [
+    "Whether the mismatched digest in zc4fe1d5173e00b67 is due to capture error or actual data change"
+  ],
+  "diagnostic_statement": "The current deployment (version z46a18fac4db0afb4) satisfies the contract for attempt_total_after calculation but has a data integrity defect in capture records.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z4923ca891e2a35f0",
+    "cause_evidence_id": "zfe1fa33da7045cfc",
+    "effect_evidence_id": "zca9f61db6863941c",
+    "decisive_evidence_id": "zc4fe1d5173e00b67",
+    "decisive_field": "/data",
+    "observed_value": "recorded_digest: 55f9304ce43752b662dda96c50bf82dc27a7157cb6bef6dc72726448eb992200, recomputed_digest: db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+    "required_value": "recorded_digest and recomputed_digest must match for identical captured bytes",
+    "description": "The capture record shows a data integrity failure where recorded and recomputed digests disagree, indicating a defect in the capture mechanism."
+  },
+  "strongest_alternative_explanation": "The mismatched digests could be due to a capture error rather than actual data change, but the contract-compliant behavior in execution records supports current defect classification.",
+  "falsifier": "If the mismatched digests were due to a transient capture error and not a systemic defect, this would falsify the current defect classification."
+}

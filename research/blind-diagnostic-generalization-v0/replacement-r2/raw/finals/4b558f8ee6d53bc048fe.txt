@@ -1,0 +1,32 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z64931bb4bb8936d4"],
+  "evidence_ids": [
+    "z59915596c8dc7107",
+    "zb295a506b69fcb5c",
+    "zd5ea62c0d9832bc6"
+  ],
+  "observed": [
+    "execution_output.z3251e020108b75f9.posted_units=44",
+    "execution_input.zb295a506b69fcb5c.entries[1].operation_token=UNKNOWN"
+  ],
+  "inferred": [
+    "distinct_operation_tokens=1 (only z2e85a946b3b9ec58 is valid, UNKNOWN is omitted)"
+  ],
+  "unknown": [
+    "operation_token values in entries with UNKNOWN status"
+  ],
+  "diagnostic_statement": "The current version's execution output (posted_units=44) violates the contract rule that posted_units must equal amount (22) multiplied by distinct operation_token values (1). The calculation should be 22*1=22, but observed 44.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z59915596c8dc7107",
+    "cause_evidence_id": "zb295a506b69fcb5c",
+    "effect_evidence_id": "zd5ea62c0d9832bc6",
+    "decisive_evidence_id": "zb295a506b69fcb5c",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'UNKNOWN', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf6b54715221b5b3e', 'operation_token': 'z2e85a946b3b9ec58'}, {'sequence': 2, 'attempt_token': 'z4fe2d67af02d333e', 'operation_token': 'UNKNOWN'}], 'listing_complete': True}",
+    "required_value": "{'key_column': 'operation_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf6b54715221b5b3e', 'operation_token': 'z2e85a946b3b9ec58'}, {'sequence': 2, 'attempt_token': 'z4fe2d67af02d333e', 'operation_token': 'z2e85a946b3b9ec58'}], 'listing_complete': True}",
+    "description": "The execution input for the current version contains an entry with operation_token=UNKNOWN, which should be omitted according to the contract. This leads to an incorrect calculation of distinct operation tokens (1 instead of 2), causing the posted_units to be double the expected value."
+  },
+  "strongest_alternative_explanation": "The system may have a bug in how it handles UNKNOWN operation_token values, treating them as distinct when they should be omitted.",
+  "falsifier": "The execution output for the older version (zde74264168664009) correctly calculates posted_units=22 with two identical operation_token values, demonstrating that the contract was previously followed."
+}

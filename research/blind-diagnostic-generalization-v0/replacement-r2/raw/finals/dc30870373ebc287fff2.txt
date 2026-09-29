@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z59fe799b77469f35"],
+  "evidence_ids": ["z8e80c6634d001490", "z59fe799b77469f35", "z7ed9ef3aca2f765f"],
+  "observed": [
+    "execution_input for version z2d01ad027184f6c1 at at=20 has amount=22 and entries with operation_tokens [z004b8dd686da2b22, UNKNOWN], listing_complete=true",
+    "execution_output for version z2d01ad027184f6c1 at at=21 has posted_units=44"
+  ],
+  "inferred": [
+    "contract rule z8e80c6634d001490 requires posted_units = amount * (number of distinct operation_tokens in complete listing)",
+    "distinct operation_tokens in the input are z004b8dd686da2b22 and UNKNOWN (count=2) if UNKNOWN is treated as a distinct value, or 1 if UNKNOWN is omitted"
+  ],
+  "unknown": [
+    "whether UNKNOWN in operation_token is treated as a distinct value or omitted in the count"
+  ],
+  "diagnostic_statement": "The current version z2d01ad027184f6c1 shows a discrepancy between the contract rule and execution output. The posted_units=44 for amount=22 implies a count of 2 distinct operation_tokens, but the input contains one known and one UNKNOWN operation_token. If UNKNOWN is treated as a valid distinct value, the calculation is correct. If not, the result is incorrect. The contract does not clarify this ambiguity, but the observed outcome violates the rule if UNKNOWN is omitted.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z8e80c6634d001490",
+    "cause_evidence_id": "z59fe799b77469f35",
+    "effect_evidence_id": "z7ed9ef3aca2f765f",
+    "decisive_evidence_id": "z59fe799b77469f35",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'UNKNOWN', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf3519af797c0c87d', 'operation_token': 'z004b8dd686da2b22'}, {'sequence': 2, 'attempt_token': 'z4d015407805a8a0e', 'operation_token': 'UNKNOWN'}], 'listing_complete': true}",
+    "required_value": "{'key_column': 'operation_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf3519af797c0c87d', 'operation_token': 'z004b8dd686da2b22'}, {'sequence': 2, 'attempt_token': 'z4d015407805a8a0e', 'operation_token': 'z004b8dd686da2b22'}], 'listing_complete': true}",
+    "description": "The input for version z2d01ad027184f6c1 contains an UNKNOWN operation_token, which may be treated as a distinct value or omitted. The execution output (posted_units=44) implies a count of 2 distinct operation_tokens, but the input has one known and one UNKNOWN. If the contract requires only known operation_tokens to count, the result is incorrect."
+  },
+  "strongest_alternative_explanation": "If the UNKNOWN operation_token is treated as a valid distinct value, the calculation is correct. However, the contract does not clarify this ambiguity, and the observed outcome violates the rule if UNKNOWN is omitted.",
+  "falsifier": "The execution output for version z2d01ad027184f6c1 at at=21 shows posted_units=44, which would require 2 distinct operation_tokens. The input contains one known and one UNKNOWN operation_token, which may or may not be considered distinct."
+}

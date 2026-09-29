@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z021c71c6a494bedc"],
+  "evidence_ids": ["z63dccc7aa847961e", "zaf955d2707baf366", "z5624aefd425ea8a0"],
+  "observed": [
+    "execution_input z63dccc7aa847961e has primary_decision: DENY",
+    "execution_output zaf955d2707baf366 has final_decision: DENY"
+  ],
+  "inferred": [
+    "The primary source decision (DENY) dictates the final decision per contract rule z5624aefd425ea8a0"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z210416c3375bcfad) correctly implements the primary source priority rule. The execution output matches the contract requirement when primary decision is DENY.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z5624aefd425ea8a0",
+    "cause_evidence_id": "z63dccc7aa847961e",
+    "effect_evidence_id": "zaf955d2707baf366",
+    "decisive_evidence_id": "z63dccc7aa847961e",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"z2d5d53056767088c\",\"source_secondary\":\"z68aee425255880ff\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"z2d5d53056767088c\"}",
+    "required_value": "{\"source_primary\":\"z2d5d53056767088c\",\"source_secondary\":\"z68aee425255880ff\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"z2d5d53056767088c\"}",
+    "description": "The primary decision field in execution input matches the contract requirement for final decision when primary is DENY."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The execution output for version z210416c3375bcfad correctly implements the primary source priority rule as required by contract z5624aefd425ea8a0."
+}

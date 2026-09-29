@@ -1,0 +1,30 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zb67873f53c123ffc"],
+  "evidence_ids": ["z52588fcaa468f004", "z5af246eb58a7afdc", "z09ca4ccbad9927cb"],
+  "observed": [
+    "Execution input for version zee749ec23daebb57 (id z52588fcaa468f004) reports reading 27 with BACKUP source.",
+    "Execution output for same version (id z5af246eb58a7afdc) publishes reading 27.",
+    "Capture record (id z09ca4ccbad9927cb) for current version shows captured reading 28."
+  ],
+  "inferred": [
+    "The component zb67873f53c123ffc (input/output worker) is processing readings from BACKUP source when primary is unavailable.",
+    "The capture record for current version shows a discrepancy between published reading (27) and captured reading (28)."
+  ],
+  "unknown": [
+    "Whether the primary source was actually unavailable during the current version's execution."
+  ],
+  "diagnostic_statement": "The current deployment (version zee749ec23daebb57) shows a structural defect in the input/output worker component zb67873f53c123ffc. The component reports a published reading of 27 in execution output (id z5af246eb58a7afdc), but the capture record (id z09ca4ccbad9927cb) shows a captured reading of 28. This discrepancy violates the contract requirement that captured and published readings must agree when the same immutable event ID is used.",
+  "causal_mechanism": {
+    "contract_evidence_id": "za1fdd14d611b1035",
+    "cause_evidence_id": "z5af246eb58a7afdc",
+    "effect_evidence_id": "z09ca4ccbad9927cb",
+    "decisive_evidence_id": "z09ca4ccbad9927cb",
+    "decisive_field": "/captured_event_dataublished_reading",
+    "observed_value": 28,
+    "required_value": 27,
+    "description": "The input/output worker component zb67873f53c123ffc published a reading of 27 (execution output id z5af246eb58a7afdc), but the capture record (id z09ca4ccbad9927cb) shows a captured reading of 28 for the same immutable event ID. This violates the contract rule that captured and published readings must agree."
+  },
+  "strongest_alternative_explanation": "The discrepancy could be due to a timing error where the capture occurred after the reading was updated but before the output was published.",
+  "falsifier": "The capture record (id z09ca4ccbad9927cb) shows a captured reading of 28 for the same immutable event ID as the execution output (id z5af246eb58a7afdc) which reports 27."
+}

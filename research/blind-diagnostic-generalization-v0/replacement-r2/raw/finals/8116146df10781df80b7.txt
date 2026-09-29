@@ -1,0 +1,17 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z1d0b1fe8683e16ca"],
+  "evidence_ids": ["z16ad34e6e547704a", "z75f391cce08e478a", "z65e1a06625e0daa0"],
+  "observed": [
+    "In current version zb54b169352458adb, execution_input shows active_config=zf9223eb6545b347c and used_config=zf9223eb6545b347c (same value).",
+    "Execution_output for this version returns 23, which matches the config_values for zf9223eb6545b347c."
+  ],
+  "inferred": [
+    "The contract requires active_config to be used for responses. In version 1, active_config and used_config differed, but in current version they align."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current version (zb54b169352458adb) correctly uses active_config=zf9223eb6545b347c (value 23) and returns 23, aligning with the contract. No defect is present in the current deployment.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system may have been corrected in the current version to align active_config and used_config, resolving any prior discrepancy.",
+  "falsifier": "If the current version's execution_output had returned 16 instead of 23, that would contradict the contract and indicate a defect."
+}

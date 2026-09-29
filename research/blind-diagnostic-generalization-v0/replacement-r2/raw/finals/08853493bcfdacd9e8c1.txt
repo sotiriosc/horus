@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z38ddcea72e7ee979"],
+  "evidence_ids": ["z69a8d08250605105", "z2c0245316200d4bd", "z6ffc4798020fd26d", "z7c07a05ecc99376d", "z65f88dd6da577f5b"],
+  "observed": [
+    "In version zaa1e109d301b982c, execution_input z69a8d08250605105 used active_config z69fb7288b04a10b1 (value 23) but returned 16.",
+    "In current version z22902d8cb83d2cb3, execution_input z6ffc4798020fd26d used active_config z69fb7288b04a10b1 (value 23) and returned 23."
+  ],
+  "inferred": [
+    "The contract requires that active_config values must be used for responses.",
+    "The version transition from zaa1e109d301b982c to z22902d8cb83d2cb3 changed the used_config from za8bbdef81468d9db to z69fb7288b04a10b1."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current version z22902d8cb83d2cb3 correctly uses active_config z69fb7288b04a10b1 (value 23) and returns 23. However, the earlier version zaa1e109d301b982c used active_config z69fb7288b04a10b1 but returned 16, which violates the contract. This indicates a defect in the earlier version that was fixed in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z65f88dd6da577f5b",
+    "cause_evidence_id": "z69a8d08250605105",
+    "effect_evidence_id": "z2c0245316200d4bd",
+    "decisive_evidence_id": "z69a8d08250605105",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'z69fb7288b04a10b1', 'used_config': 'za8bbdef81468d9db', 'config_values': {'za8bbdef81468d9db': 16, 'z69fb7288b04a10b1': 23}, 'request_template': 'zbf858561da293a55', 'repeat_count': 5}",
+    "required_value": "{'active_config': 'z69fb7288b04a10b1', 'used_config': 'z69fb7288b04a10b1', 'config_values': {'za8bbdef81468d9db': 16, 'z69fb7288b04a10b1': 23}, 'request_template': 'zbf858561da293a55', 'repeat_count': 5}",
+    "description": "The execution_input z69a8d08250605105 used the wrong used_config (za8bbdef81468d9db) instead of the active_config (z69fb7288b04a10b1), leading to the incorrect returned_value of 16."
+  },
+  "strongest_alternative_explanation": "The earlier version may have had a bug in the configuration selection logic that was fixed in the current version.",
+  "falsifier": "The current version z22902d8cb83d2cb3 correctly uses active_config z69fb7288b04a10b1 and returns 23, confirming the defect was resolved."
+}

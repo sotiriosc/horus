@@ -1,0 +1,28 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z6a69c9fea2763c03"],
+  "evidence_ids": ["z2289883205fc4ad0", "z6838ae16202f26b8", "zb65edf434781dfaa"],
+  "observed": [
+    "execution_input.z2289883205fc4ad0.data.attempt_total_before=14",
+    "execution_input.z2289883205fc4ad0.data.batch_size=5",
+    "execution_output.z6838ae16202f26b8.data.attempt_total_after=14"
+  ],
+  "inferred": [
+    "attempt_total_after should be 19 per contract rule zb65edf434781dfaa",
+    "version zbbb5552243266243 (current) fails to increment attempt_total_after"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current version (zbbb5552243266243) violates the contract rule that attempt_total_after must equal attempt_total_before + batch_size. The input record z2289883205fc4ad0 shows attempt_total_before=14 and batch_size=5, but the output z6838ae16202f26b8 shows attempt_total_after=14 instead of 19. This defect is distinguishable from benign alternatives because version 1 (z71f075a0325e8a9c) correctly produces attempt_total_after=19 for identical inputs.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zb65edf434781dfaa",
+    "cause_evidence_id": "z2289883205fc4ad0",
+    "effect_evidence_id": "z6838ae16202f26b8",
+    "decisive_evidence_id": "z2289883205fc4ad0",
+    "decisive_field": "/data",
+    "observed_value": "{\"attempt_total_before\":14,\"batch_size\":5,\"publication_fields\":[],\"remote_delivery\":\"DROPPED_BY_LINK\",\"other_writes_in_interval\":0}",
+    "required_value": "{\"attempt_total_before\":14,\"batch_size\":5,\"publication_fields\":[\"attempt_total\"],\"remote_delivery\":\"DROPPED_BY_LINK\",\"other_writes_in_interval\":0}",
+    "description": "The current version (zbbb5552243266243) omits 'attempt_total' from publication_fields, which is required by the contract to ensure correct attempt_total_after calculation. Version 1 includes 'attempt_total' in publication_fields and produces the correct result."
+  },
+  "strongest_alternative_explanation": "The system may have been configured to suppress attempt_total updates, but this would violate the contract's requirement that attempt_total_after equals attempt_total_before + batch_size regardless of remote_delivery status.",
+  "falsifier": "The execution_output.z6838ae16202f26b8.data.attempt_total_after=14 directly contradicts the contract rule that attempt_total_after must equal attempt_total_before + batch_size (14 + 5 = 19)."
+}

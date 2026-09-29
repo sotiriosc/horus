@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z2e28abd8e70f8171"],
+  "evidence_ids": ["z1b583b98b7a91e45", "zb756ced22e9dc00e", "z9a72ef198467a995"],
+  "observed": [
+    "In version z465d584c791589e2, the decision worker (z2e28abd8e70f8171) issued a command (command_issued: true) when sensed_level (14) equals target_level (14) with comparator '>=' (comparison_result: true)."
+  ],
+  "inferred": [
+    "The contract (z9a72ef198467a995) explicitly requires no command when sensed_level is equal to target_level, regardless of comparator implementation."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z465d584c791589e2) violates the contract by issuing a command when sensed_level equals target_level, which is a structural defect in the decision worker.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z9a72ef198467a995",
+    "cause_evidence_id": "z1b583b98b7a91e45",
+    "effect_evidence_id": "zb756ced22e9dc00e",
+    "decisive_evidence_id": "z1b583b98b7a91e45",
+    "decisive_field": "/data",
+    "observed_value": "{\"sensed_level\":14,\"target_level\":14,\"implemented_comparator\">=\",\"comparison_result\":true}",
+    "required_value": "{\"sensed_level\":14,\"target_level\":14,\"implemented_comparator\">=\",\"comparison_result\":false}",
+    "description": "The decision worker (z2e28abd8e70f8171) incorrectly evaluates equality as a condition for command issuance in version z465d584c791589e2, violating the contract."
+  },
+  "strongest_alternative_explanation": "The system may have been misconfigured to treat equality as a trigger for command issuance, but this contradicts the explicit contract rule that equality requires no command.",
+  "falsifier": "The contract (z9a72ef198467a995) explicitly prohibits command issuance when sensed_level equals target_level, regardless of comparator implementation."
+}

@@ -1,0 +1,17 @@
+{
+  "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+  "affected_component_ids": ["zcbb97c249dc431ba"],
+  "evidence_ids": ["zc4fe1d5173e00b67", "z92604f326feba47d"],
+  "observed": [
+    "recorded_digest: 55f9304ce43752b662dda96c50bf82dc27a7157cb6bef6dc72726448eb992200",
+    "recomputed_digest: db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+  ],
+  "inferred": [
+    "The capture record's recorded_digest and recomputed_digest must agree per capture_contract rule z92604f326feba47d"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The evidence contains incompatible immutable facts: recorded_digest and recomputed_digest in capture record zc4fe1d5173e00b67 disagree, violating the capture_contract rule z92604f326feba47d which requires identical values.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system may have experienced a data corruption event during capture, but this cannot be validated without reconciling the digest values.",
+  "falsifier": "The capture_contract rule z92604f326feba47d explicitly requires recorded_digest and recomputed_digest to agree for the same event."
+}

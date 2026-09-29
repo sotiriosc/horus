@@ -1,0 +1,18 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["zc553a76f4efb799f"],
+  "evidence_ids": ["z9cb3f209d6243b26", "zb54f0e2822178449", "zd3a0c5ea663472d7"],
+  "observed": [
+    "execution_input for current version zef2ea04c1674b182 uses BACKUP source with primary_source_available=false",
+    "execution_output for same event publishes reading 27 matching input"
+  ],
+  "inferred": [
+    "BACKUP source usage complies with contract rule allowing backup when primary unavailable",
+    "record_owner matches requested_entity in input/output records"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment shows no defect. The system correctly uses BACKUP source when primary is unavailable, and all contract rules are satisfied with no contradictions in the evidence.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system may have been designed to use backup sources by default, but this does not constitute a defect under the contract.",
+  "falsifier": "No evidence contradicts the contract's requirements for the current deployment."
+}

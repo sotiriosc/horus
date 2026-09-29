@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z14b927349f20f216"],
+  "evidence_ids": ["zbaa3470a6ae5cf49", "z87e57d0bb4b5788e", "zf4c503ed0b245ed1"],
+  "observed": [
+    "In version zc557c7ce8f0cfce1 (current deployment), execution_input zbaa3470a6ae5cf49 shows primary_decision=DENY but execution_output z87e57d0bb4b5788e reports final_decision=ALLOW."
+  ],
+  "inferred": [
+    "The contract rule (zf4c503ed0b245ed1) mandates final decision=DENY when primary source=DENY, regardless of secondary source."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "Current deployment (version zc557c7ce8f0cfce1) violates the contract rule by allowing final_decision=ALLOW when primary_decision=DENY.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zf4c503ed0b245ed1",
+    "cause_evidence_id": "zbaa3470a6ae5cf49",
+    "effect_evidence_id": "z87e57d0bb4b5788e",
+    "decisive_evidence_id": "zbaa3470a6ae5cf49",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"zc63a6af9139beab6\",\"source_secondary\":\"za0c5cae8a24033cb\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"za0c5cae8a24033cb\"}",
+    "required_value": "primary_decision=DENY must result in final_decision=DENY per contract rule zf4c503ed0b245ed1",
+    "description": "Execution input for current deployment shows primary_decision=DENY but execution output contradicts contract rule."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "Execution output z87e57d0bb4b5788e directly contradicts contract rule zf4c503ed0b245ed1 for current deployment version."
+}

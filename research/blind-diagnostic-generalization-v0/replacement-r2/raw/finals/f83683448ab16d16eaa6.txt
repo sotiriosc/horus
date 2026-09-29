@@ -1,0 +1,28 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z979ec46f31475d5f"],
+  "evidence_ids": ["z9eab2f1d15df7d6f", "z135ba66fb2ae0b4e", "z03bb94d38e3fab47"],
+  "observed": [
+    "version z21ce3d519b137b44 (current) has execution_output returned_value=16",
+    "version z74241c435b124d9a (previous) has execution_output returned_value=23",
+    "version z21ce3d519b137b44's execution_input shows active_config=UNKNOWN"
+  ],
+  "inferred": [
+    "The publication worker (z979ec46f31475d5f) is responsible for the configuration discrepancy",
+    "The active_config field in version 2's input is explicitly UNKNOWN, violating the contract rule that active_config must be defined for execution"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z21ce3d519b137b44) exhibits a structural defect in the publication worker component due to an undefined active_config value, which directly causes the observed output discrepancy compared to the previous version.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zcf64d15e7b24c396",
+    "cause_evidence_id": "z9eab2f1d15df7d6f",
+    "effect_evidence_id": "z135ba66fb2ae0b4e",
+    "decisive_evidence_id": "z9eab2f1d15df7d6f",
+    "decisive_field": "/data",
+    "observed_value": "active_config=UNKNOWN",
+    "required_value": "active_config must be defined for execution in the contract rule (zcf64d15e7b24c396).",
+    "description": "The active_config field in the current version's execution input is explicitly UNKNOWN, violating the contract requirement that active_config must be defined for execution. This directly causes the observed output discrepancy between versions."
+  },
+  "strongest_alternative_explanation": "The system may have been intentionally configured to use a different configuration, but the contract explicitly requires active_config to be defined for execution, making this explanation implausible.",
+  "falsifier": "The contract rule (zcf64d15e7b24c396) explicitly requires active_config to be defined for execution, and the current version's input shows active_config=UNKNOWN, which directly contradicts this requirement."
+}

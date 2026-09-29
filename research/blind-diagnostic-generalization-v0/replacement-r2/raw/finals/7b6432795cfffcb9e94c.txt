@@ -1,0 +1,25 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": [],
+  "evidence_ids": [
+    "zd3a0c5ea663472d7",
+    "z8de89ef11f16704b",
+    "z9cb3f209d6243b26",
+    "zb54f0e2822178449"
+  ],
+  "observed": [
+    "execution_input.z9cb3f209d6243b26.data.primary_source_available=false",
+    "execution_input.z9cb3f209d6243b26.data.source_path=BACKUP",
+    "execution_output.zb54f0e2822178449.data.attributed_entity=z4943bd3dc618d09f",
+    "execution_output.zb54f0e2822178449.data.published_reading=27"
+  ],
+  "inferred": [
+    "execution_output.zb54f0e2822178449 complies with contract rule: attributed_entity matches record_owner (z4943bd3dc618d09f)",
+    "BACKUP source usage is permitted per contract when primary_source_available=false"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version zef2ea04c1674b182) shows no active defect. All observed behavior complies with the contract rule allowing BACKUP sources when primary sources are unavailable, and attributed_entity matches record_owner as required.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "Unusual behavior could be considered, but the system's operation aligns with the contract's permitted BACKUP usage scenario.",
+  "falsifier": "A scenario where attributed_entity does not match record_owner in a BACKUP source case would falsify this conclusion."
+}

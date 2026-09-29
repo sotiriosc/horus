@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zafea7bb02385eb97"],
+  "evidence_ids": ["zf5a67c6ee1e73767", "z777c879f9f40d05b"],
+  "observed": [
+    "execution_input for version z2aa90e2538375d4d has requested_entity z4bf07b4bd8a931fa but record_owner zb9d902b478088a37"
+  ],
+  "inferred": [
+    "The contract requires that a reading attributed to requested_entity must originate from a record with that same record_owner"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version z2aa90e2538375d4d has an active defect where the input record_owner (zb9d902b478088a37) does not match the requested_entity (z4bf07b4bd8a931fa), violating the contract rule that requires entity ownership consistency.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z777c879f9f40d05b",
+    "cause_evidence_id": "zf5a67c6ee1e73767",
+    "effect_evidence_id": "zbdaaa3a330f73bd2",
+    "decisive_evidence_id": "zf5a67c6ee1e73767",
+    "decisive_field": "/data",
+    "observed_value": "{\"requested_entity\":\"z4bf07b4bd8a931fa\",\"record_owner\":\"zb9d902b478088a37\"}",
+    "required_value": "{\"requested_entity\":\"z4bf07b4bd8a931fa\",\"record_owner\":\"z4bf07b4bd8a931fa\"}",
+    "description": "The input record_owner (zb9d902b478088a37) does not match the requested_entity (z4bf07b4bd8a931fa), violating the contract rule that requires entity ownership consistency."
+  },
+  "strongest_alternative_explanation": "The system may have been configured to allow different record_owners for the same requested_entity, but this is not permitted by the contract rule.",
+  "falsifier": "The contract rule explicitly requires that a reading attributed to requested_entity must originate from a record with that same record_owner."
+}

@@ -1,0 +1,30 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z64931bb4bb8936d4"],
+  "evidence_ids": ["zb295a506b69fcb5c", "z59915596c8dc7107", "z595c7c153fe7e582"],
+  "observed": [
+    "execution_input zb295a506b69fcb5c has amount=22 with two entries: one with operation_token=z2e85a946b3b9ec58 and another with operation_token=UNKNOWN",
+    "execution_output zd5ea62c0d9832bc6 has posted_units=44 for this input"
+  ],
+  "inferred": [
+    "The contract requires posted_units = amount * (number of distinct operation_token values in complete listing)",
+    "In zb295a506b69fcb5c, operation_token=UNKNOWN is not a valid token (per contract definition of UNKNOWN as omitted information)",
+    "Thus, only one distinct operation_token (z2e85a946b3b9ec58) should be counted, yielding 22*1=22, not 44"
+  ],
+  "unknown": [
+    "Whether the system treats UNKNOWN as a valid operation_token or as omitted information"
+  ],
+  "diagnostic_statement": "The current deployment violates the contract rule for posted_units calculation. The execution_input zb295a506b69fcb5c shows 22 amount with one valid operation_token (z2e85a946b3b9ec58) and one UNKNOWN token (treated as omitted), but the execution_output zd5ea62c0d9832bc6 reports 44 posted_units instead of the required 22.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z595c7c153fe7e582",
+    "cause_evidence_id": "zb295a506b69fcb5c",
+    "effect_evidence_id": "zd5ea62c0d9832bc6",
+    "decisive_evidence_id": "zb295a506b69fcb5c",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'UNKNOWN', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf6b54715221b5b3e', 'operation_token': 'z2e85a946b3b9ec58'}, {'sequence': 2, 'attempt_token': 'z4fe2d67af02d333e', 'operation_token': 'UNKNOWN'}], 'listing_complete': true}",
+    "required_value": "{'key_column': 'operation_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'zf6b54715221b5b3e', 'operation_token': 'z2e85a946b3b9ec58'}, {'sequence': 2, 'attempt_token': 'z4fe2d67af02d333e', 'operation_token': 'z2e85a946b3b9ec58'}], 'listing_complete': true}",
+    "description": "The execution_input zb295a506b69fcb5c contains an invalid operation_token value (UNKNOWN) that should have been omitted, but the system counted it as a distinct token, leading to an incorrect posted_units calculation in zd5ea62c0d9832bc6."
+  },
+  "strongest_alternative_explanation": "The system may have misinterpreted the contract's definition of UNKNOWN, treating it as a valid operation_token instead of omitting it.",
+  "falsifier": "The contract explicitly defines UNKNOWN as omitted information, not a valid operation_token value."
+}

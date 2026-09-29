@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z9a4e86e296c969ea"],
+  "evidence_ids": ["z3ecf08a688624f6e", "z9d7118273524aa8f", "z03945b226246fe35"],
+  "observed": [
+    "execution_input for version z22873fdf4d47ed37 (release ordinal 2) has key_column: attempt_token with 2 entries sharing the same operation_token: z1a909db2d0a8bfd5",
+    "execution_output for version z22873fdf4d47ed37 reports posted_units: 44"
+  ],
+  "inferred": [
+    "The contract requires posted_units = amount * distinct operation_token count (1 in this case) = 22 * 1 = 22"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "Current deployment version z22873fdf4d47ed37 (release ordinal 2) produces posted_units: 44 when it should produce 22 based on the contract rule. This defect is distinguishable from benign alternatives because the input contains only one distinct operation_token value.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z03945b226246fe35",
+    "cause_evidence_id": "z3ecf08a688624f6e",
+    "effect_evidence_id": "z9d7118273524aa8f",
+    "decisive_evidence_id": "z3ecf08a688624f6e",
+    "decisive_field": "/data",
+    "observed_value": "key_column: attempt_token, amount: 22, entries: 2 distinct operation_tokens: 1",
+    "required_value": "key_column: operation_token, amount: 22, entries: 1 distinct operation_token: 1",
+    "description": "The decision worker (z9a4e86e296c969ea) incorrectly processed attempt_token as a multiplier instead of operation_token, violating the contract rule."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The capture record z3dadcdc790582026 confirms the deployment version z22873fdf4d47ed37 with immutable_event_id z7aa9438002d8bb7b has posted_units: 44, matching the execution output but contradicting the contract rule."
+}

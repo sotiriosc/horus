@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z9bce6b8f988f155f"],
+  "evidence_ids": ["zc477862e1cd6cbf5", "z05bb77d752ec6e6a", "zf87a0eed62316f74"],
+  "observed": [
+    "execution_input zc477862e1cd6cbf5 shows amount=22 with 2 attempt_tokens but 1 operation_token",
+    "execution_output z05bb77d752ec6e6a reports posted_units=44 for this input"
+  ],
+  "inferred": [
+    "The decision worker (z9bce6b8f988f155f) in version z8df21f73bd59cd5a incorrectly multiplied amount by attempt_token count (2) instead of distinct operation_token count (1)"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "Current deployment version z8df21f73bd59cd5a violates the contract rule by computing posted_units as 44 instead of 22 when amount=22 and distinct operation_token count=1.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zf87a0eed62316f74",
+    "cause_evidence_id": "zc477862e1cd6cbf5",
+    "effect_evidence_id": "z05bb77d752ec6e6a",
+    "decisive_evidence_id": "zc477862e1cd6cbf5",
+    "decisive_field": "/data",
+    "observed_value": "amount=22, entries=[{attempt_token:z9b83e6241159a218, operation_token:z13019d3939ce6032}, {attempt_token:zaf035e48ced50be3, operation_token:z13019d3939ce6032}]",
+    "required_value": "amount=22, distinct operation_token count=1 => posted_units=22*1=22",
+    "description": "The decision worker incorrectly multiplied amount by attempt_token count (2) instead of distinct operation_token count (1) as required by the contract."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The contract rule explicitly requires multiplication by distinct operation_token count, which was 1 in this case."
+}

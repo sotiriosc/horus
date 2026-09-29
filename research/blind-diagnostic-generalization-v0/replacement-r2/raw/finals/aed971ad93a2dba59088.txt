@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z7b5387bd86e97b33"],
+  "evidence_ids": ["z6dd531593a2e74dc", "z8d05c0638fe4cbbe", "z92ae29afc082f1a4"],
+  "observed": [
+    "Execution input z6dd531593a2e74dc shows primary_decision: DENY, secondary_decision: ALLOW, first_consulted: z70245f5bf01daa56",
+    "Execution output z8d05c0638fe4cbbe for same version shows final_decision: ALLOW"
+  ],
+  "inferred": [
+    "The contract z92ae29afc082f1a4 requires final decision to be DENY when primary source is DENY",
+    "The decision worker z7b5387bd86e97b33 violated this rule in version z6d58d65a40ba8bf2"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version z6d58d65a40ba8bf2 contains a structural defect in the decision worker component where it allowed an ALLOW final decision when the primary source explicitly returned DENY, violating the contract rule that requires final decisions to follow primary source priority.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z92ae29afc082f1a4",
+    "cause_evidence_id": "z6dd531593a2e74dc",
+    "effect_evidence_id": "z8d05c0638fe4cbbe",
+    "decisive_evidence_id": "z8d05c0638fe4cbbe",
+    "decisive_field": "/data",
+    "observed_value": "{'final_decision': 'ALLOW'}",
+    "required_value": "{'final_decision': 'DENY'}",
+    "description": "The decision worker failed to enforce primary source priority when processing execution input z6dd531593a2e74dc, resulting in an invalid final decision of ALLOW instead of the contract-mandated DENY."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The capture record z8d05c0638fe4cbbe confirms the invalid final decision was recorded in the current deployment version z6d58d65a40ba8bf2"
+}

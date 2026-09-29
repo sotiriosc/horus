@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z7b5387bd86e97b33"],
+  "evidence_ids": ["z6dd531593a2e74dc", "z8d05c0638fe4cbbe", "z92ae29afc082f1a4"],
+  "observed": [
+    "Execution input for version z6d58d65a40ba8bf2 (current deployment) shows primary_decision=DENY, secondary_decision=ALLOW, but execution output final_decision=ALLOW.",
+    "Contract rule z92ae29afc082f1a4 mandates final decision=DENY when primary source=DENY, regardless of secondary source."
+  ],
+  "inferred": [
+    "The decision worker component z7b5387bd86e97b33 violated the contract rule by allowing secondary source to override primary source when primary was DENY."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "Current deployment version z6d58d65a40ba8bf2 has a structural defect in decision worker z7b5387bd86e97b33 where it failed to enforce primary source priority when primary decision was DENY.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z92ae29afc082f1a4",
+    "cause_evidence_id": "z6dd531593a2e74dc",
+    "effect_evidence_id": "z8d05c0638fe4cbbe",
+    "decisive_evidence_id": "z6dd531593a2e74dc",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"z390e410e4902b924\",\"source_secondary\":\"z70245f5bf01daa56\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"z70245f5bf01daa56\"}",
+    "required_value": "{\"source_primary\":\"z390e410e4902b924\",\"source_secondary\":\"z70245f5bf01daa56\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"z390e410e4902b924\"}",
+    "description": "The primary source was consulted first (z390e410e4902b924) but the component incorrectly prioritized the secondary source (z70245f5bf01daa56) when primary decision was DENY, violating the contract."
+  },
+  "strongest_alternative_explanation": "The component might have misinterpreted the 'first_consulted' field as a priority indicator rather than a record of consultation order, leading to incorrect decision logic.",
+  "falsifier": "The capture record zf5d0040c26622fd5 for version z6d58d65a40ba8bf2 shows final_decision=DENY, but the execution output z8d05c0638fe4cbbe for the same version shows final_decision=ALLOW, creating a direct contradiction."
+}

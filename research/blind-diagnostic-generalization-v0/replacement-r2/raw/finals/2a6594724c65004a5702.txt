@@ -1,0 +1,27 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": [],
+  "evidence_ids": [
+    "z7a9a51566e6db5d9",
+    "z43035840fc0ebe9f",
+    "z1ec44525fc6e4452",
+    "zb9aaad8ea9e16feb",
+    "z07264dd79820f90a"
+  ],
+  "observed": [
+    "execution_output returned_value 23 for version z35a6cd8e9724b5f8",
+    "execution_input config_values match active_config for current version",
+    "capture record matches execution output with identical digests"
+  ],
+  "inferred": [
+    "Configuration consistency across execution inputs and outputs",
+    "No deviation from contract rules about active_config usage"
+  ],
+  "unknown": [
+    "No evidence of configuration drift or input anomalies"
+  ],
+  "diagnostic_statement": "The internally valid evidence supports no current defect. The system's current deployment shows consistent execution outputs matching configuration expectations and capture records, with no observationally distinguishable defect from benign behavior.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "Benign operational consistency with contract expectations",
+  "falsifier": "A configuration mismatch or execution output deviation not observed in current records"
+}

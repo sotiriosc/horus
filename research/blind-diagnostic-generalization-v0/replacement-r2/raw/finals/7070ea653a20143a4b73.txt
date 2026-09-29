@@ -1,0 +1,20 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["z47660bfce301c439"],
+  "evidence_ids": ["z76ec9ccce08dea19", "z51b9c21b819a47fe", "z81ba7bd28be29d30", "z8c5b60578c294927"],
+  "observed": [
+    "Input records for version z3d19d966ab70ced4 show primary_source_available=false and source_path=BACKUP, with record_owner matching requested_entity.",
+    "Execution outputs for version z3d19d966ab70ced4 show consistent published_reading values with input records."
+  ],
+  "inferred": [
+    "The use of BACKUP source in version z3d19d966ab70ced4 complies with the contract rule allowing BACKUP when primary is unavailable.",
+    "The capture record for version z3d19d966ab70ced4 confirms data consistency between captured and recomputed digests."
+  ],
+  "unknown": [
+    "Whether the BACKUP source's data integrity is validated beyond the contract's scope."
+  ],
+  "diagnostic_statement": "The current deployment (version z3d19d966ab70ced4) shows no evidence of a structural defect. The system adheres to the contract rules for BACKUP usage and data consistency.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system's behavior aligns with the contract's allowance for BACKUP sources when primary is unavailable, and no violations of ownership rules are observed.",
+  "falsifier": "A scenario where the BACKUP source's data does not originate from the same record_owner as requested_entity, violating the contract rule."
+}

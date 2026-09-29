@@ -1,0 +1,28 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zb67873f53c123ffc"],
+  "evidence_ids": ["z09ca4ccbad9927cb", "z5af246eb58a7afdc", "z52588fcaa468f004"],
+  "observed": [
+    "Capture record z09ca4ccbad9927cb shows published_reading=28 in version zee749ec23daebb57",
+    "Execution output z5af246eb58a7afdc shows published_reading=27 in same version",
+    "Execution input z52588fcaa468f004 confirms BACKUP source used with reading=27"
+  ],
+  "inferred": [
+    "The input/output worker (zb67873f53c123ffc) produced inconsistent outputs between capture records and execution outputs for the same version",
+    "The discrepancy between published_reading=28 (capture) and 27 (execution) violates the contract's requirement for consistent record_owner attribution"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The input/output worker (zb67873f53c123ffc) is responsible for a current defect where execution outputs (published_reading=27) contradict capture records (published_reading=28) in the same deployment version, violating the contract's requirement for consistent record_owner attribution.",
+  "causal_mechanism": {
+    "contract_evidence_id": "za1fdd14d611b1035",
+    "cause_evidence_id": "z52588fcaa468f004",
+    "effect_evidence_id": "z09ca4ccbad9927cb",
+    "decisive_evidence_id": "z09ca4ccbad9927cb",
+    "decisive_field": "/data",
+    "observed_value": "published_reading=28",
+    "required_value": "published_reading=27",
+    "description": "The capture record's published_reading=28 contradicts the execution output's published_reading=27 for the same version, violating the contract's requirement for consistent record_owner attribution."
+  },
+  "strongest_alternative_explanation": "The discrepancy could be due to a transient data inconsistency during backup source retrieval, but the contract requires consistent record_owner attribution regardless of source type.",
+  "falsifier": "The execution output (z5af246eb58a7afdc) in the same version as the capture record (z09ca4ccbad9927cb) shows a different published_reading value, directly contradicting the contract's requirement for consistent record_owner attribution."
+}

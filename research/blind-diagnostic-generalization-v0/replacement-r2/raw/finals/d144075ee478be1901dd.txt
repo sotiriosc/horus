@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z9bce6b8f988f155f"],
+  "evidence_ids": ["zcf8ca71d4393e8f8", "zf87a0eed62316f74", "zc477862e1cd6cbf5", "z05bb77d752ec6e6a"],
+  "observed": [
+    "execution_input zc477862e1cd6cbf5 shows 2 attempt_tokens with identical operation_token z13019d3939ce6032",
+    "execution_output z05bb77d752ec6e6a reports posted_units=44 for this input"
+  ],
+  "inferred": [
+    "Contract requires posted_units = amount * distinct operation_tokens (22 * 1 = 22)",
+    "Execution output violates contract by reporting 44 instead of 22"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The decision worker component z9bce6b8f988f155f incorrectly counts duplicate operation_tokens as distinct, violating the contract rule for posted_units calculation in current deployment version z8df21f73bd59cd5a.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zf87a0eed62316f74",
+    "cause_evidence_id": "zc477862e1cd6cbf5",
+    "effect_evidence_id": "z05bb77d752ec6e6a",
+    "decisive_evidence_id": "zc477862e1cd6cbf5",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'attempt_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'z9b83e6241159a218', 'operation_token': 'z13019d3939ce6032'}, {'sequence': 2, 'attempt_token': 'zaf035e48ced50be3', 'operation_token': 'z13019d3939ce6032'}], 'listing_complete': True}",
+    "required_value": "{'key_column': 'attempt_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'z9b83e6241159a218', 'operation_token': 'z13019d3939ce6032'}, {'sequence': 2, 'attempt_token': 'zaf035e48ced50be3', 'operation_token': 'z13019d3939ce6032'}], 'listing_complete': True, 'distinct_operation_tokens': 1}",
+    "description": "The component failed to recognize that both attempt_tokens share the same operation_token, leading to an incorrect multiplication factor in posted_units calculation."
+  },
+  "strongest_alternative_explanation": "The system may have misinterpreted the key_column parameter, but the contract explicitly defines operation_token as the distinct count basis, not attempt_token.",
+  "falsifier": "The execution_output z05bb77d752ec6e6a directly contradicts the contract rule by reporting double the expected value for a single distinct operation_token."
+}

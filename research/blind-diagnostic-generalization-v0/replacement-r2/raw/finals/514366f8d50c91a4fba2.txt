@@ -1,0 +1,29 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z0471f757bc838146"],
+  "evidence_ids": ["z873cf3c076bdb44b", "zb127fd72a55c532e", "z09b667d8944bc78e", "z560a69a57898629d"],
+  "observed": [
+    "Execution inputs at versions z84b2aae7820fbc48 and z8d7cb24e46c2f331 use config_values {z4376773d7217e38f:16, zae2fd5795dacd6d7:23} with repeat_count 5",
+    "Execution outputs at both versions return returned_value:23"
+  ],
+  "inferred": [
+    "The configuration named by active_config (zae2fd5795dacd6d7) should determine output values according to the contract",
+    "The same config_values and repeat_count produced identical outputs across versions"
+  ],
+  "unknown": [
+    "Whether the configuration values are correctly mapped to output values"
+  ],
+  "diagnostic_statement": "The system's current deployment shows a structural defect where identical configuration inputs produce identical outputs across versions, violating the contract's requirement that configuration values are complete and may not return identical values indefinitely for repeated requests.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z299561fbc696df15",
+    "cause_evidence_id": "z873cf3c076bdb44b",
+    "effect_evidence_id": "z09b667d8944bc78e",
+    "decisive_evidence_id": "z873cf3c076bdb44b",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'zae2fd5795dacd6d7', 'used_config': 'zae2fd5795dacd6d7', 'config_values': {'z4376773d7217e38f': 16, 'zae2fd5795dacd6d7': 23}, 'request_template': 'z3fd6eafc982df950', 'repeat_count': 5}",
+    "required_value": "{'active_config': 'zae2fd5795dacd6d7', 'used_config': 'zae2fd5795dacd6d7', 'config_values': {'z4376773d7217e38f': 16, 'zae2fd5795dacd6d7': 23}, 'request_template': 'z3fd6eafc982df950', 'repeat_count': 5, 'returned_value': 23, 'version': 'z84b2aae7820fbc48'}",
+    "description": "The configuration values and repeat_count are identical across versions, but the contract prohibits identical outputs for repeated identical requests."
+  },
+  "strongest_alternative_explanation": "The system may be designed to return identical values for identical requests, but this contradicts the contract's explicit prohibition against such behavior.",
+  "falsifier": "The contract explicitly prohibits identical outputs for repeated identical requests, yet the execution outputs show identical returned_value:23 for identical inputs across versions."
+}

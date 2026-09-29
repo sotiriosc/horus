@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zaf2aa726e84a28df"],
+  "evidence_ids": ["zd0c7388e83e45b1b", "z4ed5ab5ee4c1760c", "z3791596501678e69"],
+  "observed": [
+    "execution_input zd0c7388e83e45b1b: attempt_total_before=14, batch_size=5, remote_delivery=DROPPED_BY_LINK",
+    "execution_output z4ed5ab5ee4c1760c: attempt_total_after=14"
+  ],
+  "inferred": [
+    "The contract requires attempt_total_after = attempt_total_before + batch_size = 14 + 5 = 19"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment violates the contract rule for component zaf2aa726e84a28df. The observed attempt_total_after (14) does not match the contract requirement (19) when remote_delivery is DROPPED_BY_LINK.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z3791596501678e69",
+    "cause_evidence_id": "zd0c7388e83e45b1b",
+    "effect_evidence_id": "z4ed5ab5ee4c1760c",
+    "decisive_evidence_id": "z4ed5ab5ee4c1760c",
+    "decisive_field": "/data",
+    "observed_value": "attempt_total_after=14",
+    "required_value": "attempt_total_after=19",
+    "description": "The component failed to increment attempt_total_after by batch_size (5) despite the contract requiring it, even when remote_delivery is DROPPED_BY_LINK."
+  },
+  "strongest_alternative_explanation": "The system may have incorrectly handled DROPPED_BY_LINK cases by not updating attempt_total_after, but the contract explicitly requires incrementing regardless of delivery status.",
+  "falsifier": "The contract rule explicitly requires attempt_total_after = attempt_total_before + batch_size regardless of remote_delivery, and no other writes occurred in the interval."
+}

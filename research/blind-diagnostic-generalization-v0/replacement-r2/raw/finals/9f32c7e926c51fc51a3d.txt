@@ -1,0 +1,21 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z1df4c2f1ac5dba1e"],
+  "evidence_ids": ["z60164439247da5a3", "za67e6de3d29eb580", "zd0cefe511aa0c214"],
+  "observed": ["execution_output returned_value 16 for current version z854e7cdb17441691"],
+  "inferred": ["active_config zfee930bb64dbd891 should use config_values 23, but execution returned 16"],
+  "unknown": [],
+  "diagnostic_statement": "The current version z854e7cdb17441691 uses active_config zfee930bb64dbd891 which is configured with value 23, but execution returned 16. This contradicts the contract rule that active_config values are complete and should determine output.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z72f73615b04100be",
+    "cause_evidence_id": "za67e6de3d29eb580",
+    "effect_evidence_id": "z60164439247da5a3",
+    "decisive_evidence_id": "za67e6de3d29eb580",
+    "decisive_field": "/data",
+    "observed_value": "active_config: zfee930bb64dbd891, used_config: zdc97af92b566af38",
+    "required_value": "active_config: zfee930bb64dbd891, used_config: zfee930bb64dbd891",
+    "description": "The active_config zfee930bb64dbd891 should be used, but the used_config is zdc97af92b566af38 which has value 16. This mismatch violates the contract rule that active_config determines output."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The execution output for current version z854e7cdb17441691 returned 16 despite active_config zfee930bb64dbd891 being configured with 23."
+}

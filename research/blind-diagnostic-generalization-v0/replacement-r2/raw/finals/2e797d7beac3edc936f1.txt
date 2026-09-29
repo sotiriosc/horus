@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z021c71c6a494bedc"],
+  "evidence_ids": ["z17f5fa6da7df9191", "z76fb864cea9aa627", "z5624aefd425ea8a0"],
+  "observed": [
+    "At version z38fd8858123d15e0, execution input z17f5fa6da7df9191 specifies primary_decision=DENY and secondary_decision=ALLOW, but execution output z76fb864cea9aa627 shows final_decision=ALLOW.",
+    "At version z210416c3375bcfad, execution input z63dccc7aa847961e specifies primary_decision=DENY and secondary_decision=ALLOW, and execution output z95620851d7631622 shows final_decision=DENY."
+  ],
+  "inferred": [
+    "The contract (z5624aefd425ea8a0) mandates that primary_decision=DENY must result in final_decision=DENY, regardless of secondary_decision.",
+    "The version z38fd8858123d15e0 (release ordinal 1) violates this rule, while version z210416c3375bcfad (release ordinal 2) complies."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The system's current deployment (version z210416c3375bcfad) complies with the contract, but a prior version (z38fd8858123d15e0) had a defect where the decision worker allowed an ALLOW final decision despite a DENY primary decision. This defect is no longer active in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z5624aefd425ea8a0",
+    "cause_evidence_id": "z17f5fa6da7df9191",
+    "effect_evidence_id": "z76fb864cea9aa627",
+    "decisive_evidence_id": "z17f5fa6da7df9191",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"z2d5d53056767088c\",\"source_secondary\":\"z68aee425255880ff\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"z68aee425255880ff\"}",
+    "required_value": "primary_decision=DENY must result in final_decision=DENY regardless of secondary_decision (per contract z5624aefd425ea8a0).",
+    "description": "The decision worker in version z38fd8858123d15e0 failed to enforce the contract rule that primary_decision=DENY overrides secondary_decision=ALLOW."
+  },
+  "strongest_alternative_explanation": "The decision worker may have misinterpreted the contract rule, but the current deployment (version z210416c3375bcfad) shows compliance.",
+  "falsifier": "The current deployment (version z210416c3375bcfad) shows correct behavior, and the defect is not active in the current scope."
+}

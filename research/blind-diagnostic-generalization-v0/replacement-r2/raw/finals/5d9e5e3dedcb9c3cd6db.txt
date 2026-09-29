@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z0d6a7f28ea6dae8e"],
+  "evidence_ids": ["z038c0dac75a7b8fb", "z61f8caf436dd1ea7"],
+  "observed": [
+    "Capture record z038c0dac75a7b8fb shows published_reading=28 for event z6d8c6b5036566bf3",
+    "Execution output z61f8caf436dd1ea7 shows published_reading=27 for same event"
+  ],
+  "inferred": [
+    "The input/output worker (z0d6a7f28ea6dae8e) processed the BACKUP source reading=27 for event z6d8c6b5036566bf3",
+    "The capture record's recomputed_digest matches recorded_digest, confirming data integrity"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The system's input/output worker produced a conflicting published_reading (27) for event z6d8c6b5036566bf3 compared to the capture record's published_reading (28). This violates the contract rule requiring readings to originate from records with matching record_owner and source ownership.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z97ff231e4a3a2858",
+    "cause_evidence_id": "zbeadece770e9a57b",
+    "effect_evidence_id": "z61f8caf436dd1ea7",
+    "decisive_evidence_id": "z038c0dac75a7b8fb",
+    "decisive_field": "/data",
+    "observed_value": "published_reading=28",
+    "required_value": "published_reading=27",
+    "description": "The capture record's published_reading (28) conflicts with the execution output's published_reading (27) for the same event, violating the contract's data consistency requirement."
+  },
+  "strongest_alternative_explanation": "The discrepancy could be due to a transient data processing error in the input/output worker, but the matching recomputed_digest in the capture record confirms the original data was intact, making this a structural defect rather than a transient issue.",
+  "falsifier": "The recomputed_digest in z038c0dac75a7b8fb matches the recorded_digest, confirming the original data was not corrupted, thus ruling out data transmission errors as the cause."
+}

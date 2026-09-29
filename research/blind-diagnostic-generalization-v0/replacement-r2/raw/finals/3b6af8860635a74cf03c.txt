@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z4276781bf2f4e777"],
+  "evidence_ids": ["z42c7783f25813c08", "zc8630d187f5e1185", "z52f847563561af16"],
+  "observed": [
+    "Execution input z42c7783f25813c08 shows active_config zc9b62acdb9a35735 with value 23",
+    "Execution output zc8630d187f5e1185 returns 23 for the same configuration"
+  ],
+  "inferred": [
+    "The publication worker correctly used active_config zc9b62acdb9a35735 as required by the contract"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version z5199d83cc2570f56 shows the publication worker using active_config zc9b62acdb9a35735 with value 23, which matches the returned_value of 23 in execution output zc8630d187f5e1185. This satisfies the contract requirement that active_config values are used for responses.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z52f847563561af16",
+    "cause_evidence_id": "z42c7783f25813c08",
+    "effect_evidence_id": "zc8630d187f5e1185",
+    "decisive_evidence_id": "z42c7783f25813c08",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'zc9b62acdb9a35735', 'used_config': 'zc9b62acdb9a35735', 'config_values': {'z3732939108686c90': 16, 'zc9b62acdb9a35735': 23}, 'request_template': 'z07739026d42d0b2a', 'repeat_count': 5}",
+    "required_value": "{'active_config': 'zc9b62acdb9a35735', 'used_config': 'zc9b62acdb9a35735', 'config_values': {'z3732939108686c90': 16, 'zc9b62acdb9a35735': 23}, 'request_template': 'z07739026d42d0b2a', 'repeat_count': 5}",
+    "description": "The publication worker used the active_config zc9b62acdb9a35735 with value 23 as required by the contract, resulting in the correct returned_value of 23."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The system is operating within the contract's defined scope with no evidence of deviation."
+}

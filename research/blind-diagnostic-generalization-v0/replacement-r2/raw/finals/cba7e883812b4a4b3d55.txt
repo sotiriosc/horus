@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z994132c7b25150f6"],
+  "evidence_ids": ["za2f536a600951bac", "z0779e393b226c0eb", "za3eec06abed4cc52"],
+  "observed": [
+    "Execution input at at=20 shows sensed_level=UNKNOWN, target_level=14, implemented_comparator=UNKNOWN, comparison_result=UNKNOWN, but execution output at at=21 shows command_issued=true"
+  ],
+  "inferred": [
+    "The UNKNOWN values in the input data do not satisfy the contract's requirement to issue a command only when sensed_level > target_level. The system issued a command despite missing or indeterminate input data."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The system issued a command (command_issued: true) when the input data contained UNKNOWN values for sensed_level and implemented_comparator, violating the contract rule that commands must be issued only when sensed_level is strictly greater than target_level.",
+  "causal_mechanism": {
+    "contract_evidence_id": "za3eec06abed4cc52",
+    "cause_evidence_id": "z0779e393b226c0eb",
+    "effect_evidence_id": "za2f536a600951bac",
+    "decisive_evidence_id": "z0779e393b226c0eb",
+    "decisive_field": "/data",
+    "observed_value": "{'sensed_level': 'UNKNOWN', 'target_level': 14, 'implemented_comparator': 'UNKNOWN', 'comparison_result': 'UNKNOWN', 'readings': ['UNKNOWN', 'UNKNOWN', 'UNKNOWN']}",
+    "required_value": "{'sensed_level': '<= target_level', 'implemented_comparator': '>', 'comparison_result': 'false'}",
+    "description": "The system issued a command when the input data contained UNKNOWN values for sensed_level and implemented_comparator, violating the contract rule that commands must be issued only when sensed_level is strictly greater than target_level."
+  },
+  "strongest_alternative_explanation": "The system may have issued a command based on data not captured in the records, but the contract explicitly requires that commands be issued only when sensed_level > target_level, and the input data does not meet this condition.",
+  "falsifier": "The system issued a command (command_issued: true) when the input data contained UNKNOWN values for sensed_level and implemented_comparator, violating the contract rule that commands must be issued only when sensed_level is strictly greater than target_level."
+}

@@ -1,0 +1,21 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["zd13981c19efa6651"],
+  "evidence_ids": ["z452dfb1d8c56efe3", "z21ed54d1703d5d46", "z32c71342f8d144f6", "z91ef9bbbb491bbea", "zbd99ff142399e50d"],
+  "observed": [
+    "execution_output.z32c71342f8d144f6.attempt_total_after=19",
+    "execution_input.z21ed54d1703d5d46.attempt_total_before=14",
+    "execution_input.z21ed54d1703d5d46.batch_size=UNKNOWN"
+  ],
+  "inferred": [
+    "execution_output.z32c71342f8d144f6.attempt_total_after should equal execution_input.z21ed54d1703d5d46.attempt_total_before + batch_size (per contract z452dfb1d8c56efe3)",
+    "batch_size is not known for current version z62a46a63c2ad1feb"
+  ],
+  "unknown": [
+    "execution_input.z21ed54d1703d5d46.batch_size"
+  ],
+  "diagnostic_statement": "The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The batch_size parameter is UNKNOWN in the current version, making it observationally indistinguishable from a defect or benign behavior.",
+  "falsifier": "The current version's execution_output.z32c71342f8d144f6.attempt_total_after=19 matches the older version's behavior when batch_size=5, but since batch_size is UNKNOWN in the current version, this cannot be confirmed as a defect."
+}

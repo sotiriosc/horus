@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["zafea7bb02385eb97"],
+  "evidence_ids": ["zaf067c09eb2777c1", "zf5a67c6ee1e73767", "z777c879f9f40d05b"],
+  "observed": [
+    "execution_input.zf5a67c6ee1e73767.data.record_owner != execution_input.zf5a67c6ee1e73767.data.attributed_entity"
+  ],
+  "inferred": [
+    "record_owner (zb9d902b478088a37) differs from attributed_entity (z4bf07b4bd8a931fa) in execution_input.zf5a67c6ee1e73767"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The input/output worker (zafea7bb02385eb97) violated the contract rule that a reading attributed to requested_entity must originate from a record with the same record_owner. The observed record_owner (zb9d902b478088a37) differs from the attributed_entity (z4bf07b4bd8a931fa) in execution_input.zf5a67c6ee1e73767.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z777c879f9f40d05b",
+    "cause_evidence_id": "zf5a67c6ee1e73767",
+    "effect_evidence_id": "zbdaaa3a330f73bd2",
+    "decisive_evidence_id": "zf5a67c6ee1e73767",
+    "decisive_field": "/data",
+    "observed_value": "{\"requested_entity\":\"z4bf07b4bd8a931fa\",\"record_owner\":\"zb9d902b478088a37\",\"selected_source\":\"z14b8808271f373de\",\"primary_source_available\":false,\"source_path\":\"BACKUP\",\"reading\":27}",
+    "required_value": "{\"requested_entity\":\"z4bf07b4bd8a931fa\",\"record_owner\":\"z4bf07b4bd8a931fa\",\"selected_source\":\"z14b8808271f373de\",\"primary_source_available\":false,\"source_path\":\"BACKUP\",\"reading\":27}",
+    "description": "The record_owner field in the execution_input.zf5a67c6ee1e73767 does not match the attributed_entity, violating the contract rule that a reading must originate from a record with the same record_owner."
+  },
+  "strongest_alternative_explanation": "The system may have been configured to allow different record_owners for backup sources, but this would require explicit contract exception which is not present.",
+  "falsifier": "The contract rule explicitly requires record_owner to match attributed_entity for readings, and this is not satisfied in the current execution_input."
+}

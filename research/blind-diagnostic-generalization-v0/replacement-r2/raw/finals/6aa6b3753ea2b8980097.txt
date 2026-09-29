@@ -1,0 +1,27 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z38ddcea72e7ee979"],
+  "evidence_ids": ["z6ffc4798020fd26d", "zc7fb9a0e02b2c760", "z69a8d08250605105", "z2c0245316200d4bd"],
+  "observed": [
+    "In current version z22902d8cb83d2cb3, execution_input z6ffc4798020fd26d uses active_config z69fb7288b04a10b1 (value 23) and returns 23.",
+    "In older version zaa1e109d301b982c, execution_input z69a8d08250605105 uses active_config z69fb7288b04a10b1 (value 23) but used_config za8bbdef81468d9db (value 16) and returns 16."
+  ],
+  "inferred": [
+    "The contract (z65f88dd6da577f5b) requires active_config to be used for responses.",
+    "The older version's execution_input z69a8d08250605105 violates the contract by using a different config than active_config."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current version z22902d8cb83d2cb3 correctly uses active_config for responses, while the older version zaa1e109d301b982c shows a defect where used_config differs from active_config. This defect is no longer active in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z65f88dd6da577f5b",
+    "cause_evidence_id": "z69a8d08250605105",
+    "effect_evidence_id": "z2c0245316200d4bd",
+    "decisive_evidence_id": "z69a8d08250605105",
+    "decisive_field": "/data",
+    "observed_value": "{'active_config': 'z69fb7288b04a10b1', 'used_config': 'za8bbdef81468d9db'}",
+    "required_value": "{'active_config': 'z69fb7288b04a10b1', 'used_config': 'z69fb7288b04a10b1'}",
+    "description": "The execution_input for the older version incorrectly used a different config than active_config, violating the contract."
+  },
+  "strongest_alternative_explanation": "The older version may have had a configuration error that was fixed in the current version.",
+  "falsifier": "The current version's execution_input and output align with the contract, while the older version's execution_input and output do not."
+}

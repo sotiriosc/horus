@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z2d8590256bd931c7"],
+  "evidence_ids": ["zbf20f1a17e303284", "zc587bd0d87a5db26", "z3bd42c9d45184bb3", "z06955534bb7133f3"],
+  "observed": [
+    "In version zb8b7a3fff1ece6e3, execution_input zc587bd0d87a5db26 shows primary_decision=DENY and secondary_decision=ALLOW, but execution_output z06955534bb7133f3 has final_decision=ALLOW, violating the contract rule that primary=DENY must result in final=DENY.",
+    "In current version ze7eb460a5b8fafa7, execution_input z3bd42c9d45184bb3 shows primary_decision=DENY and secondary_decision=ALLOW, and execution_output z5cb258823ac8c0aa has final_decision=DENY, which aligns with the contract rule."
+  ],
+  "inferred": [
+    "The contract rule is enforced in the current deployment (version ze7eb460a5b8fafa7) but was violated in the earlier version (zb8b7a3fff1ece6e3)."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The system's current deployment (version ze7eb460a5b8fafa7) correctly enforces the contract rule that primary=DENY must result in final=DENY. However, a defect existed in the earlier version (zb8b7a3fff1ece6e3) where the same input configuration produced a conflicting final decision. This historical defect is no longer active in the current scope.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zbf20f1a17e303284",
+    "cause_evidence_id": "zc587bd0d87a5db26",
+    "effect_evidence_id": "z06955534bb7133f3",
+    "decisive_evidence_id": "zc587bd0d87a5db26",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"zd52ac2a1f2e44b5b\",\"source_secondary\":\"zb9366d100783fdd2\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"zb9366d100783fdd2\"}",
+    "required_value": "{\"source_primary\":\"zd52ac2a1f2e44b5b\",\"source_secondary\":\"zb9366d100783fdd2\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"zd52ac2a1f2e44b5b\"}",
+    "description": "The first_consulted field in the execution_input for version zb8b7a3fff1ece6e3 was incorrectly set to the secondary source, leading to a violation of the contract rule when the primary source's decision was DENY."
+  },
+  "strongest_alternative_explanation": "The earlier version's implementation may have had a logic error in determining which source to consult first, but this was corrected in the current deployment.",
+  "falsifier": "The current deployment (version ze7eb460a5b8fafa7) correctly enforces the contract rule, as demonstrated by the execution_output z5cb258823ac8c0aa with final_decision=DENY when primary_decision=DENY."
+}

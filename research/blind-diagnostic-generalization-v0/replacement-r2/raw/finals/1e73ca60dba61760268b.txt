@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z1d0b1fe8683e16ca"],
+  "evidence_ids": ["z16ad34e6e547704a", "z75f391cce08e478a", "z8c8ed341ba728419", "z4a42a3e3e6838a54", "z65e1a06625e0daa0"],
+  "observed": [
+    "In current version zb54b169352458adb, active_config and used_config both reference zf9223eb6545b347c with value 23, yet output matches this value.",
+    "In older version z5b2e64eae3e8c154, active_config references zf9223eb6545b347c (value 23) but used_config references z7349278bdb00dbb3 (value 16), and output matches the used_config value."
+  ],
+  "inferred": [
+    "The contract requires active_config to be used for responses, but in older version z5b2e64eae3e8c154, the used_config differs from active_config and output matches used_config instead of active_config."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version (zb54b169352458adb) correctly uses active_config for output, but the older version (z5b2e64eae3e8c154) shows a defect where used_config overrides active_config, violating the contract. This defect is no longer active in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z65e1a06625e0daa0",
+    "cause_evidence_id": "z8c8ed341ba728419",
+    "effect_evidence_id": "z4a42a3e3e6838a54",
+    "decisive_evidence_id": "z8c8ed341ba728419",
+    "decisive_field": "/data",
+    "observed_value": "active_config: zf9223eb6545b347c, used_config: z7349278bdb00dbb3",
+    "required_value": "used_config must match active_config for the version's execution context according to the contract rule 'For every response, use the configuration named by active_config for that execution version.'",
+    "description": "In older version z5b2e64eae3e8c154, the active_config was zf9223eb6545b347c but used_config was z7349278bdb00dbb3, leading to output matching the used_config value instead of active_config as required by the contract."
+  },
+  "strongest_alternative_explanation": "The system may have been configured to allow used_config to override active_config in specific contexts, but this would require explicit contract exceptions which are not documented.",
+  "falsifier": "The current deployment version (zb54b169352458adb) correctly uses active_config for output, indicating the defect is not active in the current deployment."
+}

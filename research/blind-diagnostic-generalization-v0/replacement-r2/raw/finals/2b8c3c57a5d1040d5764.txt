@@ -1,0 +1,17 @@
+{
+  "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+  "affected_component_ids": ["za31466582bc23ff5"],
+  "evidence_ids": ["zb3f300df0ab86afa", "z83dc1d96735d24b7"],
+  "observed": [
+    "recorded_digest: 55f9304ce43752b662dda96c50bf82dc27a7157cb6bef6dc72726448eb992200",
+    "recomputed_digest: db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+  ],
+  "inferred": [
+    "Capture record violates contract rule requiring recorded_digest == recomputed_digest"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The evidence contains incompatible immutable facts in capture records where recorded_digest and recomputed_digest disagree, violating the capture_contract rule that they must agree for identical captured bytes.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system may have correctly computed attempt_total_after=19 per contract, but the capture record's digest mismatch indicates a deeper evidence integrity issue.",
+  "falsifier": "recorded_digest != recomputed_digest in zb3f300df0ab86afa"
+}

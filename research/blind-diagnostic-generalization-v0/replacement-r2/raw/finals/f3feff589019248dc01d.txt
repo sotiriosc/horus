@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z14b927349f20f216"],
+  "evidence_ids": ["z87e57d0bb4b5788e", "zbaa3470a6ae5cf49", "zf4c503ed0b245ed1"],
+  "observed": [
+    "Execution output z87e57d0bb4b5788e (version zc557c7ce8f0cfce1) shows final_decision: ALLOW despite primary_decision: DENY",
+    "Execution input zbaa3470a6ae5cf49 (version zc557c7ce8f0cfce1) shows primary_decision: DENY and secondary_decision: ALLOW"
+  ],
+  "inferred": [
+    "The decision worker z14b927349f20f216 violated the contract rule requiring final_decision: DENY when primary_decision: DENY"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version zc557c7ce8f0cfce1) has a structural defect in the decision worker z14b927349f20f216. It produced an ALLOW final decision when the primary source explicitly required DENY, violating the contract rule.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zf4c503ed0b245ed1",
+    "cause_evidence_id": "zbaa3470a6ae5cf49",
+    "effect_evidence_id": "z87e57d0bb4b5788e",
+    "decisive_evidence_id": "z87e57d0bb4b5788e",
+    "decisive_field": "/data",
+    "observed_value": "{'final_decision': 'ALLOW'}",
+    "required_value": "{'final_decision': 'DENY'}",
+    "description": "The decision worker failed to enforce the contract rule that requires final_decision: DENY when primary_decision: DENY."
+  },
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The contract rule explicitly requires final_decision: DENY when primary_decision: DENY, which was violated in the observed execution output."
+}

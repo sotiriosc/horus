@@ -1,0 +1,29 @@
+{
+  "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+  "affected_component_ids": ["z979ec46f31475d5f"],
+  "evidence_ids": ["z9eab2f1d15df7d6f", "z40d84be29cffc4b4", "z03bb94d38e3fab47", "z7982f055421718f9", "z4829eead15ab3738", "zcf64d15e7b24c396"],
+  "observed": [
+    "In current version z21ce3d519b137b44, execution input z9eab2f1d15df7d6f shows active_config=UNKNOWN but used_config=z87f4cf70a975bcf6 with config_values={z87f4cf70a975bcf6:16, z82e4909baae5299f:23}, and capture record z40d84be29cffc4b4 shows returned_value=16.",
+    "In older version z74241c435b124d9a, execution input z03bb94d38e3fab47 shows active_config=z82e4909baae5299f with config_values={z87f4cf70a975bcf6:16, z82e4909baae5299f:23}, and execution output z7982f055421718f9 shows returned_value=23."
+  ],
+  "inferred": [
+    "The contract (zcf64d15e7b24c396) requires that active_config determines the configuration used for a version. In current version z21ce3d519b137b44, active_config=UNKNOWN but used_config=z87f4cf70a975bcf6, which may indicate a defect in configuration selection.",
+    "In older version z74241c435b124d9a, active_config=z82e4909baae5299f and used_config=z82e4909baae5299f, with returned_value=23, which aligns with the configuration value for z82e4909baae5299f."
+  ],
+  "unknown": [
+    "The reason for active_config=UNKNOWN in current version z21ce3d519b137b44 is not explicitly explained in the records."
+  ],
+  "diagnostic_statement": "The current version z21ce3d519b137b44 shows a configuration selection discrepancy (active_config=UNKNOWN but used_config=z87f4cf70a975bcf6) that differs from the older version z74241c435b124d9a, where active_config=z82e4909baae5299f and used_config=z82e4909baae5299f with returned_value=23. This suggests the defect observed in the older version (configuration mismatch) is no longer active in the current deployment.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zcf64d15e7b24c396",
+    "cause_evidence_id": "z9eab2f1d15df7d6f",
+    "effect_evidence_id": "z40d84be29cffc4b4",
+    "decisive_evidence_id": "z9eab2f1d15df7d6f",
+    "decisive_field": "/data",
+    "observed_value": "active_config=UNKNOWN, used_config=z87f4cf70a975bcf6",
+    "required_value": "active_config must match used_config for the version's configuration selection as per the contract rule: 'For every response, use the configuration named by active_config for that execution version.'",
+    "description": "The contract requires that the active_config determines the used configuration. In current version z21ce3d519b137b44, active_config=UNKNOWN but used_config=z87f4cf70a975bcf6, which may indicate a defect in configuration selection. However, this discrepancy is not present in the older version z74241c435b124d9a, where active_config=z82e4909baae5299f and used_config=z82e4909baae5299f with returned_value=23, indicating the defect is no longer active in the current deployment."
+  },
+  "strongest_alternative_explanation": "The current version's active_config=UNKNOWN may be an omitted information (as per contract rule: 'UNKNOWN denotes omitted information, never a default value') rather than a defect, but this explanation is less strong than the historical defect explanation.",
+  "falsifier": "The current version's active_config=UNKNOWN and used_config=z87f4cf70a975bcf6 with returned_value=16, which may indicate a defect in configuration selection, but this defect is not present in the older version z74241c435b124d9a, where active_config=z82e4909baae5299f and used_config=z82e4909baae5299f with returned_value=23."
+}

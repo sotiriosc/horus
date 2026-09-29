@@ -1,0 +1,25 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z4fbc2303a8615fce"],
+  "evidence_ids": ["z3ec27b8fab07fa3e", "zf81323408e70c23a", "z36c8b4974cf8c429"],
+  "observed": [
+    "In current version z143592bbf0479a48, execution_input shows active_config='UNKNOWN' but used_config=z1ac933d74e82f207 with value 16, which matches returned_value=16."
+  ],
+  "inferred": [
+    "The contract requires active_config to be used for configuration, not used_config. The UNKNOWN active_config violates the contract's rule that configuration values are complete."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version z143592bbf0479a48) has a defect where the active_config is set to UNKNOWN, violating the contract's requirement that configuration values are complete and must be used for execution.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z3ec27b8fab07fa3e",
+    "cause_evidence_id": "zf81323408e70c23a",
+    "effect_evidence_id": "z36c8b4974cf8c429",
+    "decisive_evidence_id": "zf81323408e70c23a",
+    "decisive_field": "/data",
+    "observed_value": "active_config: UNKNOWN, used_config: z1ac933d74e82f207",
+    "required_value": "active_config must be a known configuration ID with complete values as per contract rule 'For every response, use the configuration named by active_config for that execution version.'",
+    "description": "The active_config field in the execution_input for version z143592bbf0479a48 is set to UNKNOWN, which violates the contract's requirement that configuration values are complete and must be used for execution. This directly causes the returned_value to use the used_config instead of the active_config as mandated by the contract."
+  },
+  "strongest_alternative_explanation": "The system might be using a fallback mechanism when active_config is UNKNOWN, but this would require explicit contract allowance which is not present.",
+  "falsifier": "The contract explicitly states that configuration values are complete and must be used, making the UNKNOWN active_config a direct violation."
+}

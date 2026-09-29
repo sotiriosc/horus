@@ -1,0 +1,26 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z2d8590256bd931c7"],
+  "evidence_ids": ["z3bd42c9d45184bb3", "z5cb258823ac8c0aa", "zbf20f1a17e303284"],
+  "observed": [
+    "In current version ze7eb460a5b8fafa7, execution_input z3bd42c9d45184bb3 shows primary_decision=DENY and secondary_decision=ALLOW, but execution_output z5cb258823ac8c0aa correctly returns final_decision=DENY.",
+    "In older version zb8b7a3fff1ece6e3, execution_input zc587bd0d87a5db26 shows primary_decision=DENY and secondary_decision=ALLOW, but execution_output z06955534bb7133f3 incorrectly returns final_decision=ALLOW."
+  ],
+  "inferred": [
+    "The contract zbf20f1a17e303284 explicitly requires that primary source decisions take precedence over secondary sources. This is correctly implemented in current version ze7eb460a5b8fafa7 but violated in older version zb8b7a3fff1ece6e3."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version ze7eb460a5b8fafa7) correctly implements the contract rule that primary source decisions take precedence. This distinguishes it from the older version zb8b7a3fff1ece6e3, which violated the same rule. The current system has no active defect related to this rule.",
+  "causal_mechanism": {
+    "contract_evidence_id": "zbf20f1a17e303284",
+    "cause_evidence_id": "z3bd42c9d45184bb3",
+    "effect_evidence_id": "z5cb258823ac8c0aa",
+    "decisive_evidence_id": "z3bd42c9d45184bb3",
+    "decisive_field": "/data",
+    "observed_value": "{\"source_primary\":\"zd52ac2a1f2e44b5b\",\"source_secondary\":\"zb9366d100783fdd2\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"zd52ac2a1f2e44b5b\"}",
+    "required_value": "{\"source_primary\":\"zd52ac2a1f2e44b5b\",\"source_secondary\":\"zb9366d100783fdd2\",\"primary_decision\":\"DENY\",\"secondary_decision\":\"ALLOW\",\"first_consulted\":\"zd52ac2a1f2e44b5b\"}",
+    "description": "The current version correctly implements the contract rule that primary source decisions take precedence over secondary sources. This is demonstrated by the execution_input z3bd42c9d45184bb3 showing primary_decision=DENY and secondary_decision=ALLOW, and the execution_output z5cb258823ac8c0aa correctly returning final_decision=DENY."
+  },
+  "strongest_alternative_explanation": "The current version may have been updated to fix the defect present in the older version zb8b7a3fff1ece6e3, where the same input configuration resulted in an incorrect final decision of ALLOW instead of DENY.",
+  "falsifier": "The current version ze7eb460a5b8fafa7 has no active defect related to the contract rule that primary source decisions take precedence over secondary sources."
+}

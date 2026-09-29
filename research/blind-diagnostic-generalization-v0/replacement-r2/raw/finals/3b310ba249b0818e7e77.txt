@@ -1,0 +1,28 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z0d6a7f28ea6dae8e"],
+  "evidence_ids": ["zbeadece770e9a57b", "z61f8caf436dd1ea7", "z038c0dac75a7b8fb"],
+  "observed": [
+    "execution_input for zb77051dfb668e240 reports reading=27 with BACKUP source",
+    "execution_output for zb77051dfb668e240 publishes reading=27",
+    "capture record for zb77051dfb668e240 shows published_reading=28"
+  ],
+  "inferred": [
+    "The capture record's published_reading=28 contradicts the execution output's 27 for the same version",
+    "The component z0d6a7f28ea6dae8e (input/output worker) is responsible for the discrepancy"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment version zb77051dfb668e240 shows a structural defect in the input/output worker component. The execution output records a published_reading of 27, but the capture record for the same version shows a published_reading of 28. This inconsistency violates the contract rule that operational input/configuration records must match the captured event data.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z97ff231e4a3a2858",
+    "cause_evidence_id": "zbeadece770e9a57b",
+    "effect_evidence_id": "z038c0dac75a7b8fb",
+    "decisive_evidence_id": "z038c0dac75a7b8fb",
+    "decisive_field": "/data",
+    "observed_value": "{\"attributed_entity\":\"z017738319f890a41\",\"published_reading\":28}",
+    "required_value": "{\"attributed_entity\":\"z017738319f890a41\",\"published_reading\":27}",
+    "description": "The capture record's published_reading=28 contradicts the execution output's 27 for the same version, violating the contract that operational input/configuration records must match the captured event data."
+  },
+  "strongest_alternative_explanation": "The discrepancy could be due to a temporary data corruption in the capture process, but the matching recorded_digest and recomputed_digest in the capture record indicate the captured data is consistent with itself, making this explanation less plausible than a structural defect in the input/output worker component.",
+  "falsifier": "The capture record's published_reading=28 directly contradicts the execution output's 27 for the same version, which is a violation of the contract rule that operational input/configuration records must match the captured event data."
+}

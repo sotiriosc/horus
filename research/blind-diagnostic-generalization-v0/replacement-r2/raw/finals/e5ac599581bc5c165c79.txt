@@ -1,0 +1,26 @@
+{
+  "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+  "affected_component_ids": ["zd9daa6e5744c46b8"],
+  "evidence_ids": ["z04dfbc829c4fa331", "z65bfa558d81d4a34", "z1deeb2cb7d942540", "z283d225043d5111a"],
+  "observed": [
+    "In version z9d549ed0b136fe80, execution_input (z04dfbc829c4fa331) shows 22 amount with 1 distinct operation_token, but execution_output (z65bfa558d81d4a34) reports 44 posted_units.",
+    "In version z5940676b99bea3d0, execution_input (z1deeb2cb7d942540) shows same 22 amount with 1 distinct operation_token, but execution_output (z283d225043d5111a) reports 22 posted_units."
+  ],
+  "inferred": [
+    "The defect in version z9d549ed0b136fe80 (incorrectly doubling posted_units) was corrected in version z5940676b99bea3d0."
+  ],
+  "unknown": [],
+  "diagnostic_statement": "A defect existed in version z9d549ed0b136fe80 where posted_units was incorrectly doubled, but current deployment version z5940676b99bea3d0 shows correct behavior.",
+  "causal_mechanism": {
+    "contract_evidence_id": "z4e166b0e99daa3b0",
+    "cause_evidence_id": "z04dfbc829c4fa331",
+    "effect_evidence_id": "z65bfa558d81d4a34",
+    "decisive_evidence_id": "z04dfbc829c4fa331",
+    "decisive_field": "/data",
+    "observed_value": "{'key_column': 'attempt_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'z4da1b3149655f568', 'operation_token': 'z54bf6985c0ce3b82'}, {'sequence': 2, 'attempt_token': 'zde4e9e15ce8a4f85', 'operation_token': 'z54bf6985c0ce3b82'}], 'listing_complete': True}",
+    "required_value": "{'key_column': 'attempt_token', 'amount': 22, 'entries': [{'sequence': 1, 'attempt_token': 'z4da1b3149655f568', 'operation_token': 'z54bf6985c0ce3b82'}, {'sequence': 2, 'attempt_token': 'zde4e9e15ce8a4f85', 'operation_token': 'z54bf6985c0ce3b82'}], 'listing_complete': True}",
+    "description": "The input data for version z9d549ed0b136fe80 contained 1 distinct operation_token, but the output incorrectly calculated 44 posted_units instead of 22."
+  },
+  "strongest_alternative_explanation": "The defect may have been a temporary implementation error in version z9d549ed0b136fe80 that was resolved in version z5940676b99bea3d0.",
+  "falsifier": "The current deployment version z5940676b99bea3d0 shows correct behavior with posted_units matching the contract rule."
+}

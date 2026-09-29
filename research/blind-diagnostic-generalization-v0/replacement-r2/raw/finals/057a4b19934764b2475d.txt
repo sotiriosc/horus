@@ -1,0 +1,17 @@
+{
+  "classification": "NO_SUPPORTED_DIAGNOSIS",
+  "affected_component_ids": ["zd9daa6e5744c46b8"],
+  "evidence_ids": ["z1deeb2cb7d942540", "z4e166b0e99daa3b0", "z283d225043d5111a"],
+  "observed": [
+    "execution_input z1deeb2cb7d942540: component zd9daa6e5744c46b8 has 1 distinct operation_token value",
+    "execution_output z283d225043d5111a: posted_units=22 matches 22*1=22 per contract rule"
+  ],
+  "inferred": [
+    "The contract rule is satisfied for current deployment version z5940676b99bea3d0"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment satisfies the contract rule for posted_units calculation. No defect is supported by the evidence.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "The system may have been functioning correctly according to the contract rule",
+  "falsifier": "A discrepancy between posted_units and the contract calculation would falsify this conclusion"
+}

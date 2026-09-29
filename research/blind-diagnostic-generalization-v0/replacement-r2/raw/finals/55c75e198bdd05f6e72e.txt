@@ -1,0 +1,18 @@
+{
+  "classification": "SUPPORTED_CURRENT_DEFECT",
+  "affected_component_ids": ["z6968c0ca7e5740fc"],
+  "evidence_ids": ["z4e2793aeb210a177", "z4c64d9ec5f62ffdb", "z0ed978c55c157c68"],
+  "observed": [
+    "execution_input.z4e2793aeb210a177.data.attempt_total_before=14",
+    "execution_input.z4e2793aeb210a177.data.batch_size=5",
+    "execution_output.z4c64d9ec5f62ffdb.data.attempt_total_after=19"
+  ],
+  "inferred": [
+    "attempt_total_after=attempt_total_before+batch_size (14+5=19) satisfies contract rule"
+  ],
+  "unknown": [],
+  "diagnostic_statement": "The current deployment (version za7156926cc619f72) satisfies the contract rule that attempt_total_after equals attempt_total_before plus batch_size. No defect is supported by current evidence.",
+  "causal_mechanism": null,
+  "strongest_alternative_explanation": "NO_SUPPORTED_DIAGNOSIS",
+  "falsifier": "The execution output for version za7156926cc619f72 (z4c64d9ec5f62ffdb) shows attempt_total_after=19 which matches the contract rule (14+5=19). This satisfies the contract and supports no defect."
+}
