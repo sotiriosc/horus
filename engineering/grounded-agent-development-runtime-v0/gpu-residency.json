@@ -1,0 +1,58 @@
+{
+  "baseline_before_first_load_mib": 1478,
+  "context_trials": [
+    {
+      "context_tokens": 2048,
+      "cpu_mapped_model_buffer_mib": 417.3,
+      "cuda_compute_buffer_mib": 134.01,
+      "cuda_kv_buffer_mib": 320.0,
+      "cuda_model_buffer_mib": 8161.75,
+      "gpu_memory_used_after_load_mib": 10780,
+      "offloaded_layers": 41,
+      "public_action_input_tokens": 434,
+      "public_action_status": "VALID",
+      "total_offloadable_layers": 41
+    },
+    {
+      "context_tokens": 8192,
+      "cpu_mapped_model_buffer_mib": 417.3,
+      "cuda_compute_buffer_mib": 140.01,
+      "cuda_kv_buffer_mib": 1280.0,
+      "cuda_model_buffer_mib": 8161.75,
+      "gpu_memory_used_after_load_mib": 11564,
+      "gpu_memory_used_after_warmup_mib": 11770,
+      "offloaded_layers": 41,
+      "public_full_review_finish_reason": "stop",
+      "public_full_review_input_tokens": 4943,
+      "public_full_review_output_tokens": 192,
+      "total_offloadable_layers": 41
+    },
+    {
+      "context_tokens": 16384,
+      "cpu_mapped_model_buffer_mib": 417.3,
+      "cuda_compute_buffer_mib": 148.01,
+      "cuda_kv_buffer_mib": 2560.0,
+      "cuda_model_buffer_mib": 8161.75,
+      "gpu_memory_used_after_load_mib": 13086,
+      "offloaded_layers": 41,
+      "public_full_review_finish_reason": "stop",
+      "public_full_review_input_tokens": 4943,
+      "public_full_review_output_tokens": 192,
+      "total_offloadable_layers": 41
+    }
+  ],
+  "cuda_umd_version": "13.4",
+  "driver_version": "616.92",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "historical_ollama_server_untouched": true,
+  "historical_runner_active_during_tests": false,
+  "physical_vram_mib": 24564,
+  "residency_assessment": "All 41/41 offloadable transformer/output layers on CUDA0 in each context. A 417.30 MiB CPU-mapped model buffer remains; no CPU transformer-layer execution was observed. This is effectively full layer residency, not a claim of zero host memory use.",
+  "sources": [
+    "isolated llama-server startup logs for each context",
+    "nvidia-smi snapshots",
+    "context-2048-probe.json",
+    "benchmark-results.json",
+    "context-16384-probe.json"
+  ]
+}
