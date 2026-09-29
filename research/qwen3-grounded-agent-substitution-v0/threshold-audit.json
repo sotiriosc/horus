@@ -1,0 +1,137 @@
+{
+  "action_inference_speed_ratio_d_over_q": 48.258250378515775,
+  "aggregate": {
+    "D": {
+      "abstentions": 0,
+      "action_name_fixation": [],
+      "all_action_status_valid": true,
+      "all_receipt_memory_replay_pass": true,
+      "consequence_sum": 12,
+      "generation_seconds": 64.113973,
+      "inference_wall_seconds": 1776.087416719005,
+      "input_tokens": 36821,
+      "known_negative_with_better_known": 0,
+      "longest_same_relation_neutral_fallback_streak": 0,
+      "mechanical_decisions": 28,
+      "model_action_distribution": {
+        "ADVANCE": 32,
+        "HOLD": 30
+      },
+      "model_decisions": 62,
+      "neutral_fallback_model_decisions": 0,
+      "newly_grounded_relations": 9,
+      "output_tokens": 590,
+      "prompt_eval_seconds": 1703.028401,
+      "restart_pass": true,
+      "runner_load_events": 1,
+      "runner_load_seconds": 5.7560242299999995,
+      "stagnation_escapes": 0,
+      "unresolved_selections": 4,
+      "unseen_available_decisions": 90,
+      "unseen_selections": 9
+    },
+    "Q": {
+      "abstentions": 0,
+      "action_name_fixation": [
+        {
+          "action": "HOLD",
+          "count": 90,
+          "distinct_semantic_patterns": 3,
+          "fraction": 1.0,
+          "total": 90
+        }
+      ],
+      "all_action_status_valid": true,
+      "all_receipt_memory_replay_pass": true,
+      "consequence_sum": 12,
+      "generation_seconds": 15.701131,
+      "inference_wall_seconds": 36.803808732976904,
+      "input_tokens": 46875,
+      "known_negative_with_better_known": 0,
+      "longest_same_relation_neutral_fallback_streak": 0,
+      "mechanical_decisions": 0,
+      "model_action_distribution": {
+        "HOLD": 90
+      },
+      "model_decisions": 90,
+      "neutral_fallback_model_decisions": 0,
+      "newly_grounded_relations": 3,
+      "output_tokens": 720,
+      "prompt_eval_seconds": 15.406747999999997,
+      "restart_pass": true,
+      "runner_load_events": 0,
+      "runner_load_seconds": 0,
+      "stagnation_escapes": 0,
+      "unresolved_selections": 0,
+      "unseen_available_decisions": 90,
+      "unseen_selections": 3
+    }
+  },
+  "any_material_regression": true,
+  "fixed_fixture_actions": {
+    "A": {
+      "D": "ADVANCE",
+      "Q": "ADVANCE"
+    },
+    "B1": {
+      "D": "HOLD",
+      "Q": "HOLD"
+    },
+    "B2": {
+      "D": "ADVANCE",
+      "Q": "ADVANCE"
+    },
+    "C1": {
+      "D": "ADVANCE",
+      "Q": "HOLD"
+    },
+    "C2": {
+      "D": "ADVANCE",
+      "Q": "HOLD"
+    },
+    "D": {
+      "D": "ADVANCE",
+      "Q": "HOLD"
+    },
+    "E": {
+      "D": "HOLD",
+      "Q": "HOLD"
+    },
+    "F": {
+      "D": "HOLD",
+      "Q": "HOLD"
+    },
+    "G": {
+      "D": "ADVANCE",
+      "Q": "ADVANCE"
+    },
+    "H": {
+      "D": "HOLD",
+      "Q": "HOLD"
+    }
+  },
+  "material_regression_flags": {
+    "at_least_three_fewer_newly_grounded": true,
+    "authority_receipt_memory_or_restart_failure": false,
+    "consequence_more_than_six_below_d": false,
+    "known_negative_with_better_known": false,
+    "more_than_nine_additional_neutral_fallbacks": false,
+    "q_action_name_fixation": true,
+    "zero_q_unseen_with_unseen_available": false
+  },
+  "pairwise_consequence": {
+    "1": {
+      "D": 4,
+      "Q": 4
+    },
+    "2": {
+      "D": 4,
+      "Q": 4
+    },
+    "3": {
+      "D": 4,
+      "Q": 4
+    }
+  },
+  "speed_gate_at_least_five_x": true
+}
