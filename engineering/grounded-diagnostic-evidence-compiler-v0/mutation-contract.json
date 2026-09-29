@@ -1,0 +1,101 @@
+{
+  "frozen_before_aggregate_results": true,
+  "fixture": "Synthetic generic records only, no diagnostic classes, expected gold or domain-specific operational fields",
+  "tests": [
+    {
+      "id": "reverse_records",
+      "operation": "Reverse record array only",
+      "expected": "Anchored normalized output byte-identical; raw full pointers remain correct"
+    },
+    {
+      "id": "reverse_components",
+      "operation": "Reverse component array only",
+      "expected": "Anchored normalized output byte-identical"
+    },
+    {
+      "id": "reverse_versions",
+      "operation": "Reverse version array only",
+      "expected": "Anchored normalized output byte-identical; deployment not inferred from ordinal"
+    },
+    {
+      "id": "rename_opaque_labels",
+      "operation": "Bijectively replace every whole opaque ID string/key consistently",
+      "expected": "Reverse-map output labels then anchor; all facts identical, no original opaque label leaked"
+    },
+    {
+      "id": "introduce_unknown",
+      "operation": "Replace one concrete scalar in synthetic input data with exact UNKNOWN",
+      "expected": "One additional exact UNKNOWN location; value preserved; no class or imputation"
+    },
+    {
+      "id": "remove_unknown",
+      "operation": "Replace that UNKNOWN with original scalar",
+      "expected": "Original output bytes restored"
+    },
+    {
+      "id": "switch_deployment",
+      "operation": "Change explicit current_version to another declared version",
+      "expected": "Current/historical partition swaps for bound records; capture snapshot mismatch exposed; no diagnosis"
+    },
+    {
+      "id": "break_event_equality",
+      "operation": "Change capture immutable_event_id to another input-supplied event label",
+      "expected": "Matching output/capture link removed; missing-capture-link ambiguity; no similarity join"
+    },
+    {
+      "id": "payload_conflict",
+      "operation": "Change a captured scalar for an otherwise exactly linked immutable event",
+      "expected": "Payload integrity false; exact two source pointers and values present"
+    },
+    {
+      "id": "digest_conflict",
+      "operation": "Change recorded_digest while keeping recomputed_digest",
+      "expected": "Digest check false at exact two paths; no recomputation claim"
+    },
+    {
+      "id": "remove_explicit_event_link",
+      "operation": "Remove capture immutable_event_id",
+      "expected": "No output/capture edge for that capture; missing-event-link ambiguity and unknown payload linkage"
+    },
+    {
+      "id": "multiple_input_candidates",
+      "operation": "Add another explicit same-version earlier input with distinct supplied ID",
+      "expected": "Both candidates retained; ambiguity; no nearest/gold-selected candidate"
+    },
+    {
+      "id": "remove_deployment",
+      "operation": "Remove deployment record",
+      "expected": "current_version null; versioned records unresolved; ambiguity; ordinal cannot rescue"
+    },
+    {
+      "id": "conflicting_deployment",
+      "operation": "Add unequal declaration using another declared version",
+      "expected": "current_version null; deployment ambiguity"
+    },
+    {
+      "id": "typed_payload_conflict",
+      "operation": "Change captured integer 1 to boolean true",
+      "expected": "Typed mismatch reported, never equal via Python coercion"
+    },
+    {
+      "id": "unknown_payload",
+      "operation": "Use UNKNOWN in linked captured payload with otherwise equal facts",
+      "expected": "Payload check unknown rather than asserted equality/conflict"
+    },
+    {
+      "id": "reorder_object_keys",
+      "operation": "Reverse dictionary insertion order recursively",
+      "expected": "Compiler bytes identical"
+    },
+    {
+      "id": "unknown_prose_substring",
+      "operation": "Insert text containing UNKNOWN as a substring",
+      "expected": "No exact-UNKNOWN hit for that string"
+    },
+    {
+      "id": "duplicate_record_id",
+      "operation": "Duplicate a record using its existing ID",
+      "expected": "Both occurrences retained, duplicate-ID ambiguity; no silent overwrite"
+    }
+  ]
+}

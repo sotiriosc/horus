@@ -1,0 +1,116 @@
+{
+  "version": "grounded-evidence-format-v0",
+  "role": "Mechanical evidence addressing and declared-format checks only; no diagnosis, normative operational interpretation or gold access.",
+  "input": {
+    "required": [
+      "system_id",
+      "components",
+      "versions",
+      "records"
+    ],
+    "component_fields": [
+      "id",
+      "role"
+    ],
+    "version_fields": [
+      "id",
+      "release_ordinal"
+    ],
+    "record_fields": [
+      "id",
+      "kind",
+      "at",
+      "version",
+      "component_id",
+      "event_id",
+      "data"
+    ],
+    "record_kinds": [
+      "deployment",
+      "execution_input",
+      "execution_output",
+      "capture",
+      "contract",
+      "capture_contract"
+    ],
+    "unknown_literal": "UNKNOWN",
+    "metadata_policy": "Domain/role/operational prose and release ordinal are uninterpreted values; no operational field name is privileged."
+  },
+  "source": {
+    "public_record_kind": "capture_contract",
+    "common_format_statement": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment.",
+    "reference": "Public rendered evidence, capture_contract.data.rule; statically adopted generic format assumptions, never derived from gold. Operational contract prose is not parsed.",
+    "qualification": "Check exact common statement in each fixture as a harness input qualification, not semantic parsing by compiler."
+  },
+  "semantics": {
+    "identity": "Preserve original IDs and exact JSON values/types. No generated opaque IDs, case-ID lookup, family rules or expected value tables. Duplicated IDs are retained in indexes with ambiguity flags.",
+    "pointers": "Inventory every node of every structured record data object, including root, nested objects, arrays, leaves. Relative pointer uses RFC6901 escaping and original array offsets; full pointer addresses the supplied raw case. Root is empty relative pointer and is explicitly a container, not a selected decisive field.",
+    "deployment": "Collect concrete declared data.current_version values from deployment records. Resolve current_version only if all declarations are concrete equal strings and that ID has exactly one version declaration. Missing/UNKNOWN/conflicting/unresolved declarations leave current_version null with ambiguity. Never infer from release ordinal.",
+    "partition": "Record version binding is top-level version, or for capture only data.deployment_version. If both exist and conflict, binding is unresolved. Known binding equal to resolved current version => current; another declared version => historical/non-current (not evidence of a defect); no binding => unversioned; unknown/undeclared/conflicting binding or unresolved current => unresolved. Return all four partitions.",
+    "unknown": "Find every exact string UNKNOWN in each record, including metadata and nested data, using exact full pointer; never replace or infer it. Status from mechanical record binding.",
+    "events": "Create record-to-event edges only for explicit execution_output.event_id or capture.data.immutable_event_id. Pair all linked output/capture records by equal concrete strings. Multiple matches are retained. No value similarity joins.",
+    "integrity": "Adopt only generic capture invariants: all payloads explicitly claiming the same immutable event must agree; supplied recorded_digest and recomputed_digest must agree; capture deployment_version must agree with the declared current snapshot; linked output.version and capture.deployment_version must agree. No recomputation of digest bytes, operational text parser, currentness diagnosis or epistemic class.",
+    "comparison": "Typed recursive comparison. UNKNOWN at either compared value gives unknown; any known unequal scalar/type/key-presence/array-length gives false with exact paths and values. Compare all payload claimant pairs (output/output, capture/capture, output/capture) sharing a concrete event ID. Missing required comparison inputs yields unknown. integrity_consistent=false if any supported invariant is false, else unknown if any is unknown or no checks, else true. It attests only checked declared format invariants.",
+    "provenance": "Each finding retains exact record IDs and source field pointers. Each graph edge retains its explicit source fields and a reason from the contract. Missing links yield ambiguity, never a guessed edge.",
+    "input_output": "For each execution_output, retain every execution_input with equal concrete explicit top-level version and finite numeric input.at < output.at. If both specify component_id, require equality. If both specify event_id, require equality. Missing input event_id does not imply causality. Zero/multiple candidates get missing/ambiguous flags. No nearest-input selection. Candidate links are not causal edges.",
+    "graph": "Nodes: records (with their actual kind), declared versions, components and explicit events. Reference nodes for undeclared version/component IDs retain declared=false. Edges only declares_current_version, record_version, input_component, output_event, capture_event, capture_version, output_capture_same_event and candidate_input_output. No causes edge. Edge provenance includes all fields used for equality or chronology.",
+    "candidate_addressing": "Expose all field entries and present operational/capture contract record IDs, plus explicit linked record IDs; do not rank candidates or emit a decisive field, required operational value, causal witness, sufficiency decision or final diagnosis."
+  },
+  "output": {
+    "required": [
+      "format_version",
+      "case_identity",
+      "record_index",
+      "component_index",
+      "version_index",
+      "current_version",
+      "current_record_ids",
+      "historical_record_ids",
+      "unversioned_record_ids",
+      "unresolved_record_ids",
+      "unknown_locations",
+      "event_links",
+      "capture_links",
+      "integrity_consistent",
+      "integrity_findings",
+      "input_output_candidates",
+      "field_inventory",
+      "evidence_graph",
+      "ambiguities",
+      "candidate_witness_material"
+    ],
+    "diagnosis_fields": false,
+    "integrity_states": [
+      true,
+      false,
+      "unknown"
+    ],
+    "exact_types": [
+      "null",
+      "boolean",
+      "integer",
+      "number",
+      "string",
+      "array",
+      "object"
+    ]
+  },
+  "normalization": {
+    "order": "Compiler sorts output collections deterministically. Actual source JSON pointers necessarily change under input-array reordering; comparison anchors /records/N, /components/N and /versions/N by original entity ID before comparing. Exact raw pointers remain in published outputs.",
+    "labels": "Harness derives a bijection solely from evidence: sort entity arrays by ID-masked structural content, walk dictionary entries sorted by masked key/value, assign first-occurrence canonical tokens to opaque labels, including keys. Ambiguous masked structural ties fail normalization rather than consult metadata/gold. Compare all normalized compiler output fields. Raw IDs/values are never rewritten in compiler artifacts.",
+    "semantic_grouping": "render-manifest case_id/label_map/order used only by fixture harness to group four public renderings and name output files, never passed to compiler. Representative is A/order1; all 80 renderings evaluated for 20 worlds."
+  },
+  "dependency": {
+    "compiler_interface": "compile_evidence(case, contract) -> JSON value; pure function; stdlib json only",
+    "runtime": "Dedicated python -I -S worker receives evidence/contract on stdin; module/stdlib loaded before lockdown; runtime audit hook denies every file open and subprocess/network/import activity. Compiler has no path, environment or repository interface.",
+    "audit": "AST allowlist imports (json only), deny IO/reflection/dynamic evaluation calls, scan source for diagnostic labels, family tokens, case IDs and opaque literals; fail closed. Negative tests must reject attempted file access and forbidden imports/labels. Harness reads only rendered cases, render-manifest and engineering files during fixture execution. Preservation/audit Git operations are separate."
+  },
+  "outcomes": {
+    "pass_label": "GROUNDED_DIAGNOSTIC_EVIDENCE_COMPILER_FEASIBLE_V0",
+    "fail_label": "GROUNDED_DIAGNOSTIC_EVIDENCE_COMPILER_NOT_ESTABLISHED_V0",
+    "invalid_label": "INVALID_STUDY",
+    "pass_rule": "All 20 worlds/80 renderings processed; independent mechanical inventory checks, all representation comparisons, all preregistered mutations, dependency boundary audit and byte replay pass. No diagnosis/classification metric.",
+    "invalid_rule": "Forbidden data access, mutation of frozen inputs or post-freeze implementation repair, missing fixture inventory or unhandled execution failure. Stop and preserve; no repair after engineering fixture run begins.",
+    "limitations": "A pass establishes only declared mechanical extraction on these reused public fixtures and synthetic mutations; no diagnostic capability, improved model score or hybrid architecture utility."
+  }
+}
