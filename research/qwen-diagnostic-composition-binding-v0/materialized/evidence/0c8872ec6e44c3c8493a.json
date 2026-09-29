@@ -1,0 +1,88 @@
+{
+  "scope": {
+    "component_id": "k76a073d757e08d8d",
+    "deployed_build": "k6991fb8afaf9e0ee",
+    "operation": "knitting syllable emitter",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "kcd66ee3dc62f1a95": {
+      "kind": "contract",
+      "component_id": "k76a073d757e08d8d",
+      "rule": "Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kb392a9155db867c6": {
+      "kind": "source",
+      "component_id": "k76a073d757e08d8d",
+      "capture_id": "ka5398b4691c9a954",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_symbols": [
+        "D",
+        "F",
+        "E"
+      ],
+      "codewords": {
+        "D": "tu",
+        "E": "na",
+        "F": "lo"
+      }
+    },
+    "ke1d84d3165cec543": {
+      "kind": "receipt",
+      "component_id": "k76a073d757e08d8d",
+      "build": "k81b8dc68874f6716",
+      "source_ref": "kb392a9155db867c6",
+      "capture_id": "k3cab6c66e00540f4",
+      "emitted_codewords": "tulona"
+    },
+    "k7b08a59f80a654b9": {
+      "kind": "receipt",
+      "component_id": "k76a073d757e08d8d",
+      "build": "k6991fb8afaf9e0ee",
+      "source_ref": "kb392a9155db867c6",
+      "capture_id": "kadc502b1caa2101f",
+      "emitted_codewords": "tunalo",
+      "build_relation": "This build was created before the other supplied build. Both traces use the listed source values."
+    },
+    "k7aebb6a914ebf4ee": {
+      "kind": "contract",
+      "component_id": "k95a494a397771fed",
+      "rule": "Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.",
+      "in_service_build": "kefb47fae0b5f8f67",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "kf9d759e359db05a0": {
+      "kind": "source",
+      "component_id": "k95a494a397771fed",
+      "build": "kefb47fae0b5f8f67",
+      "capture_id": "k9fc5c94d850b6b41",
+      "source_symbols": [
+        "D",
+        "F",
+        "E"
+      ],
+      "codewords": {
+        "D": "tu",
+        "E": "na",
+        "F": "lo"
+      }
+    },
+    "k96fa9aaa79f7598f": {
+      "kind": "receipt",
+      "component_id": "k95a494a397771fed",
+      "build": "kefb47fae0b5f8f67",
+      "source_ref": "kf9d759e359db05a0",
+      "emitted_codewords": "tulona"
+    },
+    "k992907845112aa35": {
+      "kind": "receipt",
+      "component_id": "k95a494a397771fed",
+      "build": "ka3d30a11f73d25a1",
+      "source_ref": "kf9d759e359db05a0",
+      "emitted_codewords": "tulona00",
+      "capture_id": "k53e4966d3175c0e0",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

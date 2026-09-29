@@ -1,0 +1,30 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"k76a073d757e08d8d\",\n    \"deployed_build\": \"k81b8dc68874f6716\",\n    \"operation\": \"knitting syllable emitter\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"kcd66ee3dc62f1a95\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k76a073d757e08d8d\",\n      \"rule\": \"Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"kb392a9155db867c6\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k76a073d757e08d8d\",\n      \"capture_id\": \"ka5398b4691c9a954\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_symbols\": [\n        \"D\",\n        \"F\",\n        \"E\"\n      ],\n      \"codewords\": {\n        \"D\": \"tu\",\n        \"E\": \"na\",\n        \"F\": \"lo\"\n      }\n    },\n    \"ke1d84d3165cec543\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k76a073d757e08d8d\",\n      \"build\": \"k81b8dc68874f6716\",\n      \"source_ref\": \"kb392a9155db867c6\",\n      \"capture_id\": \"k3cab6c66e00540f4\",\n      \"emitted_codewords\": \"tulona\"\n    },\n    \"k7b08a59f80a654b9\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k76a073d757e08d8d\",\n      \"build\": \"k6991fb8afaf9e0ee\",\n      \"source_ref\": \"kb392a9155db867c6\",\n      \"capture_id\": \"kadc502b1caa2101f\",\n      \"emitted_codewords\": \"tunalo\",\n      \"build_relation\": \"This build was created before the other supplied build. Both traces use the listed source values.\"\n    },\n    \"k7aebb6a914ebf4ee\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k95a494a397771fed\",\n      \"rule\": \"Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.\",\n      \"in_service_build\": \"kefb47fae0b5f8f67\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"kf9d759e359db05a0\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k95a494a397771fed\",\n      \"build\": \"kefb47fae0b5f8f67\",\n      \"capture_id\": \"k9fc5c94d850b6b41\",\n      \"source_symbols\": [\n        \"D\",\n        \"F\",\n        \"E\"\n      ],\n      \"codewords\": {\n        \"D\": \"tu\",\n        \"E\": \"na\",\n        \"F\": \"lo\"\n      }\n    },\n    \"k96fa9aaa79f7598f\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k95a494a397771fed\",\n      \"build\": \"kefb47fae0b5f8f67\",\n      \"source_ref\": \"kf9d759e359db05a0\",\n      \"emitted_codewords\": \"tulona\"\n    },\n    \"k992907845112aa35\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k95a494a397771fed\",\n      \"build\": \"ka3d30a11f73d25a1\",\n      \"source_ref\": \"kf9d759e359db05a0\",\n      \"emitted_codewords\": \"tulona00\",\n      \"capture_id\": \"k53e4966d3175c0e0\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "classification": {
+        "enum": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ]
+      }
+    },
+    "required": [
+      "classification"
+    ],
+    "additionalProperties": false
+  }
+}

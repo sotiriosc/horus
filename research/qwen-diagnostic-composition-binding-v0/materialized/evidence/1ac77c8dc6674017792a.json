@@ -1,0 +1,80 @@
+{
+  "scope": {
+    "component_id": "k9a5c2a20387f8625",
+    "deployed_build": "k200226a30108bfaf",
+    "operation": "phoneme score expander",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "kc61ef589ac6d9e11": {
+      "kind": "contract",
+      "component_id": "k9a5c2a20387f8625",
+      "rule": "Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kc0fd58bf3e6f8fc3": {
+      "kind": "source",
+      "component_id": "k9a5c2a20387f8625",
+      "build": "k200226a30108bfaf",
+      "capture_id": "k3dbeb016a38da88d",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_symbols": [
+        "A",
+        "UNKNOWN",
+        "C"
+      ],
+      "codewords": {
+        "A": "ka",
+        "B": "zu",
+        "C": "mi"
+      }
+    },
+    "kd5c6b877b1916b34": {
+      "kind": "receipt",
+      "component_id": "k9a5c2a20387f8625",
+      "build": "k200226a30108bfaf",
+      "source_ref": "kc0fd58bf3e6f8fc3",
+      "capture_id": "kc9863ecdb6c2208b",
+      "emitted_codewords": "kazumi"
+    },
+    "k34d6ae313218a5e2": {
+      "kind": "contract",
+      "component_id": "k960a42bcd5246cdd",
+      "rule": "Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.",
+      "in_service_build": "ka78fa9703e036121",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k5f5f3c9357d2931e": {
+      "kind": "source",
+      "component_id": "k960a42bcd5246cdd",
+      "build": "ka78fa9703e036121",
+      "capture_id": "k3e0194cf0f26cbaf",
+      "source_symbols": [
+        "A",
+        "B",
+        "C"
+      ],
+      "codewords": {
+        "A": "ka",
+        "B": "zu",
+        "C": "mi"
+      }
+    },
+    "kfe945897c6115959": {
+      "kind": "receipt",
+      "component_id": "k960a42bcd5246cdd",
+      "build": "ka78fa9703e036121",
+      "source_ref": "k5f5f3c9357d2931e",
+      "emitted_codewords": "kazumi"
+    },
+    "ke3c1fa23df29645b": {
+      "kind": "receipt",
+      "component_id": "k960a42bcd5246cdd",
+      "build": "k76d566f8713f08cd",
+      "source_ref": "k5f5f3c9357d2931e",
+      "emitted_codewords": "kazumi00",
+      "capture_id": "k591a473ecd0dd470",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "scope": {
+    "component_id": "k25739e565808f482",
+    "deployed_build": "k61d3e62ea55b3312",
+    "operation": "weaving instruction expander",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k7a2b68c6007cbc49": {
+      "kind": "contract",
+      "component_id": "k25739e565808f482",
+      "rule": "Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k6d59d3c66d853698": {
+      "kind": "source",
+      "component_id": "k25739e565808f482",
+      "build": "k61d3e62ea55b3312",
+      "capture_id": "kdaa11bf78fed5d79",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "glyph_runs": [
+        [
+          "Q",
+          3
+        ],
+        [
+          "J",
+          2
+        ]
+      ]
+    },
+    "k7c51ee1fd3c90701": {
+      "kind": "receipt",
+      "component_id": "k25739e565808f482",
+      "build": "k61d3e62ea55b3312",
+      "source_ref": "k6d59d3c66d853698",
+      "capture_id": "kf6b84baba74a940c",
+      "expanded_glyphs": "QQQJ"
+    },
+    "k943cf8c77421d0e8": {
+      "kind": "contract",
+      "component_id": "k0ffd42ff45f468e9",
+      "rule": "Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.",
+      "in_service_build": "k7c7cb16198227db8",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k1fea933a1f895430": {
+      "kind": "source",
+      "component_id": "k0ffd42ff45f468e9",
+      "build": "k7c7cb16198227db8",
+      "capture_id": "k244ed00d2bd5e606",
+      "glyph_runs": [
+        [
+          "Q",
+          3
+        ],
+        [
+          "J",
+          2
+        ]
+      ]
+    },
+    "k29f6e6ca23b87e01": {
+      "kind": "receipt",
+      "component_id": "k0ffd42ff45f468e9",
+      "build": "k7c7cb16198227db8",
+      "source_ref": "k1fea933a1f895430",
+      "expanded_glyphs": "QQQJJ"
+    },
+    "k0cb1de1fb33b1a83": {
+      "kind": "receipt",
+      "component_id": "k0ffd42ff45f468e9",
+      "build": "kd203e7c0cc1a5f03",
+      "source_ref": "k1fea933a1f895430",
+      "expanded_glyphs": "QQQJJ00",
+      "capture_id": "kabbe3563517d537e",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k214e7a0320d56815": {
+      "kind": "output_attestation",
+      "component_id": "k25739e565808f482",
+      "build": "k61d3e62ea55b3312",
+      "source_ref": "k6d59d3c66d853698",
+      "capture_id": "kf6b84baba74a940c",
+      "expanded_glyphs": "QQQJ",
+      "attests_record": "k7c51ee1fd3c90701"
+    }
+  }
+}

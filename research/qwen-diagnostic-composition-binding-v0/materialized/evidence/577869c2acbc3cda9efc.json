@@ -1,0 +1,61 @@
+{
+  "scope": {
+    "component_id": "k32e67ee9e66ed3a6",
+    "deployed_build": "kcfe62ef77119f422",
+    "operation": "buoy frame encoder",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k5945ca50c8ba3d2d": {
+      "kind": "contract",
+      "component_id": "k32e67ee9e66ed3a6",
+      "rule": "Encode each source octet as two lower-case hexadecimal digits, except sentinel 202 becomes the two-octet escape 203,234. Concatenate encoded octets without separators.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k072d8439cd9f72b4": {
+      "kind": "source",
+      "component_id": "k32e67ee9e66ed3a6",
+      "build": "kcfe62ef77119f422",
+      "capture_id": "k73e53766571b2940",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_octets": [
+        73,
+        202,
+        91
+      ]
+    },
+    "kcef19db209db85cb": {
+      "kind": "receipt",
+      "component_id": "k32e67ee9e66ed3a6",
+      "build": "kcfe62ef77119f422",
+      "source_ref": "k072d8439cd9f72b4",
+      "capture_id": "k7c43ede8f9f90c8a",
+      "emitted_hex": "49ca5b"
+    },
+    "k87a774c225e65a72": {
+      "kind": "contract",
+      "component_id": "ke5f43173af422c42",
+      "rule": "Encode each source octet as two lower-case hexadecimal digits, except sentinel 202 becomes the two-octet escape 203,234. Concatenate encoded octets without separators.",
+      "in_service_build": "kb2279b1812a05229",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "keeb6148d7256cc89": {
+      "kind": "source",
+      "component_id": "ke5f43173af422c42",
+      "build": "kb2279b1812a05229",
+      "capture_id": "kd33897e3f574677d",
+      "source_octets": [
+        73,
+        202,
+        91
+      ]
+    },
+    "ke0f3b5ebfcdcfdba": {
+      "kind": "receipt",
+      "component_id": "ke5f43173af422c42",
+      "build": "kb2279b1812a05229",
+      "source_ref": "keeb6148d7256cc89",
+      "emitted_hex": "49cbea5b"
+    }
+  }
+}

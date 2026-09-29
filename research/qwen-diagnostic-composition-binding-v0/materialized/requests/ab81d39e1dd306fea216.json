@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"k35b9ffda75264149\",\n    \"deployed_build\": \"ke5422194e8117fee\",\n    \"operation\": \"embroidery grid rearranger\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"k0992aedfc4c0ecca\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k35b9ffda75264149\",\n      \"rule\": \"The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"kb4f2d9dc7482bc40\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k35b9ffda75264149\",\n      \"capture_id\": \"k9f98aea3086b7c58\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_matrix\": [\n        [\n          14,\n          26\n        ],\n        [\n          38,\n          47\n        ]\n      ]\n    },\n    \"ke57ebb613f1a2566\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k35b9ffda75264149\",\n      \"build\": \"kaa9a0c31adf31db4\",\n      \"source_ref\": \"kb4f2d9dc7482bc40\",\n      \"capture_id\": \"k6f7386f62422f3c3\",\n      \"emitted_matrix\": [\n        [\n          14,\n          38\n        ],\n        [\n          26,\n          47\n        ]\n      ]\n    },\n    \"ka9e156453f3d9c59\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k35b9ffda75264149\",\n      \"build\": \"ke5422194e8117fee\",\n      \"source_ref\": \"kb4f2d9dc7482bc40\",\n      \"capture_id\": \"k348f119190059826\",\n      \"emitted_matrix\": [\n        [\n          14,\n          26\n        ],\n        [\n          38,\n          47\n        ]\n      ],\n      \"build_relation\": \"This build was created before the other supplied build. Both traces use the listed source values.\"\n    },\n    \"k57bcce47de25d66e\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k2e5143e814cb4e65\",\n      \"rule\": \"The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.\",\n      \"in_service_build\": \"k39874918bee5e284\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"kd372dbcd2b0b69f0\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k2e5143e814cb4e65\",\n      \"build\": \"k39874918bee5e284\",\n      \"capture_id\": \"k6c47b54fdce59d0b\",\n      \"source_matrix\": [\n        [\n          14,\n          26\n        ],\n        [\n          38,\n          47\n        ]\n      ]\n    },\n    \"kf2a645a30dc7951f\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k2e5143e814cb4e65\",\n      \"build\": \"k39874918bee5e284\",\n      \"source_ref\": \"kd372dbcd2b0b69f0\",\n      \"emitted_matrix\": [\n        [\n          14,\n          38\n        ],\n        [\n          26,\n          47\n        ]\n      ]\n    },\n    \"k4ae60326888c9463\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k2e5143e814cb4e65\",\n      \"build\": \"k37b44a32c984f2fa\",\n      \"source_ref\": \"kd372dbcd2b0b69f0\",\n      \"emitted_matrix\": [\n        [\n          26,\n          47\n        ],\n        [\n          14,\n          38\n        ]\n      ],\n      \"capture_id\": \"k08b82aaa3871593c\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

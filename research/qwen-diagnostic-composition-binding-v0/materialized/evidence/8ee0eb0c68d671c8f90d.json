@@ -1,0 +1,79 @@
+{
+  "scope": {
+    "component_id": "k15ac6e4505dd476b",
+    "deployed_build": "ka557377a28f31a38",
+    "operation": "seismograph signed code",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k7a77aec3c41da5c5": {
+      "kind": "contract",
+      "component_id": "k15ac6e4505dd476b",
+      "rule": "Encode a nonnegative signed integer n as 2*n; encode a negative n as -2*n-1. Emit the exact unsigned integer, without truncation.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k862ad9df3ff5c1c2": {
+      "kind": "source",
+      "component_id": "k15ac6e4505dd476b",
+      "capture_id": "kde327c4cbe65d07b",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "signed_integer": -13
+    },
+    "kb7a3e922796f5e58": {
+      "kind": "receipt",
+      "component_id": "k15ac6e4505dd476b",
+      "build": "ka557377a28f31a38",
+      "source_ref": "k862ad9df3ff5c1c2",
+      "capture_id": "k110c78b947e50acb",
+      "unsigned_code": 25
+    },
+    "kbbcb602edcb8d151": {
+      "kind": "receipt",
+      "component_id": "k15ac6e4505dd476b",
+      "build": "kc3f50e5efe22079c",
+      "source_ref": "k862ad9df3ff5c1c2",
+      "capture_id": "k2c45e8e6c28527d7",
+      "unsigned_code": 26,
+      "build_relation": "This build was created before the other supplied build. Both traces use the listed source values."
+    },
+    "ka75b6d146286af0b": {
+      "kind": "contract",
+      "component_id": "k88c505abad0558e4",
+      "rule": "Encode a nonnegative signed integer n as 2*n; encode a negative n as -2*n-1. Emit the exact unsigned integer, without truncation.",
+      "in_service_build": "kdc1f51d5405857d0",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k6880741790956a06": {
+      "kind": "source",
+      "component_id": "k88c505abad0558e4",
+      "build": "kdc1f51d5405857d0",
+      "capture_id": "kaec99ab71ab8d734",
+      "signed_integer": -13
+    },
+    "k45a0a0b980bd584d": {
+      "kind": "receipt",
+      "component_id": "k88c505abad0558e4",
+      "build": "kdc1f51d5405857d0",
+      "source_ref": "k6880741790956a06",
+      "unsigned_code": 25
+    },
+    "k29abd5fa9b657a3e": {
+      "kind": "receipt",
+      "component_id": "k88c505abad0558e4",
+      "build": "k78d55a85a5b13409",
+      "source_ref": "k6880741790956a06",
+      "unsigned_code": 48,
+      "capture_id": "k872a0d3a26469887",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k0b4696534619b6b4": {
+      "kind": "output_attestation",
+      "component_id": "k15ac6e4505dd476b",
+      "build": "ka557377a28f31a38",
+      "source_ref": "k862ad9df3ff5c1c2",
+      "capture_id": "k110c78b947e50acb",
+      "unsigned_code": 25,
+      "attests_record": "kb7a3e922796f5e58"
+    }
+  }
+}

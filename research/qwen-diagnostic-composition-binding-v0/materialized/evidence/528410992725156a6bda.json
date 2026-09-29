@@ -1,0 +1,73 @@
+{
+  "scope": {
+    "component_id": "keacf865c52059110",
+    "deployed_build": "k94c141ded38bd8cb",
+    "operation": "mosaic pattern quotient register",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k165bf7f3096e6d8e": {
+      "kind": "contract",
+      "component_id": "keacf865c52059110",
+      "rule": "For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k014445fb41625101": {
+      "kind": "source",
+      "component_id": "keacf865c52059110",
+      "build": "k94c141ded38bd8cb",
+      "capture_id": "k103eaacda4b7a511",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "dividend": "UNKNOWN",
+      "divisor": 53
+    },
+    "kbac74ccde0b9ea78": {
+      "kind": "receipt",
+      "component_id": "keacf865c52059110",
+      "build": "k94c141ded38bd8cb",
+      "source_ref": "k014445fb41625101",
+      "capture_id": "k1a0f6d4f9ec781d9",
+      "emitted_divmod": {
+        "quotient": 7,
+        "residue": 8
+      }
+    },
+    "k888a774c232118b4": {
+      "kind": "contract",
+      "component_id": "ka2adfe28f75c8d2e",
+      "rule": "For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.",
+      "in_service_build": "kff7b8169fe52e848",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k3a273c179a50bc6f": {
+      "kind": "source",
+      "component_id": "ka2adfe28f75c8d2e",
+      "build": "kff7b8169fe52e848",
+      "capture_id": "k29f2136d683a7c00",
+      "dividend": 379,
+      "divisor": 53
+    },
+    "k875f05257de91d8d": {
+      "kind": "receipt",
+      "component_id": "ka2adfe28f75c8d2e",
+      "build": "kff7b8169fe52e848",
+      "source_ref": "k3a273c179a50bc6f",
+      "emitted_divmod": {
+        "quotient": 7,
+        "residue": 8
+      }
+    },
+    "k8a4140ba98f271ef": {
+      "kind": "receipt",
+      "component_id": "ka2adfe28f75c8d2e",
+      "build": "ke864b904e50ac8c0",
+      "source_ref": "k3a273c179a50bc6f",
+      "emitted_divmod": {
+        "quotient": 7,
+        "residue": 31
+      },
+      "capture_id": "k15db319b63811c7b",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

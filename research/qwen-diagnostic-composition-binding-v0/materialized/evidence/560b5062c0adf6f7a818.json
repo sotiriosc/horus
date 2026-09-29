@@ -1,0 +1,118 @@
+{
+  "scope": {
+    "component_id": "kf1e7c045f139dfa3",
+    "deployed_build": "k9327c388c1dab935",
+    "operation": "botanical key canonicalizer",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k539e828c70590125": {
+      "kind": "contract",
+      "component_id": "kf1e7c045f139dfa3",
+      "rule": "Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k53f815a06f5960d3": {
+      "kind": "source",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "capture_id": "k13deb16bb25dee7d",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_keys": [
+        "oak",
+        "elm"
+      ]
+    },
+    "k162774130eb8fd70": {
+      "kind": "receipt",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "source_ref": "k53f815a06f5960d3",
+      "capture_id": "k84825d5d29074c6e",
+      "emitted_keys": [
+        "elm",
+        "oak"
+      ]
+    },
+    "k0361f72d5d786367": {
+      "kind": "source_attestation",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "capture_id": "k13deb16bb25dee7d",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_keys": [
+        "pine",
+        "elm"
+      ]
+    },
+    "k1cd233b65ae341ba": {
+      "kind": "contract",
+      "component_id": "k52a1c8322252febd",
+      "rule": "Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.",
+      "in_service_build": "k766758b79f913e2e",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k8cbdd4b62d713338": {
+      "kind": "source",
+      "component_id": "k52a1c8322252febd",
+      "build": "k766758b79f913e2e",
+      "capture_id": "k520ffc77ff969830",
+      "source_keys": [
+        "oak",
+        "elm"
+      ]
+    },
+    "k0fd5fb5bd77d2b1a": {
+      "kind": "receipt",
+      "component_id": "k52a1c8322252febd",
+      "build": "k766758b79f913e2e",
+      "source_ref": "k8cbdd4b62d713338",
+      "emitted_keys": [
+        "elm",
+        "oak"
+      ]
+    },
+    "k1061dacde974e9fa": {
+      "kind": "receipt",
+      "component_id": "k52a1c8322252febd",
+      "build": "kb306a1a3b536ed83",
+      "source_ref": "k8cbdd4b62d713338",
+      "emitted_keys": [
+        "oak",
+        "elm"
+      ],
+      "capture_id": "k944f720709dcb258",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k38bb79b1576de46a": {
+      "kind": "output_attestation",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "source_ref": "k53f815a06f5960d3",
+      "capture_id": "k84825d5d29074c6e",
+      "emitted_keys": [
+        "elm",
+        "oak"
+      ],
+      "attests_record": "k162774130eb8fd70"
+    },
+    "kb6ddeafd55003a3d": {
+      "kind": "observer_status",
+      "component_id": "kd78b5a35c5c9a36c",
+      "display_caption": "copper-lantern",
+      "completed_panels": 819
+    },
+    "kd96a730e6564a6e1": {
+      "kind": "reporting_relation",
+      "component_id": "k52a1c8322252febd",
+      "reports_counters_to": "kd78b5a35c5c9a36c",
+      "relation_scope": "Display counters only. This is not a computation or data dependency of the target component."
+    },
+    "ke821a42ad325f2c0": {
+      "kind": "work_counter",
+      "component_id": "kd78b5a35c5c9a36c",
+      "inspection_window": "window-0ffeaca",
+      "panel_capacity": 955
+    }
+  }
+}

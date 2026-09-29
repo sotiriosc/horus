@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"keacf865c52059110\",\n    \"deployed_build\": \"k94c141ded38bd8cb\",\n    \"operation\": \"mosaic pattern quotient register\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"k165bf7f3096e6d8e\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"keacf865c52059110\",\n      \"rule\": \"For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"k014445fb41625101\": {\n      \"kind\": \"source\",\n      \"component_id\": \"keacf865c52059110\",\n      \"build\": \"k94c141ded38bd8cb\",\n      \"capture_id\": \"k103eaacda4b7a511\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"dividend\": \"UNKNOWN\",\n      \"divisor\": 53\n    },\n    \"kbac74ccde0b9ea78\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"keacf865c52059110\",\n      \"build\": \"k94c141ded38bd8cb\",\n      \"source_ref\": \"k014445fb41625101\",\n      \"capture_id\": \"k1a0f6d4f9ec781d9\",\n      \"emitted_divmod\": {\n        \"quotient\": 7,\n        \"residue\": 8\n      }\n    },\n    \"k888a774c232118b4\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"ka2adfe28f75c8d2e\",\n      \"rule\": \"For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.\",\n      \"in_service_build\": \"kff7b8169fe52e848\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"k3a273c179a50bc6f\": {\n      \"kind\": \"source\",\n      \"component_id\": \"ka2adfe28f75c8d2e\",\n      \"build\": \"kff7b8169fe52e848\",\n      \"capture_id\": \"k29f2136d683a7c00\",\n      \"dividend\": 379,\n      \"divisor\": 53\n    },\n    \"k875f05257de91d8d\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"ka2adfe28f75c8d2e\",\n      \"build\": \"kff7b8169fe52e848\",\n      \"source_ref\": \"k3a273c179a50bc6f\",\n      \"emitted_divmod\": {\n        \"quotient\": 7,\n        \"residue\": 8\n      }\n    },\n    \"k8a4140ba98f271ef\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"ka2adfe28f75c8d2e\",\n      \"build\": \"ke864b904e50ac8c0\",\n      \"source_ref\": \"k3a273c179a50bc6f\",\n      \"emitted_divmod\": {\n        \"quotient\": 7,\n        \"residue\": 31\n      },\n      \"capture_id\": \"k15db319b63811c7b\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

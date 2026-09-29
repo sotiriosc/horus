@@ -1,0 +1,80 @@
+{
+  "scope": {
+    "component_id": "kd81f0aa2c172374f",
+    "deployed_build": "k0c359bfba67796b5",
+    "operation": "label raster expander",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k0dbe6e158c0628b6": {
+      "kind": "contract",
+      "component_id": "kd81f0aa2c172374f",
+      "rule": "Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kdfd883e7fbebf8a2": {
+      "kind": "source",
+      "component_id": "kd81f0aa2c172374f",
+      "build": "k0c359bfba67796b5",
+      "capture_id": "k09b702cba42978f8",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "glyph_runs": [
+        [
+          "L",
+          3
+        ],
+        [
+          "R",
+          2
+        ]
+      ]
+    },
+    "k86da7b56fc181bb9": {
+      "kind": "receipt",
+      "component_id": "kd81f0aa2c172374f",
+      "build": "k0c359bfba67796b5",
+      "source_ref": "kdfd883e7fbebf8a2",
+      "capture_id": "k2a43f374b7da257a",
+      "expanded_glyphs": "LLLRR"
+    },
+    "kf46b8f5410f13e3f": {
+      "kind": "contract",
+      "component_id": "k421023bc87c3729f",
+      "rule": "Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.",
+      "in_service_build": "kd1a23fec780d3aaf",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "kab319913245dcb64": {
+      "kind": "source",
+      "component_id": "k421023bc87c3729f",
+      "build": "kd1a23fec780d3aaf",
+      "capture_id": "kbf51c142af45cf95",
+      "glyph_runs": [
+        [
+          "L",
+          3
+        ],
+        [
+          "R",
+          2
+        ]
+      ]
+    },
+    "kae39287b94774fd4": {
+      "kind": "receipt",
+      "component_id": "k421023bc87c3729f",
+      "build": "kd1a23fec780d3aaf",
+      "source_ref": "kab319913245dcb64",
+      "expanded_glyphs": "LLLRR"
+    },
+    "k82859200ea9bc230": {
+      "kind": "receipt",
+      "component_id": "k421023bc87c3729f",
+      "build": "k7d87ad3cd4adc358",
+      "source_ref": "kab319913245dcb64",
+      "expanded_glyphs": "LLLRR00",
+      "capture_id": "k01965e0e7b51aac6",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

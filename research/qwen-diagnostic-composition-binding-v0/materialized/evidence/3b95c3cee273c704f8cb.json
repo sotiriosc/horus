@@ -1,0 +1,91 @@
+{
+  "scope": {
+    "component_id": "ke15b8105a142cb98",
+    "deployed_build": "k4fd6acd58e8992a3",
+    "operation": "museum cipher display",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k1bf0d56b1ffa9f6d": {
+      "kind": "contract",
+      "component_id": "ke15b8105a142cb98",
+      "rule": "Shift each uppercase Latin letter forward by the configured displacement in the cyclic alphabet A through Z, retaining letter order. Displacements from zero through twenty-five are allowed.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k1269e1b12ebcd7eb": {
+      "kind": "source",
+      "component_id": "ke15b8105a142cb98",
+      "build": "k4fd6acd58e8992a3",
+      "capture_id": "kecdd9dcaf261a1c4",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_letters": "AVZ",
+      "displacement": 5
+    },
+    "k1c6963fc1f52b141": {
+      "kind": "receipt",
+      "component_id": "ke15b8105a142cb98",
+      "build": "k4fd6acd58e8992a3",
+      "source_ref": "k1269e1b12ebcd7eb",
+      "capture_id": "k8aa7ff908d77756e",
+      "shifted_letters": "FAE"
+    },
+    "kd7ad1869be82ec16": {
+      "kind": "contract",
+      "component_id": "k8b1277e793afe8fa",
+      "rule": "Shift each uppercase Latin letter forward by the configured displacement in the cyclic alphabet A through Z, retaining letter order. Displacements from zero through twenty-five are allowed.",
+      "in_service_build": "k51145475775ac57c",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k340207ebb741bf75": {
+      "kind": "source",
+      "component_id": "k8b1277e793afe8fa",
+      "build": "k51145475775ac57c",
+      "capture_id": "k978ee3d3e2320aad",
+      "source_letters": "AVZ",
+      "displacement": 5
+    },
+    "k5c0f0a9091e8f4c2": {
+      "kind": "receipt",
+      "component_id": "k8b1277e793afe8fa",
+      "build": "k51145475775ac57c",
+      "source_ref": "k340207ebb741bf75",
+      "shifted_letters": "FAE"
+    },
+    "k06225e045f9e1cce": {
+      "kind": "receipt",
+      "component_id": "k8b1277e793afe8fa",
+      "build": "kc50c63bb623aecaf",
+      "source_ref": "k340207ebb741bf75",
+      "shifted_letters": "FAE00",
+      "capture_id": "k31b6ae9e9956b8ce",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k2a905117c98fb63d": {
+      "kind": "output_attestation",
+      "component_id": "ke15b8105a142cb98",
+      "build": "k4fd6acd58e8992a3",
+      "source_ref": "k1269e1b12ebcd7eb",
+      "capture_id": "k8aa7ff908d77756e",
+      "shifted_letters": "FAE",
+      "attests_record": "k1c6963fc1f52b141"
+    },
+    "ked32936db5acae82": {
+      "kind": "observer_status",
+      "component_id": "k20ff2f9bbbe915b7",
+      "display_caption": "copper-lantern",
+      "completed_panels": 814
+    },
+    "kab0ebdfd1aa53ebf": {
+      "kind": "reporting_relation",
+      "component_id": "k8b1277e793afe8fa",
+      "reports_counters_to": "k20ff2f9bbbe915b7",
+      "relation_scope": "Display counters only. This is not a computation or data dependency of the target component."
+    },
+    "k92a5749399bf97aa": {
+      "kind": "work_counter",
+      "component_id": "k20ff2f9bbbe915b7",
+      "inspection_window": "window-4065f0d",
+      "panel_capacity": 950
+    }
+  }
+}

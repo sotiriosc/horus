@@ -1,0 +1,124 @@
+{
+  "scope": {
+    "component_id": "k35b9ffda75264149",
+    "deployed_build": "kaa9a0c31adf31db4",
+    "operation": "embroidery grid rearranger",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k0992aedfc4c0ecca": {
+      "kind": "contract",
+      "component_id": "k35b9ffda75264149",
+      "rule": "The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kb4f2d9dc7482bc40": {
+      "kind": "source",
+      "component_id": "k35b9ffda75264149",
+      "capture_id": "k9f98aea3086b7c58",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_matrix": [
+        [
+          14,
+          26
+        ],
+        [
+          38,
+          47
+        ]
+      ]
+    },
+    "ke57ebb613f1a2566": {
+      "kind": "receipt",
+      "component_id": "k35b9ffda75264149",
+      "build": "kaa9a0c31adf31db4",
+      "source_ref": "kb4f2d9dc7482bc40",
+      "capture_id": "k6f7386f62422f3c3",
+      "emitted_matrix": [
+        [
+          14,
+          38
+        ],
+        [
+          26,
+          47
+        ]
+      ]
+    },
+    "ka9e156453f3d9c59": {
+      "kind": "receipt",
+      "component_id": "k35b9ffda75264149",
+      "build": "ke5422194e8117fee",
+      "source_ref": "kb4f2d9dc7482bc40",
+      "capture_id": "k348f119190059826",
+      "emitted_matrix": [
+        [
+          14,
+          26
+        ],
+        [
+          38,
+          47
+        ]
+      ],
+      "build_relation": "This build was created before the other supplied build. Both traces use the listed source values."
+    },
+    "k57bcce47de25d66e": {
+      "kind": "contract",
+      "component_id": "k2e5143e814cb4e65",
+      "rule": "The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.",
+      "in_service_build": "k39874918bee5e284",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "kd372dbcd2b0b69f0": {
+      "kind": "source",
+      "component_id": "k2e5143e814cb4e65",
+      "build": "k39874918bee5e284",
+      "capture_id": "k6c47b54fdce59d0b",
+      "source_matrix": [
+        [
+          14,
+          26
+        ],
+        [
+          38,
+          47
+        ]
+      ]
+    },
+    "kf2a645a30dc7951f": {
+      "kind": "receipt",
+      "component_id": "k2e5143e814cb4e65",
+      "build": "k39874918bee5e284",
+      "source_ref": "kd372dbcd2b0b69f0",
+      "emitted_matrix": [
+        [
+          14,
+          38
+        ],
+        [
+          26,
+          47
+        ]
+      ]
+    },
+    "k4ae60326888c9463": {
+      "kind": "receipt",
+      "component_id": "k2e5143e814cb4e65",
+      "build": "k37b44a32c984f2fa",
+      "source_ref": "kd372dbcd2b0b69f0",
+      "emitted_matrix": [
+        [
+          26,
+          47
+        ],
+        [
+          14,
+          38
+        ]
+      ],
+      "capture_id": "k08b82aaa3871593c",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

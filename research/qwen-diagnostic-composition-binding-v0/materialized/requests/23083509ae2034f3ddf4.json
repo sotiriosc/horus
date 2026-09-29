@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"k25739e565808f482\",\n    \"deployed_build\": \"k61d3e62ea55b3312\",\n    \"operation\": \"weaving instruction expander\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"k7a2b68c6007cbc49\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k25739e565808f482\",\n      \"rule\": \"Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"k6d59d3c66d853698\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k25739e565808f482\",\n      \"build\": \"k61d3e62ea55b3312\",\n      \"capture_id\": \"kdaa11bf78fed5d79\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"glyph_runs\": [\n        [\n          \"Q\",\n          3\n        ],\n        [\n          \"J\",\n          2\n        ]\n      ]\n    },\n    \"k7c51ee1fd3c90701\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k25739e565808f482\",\n      \"build\": \"k61d3e62ea55b3312\",\n      \"source_ref\": \"k6d59d3c66d853698\",\n      \"capture_id\": \"kf6b84baba74a940c\",\n      \"expanded_glyphs\": \"QQQJ\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

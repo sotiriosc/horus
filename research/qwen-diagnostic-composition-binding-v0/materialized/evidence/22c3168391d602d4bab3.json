@@ -1,0 +1,82 @@
+{
+  "scope": {
+    "component_id": "kdf6ea9c863d53a5a",
+    "deployed_build": "k822dba95f4454b6b",
+    "operation": "mineral key canonicalizer",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k6d1e83eed8648b04": {
+      "kind": "contract",
+      "component_id": "kdf6ea9c863d53a5a",
+      "rule": "Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k315232a17bf97d58": {
+      "kind": "source",
+      "component_id": "kdf6ea9c863d53a5a",
+      "build": "k822dba95f4454b6b",
+      "capture_id": "kf8a72733e47d754a",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_keys": [
+        "xenon",
+        "UNKNOWN",
+        "argon"
+      ]
+    },
+    "kcd5f816cb438daa2": {
+      "kind": "receipt",
+      "component_id": "kdf6ea9c863d53a5a",
+      "build": "k822dba95f4454b6b",
+      "source_ref": "k315232a17bf97d58",
+      "capture_id": "k8a5d755b208bcf97",
+      "emitted_keys": [
+        "argon",
+        "boron",
+        "xenon"
+      ]
+    },
+    "k51341736762d2eb6": {
+      "kind": "contract",
+      "component_id": "k97bc3fac0357f337",
+      "rule": "Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.",
+      "in_service_build": "k72a915315fcc4a62",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "ka4e7e7ef93e5f5d4": {
+      "kind": "source",
+      "component_id": "k97bc3fac0357f337",
+      "build": "k72a915315fcc4a62",
+      "capture_id": "k1c0ba0f94cad89cf",
+      "source_keys": [
+        "xenon",
+        "boron",
+        "argon"
+      ]
+    },
+    "k106c473900ef6aac": {
+      "kind": "receipt",
+      "component_id": "k97bc3fac0357f337",
+      "build": "k72a915315fcc4a62",
+      "source_ref": "ka4e7e7ef93e5f5d4",
+      "emitted_keys": [
+        "argon",
+        "boron",
+        "xenon"
+      ]
+    },
+    "kbc000f30b5722b9a": {
+      "kind": "receipt",
+      "component_id": "k97bc3fac0357f337",
+      "build": "kd991138c3f7d8e31",
+      "source_ref": "ka4e7e7ef93e5f5d4",
+      "emitted_keys": [
+        "xenon",
+        "boron",
+        "argon"
+      ],
+      "capture_id": "kd59fde5138daeaf0",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

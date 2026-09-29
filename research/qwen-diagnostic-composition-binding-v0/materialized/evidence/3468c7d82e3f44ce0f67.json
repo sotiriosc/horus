@@ -1,0 +1,120 @@
+{
+  "scope": {
+    "component_id": "ke8ce5eb8a0d3626f",
+    "deployed_build": "kf95d61d28901b91a",
+    "operation": "theatre prop stack",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k65d3d687d0c6dddc": {
+      "kind": "contract",
+      "component_id": "ke8ce5eb8a0d3626f",
+      "rule": "The list is ordered bottom to top. Remove exactly the final item and emit the remaining list in its original order. All lists in scope are nonempty.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k32776ceeb9fc3c82": {
+      "kind": "source",
+      "component_id": "ke8ce5eb8a0d3626f",
+      "capture_id": "ka077b5b36de3ec45",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "stack_items": [
+        "ash",
+        "birch",
+        "cedar"
+      ]
+    },
+    "k1907982f7a4241dd": {
+      "kind": "receipt",
+      "component_id": "ke8ce5eb8a0d3626f",
+      "build": "kf95d61d28901b91a",
+      "source_ref": "k32776ceeb9fc3c82",
+      "capture_id": "k4c8789946eac9a03",
+      "remaining_stack": [
+        "ash",
+        "birch"
+      ]
+    },
+    "kbec4915069bc9598": {
+      "kind": "receipt",
+      "component_id": "ke8ce5eb8a0d3626f",
+      "build": "k9119efb9767f6438",
+      "source_ref": "k32776ceeb9fc3c82",
+      "capture_id": "k336649ed05e3a2cb",
+      "remaining_stack": [
+        "birch",
+        "cedar"
+      ],
+      "build_relation": "This build was created before the other supplied build. Both traces use the listed source values."
+    },
+    "k81fa2a5966a84d7c": {
+      "kind": "contract",
+      "component_id": "kf4c154441167ebc7",
+      "rule": "The list is ordered bottom to top. Remove exactly the final item and emit the remaining list in its original order. All lists in scope are nonempty.",
+      "in_service_build": "kf0221a9d051ff0fb",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k8bd38233a9392fac": {
+      "kind": "source",
+      "component_id": "kf4c154441167ebc7",
+      "build": "kf0221a9d051ff0fb",
+      "capture_id": "ka48817832400fc11",
+      "stack_items": [
+        "ash",
+        "birch",
+        "cedar"
+      ]
+    },
+    "k3a784a40df24f1ad": {
+      "kind": "receipt",
+      "component_id": "kf4c154441167ebc7",
+      "build": "kf0221a9d051ff0fb",
+      "source_ref": "k8bd38233a9392fac",
+      "remaining_stack": [
+        "ash",
+        "birch"
+      ]
+    },
+    "k824b15768b40423c": {
+      "kind": "receipt",
+      "component_id": "kf4c154441167ebc7",
+      "build": "kedd9e4434b66c719",
+      "source_ref": "k8bd38233a9392fac",
+      "remaining_stack": [
+        "birch",
+        "ash"
+      ],
+      "capture_id": "kd5cb5ce634eeaa6b",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "kfec02b8cd7c94715": {
+      "kind": "output_attestation",
+      "component_id": "ke8ce5eb8a0d3626f",
+      "build": "kf95d61d28901b91a",
+      "source_ref": "k32776ceeb9fc3c82",
+      "capture_id": "k4c8789946eac9a03",
+      "remaining_stack": [
+        "ash",
+        "birch"
+      ],
+      "attests_record": "k1907982f7a4241dd"
+    },
+    "k4156b2930841ff54": {
+      "kind": "observer_status",
+      "component_id": "kf73a6f7b5d07e028",
+      "display_caption": "copper-lantern",
+      "completed_panels": 817
+    },
+    "k9d29daf12f8ddf85": {
+      "kind": "reporting_relation",
+      "component_id": "kf4c154441167ebc7",
+      "reports_counters_to": "kf73a6f7b5d07e028",
+      "relation_scope": "Display counters only. This is not a computation or data dependency of the target component."
+    },
+    "kcb38b8008f05c0b6": {
+      "kind": "work_counter",
+      "component_id": "kf73a6f7b5d07e028",
+      "inspection_window": "window-ae6c01c",
+      "panel_capacity": 953
+    }
+  }
+}

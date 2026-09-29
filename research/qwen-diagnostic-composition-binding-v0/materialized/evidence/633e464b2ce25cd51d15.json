@@ -1,0 +1,91 @@
+{
+  "scope": {
+    "component_id": "kcfc5e1dbef179cda",
+    "deployed_build": "k42687079435f5fa0",
+    "operation": "sample rack stack",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "kad3451152ddb47da": {
+      "kind": "contract",
+      "component_id": "kcfc5e1dbef179cda",
+      "rule": "The list is ordered bottom to top. Remove exactly the final item and emit the remaining list in its original order. All lists in scope are nonempty.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kc979d422b6e514f5": {
+      "kind": "source",
+      "component_id": "kcfc5e1dbef179cda",
+      "build": "k42687079435f5fa0",
+      "capture_id": "k3ab385b1c3558430",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "stack_items": [
+        "flint",
+        "moss",
+        "reed"
+      ]
+    },
+    "kc21d91f09366dff1": {
+      "kind": "receipt",
+      "component_id": "kcfc5e1dbef179cda",
+      "build": "k42687079435f5fa0",
+      "source_ref": "kc979d422b6e514f5",
+      "capture_id": "kf9756d80c2263563",
+      "remaining_stack": [
+        "flint",
+        "moss"
+      ]
+    },
+    "kf0e892e986a62a42": {
+      "kind": "source_attestation",
+      "component_id": "kcfc5e1dbef179cda",
+      "build": "k42687079435f5fa0",
+      "capture_id": "k3ab385b1c3558430",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "stack_items": [
+        "flint",
+        "moss",
+        "fern"
+      ]
+    },
+    "k26297a633ab06456": {
+      "kind": "contract",
+      "component_id": "kc2ee6b3be7b7f6ce",
+      "rule": "The list is ordered bottom to top. Remove exactly the final item and emit the remaining list in its original order. All lists in scope are nonempty.",
+      "in_service_build": "kcd8d3b896a6a211b",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k9499c4bde07aa836": {
+      "kind": "source",
+      "component_id": "kc2ee6b3be7b7f6ce",
+      "build": "kcd8d3b896a6a211b",
+      "capture_id": "k25b52a3ef05230e4",
+      "stack_items": [
+        "flint",
+        "moss",
+        "reed"
+      ]
+    },
+    "k13b97f48d591c638": {
+      "kind": "receipt",
+      "component_id": "kc2ee6b3be7b7f6ce",
+      "build": "kcd8d3b896a6a211b",
+      "source_ref": "k9499c4bde07aa836",
+      "remaining_stack": [
+        "flint",
+        "moss"
+      ]
+    },
+    "k478f1223c17e7f86": {
+      "kind": "receipt",
+      "component_id": "kc2ee6b3be7b7f6ce",
+      "build": "k44fe63cbfb68c8b5",
+      "source_ref": "k9499c4bde07aa836",
+      "remaining_stack": [
+        "moss",
+        "flint"
+      ],
+      "capture_id": "kd281daa8d266dfdd",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

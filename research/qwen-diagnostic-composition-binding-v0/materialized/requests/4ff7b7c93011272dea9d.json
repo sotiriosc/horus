@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"k9a5c2a20387f8625\",\n    \"deployed_build\": \"k200226a30108bfaf\",\n    \"operation\": \"phoneme score expander\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"kc61ef589ac6d9e11\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k9a5c2a20387f8625\",\n      \"rule\": \"Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"kc0fd58bf3e6f8fc3\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k9a5c2a20387f8625\",\n      \"build\": \"k200226a30108bfaf\",\n      \"capture_id\": \"k3dbeb016a38da88d\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_symbols\": [\n        \"A\",\n        \"UNKNOWN\",\n        \"C\"\n      ],\n      \"codewords\": {\n        \"A\": \"ka\",\n        \"B\": \"zu\",\n        \"C\": \"mi\"\n      }\n    },\n    \"kd5c6b877b1916b34\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k9a5c2a20387f8625\",\n      \"build\": \"k200226a30108bfaf\",\n      \"source_ref\": \"kc0fd58bf3e6f8fc3\",\n      \"capture_id\": \"kc9863ecdb6c2208b\",\n      \"emitted_codewords\": \"kazumi\"\n    },\n    \"k34d6ae313218a5e2\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k960a42bcd5246cdd\",\n      \"rule\": \"Replace each source symbol with its stated codeword, then concatenate codewords in source order. Codewords are literal strings, not component or entity identifiers.\",\n      \"in_service_build\": \"ka78fa9703e036121\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"k5f5f3c9357d2931e\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k960a42bcd5246cdd\",\n      \"build\": \"ka78fa9703e036121\",\n      \"capture_id\": \"k3e0194cf0f26cbaf\",\n      \"source_symbols\": [\n        \"A\",\n        \"B\",\n        \"C\"\n      ],\n      \"codewords\": {\n        \"A\": \"ka\",\n        \"B\": \"zu\",\n        \"C\": \"mi\"\n      }\n    },\n    \"kfe945897c6115959\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k960a42bcd5246cdd\",\n      \"build\": \"ka78fa9703e036121\",\n      \"source_ref\": \"k5f5f3c9357d2931e\",\n      \"emitted_codewords\": \"kazumi\"\n    },\n    \"ke3c1fa23df29645b\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k960a42bcd5246cdd\",\n      \"build\": \"k76d566f8713f08cd\",\n      \"source_ref\": \"k5f5f3c9357d2931e\",\n      \"emitted_codewords\": \"kazumi00\",\n      \"capture_id\": \"k591a473ecd0dd470\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    },\n    \"kdee4bd073c6c4ccc\": {\n      \"kind\": \"output_attestation\",\n      \"component_id\": \"k9a5c2a20387f8625\",\n      \"build\": \"k200226a30108bfaf\",\n      \"source_ref\": \"kc0fd58bf3e6f8fc3\",\n      \"capture_id\": \"kc9863ecdb6c2208b\",\n      \"emitted_codewords\": \"kazumi\",\n      \"attests_record\": \"kd5c6b877b1916b34\"\n    },\n    \"k5f6032ca132dcc88\": {\n      \"kind\": \"observer_status\",\n      \"component_id\": \"k0f8b7edfcdbe211d\",\n      \"display_caption\": \"copper-lantern\",\n      \"completed_panels\": 815\n    },\n    \"kefd9a945c57038f0\": {\n      \"kind\": \"reporting_relation\",\n      \"component_id\": \"k960a42bcd5246cdd\",\n      \"reports_counters_to\": \"k0f8b7edfcdbe211d\",\n      \"relation_scope\": \"Display counters only. This is not a computation or data dependency of the target component.\"\n    },\n    \"k19945cb0092c5a86\": {\n      \"kind\": \"work_counter\",\n      \"component_id\": \"k0f8b7edfcdbe211d\",\n      \"inspection_window\": \"window-dbcee76\",\n      \"panel_capacity\": 951\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

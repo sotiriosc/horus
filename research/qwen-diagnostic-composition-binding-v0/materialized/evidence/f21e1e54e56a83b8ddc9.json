@@ -1,0 +1,143 @@
+{
+  "scope": {
+    "component_id": "kaa8e9ee7237cd51a",
+    "deployed_build": "k83607142b0e21912",
+    "operation": "microscope tile rearranger",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "kfefcf7faf7131d47": {
+      "kind": "contract",
+      "component_id": "kaa8e9ee7237cd51a",
+      "rule": "The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k406cb1805ea80710": {
+      "kind": "source",
+      "component_id": "kaa8e9ee7237cd51a",
+      "build": "k83607142b0e21912",
+      "capture_id": "k425a59b11d46c3b7",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_matrix": [
+        [
+          17,
+          "UNKNOWN"
+        ],
+        [
+          43,
+          59
+        ]
+      ]
+    },
+    "k8a49a9129e7b06c4": {
+      "kind": "receipt",
+      "component_id": "kaa8e9ee7237cd51a",
+      "build": "k83607142b0e21912",
+      "source_ref": "k406cb1805ea80710",
+      "capture_id": "kafca49e558f06c80",
+      "emitted_matrix": [
+        [
+          17,
+          43
+        ],
+        [
+          31,
+          59
+        ]
+      ]
+    },
+    "k4e1f3a6c1e81597c": {
+      "kind": "contract",
+      "component_id": "k1712c9b9473c8023",
+      "rule": "The emitted matrix is the transpose of the supplied two-by-two source matrix: output row r, column c equals source row c, column r, with zero-based indices.",
+      "in_service_build": "k66878a5ba4431533",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k50db97ac92ec4200": {
+      "kind": "source",
+      "component_id": "k1712c9b9473c8023",
+      "build": "k66878a5ba4431533",
+      "capture_id": "k6cb8c5e51c5548b6",
+      "source_matrix": [
+        [
+          17,
+          31
+        ],
+        [
+          43,
+          59
+        ]
+      ]
+    },
+    "k366a2660447bfad5": {
+      "kind": "receipt",
+      "component_id": "k1712c9b9473c8023",
+      "build": "k66878a5ba4431533",
+      "source_ref": "k50db97ac92ec4200",
+      "emitted_matrix": [
+        [
+          17,
+          43
+        ],
+        [
+          31,
+          59
+        ]
+      ]
+    },
+    "ke0b526799a68d8ec": {
+      "kind": "receipt",
+      "component_id": "k1712c9b9473c8023",
+      "build": "k98a3391006363610",
+      "source_ref": "k50db97ac92ec4200",
+      "emitted_matrix": [
+        [
+          31,
+          59
+        ],
+        [
+          17,
+          43
+        ]
+      ],
+      "capture_id": "k50070d8a0768992c",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k0369b53557b7c152": {
+      "kind": "output_attestation",
+      "component_id": "kaa8e9ee7237cd51a",
+      "build": "k83607142b0e21912",
+      "source_ref": "k406cb1805ea80710",
+      "capture_id": "kafca49e558f06c80",
+      "emitted_matrix": [
+        [
+          17,
+          43
+        ],
+        [
+          31,
+          59
+        ]
+      ],
+      "attests_record": "k8a49a9129e7b06c4"
+    },
+    "k010e486c22a80b22": {
+      "kind": "observer_status",
+      "component_id": "kcd941b00ff36558d",
+      "display_caption": "copper-lantern",
+      "completed_panels": 816
+    },
+    "k37a5f2946ddc1d58": {
+      "kind": "reporting_relation",
+      "component_id": "k1712c9b9473c8023",
+      "reports_counters_to": "kcd941b00ff36558d",
+      "relation_scope": "Display counters only. This is not a computation or data dependency of the target component."
+    },
+    "kce17a136ee82b639": {
+      "kind": "work_counter",
+      "component_id": "kcd941b00ff36558d",
+      "inspection_window": "window-71b3d6a",
+      "panel_capacity": 952
+    }
+  }
+}

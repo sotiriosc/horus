@@ -1,0 +1,30 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"kf1e7c045f139dfa3\",\n    \"deployed_build\": \"k9327c388c1dab935\",\n    \"operation\": \"botanical key canonicalizer\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"k539e828c70590125\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"kf1e7c045f139dfa3\",\n      \"rule\": \"Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"k53f815a06f5960d3\": {\n      \"kind\": \"source\",\n      \"component_id\": \"kf1e7c045f139dfa3\",\n      \"build\": \"k9327c388c1dab935\",\n      \"capture_id\": \"k13deb16bb25dee7d\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_keys\": [\n        \"oak\",\n        \"elm\"\n      ]\n    },\n    \"k162774130eb8fd70\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"kf1e7c045f139dfa3\",\n      \"build\": \"k9327c388c1dab935\",\n      \"source_ref\": \"k53f815a06f5960d3\",\n      \"capture_id\": \"k84825d5d29074c6e\",\n      \"emitted_keys\": [\n        \"elm\",\n        \"oak\"\n      ]\n    },\n    \"k0361f72d5d786367\": {\n      \"kind\": \"source_attestation\",\n      \"component_id\": \"kf1e7c045f139dfa3\",\n      \"build\": \"k9327c388c1dab935\",\n      \"capture_id\": \"k13deb16bb25dee7d\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_keys\": [\n        \"pine\",\n        \"elm\"\n      ]\n    }\n  }\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "classification": {
+        "enum": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ]
+      }
+    },
+    "required": [
+      "classification"
+    ],
+    "additionalProperties": false
+  }
+}

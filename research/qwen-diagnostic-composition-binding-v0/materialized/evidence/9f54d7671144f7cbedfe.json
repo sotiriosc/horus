@@ -1,0 +1,112 @@
+{
+  "scope": {
+    "component_id": "k2ced569c0288afc0",
+    "deployed_build": "ke5c06f697413221e",
+    "operation": "ceramic pattern quotient register",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k2d390cb6d1e5bdc5": {
+      "kind": "contract",
+      "component_id": "k2ced569c0288afc0",
+      "rule": "For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kc7af334a3c8eede8": {
+      "kind": "source",
+      "component_id": "k2ced569c0288afc0",
+      "build": "ke5c06f697413221e",
+      "capture_id": "ka4ba5ad6111dbddd",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "dividend": 431,
+      "divisor": 37
+    },
+    "k8f279ad81166ee16": {
+      "kind": "receipt",
+      "component_id": "k2ced569c0288afc0",
+      "build": "ke5c06f697413221e",
+      "source_ref": "kc7af334a3c8eede8",
+      "capture_id": "k40aefc90e79dac39",
+      "emitted_divmod": {
+        "quotient": 11,
+        "residue": 24
+      }
+    },
+    "k2bfa2e0d626dc654": {
+      "kind": "source_attestation",
+      "component_id": "k2ced569c0288afc0",
+      "build": "ke5c06f697413221e",
+      "capture_id": "ka4ba5ad6111dbddd",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "dividend": 443,
+      "divisor": 37
+    },
+    "ke7e1f13574387909": {
+      "kind": "contract",
+      "component_id": "k989552db189b3c11",
+      "rule": "For nonnegative dividend n and positive divisor d, emit the unique integer quotient q and residue r such that n=q*d+r and 0<=r<d.",
+      "in_service_build": "k4f3e2c7924d54e58",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "k1e48ebacd24ba303": {
+      "kind": "source",
+      "component_id": "k989552db189b3c11",
+      "build": "k4f3e2c7924d54e58",
+      "capture_id": "k50531b4cfaf0df21",
+      "dividend": 431,
+      "divisor": 37
+    },
+    "k0bf7b8e7a3c493fd": {
+      "kind": "receipt",
+      "component_id": "k989552db189b3c11",
+      "build": "k4f3e2c7924d54e58",
+      "source_ref": "k1e48ebacd24ba303",
+      "emitted_divmod": {
+        "quotient": 11,
+        "residue": 24
+      }
+    },
+    "k10a71a681f2d14ef": {
+      "kind": "receipt",
+      "component_id": "k989552db189b3c11",
+      "build": "k7578140540896c6b",
+      "source_ref": "k1e48ebacd24ba303",
+      "emitted_divmod": {
+        "quotient": 11,
+        "residue": 47
+      },
+      "capture_id": "k9ed36b68a261a9e8",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    },
+    "k007491031fbc403d": {
+      "kind": "output_attestation",
+      "component_id": "k2ced569c0288afc0",
+      "build": "ke5c06f697413221e",
+      "source_ref": "kc7af334a3c8eede8",
+      "capture_id": "k40aefc90e79dac39",
+      "emitted_divmod": {
+        "quotient": 11,
+        "residue": 24
+      },
+      "attests_record": "k8f279ad81166ee16"
+    },
+    "k66a1297b6be46d70": {
+      "kind": "observer_status",
+      "component_id": "k9ccca7c8e0730694",
+      "display_caption": "copper-lantern",
+      "completed_panels": 820
+    },
+    "kb14cdd3e174733a3": {
+      "kind": "reporting_relation",
+      "component_id": "k989552db189b3c11",
+      "reports_counters_to": "k9ccca7c8e0730694",
+      "relation_scope": "Display counters only. This is not a computation or data dependency of the target component."
+    },
+    "k026d8848c5d65bdc": {
+      "kind": "work_counter",
+      "component_id": "k9ccca7c8e0730694",
+      "inspection_window": "window-8502617",
+      "panel_capacity": 956
+    }
+  }
+}

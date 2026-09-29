@@ -1,0 +1,33 @@
+{
+  "scope": {
+    "component_id": "k92e3160b21056ddc",
+    "deployed_build": "k77a9ed15bb2eb500",
+    "operation": "beacon channel whitener",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "kde3de726b3ec93b6": {
+      "kind": "contract",
+      "component_id": "k92e3160b21056ddc",
+      "rule": "The emitted octet is the bitwise exclusive-or of the source octet and the whitening mask. No arithmetic addition is used.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k3fe20b5653f9d418": {
+      "kind": "source",
+      "component_id": "k92e3160b21056ddc",
+      "build": "k77a9ed15bb2eb500",
+      "capture_id": "k8bbea55f2e6b919c",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_octet": 61,
+      "whitening_mask": 151
+    },
+    "k55cce514b4fe63f8": {
+      "kind": "receipt",
+      "component_id": "k92e3160b21056ddc",
+      "build": "k77a9ed15bb2eb500",
+      "source_ref": "k3fe20b5653f9d418",
+      "capture_id": "k27999f42a6bdde96",
+      "emitted_octet": 170
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"kd81f0aa2c172374f\",\n    \"deployed_build\": \"k0c359bfba67796b5\",\n    \"operation\": \"label raster expander\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"k0dbe6e158c0628b6\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"kd81f0aa2c172374f\",\n      \"rule\": \"Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"kdfd883e7fbebf8a2\": {\n      \"kind\": \"source\",\n      \"component_id\": \"kd81f0aa2c172374f\",\n      \"build\": \"k0c359bfba67796b5\",\n      \"capture_id\": \"k09b702cba42978f8\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"glyph_runs\": [\n        [\n          \"L\",\n          3\n        ],\n        [\n          \"R\",\n          2\n        ]\n      ]\n    },\n    \"k86da7b56fc181bb9\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"kd81f0aa2c172374f\",\n      \"build\": \"k0c359bfba67796b5\",\n      \"source_ref\": \"kdfd883e7fbebf8a2\",\n      \"capture_id\": \"k2a43f374b7da257a\",\n      \"expanded_glyphs\": \"LLLRR\"\n    },\n    \"kf46b8f5410f13e3f\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k421023bc87c3729f\",\n      \"rule\": \"Expand each glyph by its specified repeat count and concatenate in the listed order. No glyph may be dropped or added.\",\n      \"in_service_build\": \"kd1a23fec780d3aaf\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"kab319913245dcb64\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k421023bc87c3729f\",\n      \"build\": \"kd1a23fec780d3aaf\",\n      \"capture_id\": \"kbf51c142af45cf95\",\n      \"glyph_runs\": [\n        [\n          \"L\",\n          3\n        ],\n        [\n          \"R\",\n          2\n        ]\n      ]\n    },\n    \"kae39287b94774fd4\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k421023bc87c3729f\",\n      \"build\": \"kd1a23fec780d3aaf\",\n      \"source_ref\": \"kab319913245dcb64\",\n      \"expanded_glyphs\": \"LLLRR\"\n    },\n    \"k82859200ea9bc230\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k421023bc87c3729f\",\n      \"build\": \"k7d87ad3cd4adc358\",\n      \"source_ref\": \"kab319913245dcb64\",\n      \"expanded_glyphs\": \"LLLRR00\",\n      \"capture_id\": \"k01965e0e7b51aac6\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

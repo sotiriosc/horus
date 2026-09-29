@@ -1,0 +1,64 @@
+{
+  "scope": {
+    "component_id": "kd1cafa3e82e9f50c",
+    "deployed_build": "kea9638a55fbe3732",
+    "operation": "puzzle tile printer",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "ke39e647626bcf5e6": {
+      "kind": "contract",
+      "component_id": "kd1cafa3e82e9f50c",
+      "rule": "Shift each uppercase Latin letter forward by the configured displacement in the cyclic alphabet A through Z, retaining letter order. Displacements from zero through twenty-five are allowed.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "kd27a890f142d2acf": {
+      "kind": "source",
+      "component_id": "kd1cafa3e82e9f50c",
+      "build": "kea9638a55fbe3732",
+      "capture_id": "k365aa602475e147c",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_letters": "BYQ",
+      "displacement": 9
+    },
+    "k73a496b9a1690446": {
+      "kind": "receipt",
+      "component_id": "kd1cafa3e82e9f50c",
+      "build": "kea9638a55fbe3732",
+      "source_ref": "kd27a890f142d2acf",
+      "capture_id": "k8cc57b469ab1d84b",
+      "shifted_letters": "KHZ"
+    },
+    "k21a1b5685326b69a": {
+      "kind": "contract",
+      "component_id": "k3878e6f4040d505e",
+      "rule": "Shift each uppercase Latin letter forward by the configured displacement in the cyclic alphabet A through Z, retaining letter order. Displacements from zero through twenty-five are allowed.",
+      "in_service_build": "kb515ee57c1436296",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "ka3b5b8060784be84": {
+      "kind": "source",
+      "component_id": "k3878e6f4040d505e",
+      "build": "kb515ee57c1436296",
+      "capture_id": "kb8c3c90f8ada51b5",
+      "source_letters": "BYQ",
+      "displacement": 9
+    },
+    "kb86ef7bc6d42cac7": {
+      "kind": "receipt",
+      "component_id": "k3878e6f4040d505e",
+      "build": "kb515ee57c1436296",
+      "source_ref": "ka3b5b8060784be84",
+      "shifted_letters": "KHZ"
+    },
+    "k23fe8c76cb3ed8e4": {
+      "kind": "receipt",
+      "component_id": "k3878e6f4040d505e",
+      "build": "k064b2b88e0a07f8a",
+      "source_ref": "ka3b5b8060784be84",
+      "shifted_letters": "KHZ00",
+      "capture_id": "ka139bed2e784a40a",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}

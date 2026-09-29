@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Analyze only the supplied bounded system evidence. Do not invent missing facts or silently reconcile contradictory capture facts. Apply the supplied class definitions. Return exactly one JSON object satisfying the supplied response schema. No tools, external knowledge lookup, system changes, interventions or solution proposals."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nReturn only the classification object. No rationale, citations or other prose.\n\nRaw evidence:\n{\n  \"scope\": {\n    \"component_id\": \"ked75f4af6c9513ec\",\n    \"deployed_build\": \"k4b883b459a3aec92\",\n    \"operation\": \"stage-light wire encoder\",\n    \"bounded_scope\": \"Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it.\"\n  },\n  \"records\": {\n    \"kcd6c9598c8459810\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"ked75f4af6c9513ec\",\n      \"rule\": \"Encode each source octet as two lower-case hexadecimal digits, except sentinel 202 becomes the two-octet escape 203,234. Concatenate encoded octets without separators.\",\n      \"attestation_rule\": \"Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available.\"\n    },\n    \"kfb496b41b88c082a\": {\n      \"kind\": \"source\",\n      \"component_id\": \"ked75f4af6c9513ec\",\n      \"build\": \"k4b883b459a3aec92\",\n      \"capture_id\": \"k5b6af519eba88d60\",\n      \"capture_rule\": \"One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.\",\n      \"source_octets\": [\n        87,\n        202,\n        109\n      ]\n    },\n    \"k56e049b137e22cc0\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"ked75f4af6c9513ec\",\n      \"build\": \"k4b883b459a3aec92\",\n      \"source_ref\": \"kfb496b41b88c082a\",\n      \"capture_id\": \"k7ec6ff2e17f67de5\",\n      \"emitted_hex\": \"57cbea6d\"\n    },\n    \"k48eaa7218caba95b\": {\n      \"kind\": \"contract\",\n      \"component_id\": \"k8a47b911fd58db26\",\n      \"rule\": \"Encode each source octet as two lower-case hexadecimal digits, except sentinel 202 becomes the two-octet escape 203,234. Concatenate encoded octets without separators.\",\n      \"in_service_build\": \"kec9a9ff485d60b21\",\n      \"scope_note\": \"Independent component. These inputs and outputs do not govern any other component.\"\n    },\n    \"kd33ca5e318ae4c02\": {\n      \"kind\": \"source\",\n      \"component_id\": \"k8a47b911fd58db26\",\n      \"build\": \"kec9a9ff485d60b21\",\n      \"capture_id\": \"kc1654742c7c6d1a7\",\n      \"source_octets\": [\n        87,\n        202,\n        109\n      ]\n    },\n    \"k12d0bac0804642fc\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k8a47b911fd58db26\",\n      \"build\": \"kec9a9ff485d60b21\",\n      \"source_ref\": \"kd33ca5e318ae4c02\",\n      \"emitted_hex\": \"57cbea6d\"\n    },\n    \"kc775d1510221c580\": {\n      \"kind\": \"receipt\",\n      \"component_id\": \"k8a47b911fd58db26\",\n      \"build\": \"k0b90bd4dce6f7200\",\n      \"source_ref\": \"kd33ca5e318ae4c02\",\n      \"emitted_hex\": \"57cbea6d00\",\n      \"capture_id\": \"k8868712d2371b609\",\n      \"build_relation\": \"Earlier non-current branch of this independent component; in_service_build remains the one in its contract record.\"\n    }\n  }\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 384206917,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

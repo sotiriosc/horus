@@ -1,0 +1,49 @@
+{
+  "scope": {
+    "component_id": "kf1e7c045f139dfa3",
+    "deployed_build": "k9327c388c1dab935",
+    "operation": "botanical key canonicalizer",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k539e828c70590125": {
+      "kind": "contract",
+      "component_id": "kf1e7c045f139dfa3",
+      "rule": "Emit the supplied distinct lowercase ASCII keys in ascending lexicographic order, without changing, adding or dropping a key.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k53f815a06f5960d3": {
+      "kind": "source",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "capture_id": "k13deb16bb25dee7d",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_keys": [
+        "oak",
+        "elm"
+      ]
+    },
+    "k162774130eb8fd70": {
+      "kind": "receipt",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "source_ref": "k53f815a06f5960d3",
+      "capture_id": "k84825d5d29074c6e",
+      "emitted_keys": [
+        "elm",
+        "oak"
+      ]
+    },
+    "k0361f72d5d786367": {
+      "kind": "source_attestation",
+      "component_id": "kf1e7c045f139dfa3",
+      "build": "k9327c388c1dab935",
+      "capture_id": "k13deb16bb25dee7d",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "source_keys": [
+        "pine",
+        "elm"
+      ]
+    }
+  }
+}

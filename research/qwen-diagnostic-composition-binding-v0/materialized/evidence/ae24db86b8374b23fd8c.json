@@ -1,0 +1,70 @@
+{
+  "scope": {
+    "component_id": "kcc0e9867c68a0ace",
+    "deployed_build": "kc839d98cf762f773",
+    "operation": "flight-simulator signed code",
+    "bounded_scope": "Exactly the supplied target operation. Source captures and output receipts are exact observations, without hidden transforms, lost data, unlisted operations or adjustments. Different components are separately scoped. The operational contract specifies required behavior; it does not assert that an implementation obeyed it."
+  },
+  "records": {
+    "k1b4780882912b205": {
+      "kind": "contract",
+      "component_id": "kcc0e9867c68a0ace",
+      "rule": "Encode a nonnegative signed integer n as 2*n; encode a negative n as -2*n-1. Emit the exact unsigned integer, without truncation.",
+      "attestation_rule": "Attestations for one immutable capture have equal standing. No attestation is preferred, superseded or provisional; no other source is available."
+    },
+    "k7c59d133b0db49dc": {
+      "kind": "source",
+      "component_id": "kcc0e9867c68a0ace",
+      "build": "kc839d98cf762f773",
+      "capture_id": "k7fafe43ecf60a1f6",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "signed_integer": -19
+    },
+    "k9fe82453a4ee82e8": {
+      "kind": "receipt",
+      "component_id": "kcc0e9867c68a0ace",
+      "build": "kc839d98cf762f773",
+      "source_ref": "k7c59d133b0db49dc",
+      "capture_id": "k5c6f95792187d965",
+      "unsigned_code": 37
+    },
+    "k3e55844caa60dfa1": {
+      "kind": "source_attestation",
+      "component_id": "kcc0e9867c68a0ace",
+      "build": "kc839d98cf762f773",
+      "capture_id": "k7fafe43ecf60a1f6",
+      "capture_rule": "One immutable source capture; every attestation with this capture_id asserts exactly the same source fields.",
+      "signed_integer": -21
+    },
+    "k58de8ddc397641b6": {
+      "kind": "contract",
+      "component_id": "k8fa276cef21edca0",
+      "rule": "Encode a nonnegative signed integer n as 2*n; encode a negative n as -2*n-1. Emit the exact unsigned integer, without truncation.",
+      "in_service_build": "k6c9cae246935e174",
+      "scope_note": "Independent component. These inputs and outputs do not govern any other component."
+    },
+    "kfa2467cd72275828": {
+      "kind": "source",
+      "component_id": "k8fa276cef21edca0",
+      "build": "k6c9cae246935e174",
+      "capture_id": "k8d924c6cdb20261b",
+      "signed_integer": -19
+    },
+    "k85619659e4a766be": {
+      "kind": "receipt",
+      "component_id": "k8fa276cef21edca0",
+      "build": "k6c9cae246935e174",
+      "source_ref": "kfa2467cd72275828",
+      "unsigned_code": 37
+    },
+    "k246a13f87e22b227": {
+      "kind": "receipt",
+      "component_id": "k8fa276cef21edca0",
+      "build": "k18e401e9db666c51",
+      "source_ref": "kfa2467cd72275828",
+      "unsigned_code": 60,
+      "capture_id": "k66278595ac9c9c72",
+      "build_relation": "Earlier non-current branch of this independent component; in_service_build remains the one in its contract record."
+    }
+  }
+}
