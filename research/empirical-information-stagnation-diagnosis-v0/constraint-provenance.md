@@ -1,0 +1,20 @@
+# First constraint-provenance inventory
+
+The classifications describe origin and role, not permission to edit. All values below remain frozen in their respective completed campaigns.
+
+| Constraint touched | Frozen value / source | Classification | Basis and limit |
+| --- | --- | --- | --- |
+| S threshold and eligibility | `THRESHOLD=3`, exact deterministic-established-zero signed suffix in `experiments/grounded_stagnation_escape_evaluation_v0/candidate.py` | `EMPIRICALLY_SUPPORTED_RULE` | Phase 3 proposal `dbc13ea`, Phase 4 `e715b85`, replication `fae30db`, controlled pairing `afc1c85`, eligibility completion `af7b83d`, and explicit promotion preserved this exact rule; no empirical-relation extension is licensed. |
+| Signed receipt/authorization/Memory boundary | receipt-backed folds and replay in protected source | `ARCHITECTURAL_INVARIANT` | Only admitted authenticated receipts may change grounded state; diagnostic text has no authority. |
+| Recent empirical window | `WINDOW=4` in `grounded_state/empirical.py` | `SCIENTIFIC_EXPERIMENT_CONTROL` | Prospectively frozen in [stochastic preregistration](../grounded-stochastic-relation-v0/preregistration.md), including the four-receipt comparison. It supplies a descriptive span here, not an empirically optimized exploration threshold. |
+| Empirical classification and change thresholds | `UNSEEN` at 0; `EMPIRICALLY_STABLE` for one observed segment outcome; `VARIABLE_RELATION` for multiple; possible change after `MIN_PRIOR=6` plus four unanimous challenger receipts, confirmation on fifth | `SCIENTIFIC_EXPERIMENT_CONTROL` | Frozen before the stochastic schedules. Successful bounded change/anomaly checks support that study's classification behavior, but do not validate a new exploration policy. |
+| Recent decision history shown to action model | `RECENT_DECISION_LIMIT=3` in `experiments/grounded_autonomous_agent_v0/protocol.py`, inherited by later action contexts | `SCIENTIFIC_EXPERIMENT_CONTROL` | Held fixed for comparability and bounded context; no evidence here isolates the best length. |
+| Episode/decision limit | 3 autonomous runs × 30 decisions; base `DECISIONS=30` | `SCIENTIFIC_EXPERIMENT_CONTROL` | Frozen observational horizon. Thirty is not a learned policy stopping rule. |
+| Scheduled review cadence/window | `REVIEW_EVERY=5`, `REVIEW_WINDOW=5` in historical autonomous protocol | `LEGACY_UNUSED` | R128 explicitly had no self-review. Historical review remained non-authoritative; it supplies no current action rule. |
+| Earlier Dolphin action/commentary/review output caps | v0 `num_predict=180/320`, v0.2 action `48`, commentary `192`, review `512` | `SCIENTIFIC_EXPERIMENT_CONTROL` | The v0.2 preregistration explicitly froze 48/192/512 for the split action, commentary, and review calls. Their numeric origin and optimality are not established here; labeling them runtime workarounds would overstate the record. None is grounded-state semantics. |
+| R128 native reasoning/completion caps | reasoning budget `128`, total completion `768`, context `8192` in R128 preregistration | `SCIENTIFIC_EXPERIMENT_CONTROL` | Qualification-derived model interface frozen for that campaign; it is neither an empirical-stagnation threshold nor a proposed policy change. |
+| Autonomous restart midpoint | T2 after D15; inherited 30-decision midpoint design | `SCIENTIFIC_EXPERIMENT_CONTROL` | Fresh-process replay integrity test, not behavioral rule; R128 restart passed. |
+| Stochastic G restart boundaries | one variable and one possible-change state, frozen schedule | `SCIENTIFIC_EXPERIMENT_CONTROL` | Tests empirical fold reconstruction at registered points; these are not action triggers. |
+| Unexplained optimality of numeric controls | whether 3-history, 30-horizon, or output caps are globally best | `UNCLEAR_ORIGIN` | The sources establish frozen use and campaign purpose, not universal optimality. Do not promote these numbers into architectural invariants. |
+
+No constraint was changed. `LEGACY_UNUSED` applies to the R128 review mechanism in this task, not to the validity of historical self-review research.
