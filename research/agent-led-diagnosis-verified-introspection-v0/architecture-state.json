@@ -1,0 +1,138 @@
+{
+  "evidence_id": "ARCHITECTURE",
+  "system_version": "S_PLUS_E_ACTIVE",
+  "evidence_maturity": "CURRENT_ARCHITECTURE",
+  "active_selector": "grounded_agent.empirical_policy.integrated_decide",
+  "routing_precedence": [
+    "GROUNDED_MECHANICAL_AUTHORITY",
+    "S_BOUNDED_STAGNATION_ESCAPE",
+    "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+    "ORDINARY_MODEL_ROUTE"
+  ],
+  "rollback_selector": "grounded_agent.policy.promoted_decide",
+  "S_status": "PROMOTED_ACTIVE",
+  "E_status": "PROMOTED_ACTIVE",
+  "architecture_chain": [
+    "authenticated experience",
+    "grounded-state derivation",
+    "grounded mechanical authority",
+    "S",
+    "E",
+    "ordinary model/mixed route",
+    "protected execution",
+    "authenticated consequence",
+    "durable Memory"
+  ],
+  "components": [
+    {
+      "component_id": "ACTIVE_SELECTOR",
+      "status": "ACTIVE",
+      "role": "DECISION_ORCHESTRATOR",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": true
+    },
+    {
+      "component_id": "GROUNDED_MECHANICAL_AUTHORITY",
+      "status": "ACTIVE",
+      "role": "GROUNDED_MECHANICAL_SELECTION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "S_BOUNDED_STAGNATION_ESCAPE",
+      "status": "PROMOTED_ACTIVE",
+      "role": "DETERMINISTIC_STAGNATION_ESCAPE",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+      "status": "PROMOTED_ACTIVE",
+      "role": "EMPIRICAL_EVIDENCE_ACQUISITION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "ORDINARY_MODEL_ROUTE",
+      "status": "ACTIVE_INCUMBENT",
+      "role": "ADMISSIBLE_MODEL_SELECTION",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": true
+    },
+    {
+      "component_id": "GROUNDED_DETERMINISTIC_STATE",
+      "status": "ACTIVE",
+      "role": "DETERMINISTIC_EVIDENCE_DERIVATION",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "GROUNDED_EMPIRICAL_STATE",
+      "status": "ACTIVE",
+      "role": "EMPIRICAL_EVIDENCE_DERIVATION",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "AUTHENTICATED_MEMORY",
+      "status": "ACTIVE",
+      "role": "AUTHORIZED_DURABLE_EVIDENCE_STORE",
+      "can_select_action": false,
+      "can_execute_world": false,
+      "can_write_memory": true,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "PROTECTED_EXECUTION",
+      "status": "ACTIVE",
+      "role": "PROTECTED_WORLD_AND_AUTHORIZATION",
+      "can_select_action": false,
+      "can_execute_world": true,
+      "can_write_memory": true,
+      "uses_model_call_when_triggered": false
+    },
+    {
+      "component_id": "ROLLBACK_SELECTOR",
+      "status": "AVAILABLE_ROLLBACK",
+      "role": "PRE_E_AUTHORITY_PLUS_S_SELECTOR",
+      "can_select_action": true,
+      "can_execute_world": false,
+      "can_write_memory": false,
+      "uses_model_call_when_triggered": true
+    }
+  ],
+  "mechanical_authority_is_S": false,
+  "S_is_E": false,
+  "precondition": "Authenticated projection validates before route selection; malformed evidence fails closed.",
+  "joint_eligibility": "When mechanical route is unresolved, simultaneous S/E eligibility raises IntegrationInvariantError with no action or model request.",
+  "S_scope": "Frozen deterministic established-zero authenticated fallback suffix; unseen alternative; no established +1; model-free when triggered.",
+  "E_scope": "Frozen empirical same-relation self-loop suffix and full window; allowed stable/variable kind, no possible change, recent and cumulative sums nonpositive, true unseen alternative, no established +1; model-free when triggered.",
+  "ordinary_model": "Historical Dolphin reference/incumbent; Qwen action substitution NOT_PROMOTED.",
+  "evidence_ids": [
+    "ARCH-SELECTOR",
+    "ARCH-ENTRY",
+    "ARCH-ADAPTER",
+    "ARCH-ROLLBACK",
+    "ARCH-ROUTE",
+    "ARCH-S",
+    "ARCH-E",
+    "ARCH-CORE",
+    "ARCH-PROMOTION",
+    "ARCH-COMPONENTS"
+  ],
+  "interpretation_boundary": "MODEL INTERPRETATION != MECHANICAL POLICY EXECUTION"
+}

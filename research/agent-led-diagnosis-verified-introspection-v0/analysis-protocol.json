@@ -1,0 +1,195 @@
+{
+  "system": "You are an isolated diagnosis-only analysis component. MODEL INTERPRETATION != MECHANICAL POLICY EXECUTION. Software facts and public observed outcomes are authoritative within their stated version and evidence maturity. UNKNOWN stays unknown. Distinguish observation, inference and missing evidence. Do not emulate policy predicates, infer hidden outcomes, invent facts, propose solutions, write code, change rules/thresholds/models, or claim policy authority. No diagnosis is required. Return only the requested final JSON schema; native reasoning is private.",
+  "prompts": {
+    "A": "Identify zero to three CURRENT unresolved structural problems or evidence gaps supported by this broad dossier. You are not told which problem to find. Respect version tags and promoted scopes: historical solved problems alone do not establish current failure. Missing evidence is not demonstrated behavioral failure. Evidence IDs must cite supplied records. State a falsifier and minimum information needed, without a proposal or experimental prescription. Use concise prose, at most about 160 words per diagnosis. An empty diagnoses list with no_supported_diagnosis=true is valid. Do not reward novelty.",
+    "B": "Select exactly one of the surviving diagnoses based on evidence strength, current relevance, falsifiability, boundedness and minimal scope. Select its exact ID without changing the diagnosis. Explain the selection briefly; cite supplied evidence only. Request information, not a solution or policy candidate.",
+    "C": "Find reasons this selected diagnosis may be unsupported, obsolete, already solved, or merely an evidence gap. Evaluate exact cited evidence and the solved registry. An accurately labeled evidence gap is not itself a fatal objection. Do not rewrite the diagnosis, propose a fix, or invent contrary evidence. fatal_objection=true only for a stated factual objection; objections may include nonfatal limits."
+  },
+  "schemas": {
+    "A": {
+      "type": "object",
+      "properties": {
+        "diagnoses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "diagnosis_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "type": {
+                "enum": [
+                  "OBSERVED_PROBLEM",
+                  "EVIDENCE_GAP"
+                ]
+              },
+              "current_relevance": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "system_versions_used": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "PRE_S",
+                    "S_ACTIVE",
+                    "S_PLUS_E_ACTIVE"
+                  ]
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "already_addressed_by_S": {
+                "type": "boolean"
+              },
+              "already_addressed_by_E": {
+                "type": "boolean"
+              },
+              "observed": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "inferred": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "unknown": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "falsifier": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minimum_new_evidence_needed": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "diagnosis_id",
+              "statement",
+              "type",
+              "current_relevance",
+              "evidence_ids",
+              "system_versions_used",
+              "already_addressed_by_S",
+              "already_addressed_by_E",
+              "observed",
+              "inferred",
+              "unknown",
+              "falsifier",
+              "minimum_new_evidence_needed"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0,
+          "maxItems": 3
+        },
+        "no_supported_diagnosis": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "diagnoses",
+        "no_supported_diagnosis"
+      ],
+      "additionalProperties": false
+    },
+    "B": {
+      "type": "object",
+      "properties": {
+        "selected_diagnosis_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "why_selected": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "main_uncertainty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "falsifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_information_needed": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "selected_diagnosis_id",
+        "why_selected",
+        "evidence_ids",
+        "main_uncertainty",
+        "falsifier",
+        "next_information_needed"
+      ],
+      "additionalProperties": false
+    },
+    "C": {
+      "type": "object",
+      "properties": {
+        "fatal_objection": {
+          "type": "boolean"
+        },
+        "objections": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "fatal_objection",
+        "objections",
+        "evidence_ids"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

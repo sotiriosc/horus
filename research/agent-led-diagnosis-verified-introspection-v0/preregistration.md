@@ -1,0 +1,51 @@
+# Agent-led diagnosis with verified introspection v0
+
+**PREREGISTERED — no inference yet. DIAGNOSIS ONLY.**
+
+MODEL INTERPRETATION != MECHANICAL POLICY EXECUTION.
+
+The self-model in this study consists of deterministic architecture introspection + verified public behavioral evidence + language-model interpretation. This tests whether an isolated analysis component can identify something currently worth investigating without being supplied a diagnosis, candidate improvement, or preferred hypothesis. It does not test proposal competence, policy changes, self-modification or RSI.
+
+## Preserved lineage and authority
+
+Start from published v0.1 `ecd097af2f007cb431e3ae736832960f86805deb`. Preserve v0 `ba698e948e2ae27427bac1e9f772cf6c8b485de8` and both AGENT_SELF_MODEL_GROUNDING_FAILED classifications exactly. v0.1 Phase A passed 104 factual checks, while Phase B failed exact application; it is not reclassified. The new interface delegates software facts to code rather than repeating the failed routing quiz.
+
+Active source is unchanged from S+E promotion `69947aa243a69e7ae26db534727a7122922d978d`: authenticated experience → grounded-state derivation → grounded mechanical authority → S → E → ordinary model/mixed route → protected execution → authenticated consequence → durable Memory. The active selector is grounded_agent.empirical_policy.integrated_decide, with rollback grounded_agent.policy.promoted_decide. Mechanical authority, S and E remain distinct. S threshold 3 and E window 4 remain frozen. No historical entry point, source, model, prompt, policy, threshold, training state or Memory is changed.
+
+All new code is isolated study assembly/transport/audit code under this research directory, as needed for the requested read-only introspection module. No implementation candidate or active-code modification is authorized.
+
+## Read-only interface and evidence inventory
+
+self_introspection.py verifies active alias/control-flow AST, current published promotion metadata and source digests, and projects the already verified component manifest. The existing pure select_route function computes mechanical-route facts from archived assessments; no active selector is called. For the fixed first/last decisions of every grounded-authority and R128 run, it reports recorded action/consequence, assessments, mechanical route and version. S is absent pre-S; recorded suffix below the source threshold rules out S on included S_ACTIVE decisions. E is absent in both historical versions. A missing or insufficient field stays UNKNOWN; no model is asked to fill in a software predicate. Public reports establish historical authentication claims, but omitted signed streams prevent new cryptographic authentication, so receipt_authenticated and memory_admitted are UNKNOWN in these public projections. No store, Memory or world fixture is constructed or opened.
+
+The fixed broad dossier inventory covers reducer/model comparison, uncertainty, hybrid, safe fallback, empirical grounding, autonomous v0.2, grounded authority, S evaluation/replication/controlled pairing/eligibility/promotion, Qwen qualification/substitution/thinking/bounded-thinking/R128, E diagnosis/evaluation/replication/promotion, and self-model v0/v0.1. All items have maturity and PRE_S/S_ACTIVE/S_PLUS_E_ACTIVE version tags. Experimental S/E arms are distinguished from the incumbent architecture of their era. Positive and negative results are retained. Short source-bound factual summaries omit old proposed hypotheses and recommendation phrasing. Summaries are not a new diagnosis.
+
+The solved registry lists promoted scopes, parked Horus/Zakhor and existing Qwen/Dolphin status facts. It supplies no selected unresolved weakness. Historical repaired scopes are explicitly marked HISTORICAL_PROBLEM_NOW_ADDRESSED, narrowly: S does not solve all repetition, and E does not solve all empirical/model failures. Constraint provenance records established origins, without proposing removal or adjustment.
+
+The gap register is computed against the complete preserved post-E publication lineage and the E promotion report. Its absence claim is bounded to this snapshot, not all external work. Promotion unit fixtures, candidate mechanism tests and self-model diagnostics are not post-promotion autonomous scientific behavior. A gap is never by itself evidence of behavioral failure.
+
+## Frozen runtime and stages
+
+Qwen3-14B Q4_K_M SHA-256 500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0; llama.cpp commit 526c43b8f7dfea9032e9f35e7a1be9183ca7cc20; context 16384; native separated reasoning budget 512; temperature 0.2; top-p 0.9; top-k 40; min-p 0.05; new prospectively fixed seed **42021**; total completion cap 4096. Isolated localhost endpoint 18084, one server slot, cache_prompt=false. Artifact hashes and binary/archive equivalence are checked before inference. A metadata/tokenization call is not inference. Freeze input hashes and schemas before Phase A. No retries, output repairs, sampling changes or tuning after inference.
+
+Phase A: exactly one fresh context containing verified architecture, introspection records, broad versioned dossier, solved registry, gap register and constraint provenance. Ask zero to three CURRENT unresolved structural problems or evidence gaps with the exact requested schema. An empty diagnosis list with no_supported_diagnosis=true is valid. No human diagnosis, preferred hypothesis, solution or hidden outcome is included. No manual policy-routing quiz is asked.
+
+Phase B: only if at least one unchanged Phase A diagnosis survives all gates. One fresh context receives verified architecture, surviving diagnoses, exact cited dossier records and the five requested selection criteria. It selects exactly one ID without rewriting the diagnosis or proposing a solution.
+
+Phase C: elect the optional adversarial audit prospectively. If a selection passes, one fresh isolated critic context receives the unchanged selected diagnosis, exact cited evidence and solved registry. It may find objections, not rewrite or repair the diagnosis. Externally verified fatal contradictions reject the diagnosis; a correctly labeled evidence gap is not itself fatal. Maximum calls three; at most one per stage. Earlier private reasoning is never provided to a later stage.
+
+## Factual, relevance and novelty gates
+
+Mechanical checks enforce schema, complete/unique diagnosis IDs, consistency of empty response, valid evidence IDs, declared versions matching cited records, a current evidence anchor, promoted-scope flags, nonempty falsifier/information fields, literal numerical/source correspondence, known code paths and cited commit identifiers. No hidden outcome may be asserted. Raw final JSON is saved unchanged; no quote reconstruction is required.
+
+**Token matching does not prove free-text entailment.** Before any diagnosis can advance, a mandatory external source-linked factual review must map its observation/inference/unknown statements to cited public facts and record explicit PASS/FAIL for: numerical meaning, invalid-study handling, version/persistence, promoted S/E scope, component/commit identity, hidden outcomes, current relevance, novelty and diagnosis-only scope. This review is an evidence audit, not another Qwen grader or a repair opportunity. A material or unresolved factual ambiguity fails the candidate; reviewers cannot add missing support or rewrite it. The combined audit records the mechanical results and source-linked judgments separately rather than misrepresenting semantic interpretation as a purely mechanical proof.
+
+Current observed problems require current behavior or a directly applicable unresolved component; historical failures alone do not establish persistence. A current gap must correctly identify absent information within the inventoried scope and use EVIDENCE_GAP, not OBSERVED_PROBLEM. Restating already-promoted deterministic stagnation handling, empirical deterioration acquisition or grounded exact authority fails novelty unless evidence supports a distinct unresolved limit. Invalid studies can be cited only as invalid/interface context, never as successful behavior. Falsifiers and information requests may describe what observation would bear on a diagnosis, but cannot prescribe code, thresholds, model changes or a policy candidate. Selection and critic outputs undergo the same source-bound factual/scope checks.
+
+## Classification precedence and stop conditions
+
+Choose exactly one classification. INVALID takes precedence for integrity/transport/context/native-channel/schema failure. Materially false schema-valid diagnoses fail grounding rather than being repaired. A supported empty response is INSUFFICIENT_CURRENT_EVIDENCE. If no candidate survives because the model uses incorrect, obsolete, fabricated or already-solved facts, classify AGENT_DIAGNOSIS_GROUNDING_FAILED. If one or more survive, selection and critic are required. A fatal verified contradiction or invalid selection fails grounding. If the only surviving selected conclusion is an accurately bounded need for current evidence, classify **INSUFFICIENT_CURRENT_EVIDENCE**, even when its evidence-gap diagnosis is validly generated and selected. This resolves the overlapping success descriptions conservatively: the explicit evidence-gap-only category takes precedence. Otherwise a current observed diagnosis passing every gate receives AGENT_CURRENT_DIAGNOSIS_SUPPORTED.
+
+An evidence-insufficient result is a valid epistemic outcome, not a model failure. No novelty reward or invented weakness is required. Even supported diagnosis only establishes something currently worth investigating; it does not establish a useful improvement or RSI.
+
+World executions=0; new receipts=0; Memory writes=0; active policy changes=0; training=0; Dolphin calls=0; active-action Qwen calls=0. At completion verify every frozen file and preserved branch head, stop the owned analysis server, archive raw traffic/reasoning locally without publication, and run a full reachable-history secret audit plus private-ancestry check. Publish only the sanitized study branch. Required artifacts include explicit NOT_RUN markers for gated stages. Then STOP: no proposal, policy change, world action, Memory write, training or subsequent study.

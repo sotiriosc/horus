@@ -1,0 +1,63 @@
+{
+  "evidence_id": "CONSTRAINTS",
+  "items": [
+    {
+      "name": "S threshold",
+      "value": 3,
+      "provenance": "EMPIRICALLY_SUPPORTED_RULE",
+      "evidence_ids": [
+        "ARCH-S",
+        "CONST-SOURCE"
+      ]
+    },
+    {
+      "name": "E empirical window and suffix",
+      "value": 4,
+      "provenance": "Existing empirical-state parameter / bounded evidence-supported rule; originally an experiment control",
+      "evidence_ids": [
+        "ARCH-E",
+        "CONST-E-SOURCE"
+      ]
+    },
+    {
+      "name": "Historical autonomous decision horizon",
+      "value": 30,
+      "provenance": "SCIENTIFIC_EXPERIMENT_CONTROL; not a learned stopping rule",
+      "evidence_ids": [
+        "CONST-SOURCE"
+      ]
+    },
+    {
+      "name": "Historical v0.2 action/commentary/review caps",
+      "value": [
+        48,
+        192,
+        512
+      ],
+      "provenance": "SCIENTIFIC_EXPERIMENT_CONTROL; no optimality claim",
+      "evidence_ids": [
+        "CONST-SOURCE"
+      ]
+    },
+    {
+      "name": "Historical R128 reasoning/completion/context",
+      "value": [
+        128,
+        768,
+        8192
+      ],
+      "provenance": "SCIENTIFIC_EXPERIMENT_CONTROL; model interface, not policy eligibility",
+      "evidence_ids": [
+        "CONST-SOURCE"
+      ]
+    },
+    {
+      "name": "Authenticated receipt and Memory boundary",
+      "provenance": "ARCHITECTURAL_INVARIANT",
+      "evidence_ids": [
+        "ARCH-CORE",
+        "ARCH-ADAPTER"
+      ]
+    }
+  ]
+}
