@@ -1,0 +1,1574 @@
+{
+  "budget": 128,
+  "preflight": [
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "D",
+      "name": "P1_D",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 1,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "empirical_frequencies": {},
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "possible_change": null,
+            "recent_window": [],
+            "relation": "1:HOLD",
+            "relation_type": "EMPIRICAL",
+            "segment_counts": {}
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "54184f35d589fa32d3cf3c6b85a4cb0c10dfc8fed0e9f45e590f87a7557dcbfe",
+      "request_bytes_sha256": "ac603ee542e4a6d7ae7a80e2c3dda8fe5a0f7751f5de21f564d12817da500237",
+      "request_sha256": "21f0b27460262d9613d56aa29ec353472846ab7b9ee7e2973463463e969ab658",
+      "seed": 88101
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A1",
+      "name": "P2_A1",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "1fd41ecaceff9e5812df350bb2e83701cceeb4cbf99f3da49a4cf2f5eb1398f2",
+      "request_bytes_sha256": "e98e32a42004c7feadcd29e2baba6e97568de0dbda1f114e76b94d02efe82b0c",
+      "request_sha256": "84c77f5b8289db446555965e8ba60e40a09be831dbe6fe596a44748ed60f19fd",
+      "seed": 88102
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B1_E",
+      "name": "P3_B1_E",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "1bbd86e8e85d39686106fdbffb9fa9e00d775c84657ffcfa5101ad5a4b3b4566",
+      "request_bytes_sha256": "9530540422efa936d2a9ce383dd49028ed942466978e16385b50f134217436cc",
+      "request_sha256": "31315ffcb1747150e21697c8e7c26c9c9f76b4cc02b4bb1264c24ebb08686a22",
+      "seed": 88103
+    }
+  ],
+  "read_only_before_inference": {
+    "memory_write_count": 0,
+    "new_receipt_count": 0,
+    "protected_controller_execution_count": 0,
+    "world_execution_count": 0
+  },
+  "stage_a": [
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A1",
+      "name": "A1_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "1fd41ecaceff9e5812df350bb2e83701cceeb4cbf99f3da49a4cf2f5eb1398f2",
+      "request_bytes_sha256": "89531bb63099f43d53f444486b377bbc02b3ed148a648b002d45d643d1036b00",
+      "request_sha256": "b17dc8ad271b35f21d19671a0266a1edbc9cd12946b77bbbf5479bd71e5b7169",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A1",
+      "name": "A1_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "c2bb881bfe9b102c32175a88d828f0d7e94cb9b7d05209c378997529a10fa092",
+      "request_bytes_sha256": "90ff486428850fc242917ba053999f5fcb1632ac6f95e7789c9842975757e72b",
+      "request_sha256": "19eceb1a696577474b54b68a36d894a53b450131470678d06ceb77b2afcc0fd8",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A1",
+      "name": "A1_O2",
+      "order": "O2",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "f395748de5354f46bfe215c6fba53dffe69d39fb070786e084f369a00b6f616a",
+      "request_bytes_sha256": "ffb3f25495247065db7ff20fb51e5de44836db8df6f2045b35072233033f6458",
+      "request_sha256": "ce1edda17be3d7a04cb106247995e034bc8ebea1c3785b60072f06f8adaba615",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A2",
+      "name": "A2_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "6bb1a4ce9f7548b534f44c7cafd034cf57816425ff2ea0eb66fca8cc68221bd1",
+      "request_bytes_sha256": "ae849aaf33caaa254b10802d69116d8ab76b08606ccd386858cfb03b7ce99f19",
+      "request_sha256": "e9ded9424f5e3f42f48459e93d45443380dcbde820a5d04a77bdeba4b35835f5",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A2",
+      "name": "A2_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "ef77bfa242beea610e1fbbd64adcaec3044149c1e446693a6d2bf0f0adbc6bfe",
+      "request_bytes_sha256": "67c6a1274359b1eaf64b33bd8afcb20d4bce6817187ab86ea358bc252fc38291",
+      "request_sha256": "7646ec741082c4bda4a5985df38536c650654b178beecdc2e3987ef97b2f39ab",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "A2",
+      "name": "A2_O2",
+      "order": "O2",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 1,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "260be51c3df879ba689663e3e572bdfc766535f684f940de0cabf374f311e04d",
+      "request_bytes_sha256": "7373c17cd13b21fc42b24230fe79dea059e482a5a509f9748df1bbf591ad8b29",
+      "request_sha256": "edd3e6bd80e35d6611c30cb4ec59901922354cf2ca7bbdcce66fb099fed55138",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B1_E",
+      "name": "B1_E_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "1bbd86e8e85d39686106fdbffb9fa9e00d775c84657ffcfa5101ad5a4b3b4566",
+      "request_bytes_sha256": "c9e3d271349f3dbd7fc27d4e2452f32a3ac482f025a13b2a56f5072da9f6ba0d",
+      "request_sha256": "7ac90d98fdffaab0a57e79f9f23ab431a0293965ab850a21caeb60c0a498694a",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B1_E",
+      "name": "B1_E_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "ae327051a0030832cf8449013d8836babf7d352e7ba84871aebc3fde34aa896a",
+      "request_bytes_sha256": "14df976b73fca4b21af74ac6adef01f2606ed3d5abb4d1c211142057f0228cd8",
+      "request_sha256": "a268b1b1dc2dd5a3c53ad2249b0679d1bc0f9b2b036c6cb85eb6af60179b1311",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B1_E",
+      "name": "B1_E_O2",
+      "order": "O2",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "7be76931b7fffc20aa61553ae128e2063f5a8257174f00a8e469c0f763e337ac",
+      "request_bytes_sha256": "bf5dadea5d3a94592f987ff1f68dc1cae29eb77de34cc04638bc8da12224b77f",
+      "request_sha256": "e6f6e390d06e1e2e1685d24b6692656719de1ac4e9e756ff0fcada6c1839e82b",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B2",
+      "name": "B2_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "956ded6ddcce42594ea272416037a72f51608a12325ff64651a111897ee110f7",
+      "request_bytes_sha256": "ba81b984a20754d65d7e4b96893e63b67233aa687db5b2c12d34e97112f00055",
+      "request_sha256": "55deb2d31133c0f468948d8feb0ed9d12921a0c87d3198741e2d769d69ab3288",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B2",
+      "name": "B2_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "a78abebf642b184196eb7073f53b49e777244b5116337cc37b93d4b401bcbb0b",
+      "request_bytes_sha256": "fdb57536be706542a3c5a28fa92105c5147a0b1a75d683056aa95fd14f12f97f",
+      "request_sha256": "dacd69f9f69be5d6ba9f0317b51028bad231cb491f299f7d0d9aa4cab3a257f0",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "B2",
+      "name": "B2_O2",
+      "order": "O2",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D05",
+        "decision_index": 5,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": [
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": 1,
+            "decision_id": "C:D02",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 2
+          },
+          {
+            "action": "ADVANCE",
+            "authenticated_consequence": -1,
+            "decision_id": "C:D03",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 3
+          },
+          {
+            "action": "HOLD",
+            "authenticated_consequence": 0,
+            "decision_id": "C:D04",
+            "source": "MODEL_FOR_UNSEEN",
+            "state": 0
+          }
+        ]
+      },
+      "projection_sha256": "60900bc733244c742162e8254006b2d192379229c64f2b6932aa57b929c602d8",
+      "request_bytes_sha256": "962a9f1a3b8b010aef5a68c9667dafc207febef7fe106d0d9edb6391126b2ca8",
+      "request_sha256": "a4c2c12f509c480e01946448615add399a24c2f3bc6ee0635c0d1add67d6fbab",
+      "seed": 3308
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD"
+      ],
+      "case": "C1",
+      "name": "C1_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNRESOLVED",
+            "candidate_count": 1,
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "observation_count": 2,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "6b9413f415792ab2bff57112416087a38ee7ed198a2812da439218cfeb47ae04",
+      "request_bytes_sha256": "9c97f86b6284e49fd14a791b9128b4cfe6971c94b2fa128136df91c52b2cd081",
+      "request_sha256": "eec6aec8a5bab140a3a47e922743dfa10817b4fb4906a08a7233def9a10638e2",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD"
+      ],
+      "case": "C1",
+      "name": "C1_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNRESOLVED",
+            "candidate_count": 1,
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 1
+            },
+            "established_value": {
+              "consequence": 1,
+              "next_state": 1
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "observation_count": 2,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 0
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "eac894c179276ff54776826b0baeb4404e7487ded0a548111135e214f3e673c4",
+      "request_bytes_sha256": "de866e518e327b9ab8e8e3e3127c569d8cf969fba108cb2fdc49ca4484dd01e5",
+      "request_sha256": "0bc4ac26e9844d7bd915be20c4d58819a3e27d71dd75e87f01fce7d8216b1b20",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD"
+      ],
+      "case": "C2",
+      "name": "C2_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNRESOLVED",
+            "candidate_count": 1,
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "established_value": {
+              "consequence": 1,
+              "next_state": 0
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "observation_count": 2,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "30662ad6c43e4a7e8ce0e722d55d132e4707d2c6120a4afce22a3a7f4c58c1a3",
+      "request_bytes_sha256": "f9a41f2269b87c6a19f987ee5669d45a7473e7487f8784ee73fb60ba6d3c1216",
+      "request_sha256": "73170a0729ab3d37c41fb4086c7ee6c1f53658dd98cb11fdffce69352b841e6c",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD"
+      ],
+      "case": "C2",
+      "name": "C2_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 0,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": 0,
+              "next_state": 1
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNRESOLVED",
+            "candidate_count": 1,
+            "candidate_value": {
+              "consequence": -1,
+              "next_state": 0
+            },
+            "established_value": {
+              "consequence": 1,
+              "next_state": 0
+            },
+            "kind": "UNRESOLVED_CHANGE",
+            "observation_count": 2,
+            "relation": "0:HOLD",
+            "relation_type": "DETERMINISTIC"
+          },
+          "RETREAT": {
+            "assessment_status": "GROUNDED",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": {
+              "consequence": -1,
+              "next_state": 3
+            },
+            "kind": "ESTABLISHED",
+            "observation_count": 1,
+            "relation": "0:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "3fd6de8d13259bb4c2fa5a5e876e48c95e6616d35b7d39e5403892057d976930",
+      "request_bytes_sha256": "0836acab446fac0b6e5f31384c7b955944c299cd332d74ebecece529ba3beb81",
+      "request_sha256": "e3ad6e8f2f680e9b7460f815a148c7268df53c0b207c9c1f5f3653341b7ad31f",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "D",
+      "name": "D_O0",
+      "order": "O0",
+      "projection": {
+        "available_actions": [
+          "ADVANCE",
+          "HOLD",
+          "RETREAT"
+        ],
+        "current_state": 1,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "empirical_frequencies": {},
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "possible_change": null,
+            "recent_window": [],
+            "relation": "1:HOLD",
+            "relation_type": "EMPIRICAL",
+            "segment_counts": {}
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "54184f35d589fa32d3cf3c6b85a4cb0c10dfc8fed0e9f45e590f87a7557dcbfe",
+      "request_bytes_sha256": "f610c63ef8eb17f23e82facc68a5c74584b1462263e85b736647f652ec4448a9",
+      "request_sha256": "bcfa18ffae2900f54be5fc0b892c34aa136b0c98fc89969bdada4d5a47b0a2b3",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "D",
+      "name": "D_O1",
+      "order": "O1",
+      "projection": {
+        "available_actions": [
+          "RETREAT",
+          "HOLD",
+          "ADVANCE"
+        ],
+        "current_state": 1,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "empirical_frequencies": {},
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "possible_change": null,
+            "recent_window": [],
+            "relation": "1:HOLD",
+            "relation_type": "EMPIRICAL",
+            "segment_counts": {}
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "08d6d53a2b4ff783a6a3ad5a5dd09fc3f5e07a122a6ca6df4a1d37bfcb3b69ea",
+      "request_bytes_sha256": "6d4f6c2fe9cf403f97947f70e6660892625c27465cf6e03b30026db0e2e554ca",
+      "request_sha256": "94b64d8310fd920571082e1652cf6e26ba6f2e23e7885bd6b35439e4329fab07",
+      "seed": 3304
+    },
+    {
+      "allowed": [
+        "ADVANCE",
+        "HOLD",
+        "RETREAT"
+      ],
+      "case": "D",
+      "name": "D_O2",
+      "order": "O2",
+      "projection": {
+        "available_actions": [
+          "HOLD",
+          "RETREAT",
+          "ADVANCE"
+        ],
+        "current_state": 1,
+        "decision_id": "C:D01",
+        "decision_index": 1,
+        "goal": "Maximize useful realized consequence over the run using the evidence available to you.",
+        "grounded_assessments": {
+          "ADVANCE": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:ADVANCE",
+            "relation_type": "DETERMINISTIC"
+          },
+          "HOLD": {
+            "assessment_status": "UNSEEN",
+            "empirical_frequencies": {},
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "possible_change": null,
+            "recent_window": [],
+            "relation": "1:HOLD",
+            "relation_type": "EMPIRICAL",
+            "segment_counts": {}
+          },
+          "RETREAT": {
+            "assessment_status": "UNSEEN",
+            "candidate_count": 0,
+            "candidate_value": null,
+            "established_value": null,
+            "kind": "UNSEEN",
+            "observation_count": 0,
+            "relation": "1:RETREAT",
+            "relation_type": "DETERMINISTIC"
+          }
+        },
+        "recent_agent_working_context": []
+      },
+      "projection_sha256": "d7f029fc4eb89d4e471473df63ef4a354fbfbd0ff029669f66b53d485f41b8da",
+      "request_bytes_sha256": "7448f14a5640dd54172bfd0e0d888dd84c01ab47097cf5e7c21eb244ce0df9e7",
+      "request_sha256": "460ff020ce9499ee5985791498d59c4385848a5f0afd367987800dc5a497833d",
+      "seed": 3304
+    }
+  ],
+  "status": "FROZEN_BEFORE_INFERENCE",
+  "synthetic_b2_source": "E plus B2 ADVANCE established-0 plus grounded-authority A decision 4 HOLD unseen; no world execution",
+  "total_completion_cap": 768
+}
