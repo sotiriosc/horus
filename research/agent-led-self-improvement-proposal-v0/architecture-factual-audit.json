@@ -1,0 +1,127 @@
+{
+  "status": "FAIL",
+  "phase": "A",
+  "evidence_ids": [
+    "CONST-01",
+    "CONST-02",
+    "SRC-ACTIVE-01",
+    "SRC-ACTIVE-02",
+    "SRC-AUTH",
+    "SRC-GROUND-CORE",
+    "SRC-GROUND-D",
+    "SRC-MEMORY",
+    "SRC-ROUTE",
+    "SRC-RULE-E",
+    "SRC-RULE-S"
+  ],
+  "exact_quote_checks": [
+    {
+      "evidence_id": "SRC-RULE-S",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-RULE-E",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-02",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-AUTH",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-ROUTE",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-MEMORY",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-ACTIVE-01",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-ACTIVE-02",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-GROUND-CORE",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-GROUND-D",
+      "exact_quote_match": false
+    }
+  ],
+  "failures": [
+    "nonmatching source quote SRC-RULE-S: THRESHOLD = 3, exact deterministic-established-zero signed suffix",
+    "nonmatching source quote CONST-01: EMPIRICALLY_SUPPORTED_RULE: Phase 3 proposal dbc13ea...",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote SRC-ACTIVE-02: if s_action is not None and e['eligible']:\n    raise IntegrationInvariantError('S and E simultaneously eligible')",
+    "nonmatching source quote CONST-01: R128 native reasoning/completion caps... not an empirical-stagnation threshold",
+    "nonmatching source quote CONST-01: Unexplained optimality of numeric controls... do not promote these numbers into architectural invariants.",
+    "nonmatching source quote SRC-GROUND-D: state['kind'] == 'UNSEEN'... raise RuntimeError('unauthenticated state input')"
+  ],
+  "numeric_check_scope": "Lexical number presence in cited content; semantic entailment and status chronology require external review.",
+  "external_semantic_review": "FAIL",
+  "classification": "AGENT_SELF_MODEL_GROUNDING_FAILED",
+  "gate": "STOP_AFTER_PHASE_A",
+  "source_ids_exist": true,
+  "private_sources_cited": false,
+  "invented_paths_or_commits": false,
+  "numeric_tokens_match_cited_source": true,
+  "exact_quotes_passed": 7,
+  "exact_quotes_failed": 9,
+  "status_reversals_detected": false,
+  "external_findings": [
+    {
+      "severity": "MATERIAL_ARCHITECTURE_ERROR",
+      "claim": "Integrated decide combines grounded authority (S) and empirical evidence (E) with explicit promotion.",
+      "evidence_ids": [
+        "SRC-ACTIVE-01",
+        "SRC-ACTIVE-02",
+        "SRC-RULE-S"
+      ],
+      "finding": "The output labels grounded authority as S. Current source has three separate mechanisms: grounded mechanical authority, deterministic stagnation escape S, and empirical acquisition E. It fails to preserve the central authority/rule distinction."
+    },
+    {
+      "severity": "SYSTEMATIC_QUOTATION_FIDELITY_FAILURE",
+      "finding": "9 of 16 asserted exact source quotes are not exact supplied text. Several are shortened or synthesized paraphrases; one includes different indentation. These are not all substantive falsehoods, but cannot pass the frozen exact-quotation gate. They are retained unchanged."
+    },
+    {
+      "severity": "LIMITATION",
+      "finding": "Many individual claims are supported, including S=3, E window=4, authenticated Memory, and experimental provenance of output caps. This one failed call does not establish general model incapability."
+    }
+  ],
+  "model_output_rewritten": false,
+  "another_model_used_to_repair": false
+}

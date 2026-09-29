@@ -1,0 +1,96 @@
+{
+  "status": "FAIL",
+  "phase": "A",
+  "evidence_ids": [
+    "CONST-01",
+    "CONST-02",
+    "SRC-ACTIVE-01",
+    "SRC-ACTIVE-02",
+    "SRC-AUTH",
+    "SRC-GROUND-CORE",
+    "SRC-GROUND-D",
+    "SRC-MEMORY",
+    "SRC-ROUTE",
+    "SRC-RULE-E",
+    "SRC-RULE-S"
+  ],
+  "exact_quote_checks": [
+    {
+      "evidence_id": "SRC-RULE-S",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-RULE-E",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-02",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-AUTH",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-ROUTE",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-MEMORY",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-ACTIVE-01",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-ACTIVE-02",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "CONST-01",
+      "exact_quote_match": false
+    },
+    {
+      "evidence_id": "SRC-GROUND-CORE",
+      "exact_quote_match": true
+    },
+    {
+      "evidence_id": "SRC-GROUND-D",
+      "exact_quote_match": false
+    }
+  ],
+  "failures": [
+    "nonmatching source quote SRC-RULE-S: THRESHOLD = 3, exact deterministic-established-zero signed suffix",
+    "nonmatching source quote CONST-01: EMPIRICALLY_SUPPORTED_RULE: Phase 3 proposal dbc13ea...",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote CONST-01: ARCHITECTURAL_INVARIANT: Only admitted authenticated receipts may change grounded state",
+    "nonmatching source quote SRC-ACTIVE-02: if s_action is not None and e['eligible']:\n    raise IntegrationInvariantError('S and E simultaneously eligible')",
+    "nonmatching source quote CONST-01: R128 native reasoning/completion caps... not an empirical-stagnation threshold",
+    "nonmatching source quote CONST-01: Unexplained optimality of numeric controls... do not promote these numbers into architectural invariants.",
+    "nonmatching source quote SRC-GROUND-D: state['kind'] == 'UNSEEN'... raise RuntimeError('unauthenticated state input')"
+  ],
+  "numeric_check_scope": "Lexical number presence in cited content; semantic entailment and status chronology require external review.",
+  "external_semantic_review": "PENDING"
+}
