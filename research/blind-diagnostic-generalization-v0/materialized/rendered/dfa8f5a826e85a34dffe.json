@@ -1,0 +1,121 @@
+{
+  "system_id": "z296775544c085903",
+  "versions": [
+    {
+      "id": "ze5cc503d6756e194",
+      "release_ordinal": 1
+    },
+    {
+      "id": "z46a18fac4db0afb4",
+      "release_ordinal": 2
+    }
+  ],
+  "domain": "network attempt accounting",
+  "components": [
+    {
+      "id": "z3dc04299f1bb13f5",
+      "role": "input/output worker"
+    },
+    {
+      "id": "zcbb97c249dc431ba",
+      "role": "publication worker"
+    },
+    {
+      "id": "zd857d509ba92fb35",
+      "role": "decision worker"
+    }
+  ],
+  "records": [
+    {
+      "id": "zca9f61db6863941c",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z46a18fac4db0afb4",
+      "event_id": "z354c9a01242c5d9f",
+      "data": {
+        "acknowledgment": true,
+        "attempt_total_after": 19
+      }
+    },
+    {
+      "id": "z92604f326feba47d",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "zc4fe1d5173e00b67",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z46a18fac4db0afb4",
+        "immutable_event_id": "z354c9a01242c5d9f",
+        "captured_event_data": {
+          "acknowledgment": true,
+          "attempt_total_after": 19
+        },
+        "recorded_digest": "55f9304ce43752b662dda96c50bf82dc27a7157cb6bef6dc72726448eb992200",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z7257520a92dec450",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z46a18fac4db0afb4",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z67e9ee4380f69a9f",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "ze5cc503d6756e194",
+      "component_id": "zcbb97c249dc431ba",
+      "data": {
+        "attempt_total_before": 14,
+        "batch_size": 5,
+        "publication_fields": [
+          "attempt_total"
+        ],
+        "remote_delivery": "DROPPED_BY_LINK",
+        "other_writes_in_interval": 0
+      }
+    },
+    {
+      "id": "zfe1fa33da7045cfc",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z46a18fac4db0afb4",
+      "component_id": "zcbb97c249dc431ba",
+      "data": {
+        "attempt_total_before": 14,
+        "batch_size": 5,
+        "publication_fields": [
+          "attempt_total"
+        ],
+        "remote_delivery": "DROPPED_BY_LINK",
+        "other_writes_in_interval": 0
+      }
+    },
+    {
+      "id": "z6774f36c69e1fee5",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "ze5cc503d6756e194",
+      "event_id": "zfe48e74b3bc792a0",
+      "data": {
+        "acknowledgment": true,
+        "attempt_total_after": 19
+      }
+    },
+    {
+      "id": "z4923ca891e2a35f0",
+      "kind": "contract",
+      "data": {
+        "rule": "At acknowledgment, attempt_total_after equals attempt_total_before plus batch_size, irrespective of remote_delivery. The observation is after acknowledgment. No other writes occur in the stated interval. A remote link may drop every delivery without violating this contract.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    }
+  ]
+}

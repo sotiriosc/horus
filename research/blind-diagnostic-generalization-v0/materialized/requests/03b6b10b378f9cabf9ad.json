@@ -1,0 +1,256 @@
+{
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 417351046,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You analyze an unfamiliar bounded software system. Machine facts are authoritative within their declared scope; contradictory evidence cannot be silently reconciled. UNKNOWN remains UNKNOWN. Distinguish observation, inference, and missing information. Use supplied implementation observations rather than simulating a policy already computed in the records. Do not invent hidden facts. No current diagnosis is required. Return one JSON object satisfying the supplied schema. Diagnose only: no solution, modification, experiment proposal, tools, or authority to change the system. Cite the governing contract and records establishing your conclusion. For a current defect, identify one responsible component and link the operative input/configuration record to its resulting observation using causal_mechanism; cite all witness IDs in evidence_ids. Also identify one decisive field as a JSON pointer relative to the data object of decisive_evidence_id and give its observed_value and the contract-required required_value. For a historical conclusion cite both version traces and deployment. Free prose does not override structured fields."
+    },
+    {
+      "role": "user",
+      "content": "Classify this system at its declared current deployment. Use exactly one class according to the definitions below. Observations for other versions are not automatically current. Unusual outcomes can satisfy a contract. Return the raw diagnostic result, including a falsifier and strongest alternative, without proposing an intervention.\nDEFINITIONS:\n{\"SUPPORTED_CURRENT_DEFECT\":\"Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\",\"NO_SUPPORTED_DIAGNOSIS\":\"The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\",\"INSUFFICIENT_EVIDENCE\":\"The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\",\"HISTORICAL_DEFECT_NOT_CURRENT\":\"A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\",\"INVALID_OR_CONTRADICTORY_EVIDENCE\":\"The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\"}\nSYSTEM_RECORDS:\n{\"system_id\":\"z225dad3c1ec1f55c\",\"records\":[{\"id\":\"zc6aa1f956663dfe3\",\"kind\":\"capture_contract\",\"data\":{\"rule\":\"The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment.\"}},{\"id\":\"z764e35d34380b287\",\"kind\":\"deployment\",\"data\":{\"current_version\":\"z3d19d966ab70ced4\",\"as_of\":30}},{\"id\":\"z8c5b60578c294927\",\"kind\":\"capture\",\"data\":{\"deployment_version\":\"z3d19d966ab70ced4\",\"immutable_event_id\":\"z091d3413bb988197\",\"captured_event_data\":{\"attributed_entity\":\"z670bb3f072900a83\",\"published_reading\":27},\"recorded_digest\":\"db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0\",\"recomputed_digest\":\"db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0\"}},{\"id\":\"z51b9c21b819a47fe\",\"kind\":\"execution_input\",\"at\":20,\"version\":\"z3d19d966ab70ced4\",\"component_id\":\"z47660bfce301c439\",\"data\":{\"requested_entity\":\"z670bb3f072900a83\",\"record_owner\":\"z670bb3f072900a83\",\"selected_source\":\"z75d3e0dc88b7089e\",\"primary_source_available\":false,\"source_path\":\"BACKUP\",\"reading\":27}},{\"id\":\"zf1ab00dfd063b018\",\"kind\":\"execution_input\",\"at\":10,\"version\":\"z6edf77641de8eaeb\",\"component_id\":\"z47660bfce301c439\",\"data\":{\"requested_entity\":\"z670bb3f072900a83\",\"record_owner\":\"z670bb3f072900a83\",\"selected_source\":\"z75d3e0dc88b7089e\",\"primary_source_available\":false,\"source_path\":\"BACKUP\",\"reading\":27}},{\"id\":\"zdc41e2628d8e05fb\",\"kind\":\"execution_output\",\"at\":11,\"version\":\"z6edf77641de8eaeb\",\"event_id\":\"z74ee80b372718997\",\"data\":{\"attributed_entity\":\"z670bb3f072900a83\",\"published_reading\":27}},{\"id\":\"z81ba7bd28be29d30\",\"kind\":\"execution_output\",\"at\":21,\"version\":\"z3d19d966ab70ced4\",\"event_id\":\"z091d3413bb988197\",\"data\":{\"attributed_entity\":\"z670bb3f072900a83\",\"published_reading\":27}},{\"id\":\"z76ec9ccce08dea19\",\"kind\":\"contract\",\"data\":{\"rule\":\"A reading attributed to requested_entity must originate from a record with that same record_owner. A BACKUP source is permitted when the primary source is unavailable; source location does not change entity ownership.\",\"scope\":\"Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value.\"}}],\"domain\":\"instrument reading catalogue\",\"components\":[{\"id\":\"z47660bfce301c439\",\"role\":\"input/output worker\"},{\"id\":\"zecab952d36ca0337\",\"role\":\"publication worker\"},{\"id\":\"z1761e7985954219c\",\"role\":\"decision worker\"}],\"versions\":[{\"id\":\"z3d19d966ab70ced4\",\"release_ordinal\":2},{\"id\":\"z6edf77641de8eaeb\",\"release_ordinal\":1}]}"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        },
+        "affected_component_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^z[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^z[0-9a-f]{16}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "observed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "inferred": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "unknown": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1500
+          },
+          "maxItems": 5
+        },
+        "diagnostic_statement": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "causal_mechanism": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "contract_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "cause_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "effect_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "decisive_evidence_id": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "decisive_field": {
+                  "type": "string",
+                  "pattern": "^/[a-z_]+$"
+                },
+                "observed_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                },
+                "required_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean"
+                  ]
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1500
+                }
+              },
+              "required": [
+                "contract_evidence_id",
+                "cause_evidence_id",
+                "effect_evidence_id",
+                "decisive_evidence_id",
+                "decisive_field",
+                "observed_value",
+                "required_value",
+                "description"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "strongest_alternative_explanation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "falsifier": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        }
+      },
+      "required": [
+        "classification",
+        "affected_component_ids",
+        "evidence_ids",
+        "observed",
+        "inferred",
+        "unknown",
+        "diagnostic_statement",
+        "causal_mechanism",
+        "strongest_alternative_explanation",
+        "falsifier"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "classification": {
+                "const": "SUPPORTED_CURRENT_DEFECT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "affected_component_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^z[0-9a-f]{16}$"
+                },
+                "uniqueItems": true,
+                "maxItems": 1,
+                "minItems": 1
+              },
+              "causal_mechanism": {
+                "type": "object",
+                "properties": {
+                  "contract_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "cause_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "effect_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "decisive_evidence_id": {
+                    "type": "string",
+                    "pattern": "^z[0-9a-f]{16}$"
+                  },
+                  "decisive_field": {
+                    "type": "string",
+                    "pattern": "^/[a-z_]+$"
+                  },
+                  "observed_value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  },
+                  "required_value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "boolean"
+                    ]
+                  },
+                  "description": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 1500
+                  }
+                },
+                "required": [
+                  "contract_evidence_id",
+                  "cause_evidence_id",
+                  "effect_evidence_id",
+                  "decisive_evidence_id",
+                  "decisive_field",
+                  "observed_value",
+                  "required_value",
+                  "description"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

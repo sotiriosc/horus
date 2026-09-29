@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "study_status": "FROZEN_ZERO_INFERENCE_AWAITING_SEPARATE_APPROVAL",
+  "method_commit": "587ffedd39516b633376d222d6d84e6af186fcf8",
+  "method_files_unchanged": 15,
+  "materialized_files": 184,
+  "semantic_cases": 20,
+  "matched_pairs": 6,
+  "renderings": 80,
+  "future_calls": 80,
+  "actual_model_calls": 0,
+  "tests_run": 25,
+  "test_failures": 0,
+  "test_errors": 0,
+  "exact_regeneration": true,
+  "gold_regeneration": true,
+  "anti_coaching_audit": "PASS across all 80 final cases; generic prompt/schema separately checked",
+  "opaque_and_order_roundtrips": 80,
+  "maximum_conservative_context_reservation": 11032,
+  "synthetic_scorer_handcheck": "All gates pass for synthetic gold fixture only; NOT a capability result",
+  "preservation": {
+    "status": "PASS",
+    "parent_tracked_files": 1383,
+    "protected_public_refs": {
+      "main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+      "research/empirical-evidence-acquisition-promotion-v0": "69947aa243a69e7ae26db534727a7122922d978d",
+      "research/grounded-stagnation-escape-promotion-controlled-v0": "afc1c856aecbae65a1389d0abf144b6a50d09133",
+      "research/agent-led-diagnosis-verified-introspection-v0": "11b32a6ab54b803f0212ece834a4d7c7c75a23cb",
+      "research/agent-self-model-grounding-v0.1": "ecd097af2f007cb431e3ae736832960f86805deb",
+      "research/agent-led-self-improvement-proposal-v0": "ba698e948e2ae27427bac1e9f772cf6c8b485de8"
+    },
+    "private_archive_heads_excluded": 15,
+    "changed_parent_files": [],
+    "active_architecture": "grounded authority -> S -> E -> ordinary model; unchanged"
+  },
+  "non_execution_attestation": {
+    "model_calls": 0,
+    "server_starts": 0,
+    "world_executions": 0,
+    "authenticated_receipts": 0,
+    "memory_writes": 0,
+    "training": 0,
+    "proposal_generation": 0,
+    "policy_changes": 0
+  },
+  "attestation_basis": "This phase executes only pure synthetic generation, deterministic unit tests, hashes and Git operations; no inference client is implemented. Parent tracked bytes and protected public refs verified."
+}

@@ -1,0 +1,450 @@
+{
+  "semantic_case_count": 20,
+  "class_distribution": {
+    "SUPPORTED_CURRENT_DEFECT": 6,
+    "NO_SUPPORTED_DIAGNOSIS": 4,
+    "INSUFFICIENT_EVIDENCE": 4,
+    "HISTORICAL_DEFECT_NOT_CURRENT": 3,
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": 3
+  },
+  "cases": [
+    {
+      "case_id": "65f88c2c90dd59f9",
+      "spec_id": "d1",
+      "family": "version_selection",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c1"
+        ],
+        "mechanism_family": "version_selection",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r4",
+          "effect_evidence_id": "@r5",
+          "decisive_evidence_id": "@r4",
+          "decisive_field": "/used_config",
+          "observed_value": "@cfg1",
+          "required_value": "@cfg2"
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ],
+        "mechanism_alternatives": [
+          {
+            "contract_evidence_id": "@r0",
+            "cause_evidence_id": "@r4",
+            "effect_evidence_id": "@r5",
+            "decisive_evidence_id": "@r5",
+            "decisive_field": "/returned_value",
+            "observed_value": 16,
+            "required_value": 23
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "e4d1738b5aa2056d",
+      "spec_id": "d2",
+      "family": "authority_precedence",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c0"
+        ],
+        "mechanism_family": "authority_precedence",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r2",
+          "effect_evidence_id": "@r3",
+          "decisive_evidence_id": "@r3",
+          "decisive_field": "/final_decision",
+          "observed_value": "ALLOW",
+          "required_value": "DENY"
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r2",
+          "@r3"
+        ],
+        "mechanism_alternatives": []
+      }
+    },
+    {
+      "case_id": "2cc6c0212f28f431",
+      "spec_id": "d3",
+      "family": "entity_binding",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c2"
+        ],
+        "mechanism_family": "entity_binding",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r4",
+          "effect_evidence_id": "@r5",
+          "decisive_evidence_id": "@r4",
+          "decisive_field": "/record_owner",
+          "observed_value": "@entity1",
+          "required_value": "@entity0"
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ],
+        "mechanism_alternatives": []
+      }
+    },
+    {
+      "case_id": "3e68347365eeadd0",
+      "spec_id": "d4",
+      "family": "publication_update",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c1"
+        ],
+        "mechanism_family": "publication_update",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r4",
+          "effect_evidence_id": "@r5",
+          "decisive_evidence_id": "@r5",
+          "decisive_field": "/attempt_total_after",
+          "observed_value": 14,
+          "required_value": 19
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ],
+        "mechanism_alternatives": []
+      }
+    },
+    {
+      "case_id": "17fed07978317a41",
+      "spec_id": "d5",
+      "family": "operation_idempotence",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c0"
+        ],
+        "mechanism_family": "operation_idempotence",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r4",
+          "effect_evidence_id": "@r5",
+          "decisive_evidence_id": "@r5",
+          "decisive_field": "/posted_units",
+          "observed_value": 44,
+          "required_value": 22
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ],
+        "mechanism_alternatives": []
+      }
+    },
+    {
+      "case_id": "f459ad2c60dbf8c8",
+      "spec_id": "d6",
+      "family": "boundary_comparison",
+      "variant": "defect",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT",
+        "affected_components": [
+          "@c2"
+        ],
+        "mechanism_family": "boundary_comparison",
+        "mechanism_witness": {
+          "contract_evidence_id": "@r0",
+          "cause_evidence_id": "@r4",
+          "effect_evidence_id": "@r5",
+          "decisive_evidence_id": "@r5",
+          "decisive_field": "/command_issued",
+          "observed_value": true,
+          "required_value": false
+        },
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ],
+        "mechanism_alternatives": []
+      }
+    },
+    {
+      "case_id": "f85e85b65e30b263",
+      "spec_id": "h1",
+      "family": "version_selection",
+      "variant": "healthy",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "c9f11305f6c154b0",
+      "spec_id": "h2",
+      "family": "entity_binding",
+      "variant": "healthy",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "7c5505caaa71080c",
+      "spec_id": "h3",
+      "family": "publication_update",
+      "variant": "healthy",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "d7b9f5cf78d25fe3",
+      "spec_id": "h4",
+      "family": "boundary_comparison",
+      "variant": "healthy",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "040945b111a5b8f0",
+      "spec_id": "u1",
+      "family": "operation_idempotence",
+      "variant": "unknown",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "2c786859fc118dce",
+      "spec_id": "u2",
+      "family": "version_selection",
+      "variant": "unknown",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "b392eadd8e9b1982",
+      "spec_id": "u3",
+      "family": "publication_update",
+      "variant": "unknown",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "54205b70cddc091d",
+      "spec_id": "u4",
+      "family": "boundary_comparison",
+      "variant": "unknown",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "7727da4d5a85a7bb",
+      "spec_id": "t1",
+      "family": "authority_precedence",
+      "variant": "historical",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r2",
+          "@r3",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "af66c1fc1d9c2d04",
+      "spec_id": "t2",
+      "family": "version_selection",
+      "variant": "historical",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r2",
+          "@r3",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "d38c9cc0215d46a4",
+      "spec_id": "t3",
+      "family": "operation_idempotence",
+      "variant": "historical",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r0",
+          "@r1",
+          "@r2",
+          "@r3",
+          "@r4",
+          "@r5"
+        ]
+      }
+    },
+    {
+      "case_id": "fb6138114f36a327",
+      "spec_id": "x1",
+      "family": "entity_binding",
+      "variant": "identity_conflict",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r5",
+          "@r6",
+          "@r7"
+        ]
+      }
+    },
+    {
+      "case_id": "8d6fd751951f44fc",
+      "spec_id": "x2",
+      "family": "version_selection",
+      "variant": "deployment_conflict",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r1",
+          "@r6",
+          "@r7"
+        ]
+      }
+    },
+    {
+      "case_id": "c79676993d4cd050",
+      "spec_id": "x3",
+      "family": "publication_update",
+      "variant": "digest_conflict",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "affected_components": [],
+        "mechanism_family": null,
+        "mechanism_witness": null,
+        "required_evidence": [
+          "@r6",
+          "@r7"
+        ]
+      }
+    }
+  ]
+}

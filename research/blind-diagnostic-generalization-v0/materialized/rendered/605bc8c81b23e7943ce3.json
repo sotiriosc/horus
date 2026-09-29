@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "id": "zf1c90c1d516e73d3",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z7b77acd760f4fa32",
+      "role": "decision worker"
+    },
+    {
+      "id": "zd13981c19efa6651",
+      "role": "publication worker"
+    }
+  ],
+  "records": [
+    {
+      "id": "z009b56b8e319e93f",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z62a46a63c2ad1feb",
+        "immutable_event_id": "zb2d40fa31ca2115f",
+        "captured_event_data": {
+          "acknowledgment": true,
+          "attempt_total_after": 19
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z34df25dfa96450c7",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z62a46a63c2ad1feb",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "zbd99ff142399e50d",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z234631452c76dacc",
+      "event_id": "zb7ed81a656500db0",
+      "data": {
+        "acknowledgment": true,
+        "attempt_total_after": 19
+      }
+    },
+    {
+      "id": "z91ef9bbbb491bbea",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z234631452c76dacc",
+      "component_id": "zd13981c19efa6651",
+      "data": {
+        "attempt_total_before": 14,
+        "batch_size": 5,
+        "publication_fields": [
+          "attempt_total"
+        ],
+        "remote_delivery": "DROPPED_BY_LINK",
+        "other_writes_in_interval": 0
+      }
+    },
+    {
+      "id": "z21ed54d1703d5d46",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z62a46a63c2ad1feb",
+      "component_id": "zd13981c19efa6651",
+      "data": {
+        "attempt_total_before": 14,
+        "batch_size": "UNKNOWN",
+        "publication_fields": "UNKNOWN",
+        "remote_delivery": "DROPPED_BY_LINK",
+        "other_writes_in_interval": "UNKNOWN"
+      }
+    },
+    {
+      "id": "z32c71342f8d144f6",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z62a46a63c2ad1feb",
+      "event_id": "zb2d40fa31ca2115f",
+      "data": {
+        "acknowledgment": true,
+        "attempt_total_after": 19
+      }
+    },
+    {
+      "id": "z452dfb1d8c56efe3",
+      "kind": "contract",
+      "data": {
+        "rule": "At acknowledgment, attempt_total_after equals attempt_total_before plus batch_size, irrespective of remote_delivery. The observation is after acknowledgment. No other writes occur in the stated interval. A remote link may drop every delivery without violating this contract.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "z8a65de423ccd9b66",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    }
+  ],
+  "system_id": "z81f58dc84e6ada17",
+  "versions": [
+    {
+      "id": "z62a46a63c2ad1feb",
+      "release_ordinal": 2
+    },
+    {
+      "id": "z234631452c76dacc",
+      "release_ordinal": 1
+    }
+  ],
+  "domain": "network attempt accounting"
+}

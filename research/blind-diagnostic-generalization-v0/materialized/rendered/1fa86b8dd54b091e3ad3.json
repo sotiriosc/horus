@@ -1,0 +1,122 @@
+{
+  "domain": "pressure control comparator",
+  "components": [
+    {
+      "id": "z93b99a7c7cf13c6b",
+      "role": "input/output worker"
+    },
+    {
+      "id": "za69a906bfe278f6c",
+      "role": "decision worker"
+    },
+    {
+      "id": "z1e0700fb222c496e",
+      "role": "publication worker"
+    }
+  ],
+  "versions": [
+    {
+      "id": "z475957b4dc4e9ce5",
+      "release_ordinal": 2
+    },
+    {
+      "id": "zdfc9883638ee8f15",
+      "release_ordinal": 1
+    }
+  ],
+  "system_id": "z153930920b5ee94b",
+  "records": [
+    {
+      "id": "z82ac731dd62bcb03",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "zdfc9883638ee8f15",
+      "event_id": "z8f8fb025722f8943",
+      "data": {
+        "command_issued": false
+      }
+    },
+    {
+      "id": "z9570c77ea8ee06b3",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z475957b4dc4e9ce5",
+      "component_id": "z93b99a7c7cf13c6b",
+      "data": {
+        "sensed_level": 14,
+        "target_level": 14,
+        "implemented_comparator": ">=",
+        "comparison_result": true,
+        "readings": [
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    {
+      "id": "zae50deac8ed7afd6",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "zdfc9883638ee8f15",
+      "component_id": "z93b99a7c7cf13c6b",
+      "data": {
+        "sensed_level": 14,
+        "target_level": 14,
+        "implemented_comparator": ">",
+        "comparison_result": false,
+        "readings": [
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    {
+      "id": "zd522d4725955224a",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z6e97c7b02f79be4d",
+      "kind": "contract",
+      "data": {
+        "rule": "Issue a command exactly when sensed_level is strictly greater than target_level. Equality meets the declared objective and requires no command. Repeated equal readings and an unchanged level are permitted.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zee9b747d8c7b724b",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z475957b4dc4e9ce5",
+      "event_id": "z178818244614ca8a",
+      "data": {
+        "command_issued": true
+      }
+    },
+    {
+      "id": "z5bb7875f1a1e58e5",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z475957b4dc4e9ce5",
+        "immutable_event_id": "z178818244614ca8a",
+        "captured_event_data": {
+          "command_issued": true
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z14c06969d2d49e5a",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z475957b4dc4e9ce5",
+        "as_of": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "domain": "pressure control comparator",
+  "versions": [
+    {
+      "id": "zd16703c74edcd27b",
+      "release_ordinal": 2
+    },
+    {
+      "id": "z6319a89e82ad4f7b",
+      "release_ordinal": 1
+    }
+  ],
+  "components": [
+    {
+      "id": "zf0a6d88e0872837e",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z84d9ac1c63aec548",
+      "role": "decision worker"
+    },
+    {
+      "id": "zee66e932f011cf91",
+      "role": "publication worker"
+    }
+  ],
+  "system_id": "zad37e6d8ea90cd66",
+  "records": [
+    {
+      "id": "zae707ed1d9fcba6c",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z6319a89e82ad4f7b",
+      "event_id": "zcb328bb679b714bb",
+      "data": {
+        "command_issued": false
+      }
+    },
+    {
+      "id": "z47f28303f9d68abe",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "zd16703c74edcd27b",
+        "immutable_event_id": "z3459df505a0370a6",
+        "captured_event_data": {
+          "command_issued": true
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z3796dffde85ec5d1",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zd16703c74edcd27b",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z5f0ce03c4562170b",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "za26cdb98504c6585",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "zd16703c74edcd27b",
+      "component_id": "zf0a6d88e0872837e",
+      "data": {
+        "sensed_level": "UNKNOWN",
+        "target_level": 14,
+        "implemented_comparator": "UNKNOWN",
+        "comparison_result": "UNKNOWN",
+        "readings": [
+          "UNKNOWN",
+          "UNKNOWN",
+          "UNKNOWN"
+        ]
+      }
+    },
+    {
+      "id": "z6cbd55141849d0fd",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "zd16703c74edcd27b",
+      "event_id": "z3459df505a0370a6",
+      "data": {
+        "command_issued": true
+      }
+    },
+    {
+      "id": "z7978815c0e3914be",
+      "kind": "contract",
+      "data": {
+        "rule": "Issue a command exactly when sensed_level is strictly greater than target_level. Equality meets the declared objective and requires no command. Repeated equal readings and an unchanged level are permitted.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zf86d4989b83da281",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z6319a89e82ad4f7b",
+      "component_id": "zf0a6d88e0872837e",
+      "data": {
+        "sensed_level": 14,
+        "target_level": 14,
+        "implemented_comparator": ">",
+        "comparison_result": false,
+        "readings": [
+          14,
+          14,
+          14
+        ]
+      }
+    }
+  ]
+}

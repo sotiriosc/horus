@@ -1,0 +1,119 @@
+{
+  "domain": "instrument reading catalogue",
+  "versions": [
+    {
+      "id": "z23158a5d5b32f935",
+      "release_ordinal": 1
+    },
+    {
+      "id": "z2aa90e2538375d4d",
+      "release_ordinal": 2
+    }
+  ],
+  "records": [
+    {
+      "id": "z5a3eafbce648eb47",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z23158a5d5b32f935",
+      "component_id": "zafea7bb02385eb97",
+      "data": {
+        "requested_entity": "z4bf07b4bd8a931fa",
+        "record_owner": "z4bf07b4bd8a931fa",
+        "selected_source": "z14b8808271f373de",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "zf5a67c6ee1e73767",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z2aa90e2538375d4d",
+      "component_id": "zafea7bb02385eb97",
+      "data": {
+        "requested_entity": "z4bf07b4bd8a931fa",
+        "record_owner": "zb9d902b478088a37",
+        "selected_source": "z14b8808271f373de",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "zbdaaa3a330f73bd2",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z2aa90e2538375d4d",
+      "event_id": "z15398c18b6a9e840",
+      "data": {
+        "attributed_entity": "z4bf07b4bd8a931fa",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "zaf067c09eb2777c1",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z2aa90e2538375d4d",
+        "immutable_event_id": "z15398c18b6a9e840",
+        "captured_event_data": {
+          "attributed_entity": "z4bf07b4bd8a931fa",
+          "published_reading": 27
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z777c879f9f40d05b",
+      "kind": "contract",
+      "data": {
+        "rule": "A reading attributed to requested_entity must originate from a record with that same record_owner. A BACKUP source is permitted when the primary source is unavailable; source location does not change entity ownership.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "z49f2991409e2576c",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z9d4516950f44d69e",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z23158a5d5b32f935",
+      "event_id": "za58f965efd207c84",
+      "data": {
+        "attributed_entity": "z4bf07b4bd8a931fa",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "z7364731c89f2d921",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z2aa90e2538375d4d",
+        "as_of": 30
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "zc58989e43adbd7b7",
+      "role": "publication worker"
+    },
+    {
+      "id": "z4eba1a78810ac26f",
+      "role": "decision worker"
+    },
+    {
+      "id": "zafea7bb02385eb97",
+      "role": "input/output worker"
+    }
+  ],
+  "system_id": "z04dfecaf00b2d78f"
+}

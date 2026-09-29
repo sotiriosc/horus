@@ -1,0 +1,119 @@
+{
+  "domain": "instrument reading catalogue",
+  "system_id": "@sys",
+  "components": [
+    {
+      "id": "@c0",
+      "role": "decision worker"
+    },
+    {
+      "id": "@c1",
+      "role": "publication worker"
+    },
+    {
+      "id": "@c2",
+      "role": "input/output worker"
+    }
+  ],
+  "versions": [
+    {
+      "id": "@v1",
+      "release_ordinal": 1
+    },
+    {
+      "id": "@v2",
+      "release_ordinal": 2
+    }
+  ],
+  "records": [
+    {
+      "id": "@r0",
+      "kind": "contract",
+      "data": {
+        "rule": "A reading attributed to requested_entity must originate from a record with that same record_owner. A BACKUP source is permitted when the primary source is unavailable; source location does not change entity ownership.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "@r1",
+      "kind": "deployment",
+      "data": {
+        "current_version": "@v2",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "@r2",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "@v1",
+      "component_id": "@c2",
+      "data": {
+        "requested_entity": "@entity0",
+        "record_owner": "@entity0",
+        "selected_source": "@src1",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "@r3",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "@v1",
+      "event_id": "@event1",
+      "data": {
+        "attributed_entity": "@entity0",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "@r4",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "@v2",
+      "component_id": "@c2",
+      "data": {
+        "requested_entity": "@entity0",
+        "record_owner": "@entity1",
+        "selected_source": "@src1",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "@r5",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "@v2",
+      "event_id": "@event2",
+      "data": {
+        "attributed_entity": "@entity0",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "@r6",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "@v2",
+        "immutable_event_id": "@event2",
+        "captured_event_data": {
+          "attributed_entity": "@entity0",
+          "published_reading": 27
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "@r7",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    }
+  ]
+}

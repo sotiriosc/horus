@@ -1,0 +1,120 @@
+{
+  "components": [
+    {
+      "id": "z33fe99157a786a7d",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z38edb67577755a95",
+      "role": "decision worker"
+    },
+    {
+      "id": "z450b64b1327e0b06",
+      "role": "publication worker"
+    }
+  ],
+  "versions": [
+    {
+      "id": "ze48cb466a0fcc575",
+      "release_ordinal": 2
+    },
+    {
+      "id": "za398ff730d717f84",
+      "release_ordinal": 1
+    }
+  ],
+  "system_id": "zddadc311fed7cada",
+  "records": [
+    {
+      "id": "z0a6ca5dc6c78da67",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "za398ff730d717f84",
+      "event_id": "zb46ba86f4ffa6331",
+      "data": {
+        "returned_value": 23
+      }
+    },
+    {
+      "id": "zf1dc7d2c3e69503f",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "ze48cb466a0fcc575",
+      "event_id": "zed7f5a2ee5c67dc6",
+      "data": {
+        "returned_value": 16
+      }
+    },
+    {
+      "id": "zac200ff8bda3e270",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z1080b272883a92f5",
+      "kind": "contract",
+      "data": {
+        "rule": "For every response, use the configuration named by active_config for that execution version. Configuration values are complete. Repeated identical requests may return identical values indefinitely.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zb7c631456c9a76c3",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "ze48cb466a0fcc575",
+      "component_id": "z450b64b1327e0b06",
+      "data": {
+        "active_config": "z3bd8720fd5ff3e90",
+        "used_config": "za179ca278d01417e",
+        "config_values": {
+          "za179ca278d01417e": 16,
+          "z3bd8720fd5ff3e90": 23
+        },
+        "request_template": "z43d32182adb22bb9",
+        "repeat_count": 5
+      }
+    },
+    {
+      "id": "zf9a2f64ed8932ac9",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "ze48cb466a0fcc575",
+        "immutable_event_id": "zed7f5a2ee5c67dc6",
+        "captured_event_data": {
+          "returned_value": 16
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z874fa1252e493e1d",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "za398ff730d717f84",
+      "component_id": "z450b64b1327e0b06",
+      "data": {
+        "active_config": "z3bd8720fd5ff3e90",
+        "used_config": "z3bd8720fd5ff3e90",
+        "config_values": {
+          "za179ca278d01417e": 16,
+          "z3bd8720fd5ff3e90": 23
+        },
+        "request_template": "z43d32182adb22bb9",
+        "repeat_count": 5
+      }
+    },
+    {
+      "id": "z2fe91a415c108790",
+      "kind": "deployment",
+      "data": {
+        "current_version": "ze48cb466a0fcc575",
+        "as_of": 30
+      }
+    }
+  ],
+  "domain": "document formatting service"
+}

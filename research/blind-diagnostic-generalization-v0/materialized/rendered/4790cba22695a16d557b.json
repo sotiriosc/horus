@@ -1,0 +1,119 @@
+{
+  "system_id": "z887b11850eb9b522",
+  "records": [
+    {
+      "id": "zf7f8966ce8ea6b70",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "zaa95ae34d9624a0c",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zef2ea04c1674b182",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z8de89ef11f16704b",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "zef2ea04c1674b182",
+        "immutable_event_id": "z1bbf0794b2903a3a",
+        "captured_event_data": {
+          "attributed_entity": "z4943bd3dc618d09f",
+          "published_reading": 27
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z9cb3f209d6243b26",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "zef2ea04c1674b182",
+      "component_id": "zc553a76f4efb799f",
+      "data": {
+        "requested_entity": "z4943bd3dc618d09f",
+        "record_owner": "z4943bd3dc618d09f",
+        "selected_source": "z74a58c30a871f8d9",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "z285578cf408bb36d",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z0478a3058460e32e",
+      "component_id": "zc553a76f4efb799f",
+      "data": {
+        "requested_entity": "z4943bd3dc618d09f",
+        "record_owner": "z4943bd3dc618d09f",
+        "selected_source": "z74a58c30a871f8d9",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "z8586c4022507ca26",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z0478a3058460e32e",
+      "event_id": "zed30e3fb474a9149",
+      "data": {
+        "attributed_entity": "z4943bd3dc618d09f",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "zb54f0e2822178449",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "zef2ea04c1674b182",
+      "event_id": "z1bbf0794b2903a3a",
+      "data": {
+        "attributed_entity": "z4943bd3dc618d09f",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "zd3a0c5ea663472d7",
+      "kind": "contract",
+      "data": {
+        "rule": "A reading attributed to requested_entity must originate from a record with that same record_owner. A BACKUP source is permitted when the primary source is unavailable; source location does not change entity ownership.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    }
+  ],
+  "domain": "instrument reading catalogue",
+  "components": [
+    {
+      "id": "zc553a76f4efb799f",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z39095697f1ae5289",
+      "role": "publication worker"
+    },
+    {
+      "id": "zafba283722003d9e",
+      "role": "decision worker"
+    }
+  ],
+  "versions": [
+    {
+      "id": "zef2ea04c1674b182",
+      "release_ordinal": 2
+    },
+    {
+      "id": "z0478a3058460e32e",
+      "release_ordinal": 1
+    }
+  ]
+}

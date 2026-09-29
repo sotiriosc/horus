@@ -1,0 +1,120 @@
+{
+  "components": [
+    {
+      "id": "zdef3c576f17058b5",
+      "role": "decision worker"
+    },
+    {
+      "id": "ze674dafc03572d1c",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z1d0b1fe8683e16ca",
+      "role": "publication worker"
+    }
+  ],
+  "domain": "document formatting service",
+  "records": [
+    {
+      "id": "z8c8ed341ba728419",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z5b2e64eae3e8c154",
+      "component_id": "z1d0b1fe8683e16ca",
+      "data": {
+        "active_config": "zf9223eb6545b347c",
+        "used_config": "z7349278bdb00dbb3",
+        "config_values": {
+          "z7349278bdb00dbb3": 16,
+          "zf9223eb6545b347c": 23
+        },
+        "request_template": "z4512e7f04abdce8e",
+        "repeat_count": 5
+      }
+    },
+    {
+      "id": "z4a42a3e3e6838a54",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z5b2e64eae3e8c154",
+      "event_id": "zdbc600870775201a",
+      "data": {
+        "returned_value": 16
+      }
+    },
+    {
+      "id": "z65e1a06625e0daa0",
+      "kind": "contract",
+      "data": {
+        "rule": "For every response, use the configuration named by active_config for that execution version. Configuration values are complete. Repeated identical requests may return identical values indefinitely.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "z5417f69ed4a67f5b",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zb54b169352458adb",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z75f391cce08e478a",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "zb54b169352458adb",
+      "event_id": "z9eed89d93bc41d78",
+      "data": {
+        "returned_value": 23
+      }
+    },
+    {
+      "id": "z16ad34e6e547704a",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "zb54b169352458adb",
+      "component_id": "z1d0b1fe8683e16ca",
+      "data": {
+        "active_config": "zf9223eb6545b347c",
+        "used_config": "zf9223eb6545b347c",
+        "config_values": {
+          "z7349278bdb00dbb3": 16,
+          "zf9223eb6545b347c": 23
+        },
+        "request_template": "z4512e7f04abdce8e",
+        "repeat_count": 5
+      }
+    },
+    {
+      "id": "z88fc88880cfb4be0",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "zb54b169352458adb",
+        "immutable_event_id": "z9eed89d93bc41d78",
+        "captured_event_data": {
+          "returned_value": 23
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z1f6e0dd5f917cd69",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    }
+  ],
+  "system_id": "z302e7f84aec93b59",
+  "versions": [
+    {
+      "id": "z5b2e64eae3e8c154",
+      "release_ordinal": 1
+    },
+    {
+      "id": "zb54b169352458adb",
+      "release_ordinal": 2
+    }
+  ]
+}

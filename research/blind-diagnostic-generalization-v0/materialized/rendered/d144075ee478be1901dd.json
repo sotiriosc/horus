@@ -1,0 +1,134 @@
+{
+  "system_id": "zc5e389aab769cd7e",
+  "records": [
+    {
+      "id": "ze6021c7afa57b0e0",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z8df21f73bd59cd5a",
+        "immutable_event_id": "z662e1049ca9a7b2e",
+        "captured_event_data": {
+          "posted_units": 44
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "za9aa220384420a31",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z8df21f73bd59cd5a",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z05bb77d752ec6e6a",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z8df21f73bd59cd5a",
+      "event_id": "z662e1049ca9a7b2e",
+      "data": {
+        "posted_units": 44
+      }
+    },
+    {
+      "id": "zf87a0eed62316f74",
+      "kind": "contract",
+      "data": {
+        "rule": "posted_units equals amount multiplied by the number of distinct operation_token values in the complete listing. Multiple attempt_token values for the same operation_token contribute only once. No other postings exist in this interval.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zcf8ca71d4393e8f8",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z2202c203dfbf6cf3",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "zdc456c384a21f5ac",
+      "event_id": "za003af98e11c39d0",
+      "data": {
+        "posted_units": 22
+      }
+    },
+    {
+      "id": "zc477862e1cd6cbf5",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z8df21f73bd59cd5a",
+      "component_id": "z9bce6b8f988f155f",
+      "data": {
+        "key_column": "attempt_token",
+        "amount": 22,
+        "entries": [
+          {
+            "sequence": 1,
+            "attempt_token": "z9b83e6241159a218",
+            "operation_token": "z13019d3939ce6032"
+          },
+          {
+            "sequence": 2,
+            "attempt_token": "zaf035e48ced50be3",
+            "operation_token": "z13019d3939ce6032"
+          }
+        ],
+        "listing_complete": true
+      }
+    },
+    {
+      "id": "zbb78df27d167b058",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "zdc456c384a21f5ac",
+      "component_id": "z9bce6b8f988f155f",
+      "data": {
+        "key_column": "operation_token",
+        "amount": 22,
+        "entries": [
+          {
+            "sequence": 1,
+            "attempt_token": "z9b83e6241159a218",
+            "operation_token": "z13019d3939ce6032"
+          },
+          {
+            "sequence": 2,
+            "attempt_token": "zaf035e48ced50be3",
+            "operation_token": "z13019d3939ce6032"
+          }
+        ],
+        "listing_complete": true
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "ze1337339aac8aac6",
+      "role": "publication worker"
+    },
+    {
+      "id": "z9bce6b8f988f155f",
+      "role": "decision worker"
+    },
+    {
+      "id": "zbca82dbc477a9439",
+      "role": "input/output worker"
+    }
+  ],
+  "versions": [
+    {
+      "id": "zdc456c384a21f5ac",
+      "release_ordinal": 1
+    },
+    {
+      "id": "z8df21f73bd59cd5a",
+      "release_ordinal": 2
+    }
+  ],
+  "domain": "billing accumulator"
+}

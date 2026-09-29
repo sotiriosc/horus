@@ -1,0 +1,114 @@
+{
+  "components": [
+    {
+      "id": "z915b5a65eac88bbb",
+      "role": "publication worker"
+    },
+    {
+      "id": "ze99ad0b65a4c5d01",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z14b927349f20f216",
+      "role": "decision worker"
+    }
+  ],
+  "system_id": "zf9bdb685678a13fb",
+  "records": [
+    {
+      "id": "z87e57d0bb4b5788e",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "zc557c7ce8f0cfce1",
+      "event_id": "z2f4260947f5b5b42",
+      "data": {
+        "final_decision": "ALLOW"
+      }
+    },
+    {
+      "id": "za7d732c5744adff6",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z33227a146e95da17",
+      "event_id": "za819fe50de9b2122",
+      "data": {
+        "final_decision": "DENY"
+      }
+    },
+    {
+      "id": "z2b0a84c4346a28a2",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "zc557c7ce8f0cfce1",
+        "immutable_event_id": "za819fe50de9b2122",
+        "captured_event_data": {
+          "final_decision": "DENY"
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "zf4c503ed0b245ed1",
+      "kind": "contract",
+      "data": {
+        "rule": "The primary source has decision priority: if its decision is DENY the final decision must be DENY regardless of the secondary source. If primary is ABSTAIN use secondary. A final ALLOW is permitted only in the latter situation with secondary ALLOW.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "z8279f7f997d21504",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "zbaa3470a6ae5cf49",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "zc557c7ce8f0cfce1",
+      "component_id": "z14b927349f20f216",
+      "data": {
+        "source_primary": "zc63a6af9139beab6",
+        "source_secondary": "za0c5cae8a24033cb",
+        "primary_decision": "DENY",
+        "secondary_decision": "ALLOW",
+        "first_consulted": "za0c5cae8a24033cb"
+      }
+    },
+    {
+      "id": "z7c04c03e4ee65604",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z33227a146e95da17",
+      "component_id": "z14b927349f20f216",
+      "data": {
+        "source_primary": "zc63a6af9139beab6",
+        "source_secondary": "za0c5cae8a24033cb",
+        "primary_decision": "DENY",
+        "secondary_decision": "ALLOW",
+        "first_consulted": "zc63a6af9139beab6"
+      }
+    },
+    {
+      "id": "zacc8a434b57a97dc",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zc557c7ce8f0cfce1",
+        "as_of": 30
+      }
+    }
+  ],
+  "versions": [
+    {
+      "id": "zc557c7ce8f0cfce1",
+      "release_ordinal": 1
+    },
+    {
+      "id": "z33227a146e95da17",
+      "release_ordinal": 2
+    }
+  ],
+  "domain": "access decision service"
+}

@@ -1,0 +1,120 @@
+{
+  "domain": "document formatting service",
+  "versions": [
+    {
+      "id": "zf92a34707e13dd49",
+      "release_ordinal": 2
+    },
+    {
+      "id": "za2139f07b5968153",
+      "release_ordinal": 1
+    }
+  ],
+  "records": [
+    {
+      "id": "z4eafaa4b642aa04b",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "zc87bd211b4160614",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "za2139f07b5968153",
+      "component_id": "zd139e1c156ec9002",
+      "data": {
+        "active_config": "z87588cdf7b1b247f",
+        "used_config": "z87588cdf7b1b247f",
+        "config_values": {
+          "zc0120cafaa17aa01": 16,
+          "z87588cdf7b1b247f": 23
+        },
+        "request_template": "zfaee09536473a3ae",
+        "repeat_count": 5
+      }
+    },
+    {
+      "id": "z146c9762e6cc305d",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "za2139f07b5968153",
+        "immutable_event_id": "z9d465cc83da871e2",
+        "captured_event_data": {
+          "returned_value": 23
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "zc92c761e68dd3370",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "za2139f07b5968153",
+      "event_id": "zd3aa73629b509639",
+      "data": {
+        "returned_value": 23
+      }
+    },
+    {
+      "id": "z6263b111c2364a4b",
+      "kind": "contract",
+      "data": {
+        "rule": "For every response, use the configuration named by active_config for that execution version. Configuration values are complete. Repeated identical requests may return identical values indefinitely.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "za2ef784af20479f6",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zf92a34707e13dd49",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z634e798c34a57a8a",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "zf92a34707e13dd49",
+      "event_id": "z9d465cc83da871e2",
+      "data": {
+        "returned_value": 23
+      }
+    },
+    {
+      "id": "ze0be6f4d04f43e65",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "zf92a34707e13dd49",
+      "component_id": "zd139e1c156ec9002",
+      "data": {
+        "active_config": "z87588cdf7b1b247f",
+        "used_config": "z87588cdf7b1b247f",
+        "config_values": {
+          "zc0120cafaa17aa01": 16,
+          "z87588cdf7b1b247f": 23
+        },
+        "request_template": "zfaee09536473a3ae",
+        "repeat_count": 5
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "zb75e3629062dee5c",
+      "role": "input/output worker"
+    },
+    {
+      "id": "zd139e1c156ec9002",
+      "role": "publication worker"
+    },
+    {
+      "id": "z9bb4396a58d27884",
+      "role": "decision worker"
+    }
+  ],
+  "system_id": "zf4a744aa83073415"
+}

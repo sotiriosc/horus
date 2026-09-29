@@ -1,0 +1,119 @@
+{
+  "components": [
+    {
+      "id": "z0723858653e782a5",
+      "role": "publication worker"
+    },
+    {
+      "id": "z37ce7a4d05694676",
+      "role": "decision worker"
+    },
+    {
+      "id": "zb67873f53c123ffc",
+      "role": "input/output worker"
+    }
+  ],
+  "domain": "instrument reading catalogue",
+  "records": [
+    {
+      "id": "z09ca4ccbad9927cb",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "zee749ec23daebb57",
+        "immutable_event_id": "zc97ad2400ab945d1",
+        "captured_event_data": {
+          "attributed_entity": "z67b03040ed738842",
+          "published_reading": 28
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z456f6c4e2238d8b4",
+      "kind": "deployment",
+      "data": {
+        "current_version": "zee749ec23daebb57",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "za1fdd14d611b1035",
+      "kind": "contract",
+      "data": {
+        "rule": "A reading attributed to requested_entity must originate from a record with that same record_owner. A BACKUP source is permitted when the primary source is unavailable; source location does not change entity ownership.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zaf0425dd0fdb9262",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z52f3664a2fd56eec",
+      "event_id": "z0c3a686db935d0ff",
+      "data": {
+        "attributed_entity": "z67b03040ed738842",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "z4097df6ddec8e5ef",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z5af246eb58a7afdc",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "zee749ec23daebb57",
+      "event_id": "zc97ad2400ab945d1",
+      "data": {
+        "attributed_entity": "z67b03040ed738842",
+        "published_reading": 27
+      }
+    },
+    {
+      "id": "z52588fcaa468f004",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "zee749ec23daebb57",
+      "component_id": "zb67873f53c123ffc",
+      "data": {
+        "requested_entity": "z67b03040ed738842",
+        "record_owner": "z67b03040ed738842",
+        "selected_source": "zc8ef794ac732e927",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    },
+    {
+      "id": "z9b425867e1cfa3e0",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z52f3664a2fd56eec",
+      "component_id": "zb67873f53c123ffc",
+      "data": {
+        "requested_entity": "z67b03040ed738842",
+        "record_owner": "z67b03040ed738842",
+        "selected_source": "zc8ef794ac732e927",
+        "primary_source_available": false,
+        "source_path": "BACKUP",
+        "reading": 27
+      }
+    }
+  ],
+  "system_id": "z064830b2d6c6ba6d",
+  "versions": [
+    {
+      "id": "zee749ec23daebb57",
+      "release_ordinal": 2
+    },
+    {
+      "id": "z52f3664a2fd56eec",
+      "release_ordinal": 1
+    }
+  ]
+}

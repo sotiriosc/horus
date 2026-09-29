@@ -1,0 +1,134 @@
+{
+  "versions": [
+    {
+      "id": "z1b8e3efe9b37f5e7",
+      "release_ordinal": 1
+    },
+    {
+      "id": "z2ac98142b3dcd534",
+      "release_ordinal": 2
+    }
+  ],
+  "components": [
+    {
+      "id": "z83f6a74bd7ddeada",
+      "role": "publication worker"
+    },
+    {
+      "id": "z143f89fb97611594",
+      "role": "input/output worker"
+    },
+    {
+      "id": "z3926f7ad3ad3a70e",
+      "role": "decision worker"
+    }
+  ],
+  "domain": "billing accumulator",
+  "system_id": "z558427f2f863036d",
+  "records": [
+    {
+      "id": "zcebfcbdfd7d79f3e",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    },
+    {
+      "id": "z1e6c33f619016243",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z2ac98142b3dcd534",
+      "event_id": "z02f4fd5ee0a7f3c2",
+      "data": {
+        "posted_units": 22
+      }
+    },
+    {
+      "id": "ze0750b2bb7042f4b",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z1b8e3efe9b37f5e7",
+      "component_id": "z3926f7ad3ad3a70e",
+      "data": {
+        "key_column": "attempt_token",
+        "amount": 22,
+        "entries": [
+          {
+            "sequence": 1,
+            "attempt_token": "zaf86b25bddb2a8d1",
+            "operation_token": "z70aab54556ab9b74"
+          },
+          {
+            "sequence": 2,
+            "attempt_token": "zdeffcdcff673a543",
+            "operation_token": "z70aab54556ab9b74"
+          }
+        ],
+        "listing_complete": true
+      }
+    },
+    {
+      "id": "z74848afa18349754",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z2ac98142b3dcd534",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "zba8e4aaf6efb15a6",
+      "kind": "contract",
+      "data": {
+        "rule": "posted_units equals amount multiplied by the number of distinct operation_token values in the complete listing. Multiple attempt_token values for the same operation_token contribute only once. No other postings exist in this interval.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "zf9e7c395c2dc489d",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z2ac98142b3dcd534",
+      "component_id": "z3926f7ad3ad3a70e",
+      "data": {
+        "key_column": "operation_token",
+        "amount": 22,
+        "entries": [
+          {
+            "sequence": 1,
+            "attempt_token": "zaf86b25bddb2a8d1",
+            "operation_token": "z70aab54556ab9b74"
+          },
+          {
+            "sequence": 2,
+            "attempt_token": "zdeffcdcff673a543",
+            "operation_token": "z70aab54556ab9b74"
+          }
+        ],
+        "listing_complete": true
+      }
+    },
+    {
+      "id": "zae5f7c55f8a90eae",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z2ac98142b3dcd534",
+        "immutable_event_id": "z02f4fd5ee0a7f3c2",
+        "captured_event_data": {
+          "posted_units": 22
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "z540a56a9e59c9d04",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z1b8e3efe9b37f5e7",
+      "event_id": "zebefdf908c221bca",
+      "data": {
+        "posted_units": 44
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "domain": "pressure control comparator",
+  "components": [
+    {
+      "id": "zf5ff9c1f22bdc605",
+      "role": "decision worker"
+    },
+    {
+      "id": "zf96f5f2275f78b5f",
+      "role": "input/output worker"
+    },
+    {
+      "id": "zce98292eb59c7628",
+      "role": "publication worker"
+    }
+  ],
+  "system_id": "z2791287e44afff69",
+  "records": [
+    {
+      "id": "z7b442ce7185646d8",
+      "kind": "execution_output",
+      "at": 21,
+      "version": "z827d29253942a3b2",
+      "event_id": "z0e03eaf41cf69bb2",
+      "data": {
+        "command_issued": false
+      }
+    },
+    {
+      "id": "zb1686b606676a27c",
+      "kind": "deployment",
+      "data": {
+        "current_version": "z827d29253942a3b2",
+        "as_of": 30
+      }
+    },
+    {
+      "id": "z20743913fe00fe74",
+      "kind": "execution_input",
+      "at": 20,
+      "version": "z827d29253942a3b2",
+      "component_id": "zf96f5f2275f78b5f",
+      "data": {
+        "sensed_level": 14,
+        "target_level": 14,
+        "implemented_comparator": ">",
+        "comparison_result": false,
+        "readings": [
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    {
+      "id": "z45d13130a9519fff",
+      "kind": "execution_output",
+      "at": 11,
+      "version": "z47a8ead72345375a",
+      "event_id": "z805375531e4e6187",
+      "data": {
+        "command_issued": false
+      }
+    },
+    {
+      "id": "zdecac5a9db498a24",
+      "kind": "capture",
+      "data": {
+        "deployment_version": "z827d29253942a3b2",
+        "immutable_event_id": "z0e03eaf41cf69bb2",
+        "captured_event_data": {
+          "command_issued": false
+        },
+        "recorded_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0",
+        "recomputed_digest": "db48fe2b66fa1ac0e2451ae058e754973b73ce792a11e1963d4f7057d00217d0"
+      }
+    },
+    {
+      "id": "zca370afb23d65e53",
+      "kind": "execution_input",
+      "at": 10,
+      "version": "z47a8ead72345375a",
+      "component_id": "zf96f5f2275f78b5f",
+      "data": {
+        "sensed_level": 14,
+        "target_level": 14,
+        "implemented_comparator": ">",
+        "comparison_result": false,
+        "readings": [
+          14,
+          14,
+          14
+        ]
+      }
+    },
+    {
+      "id": "z0cea9532e2b45852",
+      "kind": "contract",
+      "data": {
+        "rule": "Issue a command exactly when sensed_level is strictly greater than target_level. Equality meets the declared objective and requires no command. Repeated equal readings and an unchanged level are permitted.",
+        "scope": "Each described component rule is complete for the presented inputs. No undocumented exceptions apply. UNKNOWN denotes omitted information, never a default value."
+      }
+    },
+    {
+      "id": "z634b6814b0816279",
+      "kind": "capture_contract",
+      "data": {
+        "rule": "The capture and deployment records describe the same as_of snapshot. An immutable event ID has one payload. recorded_digest and recomputed_digest refer to identical captured bytes and must agree. Operational input/configuration records are observations of implementation behavior, not assurances of compliance with the contract. Version ordinals are release order, not proof of deployment."
+      }
+    }
+  ],
+  "versions": [
+    {
+      "id": "z827d29253942a3b2",
+      "release_ordinal": 2
+    },
+    {
+      "id": "z47a8ead72345375a",
+      "release_ordinal": 1
+    }
+  ]
+}
