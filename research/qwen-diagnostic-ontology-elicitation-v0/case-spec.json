@@ -1,0 +1,22 @@
+[
+ {"slot":0,"class":"D","difficulty":"primitive","domain":"liquid dispenser","mechanism":"millilitre-to-litre conversion","formula":"q/1000","actual":"q","cause":"executed divisor 1 instead of 1000"},
+ {"slot":1,"class":"D","difficulty":"primitive","domain":"telemetry trailer","mechanism":"modular additive checksum","formula":"(q+17+240)%256","actual":"((q+17+240)%256+1)%256","cause":"executed additive bias 1 instead of 0"},
+ {"slot":2,"class":"D","difficulty":"composite","domain":"cold-room pallet reservation","mechanism":"capacity conservation","formula":"q-7","actual":"q","cause":"executed reservation decrement 0 instead of 7"},
+ {"slot":3,"class":"D","difficulty":"composite","domain":"weighbridge instrument","mechanism":"affine calibration","formula":"3*q+7","actual":"3*q","cause":"executed intercept 0 instead of 7"},
+ {"slot":4,"class":"H","difficulty":"primitive","domain":"fractional credit display","mechanism":"ties-to-even rounding","formula":"round(2.5)","actual":"2","cause":"ties to even"},
+ {"slot":5,"class":"H","difficulty":"primitive","domain":"parcel tray loading","mechanism":"ceiling batch division","formula":"ceil(7/3)","actual":"3","cause":"partially occupied final tray allowed"},
+ {"slot":6,"class":"H","difficulty":"composite","domain":"two-octet instrument word","mechanism":"big-endian serialization","formula":"256*1+2","actual":"258","cause":"high octet first despite adjacent little-endian channel"},
+ {"slot":7,"class":"H","difficulty":"composite","domain":"seed store accounting","mechanism":"inventory flow balance","formula":"q+9-4","actual":"q+5","cause":"signed inflow/outflow balance"},
+ {"slot":8,"class":"U","difficulty":"primitive","domain":"optical displacement meter","mechanism":"affine calibration","formula":"3*q+UNKNOWN","actual":"3*q","benign_completion":"offset=0","defect_completion":"offset=7"},
+ {"slot":9,"class":"U","difficulty":"primitive","domain":"acoustic tick recorder","mechanism":"tick duration conversion","formula":"10*UNKNOWN","actual":"20","benign_completion":"tick period=2","defect_completion":"tick period=3"},
+ {"slot":10,"class":"U","difficulty":"composite","domain":"satellite resend timer","mechanism":"exponential delay calculation","formula":"UNKNOWN*2**2","actual":"40","benign_completion":"base=10","defect_completion":"base=12"},
+ {"slot":11,"class":"U","difficulty":"composite","domain":"greenhouse rack allocation","mechanism":"capacity conservation","formula":"q-UNKNOWN","actual":"q-5","benign_completion":"reserved=5","defect_completion":"reserved=8"},
+ {"slot":12,"class":"T","difficulty":"primitive","domain":"subsea sample frame","mechanism":"modular additive checksum","formula":"(q+9+250)%256","old":"((q+9+250)%256+1)%256","actual":"(q+9+250)%256"},
+ {"slot":13,"class":"T","difficulty":"primitive","domain":"kiln duration register","mechanism":"minute-to-second conversion","formula":"q*60","old":"q","actual":"q*60"},
+ {"slot":14,"class":"T","difficulty":"composite","domain":"ticket tariff rounding","mechanism":"positive half-up rounding","formula":"q+1 for q+0.5","old":"q","actual":"q+1"},
+ {"slot":15,"class":"T","difficulty":"composite","domain":"reusable fixture checkout","mechanism":"resource lifecycle balance","formula":"q+4-3","old":"q+4","actual":"q+1"},
+ {"slot":16,"class":"X","difficulty":"primitive","domain":"sealed toll ledger","mechanism":"immutable ledger projection","contradiction":"two equally attested projections of one immutable entry assign distinct charge_cents; same snapshot"},
+ {"slot":17,"class":"X","difficulty":"primitive","domain":"sealed admission token","mechanism":"token byte provenance","contradiction":"two equally attested decodings of the exact same immutable token bytes assign distinct mint_epoch; canonical unambiguous encoding"},
+ {"slot":18,"class":"X","difficulty":"composite","domain":"single-consumer print queue","mechanism":"exclusive queue ownership snapshot","contradiction":"two complete attestations of the same immutable single-owner snapshot assign distinct lease_holder; no intervening observation"},
+ {"slot":19,"class":"X","difficulty":"composite","domain":"geophysical event journal","mechanism":"timestamp capture provenance","contradiction":"two attestations of one immutable canonical UTC event assign distinct utc_milliseconds; same event and snapshot"}
+]

@@ -1,0 +1,230 @@
+{
+  "type": "object",
+  "properties": {
+    "classification": {
+      "enum": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "NO_SUPPORTED_DIAGNOSIS",
+        "INSUFFICIENT_EVIDENCE",
+        "HISTORICAL_DEFECT_NOT_CURRENT",
+        "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      ]
+    },
+    "affected_component_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^z[0-9a-f]{16}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^z[0-9a-f]{16}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 8,
+      "minItems": 1
+    },
+    "observed": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1500
+      },
+      "maxItems": 5
+    },
+    "inferred": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1500
+      },
+      "maxItems": 5
+    },
+    "unknown": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1500
+      },
+      "maxItems": 5
+    },
+    "diagnostic_statement": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1500
+    },
+    "causal_mechanism": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "contract_evidence_id": {
+              "type": "string",
+              "pattern": "^z[0-9a-f]{16}$"
+            },
+            "cause_evidence_id": {
+              "type": "string",
+              "pattern": "^z[0-9a-f]{16}$"
+            },
+            "effect_evidence_id": {
+              "type": "string",
+              "pattern": "^z[0-9a-f]{16}$"
+            },
+            "decisive_evidence_id": {
+              "type": "string",
+              "pattern": "^z[0-9a-f]{16}$"
+            },
+            "decisive_field": {
+              "type": "string",
+              "pattern": "^/[a-z_]+$"
+            },
+            "observed_value": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            },
+            "required_value": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1500
+            }
+          },
+          "required": [
+            "contract_evidence_id",
+            "cause_evidence_id",
+            "effect_evidence_id",
+            "decisive_evidence_id",
+            "decisive_field",
+            "observed_value",
+            "required_value",
+            "description"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "strongest_alternative_explanation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1500
+    },
+    "falsifier": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1500
+    }
+  },
+  "required": [
+    "classification",
+    "affected_component_ids",
+    "evidence_ids",
+    "observed",
+    "inferred",
+    "unknown",
+    "diagnostic_statement",
+    "causal_mechanism",
+    "strongest_alternative_explanation",
+    "falsifier"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "classification": {
+            "const": "SUPPORTED_CURRENT_DEFECT"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "affected_component_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^z[0-9a-f]{16}$"
+            },
+            "uniqueItems": true,
+            "maxItems": 1,
+            "minItems": 1
+          },
+          "causal_mechanism": {
+            "type": "object",
+            "properties": {
+              "contract_evidence_id": {
+                "type": "string",
+                "pattern": "^z[0-9a-f]{16}$"
+              },
+              "cause_evidence_id": {
+                "type": "string",
+                "pattern": "^z[0-9a-f]{16}$"
+              },
+              "effect_evidence_id": {
+                "type": "string",
+                "pattern": "^z[0-9a-f]{16}$"
+              },
+              "decisive_evidence_id": {
+                "type": "string",
+                "pattern": "^z[0-9a-f]{16}$"
+              },
+              "decisive_field": {
+                "type": "string",
+                "pattern": "^/[a-z_]+$"
+              },
+              "observed_value": {
+                "type": [
+                  "string",
+                  "number",
+                  "boolean"
+                ]
+              },
+              "required_value": {
+                "type": [
+                  "string",
+                  "number",
+                  "boolean"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              }
+            },
+            "required": [
+              "contract_evidence_id",
+              "cause_evidence_id",
+              "effect_evidence_id",
+              "decisive_evidence_id",
+              "decisive_field",
+              "observed_value",
+              "required_value",
+              "description"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ]
+}
