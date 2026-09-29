@@ -1,699 +1,256 @@
 # Horus
 
-Horus is a reproducible research implementation of reduced-precision
-arithmetic, block normalization, scale tracking, and bounded local fault
-detection and recovery. It combines Verilog RTL with small Python reference
-models and falsifiable experiments. It is a research codebase, not a
-production-qualified processor or a general safety system.
+Horus investigates how AI agents can use authenticated consequences of execution
+as durable evidence for later decisions, while keeping model predictions and
+proposals separate from authority over execution, Memory and modification. It
+combines Python agent experiments, local model runtimes and Verilog hardware
+research. **This is a bounded research system, not a production autonomous agent;
+AGI and recursive self-improvement have not been demonstrated.** Most agent
+results concern small simulated worlds, not deployment in an open environment.
 
-## Current status
+## Start here: code and research status
 
-**Grounded consequence learning v0.2:** the independent consequence role now
-has a checked-in rank-8 LoRA adapter trained only from 42 authorized realized
-receipts. A session-separated held-out set improved from 6/12 to 8/12, with
-four corrections and two regressions. A fresh-process reload and a six-step
-live run verify that the adapter participates in the unchanged authority path
-while authenticated Memory remains in later requests. See [the v0.2 design and
-reproduction guide](docs/HORUS_V0_2_GROUNDED_LEARNING.md) and [the complete
-result](research/grounded-learning-v0/RESULTS.md).
+**Default branch and research frontier are different snapshots.** Audited against
+`main` at `c214511` and the published research heads on 2026-09-29.
 
-**Restartable Horus v0.1:** `python -m horus.run --live --steps 4 --session
-/path/outside/the/repository` uses the established local joint Map model for
-`next_state`, a separately requested consequence-only response, and the
-unchanged grounded publication chain. Resume with the same command plus
-`--resume`. Each process gets a fresh source identity and framework epoch;
-signed prior outcomes enter model prompts only as imported proposal evidence.
-See [the live runtime and trust boundary](docs/HORUS_V0_1_LIVE.md).
+| Where | What is present | What that means |
+| --- | --- | --- |
+| **`main`** | Hardware baseline, receipt/authorization framework, earlier model-role experiments, runnable Horus v0, restartable v0.1 and bounded v0.2 consequence training. | [Runnable system](docs/HORUS_V0.md) and [training result](research/grounded-learning-v0/RESULTS.md). This checkout does **not** contain the S+E selector. |
+| **Promoted research lineage** | Grounded mechanical authority → S → E → ordinary model/mixed route. | [Externally approved S+E promotion][e-promotion] on a preserved research branch; promotion is not a merge into `main` or proof of general reward improvement. |
+| **Latest completed analysis** | Verified introspection plus Qwen diagnosis. | [INSUFFICIENT_CURRENT_EVIDENCE][diagnosis]: a post-E campaign evidence gap survived; two other diagnoses were rejected. No proposal or modification followed. |
 
-**Runnable Horus v0:** `python -m horus.run` now executes a grounded two-episode
-closed loop. An original receipt from episode 1 is authorized into Memory and
-changes episode 2's mechanical action selection. The application uses the
-existing joint Map path for next state, an independent authenticated-history
-consequence adapter, mechanical reconciliation and Explorer comparison, and the
-existing receipt/Measure/authorization/Recovery/Memory chain. See
-[the v0 architecture and limits](docs/HORUS_V0.md).
+For a quick technical review, read the architecture and results below. For the
+full chronology and immutable branch links, use the [research index](docs/RESEARCH_INDEX.md).
 
-**Implemented:** NFE-13 arithmetic, E4M3/E3M6 components, normalization,
-width-preserving MACs, tiles, routing, scale tracking, selected block
-detection/repair paths, reference models, and a fail-closed public test runner.
+## Research question
 
-**Experimental:** bounded independent authorization and a five-component
-software framework through v2. The latest version joins two full observations
-with a smaller orthogonal witness and validates their declared production paths
-against a fixed process registry before allowing the existing commit gates.
-
-**Observed limitation:** v2 blocked identical wrong A+B evidence while witness C
-remained correct, but identical wrong A+B+C evidence and a deliberately false
-registry each caused 3/3 out-of-model false accepts detected by the test oracle.
-
-**Minimum-framework repair 1:** the frozen audit's three enforcement failures
-are repaired. The [repair report](research/minimum-framework-repair-1-results.md)
-records 126/126 protected passes, 109/109 direct checks, retained negative
-controls, and fresh public regressions. The minimum framework is complete for
-the declared bounded scope; architecture development stops here. Hardware cost
-optimization remains deferred.
-
-**Explorer-only model integration:** a local language model made 69 valid action
-proposals through the frozen framework with zero observed integrity violations.
-Verified history improved its proposal in only 1/6 matched pairs, below the
-preregistered threshold. [Results and limits](research/model-explorer-integration-v0-results.md)
-keep framework integrity separate from model usefulness. No other model role
-was integrated.
-
-**Explorer Memory study v1:** separate matched studies test verified negative
-avoidance and preference for a verified positive alternative, using raw records
-and semantic summaries. [The study report](research/model-explorer-memory-study-v1-results.md)
-records all 224 model calls, the preregistered thresholds, and framework integrity
-checks. The earlier integration result remains unchanged.
-
-## Hardware baseline
-
-The verified baseline includes reduced-precision arithmetic and formats,
-normalizers, scale-aware MAC and array variants, tiles, routing/control,
-scale-tracking state, block anomaly detection, and repair/replay experiments.
-The `rtl/`, `tb/`, `sim/`, and `tests/` directories contain the implementation,
-benches, reference models, and public checks.
-
-The baseline existed before the independent-authorization experiment. Its exact
-contents are recorded in `BASELINE_MANIFEST.json`, and the first Git commit is
-the baseline itself. The [public development sequence](research/DEVELOPMENT_HISTORY.md)
-explains how the later work relates to it.
-
-## Bounded independent authorization experiment
-
-Repair completion is not the same as permission to continue. The baseline
-repair wrapper can propose a replayed result, but that proposal does not by
-itself establish identity or numerical correctness.
-
-The later bounded experiment adds this local protocol:
+Can consequences change later behavior without allowing a model to declare its
+own predictions true?
 
 ```text
-protected source evidence
-→ candidate computation / fault injection / repair
-→ two-entry quarantine
-→ independent identity and epoch check
-→ independent numerical check
-→ downstream authorization
-→ sink
+experience → authenticated consequence → grounded Memory → later decisions
 ```
 
-The checker computes the expected result from a protected pre-fault record with
-a small integer specification. It does not call the repair implementation or
-normalizer helpers and does not derive expected truth from the repaired output.
-The deliberately wrong descendant-reference checker is isolated as a negative
-control and cannot authorize the protected sink.
+The longer-term hypothesis adds a separate, externally controlled research loop:
 
-Implementation and test harnesses live in `experiments/bounded_commit/`. The
-[historical proposal](docs/NEXT_EXPERIMENT.md) and the later
-[measured results](research/bounded-independent-authorization-results.md) are
-kept separately.
+```text
+inspect → diagnose → propose → predict/falsify → prospective test
+       → external approval or rejection → changed incumbent → repeat
+```
 
-## Results
+That recursive loop remains unestablished. A proposal grants no permission to
+rewrite code, policy, grounded state, Memory or protected execution.
 
-### Protected path
+## Current promoted research architecture
 
-- 4,200 transactions across the declared seeds and controls.
-- Zero false accepts, false rejects, or duplicate accepts.
-- The clean and recoverable exponent-spike cases were accepted exactly once.
-- Corrupted repair and identity/provenance mismatches were rejected.
-- The two-entry bound and backpressure were exercised.
+**Research branches only; this is not the `main` runtime.** The active selector
+there is [`grounded_agent.empirical_policy.integrated_decide`][e-code].
 
-### Correlated descendant-reference control
+```text
+authenticated experience in durable Memory
+                    ↓
+           grounded-state derivation
+                    ↓
+        decision ownership, in precedence order:
+        1. grounded mechanical authority
+        2. bounded stagnation escape (S)
+        3. bounded empirical evidence acquisition (E)
+        4. ordinary model/mixed route
+                    ↓
+           protected world execution
+                    ↓
+         original receipt → authorization
+                    ↓
+          durable Memory → next decision
+```
 
-The deliberately incorrect checker compared a corrupted candidate with
-reference evidence derived from that same candidate. It falsely accepted 300
-corrupted proposals. This is the expected negative result and demonstrates why
-correlated evidence is not independent verification.
+- **Grounded mechanical authority** resolves applicable exact, experienced
+  deterministic values in software. It is distinct from S.
+- **S** acquires missing relation evidence after qualifying repeated
+  deterministic established-zero fallback.
+- **E** acquires missing relation evidence after qualifying empirical
+  deterioration. S and E select without a model when triggered; neither creates
+  or authenticates receipts.
+- **Ordinary model route** handles the remaining admissible uncertainty. The
+  historical Dolphin/Mixtral reference remains the incumbent on this lineage;
+  Qwen3 action substitution was not promoted.
+- **Receipts and Memory** bind executed outcomes to provenance. Only authorized
+  evidence enters durable grounded Memory; predictions do not overwrite it.
 
-### Broader faults
+Authenticated context is validated before routing. In a nonmechanical context,
+simultaneous S/E eligibility raises an integration error with no action or model
+request. Malformed evidence also fails closed. See the [promotion, tests and
+rollback record][e-promotion] and [grounded-state contracts][core].
 
-A follow-up ran 2,700 additional transactions covering sign, mantissa,
-exponent, tied/near-tied, block-wide, multi-lane, and post-replay faults. It
-observed zero false accepts. Only the declared single exponent-spike case was
-recovered; unsupported cases were safely rejected rather than reported as
-repaired.
+Older full Horus/Zakhor designs were parked in the grounded research lineage;
+their retained code is historical, not the active architecture. The [core
+consolidation][core] retains receipts, authorization, durable evidence and
+grounded epistemic state without reinstating those designs.
 
-### Synthesis and trace observations
+## What has been demonstrated—and what has not
 
-Standalone Sky130 synthesis probes measured approximately 12,475.7152 µm² for
-protected-record storage/access, 12,318.0640 µm² for quarantine storage/access,
-3,439.5488 µm² for the numerical checker, and 441.6736 µm² for identity
-comparisons. These probes are not an exact additive decomposition of the
-optimized gate. Storage dominates the measured overhead.
+Statuses below retain the original studies' scope. A passing integrity gate does
+not establish intelligent behavior, and a diagnostic pass does not establish
+autonomous performance.
 
-Lossless packing of the eight-entry trace from 96 to 63 bits preserved decisions
-and retained records across 21 paired schedules and reduced the mapped
-standalone gate estimate by 8,872.2592 µm². The research default remains the
-original trace configuration; cost optimization is deferred until the broader
-functional architecture is validated.
+| Area | Result and limit | Evidence location |
+| --- | --- | --- |
+| Consequence → Memory → behavior | Bounded v0 demonstration changes `ADVANCE` to `HOLD` after an authorized negative receipt. | [`main`: runnable loop](docs/HORUS_V0.md) |
+| Cross-episode Memory | Overall transfer **NOT ESTABLISHED**; a separate two-observation Map effect was supported. | [`main`: transfer](research/cross-episode-model-transfer-v0-results.md), [depth](research/cross-episode-map-history-depth-v1-results.md) |
+| Contradiction/revision | Stale-Memory Map revision **REPLICATED**; the corresponding Explorer revision **NOT ESTABLISHED**. | [`main`: Map](research/cross-episode-stale-memory-map-revision-v1-results.md), [Explorer](research/cross-episode-stale-memory-explorer-revision-v1-results.md) |
+| Model-role composition | R1 **INTEGRITY PASS**, not reasoning synergy; original interrupted v2 remains **NOT ESTABLISHED**. | [`main`: R1](research/model-proposal-role-composition-v2-replacement-r1-results.md) |
+| Grounded training | v0.2 adapter heldout accuracy 6/12 → 8/12, including two regressions. No broad learning claim. | [`main`: training](research/grounded-learning-v0/RESULTS.md) |
+| S and E | Bounded acquisition mechanisms prospectively tested and promoted. Overall autonomous reward improvement unestablished. | Research: [S][s-promotion], [E replication][e-replication], [E promotion][e-promotion] |
+| Runtime/model substitution | Qwen3 runtime qualified; autonomous substitution **BEHAVIORALLY UNSUITABLE** under its frozen gate. | Research: [qualification][qwen-runtime], [comparison][qwen-substitution] |
+| Self-model and diagnosis | v0/v0.1 **GROUNDING FAILED** overall; latest diagnosis **INSUFFICIENT_CURRENT_EVIDENCE**. | Research: [v0][self-v0], [v0.1][self-v01], [diagnosis][diagnosis] |
 
-## Reproducing results
+## Selected findings
 
-Use Python 3.10+, GNU Make, and Icarus Verilog/vvp. Core Python dependencies are
-separate from optional scientific experiments.
+1. **Agreement is not truth.** Historical common-mode and false-registry
+   controls caused false accepts despite source agreement. These failures bound
+   the software trust model. [Checkpoint evidence](research/CHECKPOINTS.md).
+2. **Interface details change model behavior.** Action-label and order studies
+   exposed lexical interference; opaque labels did not establish neutrality.
+   [Representation checkpoint](research/representation-priors-and-neutrality-checkpoint.md).
+3. **Prediction revision and action revision are different capabilities.**
+   Matched cross-episode studies supported Map revision while Explorer failed
+   its own gate. Accurate retained evidence did not guarantee better choices.
+   [Map](research/cross-episode-stale-memory-map-revision-v1-results.md) /
+   [Explorer](research/cross-episode-stale-memory-explorer-revision-v1-results.md).
+4. **Faster inference did not justify promotion.** In the frozen substitution
+   campaign, Dolphin action inference totaled 1,776.09 seconds for 62 calls;
+   Qwen3 took 36.80 seconds for 90 calls. This is a workload-total comparison,
+   not a matched per-token benchmark. Qwen chose HOLD in all 90 model-mediated
+   decisions and acquired fewer relations. [Measured comparison][qwen-substitution].
+5. **Semantic responsiveness did not transfer automatically.** Qwen passed a
+   bounded read-only semantic gate, then again chose HOLD throughout the
+   subsequent R128 autonomous campaign. [Diagnostic][qwen-semantic] /
+   [autonomous result][qwen-r128].
+6. **Declarative self-description is not policy execution.** Self-model v0.1
+   passed 104 reconstruction checks but matched only 13/20 routing cases; its
+   overall classification remains failed. Later diagnosis used deterministic
+   introspection and retained only an evidence gap. [v0.1][self-v01] /
+   [diagnosis][diagnosis].
+
+## Research methodology
+
+The registered studies freeze interfaces, inputs, seeds, thresholds and stop
+rules before prospective evaluation. Matched interventions and negative controls
+separate evidence effects from labels, order, model choice and authority wiring.
+Receipts, request hashes, replay records and source manifests support inspection
+of what actually ran.
+
+Failed gates, invalid studies and interrupted checkpoints stay in the record.
+Where retries or extensions are prohibited, outputs are not repaired into
+passes. Reporting corrections and separately authorized replacement campaigns
+are documented as such. Integrity, feasibility, behavioral performance and
+promotion are separate decisions; model text cannot authorize its own adoption.
+See the [claim-eligibility record](experiments/grounded_lineage_rebaseline_v0/claim_eligibility.json),
+[historical verification](review/VERIFICATION.md) and [research index](docs/RESEARCH_INDEX.md).
+
+Public summaries and semantic replay are not substitutes for omitted signed raw
+sessions. Full authentication/replay of some later campaigns requires retained
+private archives; raw reasoning, credentials and private Memory are not linked
+as reproduction downloads here.
+
+## Repository map
+
+| Path in `main` | Purpose |
+| --- | --- |
+| [`horus/`](horus/) | Runnable v0/v0.1 loop, durable sessions and bounded v0.2 training/inference interfaces. |
+| [`research/`](research/) | Preregistrations, result reports and preserved negative checkpoints. |
+| [`experiments/`](experiments/) | Study-specific implementations, fixtures, compact results and replay tools. |
+| [`docs/`](docs/) / [`review/`](review/) | Architecture, reproduction, provenance and dated verification records. |
+| [`rtl/`](rtl/), [`tb/`](tb/), [`sim/`](sim/) | Reduced-precision arithmetic, normalization, scale tracking and bounded fault/recovery origins. |
+| [`tests/`](tests/), [`scripts/`](scripts/), [`Makefile`](Makefile) | Python/RTL checks and reproducible test runner. |
+| [`models/`](models/) | The specialized v0.2 consequence adapter and its lineage; not the Qwen3 research runtime. |
+
+`grounded_state/` and `grounded_agent/` belong to the [later research lineage][core],
+not this default-branch checkout. The hardware work remains preserved and
+reproducible; its presence does not imply an RTL implementation of the agent.
+
+## Reproduction
+
+For the default-branch baseline, use Python 3.10+, GNU Make and Icarus Verilog/vvp:
 
 ```bash
 python3 -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements-test.txt
 make test
-make independent-commit
-make independent-commit-followup
-make base-framework-v0
-make base-framework-v1
-make base-framework-v2
 ```
 
-Optional baseline numerical experiments require the packages in
-`requirements-experiments.txt`:
+The deterministic v0 demo needs no model server and executes a small simulated
+world. Keep generated artifacts outside the checkout:
 
 ```bash
-python -m pip install -r requirements-experiments.txt
-make experiments
+HORUS_DEMO_DIR=$(mktemp -d)
+python -m horus.run --output "$HORUS_DEMO_DIR/horus-v0-run.json"
 ```
 
-Optional synthesis requires Yosys/ABC and a separately installed Sky130 HD
-TT/025C/1v80 liberty file:
+See [baseline reproduction](docs/REPRODUCIBILITY.md) for authorization/framework,
+optional numerical and synthesis commands; [live sessions](docs/HORUS_V0_1_LIVE.md)
+and [v0.2 training](docs/HORUS_V0_2_GROUNDED_LEARNING.md) for their separate model
+requirements. The later [review verification](review/VERIFICATION.md) records an
+isolated-environment core installation/pass; the older reproduction document
+retains its earlier installation-status caveat. Neither establishes universal
+platform compatibility.
 
-```bash
-export SKY130_HD_LIB=/path/to/sky130_fd_sc_hd__tt_025C_1v80.lib
-make synthesis
-python3 experiments/bounded_commit/synthesize.py --liberty "$SKY130_HD_LIB"
-python3 experiments/bounded_commit/synthesize.py --followup --liberty "$SKY130_HD_LIB"
-```
+Research-branch results require their pinned checkout and per-study instructions.
+A historical manifest may intentionally require the original README bytes: use
+its recorded commit for exact preservation checks. Running a live campaign is
+new inference/execution, not merely replaying its public result.
 
-Run artifacts are written to new temporary directories unless an explicit new
-output directory outside the source tree is supplied. See
-[reproducibility details](docs/REPRODUCIBILITY.md) and the
-[experiment report](experiments/bounded_commit/README.md).
+## Current frontier
 
-## Base framework v0
+The latest [verified-introspection diagnosis][diagnosis] recognized the supplied
+inventory's absence of a post-E autonomous scientific campaign, within the
+preserved lineage. It did not establish a new current behavioral defect or a
+useful modification. Selecting the sole surviving gap does not demonstrate
+blind diagnostic generalization.
 
-The implemented bounded software loop connects:
-
-- **Explorer:** chooses from a finite action set;
-- **Map:** maintains a small revisable state;
-- **Measure:** compares realized consequence with an external target;
-- **Memory:** preserves authorized outcome and provenance; and
-- **Recovery:** restricts continuation and proposes a correction that is
-  independently checked.
-
-The clean control completed 12 transitions for each of three identity seeds.
-At state 1, preserved negative consequence changed Explorer's later choice from
-`ADVANCE` to `HOLD`. Across 42 clean/failure scenario runs, the campaign
-observed zero protected false accepts, zero false rejects, and zero duplicate
-authorizations. Twenty-one recoveries were authorized and nine deliberately
-invalid recoveries were rejected. A correlated descendant-reference control
-showed false confidence in all three presentations while the protected path
-rejected their lineage.
-
-See the [pre-registration](research/base-framework-v0-preregistration.md),
-[results](research/base-framework-v0-results.md), [hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md),
-and [Dream-RSI comparison](research/dream-rsi-comparison.md). The earlier RTL
-authorization milestone remains unchanged and separately reproducible.
-
-## Base framework v1 cross-source boundary
-
-V1 keeps the v0 world, policy, Map, Measure, Memory bound, and Recovery
-structure. It replaces the single receipt with registered Source A and Source B
-paths. A partial pair cannot commit; disagreement permits one re-observation;
-persistent disagreement stops without choosing a source.
-
-Across 69 scenario runs, the protected single-channel-fault model observed zero
-false accepts, zero false rejects, and zero duplicate authorizations. Twelve
-transient/stale disagreements recovered and 30 persistent evidence failures
-stopped. Cross-source-authorized Memory retained the v0 `ADVANCE → HOLD`
-behavior in all three clean episodes.
-
-The separate common-mode control corrupted A and B identically. The runtime
-accepted all three wrong pairs during recovery, and only the hidden oracle found
-the false commits. See the [v1 preregistration](research/base-framework-v1-preregistration.md),
-[result report](research/base-framework-v1-results.md), and updated
-[hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md).
-
-## Base framework v2 evidence provenance
-
-V2 retains the exact v1 world, sources, policy, and five-component loop. A
-nine-node immutable registry now describes declared process dependencies, and
-an independently implemented four-bit witness supplies a different relation to
-the same transition. A complete A+B+C package must pass provenance, agreement,
-role, registry-version, and declared process-separation checks before reaching
-the inherited Measure, state, Recovery, Memory, and continuation gates.
-
-Across 57 runs, all protected criteria passed: zero protected false accepts,
-zero false rejects, zero duplicate authorizations, 9/9 transient recoveries,
-and 12/12 blocks of the tested identical A+B corruptions. Authorized Memory
-preserved the `ADVANCE → HOLD` behavior in all three clean episodes.
-
-Two separately scored controls exposed the remaining trust roots. Identical
-wrong A+B+C evidence committed falsely in 3/3 runs, and a deliberately corrupt
-registry that hid derived paths also caused 3/3 false commits. See the
-[v2 preregistration](research/base-framework-v2-preregistration.md),
-[results](research/base-framework-v2-results.md), and
-[hardware mapping](docs/HARDWARE_FRAMEWORK_MAPPING.md).
+The next question is whether one frozen diagnostic process can distinguish
+actual defects, benign behavior, obsolete failures and missing evidence across
+blinded systems, before application to Horus. **This is a research question, not
+a completed result or a campaign launched by this documentation update.**
 
 ## Limitations
 
-- Results apply to fixed seeds, bounded schedules, explicit configurations, and
-  tested fault models; they do not establish universal fault tolerance.
-- The protected source, checker, allocator, and gate control are trusted. The
-  experiment does not protect against their common-mode corruption.
-- `(transaction_id, epoch, source_record_id)` is sufficient only under the
-  documented single-source, immutable-record, no-reuse assumptions. It is not a
-  general causal provenance system.
-- Unsupported faults were rejected, not repaired.
-- External rejection does not roll back every internal side effect. The
-  unchanged wrapper may update its internal keeper when it proposes a commit.
-- Area figures are mapped synthesis estimates. No static timing, routed delay,
-  power, or physical protection result is claimed.
-- Clean-machine dependency installation has not been independently verified;
-  the commands have been exercised in the recorded development environment.
-- The complete five-component loop exists only as a bounded software research
-  prototype. The repository does not implement a general agent, recursive
-  self-improvement, general semantic correctness, or proof of safety.
-- Distinct source names, ports, and fault-domain labels do not prove actual
-  causal independence. V1's common-mode control produced false accepts.
-- V2 validates only dependencies declared in its trusted registry. It cannot
-  discover an omitted edge or a shared corruption of A, B, and C; both trusted
-  registry integrity and the witness production path remain assumptions.
+- Evidence is bounded by tested worlds, models, interfaces and schedules.
+  Authentication establishes origin/integrity under software trust assumptions;
+  it does not make a dishonest source correct or protect a compromised host.
+- No general safety proof, open-world autonomy or recursive self-improvement is
+  established. Acquiring evidence can incur negative consequences.
+- Memory-conditioned behavior is not persistent weight learning. The separate
+  v0.2 LoRA experiment updates a specialized Qwen2.5-0.5B consequence role on a
+  small dataset; it is not the later Qwen3-14B action/analysis work.
+- Promotion of S/E establishes a bounded mechanism decision. The latest
+  diagnosis found no post-promotion autonomous scientific campaign in its
+  preserved lineage, so system-level benefit remains unestablished there.
+- Hardware synthesis figures are mapped estimates, not timing closure, physical
+  fault protection or fabricated-silicon results.
+
+## Historical research index
+
+The [research index](docs/RESEARCH_INDEX.md) connects hardware origins, the
+Explorer/Map/Measure/Memory/Recovery experiments, realized-event grounding,
+branch-only policy promotions and current analysis work. It links the original
+[development sequence](research/DEVELOPMENT_HISTORY.md), [checkpoint catalogue](research/CHECKPOINTS.md)
+and the previous README without rewriting their claims. Older documents titled
+“current” are dated snapshots; consult their commit and scope.
 
 Project source is licensed under [CERN-OHL-S-2.0](LICENSE). Third-party tools,
-PDK files, and datasets keep their own licenses and are not redistributed. See
-[provenance](docs/PROVENANCE.md) and [retained evidence policy](docs/EVIDENCE.md).
-
-### Adaptive Explorer episode v0
-
-The [adaptive episode study](research/model-explorer-adaptive-episode-v0-results.md)
-ran 24 empty-history episodes and 288 real Explorer proposals through the frozen
-framework. Integrity passed; neither the preregistered exploration effect nor
-discovery-to-reuse criterion was established. All actions remained allowed;
-uncertain retests and absent contradiction opportunities are reported separately.
-[Reproduction and bounded evidence](experiments/model_explorer_adaptive_episode_v0/README.md)
-include complete episode replay and the documented replay-only serialization fix.
-
-### Semantic-prior study v0
-
-The [semantic-prior study](research/model-explorer-semantic-prior-study-v0-results.md)
-compares original action names with six rotated opaque mappings across 288 real,
-matched, complete-history decisions. Integrity passed. Opaque rendering improved
-selection of verified +1 over 0 and +1 over −1 by the preregistered criteria;
-the 0-over−1 naming effect was not established. RETREAT-best selection was 7/36
-under original names and 32/36 under aliases, while opaque 0-over−1 responses
-always selected the first option. Labels are not assumed neutral. The frozen
-framework and all earlier results remain unchanged.
-[Reproduction and compact evidence](experiments/model_explorer_semantic_prior_study_v0/README.md)
-cover exact replay and fresh regressions; detailed per-call evidence is retained
-outside the public tree.
-
-### Prior factorial v1
-
-The [prior factorial study](research/model-explorer-prior-factorial-v1-results.md)
-uses 216 real calls to independently cross alias mapping, option order and evidence
-order in three targeted comparisons. RETREAT lexical interference replicated in
-both positive targets and both opaque vocabularies. Verified +1>−1 value following
-was stable across both opaque families and all order cells; stability across every
-representation was not established. Target C remains unresolved under its dominance
-criteria, with a narrower O2 option-position effect supported. Integrity and all
-requested regressions passed; the framework and earlier results remain unchanged.
-[Reproduction and compact evidence](experiments/model_explorer_prior_factorial_v1/README.md)
-retain the frozen criteria and negative findings without expanding the sample.
-
-### Contradiction-revision v0 feasibility checkpoint
-
-The [contradiction-revision preflight](research/model-explorer-contradiction-revision-v0-results.md)
-failed before model inference. The first changed state-1 HOLD event realized -1,
-while frozen A/B/C reported +1 and the framework committed +1 to Memory. This
-externally audited false accept makes the requested nonstationarity infeasible
-under the frozen evidence boundary. Real model calls: zero; behavioral revision
-remains untested. No architecture or prior result changed.
-[Diagnostic reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v0/README.md)
-include exact failure replay and fresh preservation regressions.
-
-### Realized-event grounding v0
-
-The [realized-event grounding repair](research/realized-event-grounding-v0-results.md)
-binds authorization to an immutable receipt emitted after external execution.
-Changed HOLD −1 and ADVANCE +1 were authorized while retaining their old records
-and contrary predictions. The bounded campaign passed 105 protected clean
-authorizations and 20 atomic attack rejections with zero protected false accepts;
-a deliberately dishonest trusted root still caused one out-of-model wrong accept.
-A/B share the receipt root and are not independent truth measurements. Historical
-regressions and the preserved old failing diagnostic remain unchanged. No new
-model calls were made. [Reproduction and compact evidence](experiments/realized_event_grounding_v0/README.md)
-state the software trust boundary and the untested model-revision question.
-
-### Contradiction revision v1 feasibility
-
-The [complete contradiction fixture](research/model-explorer-contradiction-revision-v1-feasibility-results.md)
-constructed CONTROL and SHIFT H0/H1/H2 through the unchanged realized-event repair.
-All 14 primary transactions committed correctly, including three authenticated
-contradictions, with old history and original predictions preserved. Exact replay
-and historical regressions passed; the old stationary-path failure remains intact.
-Zero model calls were made. This establishes safely constructed contradictory
-histories within the software trust root, not model revision.
-[Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1_feasibility/README.md)
-include chronological previews, provenance checks and the final feasibility criteria.
-
-### Contradiction revision v1 behavioral study
-
-The [144-call contradiction study](research/model-explorer-contradiction-revision-v1-results.md)
-ran the frozen Explorer-only design through authenticated CONTROL/SHIFT histories.
-O1 met every registered revision criterion. O2 reached 8/12 SHIFT-H2 ADVANCE choices
-and 7/12 favorable matched pairs, below the required 9/12 and 8/12. Overall
-replication was therefore **not established**; no pooling, prompt change or extra
-calls were used. All 144 proposals were valid, with zero protected false accepts
-and old history preserved. Exact replay and historical regressions passed.
-[Reproduction and compact evidence](experiments/model_explorer_contradiction_revision_v1/README.md)
-retain the family-specific findings and the unchanged software trust boundary.
-
-### Representation priors and first model Map proposal
-
-The [representation-prior checkpoint](research/representation-priors-and-neutrality-checkpoint.md)
-preserves the finding that opaque aliases do not establish neutrality, without a
-new Explorer token campaign or any upgrade to earlier claims.
-
-The [first Map-proposal study](research/model-map-proposal-v0-results.md)
-passed its 16-case zero-call boundary gate, then completed exactly 144 real calls:
-142 valid predictions and two safe schema rejections, with zero protected false
-accepts. Both families achieved 12/12 exact SHIFT-H2 predictions and favorable H2
-pairs, but both had 0/12 exact old predictions at SHIFT H0; the all-valid gate also
-failed. **Contradiction-driven Map revision was not established** under the frozen
-criteria. Predictions remained distinct from receipt-authoritative reality.
-Exact replay and all 20 regression commands returned their expected outcomes.
-[Reproduction and compact evidence](experiments/model_map_proposal_v0/README.md)
-retain the failed prerequisites, state/consequence decomposition and trust boundary.
-
-### Established-prior Map revision v1
-
-The [bounded follow-up](research/model-map-established-prior-revision-v1-results.md)
-uses two authentic old HOLD observations before an external consequence change,
-with the Map adapter, parser, prompt, deterministic Explorer and authority unchanged.
-**ESTABLISHED-PRIOR MAP REVISION REPLICATED**.
-O1: SHIFT P0 exact old 12/12, SHIFT P2 exact new 12/12, favorable P2 pairs 12/12; O2: SHIFT P0 exact old 12/12, SHIFT P2 exact new 12/12, favorable P2 pairs 12/12.
-All 144 registered calls completed: 144 valid and 0 safely rejected,
-with zero protected false accepts. Exact replay and 23 regression commands returned
-their expected outcomes. The original Map-v0 NOT ESTABLISHED result is unchanged;
-no studies were pooled and no persistent/weight-learning claim is made.
-[Reproduction and compact evidence](experiments/model_map_established_prior_revision_v1/README.md)
-retain the complete criteria, component analyses and software trust boundary.
-
-### Recovery proposal v0 interface checkpoint
-
-The [zero-call Recovery checkpoint](research/model-recovery-proposal-v0-results.md)
-stopped at the mandatory interface gate: the frozen coordinator constructs native
-Recovery inline and exposes no configurable proposal source. **Model Recovery
-usefulness is UNTESTED / NOT ESTABLISHED; zero model calls were made.**
-The 32-transaction native diagnostic preserved authorization and atomic rejection,
-with zero protected false accepts. Eight of the 12 world transitions require state
-Recovery; HOLD retains a valid incumbent. Exact diagnostic replay and all 25
-regression commands returned their expected outcomes. No architecture was changed.
-[Reproduction and compact evidence](experiments/model_recovery_proposal_v0/README.md)
-distinguish native integrity from the untested model adapter.
-
-### State Recovery proposal interface v1
-
-The [separate zero-call interface layer](research/state-recovery-proposal-interface-v1-results.md)
-lets a deterministic external source propose only a bounded replacement-state value.
-Native Recovery owns the attempt and identity/status envelope; the existing authorizer
-and receipt-bound staged publication remain unchanged. All 32 default diagnostic cases
-matched exactly; correct/wrong proposals and malformed/failing sources passed the
-operational checks. **C — NOT ESTABLISHED:** the mandatory low-level wrong-status
-rejection failed in both historical and new unchanged authorizers (8/8 acceptances each).
-No model calls were made. Exact replay and all 28 regression commands returned their
-expected outcomes. The old Recovery-v0 checkpoint remains blocked and unchanged.
-[Reproduction and compact evidence](experiments/state_recovery_proposal_interface_v1/README.md)
-retain this unresolved requirement; no model campaign was launched.
-
-### State Recovery authorizer status binding v1
-
-The [separate zero-call status repair](research/state-recovery-authorizer-status-binding-v1-results.md)
-is **A — STATE RECOVERY STATUS BINDING COMPLETE**. In trusted coordinator-owned
-Recovery scope, the authorizer now requires RECOVERING status and delegates all
-remaining checks to the historical implementation. Ordinary PROPOSED transactions
-remain unchanged. The 136-cell enum matrix preserved 16 RECOVERING acceptances and
-rejected all 120 other-status candidates; 25 wrong-status transactions rejected
-atomically. Default and injected interface records matched exactly. Exact replay
-and all 31 regression commands returned expected outcomes. The old interface-v1 C
-and Recovery-v0 blocked checkpoints remain unchanged. Zero model calls; no model
-campaign was launched. [Reproduction and verification](experiments/state_recovery_authorizer_status_binding_v1/README.md)
-record the scoped contract, evidence and unchanged software trust boundary.
-
-### Model Recovery proposal v1
-
-The [96-call Recovery-only study](research/model-recovery-proposal-v1-results.md)
-used the unchanged repaired value-only boundary after verified failure.
-**MODEL RECOVERY PROPOSAL USEFULNESS REPLICATED.**
-O1: 48/48 valid, 41/48 receipt-consistent, 0 malformed.
-O2: 48/48 valid, 44/48 receipt-consistent, 0 malformed.
-Recovery authorization integrity **PASS**, with zero protected false accepts.
-The realized next state was visible in verified context; this is bounded proposal
-generation, not hidden-state inference or general Recovery reasoning. Exact replay
-and all 33 regression commands returned expected outcomes. No retries, replacement
-calls, extensions or role combinations occurred. Historical A/C/blocked checkpoints
-remain unchanged. [Reproduction and compact evidence](experiments/model_recovery_proposal_v1/README.md)
-retain family thresholds, target/action/token breakdowns and the software trust boundary.
-
-### Model proposal role composition v0
-
-The [zero-call composition checkpoint](research/model-proposal-role-composition-v0-results.md)
-is **C — NOT ESTABLISHED**. The unchanged Map adapter only admits state 1 / HOLD;
-all three required state-0 first actions reject safely before execution. Existing
-opaque Explorer projections also reject empty Memory. No model calls or interface
-changes occurred. Full sequential composition and model behavior remain untested.
-Diagnostic replay matched exactly and all 33 historical regression commands
-returned expected outcomes, including preserved negative checkpoints.
-[Reproduction and compact evidence](experiments/model_proposal_role_composition_v0/README.md)
-distinguish this domain blocker from an authority failure.
-
-### Composition input bindings v1
-
-The [zero-call binding checkpoint](research/composition-input-bindings-v1-results.md)
-is **A — COMPOSITION INPUT BINDINGS READY**. Separate Explorer/Map inputs support
-empty experience and all 12 state/action pairs while historical adapters and
-authority remain unchanged. All A–O properties have executed synthetic evidence;
-36 initial transactions and an eight-step episode publish authentic events, and
-12 correct/12 wrong Recovery proposals authorize/reject independently. Exact
-replay, the old blocked composition-v0 checkpoint and historical regressions pass
-with their expected outcomes. No model calls; the live campaign remains unrun.
-[Reproduction and compact evidence](experiments/composition_input_bindings_v1/README.md)
-record the finite scope and unchanged trust boundaries.
-
-### Model proposal role composition v1
-
-The [first live composition study](research/model-proposal-role-composition-v1-results.md)
-is **C — NOT ESTABLISHED**: 21 real calls (12 Explorer, 9 Map, 0 Recovery).
-All 12 episodes stopped before their first execution: 3 malformed Explorer
-responses and 9 malformed Map responses. No world events or Memory records were
-produced, so real sequential composition remains untested. The observed parser
-boundaries held; no retry, replacement or additional inference followed. The
-288-context UNKNOWN preflight, 41 post-live synthetic controls, seven-file exact
-replay and 39 post-campaign validation commands returned expected outcomes.
-[Compact evidence and reproduction](experiments/model_proposal_role_composition_v1/README.md)
-keep the negative live finding separate from the preserved synthetic parent A.
-
-### Composition initial Map schema diagnosis v0
-
-The [zero-call forensic diagnosis](research/composition-initial-map-schema-diagnosis-v0-results.md)
-identifies a **concrete model/parser specification gap**: all nine live Map objects
-return a string consequence, while exact integer types/domains are not explicitly
-stated in the visible contract. Four consequences are bare K2 tokens; five are
-sentences mentioning the target token. Historical non-empty Map prompts contain
-numeric outcome examples and show 286/288 schema compliance, versus 0/9 in the
-empty-history composition calls. This is an association, not a causal explanation.
-Composition-v1 remains C; no prompt, parser, projection or response was changed.
-[Compact findings and reproduction](experiments/composition_initial_map_schema_diagnosis_v0/README.md)
-retain deterministic regeneration and four focused historical replays. No new
-model calls or next experiment.
-
-### Composition empty-history schema contract v0
-
-The [18-call paired contract study](research/composition-empty-history-schema-contract-v0-results.md)
-meets its frozen **SCHEMA-CONTRACT EFFECT SUPPORTED** criterion: the original
-instruction yields 0/9 valid outputs, versus 9/9 for an explicit integer/domain
-contract. All nine pairs improve; O1 improves 0/4 → 4/4 and O2 0/5 → 5/5.
-The original contexts, user bytes, seeds, sampler and parser are unchanged.
-No world event executes and no Memory is fabricated. This is schema compliance,
-not prediction accuracy or composition success; composition-v1 remains C.
-[Compact evidence and reproduction](experiments/composition_empty_history_schema_contract_v0/README.md)
-record five-file exact replay and five unchanged historical checkpoints.
-No composition rerun or next experiment followed.
-
-
-### Model proposal role composition v2 — interrupted
-
-The [v2 checkpoint](research/model-proposal-role-composition-v2-results.md) is
-**C — NOT ESTABLISHED** after a reported computer crash removed the temporary live
-evidence directory. The preregistration and frozen implementation survived; exact
-live totals and replay are unavailable. Surviving console output reports at least
-18 calls and seven commits, not a complete auditable campaign. No replacement
-inference was performed. The recovered preflight, bounded controls and historical
-regressions passed, with all previous results unchanged.
-[Compact status and verification](experiments/model_proposal_role_composition_v2/README.md)
-keep missing live evidence distinct from synthetic or historical success.
-
-
-### Composition v2 replacement R1
-
-The [independent replacement checkpoint](research/model-proposal-role-composition-v2-replacement-r1-results.md)
-is **A — MULTI-ROLE PROPOSAL COMPOSITION INTEGRITY PASS**: 164 real calls,
-68 executions and 66 authenticated commits.
-The scientific protocol is unchanged; durable write-ahead call and transaction
-records distinguish intent, response, parsing and finalized state. R1's ten-file
-replay plus Memory snapshots match exactly, and all 41 post-campaign checks return
-expected outcomes. The original interrupted v2 remains C with unavailable live
-evidence; no partial data was pooled. [Compact evidence and reproduction](experiments/model_proposal_role_composition_v2_replacement_r1/README.md)
-separate integrity, predictive accuracy and behavioral metrics. No R2 or push.
-
-## Composition Map Memory ablation v0
-
-The separate [42-context paired Map-only study](research/composition-map-memory-ablation-v0-results.md)
-supports the frozen authenticated-history visibility effect: exact predictions
-33/42 with history versus 11/42 withheld, 22 favorable and zero reverse exact
-discordances. Both families passed. All 84 responses were valid; nine history-visible
-predictions remained wrong, and one next-state comparison worsened. Eight evidence
-files replayed byte-identically with zero inference; R1 and prior checkpoints remain
-unchanged. No experimental world execution or Memory writes. This result concerns
-input information visibility, not weights or persistent model learning.
-
-## Cross-episode authenticated Memory boundary v0
-
-The [zero-call boundary feasibility study](research/cross-episode-authenticated-memory-boundary-v0-results.md)
-is **C — NOT ESTABLISHED**. Existing epoch transitions preserve authenticated
-Memory/pairs/packages, chronology, UNKNOWN and ordinary FIFO eviction, but retain
-current state. Fresh construction resets state and discards history. The required
-fresh-state initialization with retained provenance has no existing supported API.
-No core repair or model campaign was started; prior checkpoints remain unchanged.
-
-## Cross-episode initialization boundary v1
-
-The [separate zero-call repair](research/cross-episode-initialization-boundary-v1-results.md)
-is **A — CROSS-EPISODE INITIALIZATION BOUNDARY COMPLETE**. A trusted staged boundary
-resets external/current state from 3 to 0 while preserving authenticated history,
-source lifetime and ordinary authority. A separate Map projection exposes epoch
-identity; historical projections stay unchanged. All 24 reset-failure cases were
-atomic; exact replay, six new tests and 49 historical tests passed. The old v0 C
-remains preserved. Atomicity is limited to the in-process simulator; no model
-campaign, main/tag changes or push.
-
-## Cross-episode model transfer v0
-
-The [48-call paired study](research/cross-episode-model-transfer-v0-results.md)
-is **CROSS-EPISODE AUTHENTICATED-MEMORY BEHAVIORAL TRANSFER NOT ESTABLISHED**.
-Explorer met its frozen rule: CARRY selected ADVANCE 10/12 versus FRESH 5/12.
-Map exact prediction was 3/12 versus 0/12, but its three favorable pairs fell
-below the required four. All calls completed once, exact replay and preservation
-passed, and no model probe changed protected state. The result concerns authenticated
-external history supplied to stateless requests; no persistent model learning.
-See the [frozen thresholds](research/cross-episode-model-transfer-v0-preregistration.md)
-and [compact paired results](experiments/cross_episode_model_transfer_v0/results.json).
-
-## Cross-episode Map history depth v1
-
-The [36-call Map-only depth study](research/cross-episode-map-history-depth-v1-results.md)
-is **TWO-OBSERVATION CROSS-EPISODE MAP EFFECT SUPPORTED**.
-Exact predictions were D0 0/12, D1 7/12 and D2 10/12;
-D2-versus-D0 favorable/reverse pairs were 10/0.
-All 36 calls completed once. Exact replay, independent scoring audit and historical
-preservation passed. Authentic one/two-observation histories survived trusted
-fresh-state initialization; probes remained read-only. The prior transfer-v0
-overall NOT ESTABLISHED result is unchanged. This concerns stateless proposals
-conditioned on authenticated external history, not persistent model learning.
-See the [frozen criteria](research/cross-episode-map-history-depth-v1-preregistration.md)
-and [compact results](experiments/cross_episode_map_history_depth_v1/results.json).
-
-## Cross-episode stale-Memory feasibility v0
-
-The [zero-model feasibility study](research/cross-episode-stale-memory-feasibility-v0-results.md)
-is **A — CROSS-EPISODE STALE-MEMORY FIXTURE FEASIBLE**. After trusted reset,
-authentic new −1 target events coexist with the preserved old +1 observations:
-CONTROL [+1,+1,+1,+1], CHANGED [+1,+1,−1,−1]. P0/P1/P2 are at actual state 0;
-the primary history uses seven records without eviction. Existing native state
-Recovery ran twice in CHANGED and zero in CONTROL, without rewriting predictions,
-receipts or history. Four invalid receipt submissions were rejected; separate
-FIFO controls, exact replay and all seventeen completion gates passed. Zero model
-calls; historical results and authority architecture remain unchanged. This is
-history/provenance feasibility, not a model adaptation result.
-See [preregistration](research/cross-episode-stale-memory-feasibility-v0-preregistration.md)
-and [compact results](experiments/cross_episode_stale_memory_feasibility_v0/results.json).
-
-## Cross-episode stale-Memory Map revision v1
-
-The [144-call Map-only study](research/cross-episode-stale-memory-map-revision-v1-results.md)
-is **CROSS-EPISODE STALE-MEMORY MAP REVISION REPLICATED**.
-Valid responses: 144/144. O1 CHANGED P0 old / CHANGED P2 new /
-CONTROL P2 old: 12/12/12 of twelve each;
-O2: 12/12/12.
-Both families were evaluated independently against unchanged preregistered gates.
-All calls completed once; exact replay and historical preservation passed.
-Authentic old/new evidence remained present, and measured proposals never executed
-or changed Memory. This concerns stateless proposal behavior, not persistent learning.
-See [frozen thresholds](research/cross-episode-stale-memory-map-revision-v1-preregistration.md)
-and [compact trajectories/results](experiments/cross_episode_stale_memory_map_revision_v1/results.json).
-
-## Cross-episode stale-Memory Explorer revision v1
-
-The [144-call Explorer-only study](research/cross-episode-stale-memory-explorer-revision-v1-results.md)
-is **CROSS-EPISODE STALE-MEMORY EXPLORER REVISION NOT ESTABLISHED**. Valid responses: 144/144.
-O1: CHANGED P0 HOLD 12/12; CHANGED P2 RETREAT 1/12; CONTROL P2 HOLD 12/12.
-O2: CHANGED P0 HOLD 12/12; CHANGED P2 RETREAT 0/12; CONTROL P2 HOLD 12/12.
-Both opaque families use their own unchanged preregistered gates.
-All calls completed once; exact replay and historical preservation passed.
-Older true history and new contradictory outcomes coexist; no measured action
-executes or writes Memory. This concerns stateless proposals, not persistent learning.
-See [frozen thresholds](research/cross-episode-stale-memory-explorer-revision-v1-preregistration.md)
-and [compact results/trajectories](experiments/cross_episode_stale_memory_explorer_revision_v1/results.json).
-
-## Explorer value-aggregation contract v0
-
-The separate [96-call Explorer A/B study](research/explorer-value-aggregation-contract-v0-results.md)
-is **EXPLICIT-MEAN EXPLORER POLICY NOT ESTABLISHED**. Valid responses: 96/96.
-O1: CONTROL B HOLD 12/12; CHANGED A/B RETREAT 2/12 and 4/12; favorable CHANGED pairs 2/12.
-O2: CONTROL B HOLD 12/12; CHANGED A/B RETREAT 0/12 and 2/12; favorable CHANGED pairs 2/12.
-A preserves the original instruction; B explicitly specifies arithmetic mean over
-all verified outcomes. Only the system instruction differs within matched pairs.
-Exact replay and historical preservation passed; no measured action executed.
-The preceding Explorer NOT ESTABLISHED checkpoint remains unchanged.
-This tests an explicitly instructed policy, not spontaneous adaptation or learning.
-See [frozen thresholds](research/explorer-value-aggregation-contract-v0-preregistration.md)
-and [compact results/pairs](experiments/explorer_value_aggregation_contract_v0/results.json).
-
-## Map-guided Explorer interface v0
-
-The separate [zero-call architectural study](research/map-guided-explorer-interface-v0-results.md)
-is **A — MAP-GUIDED EXPLORER INTERFACE READY** within its read-only input-binding scope.
-All 18 invariants and 82 deterministic cases passed, including wrong forecasts,
-invalid/missing forecasts, stale rejection and empty-history handling.
-Only finite parsed forecasts enter Explorer; neither role gains truth or authority.
-Exact replay, 75 tests and ten historical replays passed. Both Explorer negatives
-and the Map REPLICATED result remain unchanged. No live model calls or behavior claim.
-See [registration](research/map-guided-explorer-interface-v0-preregistration.md)
-and [compact controls/results](experiments/map_guided_explorer_interface_v0/results.json).
-
-## Map temporal-relation forecast v0
-
-The [receipt-scored Map-only study](research/map-temporal-relation-forecast-v0-results.md)
-completed exactly 96 calls. **MAP TEMPORAL-RELATION FORECASTING BEYOND PURE RECENCY NOT ESTABLISHED**.
-The registered F/P histories share counts and latest value but differ in order and seventh realized outcome.
-All earlier results remain unchanged. See [preregistration](research/map-temporal-relation-forecast-v0-preregistration.md),
-[all parsed outcomes and frozen gates](experiments/map_temporal_relation_forecast_v0/results.json),
-and [executed verification](experiments/map_temporal_relation_forecast_v0/verification.json).
-
-## Map–Explorer oracle decomposition v0
-
-The [registered proposal-only diagnostic](research/map-explorer-oracle-decomposition-v0-results.md)
-completed 269 real calls: 240 mandatory and 29 eligible conditional calls.
-**PIPELINE NOT FULLY ESTABLISHED**. Forecast ranking, oracle comparison and following-Map
-remain separate decisions; ties intentionally leave conditional slots unissued.
-The prior temporal negative remains unchanged. See [preregistration](research/map-explorer-oracle-decomposition-v0-preregistration.md),
-[compact per-context results](experiments/map_explorer_oracle_decomposition_v0/results.json),
-and [verification](experiments/map_explorer_oracle_decomposition_v0/verification.json).
-
-## Explorer finite-value comparator v0
-
-The [detached comparator study](research/explorer-finite-value-comparator-v0-results.md)
-completed exactly 144 real Explorer calls with no Map call, world execution or Memory change.
-**ZERO-OVER-NEGATIVE COMPARATOR NOT ESTABLISHED**; independently, **NEXT_STATE IRRELEVANCE NOT ESTABLISHED**.
-The two positive-best controls remain descriptive; prior results are unchanged. See
-[preregistration](research/explorer-finite-value-comparator-v0-preregistration.md),
-[compact results including all 72 matched pairs](experiments/explorer_finite_value_comparator_v0/results.json),
-and [verification](experiments/explorer_finite_value_comparator_v0/verification.json).
+models and datasets retain their own terms. See [provenance](docs/PROVENANCE.md).
+
+[core]: https://github.com/sotiriosc/horus/blob/373b1ec5b6269d6d3bb8bd853da2e692800568c3/research/grounded-state-core-v0/architecture.md
+[s-promotion]: https://github.com/sotiriosc/horus/blob/8bc396b96662ff7fa04b87a7a3300008e12228b9/research/grounded-stagnation-escape-promotion-v0/promotion-record.md
+[e-promotion]: https://github.com/sotiriosc/horus/blob/69947aa243a69e7ae26db534727a7122922d978d/research/empirical-evidence-acquisition-promotion-v0/result.md
+[e-code]: https://github.com/sotiriosc/horus/blob/69947aa243a69e7ae26db534727a7122922d978d/grounded_agent/empirical_policy.py
+[e-replication]: https://github.com/sotiriosc/horus/blob/f90a84444ab320e13db4b1573d454c3d0d7f90d5/research/empirical-evidence-acquisition-replication-v0/result.md
+[qwen-runtime]: https://github.com/sotiriosc/horus/blob/48ac31cb3f111c74f1ef2eea77af2d7c26435299/engineering/grounded-agent-development-runtime-v0/qualification.md
+[qwen-substitution]: https://github.com/sotiriosc/horus/blob/4e3053c05e6bafb5c3f53b08ce1ceedf0ebb65a3/research/qwen3-grounded-agent-substitution-v0/result.md
+[qwen-semantic]: https://github.com/sotiriosc/horus/blob/a02af959d18b69a34cfc20ce87c7feb5e0296471/research/qwen3-bounded-thinking-action-v0.1/result.md
+[qwen-r128]: https://github.com/sotiriosc/horus/blob/40dbe69673e9b146888fdbb08c3df713aef6f336/research/qwen3-r128-autonomous-grounded-agent-v0/result.md
+[self-v0]: https://github.com/sotiriosc/horus/blob/ba698e948e2ae27427bac1e9f772cf6c8b485de8/research/agent-led-self-improvement-proposal-v0/result.md
+[self-v01]: https://github.com/sotiriosc/horus/blob/ecd097af2f007cb431e3ae736832960f86805deb/research/agent-self-model-grounding-v0.1/result.md
+[diagnosis]: https://github.com/sotiriosc/horus/blob/11b32a6ab54b803f0212ece834a4d7c7c75a23cb/research/agent-led-diagnosis-verified-introspection-v0/result.md
