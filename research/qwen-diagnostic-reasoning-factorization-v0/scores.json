@@ -1,0 +1,2058 @@
+{
+  "status": "DIAGNOSTIC_REASONING_FACTORIZATION_COMPLETE_V0",
+  "arms": {
+    "O": {
+      "correct": 18,
+      "schema_valid": 20,
+      "parsed": 20,
+      "error_categories": {
+        "VALUE_MISMATCH": 2
+      },
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 3,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 4,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 4
+      },
+      "by_composition": {
+        "simpler": 9,
+        "composition-dependent": 9
+      },
+      "individual_correct": 38,
+      "per_family": {
+        "binomial selection count": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "conjunctive-disjunctive Boolean circuit": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "directed reachability closure": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "finite linear convolution": {
+          "joint_correct": 0,
+          "individual_correct": 2,
+          "worlds": 2,
+          "computations": 4
+        },
+        "finite-state sequence recognizer": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "greatest common divisor": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "overlapping substring occurrence count": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "sliding window maximum": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "stable vowel deletion": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        },
+        "unit-cost string edit distance": {
+          "joint_correct": 2,
+          "individual_correct": 4,
+          "worlds": 2,
+          "computations": 4
+        }
+      },
+      "gate": false
+    },
+    "S": {
+      "correct": 8,
+      "schema_valid": 18,
+      "parsed": 20,
+      "error_categories": {
+        "STATE_FIELD_MISMATCH": 10,
+        "SCHEMA_FAILURE": 2
+      },
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": 2,
+        "NO_SUPPORTED_DIAGNOSIS": 1,
+        "INSUFFICIENT_EVIDENCE": 1,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 2
+      },
+      "by_composition": {
+        "simpler": 6,
+        "composition-dependent": 2
+      },
+      "fields": {
+        "target_component_id": 18,
+        "in_service_build_id": 18,
+        "in_service_receipt_ids": 16,
+        "other_build_receipt_ids": 12,
+        "other_component_receipt_ids": 16,
+        "receipt_source_links": 17,
+        "capture_groups": 15,
+        "source_knowledge": 11,
+        "conflicting_capture_ids": 13
+      },
+      "gate": false
+    },
+    "R": {
+      "correct": 10,
+      "schema_valid": 20,
+      "parsed": 20,
+      "error_categories": {
+        "CLASS_MISMATCH": 10
+      },
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 2,
+        "INSUFFICIENT_EVIDENCE": 2,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0
+      },
+      "by_composition": {
+        "simpler": 4,
+        "composition-dependent": 6
+      },
+      "gate": false,
+      "critical_epistemic_correct": 4,
+      "critical_epistemic_threshold_passed": false,
+      "confusion_matrix": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "SUPPORTED_CURRENT_DEFECT": 4,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 1,
+          "INSUFFICIENT_EVIDENCE": 2,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 1,
+          "INVALID_OUTPUT": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 1,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 3,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        }
+      },
+      "matched_decisive_change": "NOT_APPLICABLE_NO_PAIRS_PREREGISTERED"
+    },
+    "E": {
+      "correct": 8,
+      "schema_valid": 20,
+      "parsed": 20,
+      "error_categories": {
+        "CLASS_MISMATCH": 12
+      },
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": 4,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 1,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0
+      },
+      "by_composition": {
+        "simpler": 5,
+        "composition-dependent": 3
+      },
+      "gate": false,
+      "critical_epistemic_correct": 1,
+      "critical_epistemic_threshold_passed": false,
+      "confusion_matrix": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "SUPPORTED_CURRENT_DEFECT": 4,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "SUPPORTED_CURRENT_DEFECT": 1,
+          "NO_SUPPORTED_DIAGNOSIS": 3,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 1,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "SUPPORTED_CURRENT_DEFECT": 1,
+          "NO_SUPPORTED_DIAGNOSIS": 3,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 2,
+          "NO_SUPPORTED_DIAGNOSIS": 2,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        }
+      },
+      "matched_decisive_change": "NOT_APPLICABLE_NO_PAIRS_PREREGISTERED"
+    }
+  },
+  "gates": {
+    "O": false,
+    "S": false,
+    "R": false,
+    "E": false
+  },
+  "findings": [
+    "OPERATIONAL_COMPUTATION_COMPETENCE_NOT_ESTABLISHED",
+    "EVIDENCE_STATE_REASONING_COMPETENCE_NOT_ESTABLISHED",
+    "EPISTEMIC_REDUCTION_COMPETENCE_NOT_ESTABLISHED",
+    "END_TO_END_DIAGNOSIS_COMPETENCE_NOT_ESTABLISHED"
+  ],
+  "registered_interpretation": [
+    "D_MULTIPLE_ISOLATED_LIMITATIONS"
+  ],
+  "matched_worlds": [
+    {
+      "world_id": "w1e04f7b3754e",
+      "family": "unit-cost string edit distance",
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "w207cc12f3c2e",
+      "family": "finite linear convolution",
+      "class": "INSUFFICIENT_EVIDENCE",
+      "correctness": {
+        "O": false,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "NO_SUPPORTED_DIAGNOSIS",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "w2d40dc1ef9ab",
+      "family": "greatest common divisor",
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "NO_SUPPORTED_DIAGNOSIS",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "w4045154ea61d",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "SUPPORTED_CURRENT_DEFECT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "w50e12a812eb3",
+      "family": "sliding window maximum",
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "SUPPORTED_CURRENT_DEFECT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "w80751078b01a",
+      "family": "finite-state sequence recognizer",
+      "class": "INSUFFICIENT_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": false
+      },
+      "R_selected": "INSUFFICIENT_EVIDENCE",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "w84507bf62726",
+      "family": "overlapping substring occurrence count",
+      "class": "INSUFFICIENT_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "w8778803bb730",
+      "family": "unit-cost string edit distance",
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wa43120033b1c",
+      "family": "stable vowel deletion",
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "SUPPORTED_CURRENT_DEFECT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "wb465decd9d84",
+      "family": "directed reachability closure",
+      "class": "INSUFFICIENT_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "INSUFFICIENT_EVIDENCE",
+      "E_selected": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "world_id": "wc0f27af52686",
+      "family": "stable vowel deletion",
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wc615b7a5117f",
+      "family": "finite linear convolution",
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "correctness": {
+        "O": false,
+        "S": true,
+        "R": false,
+        "E": true
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wc7e52e7d1b96",
+      "family": "binomial selection count",
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "INSUFFICIENT_EVIDENCE",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wcaafc1a41315",
+      "family": "directed reachability closure",
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wcde36fb724f5",
+      "family": "greatest common divisor",
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "SUPPORTED_CURRENT_DEFECT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "wcf8ac40be9b1",
+      "family": "overlapping substring occurrence count",
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": true,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "wd0562a3af7f3",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "NO_SUPPORTED_DIAGNOSIS",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wd440bda21d29",
+      "family": "finite-state sequence recognizer",
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": true,
+        "E": true
+      },
+      "R_selected": "NO_SUPPORTED_DIAGNOSIS",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    {
+      "world_id": "wf0649f5ed7c1",
+      "family": "sliding window maximum",
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "correctness": {
+        "O": true,
+        "S": false,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "SUPPORTED_CURRENT_DEFECT"
+    },
+    {
+      "world_id": "wffd7271aa8b2",
+      "family": "binomial selection count",
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "correctness": {
+        "O": true,
+        "S": true,
+        "R": false,
+        "E": false
+      },
+      "R_selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "E_selected": "NO_SUPPORTED_DIAGNOSIS"
+    }
+  ],
+  "associations": {
+    "O_wrong_and_E_wrong": {
+      "count": 1,
+      "denominator": 2,
+      "worlds": [
+        "w207cc12f3c2e"
+      ]
+    },
+    "O_correct_S_wrong": {
+      "count": 11,
+      "denominator": 18,
+      "worlds": [
+        "w1e04f7b3754e",
+        "w2d40dc1ef9ab",
+        "w80751078b01a",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wa43120033b1c",
+        "wcaafc1a41315",
+        "wcde36fb724f5",
+        "wd0562a3af7f3",
+        "wd440bda21d29",
+        "wf0649f5ed7c1"
+      ]
+    },
+    "S_correct_R_wrong": {
+      "count": 4,
+      "denominator": 8,
+      "worlds": [
+        "wc0f27af52686",
+        "wc615b7a5117f",
+        "wc7e52e7d1b96",
+        "wffd7271aa8b2"
+      ]
+    },
+    "all_isolated_correct_E_wrong": {
+      "count": 1,
+      "denominator": 4,
+      "worlds": [
+        "wcf8ac40be9b1"
+      ]
+    },
+    "E_correct_despite_isolated_error": {
+      "count": 5,
+      "denominator": 8,
+      "worlds": [
+        "wa43120033b1c",
+        "wc615b7a5117f",
+        "wcde36fb724f5",
+        "wd0562a3af7f3",
+        "wd440bda21d29"
+      ]
+    },
+    "at_least_two_isolated_errors": {
+      "count": 7,
+      "denominator": 20,
+      "worlds": [
+        "w1e04f7b3754e",
+        "w207cc12f3c2e",
+        "w2d40dc1ef9ab",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wc615b7a5117f",
+        "wf0649f5ed7c1"
+      ]
+    },
+    "O_S_both_wrong": {
+      "count": 1,
+      "denominator": 2,
+      "worlds": [
+        "w207cc12f3c2e"
+      ]
+    },
+    "O_R_both_wrong": {
+      "count": 2,
+      "denominator": 2,
+      "worlds": [
+        "w207cc12f3c2e",
+        "wc615b7a5117f"
+      ]
+    },
+    "O_E_both_wrong": {
+      "count": 1,
+      "denominator": 2,
+      "worlds": [
+        "w207cc12f3c2e"
+      ]
+    },
+    "S_R_both_wrong": {
+      "count": 6,
+      "denominator": 12,
+      "worlds": [
+        "w1e04f7b3754e",
+        "w207cc12f3c2e",
+        "w2d40dc1ef9ab",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wf0649f5ed7c1"
+      ]
+    },
+    "S_E_both_wrong": {
+      "count": 8,
+      "denominator": 12,
+      "worlds": [
+        "w1e04f7b3754e",
+        "w207cc12f3c2e",
+        "w2d40dc1ef9ab",
+        "w80751078b01a",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wcaafc1a41315",
+        "wf0649f5ed7c1"
+      ]
+    },
+    "R_E_both_wrong": {
+      "count": 9,
+      "denominator": 10,
+      "worlds": [
+        "w1e04f7b3754e",
+        "w207cc12f3c2e",
+        "w2d40dc1ef9ab",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wc0f27af52686",
+        "wc7e52e7d1b96",
+        "wf0649f5ed7c1",
+        "wffd7271aa8b2"
+      ]
+    }
+  },
+  "R_E_comparison": {
+    "E_minus_R_correct": -2,
+    "recognized_class_disagreements": 12,
+    "disagreement_worlds": [
+      "w1e04f7b3754e",
+      "w2d40dc1ef9ab",
+      "w80751078b01a",
+      "w84507bf62726",
+      "w8778803bb730",
+      "wc0f27af52686",
+      "wc615b7a5117f",
+      "wc7e52e7d1b96",
+      "wcaafc1a41315",
+      "wcf8ac40be9b1",
+      "wf0649f5ed7c1",
+      "wffd7271aa8b2"
+    ],
+    "missing_label_worlds": [],
+    "transitions": {
+      "correct_to_wrong": 3,
+      "wrong_to_correct": 1,
+      "wrong_to_different_wrong": 8,
+      "unchanged": 8
+    },
+    "transition_worlds": {
+      "correct_to_wrong": [
+        "w80751078b01a",
+        "wcaafc1a41315",
+        "wcf8ac40be9b1"
+      ],
+      "wrong_to_correct": [
+        "wc615b7a5117f"
+      ],
+      "wrong_to_different_wrong": [
+        "w1e04f7b3754e",
+        "w2d40dc1ef9ab",
+        "w84507bf62726",
+        "w8778803bb730",
+        "wc0f27af52686",
+        "wc7e52e7d1b96",
+        "wf0649f5ed7c1",
+        "wffd7271aa8b2"
+      ],
+      "unchanged": [
+        "w207cc12f3c2e",
+        "w4045154ea61d",
+        "w50e12a812eb3",
+        "wa43120033b1c",
+        "wb465decd9d84",
+        "wcde36fb724f5",
+        "wd0562a3af7f3",
+        "wd440bda21d29"
+      ]
+    }
+  },
+  "combined_system_capability": "NOT_TESTED_NO_STAGE_CHAINING",
+  "rows": [
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w4045154ea61d",
+      "render_id": "ddbbfecbab30bb714e43",
+      "arm": "O",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "w4045154ea61d",
+      "render_id": "defaba7a6bd72903f3a9",
+      "arm": "S",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "w4045154ea61d",
+      "render_id": "5523c3cbb6ca069f7082",
+      "arm": "R",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "w4045154ea61d",
+      "render_id": "b0c947536b02dce4618c",
+      "arm": "E",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wd440bda21d29",
+      "render_id": "f5491cae8137bf53244c",
+      "arm": "O",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite-state sequence recognizer",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wd440bda21d29",
+      "render_id": "fcdc07d41f6241685358",
+      "arm": "S",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite-state sequence recognizer",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": null,
+      "world_id": "wd440bda21d29",
+      "render_id": "6736e32a7347e621575c",
+      "arm": "R",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite-state sequence recognizer",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": null,
+      "world_id": "wd440bda21d29",
+      "render_id": "42415776390e77a6b652",
+      "arm": "E",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite-state sequence recognizer",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wb465decd9d84",
+      "render_id": "e19ad332a3c37887c29a",
+      "arm": "O",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "directed reachability closure",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wb465decd9d84",
+      "render_id": "adc6c30960afc45b46ad",
+      "arm": "S",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "directed reachability closure",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "error_category": null,
+      "world_id": "wb465decd9d84",
+      "render_id": "8a4791e74a39ec8140d4",
+      "arm": "R",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "directed reachability closure",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "error_category": null,
+      "world_id": "wb465decd9d84",
+      "render_id": "de51d025622216768abc",
+      "arm": "E",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "directed reachability closure",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w8778803bb730",
+      "render_id": "426ba5dfc7cba8f6b194",
+      "arm": "O",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "unit-cost string edit distance",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "w8778803bb730",
+      "render_id": "9aea2c5b6c694e874610",
+      "arm": "S",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "unit-cost string edit distance",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w8778803bb730",
+      "render_id": "15c788a701820461a601",
+      "arm": "R",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "unit-cost string edit distance",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w8778803bb730",
+      "render_id": "186339315e67f8937ef2",
+      "arm": "E",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "unit-cost string edit distance",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w2d40dc1ef9ab",
+      "render_id": "9d4fa11996bc0b36d1d3",
+      "arm": "O",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "greatest common divisor",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "w2d40dc1ef9ab",
+      "render_id": "89974bbb6516f04615b5",
+      "arm": "S",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "greatest common divisor",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w2d40dc1ef9ab",
+      "render_id": "c2637d6a8d3d852db361",
+      "arm": "R",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "greatest common divisor",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w2d40dc1ef9ab",
+      "render_id": "0b9bc4f6dbeee1d9a9d3",
+      "arm": "E",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "greatest common divisor",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w50e12a812eb3",
+      "render_id": "7aa180989f1ec47e85b7",
+      "arm": "O",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "sliding window maximum",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "w50e12a812eb3",
+      "render_id": "13a17c9169d2b596fdbc",
+      "arm": "S",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "sliding window maximum",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "w50e12a812eb3",
+      "render_id": "561547a69f4e674009d9",
+      "arm": "R",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "sliding window maximum",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "w50e12a812eb3",
+      "render_id": "384b8937b407d5866dba",
+      "arm": "E",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "sliding window maximum",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "VALUE_MISMATCH",
+      "individual_correct": [
+        true,
+        false
+      ],
+      "world_id": "wc615b7a5117f",
+      "render_id": "5d9a69d032609b0cf21e",
+      "arm": "O",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite linear convolution",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wc615b7a5117f",
+      "render_id": "d3912141c867aaadce0b",
+      "arm": "S",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite linear convolution",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wc615b7a5117f",
+      "render_id": "580be484506ab129ae40",
+      "arm": "R",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite linear convolution",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": null,
+      "world_id": "wc615b7a5117f",
+      "render_id": "458b4ba889efe761af10",
+      "arm": "E",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "finite linear convolution",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w84507bf62726",
+      "render_id": "f222c89cb5e01a9e5b34",
+      "arm": "O",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "overlapping substring occurrence count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "w84507bf62726",
+      "render_id": "a4781061bc1199b28359",
+      "arm": "S",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "overlapping substring occurrence count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w84507bf62726",
+      "render_id": "5e82539ce4b7a2723e2f",
+      "arm": "R",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "overlapping substring occurrence count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w84507bf62726",
+      "render_id": "192599dfde9be85568bd",
+      "arm": "E",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "overlapping substring occurrence count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wc7e52e7d1b96",
+      "render_id": "958ac3aa1c0d91d783e4",
+      "arm": "O",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "binomial selection count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wc7e52e7d1b96",
+      "render_id": "99d0c6304092f4c370c9",
+      "arm": "S",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "binomial selection count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wc7e52e7d1b96",
+      "render_id": "da45420ae6756fa17d5d",
+      "arm": "R",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "binomial selection count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wc7e52e7d1b96",
+      "render_id": "9f051fa75238ffe15c68",
+      "arm": "E",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "binomial selection count",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wc0f27af52686",
+      "render_id": "fef82b5d4bf877d554ad",
+      "arm": "O",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "stable vowel deletion",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wc0f27af52686",
+      "render_id": "3ded70df216b4f45cef6",
+      "arm": "S",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "stable vowel deletion",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wc0f27af52686",
+      "render_id": "47bb0da8f641bdd0a27d",
+      "arm": "R",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "stable vowel deletion",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wc0f27af52686",
+      "render_id": "eb9397adf482a81ef73e",
+      "arm": "E",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "stable vowel deletion",
+      "composition": "simpler"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wd0562a3af7f3",
+      "render_id": "c9f609678a81987f2e4d",
+      "arm": "O",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": false,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": false,
+        "receipt_source_links": false,
+        "capture_groups": false,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wd0562a3af7f3",
+      "render_id": "bbf409012ac49e3f8995",
+      "arm": "S",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": null,
+      "world_id": "wd0562a3af7f3",
+      "render_id": "e4e13f6358306f20d056",
+      "arm": "R",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": null,
+      "world_id": "wd0562a3af7f3",
+      "render_id": "876f33f64d4ce242b594",
+      "arm": "E",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w80751078b01a",
+      "render_id": "4684c5648e6a8e948b05",
+      "arm": "O",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite-state sequence recognizer",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": false,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "w80751078b01a",
+      "render_id": "0c05b5aabff0d6a6f367",
+      "arm": "S",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite-state sequence recognizer",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "error_category": null,
+      "world_id": "w80751078b01a",
+      "render_id": "f8046fa31d6056220772",
+      "arm": "R",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite-state sequence recognizer",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w80751078b01a",
+      "render_id": "c9b49fd87cf9289fa033",
+      "arm": "E",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite-state sequence recognizer",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wcaafc1a41315",
+      "render_id": "0d7c6e3940e7d8b9cfaa",
+      "arm": "O",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "directed reachability closure",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": false,
+      "correct": false,
+      "selected": null,
+      "error_category": "SCHEMA_FAILURE",
+      "fields": {
+        "target_component_id": false,
+        "in_service_build_id": false,
+        "in_service_receipt_ids": false,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": false,
+        "receipt_source_links": false,
+        "capture_groups": false,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "wcaafc1a41315",
+      "render_id": "f3274aa838df8d1b8bc4",
+      "arm": "S",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "directed reachability closure",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": null,
+      "world_id": "wcaafc1a41315",
+      "render_id": "1ce101dde343276067a8",
+      "arm": "R",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "directed reachability closure",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wcaafc1a41315",
+      "render_id": "50b73fb3d3a027997d86",
+      "arm": "E",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "directed reachability closure",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "w1e04f7b3754e",
+      "render_id": "5a66702f8617cb9bebab",
+      "arm": "O",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "unit-cost string edit distance",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": false,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "w1e04f7b3754e",
+      "render_id": "c7a81864571368d8d4ae",
+      "arm": "S",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "unit-cost string edit distance",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w1e04f7b3754e",
+      "render_id": "003b509bc64ff436823f",
+      "arm": "R",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "unit-cost string edit distance",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w1e04f7b3754e",
+      "render_id": "95219f615b50705b672a",
+      "arm": "E",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "unit-cost string edit distance",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wcde36fb724f5",
+      "render_id": "8cf512eb10c8d24d99d0",
+      "arm": "O",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "greatest common divisor",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": false,
+      "correct": false,
+      "selected": null,
+      "error_category": "SCHEMA_FAILURE",
+      "fields": {
+        "target_component_id": false,
+        "in_service_build_id": false,
+        "in_service_receipt_ids": false,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": false,
+        "receipt_source_links": false,
+        "capture_groups": false,
+        "source_knowledge": false,
+        "conflicting_capture_ids": false
+      },
+      "world_id": "wcde36fb724f5",
+      "render_id": "f23ddfe183ca2d6fb31a",
+      "arm": "S",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "greatest common divisor",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "wcde36fb724f5",
+      "render_id": "7bffe3c2f6da713fede9",
+      "arm": "R",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "greatest common divisor",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "wcde36fb724f5",
+      "render_id": "930cada299f51bf11f68",
+      "arm": "E",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "greatest common divisor",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wf0649f5ed7c1",
+      "render_id": "6d21b2a1f63735952033",
+      "arm": "O",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "sliding window maximum",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": false,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wf0649f5ed7c1",
+      "render_id": "29483513ee943b376afa",
+      "arm": "S",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "sliding window maximum",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wf0649f5ed7c1",
+      "render_id": "d99bfff6fc0afd453944",
+      "arm": "R",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "sliding window maximum",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wf0649f5ed7c1",
+      "render_id": "965c85dd95ed88a6ee19",
+      "arm": "E",
+      "gold_class": "NO_SUPPORTED_DIAGNOSIS",
+      "family": "sliding window maximum",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "VALUE_MISMATCH",
+      "individual_correct": [
+        true,
+        false
+      ],
+      "world_id": "w207cc12f3c2e",
+      "render_id": "d15db61e9784effd80c2",
+      "arm": "O",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite linear convolution",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": false,
+        "other_component_receipt_ids": false,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "w207cc12f3c2e",
+      "render_id": "4701507e0b8cbc592c53",
+      "arm": "S",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite linear convolution",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w207cc12f3c2e",
+      "render_id": "e40ed838b3550fbef00e",
+      "arm": "R",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite linear convolution",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "w207cc12f3c2e",
+      "render_id": "8bf199110cf2a7f5f3f7",
+      "arm": "E",
+      "gold_class": "INSUFFICIENT_EVIDENCE",
+      "family": "finite linear convolution",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wcf8ac40be9b1",
+      "render_id": "a90385272288fb6c46a6",
+      "arm": "O",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "overlapping substring occurrence count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wcf8ac40be9b1",
+      "render_id": "5f02b978bdad059e2b2d",
+      "arm": "S",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "overlapping substring occurrence count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": null,
+      "world_id": "wcf8ac40be9b1",
+      "render_id": "8945316543c57cc7217d",
+      "arm": "R",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "overlapping substring occurrence count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wcf8ac40be9b1",
+      "render_id": "672770eb1590bd04fb3d",
+      "arm": "E",
+      "gold_class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "family": "overlapping substring occurrence count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wffd7271aa8b2",
+      "render_id": "54d07e88c0593825cf28",
+      "arm": "O",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "binomial selection count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": true,
+        "source_knowledge": true,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wffd7271aa8b2",
+      "render_id": "26c3f5df4c7d55a908c0",
+      "arm": "S",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "binomial selection count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wffd7271aa8b2",
+      "render_id": "d5d8a2b300c8e6e16d90",
+      "arm": "R",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "binomial selection count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "error_category": "CLASS_MISMATCH",
+      "world_id": "wffd7271aa8b2",
+      "render_id": "44e5a27733ac74ac5231",
+      "arm": "E",
+      "gold_class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "family": "binomial selection count",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": null,
+      "error_category": null,
+      "individual_correct": [
+        true,
+        true
+      ],
+      "world_id": "wa43120033b1c",
+      "render_id": "b6300a1b461475e8bb8b",
+      "arm": "O",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "stable vowel deletion",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": null,
+      "error_category": "STATE_FIELD_MISMATCH",
+      "fields": {
+        "target_component_id": true,
+        "in_service_build_id": true,
+        "in_service_receipt_ids": true,
+        "other_build_receipt_ids": true,
+        "other_component_receipt_ids": true,
+        "receipt_source_links": true,
+        "capture_groups": false,
+        "source_knowledge": false,
+        "conflicting_capture_ids": true
+      },
+      "world_id": "wa43120033b1c",
+      "render_id": "0dbdba73622dea4e3b6d",
+      "arm": "S",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "stable vowel deletion",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "wa43120033b1c",
+      "render_id": "423a1a5b1a8328ca80e1",
+      "arm": "R",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "stable vowel deletion",
+      "composition": "composition-dependent"
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "error_category": null,
+      "world_id": "wa43120033b1c",
+      "render_id": "d559d1a99304a59d01e5",
+      "arm": "E",
+      "gold_class": "SUPPORTED_CURRENT_DEFECT",
+      "family": "stable vowel deletion",
+      "composition": "composition-dependent"
+    }
+  ],
+  "attempted": 80,
+  "completed": 80,
+  "raw_commit_before_scoring": "2091c8fe6f1b6e77c8c56af78e49a07a5d349f64"
+}
