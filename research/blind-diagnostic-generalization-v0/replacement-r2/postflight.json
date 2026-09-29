@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "replacement_id": "R2",
+  "verified_utc": "2026-09-29T14:36:35.483003+00:00",
+  "inheritance": {
+    "status": "PASS",
+    "parent_files_byte_identical": 1643,
+    "materialized_files_hashed": 184,
+    "request_hashes_verified": 80,
+    "protected_refs": {
+      "main": "b8e4245ef14b11ee5d94ce851aec4d8dc059963f",
+      "research/empirical-evidence-acquisition-promotion-v0": "69947aa243a69e7ae26db534727a7122922d978d",
+      "research/grounded-stagnation-escape-promotion-controlled-v0": "afc1c856aecbae65a1389d0abf144b6a50d09133",
+      "research/agent-led-diagnosis-verified-introspection-v0": "11b32a6ab54b803f0212ece834a4d7c7c75a23cb",
+      "research/agent-self-model-grounding-v0.1": "ecd097af2f007cb431e3ae736832960f86805deb",
+      "research/agent-led-self-improvement-proposal-v0": "ba698e948e2ae27427bac1e9f772cf6c8b485de8",
+      "research/blind-diagnostic-generalization-v0": "bb58926e0f2581bee38393e179b758b18d0879e4",
+      "research/blind-diagnostic-generalization-v0-replacement-r1": "b156dd01ce6f1deed049fa2589581888d36f34fb",
+      "engineering/blind-diagnostic-runtime-control-qualification-v0": "df2d0ebc41d7c1b53a85779c38dab45cb21ec2e9"
+    },
+    "world_regeneration": false,
+    "original_campaign_classification": "INVALID_STUDY"
+  },
+  "execution_freeze": {
+    "commit": "d7df165e08a20e6302d8b4e72224ac69dc69df63",
+    "method_files_unchanged": 11
+  },
+  "runtime": {
+    "status": "PASS",
+    "sha256": {
+      "model/Qwen3-14B-Q4_K_M.gguf": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+      "engine/llama-b11242-bin-ubuntu-cuda-12.8-x64.tar.gz": "6ab3e1d60a6cab34806ae23c90956ba668047c3bc056eab3be2bfa73eca24fac",
+      "engine/cudart-llama-b11242-bin-ubuntu-cuda-12.8-x64.tar.gz": "e67423c1553f8f4cd22d6412c74604a6d50b9b3cccb48546758b55e912407603",
+      "installed_server": "778f1b3fbbb76e921af1d7f25a5b61d82859962dcd18c71ce86ab84d7f4884e5"
+    },
+    "version": "version: 0.5.0-dev (build 11242, commit 526c43b8f)\nbuilt with GNU 13.3.0 for Linux x86_64\n",
+    "llama_cpp_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+    "launch_flags": "Original command plus only the engineering-qualified slot-save-path; exact delta in launch-plan.json"
+  },
+  "schema": {
+    "status": "PASS_WITH_PROSPECTIVE_LIMITATIONS",
+    "python": "3.10.12",
+    "jsonschema": "3.2.0",
+    "schema_sha256": "a3aaded8a99b2d6671b86a0822cd830d9ec437ff26df1d6521640f9dbb9586d0",
+    "source_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+    "scientific_validator_authoritative": true
+  },
+  "raw_freeze_commit": "364c3eb06635751b47d540d46c5792fd45a4fb7d",
+  "evidence_order": {
+    "raw_commit_parent": "d7df165e08a20e6302d8b4e72224ac69dc69df63",
+    "raw_commit_contains_all_raw_files": true,
+    "raw_commit_contains_scores": false,
+    "raw_commit_contains_secondary_analysis": false,
+    "primary_scoring_after_raw_commit": true,
+    "exact_replay": {
+      "status": "PASS",
+      "replacement_id": "R2",
+      "byte_identical": true,
+      "score_sha256": "961dbaec40add7673aba15328efe9fd3f8d8eae5cd676b7da0c9043dc52f1883",
+      "new_model_calls": 0
+    }
+  },
+  "raw_inventory_hashes_verified": 162,
+  "raw_files_read_only": true,
+  "exact_request_hashes_and_dispatch_order_verified": 80,
+  "complete_private_http_bodies_verified": 243,
+  "private_completion_envelopes_verified": 80,
+  "private_archive_heads_excluded": 15,
+  "slot_directory_removed": true,
+  "dedicated_port_closed": true,
+  "execution": {
+    "real_server_starts": 1,
+    "real_model_requests": 80,
+    "real_completions": 80,
+    "server_terminated": true,
+    "retries": 0,
+    "answer_repairs": 0,
+    "critic_calls": 0,
+    "auditor_rescue": 0,
+    "save_restore_operations": 0,
+    "world_executions": 0,
+    "authenticated_receipts": 0,
+    "memory_writes": 0,
+    "training": 0,
+    "policy_changes": 0,
+    "threshold_changes": 0,
+    "architecture_changes": 0,
+    "improvement_proposals": 0,
+    "world_regeneration": false
+  },
+  "active_architecture": "grounded authority -> S -> E -> ordinary model (unchanged)",
+  "preservation_attestation_basis": "All 1643 inherited tracked files, nine protected branch heads, frozen R2 implementation and raw hashes checked; isolated operation history contains only the benchmark server and research evidence/reporting commands, with no Horus execution or Memory/policy operations. No private Memory database was opened.",
+  "publication_scope": "Only this R2 branch and its audited public ancestry; no merges or other branch pushes."
+}
