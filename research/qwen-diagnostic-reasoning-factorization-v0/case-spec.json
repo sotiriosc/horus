@@ -1,0 +1,752 @@
+{
+  "operations": [
+    {
+      "index": 0,
+      "family": "conjunctive-disjunctive Boolean circuit",
+      "rule": "Compute (a AND b) OR c, with binary inputs. Emit 0 or 1.",
+      "parameter_sets": [
+        [
+          {
+            "a": 1,
+            "b": 0,
+            "c": 0
+          },
+          {
+            "a": 0,
+            "b": 0,
+            "c": 1
+          }
+        ],
+        [
+          {
+            "a": 1,
+            "b": 1,
+            "c": 0
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "c": 0
+          }
+        ]
+      ],
+      "domains": [
+        "interlock relay evaluator",
+        "ventilation logic evaluator"
+      ]
+    },
+    {
+      "index": 1,
+      "family": "finite-state sequence recognizer",
+      "rule": "Begin in q0. Read the word left to right. Transitions: q0 on a -> q1, on b -> q0; q1 on a -> q1, on b -> q2; q2 on a -> q3, on b -> q0; q3 on either letter stays q3. Emit the final state name.",
+      "parameter_sets": [
+        [
+          {
+            "word": "abba"
+          },
+          {
+            "word": "ababa"
+          }
+        ],
+        [
+          {
+            "word": "baaab"
+          },
+          {
+            "word": "bbaba"
+          }
+        ]
+      ],
+      "domains": [
+        "serial grammar monitor",
+        "rhythm grammar monitor"
+      ]
+    },
+    {
+      "index": 2,
+      "family": "directed reachability closure",
+      "rule": "Starting from start, follow any number of directed edges, including zero. Emit five bits for vertices 0,1,2,3,4 in that order: 1 exactly when reachable, otherwise 0.",
+      "parameter_sets": [
+        [
+          {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 0
+          },
+          {
+            "edges": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "start": 3
+          }
+        ],
+        [
+          {
+            "edges": [
+              [
+                0,
+                2
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            "start": 0
+          },
+          {
+            "edges": [
+              [
+                0,
+                2
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            "start": 3
+          }
+        ]
+      ],
+      "domains": [
+        "inspection-route closure",
+        "conduit-route closure"
+      ]
+    },
+    {
+      "index": 3,
+      "family": "unit-cost string edit distance",
+      "rule": "Emit the minimum number of single-character insertions, deletions or substitutions needed to turn left into right. Each operation costs one; no transposition operation is allowed.",
+      "parameter_sets": [
+        [
+          {
+            "left": "sail",
+            "right": "salt"
+          },
+          {
+            "left": "stone",
+            "right": "stony"
+          }
+        ],
+        [
+          {
+            "left": "flame",
+            "right": "frame"
+          },
+          {
+            "left": "clay",
+            "right": "playful"
+          }
+        ]
+      ],
+      "domains": [
+        "tag correction counter",
+        "annotation correction counter"
+      ]
+    },
+    {
+      "index": 4,
+      "family": "greatest common divisor",
+      "rule": "Emit the greatest positive integer dividing both positive integers x and y exactly.",
+      "parameter_sets": [
+        [
+          {
+            "x": 84,
+            "y": 126
+          },
+          {
+            "x": 85,
+            "y": 126
+          }
+        ],
+        [
+          {
+            "x": 143,
+            "y": 221
+          },
+          {
+            "x": 144,
+            "y": 221
+          }
+        ]
+      ],
+      "domains": [
+        "grid pitch calculator",
+        "tooth pitch calculator"
+      ]
+    },
+    {
+      "index": 5,
+      "family": "sliding window maximum",
+      "rule": "For every consecutive window of three values, emit its maximum, in starting-position order. Encode the resulting integers as a comma-separated string without spaces.",
+      "parameter_sets": [
+        [
+          {
+            "values": [
+              4,
+              9,
+              2,
+              7,
+              5
+            ]
+          },
+          {
+            "values": [
+              8,
+              1,
+              6,
+              3,
+              10
+            ]
+          }
+        ],
+        [
+          {
+            "values": [
+              12,
+              5,
+              14,
+              2,
+              9
+            ]
+          },
+          {
+            "values": [
+              3,
+              11,
+              4,
+              15,
+              6
+            ]
+          }
+        ]
+      ],
+      "domains": [
+        "peak-window scanner",
+        "crest-window scanner"
+      ]
+    },
+    {
+      "index": 6,
+      "family": "finite linear convolution",
+      "rule": "For zero-based indices, y[k] is the sum of a[i]*b[j] over i+j=k. Indices outside the supplied arrays contribute nothing. Emit all len(a)+len(b)-1 coefficients as comma-separated signed decimal integers without spaces.",
+      "parameter_sets": [
+        [
+          {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              1,
+              2
+            ]
+          },
+          {
+            "a": [
+              2,
+              1,
+              3
+            ],
+            "b": [
+              2,
+              1
+            ]
+          }
+        ],
+        [
+          {
+            "a": [
+              1,
+              4,
+              2
+            ],
+            "b": [
+              3,
+              -1
+            ]
+          },
+          {
+            "a": [
+              1,
+              4,
+              2
+            ],
+            "b": [
+              -1,
+              3
+            ]
+          }
+        ]
+      ],
+      "domains": [
+        "impulse-response mixer",
+        "filter-response mixer"
+      ]
+    },
+    {
+      "index": 7,
+      "family": "overlapping substring occurrence count",
+      "rule": "Emit the number of starting positions at which pattern occurs exactly in text. Count overlapping occurrences separately.",
+      "parameter_sets": [
+        [
+          {
+            "text": "banana",
+            "pattern": "ana"
+          },
+          {
+            "text": "bandana",
+            "pattern": "ana"
+          }
+        ],
+        [
+          {
+            "text": "aaaa",
+            "pattern": "aa"
+          },
+          {
+            "text": "aabaa",
+            "pattern": "aa"
+          }
+        ]
+      ],
+      "domains": [
+        "motif position counter",
+        "repeat position counter"
+      ]
+    },
+    {
+      "index": 8,
+      "family": "binomial selection count",
+      "rule": "Emit n! / (k! * (n-k)!), the number of unordered selections of k distinct items from n distinct items. Inputs satisfy 0<=k<=n. Emit an exact decimal integer.",
+      "parameter_sets": [
+        [
+          {
+            "n": 7,
+            "k": 2
+          },
+          {
+            "n": 7,
+            "k": 3
+          }
+        ],
+        [
+          {
+            "n": 9,
+            "k": 2
+          },
+          {
+            "n": 9,
+            "k": 4
+          }
+        ]
+      ],
+      "domains": [
+        "sample combination enumerator",
+        "panel combination enumerator"
+      ]
+    },
+    {
+      "index": 9,
+      "family": "stable vowel deletion",
+      "rule": "Delete every uppercase A, E, I, O or U from text. Keep every other character in its original order. Emit the remaining string exactly.",
+      "parameter_sets": [
+        [
+          {
+            "text": "ORCHID"
+          },
+          {
+            "text": "ORCHARD"
+          }
+        ],
+        [
+          {
+            "text": "SEQUOIA"
+          },
+          {
+            "text": "SPRUCE"
+          }
+        ]
+      ],
+      "domains": [
+        "consonant stencil writer",
+        "consonant mask writer"
+      ]
+    }
+  ],
+  "worlds": [
+    {
+      "index": 0,
+      "operation": 0,
+      "parameter_set": 0,
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "composition": "simpler",
+      "phase": 0,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 1,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 1,
+      "operation": 1,
+      "parameter_set": 0,
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "composition": "simpler",
+      "phase": 0,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 2,
+      "operation": 2,
+      "parameter_set": 0,
+      "class": "INSUFFICIENT_EVIDENCE",
+      "composition": "simpler",
+      "phase": 0,
+      "facts": {
+        "claims": [
+          null,
+          null
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 3,
+      "operation": 3,
+      "parameter_set": 0,
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "composition": "simpler",
+      "phase": 0,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 0
+      }
+    },
+    {
+      "index": 4,
+      "operation": 4,
+      "parameter_set": 0,
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "composition": "simpler",
+      "phase": 0,
+      "facts": {
+        "claims": [
+          0,
+          1
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 5,
+      "operation": 5,
+      "parameter_set": 0,
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "composition": "simpler",
+      "phase": 1,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 1,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 6,
+      "operation": 6,
+      "parameter_set": 0,
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "composition": "simpler",
+      "phase": 1,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 7,
+      "operation": 7,
+      "parameter_set": 0,
+      "class": "INSUFFICIENT_EVIDENCE",
+      "composition": "simpler",
+      "phase": 1,
+      "facts": {
+        "claims": [
+          null,
+          null
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 8,
+      "operation": 8,
+      "parameter_set": 0,
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "composition": "simpler",
+      "phase": 1,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 0
+      }
+    },
+    {
+      "index": 9,
+      "operation": 9,
+      "parameter_set": 0,
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "composition": "simpler",
+      "phase": 1,
+      "facts": {
+        "claims": [
+          0,
+          1
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 10,
+      "operation": 0,
+      "parameter_set": 1,
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "composition": "composition-dependent",
+      "phase": 2,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 11,
+      "operation": 1,
+      "parameter_set": 1,
+      "class": "INSUFFICIENT_EVIDENCE",
+      "composition": "composition-dependent",
+      "phase": 2,
+      "facts": {
+        "claims": [
+          null,
+          null
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 12,
+      "operation": 2,
+      "parameter_set": 1,
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "composition": "composition-dependent",
+      "phase": 2,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 0
+      }
+    },
+    {
+      "index": 13,
+      "operation": 3,
+      "parameter_set": 1,
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "composition": "composition-dependent",
+      "phase": 2,
+      "facts": {
+        "claims": [
+          0,
+          1
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 14,
+      "operation": 4,
+      "parameter_set": 1,
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "composition": "composition-dependent",
+      "phase": 2,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 1,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 15,
+      "operation": 5,
+      "parameter_set": 1,
+      "class": "NO_SUPPORTED_DIAGNOSIS",
+      "composition": "composition-dependent",
+      "phase": 3,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 16,
+      "operation": 6,
+      "parameter_set": 1,
+      "class": "INSUFFICIENT_EVIDENCE",
+      "composition": "composition-dependent",
+      "phase": 3,
+      "facts": {
+        "claims": [
+          null,
+          null
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 17,
+      "operation": 7,
+      "parameter_set": 1,
+      "class": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "composition": "composition-dependent",
+      "phase": 3,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 0
+      }
+    },
+    {
+      "index": 18,
+      "operation": 8,
+      "parameter_set": 1,
+      "class": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "composition": "composition-dependent",
+      "phase": 3,
+      "facts": {
+        "claims": [
+          0,
+          1
+        ],
+        "service_output": 0,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    },
+    {
+      "index": 19,
+      "operation": 9,
+      "parameter_set": 1,
+      "class": "SUPPORTED_CURRENT_DEFECT",
+      "composition": "composition-dependent",
+      "phase": 3,
+      "facts": {
+        "claims": [
+          0,
+          0
+        ],
+        "service_output": 1,
+        "other_build_input": 1,
+        "other_build_output": 1
+      }
+    }
+  ]
+}

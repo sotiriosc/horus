@@ -1,0 +1,203 @@
+{
+  "O": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "required": [
+      "results"
+    ],
+    "additionalProperties": false
+  },
+  "S": {
+    "type": "object",
+    "properties": {
+      "target_component_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_build_id": {
+        "type": "string",
+        "pattern": "^f[0-9a-f]{16}$"
+      },
+      "in_service_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_build_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "other_component_receipt_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      },
+      "receipt_source_links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "receipt_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            }
+          },
+          "required": [
+            "receipt_id",
+            "source_record_id"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "capture_groups": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "source_record_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "source_record_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "source_knowledge": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "capture_id": {
+              "type": "string",
+              "pattern": "^f[0-9a-f]{16}$"
+            },
+            "status": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN",
+                "DISAGREEING"
+              ]
+            },
+            "input_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^f[0-9a-f]{16}$"
+              },
+              "uniqueItems": true,
+              "maxItems": 12
+            }
+          },
+          "required": [
+            "capture_id",
+            "status",
+            "input_ids"
+          ],
+          "additionalProperties": false
+        },
+        "uniqueItems": true,
+        "maxItems": 8
+      },
+      "conflicting_capture_ids": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^f[0-9a-f]{16}$"
+        },
+        "uniqueItems": true,
+        "maxItems": 12
+      }
+    },
+    "required": [
+      "target_component_id",
+      "in_service_build_id",
+      "in_service_receipt_ids",
+      "other_build_receipt_ids",
+      "other_component_receipt_ids",
+      "receipt_source_links",
+      "capture_groups",
+      "source_knowledge",
+      "conflicting_capture_ids"
+    ],
+    "additionalProperties": false
+  },
+  "R": {
+    "type": "object",
+    "properties": {
+      "classification": {
+        "enum": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ]
+      }
+    },
+    "required": [
+      "classification"
+    ],
+    "additionalProperties": false
+  },
+  "E": {
+    "type": "object",
+    "properties": {
+      "classification": {
+        "enum": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ]
+      }
+    },
+    "required": [
+      "classification"
+    ],
+    "additionalProperties": false
+  }
+}
