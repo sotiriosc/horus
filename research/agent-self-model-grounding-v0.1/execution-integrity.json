@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "preregistration_commit": "fbba3ebc223d8ef646f3e810a0f4c7bd3e86e971",
+  "preserved_v0_commit": "ba698e948e2ae27427bac1e9f772cf6c8b485de8",
+  "preserved_promotion_commit": "69947aa243a69e7ae26db534727a7122922d978d",
+  "frozen_file_count": 1332,
+  "frozen_file_mismatches": [],
+  "isolated_analysis_calls": 2,
+  "attempts_per_phase": {
+    "A": 1,
+    "B": 1
+  },
+  "model_output_repairs": 0,
+  "post_inference_tuning": false,
+  "analysis_server_stopped": true,
+  "raw_final_structures_match_public_outputs": true,
+  "phase_b_expected_answers_omitted": true,
+  "phase_b_private_reasoning_omitted": true,
+  "read_only_invariants": {
+    "world_executions": 0,
+    "new_receipts": 0,
+    "memory_writes": 0,
+    "policy_changes": 0,
+    "training": 0,
+    "dolphin_calls": 0,
+    "active_action_qwen_calls": 0
+  },
+  "verification_basis": [
+    "Executed only the study assembly/transport/pure audits and local artifact/git operations. No active selector, world, receipt or Memory API was invoked.",
+    "AST import check confirms the study transport imports no active agent/state/world modules.",
+    "All 1332 frozen tracked baseline and preregistered study files retain their recorded hashes; both historical branch heads remain unchanged.",
+    "Exactly A and B private call records exist, with one complete response each; request, response and channel hashes match public metadata."
+  ],
+  "transport_imports": [
+    "pathlib",
+    "hashlib",
+    "urllib.request",
+    "argparse",
+    "json",
+    "re",
+    "time",
+    "subprocess",
+    "sys",
+    "jsonschema",
+    "publication.audit"
+  ],
+  "diagnosis": "NOT_RUN",
+  "proposal": "NOT_RUN",
+  "next_study": "NOT_RUN"
+}

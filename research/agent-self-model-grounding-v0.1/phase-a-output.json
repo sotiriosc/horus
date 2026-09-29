@@ -1,0 +1,204 @@
+{
+  "self_model": {
+    "active_architecture": {
+      "ordered_decision_layers": [
+        "GROUNDED_MECHANICAL_AUTHORITY",
+        "S_BOUNDED_STAGNATION_ESCAPE",
+        "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "ORDINARY_MODEL_ROUTE"
+      ],
+      "rollback_component": "ROLLBACK_SELECTOR",
+      "model_route_position": "AFTER_MECHANICAL_S_E"
+    },
+    "components": [
+      {
+        "component_id": "ACTIVE_SELECTOR",
+        "status": "ACTIVE",
+        "role": "DECISION_ORCHESTRATOR",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": true,
+        "evidence_ids": [
+          "SRC-ENTRY",
+          "SRC-SELECTOR"
+        ]
+      },
+      {
+        "component_id": "GROUNDED_MECHANICAL_AUTHORITY",
+        "status": "ACTIVE",
+        "role": "GROUNDED_MECHANICAL_SELECTION",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-ROUTING",
+          "SRC-SELECTOR"
+        ]
+      },
+      {
+        "component_id": "S_BOUNDED_STAGNATION_ESCAPE",
+        "status": "PROMOTED_ACTIVE",
+        "role": "DETERMINISTIC_STAGNATION_ESCAPE",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-S",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ]
+      },
+      {
+        "component_id": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "status": "PROMOTED_ACTIVE",
+        "role": "EMPIRICAL_EVIDENCE_ACQUISITION",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-E",
+          "SRC-ADAPTER",
+          "SRC-SELECTOR",
+          "SRC-PROMOTION"
+        ]
+      },
+      {
+        "component_id": "ORDINARY_MODEL_ROUTE",
+        "status": "ACTIVE_INCUMBENT",
+        "role": "ADMISSIBLE_MODEL_SELECTION",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": true,
+        "evidence_ids": [
+          "SRC-ORDINARY",
+          "SRC-ROUTING",
+          "SRC-MODEL-STATUS"
+        ]
+      },
+      {
+        "component_id": "ROLLBACK_SELECTOR",
+        "status": "AVAILABLE_ROLLBACK",
+        "role": "PRE_E_AUTHORITY_PLUS_S_SELECTOR",
+        "can_select_action": true,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": true,
+        "evidence_ids": [
+          "SRC-ROLLBACK",
+          "SRC-PROMOTION"
+        ]
+      },
+      {
+        "component_id": "GROUNDED_DETERMINISTIC_STATE",
+        "status": "ACTIVE",
+        "role": "DETERMINISTIC_EVIDENCE_DERIVATION",
+        "can_select_action": false,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-DETERMINISTIC",
+          "SRC-GROUNDED-CORE"
+        ]
+      },
+      {
+        "component_id": "GROUNDED_EMPIRICAL_STATE",
+        "status": "ACTIVE",
+        "role": "EMPIRICAL_EVIDENCE_DERIVATION",
+        "can_select_action": false,
+        "can_execute_world": false,
+        "can_write_memory": false,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-EMPIRICAL",
+          "SRC-GROUNDED-CORE",
+          "SRC-TYPE-MAP"
+        ]
+      },
+      {
+        "component_id": "AUTHENTICATED_MEMORY",
+        "status": "ACTIVE",
+        "role": "AUTHORIZED_DURABLE_EVIDENCE_STORE",
+        "can_select_action": false,
+        "can_execute_world": false,
+        "can_write_memory": true,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-MEMORY",
+          "SRC-REPLAY",
+          "SRC-GROUNDED-CORE"
+        ]
+      },
+      {
+        "component_id": "PROTECTED_EXECUTION",
+        "status": "ACTIVE",
+        "role": "PROTECTED_WORLD_AND_AUTHORIZATION",
+        "can_select_action": false,
+        "can_execute_world": true,
+        "can_write_memory": true,
+        "uses_model_when_triggered": false,
+        "evidence_ids": [
+          "SRC-EXECUTION",
+          "SRC-AUTHORIZATION"
+        ]
+      }
+    ],
+    "authority_distinctions": [
+      {
+        "a": "GROUNDED_MECHANICAL_AUTHORITY",
+        "b": "S_BOUNDED_STAGNATION_ESCAPE",
+        "relationship": "DISTINCT_COMPONENTS",
+        "evidence_ids": [
+          "SRC-ROUTING",
+          "SRC-S",
+          "SRC-SELECTOR"
+        ]
+      },
+      {
+        "a": "S_BOUNDED_STAGNATION_ESCAPE",
+        "b": "E_EMPIRICAL_EVIDENCE_ACQUISITION",
+        "relationship": "DISTINCT_COMPONENTS",
+        "evidence_ids": [
+          "SRC-S",
+          "SRC-E"
+        ]
+      }
+    ],
+    "failure_behavior": [
+      {
+        "condition": "SIMULTANEOUS_S_AND_E_ELIGIBILITY",
+        "behavior": "INTEGRATION_INVARIANT_ERROR",
+        "action_emitted": false,
+        "model_called": false,
+        "evidence_ids": [
+          "SRC-SELECTOR"
+        ]
+      },
+      {
+        "condition": "MALFORMED_AUTHENTICATED_E_HISTORY",
+        "behavior": "FAIL_CLOSED",
+        "action_emitted": false,
+        "model_called": false,
+        "evidence_ids": [
+          "SRC-ADAPTER",
+          "SRC-SELECTOR"
+        ]
+      }
+    ],
+    "uncertainties": []
+  },
+  "mandatory_distinction": {
+    "is_grounded_mechanical_authority_the_same_component_as_S": false,
+    "explanation": "GROUNDED_MECHANICAL_AUTHORITY resolves established values deterministically, while S_BOUNDED_STAGNATION_ESCAPE selects unseen alternatives from frozen deterministic assessments. They differ in their scope_summary, role, and required_consequence fields, with S requiring true_unseen and grounded mechanical authority using established_ceiling=1. Their distinct_component_relationship is explicitly stated in the evidence_ids [SRC-ROUTING, SRC-S, SRC-SELECTOR].",
+    "evidence_ids": [
+      "SRC-ROUTING",
+      "SRC-S",
+      "SRC-SELECTOR"
+    ]
+  }
+}
