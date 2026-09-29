@@ -1,0 +1,64 @@
+{
+  "configuration": {
+    "model": "Qwen3-14B-Q4_K_M",
+    "model_sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+    "llama_cpp_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+    "context": 16384,
+    "reasoning_budget": 512,
+    "native_reasoning_format": "deepseek",
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 40,
+    "min_p": 0.05,
+    "seed": 417351046,
+    "max_tokens": 2048,
+    "cache_prompt": false,
+    "stream": false,
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    },
+    "attempts_per_phase": 1,
+    "future_analysis_calls": 80,
+    "calls_authorized_now": 0,
+    "tools": [],
+    "filesystem_access": false,
+    "web_access": false,
+    "isolated_server_host": "127.0.0.1",
+    "parallel": 1,
+    "context_reset_per_call": true,
+    "kv_cache_reuse": false,
+    "planned_runtime_flags": [
+      "--ctx-size",
+      "16384",
+      "--parallel",
+      "1",
+      "--jinja",
+      "--n-gpu-layers",
+      "999",
+      "--flash-attn",
+      "on",
+      "--reasoning",
+      "on",
+      "--reasoning-format",
+      "deepseek",
+      "--reasoning-budget",
+      "512"
+    ]
+  },
+  "artifact_provenance": {
+    "parent_study": "agent-led-diagnosis-verified-introspection-v0",
+    "parent_verification": {
+      "status": "PASS",
+      "artifact_sha256": {
+        "model/Qwen3-14B-Q4_K_M.gguf": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+        "engine/llama-b11242-bin-ubuntu-cuda-12.8-x64.tar.gz": "6ab3e1d60a6cab34806ae23c90956ba668047c3bc056eab3be2bfa73eca24fac",
+        "engine/cudart-llama-b11242-bin-ubuntu-cuda-12.8-x64.tar.gz": "e67423c1553f8f4cd22d6412c74604a6d50b9b3cccb48546758b55e912407603"
+      },
+      "installed_server_sha256": "778f1b3fbbb76e921af1d7f25a5b61d82859962dcd18c71ce86ab84d7f4884e5",
+      "llama_cpp_commit": "526c43b8f7dfea9032e9f35e7a1be9183ca7cc20",
+      "verified_again_for_this_study": true
+    },
+    "verified_again_for_this_study": false
+  },
+  "verification_note": "Exact hashes inherited from the verified parent; recheck bytes before any separately approved inference. No server is started in this phase."
+}
