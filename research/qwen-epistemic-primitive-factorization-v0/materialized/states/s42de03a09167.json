@@ -1,0 +1,87 @@
+{
+  "system": "ink dispenser",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "ivory-revision-k"
+  },
+  "builds": [
+    {
+      "build": "ivory-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "ivory-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "ivory-revision-k",
+        "station": "ivory-mark-stand",
+        "cycle": 110
+      },
+      "asserted_value": "ivory-etched"
+    },
+    {
+      "subject": {
+        "build": "ivory-revision-k",
+        "station": "ivory-mark-stand",
+        "cycle": 110
+      },
+      "asserted_value": "ivory-smooth"
+    }
+  ],
+  "trials": [
+    {
+      "build": "ivory-revision-k",
+      "reported_input": "ivory-woven",
+      "admissible_inputs": [
+        "ivory-woven",
+        "ivory-glazed",
+        "ivory-cast"
+      ],
+      "reference_input": "ivory-woven",
+      "required_results": [
+        {
+          "input": "ivory-woven",
+          "result": "ivory-pulse"
+        },
+        {
+          "input": "ivory-glazed",
+          "result": "ivory-tone"
+        },
+        {
+          "input": "ivory-cast",
+          "result": "ivory-beam"
+        }
+      ],
+      "observed_result": "ivory-pulse"
+    },
+    {
+      "build": "ivory-revision-m",
+      "reported_input": "ivory-woven",
+      "admissible_inputs": [
+        "ivory-woven",
+        "ivory-glazed",
+        "ivory-cast"
+      ],
+      "reference_input": "ivory-woven",
+      "required_results": [
+        {
+          "input": "ivory-woven",
+          "result": "ivory-pulse"
+        },
+        {
+          "input": "ivory-glazed",
+          "result": "ivory-tone"
+        },
+        {
+          "input": "ivory-cast",
+          "result": "ivory-beam"
+        }
+      ],
+      "observed_result": "ivory-beam"
+    }
+  ]
+}

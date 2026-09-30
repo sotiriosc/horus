@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Can the two equal-standing mark assertions both hold for their specified immutable subjects? Answer CONSISTENT or CONTRADICTORY. Distinct builds, stations or cycles denote distinct subjects; duplicate agreeing assertions can coexist.\n\nAligned factual state:\n{\n  \"system\": \"cable winder\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"moss-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"moss-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"moss-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"moss-revision-k\",\n        \"station\": \"moss-mark-stand\",\n        \"cycle\": 107\n      },\n      \"asserted_value\": \"moss-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"moss-revision-k\",\n        \"station\": \"moss-mark-stand\",\n        \"cycle\": 107\n      },\n      \"asserted_value\": \"moss-etched\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"moss-revision-k\",\n      \"reported_input\": \"moss-woven\",\n      \"admissible_inputs\": [\n        \"moss-woven\",\n        \"moss-glazed\",\n        \"moss-cast\"\n      ],\n      \"reference_input\": \"moss-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"moss-woven\",\n          \"result\": \"moss-pulse\"\n        },\n        {\n          \"input\": \"moss-glazed\",\n          \"result\": \"moss-tone\"\n        },\n        {\n          \"input\": \"moss-cast\",\n          \"result\": \"moss-beam\"\n        }\n      ],\n      \"observed_result\": \"moss-pulse\"\n    },\n    {\n      \"build\": \"moss-revision-m\",\n      \"reported_input\": \"moss-woven\",\n      \"admissible_inputs\": [\n        \"moss-woven\",\n        \"moss-glazed\",\n        \"moss-cast\"\n      ],\n      \"reference_input\": \"moss-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"moss-woven\",\n          \"result\": \"moss-pulse\"\n        },\n        {\n          \"input\": \"moss-glazed\",\n          \"result\": \"moss-tone\"\n        },\n        {\n          \"input\": \"moss-cast\",\n          \"result\": \"moss-beam\"\n        }\n      ],\n      \"observed_result\": \"moss-beam\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "enum": [
+            "CONSISTENT",
+            "CONTRADICTORY"
+          ]
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 413708629,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

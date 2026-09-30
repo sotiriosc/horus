@@ -1,0 +1,87 @@
+{
+  "system": "fiber router",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "spruce-revision-m"
+  },
+  "builds": [
+    {
+      "build": "spruce-revision-k",
+      "creation_order": 1
+    },
+    {
+      "build": "spruce-revision-m",
+      "creation_order": 2
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "spruce-revision-k",
+        "station": "spruce-mark-stand",
+        "cycle": 137
+      },
+      "asserted_value": "spruce-etched"
+    },
+    {
+      "subject": {
+        "build": "spruce-revision-k",
+        "station": "spruce-mark-stand",
+        "cycle": 137
+      },
+      "asserted_value": "spruce-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "spruce-revision-k",
+      "reported_input": "spruce-woven",
+      "admissible_inputs": [
+        "spruce-woven",
+        "spruce-glazed",
+        "spruce-cast"
+      ],
+      "reference_input": "spruce-woven",
+      "required_results": [
+        {
+          "input": "spruce-woven",
+          "result": "spruce-pulse"
+        },
+        {
+          "input": "spruce-glazed",
+          "result": "spruce-tone"
+        },
+        {
+          "input": "spruce-cast",
+          "result": "spruce-beam"
+        }
+      ],
+      "observed_result": "spruce-pulse"
+    },
+    {
+      "build": "spruce-revision-m",
+      "reported_input": "UNKNOWN",
+      "admissible_inputs": [
+        "spruce-woven",
+        "spruce-glazed",
+        "spruce-cast"
+      ],
+      "reference_input": "spruce-woven",
+      "required_results": [
+        {
+          "input": "spruce-woven",
+          "result": "spruce-pulse"
+        },
+        {
+          "input": "spruce-glazed",
+          "result": "spruce-tone"
+        },
+        {
+          "input": "spruce-cast",
+          "result": "spruce-beam"
+        }
+      ],
+      "observed_result": "spruce-pulse"
+    }
+  ]
+}

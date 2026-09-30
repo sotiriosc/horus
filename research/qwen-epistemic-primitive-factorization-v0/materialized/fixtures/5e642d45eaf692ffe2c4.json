@@ -1,0 +1,87 @@
+{
+  "system": "film scanner",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "amber-revision-k"
+  },
+  "builds": [
+    {
+      "build": "amber-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "amber-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "amber-revision-k",
+        "station": "amber-mark-stand",
+        "cycle": 101
+      },
+      "asserted_value": "amber-etched"
+    },
+    {
+      "subject": {
+        "build": "amber-revision-k",
+        "station": "amber-mark-stand",
+        "cycle": 101
+      },
+      "asserted_value": "amber-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "amber-revision-k",
+      "reported_input": "amber-woven",
+      "admissible_inputs": [
+        "amber-woven",
+        "amber-glazed",
+        "amber-cast"
+      ],
+      "reference_input": "amber-woven",
+      "required_results": [
+        {
+          "input": "amber-woven",
+          "result": "amber-pulse"
+        },
+        {
+          "input": "amber-glazed",
+          "result": "amber-pulse"
+        },
+        {
+          "input": "amber-cast",
+          "result": "amber-pulse"
+        }
+      ],
+      "observed_result": "amber-pulse"
+    },
+    {
+      "build": "amber-revision-m",
+      "reported_input": "amber-woven",
+      "admissible_inputs": [
+        "amber-woven",
+        "amber-glazed",
+        "amber-cast"
+      ],
+      "reference_input": "amber-woven",
+      "required_results": [
+        {
+          "input": "amber-woven",
+          "result": "amber-pulse"
+        },
+        {
+          "input": "amber-glazed",
+          "result": "amber-tone"
+        },
+        {
+          "input": "amber-cast",
+          "result": "amber-beam"
+        }
+      ],
+      "observed_result": "amber-beam"
+    }
+  ]
+}

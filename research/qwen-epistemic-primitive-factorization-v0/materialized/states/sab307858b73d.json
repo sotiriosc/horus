@@ -1,0 +1,86 @@
+{
+  "system": "soil probe",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "willow-revision-k"
+  },
+  "builds": [
+    {
+      "build": "willow-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "willow-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "willow-revision-k",
+        "station": "willow-mark-stand",
+        "cycle": 128
+      },
+      "asserted_value": "willow-etched"
+    },
+    {
+      "subject": {
+        "build": "willow-revision-k",
+        "station": "willow-mark-stand",
+        "cycle": 128
+      },
+      "asserted_value": "willow-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "willow-revision-k",
+      "reported_input": "UNKNOWN",
+      "admissible_inputs": [
+        "willow-woven",
+        "willow-glazed"
+      ],
+      "reference_input": "willow-woven",
+      "required_results": [
+        {
+          "input": "willow-woven",
+          "result": "willow-pulse"
+        },
+        {
+          "input": "willow-glazed",
+          "result": "willow-beam"
+        },
+        {
+          "input": "willow-cast",
+          "result": "willow-beam"
+        }
+      ],
+      "observed_result": "willow-beam"
+    },
+    {
+      "build": "willow-revision-m",
+      "reported_input": "willow-woven",
+      "admissible_inputs": [
+        "willow-woven",
+        "willow-glazed",
+        "willow-cast"
+      ],
+      "reference_input": "willow-woven",
+      "required_results": [
+        {
+          "input": "willow-woven",
+          "result": "willow-pulse"
+        },
+        {
+          "input": "willow-glazed",
+          "result": "willow-tone"
+        },
+        {
+          "input": "willow-cast",
+          "result": "willow-beam"
+        }
+      ],
+      "observed_result": "willow-pulse"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Using only the deployment and trial facts, is the truth value of \"the deployed trial observation differs from the required output for its actual input\" uniquely determined? Answer DETERMINATE if all remaining admissible inputs give the same truth value, otherwise UNDERDETERMINED. The separate mark assertions do not constrain trial inputs. Do not infer inputs by presuming observed outputs obey requirements.\n\nAligned factual state:\n{\n  \"system\": \"wafer carrier\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"clay-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"clay-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"clay-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"clay-revision-k\",\n        \"station\": \"clay-mark-stand\",\n        \"cycle\": 143\n      },\n      \"asserted_value\": \"clay-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"clay-revision-k\",\n        \"station\": \"clay-mark-stand\",\n        \"cycle\": 143\n      },\n      \"asserted_value\": \"clay-etched\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"clay-revision-k\",\n      \"reported_input\": \"UNKNOWN\",\n      \"admissible_inputs\": [\n        \"clay-woven\",\n        \"clay-glazed\",\n        \"clay-cast\"\n      ],\n      \"reference_input\": \"clay-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"clay-woven\",\n          \"result\": \"clay-pulse\"\n        },\n        {\n          \"input\": \"clay-glazed\",\n          \"result\": \"clay-pulse\"\n        },\n        {\n          \"input\": \"clay-cast\",\n          \"result\": \"clay-extra-ray\"\n        }\n      ],\n      \"observed_result\": \"clay-pulse\"\n    },\n    {\n      \"build\": \"clay-revision-m\",\n      \"reported_input\": \"clay-woven\",\n      \"admissible_inputs\": [\n        \"clay-woven\",\n        \"clay-glazed\",\n        \"clay-cast\"\n      ],\n      \"reference_input\": \"clay-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"clay-woven\",\n          \"result\": \"clay-pulse\"\n        },\n        {\n          \"input\": \"clay-glazed\",\n          \"result\": \"clay-tone\"\n        },\n        {\n          \"input\": \"clay-cast\",\n          \"result\": \"clay-beam\"\n        }\n      ],\n      \"observed_result\": \"clay-pulse\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "DETERMINATE",
+          "UNDERDETERMINED"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  }
+}

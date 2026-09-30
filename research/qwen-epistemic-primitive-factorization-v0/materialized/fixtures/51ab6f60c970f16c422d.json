@@ -1,0 +1,87 @@
+{
+  "system": "valve bench",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "dune-revision-k"
+  },
+  "builds": [
+    {
+      "build": "dune-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "dune-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "dune-revision-k",
+        "station": "dune-mark-stand",
+        "cycle": 131
+      },
+      "asserted_value": "dune-etched"
+    },
+    {
+      "subject": {
+        "build": "dune-revision-k",
+        "station": "dune-mark-stand",
+        "cycle": 131
+      },
+      "asserted_value": "dune-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "dune-revision-k",
+      "reported_input": "dune-woven",
+      "admissible_inputs": [
+        "dune-woven",
+        "dune-glazed",
+        "dune-cast"
+      ],
+      "reference_input": "dune-woven",
+      "required_results": [
+        {
+          "input": "dune-woven",
+          "result": "dune-pulse"
+        },
+        {
+          "input": "dune-glazed",
+          "result": "dune-tone"
+        },
+        {
+          "input": "dune-cast",
+          "result": "dune-beam"
+        }
+      ],
+      "observed_result": "dune-beam"
+    },
+    {
+      "build": "dune-revision-m",
+      "reported_input": "dune-woven",
+      "admissible_inputs": [
+        "dune-woven",
+        "dune-glazed",
+        "dune-cast"
+      ],
+      "reference_input": "dune-woven",
+      "required_results": [
+        {
+          "input": "dune-woven",
+          "result": "dune-pulse"
+        },
+        {
+          "input": "dune-glazed",
+          "result": "dune-tone"
+        },
+        {
+          "input": "dune-cast",
+          "result": "dune-beam"
+        }
+      ],
+      "observed_result": "dune-pulse"
+    }
+  ]
+}

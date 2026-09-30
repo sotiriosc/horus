@@ -1,0 +1,87 @@
+{
+  "system": "crystal oven",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "slate-revision-k"
+  },
+  "builds": [
+    {
+      "build": "slate-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "slate-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "slate-revision-k",
+        "station": "slate-mark-stand",
+        "cycle": 104
+      },
+      "asserted_value": "slate-etched"
+    },
+    {
+      "subject": {
+        "build": "slate-revision-k",
+        "station": "slate-mark-stand",
+        "cycle": 104
+      },
+      "asserted_value": "slate-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "slate-revision-k",
+      "reported_input": "slate-woven",
+      "admissible_inputs": [
+        "slate-woven",
+        "slate-glazed",
+        "slate-cast"
+      ],
+      "reference_input": "slate-woven",
+      "required_results": [
+        {
+          "input": "slate-woven",
+          "result": "slate-pulse"
+        },
+        {
+          "input": "slate-glazed",
+          "result": "slate-pulse"
+        },
+        {
+          "input": "slate-cast",
+          "result": "slate-pulse"
+        }
+      ],
+      "observed_result": "slate-beam"
+    },
+    {
+      "build": "slate-revision-m",
+      "reported_input": "slate-woven",
+      "admissible_inputs": [
+        "slate-woven",
+        "slate-glazed",
+        "slate-cast"
+      ],
+      "reference_input": "slate-woven",
+      "required_results": [
+        {
+          "input": "slate-woven",
+          "result": "slate-pulse"
+        },
+        {
+          "input": "slate-glazed",
+          "result": "slate-tone"
+        },
+        {
+          "input": "slate-cast",
+          "result": "slate-beam"
+        }
+      ],
+      "observed_result": "slate-pulse"
+    }
+  ]
+}

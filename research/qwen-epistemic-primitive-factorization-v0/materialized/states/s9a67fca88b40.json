@@ -1,0 +1,87 @@
+{
+  "system": "tidal buoy",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "birch-revision-k"
+  },
+  "builds": [
+    {
+      "build": "birch-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "birch-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "birch-revision-k",
+        "station": "birch-mark-stand",
+        "cycle": 74
+      },
+      "asserted_value": "birch-etched"
+    },
+    {
+      "subject": {
+        "build": "birch-revision-k",
+        "station": "birch-mark-stand-annex",
+        "cycle": 74
+      },
+      "asserted_value": "birch-smooth"
+    }
+  ],
+  "trials": [
+    {
+      "build": "birch-revision-k",
+      "reported_input": "birch-woven",
+      "admissible_inputs": [
+        "birch-woven",
+        "birch-glazed",
+        "birch-cast"
+      ],
+      "reference_input": "birch-woven",
+      "required_results": [
+        {
+          "input": "birch-woven",
+          "result": "birch-pulse"
+        },
+        {
+          "input": "birch-glazed",
+          "result": "birch-tone"
+        },
+        {
+          "input": "birch-cast",
+          "result": "birch-beam"
+        }
+      ],
+      "observed_result": "birch-pulse"
+    },
+    {
+      "build": "birch-revision-m",
+      "reported_input": "birch-woven",
+      "admissible_inputs": [
+        "birch-woven",
+        "birch-glazed",
+        "birch-cast"
+      ],
+      "reference_input": "birch-woven",
+      "required_results": [
+        {
+          "input": "birch-woven",
+          "result": "birch-pulse"
+        },
+        {
+          "input": "birch-glazed",
+          "result": "birch-tone"
+        },
+        {
+          "input": "birch-cast",
+          "result": "birch-beam"
+        }
+      ],
+      "observed_result": "birch-beam"
+    }
+  ]
+}

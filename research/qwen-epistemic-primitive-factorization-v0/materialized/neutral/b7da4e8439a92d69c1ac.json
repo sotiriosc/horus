@@ -1,0 +1,27 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "For the first listed trial, does any completion different from reference_input remain compatible with reported_input and admissible_inputs? Answer ALTERNATIVE_EXISTS or NO_ALTERNATIVE. This is an existence question, independent of whether required outputs agree. Do not infer input from output.\n\nAligned factual state:\n{\n  \"system\": \"paper cutter\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"fern-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"fern-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"fern-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"fern-revision-k\",\n        \"station\": \"fern-mark-stand\",\n        \"cycle\": 125\n      },\n      \"asserted_value\": \"fern-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"fern-revision-k\",\n        \"station\": \"fern-mark-stand\",\n        \"cycle\": 125\n      },\n      \"asserted_value\": \"fern-etched\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"fern-revision-k\",\n      \"reported_input\": \"UNKNOWN\",\n      \"admissible_inputs\": [\n        \"fern-woven\",\n        \"fern-glazed\"\n      ],\n      \"reference_input\": \"fern-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"fern-woven\",\n          \"result\": \"fern-pulse\"\n        },\n        {\n          \"input\": \"fern-glazed\",\n          \"result\": \"fern-tone\"\n        },\n        {\n          \"input\": \"fern-cast\",\n          \"result\": \"fern-beam\"\n        }\n      ],\n      \"observed_result\": \"fern-pulse\"\n    },\n    {\n      \"build\": \"fern-revision-m\",\n      \"reported_input\": \"fern-woven\",\n      \"admissible_inputs\": [\n        \"fern-woven\",\n        \"fern-glazed\",\n        \"fern-cast\"\n      ],\n      \"reference_input\": \"fern-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"fern-woven\",\n          \"result\": \"fern-pulse\"\n        },\n        {\n          \"input\": \"fern-glazed\",\n          \"result\": \"fern-tone\"\n        },\n        {\n          \"input\": \"fern-cast\",\n          \"result\": \"fern-beam\"\n        }\n      ],\n      \"observed_result\": \"fern-pulse\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_schema": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "ALTERNATIVE_EXISTS",
+          "NO_ALTERNATIVE"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  }
+}

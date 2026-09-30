@@ -1,0 +1,1063 @@
+[
+  {
+    "pair_id": "pcb75442d46cf",
+    "index": 0,
+    "within_family": 0,
+    "family": "IDENTITY_EQUALITY",
+    "endpoints": {
+      "A": "s6cdeffc06513",
+      "B": "s0f8ca39efe1a"
+    },
+    "identity_flip_field": "same_referent",
+    "semantic_delta": "Change only the second assertion cycle to the next event; agreeing values remain equal.",
+    "coupling": {
+      "target": "IDENTITY_EQUALITY",
+      "target_before": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "target_after": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/cycle",
+          "before": 71,
+          "after": 72
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pb83de3daa4c9",
+    "index": 1,
+    "within_family": 1,
+    "family": "IDENTITY_EQUALITY",
+    "endpoints": {
+      "A": "s9a67fca88b40",
+      "B": "s86867ae27e30"
+    },
+    "identity_flip_field": "same_referent",
+    "semantic_delta": "Change only the second station from the annex to the first station, making unequal marks claims about one event.",
+    "coupling": {
+      "target": "IDENTITY_EQUALITY",
+      "target_before": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "target_after": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "CONTRADICTION"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/station",
+          "before": "birch-mark-stand-annex",
+          "after": "birch-mark-stand"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p6a9d06a11205",
+    "index": 2,
+    "within_family": 2,
+    "family": "IDENTITY_EQUALITY",
+    "endpoints": {
+      "A": "s9dd0670c8d6e",
+      "B": "s9a4508a6b7ca"
+    },
+    "identity_flip_field": "equal_value",
+    "semantic_delta": "Change only the second asserted mark value while retaining one immutable referent.",
+    "coupling": {
+      "target": "IDENTITY_EQUALITY",
+      "target_before": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "target_after": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "CONTRADICTION"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "ochre-etched",
+          "after": "ochre-smooth"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pc41b9ceb9742",
+    "index": 3,
+    "within_family": 3,
+    "family": "IDENTITY_EQUALITY",
+    "endpoints": {
+      "A": "see461eaf3749",
+      "B": "s0a88b08259e2"
+    },
+    "identity_flip_field": "equal_value",
+    "semantic_delta": "Change only the second asserted mark value to agree; the two events remain distinct.",
+    "coupling": {
+      "target": "IDENTITY_EQUALITY",
+      "target_before": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "target_after": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "linen-smooth",
+          "after": "linen-etched"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p9147188c88d5",
+    "index": 4,
+    "within_family": 0,
+    "family": "CURRENTNESS",
+    "endpoints": {
+      "A": "scba9cc461d2b",
+      "B": "s6e13e0d63044"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Deploy the newer second build instead of the first older build; observations and contracts stay fixed.",
+    "coupling": {
+      "target": "CURRENTNESS",
+      "target_before": {
+        "answer": "CURRENT"
+      },
+      "target_after": {
+        "answer": "NOT_CURRENT"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "CURRENTNESS"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "flint-revision-k",
+          "after": "flint-revision-m"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p54186fe7d147",
+    "index": 5,
+    "within_family": 1,
+    "family": "CURRENTNESS",
+    "endpoints": {
+      "A": "s45f64a8ae9fd",
+      "B": "sb7e1cc7ef7e3"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Deploy the older second build instead of the first newer build; the non-serving newer violation is not an older-version defect.",
+    "coupling": {
+      "target": "CURRENTNESS",
+      "target_before": {
+        "answer": "CURRENT"
+      },
+      "target_after": {
+        "answer": "NOT_CURRENT"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "CURRENTNESS"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "heath-revision-k",
+          "after": "heath-revision-m"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p6573d8bb3bcc",
+    "index": 6,
+    "within_family": 2,
+    "family": "CURRENTNESS",
+    "endpoints": {
+      "A": "sccf2acfbfa18",
+      "B": "s0bf0c65011cf"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Deploy the second build with a captured input instead of the first with unresolved input; all observations stay fixed.",
+    "coupling": {
+      "target": "CURRENTNESS",
+      "target_before": {
+        "answer": "CURRENT"
+      },
+      "target_after": {
+        "answer": "NOT_CURRENT"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "all_changed_primitives": [
+        "CURRENTNESS",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "coral-revision-k",
+          "after": "coral-revision-m"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p4448c687622e",
+    "index": 7,
+    "within_family": 3,
+    "family": "CURRENTNESS",
+    "endpoints": {
+      "A": "s915d60919d64",
+      "B": "s839c64090ee5"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only deployment; the separate immutable mark disagreement stays present on both sides.",
+    "coupling": {
+      "target": "CURRENTNESS",
+      "target_before": {
+        "answer": "CURRENT"
+      },
+      "target_after": {
+        "answer": "NOT_CURRENT"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "CURRENTNESS"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "wren-revision-k",
+          "after": "wren-revision-m"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pfe5134c8aba6",
+    "index": 8,
+    "within_family": 0,
+    "family": "KNOWN_VS_UNKNOWN",
+    "endpoints": {
+      "A": "s0d42cacc76e1",
+      "B": "s8eba35a1979e"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Remove only the captured input, leaving three admissible completions with different outputs.",
+    "coupling": {
+      "target": "KNOWN_VS_UNKNOWN",
+      "target_before": {
+        "answer": "KNOWN"
+      },
+      "target_after": {
+        "answer": "UNKNOWN"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "cedar-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pfea0877e44e6",
+    "index": 9,
+    "within_family": 1,
+    "family": "KNOWN_VS_UNKNOWN",
+    "endpoints": {
+      "A": "sea9358dce992",
+      "B": "sacf7733e9675"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Remove only the captured input; do not invert the measured output into an input assumption.",
+    "coupling": {
+      "target": "KNOWN_VS_UNKNOWN",
+      "target_before": {
+        "answer": "KNOWN"
+      },
+      "target_after": {
+        "answer": "UNKNOWN"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "larch-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p85beaefc6d27",
+    "index": 10,
+    "within_family": 2,
+    "family": "KNOWN_VS_UNKNOWN",
+    "endpoints": {
+      "A": "s2bb230536616",
+      "B": "s3d1adf0ce938"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Remove only the captured input; all three possibilities retain the same required output.",
+    "coupling": {
+      "target": "KNOWN_VS_UNKNOWN",
+      "target_before": {
+        "answer": "KNOWN"
+      },
+      "target_after": {
+        "answer": "UNKNOWN"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "amber-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p3b126a65a170",
+    "index": 11,
+    "within_family": 3,
+    "family": "KNOWN_VS_UNKNOWN",
+    "endpoints": {
+      "A": "s5a4643f8f3d5",
+      "B": "s134eea583827"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Remove only the captured input; every possibility still requires a value different from the observation.",
+    "coupling": {
+      "target": "KNOWN_VS_UNKNOWN",
+      "target_before": {
+        "answer": "KNOWN"
+      },
+      "target_after": {
+        "answer": "UNKNOWN"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "slate-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pe769b04b8bb4",
+    "index": 12,
+    "within_family": 0,
+    "family": "CONTRADICTION",
+    "endpoints": {
+      "A": "sa7bd8a6a8528",
+      "B": "s05ec96a2a6dc"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only one mark assertion to a different value about the same immutable event.",
+    "coupling": {
+      "target": "CONTRADICTION",
+      "target_before": {
+        "answer": "CONSISTENT"
+      },
+      "target_after": {
+        "answer": "CONTRADICTORY"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "moss-etched",
+          "after": "moss-smooth"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p1b34b0fb1fdb",
+    "index": 13,
+    "within_family": 1,
+    "family": "CONTRADICTION",
+    "endpoints": {
+      "A": "s6dfa7b546adb",
+      "B": "s42de03a09167"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the second assertion station so the two unequal values concern one immutable event.",
+    "coupling": {
+      "target": "CONTRADICTION",
+      "target_before": {
+        "answer": "CONSISTENT"
+      },
+      "target_after": {
+        "answer": "CONTRADICTORY"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/station",
+          "before": "ivory-mark-stand-annex",
+          "after": "ivory-mark-stand"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pe89e1cbd08fd",
+    "index": 14,
+    "within_family": 2,
+    "family": "CONTRADICTION",
+    "endpoints": {
+      "A": "s2697ff347b99",
+      "B": "s04e9ee967879"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the second assertion build so the two unequal values concern one immutable event.",
+    "coupling": {
+      "target": "CONTRADICTION",
+      "target_before": {
+        "answer": "CONSISTENT"
+      },
+      "target_after": {
+        "answer": "CONTRADICTORY"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/build",
+          "before": "reed-revision-m",
+          "after": "reed-revision-k"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p9b6e9ea58666",
+    "index": 15,
+    "within_family": 3,
+    "family": "CONTRADICTION",
+    "endpoints": {
+      "A": "sb8f321279191",
+      "B": "s0f2956ae97be"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the second assertion cycle so the two unequal values concern one immutable event.",
+    "coupling": {
+      "target": "CONTRADICTION",
+      "target_before": {
+        "answer": "CONSISTENT"
+      },
+      "target_after": {
+        "answer": "CONTRADICTORY"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "IDENTITY_EQUALITY"
+      ],
+      "all_changed_primitives": [
+        "IDENTITY_EQUALITY",
+        "CONTRADICTION"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/cycle",
+          "before": 117,
+          "after": 116
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pe6150a0d0f53",
+    "index": 16,
+    "within_family": 0,
+    "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "endpoints": {
+      "A": "sd96aa46e6676",
+      "B": "saf58342c12c0"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Add exactly one allowed input to an uncaptured singleton domain; the requirement table and observation stay fixed.",
+    "coupling": {
+      "target": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "target_before": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "target_after": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "KNOWN_VS_UNKNOWN"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "ash-woven"
+          ],
+          "after": [
+            "ash-woven",
+            "ash-glazed"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p290c1440f38a",
+    "index": 17,
+    "within_family": 1,
+    "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "endpoints": {
+      "A": "sfb25a574ca20",
+      "B": "s7702e20ad7b4"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Add exactly one allowed input to an uncaptured singleton domain; the requirement table and observation stay fixed.",
+    "coupling": {
+      "target": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "target_before": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "target_after": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "KNOWN_VS_UNKNOWN"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "pearl-woven"
+          ],
+          "after": [
+            "pearl-woven",
+            "pearl-glazed"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p09c35169512d",
+    "index": 18,
+    "within_family": 2,
+    "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "endpoints": {
+      "A": "s0765f4605459",
+      "B": "s69eb6a090d10"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Add exactly one allowed input to an uncaptured singleton domain; the requirement table and observation stay fixed.",
+    "coupling": {
+      "target": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "target_before": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "target_after": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "fern-woven"
+          ],
+          "after": [
+            "fern-woven",
+            "fern-glazed"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p8205c60fcc6a",
+    "index": 19,
+    "within_family": 3,
+    "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "endpoints": {
+      "A": "s05ba8d17548c",
+      "B": "sab307858b73d"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Add exactly one allowed input to an uncaptured singleton domain; the requirement table and observation stay fixed.",
+    "coupling": {
+      "target": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "target_before": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "target_after": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "all_changed_primitives": [
+        "KNOWN_VS_UNKNOWN",
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "willow-woven"
+          ],
+          "after": [
+            "willow-woven",
+            "willow-glazed"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pa7fdd2bdb981",
+    "index": 20,
+    "within_family": 0,
+    "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "endpoints": {
+      "A": "s2dcbcbc31e7d",
+      "B": "s299b5eeddb41"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the first trial observation from its reference-input requirement to a different supplied result.",
+    "coupling": {
+      "target": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "target_before": {
+        "answer": "MATCH"
+      },
+      "target_after": {
+        "answer": "MISMATCH"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "OBSERVATION_REQUIREMENT_COMPARISON"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "dune-pulse",
+          "after": "dune-beam"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p869553eb45c8",
+    "index": 21,
+    "within_family": 1,
+    "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "endpoints": {
+      "A": "s37bc9fbd4c28",
+      "B": "s95eb3f9311a7"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the older first trial observation; the explicitly deployed newer trial remains unchanged.",
+    "coupling": {
+      "target": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "target_before": {
+        "answer": "MATCH"
+      },
+      "target_after": {
+        "answer": "MISMATCH"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "OBSERVATION_REQUIREMENT_COMPARISON"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "opal-pulse",
+          "after": "opal-beam"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pc4e6e87979b9",
+    "index": 22,
+    "within_family": 2,
+    "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "endpoints": {
+      "A": "s7074290a7c0e",
+      "B": "sb576e9584f1c"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the older first trial observation; the deployed second trial retains decision-relevant unresolved input.",
+    "coupling": {
+      "target": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "target_before": {
+        "answer": "MATCH"
+      },
+      "target_after": {
+        "answer": "MISMATCH"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "OBSERVATION_REQUIREMENT_COMPARISON"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "spruce-pulse",
+          "after": "spruce-beam"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p9464ebed4ef3",
+    "index": 23,
+    "within_family": 3,
+    "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "endpoints": {
+      "A": "sf759b3af8e75",
+      "B": "sefdd360d92e4"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the first trial observation; the separate immutable mark disagreement remains on both sides.",
+    "coupling": {
+      "target": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "target_before": {
+        "answer": "MATCH"
+      },
+      "target_after": {
+        "answer": "MISMATCH"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "OBSERVATION_REQUIREMENT_COMPARISON"
+      ],
+      "five_class_changes": false,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "maple-pulse",
+          "after": "maple-beam"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pf2edb8d17b19",
+    "index": 24,
+    "within_family": 0,
+    "family": "EVIDENCE_SUFFICIENCY",
+    "endpoints": {
+      "A": "s4e4487eb947a",
+      "B": "s3619d857b3d1"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the required result for the third admissible input; three completions remain, but they now disagree about the operational violation proposition.",
+    "coupling": {
+      "target": "EVIDENCE_SUFFICIENCY",
+      "target_before": {
+        "answer": "DETERMINATE"
+      },
+      "target_after": {
+        "answer": "UNDERDETERMINED"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "clay-pulse",
+          "after": "clay-extra-ray"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p2d668f50a4c4",
+    "index": 25,
+    "within_family": 1,
+    "family": "EVIDENCE_SUFFICIENCY",
+    "endpoints": {
+      "A": "s88cda4031925",
+      "B": "sfea7d23cd93b"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the required result for the third admissible input; three completions remain, but they now disagree about the operational violation proposition.",
+    "coupling": {
+      "target": "EVIDENCE_SUFFICIENCY",
+      "target_before": {
+        "answer": "DETERMINATE"
+      },
+      "target_after": {
+        "answer": "UNDERDETERMINED"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "pine-pulse",
+          "after": "pine-beam"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "pb9fcb5be062e",
+    "index": 26,
+    "within_family": 2,
+    "family": "EVIDENCE_SUFFICIENCY",
+    "endpoints": {
+      "A": "s8c353e553e52",
+      "B": "s059455a331cf"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the required result for the third admissible input; three completions remain, but they now disagree about the operational violation proposition.",
+    "coupling": {
+      "target": "EVIDENCE_SUFFICIENCY",
+      "target_before": {
+        "answer": "DETERMINATE"
+      },
+      "target_after": {
+        "answer": "UNDERDETERMINED"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "quartz-pulse",
+          "after": "quartz-extra-ray"
+        }
+      ]
+    }
+  },
+  {
+    "pair_id": "p05e943ec08b0",
+    "index": 27,
+    "within_family": 3,
+    "family": "EVIDENCE_SUFFICIENCY",
+    "endpoints": {
+      "A": "s93bb85d7f07a",
+      "B": "se8ae05e202d5"
+    },
+    "identity_flip_field": null,
+    "semantic_delta": "Change only the required result for the third admissible input; three completions remain, but they now disagree about the operational violation proposition.",
+    "coupling": {
+      "target": "EVIDENCE_SUFFICIENCY",
+      "target_before": {
+        "answer": "DETERMINATE"
+      },
+      "target_after": {
+        "answer": "UNDERDETERMINED"
+      },
+      "target_changes": true,
+      "changed_non_target_primitives": [],
+      "all_changed_primitives": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "five_class_changes": true,
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "hazel-pulse",
+          "after": "hazel-beam"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "system": "lens cleaner",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "ash-revision-k"
+  },
+  "builds": [
+    {
+      "build": "ash-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "ash-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "ash-revision-k",
+        "station": "ash-mark-stand",
+        "cycle": 119
+      },
+      "asserted_value": "ash-etched"
+    },
+    {
+      "subject": {
+        "build": "ash-revision-k",
+        "station": "ash-mark-stand",
+        "cycle": 119
+      },
+      "asserted_value": "ash-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "ash-revision-k",
+      "reported_input": "UNKNOWN",
+      "admissible_inputs": [
+        "ash-woven"
+      ],
+      "reference_input": "ash-woven",
+      "required_results": [
+        {
+          "input": "ash-woven",
+          "result": "ash-pulse"
+        },
+        {
+          "input": "ash-glazed",
+          "result": "ash-pulse"
+        },
+        {
+          "input": "ash-cast",
+          "result": "ash-pulse"
+        }
+      ],
+      "observed_result": "ash-pulse"
+    },
+    {
+      "build": "ash-revision-m",
+      "reported_input": "ash-woven",
+      "admissible_inputs": [
+        "ash-woven",
+        "ash-glazed",
+        "ash-cast"
+      ],
+      "reference_input": "ash-woven",
+      "required_results": [
+        {
+          "input": "ash-woven",
+          "result": "ash-pulse"
+        },
+        {
+          "input": "ash-glazed",
+          "result": "ash-tone"
+        },
+        {
+          "input": "ash-cast",
+          "result": "ash-beam"
+        }
+      ],
+      "observed_result": "ash-pulse"
+    }
+  ]
+}

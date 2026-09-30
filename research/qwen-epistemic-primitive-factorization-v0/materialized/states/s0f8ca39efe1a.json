@@ -1,0 +1,87 @@
+{
+  "system": "ceramic kiln",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "cairn-revision-k"
+  },
+  "builds": [
+    {
+      "build": "cairn-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "cairn-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "cairn-revision-k",
+        "station": "cairn-mark-stand",
+        "cycle": 71
+      },
+      "asserted_value": "cairn-etched"
+    },
+    {
+      "subject": {
+        "build": "cairn-revision-k",
+        "station": "cairn-mark-stand",
+        "cycle": 72
+      },
+      "asserted_value": "cairn-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "cairn-revision-k",
+      "reported_input": "cairn-woven",
+      "admissible_inputs": [
+        "cairn-woven",
+        "cairn-glazed",
+        "cairn-cast"
+      ],
+      "reference_input": "cairn-woven",
+      "required_results": [
+        {
+          "input": "cairn-woven",
+          "result": "cairn-pulse"
+        },
+        {
+          "input": "cairn-glazed",
+          "result": "cairn-tone"
+        },
+        {
+          "input": "cairn-cast",
+          "result": "cairn-beam"
+        }
+      ],
+      "observed_result": "cairn-pulse"
+    },
+    {
+      "build": "cairn-revision-m",
+      "reported_input": "cairn-woven",
+      "admissible_inputs": [
+        "cairn-woven",
+        "cairn-glazed",
+        "cairn-cast"
+      ],
+      "reference_input": "cairn-woven",
+      "required_results": [
+        {
+          "input": "cairn-woven",
+          "result": "cairn-pulse"
+        },
+        {
+          "input": "cairn-glazed",
+          "result": "cairn-tone"
+        },
+        {
+          "input": "cairn-cast",
+          "result": "cairn-beam"
+        }
+      ],
+      "observed_result": "cairn-beam"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "system": "capsule loader",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "hazel-revision-k"
+  },
+  "builds": [
+    {
+      "build": "hazel-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "hazel-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "hazel-revision-k",
+        "station": "hazel-mark-stand",
+        "cycle": 152
+      },
+      "asserted_value": "hazel-etched"
+    },
+    {
+      "subject": {
+        "build": "hazel-revision-k",
+        "station": "hazel-mark-stand",
+        "cycle": 152
+      },
+      "asserted_value": "hazel-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "hazel-revision-k",
+      "reported_input": "UNKNOWN",
+      "admissible_inputs": [
+        "hazel-woven",
+        "hazel-glazed",
+        "hazel-cast"
+      ],
+      "reference_input": "hazel-woven",
+      "required_results": [
+        {
+          "input": "hazel-woven",
+          "result": "hazel-pulse"
+        },
+        {
+          "input": "hazel-glazed",
+          "result": "hazel-pulse"
+        },
+        {
+          "input": "hazel-cast",
+          "result": "hazel-beam"
+        }
+      ],
+      "observed_result": "hazel-beam"
+    },
+    {
+      "build": "hazel-revision-m",
+      "reported_input": "hazel-woven",
+      "admissible_inputs": [
+        "hazel-woven",
+        "hazel-glazed",
+        "hazel-cast"
+      ],
+      "reference_input": "hazel-woven",
+      "required_results": [
+        {
+          "input": "hazel-woven",
+          "result": "hazel-pulse"
+        },
+        {
+          "input": "hazel-glazed",
+          "result": "hazel-tone"
+        },
+        {
+          "input": "hazel-cast",
+          "result": "hazel-beam"
+        }
+      ],
+      "observed_result": "hazel-pulse"
+    }
+  ]
+}

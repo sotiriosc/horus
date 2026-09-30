@@ -1,0 +1,87 @@
+{
+  "system": "grain elevator",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "elm-revision-k"
+  },
+  "builds": [
+    {
+      "build": "elm-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "elm-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "elm-revision-k",
+        "station": "elm-mark-stand",
+        "cycle": 116
+      },
+      "asserted_value": "elm-etched"
+    },
+    {
+      "subject": {
+        "build": "elm-revision-k",
+        "station": "elm-mark-stand",
+        "cycle": 117
+      },
+      "asserted_value": "elm-smooth"
+    }
+  ],
+  "trials": [
+    {
+      "build": "elm-revision-k",
+      "reported_input": "elm-woven",
+      "admissible_inputs": [
+        "elm-woven",
+        "elm-glazed",
+        "elm-cast"
+      ],
+      "reference_input": "elm-woven",
+      "required_results": [
+        {
+          "input": "elm-woven",
+          "result": "elm-pulse"
+        },
+        {
+          "input": "elm-glazed",
+          "result": "elm-tone"
+        },
+        {
+          "input": "elm-cast",
+          "result": "elm-beam"
+        }
+      ],
+      "observed_result": "elm-pulse"
+    },
+    {
+      "build": "elm-revision-m",
+      "reported_input": "elm-woven",
+      "admissible_inputs": [
+        "elm-woven",
+        "elm-glazed",
+        "elm-cast"
+      ],
+      "reference_input": "elm-woven",
+      "required_results": [
+        {
+          "input": "elm-woven",
+          "result": "elm-pulse"
+        },
+        {
+          "input": "elm-glazed",
+          "result": "elm-tone"
+        },
+        {
+          "input": "elm-cast",
+          "result": "elm-beam"
+        }
+      ],
+      "observed_result": "elm-pulse"
+    }
+  ]
+}

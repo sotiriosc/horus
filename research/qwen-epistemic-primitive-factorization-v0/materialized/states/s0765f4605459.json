@@ -1,0 +1,85 @@
+{
+  "system": "paper cutter",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "fern-revision-k"
+  },
+  "builds": [
+    {
+      "build": "fern-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "fern-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "fern-revision-k",
+        "station": "fern-mark-stand",
+        "cycle": 125
+      },
+      "asserted_value": "fern-etched"
+    },
+    {
+      "subject": {
+        "build": "fern-revision-k",
+        "station": "fern-mark-stand",
+        "cycle": 125
+      },
+      "asserted_value": "fern-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "fern-revision-k",
+      "reported_input": "UNKNOWN",
+      "admissible_inputs": [
+        "fern-woven"
+      ],
+      "reference_input": "fern-woven",
+      "required_results": [
+        {
+          "input": "fern-woven",
+          "result": "fern-pulse"
+        },
+        {
+          "input": "fern-glazed",
+          "result": "fern-tone"
+        },
+        {
+          "input": "fern-cast",
+          "result": "fern-beam"
+        }
+      ],
+      "observed_result": "fern-pulse"
+    },
+    {
+      "build": "fern-revision-m",
+      "reported_input": "fern-woven",
+      "admissible_inputs": [
+        "fern-woven",
+        "fern-glazed",
+        "fern-cast"
+      ],
+      "reference_input": "fern-woven",
+      "required_results": [
+        {
+          "input": "fern-woven",
+          "result": "fern-pulse"
+        },
+        {
+          "input": "fern-glazed",
+          "result": "fern-tone"
+        },
+        {
+          "input": "fern-cast",
+          "result": "fern-beam"
+        }
+      ],
+      "observed_result": "fern-pulse"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "system": "optical shutter",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "linen-revision-k"
+  },
+  "builds": [
+    {
+      "build": "linen-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "linen-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "linen-revision-k",
+        "station": "linen-mark-stand",
+        "cycle": 80
+      },
+      "asserted_value": "linen-etched"
+    },
+    {
+      "subject": {
+        "build": "linen-revision-k",
+        "station": "linen-mark-stand",
+        "cycle": 81
+      },
+      "asserted_value": "linen-smooth"
+    }
+  ],
+  "trials": [
+    {
+      "build": "linen-revision-k",
+      "reported_input": "linen-woven",
+      "admissible_inputs": [
+        "linen-woven",
+        "linen-glazed",
+        "linen-cast"
+      ],
+      "reference_input": "linen-woven",
+      "required_results": [
+        {
+          "input": "linen-woven",
+          "result": "linen-pulse"
+        },
+        {
+          "input": "linen-glazed",
+          "result": "linen-tone"
+        },
+        {
+          "input": "linen-cast",
+          "result": "linen-beam"
+        }
+      ],
+      "observed_result": "linen-pulse"
+    },
+    {
+      "build": "linen-revision-m",
+      "reported_input": "linen-woven",
+      "admissible_inputs": [
+        "linen-woven",
+        "linen-glazed",
+        "linen-cast"
+      ],
+      "reference_input": "linen-woven",
+      "required_results": [
+        {
+          "input": "linen-woven",
+          "result": "linen-pulse"
+        },
+        {
+          "input": "linen-glazed",
+          "result": "linen-tone"
+        },
+        {
+          "input": "linen-cast",
+          "result": "linen-beam"
+        }
+      ],
+      "observed_result": "linen-pulse"
+    }
+  ]
+}

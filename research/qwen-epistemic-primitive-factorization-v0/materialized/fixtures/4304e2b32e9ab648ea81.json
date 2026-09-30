@@ -1,0 +1,87 @@
+{
+  "system": "cable winder",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "moss-revision-k"
+  },
+  "builds": [
+    {
+      "build": "moss-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "moss-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "moss-revision-k",
+        "station": "moss-mark-stand",
+        "cycle": 107
+      },
+      "asserted_value": "moss-etched"
+    },
+    {
+      "subject": {
+        "build": "moss-revision-k",
+        "station": "moss-mark-stand",
+        "cycle": 107
+      },
+      "asserted_value": "moss-smooth"
+    }
+  ],
+  "trials": [
+    {
+      "build": "moss-revision-k",
+      "reported_input": "moss-woven",
+      "admissible_inputs": [
+        "moss-woven",
+        "moss-glazed",
+        "moss-cast"
+      ],
+      "reference_input": "moss-woven",
+      "required_results": [
+        {
+          "input": "moss-woven",
+          "result": "moss-pulse"
+        },
+        {
+          "input": "moss-glazed",
+          "result": "moss-tone"
+        },
+        {
+          "input": "moss-cast",
+          "result": "moss-beam"
+        }
+      ],
+      "observed_result": "moss-pulse"
+    },
+    {
+      "build": "moss-revision-m",
+      "reported_input": "moss-woven",
+      "admissible_inputs": [
+        "moss-woven",
+        "moss-glazed",
+        "moss-cast"
+      ],
+      "reference_input": "moss-woven",
+      "required_results": [
+        {
+          "input": "moss-woven",
+          "result": "moss-pulse"
+        },
+        {
+          "input": "moss-glazed",
+          "result": "moss-tone"
+        },
+        {
+          "input": "moss-cast",
+          "result": "moss-beam"
+        }
+      ],
+      "observed_result": "moss-beam"
+    }
+  ]
+}

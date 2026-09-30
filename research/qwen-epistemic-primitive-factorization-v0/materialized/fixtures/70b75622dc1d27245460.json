@@ -1,0 +1,87 @@
+{
+  "system": "water sampler",
+  "conventions": "All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.",
+  "deployment": {
+    "build": "heath-revision-k"
+  },
+  "builds": [
+    {
+      "build": "heath-revision-k",
+      "creation_order": 2
+    },
+    {
+      "build": "heath-revision-m",
+      "creation_order": 1
+    }
+  ],
+  "assertions": [
+    {
+      "subject": {
+        "build": "heath-revision-k",
+        "station": "heath-mark-stand",
+        "cycle": 86
+      },
+      "asserted_value": "heath-etched"
+    },
+    {
+      "subject": {
+        "build": "heath-revision-k",
+        "station": "heath-mark-stand",
+        "cycle": 86
+      },
+      "asserted_value": "heath-etched"
+    }
+  ],
+  "trials": [
+    {
+      "build": "heath-revision-k",
+      "reported_input": "heath-woven",
+      "admissible_inputs": [
+        "heath-woven",
+        "heath-glazed",
+        "heath-cast"
+      ],
+      "reference_input": "heath-woven",
+      "required_results": [
+        {
+          "input": "heath-woven",
+          "result": "heath-pulse"
+        },
+        {
+          "input": "heath-glazed",
+          "result": "heath-tone"
+        },
+        {
+          "input": "heath-cast",
+          "result": "heath-beam"
+        }
+      ],
+      "observed_result": "heath-beam"
+    },
+    {
+      "build": "heath-revision-m",
+      "reported_input": "heath-woven",
+      "admissible_inputs": [
+        "heath-woven",
+        "heath-glazed",
+        "heath-cast"
+      ],
+      "reference_input": "heath-woven",
+      "required_results": [
+        {
+          "input": "heath-woven",
+          "result": "heath-pulse"
+        },
+        {
+          "input": "heath-glazed",
+          "result": "heath-tone"
+        },
+        {
+          "input": "heath-cast",
+          "result": "heath-beam"
+        }
+      ],
+      "observed_result": "heath-pulse"
+    }
+  ]
+}
