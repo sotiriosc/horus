@@ -49,6 +49,7 @@ def measure_action(action,w,request_body,ref,path):
   if not (path/'launch.json').exists():raise
   measurement=dict(action=action,valid=False,wall_seconds=None,error=type(exc).__name__+': '+str(exc),resource_violation=True,output_sha256=sha(b''),output_bytes=0,finish_reason=None,prompt_tokens=None,completion_tokens=None,timings={},launch_seconds=None,full_gpu_residency=False,peak_vram_mib=None)
   write(path/'execution-measurement.json',measurement)
+ if measurement.get('monitor_errors',0):raise InfrastructureError('GPU monitoring unavailable during action; stop without Memory admission')
  measurement['executor_total_seconds']=time.perf_counter()-started
  return measurement
 
