@@ -1,0 +1,24 @@
+{
+  "branch": "research/qwen-temporal-state-representation-v0",
+  "verified_base": "19c50c06caf99736acbf5c728da0148840e665a5",
+  "method_freeze": "8366b2815ed203240495308e1f38297bd432da61",
+  "case_freeze": "db4d25017e6d8bcb1b58c20712b5f19ff6dbac0d",
+  "qualification_commit": "3cf82dd18e71b1bf17fa822b08039b0216e7d03b",
+  "raw_pre_scoring": "8a97d8330d51248bc60de78a0da7d6641890a620",
+  "seed": 1264087953,
+  "registered_interpretation": "TEMPORAL_STATE_REPRESENTATION_NOT_ESTABLISHED",
+  "project_recommendation": "Put the current Horus research direction on hold pending a genuinely new technical hypothesis, model capability or architecture. Do not launch another prompt workaround or decomposition benchmark.",
+  "answers": {
+    "Can Qwen reliably represent current violation state?": "33/36, below the frozen 34/36 field threshold. The full competence claim still requires every gate condition.",
+    "Can it reliably preserve prior violation state?": "30/36, below the frozen 34/36 field threshold, including existential aggregation across older trials.",
+    "Can it represent current=NO, prior=YES reliably?": "Historical-focus joint accuracy is 12/12, meeting the 11/12 floor.",
+    "Does it track minimal temporal changes?": "Changing-pair exact passes: 7/10, below the 9/10 gate. Changed-field-only direction tracking is 7/10 and is descriptive, not a substitute for exact output-vector correctness.",
+    "Does it ignore irrelevant changes?": "Stable-pair exact retention: 5/8, below the required 8/8. Mere selection agreement, including consistently wrong outputs, is reported separately.",
+    "Does removing the five-class ontology repair the historical failure?": "The historical-focus relation itself is correct in 12/12 fresh cases, so the observed subset failure is absent under this two-field interface. However, the complete temporal capability fails the hard gate because other combinations and controlled pairs remain unreliable. Different cases and output semantics prevent proving that removal of five-class compression caused the subset improvement.",
+    "Is a factorized temporal state empirically justified?": "Not as an established Qwen capability under this gate. Hard-coding the state construction would demonstrate software behavior, not supply the missing evidence about Qwen.",
+    "If not, should this research direction be paused?": "Yes. Put the current Horus research direction on hold pending a genuinely new technical hypothesis, model capability or architecture. Do not launch another prompt workaround, comparator or decomposition benchmark.",
+    "If yes, what exact capability is established?": "No whole-task temporal representation capability has been established by the registered gate. Report the measured field, focus and pair results literally.",
+    "What remains necessary before any RSI claim?": "A future system must perform a useful task, accumulate authenticated consequences and improve later behavior; diagnose its own limitation; propose a bounded modification and predict its improvement prospectively; apply it through an external/sandboxed authorization boundary; test it prospectively; retain it only when real consequences support it; and successfully repeat with the improved system. At least two prospectively separated successful improvement cycles are required before a strictly scoped BOUNDED_RECURSIVE_SELF_IMPROVEMENT_SUPPORTED claim. One self-modification is insufficient."
+  },
+  "publication_commit": "Exact verified remote head reported in the final completion handoff."
+}

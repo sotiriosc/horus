@@ -1,0 +1,1523 @@
+{
+  "study": "HORUS_TEMPORAL_STATE_REPRESENTATION_GATE_V0",
+  "scheduled": 36,
+  "attempted": 36,
+  "completed": 36,
+  "optional_arm": false,
+  "metrics": {
+    "joint_correct": 28,
+    "field_correct": {
+      "current_violation": 33,
+      "prior_violation": 30
+    },
+    "schema_valid": 36,
+    "historical_focus": {
+      "correct": 12,
+      "total": 12
+    },
+    "changing_pairs": {
+      "passed": 7,
+      "total": 10,
+      "required_flip_on_changed_field": 7
+    },
+    "stable_pairs": {
+      "passed": 5,
+      "total": 8,
+      "selected_vector_stable": 7
+    },
+    "matched_pairs": {
+      "passed": 12,
+      "total": 18
+    }
+  },
+  "gate": {
+    "passed": false,
+    "conditions": {
+      "joint_at_least_32": false,
+      "current_at_least_34": false,
+      "prior_at_least_34": false,
+      "historical_focus_at_least_11": true,
+      "changing_pairs_at_least_9": false,
+      "stable_pairs_all_8": false,
+      "schema_valid_at_least_35": true
+    },
+    "registered_interpretation": "TEMPORAL_STATE_REPRESENTATION_NOT_ESTABLISHED",
+    "project_recommendation": "Put the current Horus research direction on hold pending a genuinely new technical hypothesis, model capability or architecture. Do not launch another prompt workaround or decomposition benchmark."
+  },
+  "field_confusion": {
+    "current_violation": {
+      "YES": {
+        "YES": 7,
+        "NO": 0,
+        "UNKNOWN": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "NO": {
+        "YES": 0,
+        "NO": 19,
+        "UNKNOWN": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "UNKNOWN": {
+        "YES": 0,
+        "NO": 3,
+        "UNKNOWN": 7,
+        "INVALID_OUTPUT": 0
+      }
+    },
+    "prior_violation": {
+      "YES": {
+        "YES": 18,
+        "NO": 0,
+        "UNKNOWN": 1,
+        "INVALID_OUTPUT": 0
+      },
+      "NO": {
+        "YES": 0,
+        "NO": 8,
+        "UNKNOWN": 3,
+        "INVALID_OUTPUT": 0
+      },
+      "UNKNOWN": {
+        "YES": 2,
+        "NO": 0,
+        "UNKNOWN": 4,
+        "INVALID_OUTPUT": 0
+      }
+    }
+  },
+  "joint_confusion": {
+    "YES/YES": {
+      "YES/YES": 2,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 1,
+      "NO/YES": 0,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "YES/NO": {
+      "YES/YES": 0,
+      "YES/NO": 4,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 0,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "YES/UNKNOWN": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 0,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "NO/YES": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 12,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "NO/NO": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 0,
+      "NO/NO": 1,
+      "NO/UNKNOWN": 3,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "NO/UNKNOWN": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 0,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 3,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "UNKNOWN/YES": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 2,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 2,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "UNKNOWN/NO": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 0,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 0,
+      "UNKNOWN/NO": 3,
+      "UNKNOWN/UNKNOWN": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "UNKNOWN/UNKNOWN": {
+      "YES/YES": 0,
+      "YES/NO": 0,
+      "YES/UNKNOWN": 0,
+      "NO/YES": 1,
+      "NO/NO": 0,
+      "NO/UNKNOWN": 0,
+      "UNKNOWN/YES": 1,
+      "UNKNOWN/NO": 0,
+      "UNKNOWN/UNKNOWN": 1,
+      "INVALID_OUTPUT": 0
+    }
+  },
+  "subsets": {
+    "contradictory_packages": {
+      "correct": 17,
+      "total": 21
+    },
+    "consistent_packages": {
+      "correct": 11,
+      "total": 15
+    },
+    "multiple_prior_trials": {
+      "correct": 28,
+      "total": 34
+    },
+    "prior_unknown": {
+      "correct": 4,
+      "total": 6
+    },
+    "current_unknown": {
+      "correct": 6,
+      "total": 10
+    }
+  },
+  "endpoints": [
+    {
+      "id": "ts-v0-aeb3b4bb75b506",
+      "pair": "ts-p01",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-7ee6016eb8e611",
+      "pair": "ts-p01",
+      "side": "B",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-39e18be3c317e9",
+      "pair": "ts-p02",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-7b0ee2f9fea043",
+      "pair": "ts-p02",
+      "side": "B",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-b0d1c8b3e0ae64",
+      "pair": "ts-p03",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "CURRENT_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-6f86c2c7dd446d",
+      "pair": "ts-p03",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-df0eaaf6671c80",
+      "pair": "ts-p04",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-f9967e69213990",
+      "pair": "ts-p04",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-a26628e4ae0610",
+      "pair": "ts-p05",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PRIOR_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-c59671ee66cefd",
+      "pair": "ts-p05",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PRIOR_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-0c668665c90b65",
+      "pair": "ts-p06",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PRIOR_SUFFICIENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-330d94293ea800",
+      "pair": "ts-p06",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PRIOR_SUFFICIENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-89b524beb9f53f",
+      "pair": "ts-p07",
+      "side": "A",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-55a893467cbba8",
+      "pair": "ts-p07",
+      "side": "B",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-bd0d8ab4dd92da",
+      "pair": "ts-p08",
+      "side": "A",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-09837cee941fd8",
+      "pair": "ts-p08",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-a4e106c4c867d7",
+      "pair": "ts-p09",
+      "side": "A",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-feb704384d5d9b",
+      "pair": "ts-p09",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-024a820f994e30",
+      "pair": "ts-p10",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "CURRENT_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-1b52f068a3f71f",
+      "pair": "ts-p10",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": false,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "CURRENT_SUFFICIENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-0046f99f6350bf",
+      "pair": "ts-p11",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-c96043fb03b7bb",
+      "pair": "ts-p11",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-1c9581141f1b6d",
+      "pair": "ts-p12",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-bd0674281d558a",
+      "pair": "ts-p12",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": true,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-2ed1163c882e41",
+      "pair": "ts-p13",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-0b6a4e844a6860",
+      "pair": "ts-p13",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": true,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 2
+    },
+    {
+      "id": "ts-v0-9d05bc41c54ebe",
+      "pair": "ts-p14",
+      "side": "A",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-3503ccf52e36c5",
+      "pair": "ts-p14",
+      "side": "B",
+      "gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-19c5c04a551093",
+      "pair": "ts-p15",
+      "side": "A",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 1
+    },
+    {
+      "id": "ts-v0-3bc8ca26b5483c",
+      "pair": "ts-p15",
+      "side": "B",
+      "gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 1
+    },
+    {
+      "id": "ts-v0-bbc1a09704032e",
+      "pair": "ts-p16",
+      "side": "A",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": false,
+        "prior_violation": true
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-095cd8a8182549",
+      "pair": "ts-p16",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": false,
+        "prior_violation": true
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-eba8597228ee0c",
+      "pair": "ts-p17",
+      "side": "A",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": false,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-7d4e5751a06823",
+      "pair": "ts-p17",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "PACKAGE_CONSISTENCY",
+      "contradictory_package": true,
+      "prior_trial_count": 4
+    },
+    {
+      "id": "ts-v0-9ae0772932b33b",
+      "pair": "ts-p18",
+      "side": "A",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": false
+      },
+      "joint_correct": false,
+      "historical_focus": false,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 3
+    },
+    {
+      "id": "ts-v0-946dd869d28e87",
+      "pair": "ts-p18",
+      "side": "B",
+      "gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "schema_valid": true,
+      "field_correct": {
+        "current_violation": true,
+        "prior_violation": true
+      },
+      "joint_correct": true,
+      "historical_focus": false,
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "contradictory_package": false,
+      "prior_trial_count": 3
+    }
+  ],
+  "pairs": [
+    {
+      "id": "ts-p01",
+      "family": "CURRENT_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "current_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p02",
+      "family": "CURRENT_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "current_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p03",
+      "family": "CURRENT_SUFFICIENCY",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "current_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p04",
+      "family": "PRIOR_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "prior_violation"
+      ],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": false,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p05",
+      "family": "PRIOR_SUFFICIENCY",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "changed_output_fields": [
+        "prior_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p06",
+      "family": "PRIOR_SUFFICIENCY",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "prior_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p07",
+      "family": "PRIOR_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected_B": {
+        "current_violation": "YES",
+        "prior_violation": "UNKNOWN"
+      },
+      "changed_output_fields": [
+        "prior_violation"
+      ],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": false,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p08",
+      "family": "CURRENT_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "changed_output_fields": [
+        "current_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p09",
+      "family": "PRIOR_RELATION",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "changed_output_fields": [
+        "prior_violation"
+      ],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": true,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p10",
+      "family": "CURRENT_SUFFICIENCY",
+      "changing": true,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [
+        "current_violation"
+      ],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": false,
+      "selected_vector_stable": false
+    },
+    {
+      "id": "ts-p11",
+      "family": "PACKAGE_CONSISTENCY",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p12",
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p13",
+      "family": "PACKAGE_CONSISTENCY",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p14",
+      "family": "PACKAGE_CONSISTENCY",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected_A": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "selected_B": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p15",
+      "family": "PACKAGE_CONSISTENCY",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p16",
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected_A": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p17",
+      "family": "PACKAGE_CONSISTENCY",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "selected_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": true,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": true
+    },
+    {
+      "id": "ts-p18",
+      "family": "IRRELEVANT_PRIOR_RELATION",
+      "changing": false,
+      "gold_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "gold_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "selected_A": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "selected_B": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "changed_output_fields": [],
+      "exact_pair_pass": false,
+      "required_flip_on_changed_field": null,
+      "selected_vector_stable": false
+    }
+  ]
+}
