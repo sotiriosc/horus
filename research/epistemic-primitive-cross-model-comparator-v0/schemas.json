@@ -1,0 +1,126 @@
+{
+  "IDENTITY_EQUALITY": {
+    "type": "object",
+    "properties": {
+      "same_referent": {
+        "type": "boolean"
+      },
+      "equal_value": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "same_referent",
+      "equal_value"
+    ],
+    "additionalProperties": false
+  },
+  "CURRENTNESS": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "CURRENT",
+          "NOT_CURRENT"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "KNOWN_VS_UNKNOWN": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "KNOWN",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "CONTRADICTION": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "CONSISTENT",
+          "CONTRADICTORY"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "ALTERNATIVE_COMPLETION_EXISTENCE": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "ALTERNATIVE_EXISTS",
+          "NO_ALTERNATIVE"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "OBSERVATION_REQUIREMENT_COMPARISON": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "MATCH",
+          "MISMATCH"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "EVIDENCE_SUFFICIENCY": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "enum": [
+          "DETERMINATE",
+          "UNDERDETERMINED"
+        ]
+      }
+    },
+    "required": [
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "FIVE_CLASS_REDUCTION": {
+    "type": "object",
+    "properties": {
+      "classification": {
+        "enum": [
+          "SUPPORTED_CURRENT_DEFECT",
+          "NO_SUPPORTED_DIAGNOSIS",
+          "INSUFFICIENT_EVIDENCE",
+          "HISTORICAL_DEFECT_NOT_CURRENT",
+          "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        ]
+      }
+    },
+    "required": [
+      "classification"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "gpu": "name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 616.92, 24564 MiB, 19680 MiB, 4459 MiB\n",
+  "loader_evidence": [
+    "0.00.890.966 I print_info: n_ctx_train           = 262144",
+    "0.00.891.016 I print_info: n_ctx_orig_yarn       = 16384",
+    "0.12.133.319 I load_tensors: offloaded 41/41 layers to GPU",
+    "0.12.133.326 I load_tensors:        CUDA0 model buffer size = 13686.58 MiB",
+    "0.14.591.897 I llama_context: n_ctx                 = 16384",
+    "0.14.591.897 I llama_context: n_ctx_seq             = 16384",
+    "0.14.591.902 I llama_context: n_ctx_seq (16384) < n_ctx_train (262144) -- the full capacity of the model will not be utilized",
+    "0.14.602.684 I llama_kv_cache:      CUDA0 KV buffer size =  2560.00 MiB",
+    "0.14.671.000 I sched_reserve:      CUDA0 compute buffer size =   140.01 MiB",
+    "0.14.671.023 I sched_reserve:  CUDA_Host compute buffer size =    26.01 MiB",
+    "0.14.782.969 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'",
+    "0.14.783.023 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 16384"
+  ]
+}

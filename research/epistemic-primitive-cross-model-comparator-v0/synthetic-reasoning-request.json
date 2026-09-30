@@ -1,0 +1,42 @@
+{
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 413708629,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "This is a synthetic native reasoning-channel transport test. Use the native [THINK] and [/THINK] channel before the final JSON response."
+    },
+    {
+      "role": "user",
+      "content": "Compute 173 times 239. Return same_referent true if the result is 41347, otherwise false. Return equal_value false. This is synthetic arithmetic, not evidence classification."
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "same_referent": {
+          "type": "boolean"
+        },
+        "equal_value": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "same_referent",
+        "equal_value"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

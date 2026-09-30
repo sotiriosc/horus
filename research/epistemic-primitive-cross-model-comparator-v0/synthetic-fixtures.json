@@ -1,0 +1,1083 @@
+[
+  {
+    "id": "synthetic-01",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": false,
+      "equal_value": false
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"same_referent\": false, \"equal_value\": false}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-02",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": false,
+      "equal_value": true
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"same_referent\": false, \"equal_value\": true}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-03",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": true,
+      "equal_value": false
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"same_referent\": true, \"equal_value\": false}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-04",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": true,
+      "equal_value": true
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"same_referent\": true, \"equal_value\": true}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-05",
+    "schema_name": "CURRENTNESS",
+    "target": {
+      "answer": "CURRENT"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"CURRENT\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CURRENT",
+                "NOT_CURRENT"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-06",
+    "schema_name": "CURRENTNESS",
+    "target": {
+      "answer": "NOT_CURRENT"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"NOT_CURRENT\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CURRENT",
+                "NOT_CURRENT"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-07",
+    "schema_name": "KNOWN_VS_UNKNOWN",
+    "target": {
+      "answer": "KNOWN"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"KNOWN\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-08",
+    "schema_name": "KNOWN_VS_UNKNOWN",
+    "target": {
+      "answer": "UNKNOWN"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"UNKNOWN\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-09",
+    "schema_name": "CONTRADICTION",
+    "target": {
+      "answer": "CONSISTENT"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"CONSISTENT\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CONSISTENT",
+                "CONTRADICTORY"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-10",
+    "schema_name": "CONTRADICTION",
+    "target": {
+      "answer": "CONTRADICTORY"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"CONTRADICTORY\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CONSISTENT",
+                "CONTRADICTORY"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-11",
+    "schema_name": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "target": {
+      "answer": "ALTERNATIVE_EXISTS"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"ALTERNATIVE_EXISTS\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "ALTERNATIVE_EXISTS",
+                "NO_ALTERNATIVE"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-12",
+    "schema_name": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "target": {
+      "answer": "NO_ALTERNATIVE"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"NO_ALTERNATIVE\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "ALTERNATIVE_EXISTS",
+                "NO_ALTERNATIVE"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-13",
+    "schema_name": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "target": {
+      "answer": "MATCH"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"MATCH\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "MATCH",
+                "MISMATCH"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-14",
+    "schema_name": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "target": {
+      "answer": "MISMATCH"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"MISMATCH\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "MATCH",
+                "MISMATCH"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-15",
+    "schema_name": "EVIDENCE_SUFFICIENCY",
+    "target": {
+      "answer": "DETERMINATE"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"DETERMINATE\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "DETERMINATE",
+                "UNDERDETERMINED"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-16",
+    "schema_name": "EVIDENCE_SUFFICIENCY",
+    "target": {
+      "answer": "UNDERDETERMINED"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"answer\": \"UNDERDETERMINED\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "DETERMINATE",
+                "UNDERDETERMINED"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-17",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"classification\": \"SUPPORTED_CURRENT_DEFECT\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-18",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"classification\": \"NO_SUPPORTED_DIAGNOSIS\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-19",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"classification\": \"INSUFFICIENT_EVIDENCE\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-20",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-21",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic JSON serialization check. Copy the requested object exactly. No tools."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic fixture: copy this object exactly as JSON: {\"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-context",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": false,
+      "equal_value": false
+    },
+    "request": {
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.05,
+      "seed": 413708629,
+      "max_tokens": 2048,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "enable_thinking": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "This is a synthetic context and serialization check. Copy the final requested object exactly."
+        },
+        {
+          "role": "user",
+          "content": "Padding begins. amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber \nPadding ends. Copy this object as JSON: {\"same_referent\": false, \"equal_value\": false}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+]
