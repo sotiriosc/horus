@@ -1,0 +1,74 @@
+{
+  "base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+  "branch": "research/horus-real-task-runtime-optimization-v0",
+  "classification": "REAL_TASK_INTEGRITY_ONLY",
+  "decisions": {
+    "A": 24,
+    "B": 24,
+    "C": 24
+  },
+  "descriptive_diagnostics": "descriptive-diagnostics.json",
+  "environment_implementation_freeze": "14cbcc1e12d7e1079b6e63e116b2507d403392cb",
+  "full_results": "scores.json",
+  "method_freeze": "45981835d12a95a0044a270cb7cc31870f3d26b7",
+  "no_follow_on_study": true,
+  "no_merge": true,
+  "no_promotion": true,
+  "oracle_analysis": false,
+  "preservation": "postflight.json",
+  "promoted_architecture": "69947aa243a69e7ae26db534727a7122922d978d",
+  "publication_sha": "Externally verified final remote HEAD is supplied in the handoff; a commit cannot contain its own SHA.",
+  "questions_and_answers": [
+    {
+      "answer": "The instrumented campaign completed 24 executed decisions per Horus arm, with 14/24 output-integrity successes for S+E and 12/24 for S-only. Each executed consequence was authenticated and admitted through the preserved boundary. Completion alone is not the growth result.",
+      "question": "Did Horus successfully perform the real task?"
+    },
+    {
+      "answer": "Yes for the 3 receipt-derived E acquisitions: the exact deterministic rule changed selection using prior authenticated events. Other model choices are conditioned on Memory, but their causal dependence is not isolated by a memory-ablation control.",
+      "question": "Did authenticated consequences alter later decisions?"
+    },
+    {
+      "answer": "No prospective experience-conditioned improvement gate passed. Any descriptive latency differences do not establish the requested growth claim.",
+      "question": "Did those changed decisions improve measured real-world performance?"
+    },
+    {
+      "answer": "Durable state and policy-relevant reconstruction survived restart exactly; a performance improvement surviving restart was not established.",
+      "question": "Did that improvement survive restart?"
+    },
+    {
+      "answer": "No. The frozen matched E-benefit gate did not pass; do not claim net E reward improvement.",
+      "question": "Did promoted E improve performance beyond S-only rollback?"
+    },
+    {
+      "answer": "Neither successful adaptation nor transfer was established. The design tested exact repeats only.",
+      "question": "Was any improvement exact-context adaptation or bounded transfer?"
+    },
+    {
+      "answer": "E caused all three action changes to HOLD from authenticated empirical history. All 45 ordinary model selections remained ADVANCE, including after negative experience. No component established the registered performance-improvement claim. Receipt execution, authentication, state derivation, E and scoring are deterministic software; no model learning was demonstrated.",
+      "question": "Which component actually caused the improvement?"
+    },
+    {
+      "answer": "The new study adapter can execute a permitted local inference configuration, measure actual latency and output integrity, authenticate its realized consequence, store it durably and reconstruct policy state after restart. That new integration is engineering work; acquired optimization capability requires the separately reported improvement gate.",
+      "question": "What concretely can Horus do now that it could not do before this campaign?"
+    },
+    {
+      "answer": "No weight learning, intelligence increase, RSI, recursive self-improvement, generalization, held-out transfer, global model/policy superiority, deployment readiness or automatic promotion. Warm-request latency does not imply lower total autonomous-system cost; model selection, loading and instrumentation overheads are reported separately.",
+      "question": "What has NOT been demonstrated?"
+    },
+    {
+      "answer": "The result provides concrete implementation and failure evidence for a separately authorized engineering decision, but not evidence to promote E, replace a model or claim autonomous reward improvement.",
+      "question": "Is there enough evidence to justify a separately authorized next engineering change?"
+    }
+  ],
+  "raw_pre_analysis": "9cb640ffc64ad1e971ff4bde3852dcb1274b62d8",
+  "restart": "restart.json",
+  "runtime": "runtime-manifest.json",
+  "schedule": "schedule.json",
+  "tests": {
+    "preserved_core": 61,
+    "study": 14,
+    "total": 75
+  },
+  "thresholds": "qualification.json",
+  "workloads": "workload-manifest.json"
+}

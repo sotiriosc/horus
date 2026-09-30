@@ -1,0 +1,61 @@
+{
+  "arms": {
+    "A": {
+      "E_executions": [
+        {
+          "action": "HOLD",
+          "consequence": -1,
+          "index": 14,
+          "normalized_latency": 1.1206609983952718,
+          "profile": 1,
+          "valid": true
+        },
+        {
+          "action": "HOLD",
+          "consequence": 1,
+          "index": 20,
+          "normalized_latency": 0.895610563638857,
+          "profile": 2,
+          "valid": true
+        },
+        {
+          "action": "HOLD",
+          "consequence": 0,
+          "index": 23,
+          "normalized_latency": 1.016254926427024,
+          "profile": 3,
+          "valid": true
+        }
+      ],
+      "action_counts": {
+        "ADVANCE": 21,
+        "HOLD": 3
+      },
+      "exact_output_mismatches": 10,
+      "runtime_errors": 0,
+      "structural_failures": 0
+    },
+    "B": {
+      "E_executions": [],
+      "action_counts": {
+        "ADVANCE": 24
+      },
+      "exact_output_mismatches": 12,
+      "runtime_errors": 0,
+      "structural_failures": 0
+    },
+    "C": {
+      "E_executions": [],
+      "action_counts": {
+        "HOLD": 24
+      },
+      "exact_output_mismatches": 0,
+      "runtime_errors": 0,
+      "structural_failures": 0
+    }
+  },
+  "latency_caution": "Reported all-execution latency averages include outputs that fail exact equivalence and cannot be credited as useful speedup",
+  "ordinary_actions": "45/45 ordinary model selections were ADVANCE; all three HOLD choices in arm A were exact E overrides; RETREAT was never executed in the campaign",
+  "purpose": "Post-raw-freeze descriptive decomposition only; no rescoring, new inference or validator change",
+  "unexecuted_outcomes_unknown": true
+}
