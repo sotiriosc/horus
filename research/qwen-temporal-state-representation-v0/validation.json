@@ -1,0 +1,1408 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "states": 36,
+  "requests": 36,
+  "combination_counts": {
+    "NO/YES": 12,
+    "YES/YES": 3,
+    "UNKNOWN/YES": 4,
+    "NO/NO": 4,
+    "NO/UNKNOWN": 3,
+    "YES/NO": 4,
+    "UNKNOWN/NO": 3,
+    "UNKNOWN/UNKNOWN": 3
+  },
+  "historical_focus": 12,
+  "changing_pairs": 10,
+  "stable_pairs": 8,
+  "all_pairs_disjoint": true,
+  "all_single_field_changes": true,
+  "AB_first": 9,
+  "BA_first": 9,
+  "five_class_labels_or_definitions_in_prompts": false,
+  "answer_fields_in_input_state": false,
+  "prior_trial_counts": {
+    "2": 8,
+    "3": 10,
+    "4": 16,
+    "1": 2
+  },
+  "contradictory_states": 21,
+  "auditor_proofs": [
+    {
+      "id": "ts-v0-aeb3b4bb75b506",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "a98e8180b964f283a517b5ea0f500d11107ff13412bf9fbdee1b0f88a8252ab5"
+    },
+    {
+      "id": "ts-v0-7ee6016eb8e611",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "d2ee220dc9a1f41bf7611b11b10ecac1ad53feba68ebb8ee6267ec20dea0d9f7"
+    },
+    {
+      "id": "ts-v0-39e18be3c317e9",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "a974bcbecc09acf99c3ac9605bbeb71533797ec1abac6efecfa1b62c8054ca43"
+    },
+    {
+      "id": "ts-v0-7b0ee2f9fea043",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "e5038be45123edc56d42b850cd234e57e6b2514c360b20eab54e7633526a556f"
+    },
+    {
+      "id": "ts-v0-b0d1c8b3e0ae64",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "5af054835226f027e33ba4e92b244f04442d9d9d23bd8c3865e45a8e46497681"
+    },
+    {
+      "id": "ts-v0-6f86c2c7dd446d",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "87758c6a6731a74a79893ea241dc663a4dc090ac66b22114a2cf64aa324b48d7"
+    },
+    {
+      "id": "ts-v0-df0eaaf6671c80",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "19e06a4b07e05e3ad33c0457bb364ec5ada482bd12a21a38eb6049d0e7ed1f5d"
+    },
+    {
+      "id": "ts-v0-f9967e69213990",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "5c295fd5f4f2ce34f6f4978d28c0610921dd6d55036d122d575127f29fbf6e5f"
+    },
+    {
+      "id": "ts-v0-a26628e4ae0610",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "d522decb089739b088b50f60952b0dccb6e95e18d118aa906bdcd8179137f3ed"
+    },
+    {
+      "id": "ts-v0-c59671ee66cefd",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "1ba27fbf4d38228c78a274b21ef488103c656536ab610e663c891942d3bfc7b2"
+    },
+    {
+      "id": "ts-v0-0c668665c90b65",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "3cbae635d97e89641e3c70838dd7b2efc886ef12a8c78a531c6bc0ad65ea4f3a"
+    },
+    {
+      "id": "ts-v0-330d94293ea800",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "f1b9c4212fc3bfb139cd8b87b4ea344296f156d1a43e5c170e28f43f40c528e8"
+    },
+    {
+      "id": "ts-v0-89b524beb9f53f",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "c9abfef4b0dd1d6fb9089d75c858778c82984769c3f93e63caf9bc15b1878495"
+    },
+    {
+      "id": "ts-v0-55a893467cbba8",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "e77269fa1704bdd9c87ffff4defad9b607b5b932e9c9d93e17f4db34d409e9a8"
+    },
+    {
+      "id": "ts-v0-bd0d8ab4dd92da",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "fe54d63eb160b2778bb33f22e0ac61f4a2050b41873b8fa6bd385672e0132934"
+    },
+    {
+      "id": "ts-v0-09837cee941fd8",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "775c272d8e49390956ab89662ad53bd53e6f3dd74b4e7d26f7587c7c1edc2eef"
+    },
+    {
+      "id": "ts-v0-a4e106c4c867d7",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "575022024aee1616caaee66e7cec432c51b4667e9e58d61170ba02adba2f9a6f"
+    },
+    {
+      "id": "ts-v0-feb704384d5d9b",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "b04cd345560f598275d5b10838ce921d47da6c9e8939bc0e72fc1551b97c5617"
+    },
+    {
+      "id": "ts-v0-024a820f994e30",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "bca5d57c269b25019c50d4493cfac6fa3730e168eeb3b55f78f6c4fbbe62353f"
+    },
+    {
+      "id": "ts-v0-1b52f068a3f71f",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "2cc72936ccb0f652d1ae154e8604a450d0cf1c05f8a44c26bd252edc9a5148cd"
+    },
+    {
+      "id": "ts-v0-0046f99f6350bf",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "7b6e0138f11fd26a090842ae6ce7c3b166681410b9b73d34521c62f4a9860e77"
+    },
+    {
+      "id": "ts-v0-c96043fb03b7bb",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "390a006e1e2bc1a6c0c4737db022458c902a4786f0147b9f073bb255b4d935ae"
+    },
+    {
+      "id": "ts-v0-1c9581141f1b6d",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "d0d7a6c1685cbc0a427833d21d5897608c76a7d2e7e029cd289e9bcd1e1ac300"
+    },
+    {
+      "id": "ts-v0-bd0674281d558a",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "bb7f1d360acdbed176855ce10189c88f8e3acf22cf5d56face482ae604476036"
+    },
+    {
+      "id": "ts-v0-2ed1163c882e41",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "ef9f7751695162b06f8234580d4b56e24e32387e2b1b4e359707b2ac4ec78d3c"
+    },
+    {
+      "id": "ts-v0-0b6a4e844a6860",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "9290f88674a1f4cb53491a00411d70d6465c44f1aabd7a793e38df8e890b13c9"
+    },
+    {
+      "id": "ts-v0-9d05bc41c54ebe",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "6132d31d1723e01ec9ffd02d6c31622c5be780a64c00992f3be335ee5d3cd4a5"
+    },
+    {
+      "id": "ts-v0-3503ccf52e36c5",
+      "audited_gold": {
+        "current_violation": "YES",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "28c386eb685c093a6b457d75db398b270aec34fbecf8e379277f34cc33289dc9"
+    },
+    {
+      "id": "ts-v0-19c5c04a551093",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "a0f7841b515f08673c370ca67522a5967473d7faa312a2a0fce1c5cd11fb715d"
+    },
+    {
+      "id": "ts-v0-3bc8ca26b5483c",
+      "audited_gold": {
+        "current_violation": "NO",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "ba90b74ce7a7e8b0f1dfa2f4d631d4f0c1b3f4d0367c50fa0146edc1c008cd56"
+    },
+    {
+      "id": "ts-v0-bbc1a09704032e",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "fd8cedd4ec9b1b1896cd8678ade44fca514f6a92166a5c8136b0e199c7d345b6"
+    },
+    {
+      "id": "ts-v0-095cd8a8182549",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "YES"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "822bb2085487eb8aa1656e5024576e66aea5246239558e1497bbcb2acac83ba7"
+    },
+    {
+      "id": "ts-v0-eba8597228ee0c",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "979bb4872cec609c68ba36ffbe6e63e8b6852675d476924f05ca3bda9181fef3"
+    },
+    {
+      "id": "ts-v0-7d4e5751a06823",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "NO"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "8932df443f36753a1407e741cd4db6959382228404785570e3359d4365cb3942"
+    },
+    {
+      "id": "ts-v0-9ae0772932b33b",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "952cf65bbbcd8e088f4c56a9e7ceb83f12fa6a3d1b60e664303b023d9c6afca1"
+    },
+    {
+      "id": "ts-v0-946dd869d28e87",
+      "audited_gold": {
+        "current_violation": "UNKNOWN",
+        "prior_violation": "UNKNOWN"
+      },
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "possible_any_prior_violation": [
+        false,
+        true
+      ],
+      "proof": "Enumerated all independent admissible trial-completion combinations. Current truth set and existential older-trial truth set independently determine the two output fields. Separate provenance inconsistency is irrelevant by frozen scope.",
+      "state_sha256": "ca3fde5f538a92a6011c63655731c397f9e8da95c67886ede2d46d009a8e97cb"
+    }
+  ],
+  "pair_proofs": [
+    {
+      "id": "ts-p01",
+      "delta": [
+        {
+          "path": ".current_trial.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "YES",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p02",
+      "delta": [
+        {
+          "path": ".current_trial.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "YES",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p03",
+      "delta": [
+        {
+          "path": ".current_trial.evidence_sufficiency",
+          "before": "DETERMINATE",
+          "after": "UNDERDETERMINED"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p04",
+      "delta": [
+        {
+          "path": ".non_current_trials.2.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p05",
+      "delta": [
+        {
+          "path": ".non_current_trials.1.evidence_sufficiency",
+          "before": "DETERMINATE",
+          "after": "UNDERDETERMINED"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "UNKNOWN"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p06",
+      "delta": [
+        {
+          "path": ".non_current_trials.3.evidence_sufficiency",
+          "before": "UNDERDETERMINED",
+          "after": "DETERMINATE"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "UNKNOWN"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p07",
+      "delta": [
+        {
+          "path": ".non_current_trials.2.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "YES",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "YES",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p08",
+      "delta": [
+        {
+          "path": ".current_trial.observation_requirement",
+          "before": "MISMATCH",
+          "after": "MATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "YES",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "NO"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p09",
+      "delta": [
+        {
+          "path": ".non_current_trials.0.observation_requirement",
+          "before": "MISMATCH",
+          "after": "MATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "NO"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p10",
+      "delta": [
+        {
+          "path": ".current_trial.evidence_sufficiency",
+          "before": "DETERMINATE",
+          "after": "UNDERDETERMINED"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "UNKNOWN"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "UNKNOWN"
+        }
+      ],
+      "changing": true,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p11",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p12",
+      "delta": [
+        {
+          "path": ".non_current_trials.1.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p13",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p14",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "YES",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "YES",
+          "prior_violation": "NO"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p15",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "NO",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "NO",
+          "prior_violation": "NO"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p16",
+      "delta": [
+        {
+          "path": ".non_current_trials.0.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "YES"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "YES"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p17",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "NO"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "NO"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    },
+    {
+      "id": "ts-p18",
+      "delta": [
+        {
+          "path": ".non_current_trials.1.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "expected_outputs": [
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "UNKNOWN"
+        },
+        {
+          "current_violation": "UNKNOWN",
+          "prior_violation": "UNKNOWN"
+        }
+      ],
+      "changing": false,
+      "coupled_changes": false
+    }
+  ]
+}

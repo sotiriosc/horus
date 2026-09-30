@@ -1,0 +1,50 @@
+{
+  "proposition_scope": {
+    "trials": "The current_trial is explicitly deployed. Every non_current_trials entry is an already-bound prior trial within the same mechanism and contract scope. No opaque identifiers, unlisted trials or further evidence need to be resolved.",
+    "knownness": "Whether the trial input is uniquely determined; observations do not imply that requirements were followed.",
+    "alternative_completion": "Whether another admissible input besides the reference input exists. The reference input is admissible.",
+    "observation_requirement": "The already-resolved equality of observed and required output at the reference input.",
+    "evidence_sufficiency": "Whether all admissible inputs give the same truth value for the trial observation violating its requirement: DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible.",
+    "consistency_scope": "Package consistency concerns separate immutable provenance assertions. It does not alter the supplied resolved trial propositions used for these two temporal fields, including when the package is CONTRADICTORY."
+  },
+  "package": {
+    "consistency": "CONSISTENT"
+  },
+  "current_trial": {
+    "currentness": "CURRENT",
+    "knownness": "UNKNOWN",
+    "alternative_completion": "ALTERNATIVE_EXISTS",
+    "observation_requirement": "MISMATCH",
+    "evidence_sufficiency": "UNDERDETERMINED"
+  },
+  "non_current_trials": [
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "KNOWN",
+      "alternative_completion": "NO_ALTERNATIVE",
+      "observation_requirement": "MATCH",
+      "evidence_sufficiency": "DETERMINATE"
+    },
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "UNKNOWN",
+      "alternative_completion": "ALTERNATIVE_EXISTS",
+      "observation_requirement": "MATCH",
+      "evidence_sufficiency": "DETERMINATE"
+    },
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "UNKNOWN",
+      "alternative_completion": "ALTERNATIVE_EXISTS",
+      "observation_requirement": "MATCH",
+      "evidence_sufficiency": "DETERMINATE"
+    },
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "KNOWN",
+      "alternative_completion": "NO_ALTERNATIVE",
+      "observation_requirement": "MATCH",
+      "evidence_sufficiency": "DETERMINATE"
+    }
+  ]
+}

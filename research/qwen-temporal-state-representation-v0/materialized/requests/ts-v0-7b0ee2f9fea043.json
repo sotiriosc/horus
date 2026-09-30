@@ -1,0 +1,50 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Construct the two temporal violation fields from the supplied resolved primitive facts. Return only the JSON object satisfying the output schema."
+    },
+    {
+      "role": "user",
+      "content": "Output semantics:\nYES = the supplied determinate facts establish that the relevant observation violates its requirement.\nNO = the supplied determinate facts establish that the relevant observation complies with its requirement.\nUNKNOWN = the supplied facts do not determine whether violation or compliance holds.\ncurrent_violation refers only to the explicitly current/deployed trial.\nprior_violation summarizes whether at least one explicitly non-current prior trial has a demonstrated violation under the declared scope.\nFor multiple prior trials:\n- YES if at least one prior trial is determinately violating.\n- NO if all prior trials are determinately compliant.\n- UNKNOWN if no prior violation is established and at least one prior trial remains underdetermined.\n\nResolved primitive state:\n{\n  \"proposition_scope\": {\n    \"trials\": \"The current_trial is explicitly deployed. Every non_current_trials entry is an already-bound prior trial within the same mechanism and contract scope. No opaque identifiers, unlisted trials or further evidence need to be resolved.\",\n    \"knownness\": \"Whether the trial input is uniquely determined; observations do not imply that requirements were followed.\",\n    \"alternative_completion\": \"Whether another admissible input besides the reference input exists. The reference input is admissible.\",\n    \"observation_requirement\": \"The already-resolved equality of observed and required output at the reference input.\",\n    \"evidence_sufficiency\": \"Whether all admissible inputs give the same truth value for the trial observation violating its requirement: DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible.\",\n    \"consistency_scope\": \"Package consistency concerns separate immutable provenance assertions. It does not alter the supplied resolved trial propositions used for these two temporal fields, including when the package is CONTRADICTORY.\"\n  },\n  \"package\": {\n    \"consistency\": \"CONSISTENT\"\n  },\n  \"current_trial\": {\n    \"currentness\": \"CURRENT\",\n    \"knownness\": \"KNOWN\",\n    \"alternative_completion\": \"NO_ALTERNATIVE\",\n    \"observation_requirement\": \"MISMATCH\",\n    \"evidence_sufficiency\": \"DETERMINATE\"\n  },\n  \"non_current_trials\": [\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"KNOWN\",\n      \"alternative_completion\": \"NO_ALTERNATIVE\",\n      \"observation_requirement\": \"MATCH\",\n      \"evidence_sufficiency\": \"DETERMINATE\"\n    },\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"KNOWN\",\n      \"alternative_completion\": \"NO_ALTERNATIVE\",\n      \"observation_requirement\": \"MATCH\",\n      \"evidence_sufficiency\": \"DETERMINATE\"\n    },\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"UNKNOWN\",\n      \"alternative_completion\": \"ALTERNATIVE_EXISTS\",\n      \"observation_requirement\": \"MISMATCH\",\n      \"evidence_sufficiency\": \"DETERMINATE\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "current_violation": {
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "prior_violation": {
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "current_violation",
+        "prior_violation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 1264087953,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}
