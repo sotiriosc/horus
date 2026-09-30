@@ -1,0 +1,4030 @@
+[
+  {
+    "id": "pro-v0-b18f60c2713da4",
+    "pair": "pro-v0-p01",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "OBSERVATION"
+  },
+  {
+    "id": "pro-v0-5b072104642754",
+    "pair": "pro-v0-p01",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "OBSERVATION"
+  },
+  {
+    "id": "pro-v0-c49bc0ead43308",
+    "pair": "pro-v0-p02",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-736c00a6c1f92e",
+    "pair": "pro-v0-p02",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-2421271e6a7a31",
+    "pair": "pro-v0-p03",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-a411e9df3387d4",
+    "pair": "pro-v0-p03",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-8120fd5d678145",
+    "pair": "pro-v0-p04",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "HISTORY"
+  },
+  {
+    "id": "pro-v0-b29f71c05fe18e",
+    "pair": "pro-v0-p04",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "HISTORY"
+  },
+  {
+    "id": "pro-v0-406aeb2525e616",
+    "pair": "pro-v0-p05",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "HISTORY"
+  },
+  {
+    "id": "pro-v0-478acbada2008d",
+    "pair": "pro-v0-p05",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "HISTORY"
+  },
+  {
+    "id": "pro-v0-ba0a812f665894",
+    "pair": "pro-v0-p06",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-8b36e8339f2798",
+    "pair": "pro-v0-p06",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-0a4962af2de63c",
+    "pair": "pro-v0-p07",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-7fb20f5f3750bd",
+    "pair": "pro-v0-p07",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-7b01863a39d2d2",
+    "pair": "pro-v0-p08",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-5a1a81a55c0e9a",
+    "pair": "pro-v0-p08",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-22c84c154fdd83",
+    "pair": "pro-v0-p09",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-0eee59847bc1e5",
+    "pair": "pro-v0-p09",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-422eb6c501c86a",
+    "pair": "pro-v0-p10",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-32c2742ec6c06c",
+    "pair": "pro-v0-p10",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-0c4f0262a3b813",
+    "pair": "pro-v0-p11",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "SIMPLE",
+    "family": "OBSERVATION"
+  },
+  {
+    "id": "pro-v0-92a26e858ed0bc",
+    "pair": "pro-v0-p11",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "SIMPLE",
+    "family": "OBSERVATION"
+  },
+  {
+    "id": "pro-v0-c24550bb0f9575",
+    "pair": "pro-v0-p12",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-cf8cff0a198d74",
+    "pair": "pro-v0-p12",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-739e5491e691ef",
+    "pair": "pro-v0-p13",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-397a26ace4c7af",
+    "pair": "pro-v0-p13",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "SUFFICIENCY"
+  },
+  {
+    "id": "pro-v0-e9fd990aba2acc",
+    "pair": "pro-v0-p14",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-d2ff6062d3f530",
+    "pair": "pro-v0-p14",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-94fe16aef7a518",
+    "pair": "pro-v0-p15",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-b8e92d9b43f18c",
+    "pair": "pro-v0-p15",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "PRECEDENCE",
+    "family": "CONTRADICTION"
+  },
+  {
+    "id": "pro-v0-05d3f9dc9cff43",
+    "pair": "pro-v0-p16",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-a05137230c9d09",
+    "pair": "pro-v0-p16",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-6c3bc06f7ce0e2",
+    "pair": "pro-v0-p17",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-b38f41b6c14c16",
+    "pair": "pro-v0-p17",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "Every current completion violates the requirement; a specific active defect is distinguished from benign alternatives.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-f5b3facd82923a",
+    "pair": "pro-v0-p18",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          7
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-c9fc78b11713f4",
+    "pair": "pro-v0-p18",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          7
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-246658c11d6665",
+    "pair": "pro-v0-p19",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-d958ff9ff2356c",
+    "pair": "pro-v0-p19",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": null
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply and no older defect is demonstrated in the declared complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": null
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-6e54ce7649bbd6",
+    "pair": "pro-v0-p20",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-8e7929a2939527",
+    "pair": "pro-v0-p20",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-d36e9c18ac4a20",
+    "pair": "pro-v0-p21",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_HISTORY"
+  },
+  {
+    "id": "pro-v0-46c2f40fde6217",
+    "pair": "pro-v0-p21",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Both current violation and benign compliance remain admissible; historical evidence does not resolve current uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_HISTORY"
+  },
+  {
+    "id": "pro-v0-0de2eb47b18912",
+    "pair": "pro-v0-p22",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-794f1bfcd19ec9",
+    "pair": "pro-v0-p22",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_IDENTITY"
+  },
+  {
+    "id": "pro-v0-1eb227919e8ed0",
+    "pair": "pro-v0-p23",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-daa5db3565320c",
+    "pair": "pro-v0-p23",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply; every older completion violates the same scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_EQUALITY"
+  },
+  {
+    "id": "pro-v0-67de3eda764d9d",
+    "pair": "pro-v0-p24",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_OBSERVATION"
+  },
+  {
+    "id": "pro-v0-bbbe2ea56d3eb5",
+    "pair": "pro-v0-p24",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 19
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_OBSERVATION"
+  },
+  {
+    "id": "pro-v0-d9f2507122dcd8",
+    "pair": "pro-v0-p25",
+    "side": "A",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          7,
+          8
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_OBSERVATION"
+  },
+  {
+    "id": "pro-v0-4e55d06030527a",
+    "pair": "pro-v0-p25",
+    "side": "B",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; historical_trial, when present, is an older trial of the same mechanism and contract scope. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "historical_trial": {
+        "currentness": "NOT_CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      }
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "The package has incompatible immutable assertions; trial propositions cannot establish a valid operational diagnosis.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "mark-a",
+          "value": 19
+        },
+        {
+          "subject": "mark-b",
+          "value": 23
+        },
+        {
+          "subject": "provenance-c",
+          "value": 31
+        },
+        {
+          "subject": "provenance-c",
+          "value": 37
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          7
+        ]
+      },
+      "historical": {
+        "deployed": false,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 7,
+        "required_outputs": [
+          8,
+          8
+        ]
+      }
+    },
+    "stratum": "IRRELEVANT_CHANGE",
+    "family": "IRRELEVANT_OBSERVATION"
+  }
+]
