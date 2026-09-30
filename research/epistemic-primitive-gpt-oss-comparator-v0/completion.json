@@ -1,0 +1,71 @@
+{
+  "branch": "research/epistemic-primitive-gpt-oss-comparator-v0",
+  "verified_base": "2ab9eb50f9f8842b46936ef35b1d98ff31965384",
+  "semantic_source": "2cfcf8097c99d13df2156dde47409af0f65cb42a",
+  "method_freeze": "2092458d12260144c2123f1460232a62bc7cd1f6",
+  "implementation_request_freeze": "ebbdb5b6efe4bf14d34460c24b2e0fbf02e20e9a",
+  "raw_pre_scoring": "e827100a9e2e4b793480aa510de1906c8037bdd1",
+  "publication_sha_reference": "Exact final remote HEAD is reported after external verification; a commit cannot embed its own SHA.",
+  "model_runtime": "model-runtime.json",
+  "scheduled": 112,
+  "attempted": 112,
+  "completed": 112,
+  "schema_valid": {
+    "primitive": 55,
+    "reduction": 54
+  },
+  "synthetic_qualification_calls": 22,
+  "prior_model_inference_calls": 0,
+  "scientific_reasoning_channels": 112,
+  "registered_interpretation": {
+    "category": "C",
+    "pattern": "SECOND_COMPARATOR_PRIMITIVE_LIMITATIONS",
+    "failed_primitives": [
+      "KNOWN_VS_UNKNOWN"
+    ],
+    "reduction_pass_despite_primitive_failure": false,
+    "scope": "Frozen model/interface comparison, no deployment or intervention claim"
+  },
+  "replay": "PASS_BYTE_IDENTICAL",
+  "questions_and_answers": [
+    {
+      "question": "Does gpt-oss establish all seven primitive capabilities?",
+      "answer": "No. 6/7 gates passed; failed: KNOWN_VS_UNKNOWN."
+    },
+    {
+      "question": "Does gpt-oss establish five-class reduction?",
+      "answer": "No. Reduction is 42/56, exact pairs 16/28, diagnostic flips 11/19 and stable retention 5/9; the exact frozen overall and class-floor gate is not established."
+    },
+    {
+      "question": "Is Qwen\u2019s reduction gap now supported as model-specific?",
+      "answer": "Unresolved. gpt-oss fails one or more prerequisite primitive gates, so this is not a clean reduction-specific comparator."
+    },
+    {
+      "question": "Is the reduction problem instead supported as shared?",
+      "answer": "Unresolved as a shared reduction-only limitation. Primitive failures prevent isolating reduction difficulty, even if reduction also fails."
+    },
+    {
+      "question": "Is Qwen unusually strong at the frozen primitives relative to both comparators?",
+      "answer": "Yes, narrowly on this frozen primitive benchmark: Qwen is the only tested model to establish every primitive gate; both independent comparators have primitive limitations. This is not a general model-quality or intelligence ranking."
+    },
+    {
+      "question": "What architectural uncertainty has actually been resolved?",
+      "answer": "Both tested alternatives fail to establish all prerequisite primitives under their frozen interfaces. The clean reduction-specific architectural question remains unresolved, and comparator work ends here."
+    },
+    {
+      "question": "What remains unresolved?",
+      "answer": "The causal role of model identity versus interface, decoding and reasoning allowance; whether isolated primitive success reflects internal computation during reduction; and downstream real-task, durable learning or intervention benefits remain unresolved. In particular, one failed primitive endpoint and two reduction endpoints exhausted the frozen output budget, so intrinsic model capability cannot be separated from this execution limit."
+    },
+    {
+      "question": "Does this study itself justify changing Horus?",
+      "answer": "No. This comparator does not test an intervention or combined Horus system and does not itself justify changing or promoting one. Evidence can inform separately authorized engineering; Horus remains unchanged."
+    }
+  ],
+  "full_tables": "report.md",
+  "scores": "scores.json",
+  "preservation": "postflight.json",
+  "publication_audit": "publication-audit.json",
+  "further_comparators": false,
+  "horus_modified": false,
+  "execution_limitations": "execution-limitations.json"
+}

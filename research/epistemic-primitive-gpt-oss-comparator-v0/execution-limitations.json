@@ -1,0 +1,29 @@
+{
+  "note": "The 8,192-token generation limit was nonbinding in all 22 synthetic qualification calls, but bound three scientific calls: one primitive and two reduction calls. Each returned an empty final and remains an invalid, incorrect endpoint under the frozen scorer. The KNOWN_VS_UNKNOWN failure combines one valid wrong answer with one output-limit failure. This establishes a limitation of the frozen model/runtime/budget configuration; it does not isolate an inherent lack of that primitive. No rerun, answer repair, budget change or counterfactual rescoring was performed.",
+  "truncated_calls": [
+    {
+      "world_id": "s2bb230536616",
+      "arm": "P",
+      "render_id": "7db2d90d7dc9c905e9b7",
+      "completion_tokens": 8192,
+      "final_bytes": 0,
+      "schema_valid": false
+    },
+    {
+      "world_id": "sd96aa46e6676",
+      "arm": "R",
+      "render_id": "9b6d3d90765a0a075391",
+      "completion_tokens": 8192,
+      "final_bytes": 0,
+      "schema_valid": false
+    },
+    {
+      "world_id": "sab307858b73d",
+      "arm": "R",
+      "render_id": "d309497eb21c263c1367",
+      "completion_tokens": 8192,
+      "final_bytes": 0,
+      "schema_valid": false
+    }
+  ]
+}
