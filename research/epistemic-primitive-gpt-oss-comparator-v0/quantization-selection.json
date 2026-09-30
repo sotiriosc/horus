@@ -1,0 +1,46 @@
+{
+  "scientific_calls": 0,
+  "model_calls_so_far": 0,
+  "initial_candidate": {
+    "model": "openai/gpt-oss-20b",
+    "upstream_repository": "openai/gpt-oss-20b",
+    "upstream_inspected_revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+    "repository": "ggml-org/gpt-oss-20b-GGUF",
+    "revision": "ef9b12f2ff56c69cf32153a02784e7a3c88bf524",
+    "filename": "gpt-oss-20b-MXFP4.gguf",
+    "expected_sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901",
+    "expected_bytes": 12109566624,
+    "quantization": "MXFP4 native expert weights; other tensor types recorded from GGUF loader",
+    "source_url": "https://huggingface.co/ggml-org/gpt-oss-20b-GGUF/resolve/ef9b12f2ff56c69cf32153a02784e7a3c88bf524/gpt-oss-20b-MXFP4.gguf",
+    "status": "PASS",
+    "actual_sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901",
+    "actual_bytes": 12109566624
+  },
+  "initial_loader": {
+    "status": "PASS",
+    "gpu": "name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 616.92, 24564 MiB, 14942 MiB, 9197 MiB\n",
+    "loader_evidence": [
+      "0.00.590.921 I llama_model_loader: - type  f32:  289 tensors",
+      "0.00.590.922 I llama_model_loader: - type mxfp4:   72 tensors",
+      "0.00.956.055 I print_info: n_ctx_train           = 131072",
+      "0.00.956.088 I print_info: n_ctx_orig_yarn       = 4096",
+      "0.09.278.215 I load_tensors: offloaded 25/25 layers to GPU",
+      "0.09.278.223 I load_tensors:        CUDA0 model buffer size = 11536.20 MiB",
+      "0.11.290.426 I llama_context: n_ctx                 = 16384",
+      "0.11.290.426 I llama_context: n_ctx_seq             = 16384",
+      "0.11.290.432 I llama_context: n_ctx_seq (16384) < n_ctx_train (131072) -- the full capacity of the model will not be utilized",
+      "0.11.294.100 I llama_kv_cache:      CUDA0 KV buffer size =   384.00 MiB",
+      "0.11.303.192 I llama_kv_cache:      CUDA0 KV buffer size =    18.00 MiB",
+      "0.11.318.727 I sched_reserve:      CUDA0 compute buffer size =   103.52 MiB",
+      "0.11.318.750 I sched_reserve:  CUDA_Host compute buffer size =    22.39 MiB",
+      "0.11.414.841 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'",
+      "0.11.414.878 I slot   load_model: id  0 | task -1 | new slot, n_ctx = 16384"
+    ]
+  },
+  "initial_qualification_stop": "Before model inference: runtime template normalization differed from supplied template. Investigated exact one-line assistant validation guard removal.",
+  "selection_reason": "A trusted native MXFP4 expert + BF16 non-expert representation exists and its 13.79 GB file fits the prospective VRAM envelope. Prefer original non-expert precision over the first candidate Q8_0 non-expert tensors. No scientific or synthetic accuracy consulted.",
+  "chosen_repository": "bartowski/openai_gpt-oss-20b-GGUF",
+  "chosen_revision": "e39ba3aa000c47c83dacdc9e1ca2c9dd0808c205",
+  "chosen_filename": "openai_gpt-oss-20b-bf16.gguf",
+  "chosen_sha256": "5cf32dc225be2115513bcb6480d2f4eff95c6f58355639a679fe93454bbce8bc"
+}

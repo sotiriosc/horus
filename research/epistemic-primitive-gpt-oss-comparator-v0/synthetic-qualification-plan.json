@@ -1,0 +1,19 @@
+{
+  "purpose": "SYNTHETIC_NON_SCIENTIFIC_ONLY",
+  "fixtures": 22,
+  "task_shaped": 21,
+  "schemas": 8,
+  "all_labels": true,
+  "scientific_model_calls": 0,
+  "requirements": [
+    "all model weights/layers GPU resident",
+    "all schema-valid",
+    "nonempty native analysis on every task-shaped call",
+    "finish stop, not length",
+    "at least half of 8192 output allowance unused on task-shaped requests",
+    "input plus max output fits 16384 context",
+    "original scientific messages remain verbatim within Harmony rendering"
+  ],
+  "configuration_selection": "Native released MXFP4 experts, preserved higher-precision non-expert tensors; no dequantization to larger nominal bits, no scientific accuracy selection",
+  "no_scientific_states": true
+}

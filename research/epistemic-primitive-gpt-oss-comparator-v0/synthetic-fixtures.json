@@ -1,0 +1,1084 @@
+[
+  {
+    "id": "task-shaped-01",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": false,
+      "equal_value": false
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-1-0\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-1\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-2\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-3\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-4\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-5\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-6\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-7\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-8\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-9\",\n      \"shelf\": \"south\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-10\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-11\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-12\",\n      \"shelf\": \"south\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-13\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-1-14\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-1-15\",\n      \"shelf\": \"south\",\n      \"units\": 17,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -1,\n  \"number_of_routes\": 4,\n  \"routes\": {\n    \"0\": {\n      \"same_referent\": false,\n      \"equal_value\": false\n    },\n    \"1\": {\n      \"same_referent\": false,\n      \"equal_value\": true\n    },\n    \"2\": {\n      \"same_referent\": true,\n      \"equal_value\": false\n    },\n    \"3\": {\n      \"same_referent\": true,\n      \"equal_value\": true\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-02",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": false,
+      "equal_value": true
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-2-0\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-1\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-2\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-3\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-4\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-5\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-6\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-7\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-8\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-9\",\n      \"shelf\": \"south\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-10\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-11\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-12\",\n      \"shelf\": \"south\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-13\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-2-14\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-2-15\",\n      \"shelf\": \"south\",\n      \"units\": 20,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 1,\n  \"number_of_routes\": 4,\n  \"routes\": {\n    \"0\": {\n      \"same_referent\": false,\n      \"equal_value\": false\n    },\n    \"1\": {\n      \"same_referent\": false,\n      \"equal_value\": true\n    },\n    \"2\": {\n      \"same_referent\": true,\n      \"equal_value\": false\n    },\n    \"3\": {\n      \"same_referent\": true,\n      \"equal_value\": true\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-03",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": true,
+      "equal_value": false
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-3-0\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-1\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-2\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-3\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-4\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-5\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-6\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-7\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-8\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-9\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-10\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-11\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-12\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-13\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-3-14\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-3-15\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -1,\n  \"number_of_routes\": 4,\n  \"routes\": {\n    \"0\": {\n      \"same_referent\": false,\n      \"equal_value\": false\n    },\n    \"1\": {\n      \"same_referent\": false,\n      \"equal_value\": true\n    },\n    \"2\": {\n      \"same_referent\": true,\n      \"equal_value\": false\n    },\n    \"3\": {\n      \"same_referent\": true,\n      \"equal_value\": true\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-04",
+    "schema_name": "IDENTITY_EQUALITY",
+    "target": {
+      "same_referent": true,
+      "equal_value": true
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-4-0\",\n      \"shelf\": \"south\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-1\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-2\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-3\",\n      \"shelf\": \"south\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-4\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-5\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-6\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-7\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-8\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-9\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-10\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-11\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-12\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-13\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-4-14\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-4-15\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 4,\n  \"routes\": {\n    \"0\": {\n      \"same_referent\": false,\n      \"equal_value\": false\n    },\n    \"1\": {\n      \"same_referent\": false,\n      \"equal_value\": true\n    },\n    \"2\": {\n      \"same_referent\": true,\n      \"equal_value\": false\n    },\n    \"3\": {\n      \"same_referent\": true,\n      \"equal_value\": true\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "same_referent": {
+              "type": "boolean"
+            },
+            "equal_value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "same_referent",
+            "equal_value"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-05",
+    "schema_name": "CURRENTNESS",
+    "target": {
+      "answer": "CURRENT"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-5-0\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-1\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-2\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-3\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-4\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-5\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-6\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-7\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-8\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-9\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-10\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-11\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-12\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-13\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-5-14\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-5-15\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"CURRENT\"\n    },\n    \"1\": {\n      \"answer\": \"NOT_CURRENT\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CURRENT",
+                "NOT_CURRENT"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-06",
+    "schema_name": "CURRENTNESS",
+    "target": {
+      "answer": "NOT_CURRENT"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-6-0\",\n      \"shelf\": \"south\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-1\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-2\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-3\",\n      \"shelf\": \"south\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-4\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-5\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-6\",\n      \"shelf\": \"south\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-7\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-8\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-9\",\n      \"shelf\": \"south\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-10\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-11\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-12\",\n      \"shelf\": \"south\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-13\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-6-14\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-6-15\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"CURRENT\"\n    },\n    \"1\": {\n      \"answer\": \"NOT_CURRENT\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CURRENT",
+                "NOT_CURRENT"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-07",
+    "schema_name": "KNOWN_VS_UNKNOWN",
+    "target": {
+      "answer": "KNOWN"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-7-0\",\n      \"shelf\": \"south\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-1\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-2\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-3\",\n      \"shelf\": \"south\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-4\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-5\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-6\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-7\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-8\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-9\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-10\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-11\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-12\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-13\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-7-14\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-7-15\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"KNOWN\"\n    },\n    \"1\": {\n      \"answer\": \"UNKNOWN\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-08",
+    "schema_name": "KNOWN_VS_UNKNOWN",
+    "target": {
+      "answer": "UNKNOWN"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-8-0\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-1\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-2\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-3\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-4\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-5\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-6\",\n      \"shelf\": \"south\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-7\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-8\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-9\",\n      \"shelf\": \"south\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-10\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-11\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-12\",\n      \"shelf\": \"south\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-13\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-8-14\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-8-15\",\n      \"shelf\": \"south\",\n      \"units\": 15,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"KNOWN\"\n    },\n    \"1\": {\n      \"answer\": \"UNKNOWN\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "KNOWN",
+                "UNKNOWN"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-09",
+    "schema_name": "CONTRADICTION",
+    "target": {
+      "answer": "CONSISTENT"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-9-0\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-1\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-2\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-3\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-4\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-5\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-6\",\n      \"shelf\": \"south\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-7\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-8\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-9\",\n      \"shelf\": \"south\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-10\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-11\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-12\",\n      \"shelf\": \"south\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-13\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-9-14\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-9-15\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"CONSISTENT\"\n    },\n    \"1\": {\n      \"answer\": \"CONTRADICTORY\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CONSISTENT",
+                "CONTRADICTORY"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-10",
+    "schema_name": "CONTRADICTION",
+    "target": {
+      "answer": "CONTRADICTORY"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-10-0\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-1\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-2\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-3\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-4\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-5\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-6\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-7\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-8\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-9\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-10\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-11\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-12\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-13\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-10-14\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-10-15\",\n      \"shelf\": \"south\",\n      \"units\": 21,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"CONSISTENT\"\n    },\n    \"1\": {\n      \"answer\": \"CONTRADICTORY\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "CONSISTENT",
+                "CONTRADICTORY"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-11",
+    "schema_name": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "target": {
+      "answer": "ALTERNATIVE_EXISTS"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-11-0\",\n      \"shelf\": \"south\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-1\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-2\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-3\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-4\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-5\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-6\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-7\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-8\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-9\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-10\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-11\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-12\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-13\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-11-14\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-11-15\",\n      \"shelf\": \"south\",\n      \"units\": 1,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"ALTERNATIVE_EXISTS\"\n    },\n    \"1\": {\n      \"answer\": \"NO_ALTERNATIVE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "ALTERNATIVE_EXISTS",
+                "NO_ALTERNATIVE"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-12",
+    "schema_name": "ALTERNATIVE_COMPLETION_EXISTENCE",
+    "target": {
+      "answer": "NO_ALTERNATIVE"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-12-0\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-1\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-2\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-3\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-4\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-5\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-6\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-7\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-8\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-9\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-10\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-11\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-12\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-13\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-12-14\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-12-15\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"ALTERNATIVE_EXISTS\"\n    },\n    \"1\": {\n      \"answer\": \"NO_ALTERNATIVE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "ALTERNATIVE_EXISTS",
+                "NO_ALTERNATIVE"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-13",
+    "schema_name": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "target": {
+      "answer": "MATCH"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-13-0\",\n      \"shelf\": \"south\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-1\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-2\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-3\",\n      \"shelf\": \"south\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-4\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-5\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-6\",\n      \"shelf\": \"south\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-7\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-8\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-9\",\n      \"shelf\": \"south\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-10\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-11\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-12\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-13\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-13-14\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-13-15\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"MATCH\"\n    },\n    \"1\": {\n      \"answer\": \"MISMATCH\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "MATCH",
+                "MISMATCH"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-14",
+    "schema_name": "OBSERVATION_REQUIREMENT_COMPARISON",
+    "target": {
+      "answer": "MISMATCH"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-14-0\",\n      \"shelf\": \"south\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-1\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-2\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-3\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-4\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-5\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-6\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-7\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-8\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-9\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-10\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-11\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-12\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-13\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-14-14\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-14-15\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"MATCH\"\n    },\n    \"1\": {\n      \"answer\": \"MISMATCH\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "MATCH",
+                "MISMATCH"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-15",
+    "schema_name": "EVIDENCE_SUFFICIENCY",
+    "target": {
+      "answer": "DETERMINATE"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-15-0\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-1\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-2\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-3\",\n      \"shelf\": \"south\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-4\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-5\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-6\",\n      \"shelf\": \"south\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-7\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-8\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-9\",\n      \"shelf\": \"south\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-10\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-11\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-12\",\n      \"shelf\": \"south\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-13\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-15-14\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-15-15\",\n      \"shelf\": \"south\",\n      \"units\": 13,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 0,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"DETERMINATE\"\n    },\n    \"1\": {\n      \"answer\": \"UNDERDETERMINED\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "DETERMINATE",
+                "UNDERDETERMINED"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-16",
+    "schema_name": "EVIDENCE_SUFFICIENCY",
+    "target": {
+      "answer": "UNDERDETERMINED"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-16-0\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-1\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-2\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-3\",\n      \"shelf\": \"south\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-4\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-5\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-6\",\n      \"shelf\": \"south\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-7\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-8\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-9\",\n      \"shelf\": \"south\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-10\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-11\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-12\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-13\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-16-14\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-16-15\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 1,\n  \"number_of_routes\": 2,\n  \"routes\": {\n    \"0\": {\n      \"answer\": \"DETERMINATE\"\n    },\n    \"1\": {\n      \"answer\": \"UNDERDETERMINED\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "enum": [
+                "DETERMINATE",
+                "UNDERDETERMINED"
+              ]
+            }
+          },
+          "required": [
+            "answer"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-17",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "SUPPORTED_CURRENT_DEFECT"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-17-0\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-1\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-2\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-3\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-4\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-5\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-6\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-7\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-8\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-9\",\n      \"shelf\": \"south\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-10\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-11\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-12\",\n      \"shelf\": \"south\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-13\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-17-14\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-17-15\",\n      \"shelf\": \"south\",\n      \"units\": 19,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -4,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-18",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "NO_SUPPORTED_DIAGNOSIS"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-18-0\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-1\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-2\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-3\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-4\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-5\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-6\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-7\",\n      \"shelf\": \"north\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-8\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-9\",\n      \"shelf\": \"south\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-10\",\n      \"shelf\": \"north\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-11\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-12\",\n      \"shelf\": \"south\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-13\",\n      \"shelf\": \"north\",\n      \"units\": 8,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-18-14\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-18-15\",\n      \"shelf\": \"south\",\n      \"units\": 22,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": -3,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-19",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "INSUFFICIENT_EVIDENCE"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-19-0\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-1\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-2\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-3\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-4\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-5\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-6\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-7\",\n      \"shelf\": \"north\",\n      \"units\": 15,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-8\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-9\",\n      \"shelf\": \"south\",\n      \"units\": 6,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-10\",\n      \"shelf\": \"north\",\n      \"units\": 13,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-11\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-12\",\n      \"shelf\": \"south\",\n      \"units\": 4,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-13\",\n      \"shelf\": \"north\",\n      \"units\": 11,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-19-14\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-19-15\",\n      \"shelf\": \"south\",\n      \"units\": 2,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 1,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-20",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-20-0\",\n      \"shelf\": \"south\",\n      \"units\": 15,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-1\",\n      \"shelf\": \"north\",\n      \"units\": 22,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-2\",\n      \"shelf\": \"north\",\n      \"units\": 6,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-3\",\n      \"shelf\": \"south\",\n      \"units\": 13,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-4\",\n      \"shelf\": \"north\",\n      \"units\": 20,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-5\",\n      \"shelf\": \"north\",\n      \"units\": 4,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-6\",\n      \"shelf\": \"south\",\n      \"units\": 11,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-7\",\n      \"shelf\": \"north\",\n      \"units\": 18,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-8\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-9\",\n      \"shelf\": \"south\",\n      \"units\": 9,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-10\",\n      \"shelf\": \"north\",\n      \"units\": 16,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-11\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-12\",\n      \"shelf\": \"south\",\n      \"units\": 7,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-13\",\n      \"shelf\": \"north\",\n      \"units\": 14,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-20-14\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-20-15\",\n      \"shelf\": \"south\",\n      \"units\": 5,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 2,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "task-shaped-21",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Synthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-21-0\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-1\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-2\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-3\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-4\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-5\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-6\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-7\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-8\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-9\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-10\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-11\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-12\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-13\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-14\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-15\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 4,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  {
+    "id": "synthetic-context",
+    "schema_name": "FIVE_CLASS_REDUCTION",
+    "target": {
+      "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+    },
+    "request": {
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "min_p": 0.0,
+      "seed": 413708629,
+      "max_tokens": 8192,
+      "cache_prompt": false,
+      "stream": false,
+      "chat_template_kwargs": {
+        "reasoning_effort": "high"
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "Use only the supplied bounded evidence and class definitions. Do not invent missing facts or silently reconcile incompatible declarations of one immutable event. Return exactly one JSON object satisfying the response schema. No tools, interventions or solution proposals."
+        },
+        {
+          "role": "user",
+          "content": "Padding below is an unrelated transmission checksum filler and is not part of the manifest.\namber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber amber \nEnd filler.\nSynthetic parcel routing qualification. The output labels are opaque routing codes, not diagnoses. Use only this manifest. Sum units for parcels on the north shelf with fragile true; add the adjustment; take the nonnegative remainder modulo the number of routes. Return the JSON object mapped to that route. Do not output a rationale or other prose.\n{\n  \"manifest\": [\n    {\n      \"parcel\": \"parcel-21-0\",\n      \"shelf\": \"south\",\n      \"units\": 18,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-1\",\n      \"shelf\": \"north\",\n      \"units\": 2,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-2\",\n      \"shelf\": \"north\",\n      \"units\": 9,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-3\",\n      \"shelf\": \"south\",\n      \"units\": 16,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-4\",\n      \"shelf\": \"north\",\n      \"units\": 23,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-5\",\n      \"shelf\": \"north\",\n      \"units\": 7,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-6\",\n      \"shelf\": \"south\",\n      \"units\": 14,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-7\",\n      \"shelf\": \"north\",\n      \"units\": 21,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-8\",\n      \"shelf\": \"north\",\n      \"units\": 5,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-9\",\n      \"shelf\": \"south\",\n      \"units\": 12,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-10\",\n      \"shelf\": \"north\",\n      \"units\": 19,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-11\",\n      \"shelf\": \"north\",\n      \"units\": 3,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-12\",\n      \"shelf\": \"south\",\n      \"units\": 10,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-13\",\n      \"shelf\": \"north\",\n      \"units\": 17,\n      \"fragile\": true\n    },\n    {\n      \"parcel\": \"parcel-21-14\",\n      \"shelf\": \"north\",\n      \"units\": 1,\n      \"fragile\": false\n    },\n    {\n      \"parcel\": \"parcel-21-15\",\n      \"shelf\": \"south\",\n      \"units\": 8,\n      \"fragile\": true\n    }\n  ],\n  \"adjustment\": 4,\n  \"number_of_routes\": 5,\n  \"routes\": {\n    \"0\": {\n      \"classification\": \"SUPPORTED_CURRENT_DEFECT\"\n    },\n    \"1\": {\n      \"classification\": \"NO_SUPPORTED_DIAGNOSIS\"\n    },\n    \"2\": {\n      \"classification\": \"INSUFFICIENT_EVIDENCE\"\n    },\n    \"3\": {\n      \"classification\": \"HISTORICAL_DEFECT_NOT_CURRENT\"\n    },\n    \"4\": {\n      \"classification\": \"INVALID_OR_CONTRADICTORY_EVIDENCE\"\n    }\n  }\n}"
+        }
+      ],
+      "response_format": {
+        "type": "json_object",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "classification": {
+              "enum": [
+                "SUPPORTED_CURRENT_DEFECT",
+                "NO_SUPPORTED_DIAGNOSIS",
+                "INSUFFICIENT_EVIDENCE",
+                "HISTORICAL_DEFECT_NOT_CURRENT",
+                "INVALID_OR_CONTRADICTORY_EVIDENCE"
+              ]
+            }
+          },
+          "required": [
+            "classification"
+          ],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+]
