@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Is the first listed trial input value uniquely determined by its reported_input and admissible_inputs? Answer KNOWN if exactly one input remains, otherwise UNKNOWN. An uncaptured singleton domain determines the value. Do not infer an input by assuming observed outputs obey requirements.\n\nAligned factual state:\n{\n  \"system\": \"film scanner\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"amber-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"amber-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"amber-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"amber-revision-k\",\n        \"station\": \"amber-mark-stand\",\n        \"cycle\": 101\n      },\n      \"asserted_value\": \"amber-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"amber-revision-k\",\n        \"station\": \"amber-mark-stand\",\n        \"cycle\": 101\n      },\n      \"asserted_value\": \"amber-etched\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"amber-revision-k\",\n      \"reported_input\": \"amber-woven\",\n      \"admissible_inputs\": [\n        \"amber-woven\",\n        \"amber-glazed\",\n        \"amber-cast\"\n      ],\n      \"reference_input\": \"amber-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"amber-woven\",\n          \"result\": \"amber-pulse\"\n        },\n        {\n          \"input\": \"amber-glazed\",\n          \"result\": \"amber-pulse\"\n        },\n        {\n          \"input\": \"amber-cast\",\n          \"result\": \"amber-pulse\"\n        }\n      ],\n      \"observed_result\": \"amber-pulse\"\n    },\n    {\n      \"build\": \"amber-revision-m\",\n      \"reported_input\": \"amber-woven\",\n      \"admissible_inputs\": [\n        \"amber-woven\",\n        \"amber-glazed\",\n        \"amber-cast\"\n      ],\n      \"reference_input\": \"amber-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"amber-woven\",\n          \"result\": \"amber-pulse\"\n        },\n        {\n          \"input\": \"amber-glazed\",\n          \"result\": \"amber-tone\"\n        },\n        {\n          \"input\": \"amber-cast\",\n          \"result\": \"amber-beam\"\n        }\n      ],\n      \"observed_result\": \"amber-beam\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "enum": [
+            "KNOWN",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 413708629,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "Using only the deployment and trial facts, is the truth value of \"the deployed trial observation differs from the required output for its actual input\" uniquely determined? Answer DETERMINATE if all remaining admissible inputs give the same truth value, otherwise UNDERDETERMINED. The separate mark assertions do not constrain trial inputs. Do not infer inputs by presuming observed outputs obey requirements.\n\nAligned factual state:\n{\n  \"system\": \"capsule loader\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"hazel-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"hazel-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"hazel-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"hazel-revision-k\",\n        \"station\": \"hazel-mark-stand\",\n        \"cycle\": 152\n      },\n      \"asserted_value\": \"hazel-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"hazel-revision-k\",\n        \"station\": \"hazel-mark-stand\",\n        \"cycle\": 152\n      },\n      \"asserted_value\": \"hazel-etched\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"hazel-revision-k\",\n      \"reported_input\": \"UNKNOWN\",\n      \"admissible_inputs\": [\n        \"hazel-woven\",\n        \"hazel-glazed\",\n        \"hazel-cast\"\n      ],\n      \"reference_input\": \"hazel-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"hazel-woven\",\n          \"result\": \"hazel-pulse\"\n        },\n        {\n          \"input\": \"hazel-glazed\",\n          \"result\": \"hazel-pulse\"\n        },\n        {\n          \"input\": \"hazel-cast\",\n          \"result\": \"hazel-pulse\"\n        }\n      ],\n      \"observed_result\": \"hazel-beam\"\n    },\n    {\n      \"build\": \"hazel-revision-m\",\n      \"reported_input\": \"hazel-woven\",\n      \"admissible_inputs\": [\n        \"hazel-woven\",\n        \"hazel-glazed\",\n        \"hazel-cast\"\n      ],\n      \"reference_input\": \"hazel-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"hazel-woven\",\n          \"result\": \"hazel-pulse\"\n        },\n        {\n          \"input\": \"hazel-glazed\",\n          \"result\": \"hazel-tone\"\n        },\n        {\n          \"input\": \"hazel-cast\",\n          \"result\": \"hazel-beam\"\n        }\n      ],\n      \"observed_result\": \"hazel-pulse\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "enum": [
+            "DETERMINATE",
+            "UNDERDETERMINED"
+          ]
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 413708629,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}

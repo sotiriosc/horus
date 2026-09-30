@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Use only the supplied aligned factual state to answer the specified narrow question. Return exactly one JSON object satisfying the response schema. No tools or explanatory prose."
+    },
+    {
+      "role": "user",
+      "content": "For the first listed trial at its reference_input completion, is observed_result exactly equal to the supplied required_results value? Answer MATCH or MISMATCH. Use the supplied value; perform no additional operational computation.\n\nAligned factual state:\n{\n  \"system\": \"ampoule rack\",\n  \"conventions\": \"All facts describe the named system. Each assertion subject is the complete tuple of build, station and cycle; identical tuples name the same immutable mark event, and distinct tuples name distinct events. Assertions have equal standing and no unlisted evidence chooses between them. Mark values do not constrain trial inputs. Each trial input is constrained only by its reported_input and admissible_inputs. UNKNOWN means uncaptured, never a literal operating input; a singleton remaining domain still determines the input. Required_results is the exact complete contract table for that trial. Observed outputs are measurements, not guarantees that the requirement was followed, so do not infer an input by assuming the output obeyed the table. All observed outputs are exact. Deployment explicitly names the serving build. Build creation_order is temporal order. No hidden transforms, additional trials or facts apply.\",\n  \"deployment\": {\n    \"build\": \"maple-revision-k\"\n  },\n  \"builds\": [\n    {\n      \"build\": \"maple-revision-k\",\n      \"creation_order\": 2\n    },\n    {\n      \"build\": \"maple-revision-m\",\n      \"creation_order\": 1\n    }\n  ],\n  \"assertions\": [\n    {\n      \"subject\": {\n        \"build\": \"maple-revision-k\",\n        \"station\": \"maple-mark-stand\",\n        \"cycle\": 140\n      },\n      \"asserted_value\": \"maple-etched\"\n    },\n    {\n      \"subject\": {\n        \"build\": \"maple-revision-k\",\n        \"station\": \"maple-mark-stand\",\n        \"cycle\": 140\n      },\n      \"asserted_value\": \"maple-smooth\"\n    }\n  ],\n  \"trials\": [\n    {\n      \"build\": \"maple-revision-k\",\n      \"reported_input\": \"maple-woven\",\n      \"admissible_inputs\": [\n        \"maple-woven\",\n        \"maple-glazed\",\n        \"maple-cast\"\n      ],\n      \"reference_input\": \"maple-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"maple-woven\",\n          \"result\": \"maple-pulse\"\n        },\n        {\n          \"input\": \"maple-glazed\",\n          \"result\": \"maple-tone\"\n        },\n        {\n          \"input\": \"maple-cast\",\n          \"result\": \"maple-beam\"\n        }\n      ],\n      \"observed_result\": \"maple-beam\"\n    },\n    {\n      \"build\": \"maple-revision-m\",\n      \"reported_input\": \"maple-woven\",\n      \"admissible_inputs\": [\n        \"maple-woven\",\n        \"maple-glazed\",\n        \"maple-cast\"\n      ],\n      \"reference_input\": \"maple-woven\",\n      \"required_results\": [\n        {\n          \"input\": \"maple-woven\",\n          \"result\": \"maple-pulse\"\n        },\n        {\n          \"input\": \"maple-glazed\",\n          \"result\": \"maple-tone\"\n        },\n        {\n          \"input\": \"maple-cast\",\n          \"result\": \"maple-beam\"\n        }\n      ],\n      \"observed_result\": \"maple-pulse\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "enum": [
+            "MATCH",
+            "MISMATCH"
+          ]
+        }
+      },
+      "required": [
+        "answer"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 413708629,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}
