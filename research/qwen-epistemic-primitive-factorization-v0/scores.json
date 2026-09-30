@@ -1,0 +1,5863 @@
+{
+  "status": "QWEN_EPISTEMIC_PRIMITIVE_FACTORIZATION_COMPLETE_V0",
+  "primitives": {
+    "IDENTITY_EQUALITY": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "fields": {
+        "same_referent": 8,
+        "equal_value": 8
+      },
+      "field_confusion": {
+        "same_referent": {
+          "False": {
+            "False": 4,
+            "True": 0,
+            "INVALID_OUTPUT": 0
+          },
+          "True": {
+            "False": 0,
+            "True": 4,
+            "INVALID_OUTPUT": 0
+          }
+        },
+        "equal_value": {
+          "False": {
+            "False": 4,
+            "True": 0,
+            "INVALID_OUTPUT": 0
+          },
+          "True": {
+            "False": 0,
+            "True": 4,
+            "INVALID_OUTPUT": 0
+          }
+        }
+      },
+      "joint_confusion": {
+        "false,false": {
+          "false,false": 2,
+          "false,true": 0,
+          "true,false": 0,
+          "true,true": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "false,true": {
+          "false,false": 0,
+          "false,true": 2,
+          "true,false": 0,
+          "true,true": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "true,false": {
+          "false,false": 0,
+          "false,true": 0,
+          "true,false": 2,
+          "true,true": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "true,true": {
+          "false,false": 0,
+          "false,true": 0,
+          "true,false": 0,
+          "true,true": 2,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "CURRENTNESS": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "CURRENT": {
+          "CURRENT": 4,
+          "NOT_CURRENT": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NOT_CURRENT": {
+          "CURRENT": 0,
+          "NOT_CURRENT": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "KNOWN_VS_UNKNOWN": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "KNOWN": {
+          "KNOWN": 4,
+          "UNKNOWN": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "UNKNOWN": {
+          "KNOWN": 0,
+          "UNKNOWN": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "CONTRADICTION": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "CONSISTENT": {
+          "CONSISTENT": 4,
+          "CONTRADICTORY": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "CONTRADICTORY": {
+          "CONSISTENT": 0,
+          "CONTRADICTORY": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "ALTERNATIVE_COMPLETION_EXISTENCE": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "ALTERNATIVE_EXISTS": {
+          "ALTERNATIVE_EXISTS": 4,
+          "NO_ALTERNATIVE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_ALTERNATIVE": {
+          "ALTERNATIVE_EXISTS": 0,
+          "NO_ALTERNATIVE": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "OBSERVATION_REQUIREMENT_COMPARISON": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "MATCH": {
+          "MATCH": 4,
+          "MISMATCH": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "MISMATCH": {
+          "MATCH": 0,
+          "MISMATCH": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    },
+    "EVIDENCE_SUFFICIENCY": {
+      "correct": 8,
+      "endpoints": 8,
+      "schema_valid": 8,
+      "parsed": 8,
+      "pair_passes": 4,
+      "pairs": 4,
+      "gate": true,
+      "error_categories": {},
+      "missing_or_invalid": [],
+      "confusion": {
+        "DETERMINATE": {
+          "DETERMINATE": 4,
+          "UNDERDETERMINED": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "UNDERDETERMINED": {
+          "DETERMINATE": 0,
+          "UNDERDETERMINED": 4,
+          "INVALID_OUTPUT": 0
+        }
+      }
+    }
+  },
+  "reduction": {
+    "correct": 41,
+    "endpoints": 56,
+    "schema_valid": 56,
+    "parsed": 56,
+    "gate": false,
+    "overall_minimum": 48,
+    "per_class": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "correct": 7,
+        "denominator": 12,
+        "minimum": 9
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "correct": 11,
+        "denominator": 12,
+        "minimum": 9
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "correct": 6,
+        "denominator": 11,
+        "minimum": 9
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "correct": 7,
+        "denominator": 11,
+        "minimum": 9
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "correct": 10,
+        "denominator": 10,
+        "minimum": 8
+      }
+    },
+    "confusion": {
+      "SUPPORTED_CURRENT_DEFECT": {
+        "SUPPORTED_CURRENT_DEFECT": 7,
+        "NO_SUPPORTED_DIAGNOSIS": 0,
+        "INSUFFICIENT_EVIDENCE": 5,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "NO_SUPPORTED_DIAGNOSIS": {
+        "SUPPORTED_CURRENT_DEFECT": 0,
+        "NO_SUPPORTED_DIAGNOSIS": 11,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "INSUFFICIENT_EVIDENCE": {
+        "SUPPORTED_CURRENT_DEFECT": 0,
+        "NO_SUPPORTED_DIAGNOSIS": 3,
+        "INSUFFICIENT_EVIDENCE": 6,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "HISTORICAL_DEFECT_NOT_CURRENT": {
+        "SUPPORTED_CURRENT_DEFECT": 2,
+        "NO_SUPPORTED_DIAGNOSIS": 2,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 7,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+        "INVALID_OUTPUT": 0
+      },
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+        "SUPPORTED_CURRENT_DEFECT": 0,
+        "NO_SUPPORTED_DIAGNOSIS": 0,
+        "INSUFFICIENT_EVIDENCE": 0,
+        "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": 10,
+        "INVALID_OUTPUT": 0
+      }
+    },
+    "error_categories": {
+      "VALUE_MISMATCH": 15
+    },
+    "missing_or_invalid": [],
+    "exact_pair_passes": 16,
+    "pairs": 28,
+    "flip_pair_passes": 11,
+    "flip_pairs": 19,
+    "stable_pair_passes": 5,
+    "stable_pairs": 9
+  },
+  "family_comparisons": {
+    "IDENTITY_EQUALITY": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 8,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 4,
+      "R_flip_pair_passes": 2,
+      "R_flip_pairs": 2,
+      "R_stable_pair_passes": 2,
+      "R_stable_pairs": 2,
+      "R_subset_descriptive_threshold_passed": true,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 8,
+          "members": [
+            "s6cdeffc06513",
+            "s0f8ca39efe1a",
+            "s9a67fca88b40",
+            "s86867ae27e30",
+            "s9dd0670c8d6e",
+            "s9a4508a6b7ca",
+            "see461eaf3749",
+            "s0a88b08259e2"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 4,
+          "members": [
+            "pcb75442d46cf",
+            "pb83de3daa4c9",
+            "p6a9d06a11205",
+            "pc41b9ceb9742"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "pb83de3daa4c9",
+            "p6a9d06a11205"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "CURRENTNESS": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 6,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 2,
+      "R_flip_pair_passes": 1,
+      "R_flip_pairs": 3,
+      "R_stable_pair_passes": 1,
+      "R_stable_pairs": 1,
+      "R_subset_descriptive_threshold_passed": false,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 6,
+          "members": [
+            "scba9cc461d2b",
+            "s6e13e0d63044",
+            "s45f64a8ae9fd",
+            "s0bf0c65011cf",
+            "s915d60919d64",
+            "s839c64090ee5"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 2,
+          "members": [
+            "sb7e1cc7ef7e3",
+            "sccf2acfbfa18"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "p9147188c88d5",
+            "p4448c687622e"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 2,
+          "members": [
+            "p54186fe7d147",
+            "p6573d8bb3bcc"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 1,
+          "members": [
+            "p9147188c88d5"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 2,
+          "members": [
+            "p54186fe7d147",
+            "p6573d8bb3bcc"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "KNOWN_VS_UNKNOWN": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 5,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 2,
+      "R_flip_pair_passes": 2,
+      "R_flip_pairs": 2,
+      "R_stable_pair_passes": 0,
+      "R_stable_pairs": 2,
+      "R_subset_descriptive_threshold_passed": false,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 5,
+          "members": [
+            "s0d42cacc76e1",
+            "s8eba35a1979e",
+            "sea9358dce992",
+            "sacf7733e9675",
+            "s5a4643f8f3d5"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 3,
+          "members": [
+            "s2bb230536616",
+            "s3d1adf0ce938",
+            "s134eea583827"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "pfe5134c8aba6",
+            "pfea0877e44e6"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 2,
+          "members": [
+            "p85beaefc6d27",
+            "p3b126a65a170"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "pfe5134c8aba6",
+            "pfea0877e44e6"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "CONTRADICTION": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 7,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 3,
+      "R_flip_pair_passes": 3,
+      "R_flip_pairs": 4,
+      "R_stable_pair_passes": 0,
+      "R_stable_pairs": 0,
+      "R_subset_descriptive_threshold_passed": true,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 7,
+          "members": [
+            "sa7bd8a6a8528",
+            "s05ec96a2a6dc",
+            "s42de03a09167",
+            "s2697ff347b99",
+            "s04e9ee967879",
+            "sb8f321279191",
+            "s0f2956ae97be"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "s6dfa7b546adb"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 3,
+          "members": [
+            "pe769b04b8bb4",
+            "pe89e1cbd08fd",
+            "p9b6e9ea58666"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "p1b34b0fb1fdb"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 3,
+          "members": [
+            "pe769b04b8bb4",
+            "pe89e1cbd08fd",
+            "p9b6e9ea58666"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "p1b34b0fb1fdb"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "ALTERNATIVE_COMPLETION_EXISTENCE": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 5,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 2,
+      "R_flip_pair_passes": 1,
+      "R_flip_pairs": 2,
+      "R_stable_pair_passes": 1,
+      "R_stable_pairs": 2,
+      "R_subset_descriptive_threshold_passed": false,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 5,
+          "members": [
+            "sd96aa46e6676",
+            "saf58342c12c0",
+            "sfb25a574ca20",
+            "s0765f4605459",
+            "s69eb6a090d10"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 3,
+          "members": [
+            "s7702e20ad7b4",
+            "s05ba8d17548c",
+            "sab307858b73d"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "pe6150a0d0f53",
+            "p09c35169512d"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 2,
+          "members": [
+            "p290c1440f38a",
+            "p8205c60fcc6a"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 1,
+          "members": [
+            "p09c35169512d"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "p8205c60fcc6a"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "OBSERVATION_REQUIREMENT_COMPARISON": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 7,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 3,
+      "R_flip_pair_passes": 2,
+      "R_flip_pairs": 2,
+      "R_stable_pair_passes": 1,
+      "R_stable_pairs": 2,
+      "R_subset_descriptive_threshold_passed": true,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 7,
+          "members": [
+            "s2dcbcbc31e7d",
+            "s299b5eeddb41",
+            "s37bc9fbd4c28",
+            "s95eb3f9311a7",
+            "s7074290a7c0e",
+            "sf759b3af8e75",
+            "sefdd360d92e4"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "sb576e9584f1c"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 3,
+          "members": [
+            "pa7fdd2bdb981",
+            "p869553eb45c8",
+            "p9464ebed4ef3"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 1,
+          "members": [
+            "pc4e6e87979b9"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 2,
+          "members": [
+            "pa7fdd2bdb981",
+            "p869553eb45c8"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    },
+    "EVIDENCE_SUFFICIENCY": {
+      "P_correct": 8,
+      "P_pair_passes": 4,
+      "R_correct": 3,
+      "R_schema_valid": 8,
+      "R_exact_pair_passes": 0,
+      "R_flip_pair_passes": 0,
+      "R_flip_pairs": 4,
+      "R_stable_pair_passes": 0,
+      "R_stable_pairs": 0,
+      "R_subset_descriptive_threshold_passed": false,
+      "endpoint_joint": {
+        "P_correct_R_correct": {
+          "count": 3,
+          "members": [
+            "s4e4487eb947a",
+            "sfea7d23cd93b",
+            "se8ae05e202d5"
+          ]
+        },
+        "P_correct_R_wrong": {
+          "count": 5,
+          "members": [
+            "s3619d857b3d1",
+            "s88cda4031925",
+            "s8c353e553e52",
+            "s059455a331cf",
+            "s93bb85d7f07a"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "pair_joint": {
+        "P_correct_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_correct_R_wrong": {
+          "count": 4,
+          "members": [
+            "pf2edb8d17b19",
+            "p2d668f50a4c4",
+            "pb9fcb5be062e",
+            "p05e943ec08b0"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      },
+      "flip_pair_joint": {
+        "P_correct_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_correct_R_wrong": {
+          "count": 4,
+          "members": [
+            "pf2edb8d17b19",
+            "p2d668f50a4c4",
+            "pb9fcb5be062e",
+            "p05e943ec08b0"
+          ]
+        },
+        "P_wrong_R_correct": {
+          "count": 0,
+          "members": []
+        },
+        "P_wrong_R_wrong": {
+          "count": 0,
+          "members": []
+        }
+      }
+    }
+  },
+  "registered_interpretation": {
+    "pattern": "PRIMITIVES_ESTABLISHED_REDUCTION_NOT_ESTABLISHED",
+    "registered_category": "A",
+    "failed_primitives": [],
+    "failed_primitive_with_strong_matching_reduction_subset": []
+  },
+  "findings": [
+    "IDENTITY_EQUALITY_COMPETENCE_ESTABLISHED",
+    "CURRENTNESS_COMPETENCE_ESTABLISHED",
+    "KNOWN_VS_UNKNOWN_COMPETENCE_ESTABLISHED",
+    "CONTRADICTION_COMPETENCE_ESTABLISHED",
+    "ALTERNATIVE_COMPLETION_EXISTENCE_COMPETENCE_ESTABLISHED",
+    "OBSERVATION_REQUIREMENT_COMPARISON_COMPETENCE_ESTABLISHED",
+    "EVIDENCE_SUFFICIENCY_COMPETENCE_ESTABLISHED",
+    "FIVE_CLASS_REDUCTION_COMPETENCE_NOT_ESTABLISHED"
+  ],
+  "endpoint_joint_descriptive_counts": {
+    "P_correct_R_correct": {
+      "count": 41,
+      "members": [
+        "s6cdeffc06513",
+        "s0f8ca39efe1a",
+        "s9a67fca88b40",
+        "s86867ae27e30",
+        "s9dd0670c8d6e",
+        "s9a4508a6b7ca",
+        "see461eaf3749",
+        "s0a88b08259e2",
+        "scba9cc461d2b",
+        "s6e13e0d63044",
+        "s45f64a8ae9fd",
+        "s0bf0c65011cf",
+        "s915d60919d64",
+        "s839c64090ee5",
+        "s0d42cacc76e1",
+        "s8eba35a1979e",
+        "sea9358dce992",
+        "sacf7733e9675",
+        "s5a4643f8f3d5",
+        "sa7bd8a6a8528",
+        "s05ec96a2a6dc",
+        "s42de03a09167",
+        "s2697ff347b99",
+        "s04e9ee967879",
+        "sb8f321279191",
+        "s0f2956ae97be",
+        "sd96aa46e6676",
+        "saf58342c12c0",
+        "sfb25a574ca20",
+        "s0765f4605459",
+        "s69eb6a090d10",
+        "s2dcbcbc31e7d",
+        "s299b5eeddb41",
+        "s37bc9fbd4c28",
+        "s95eb3f9311a7",
+        "s7074290a7c0e",
+        "sf759b3af8e75",
+        "sefdd360d92e4",
+        "s4e4487eb947a",
+        "sfea7d23cd93b",
+        "se8ae05e202d5"
+      ]
+    },
+    "P_correct_R_wrong": {
+      "count": 15,
+      "members": [
+        "sb7e1cc7ef7e3",
+        "sccf2acfbfa18",
+        "s2bb230536616",
+        "s3d1adf0ce938",
+        "s134eea583827",
+        "s6dfa7b546adb",
+        "s7702e20ad7b4",
+        "s05ba8d17548c",
+        "sab307858b73d",
+        "sb576e9584f1c",
+        "s3619d857b3d1",
+        "s88cda4031925",
+        "s8c353e553e52",
+        "s059455a331cf",
+        "s93bb85d7f07a"
+      ]
+    },
+    "P_wrong_R_correct": {
+      "count": 0,
+      "members": []
+    },
+    "P_wrong_R_wrong": {
+      "count": 0,
+      "members": []
+    }
+  },
+  "pair_joint_descriptive_counts": {
+    "P_correct_R_correct": {
+      "count": 16,
+      "members": [
+        "pcb75442d46cf",
+        "pb83de3daa4c9",
+        "p6a9d06a11205",
+        "pc41b9ceb9742",
+        "p9147188c88d5",
+        "p4448c687622e",
+        "pfe5134c8aba6",
+        "pfea0877e44e6",
+        "pe769b04b8bb4",
+        "pe89e1cbd08fd",
+        "p9b6e9ea58666",
+        "pe6150a0d0f53",
+        "p09c35169512d",
+        "pa7fdd2bdb981",
+        "p869553eb45c8",
+        "p9464ebed4ef3"
+      ]
+    },
+    "P_correct_R_wrong": {
+      "count": 12,
+      "members": [
+        "p54186fe7d147",
+        "p6573d8bb3bcc",
+        "p85beaefc6d27",
+        "p3b126a65a170",
+        "p1b34b0fb1fdb",
+        "p290c1440f38a",
+        "p8205c60fcc6a",
+        "pc4e6e87979b9",
+        "pf2edb8d17b19",
+        "p2d668f50a4c4",
+        "pb9fcb5be062e",
+        "p05e943ec08b0"
+      ]
+    },
+    "P_wrong_R_correct": {
+      "count": 0,
+      "members": []
+    },
+    "P_wrong_R_wrong": {
+      "count": 0,
+      "members": []
+    }
+  },
+  "endpoint_comparisons": [
+    {
+      "world_id": "s6cdeffc06513",
+      "pair_id": "pcb75442d46cf",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "P_gold": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s0f8ca39efe1a",
+      "pair_id": "pcb75442d46cf",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "P_gold": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s9a67fca88b40",
+      "pair_id": "pb83de3daa4c9",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "P_gold": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s86867ae27e30",
+      "pair_id": "pb83de3daa4c9",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "P_gold": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s9dd0670c8d6e",
+      "pair_id": "p6a9d06a11205",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "P_gold": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s9a4508a6b7ca",
+      "pair_id": "p6a9d06a11205",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "P_gold": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "see461eaf3749",
+      "pair_id": "pc41b9ceb9742",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "P_gold": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s0a88b08259e2",
+      "pair_id": "pc41b9ceb9742",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "P_gold": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "scba9cc461d2b",
+      "pair_id": "p9147188c88d5",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CURRENT"
+      },
+      "P_gold": {
+        "answer": "CURRENT"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s6e13e0d63044",
+      "pair_id": "p9147188c88d5",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "P_gold": {
+        "answer": "NOT_CURRENT"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s45f64a8ae9fd",
+      "pair_id": "p54186fe7d147",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CURRENT"
+      },
+      "P_gold": {
+        "answer": "CURRENT"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "sb7e1cc7ef7e3",
+      "pair_id": "p54186fe7d147",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "P_gold": {
+        "answer": "NOT_CURRENT"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "sccf2acfbfa18",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "CURRENT"
+      },
+      "P_gold": {
+        "answer": "CURRENT"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s0bf0c65011cf",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "P_gold": {
+        "answer": "NOT_CURRENT"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s915d60919d64",
+      "pair_id": "p4448c687622e",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CURRENT"
+      },
+      "P_gold": {
+        "answer": "CURRENT"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s839c64090ee5",
+      "pair_id": "p4448c687622e",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "P_gold": {
+        "answer": "NOT_CURRENT"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s0d42cacc76e1",
+      "pair_id": "pfe5134c8aba6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "KNOWN"
+      },
+      "P_gold": {
+        "answer": "KNOWN"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s8eba35a1979e",
+      "pair_id": "pfe5134c8aba6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "UNKNOWN"
+      },
+      "P_gold": {
+        "answer": "UNKNOWN"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sea9358dce992",
+      "pair_id": "pfea0877e44e6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "KNOWN"
+      },
+      "P_gold": {
+        "answer": "KNOWN"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "sacf7733e9675",
+      "pair_id": "pfea0877e44e6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "UNKNOWN"
+      },
+      "P_gold": {
+        "answer": "UNKNOWN"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s2bb230536616",
+      "pair_id": "p85beaefc6d27",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "KNOWN"
+      },
+      "P_gold": {
+        "answer": "KNOWN"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s3d1adf0ce938",
+      "pair_id": "p85beaefc6d27",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "UNKNOWN"
+      },
+      "P_gold": {
+        "answer": "UNKNOWN"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s5a4643f8f3d5",
+      "pair_id": "p3b126a65a170",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "KNOWN"
+      },
+      "P_gold": {
+        "answer": "KNOWN"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s134eea583827",
+      "pair_id": "p3b126a65a170",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "UNKNOWN"
+      },
+      "P_gold": {
+        "answer": "UNKNOWN"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "sa7bd8a6a8528",
+      "pair_id": "pe769b04b8bb4",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONSISTENT"
+      },
+      "P_gold": {
+        "answer": "CONSISTENT"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s05ec96a2a6dc",
+      "pair_id": "pe769b04b8bb4",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "P_gold": {
+        "answer": "CONTRADICTORY"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s6dfa7b546adb",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "CONSISTENT"
+      },
+      "P_gold": {
+        "answer": "CONSISTENT"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s42de03a09167",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "P_gold": {
+        "answer": "CONTRADICTORY"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s2697ff347b99",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONSISTENT"
+      },
+      "P_gold": {
+        "answer": "CONSISTENT"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s04e9ee967879",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "P_gold": {
+        "answer": "CONTRADICTORY"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sb8f321279191",
+      "pair_id": "p9b6e9ea58666",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONSISTENT"
+      },
+      "P_gold": {
+        "answer": "CONSISTENT"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s0f2956ae97be",
+      "pair_id": "p9b6e9ea58666",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "P_gold": {
+        "answer": "CONTRADICTORY"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sd96aa46e6676",
+      "pair_id": "pe6150a0d0f53",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "P_gold": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "saf58342c12c0",
+      "pair_id": "pe6150a0d0f53",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "P_gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "sfb25a574ca20",
+      "pair_id": "p290c1440f38a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "P_gold": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s7702e20ad7b4",
+      "pair_id": "p290c1440f38a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "P_gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s0765f4605459",
+      "pair_id": "p09c35169512d",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "P_gold": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s69eb6a090d10",
+      "pair_id": "p09c35169512d",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "P_gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s05ba8d17548c",
+      "pair_id": "p8205c60fcc6a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "P_gold": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "sab307858b73d",
+      "pair_id": "p8205c60fcc6a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "P_gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s2dcbcbc31e7d",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MATCH"
+      },
+      "P_gold": {
+        "answer": "MATCH"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s299b5eeddb41",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MISMATCH"
+      },
+      "P_gold": {
+        "answer": "MISMATCH"
+      },
+      "R_selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "s37bc9fbd4c28",
+      "pair_id": "p869553eb45c8",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MATCH"
+      },
+      "P_gold": {
+        "answer": "MATCH"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s95eb3f9311a7",
+      "pair_id": "p869553eb45c8",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MISMATCH"
+      },
+      "P_gold": {
+        "answer": "MISMATCH"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s7074290a7c0e",
+      "pair_id": "pc4e6e87979b9",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MATCH"
+      },
+      "P_gold": {
+        "answer": "MATCH"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sb576e9584f1c",
+      "pair_id": "pc4e6e87979b9",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "MISMATCH"
+      },
+      "P_gold": {
+        "answer": "MISMATCH"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sf759b3af8e75",
+      "pair_id": "p9464ebed4ef3",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MATCH"
+      },
+      "P_gold": {
+        "answer": "MATCH"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "sefdd360d92e4",
+      "pair_id": "p9464ebed4ef3",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "MISMATCH"
+      },
+      "P_gold": {
+        "answer": "MISMATCH"
+      },
+      "R_selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s4e4487eb947a",
+      "pair_id": "pf2edb8d17b19",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "DETERMINATE"
+      },
+      "P_gold": {
+        "answer": "DETERMINATE"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "world_id": "s3619d857b3d1",
+      "pair_id": "pf2edb8d17b19",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "P_gold": {
+        "answer": "UNDERDETERMINED"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s88cda4031925",
+      "pair_id": "p2d668f50a4c4",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "DETERMINATE"
+      },
+      "P_gold": {
+        "answer": "DETERMINATE"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "sfea7d23cd93b",
+      "pair_id": "p2d668f50a4c4",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "P_gold": {
+        "answer": "UNDERDETERMINED"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s8c353e553e52",
+      "pair_id": "pb9fcb5be062e",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "DETERMINATE"
+      },
+      "P_gold": {
+        "answer": "DETERMINATE"
+      },
+      "R_selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "R_gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "world_id": "s059455a331cf",
+      "pair_id": "pb9fcb5be062e",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "P_gold": {
+        "answer": "UNDERDETERMINED"
+      },
+      "R_selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "world_id": "s93bb85d7f07a",
+      "pair_id": "p05e943ec08b0",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": false,
+      "P_selected": {
+        "answer": "DETERMINATE"
+      },
+      "P_gold": {
+        "answer": "DETERMINATE"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "world_id": "se8ae05e202d5",
+      "pair_id": "p05e943ec08b0",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "P_correct": true,
+      "R_correct": true,
+      "P_selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "P_gold": {
+        "answer": "UNDERDETERMINED"
+      },
+      "R_selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "R_gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    }
+  ],
+  "pair_comparisons": [
+    {
+      "pair_id": "pcb75442d46cf",
+      "family": "IDENTITY_EQUALITY",
+      "endpoints": {
+        "A": "s6cdeffc06513",
+        "B": "s0f8ca39efe1a"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": true,
+      "P_gold_transition": [
+        {
+          "same_referent": true,
+          "equal_value": true
+        },
+        {
+          "same_referent": false,
+          "equal_value": true
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "same_referent": true,
+          "equal_value": true
+        },
+        {
+          "same_referent": false,
+          "equal_value": true
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": "same_referent",
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/cycle",
+          "before": 71,
+          "after": 72
+        }
+      ]
+    },
+    {
+      "pair_id": "pb83de3daa4c9",
+      "family": "IDENTITY_EQUALITY",
+      "endpoints": {
+        "A": "s9a67fca88b40",
+        "B": "s86867ae27e30"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "same_referent": false,
+          "equal_value": false
+        },
+        {
+          "same_referent": true,
+          "equal_value": false
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "same_referent": false,
+          "equal_value": false
+        },
+        {
+          "same_referent": true,
+          "equal_value": false
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": "same_referent",
+      "non_target_changes": [
+        "CONTRADICTION"
+      ],
+      "coupling_explanation": "Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/station",
+          "before": "birch-mark-stand-annex",
+          "after": "birch-mark-stand"
+        }
+      ]
+    },
+    {
+      "pair_id": "p6a9d06a11205",
+      "family": "IDENTITY_EQUALITY",
+      "endpoints": {
+        "A": "s9dd0670c8d6e",
+        "B": "s9a4508a6b7ca"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "same_referent": true,
+          "equal_value": true
+        },
+        {
+          "same_referent": true,
+          "equal_value": false
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "same_referent": true,
+          "equal_value": true
+        },
+        {
+          "same_referent": true,
+          "equal_value": false
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": "equal_value",
+      "non_target_changes": [
+        "CONTRADICTION"
+      ],
+      "coupling_explanation": "Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "ochre-etched",
+          "after": "ochre-smooth"
+        }
+      ]
+    },
+    {
+      "pair_id": "pc41b9ceb9742",
+      "family": "IDENTITY_EQUALITY",
+      "endpoints": {
+        "A": "see461eaf3749",
+        "B": "s0a88b08259e2"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": true,
+      "P_gold_transition": [
+        {
+          "same_referent": false,
+          "equal_value": false
+        },
+        {
+          "same_referent": false,
+          "equal_value": true
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "same_referent": false,
+          "equal_value": false
+        },
+        {
+          "same_referent": false,
+          "equal_value": true
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "identity_flip_field": "equal_value",
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Identity/value equality and consistency share the same two immutable mark assertions; changing one can necessarily change whether both assertions coexist.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "linen-smooth",
+          "after": "linen-etched"
+        }
+      ]
+    },
+    {
+      "pair_id": "p9147188c88d5",
+      "family": "CURRENTNESS",
+      "endpoints": {
+        "A": "scba9cc461d2b",
+        "B": "s6e13e0d63044"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "flint-revision-k",
+          "after": "flint-revision-m"
+        }
+      ]
+    },
+    {
+      "pair_id": "p54186fe7d147",
+      "family": "CURRENTNESS",
+      "endpoints": {
+        "A": "s45f64a8ae9fd",
+        "B": "sb7e1cc7ef7e3"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "heath-revision-k",
+          "after": "heath-revision-m"
+        }
+      ]
+    },
+    {
+      "pair_id": "p6573d8bb3bcc",
+      "family": "CURRENTNESS",
+      "endpoints": {
+        "A": "sccf2acfbfa18",
+        "B": "s0bf0c65011cf"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "coupling_explanation": "Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "coral-revision-k",
+          "after": "coral-revision-m"
+        }
+      ]
+    },
+    {
+      "pair_id": "p4448c687622e",
+      "family": "CURRENTNESS",
+      "endpoints": {
+        "A": "s915d60919d64",
+        "B": "s839c64090ee5"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": true,
+      "P_gold_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CURRENT"
+        },
+        {
+          "answer": "NOT_CURRENT"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Deployment selects which trial proposition the sufficiency question concerns; moving from an unresolved trial to a captured trial changes determinacy.",
+      "exact_state_delta": [
+        {
+          "path": "/deployment/build",
+          "before": "wren-revision-k",
+          "after": "wren-revision-m"
+        }
+      ]
+    },
+    {
+      "pair_id": "pfe5134c8aba6",
+      "family": "KNOWN_VS_UNKNOWN",
+      "endpoints": {
+        "A": "s0d42cacc76e1",
+        "B": "s8eba35a1979e"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "cedar-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "pair_id": "pfea0877e44e6",
+      "family": "KNOWN_VS_UNKNOWN",
+      "endpoints": {
+        "A": "sea9358dce992",
+        "B": "sacf7733e9675"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "larch-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "pair_id": "p85beaefc6d27",
+      "family": "KNOWN_VS_UNKNOWN",
+      "endpoints": {
+        "A": "s2bb230536616",
+        "B": "s3d1adf0ce938"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": false,
+      "P_gold_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "amber-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "pair_id": "p3b126a65a170",
+      "family": "KNOWN_VS_UNKNOWN",
+      "endpoints": {
+        "A": "s5a4643f8f3d5",
+        "B": "s134eea583827"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": false,
+      "P_gold_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "KNOWN"
+        },
+        {
+          "answer": "UNKNOWN"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "ALTERNATIVE_COMPLETION_EXISTENCE"
+      ],
+      "coupling_explanation": "Removing a captured input enlarges the compatible domain, necessarily introducing alternatives; sufficiency also changes exactly when those completions differ on output compliance.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/reported_input",
+          "before": "slate-woven",
+          "after": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "pair_id": "pe769b04b8bb4",
+      "family": "CONTRADICTION",
+      "endpoints": {
+        "A": "sa7bd8a6a8528",
+        "B": "s05ec96a2a6dc"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "IDENTITY_EQUALITY"
+      ],
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/asserted_value",
+          "before": "moss-etched",
+          "after": "moss-smooth"
+        }
+      ]
+    },
+    {
+      "pair_id": "p1b34b0fb1fdb",
+      "family": "CONTRADICTION",
+      "endpoints": {
+        "A": "s6dfa7b546adb",
+        "B": "s42de03a09167"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "IDENTITY_EQUALITY"
+      ],
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/station",
+          "before": "ivory-mark-stand-annex",
+          "after": "ivory-mark-stand"
+        }
+      ]
+    },
+    {
+      "pair_id": "pe89e1cbd08fd",
+      "family": "CONTRADICTION",
+      "endpoints": {
+        "A": "s2697ff347b99",
+        "B": "s04e9ee967879"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "IDENTITY_EQUALITY"
+      ],
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/build",
+          "before": "reed-revision-m",
+          "after": "reed-revision-k"
+        }
+      ]
+    },
+    {
+      "pair_id": "p9b6e9ea58666",
+      "family": "CONTRADICTION",
+      "endpoints": {
+        "A": "sb8f321279191",
+        "B": "s0f2956ae97be"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "CONSISTENT"
+        },
+        {
+          "answer": "CONTRADICTORY"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "IDENTITY_EQUALITY"
+      ],
+      "coupling_explanation": "Consistency flips here by changing either referent identity or value equality, so the identity/equality vector necessarily changes too.",
+      "exact_state_delta": [
+        {
+          "path": "/assertions/1/subject/cycle",
+          "before": 117,
+          "after": 116
+        }
+      ]
+    },
+    {
+      "pair_id": "pe6150a0d0f53",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "endpoints": {
+        "A": "sd96aa46e6676",
+        "B": "saf58342c12c0"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": true,
+      "P_gold_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "KNOWN_VS_UNKNOWN"
+      ],
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "ash-woven"
+          ],
+          "after": [
+            "ash-woven",
+            "ash-glazed"
+          ]
+        }
+      ]
+    },
+    {
+      "pair_id": "p290c1440f38a",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "endpoints": {
+        "A": "sfb25a574ca20",
+        "B": "s7702e20ad7b4"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": false,
+      "P_gold_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "KNOWN_VS_UNKNOWN"
+      ],
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "pearl-woven"
+          ],
+          "after": [
+            "pearl-woven",
+            "pearl-glazed"
+          ]
+        }
+      ]
+    },
+    {
+      "pair_id": "p09c35169512d",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "endpoints": {
+        "A": "s0765f4605459",
+        "B": "s69eb6a090d10"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "KNOWN_VS_UNKNOWN",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "fern-woven"
+          ],
+          "after": [
+            "fern-woven",
+            "fern-glazed"
+          ]
+        }
+      ]
+    },
+    {
+      "pair_id": "p8205c60fcc6a",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "endpoints": {
+        "A": "s05ba8d17548c",
+        "B": "sab307858b73d"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "NO_ALTERNATIVE"
+        },
+        {
+          "answer": "ALTERNATIVE_EXISTS"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [
+        "KNOWN_VS_UNKNOWN",
+        "EVIDENCE_SUFFICIENCY"
+      ],
+      "coupling_explanation": "Expanding a singleton remaining domain removes unique input determination; sufficiency additionally changes when the added input implies a different violation truth value.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/admissible_inputs",
+          "before": [
+            "willow-woven"
+          ],
+          "after": [
+            "willow-woven",
+            "willow-glazed"
+          ]
+        }
+      ]
+    },
+    {
+      "pair_id": "pa7fdd2bdb981",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "endpoints": {
+        "A": "s2dcbcbc31e7d",
+        "B": "s299b5eeddb41"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "dune-pulse",
+          "after": "dune-beam"
+        }
+      ]
+    },
+    {
+      "pair_id": "p869553eb45c8",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "endpoints": {
+        "A": "s37bc9fbd4c28",
+        "B": "s95eb3f9311a7"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": true,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "opal-pulse",
+          "after": "opal-beam"
+        }
+      ]
+    },
+    {
+      "pair_id": "pc4e6e87979b9",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "endpoints": {
+        "A": "s7074290a7c0e",
+        "B": "sb576e9584f1c"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": false,
+      "P_gold_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "spruce-pulse",
+          "after": "spruce-beam"
+        }
+      ]
+    },
+    {
+      "pair_id": "p9464ebed4ef3",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "endpoints": {
+        "A": "sf759b3af8e75",
+        "B": "sefdd360d92e4"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": true,
+      "diagnostic_gold_changes": false,
+      "R_flip_pass": null,
+      "R_stable_class_retention_pass": true,
+      "P_gold_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "MATCH"
+        },
+        {
+          "answer": "MISMATCH"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        },
+        {
+          "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. Only the designated comparison changes; any diagnostic transition is a consequence of that changed observation under the fixed deployment facts.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/observed_result",
+          "before": "maple-pulse",
+          "after": "maple-beam"
+        }
+      ]
+    },
+    {
+      "pair_id": "pf2edb8d17b19",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "endpoints": {
+        "A": "s4e4487eb947a",
+        "B": "s3619d857b3d1"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "clay-pulse",
+          "after": "clay-extra-ray"
+        }
+      ]
+    },
+    {
+      "pair_id": "p2d668f50a4c4",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "endpoints": {
+        "A": "s88cda4031925",
+        "B": "sfea7d23cd93b"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "pine-pulse",
+          "after": "pine-beam"
+        }
+      ]
+    },
+    {
+      "pair_id": "pb9fcb5be062e",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "endpoints": {
+        "A": "s8c353e553e52",
+        "B": "s059455a331cf"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "NO_SUPPORTED_DIAGNOSIS"
+        },
+        {
+          "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "quartz-pulse",
+          "after": "quartz-extra-ray"
+        }
+      ]
+    },
+    {
+      "pair_id": "p05e943ec08b0",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "endpoints": {
+        "A": "s93bb85d7f07a",
+        "B": "se8ae05e202d5"
+      },
+      "P_pair_pass": true,
+      "R_exact_pair_pass": false,
+      "diagnostic_gold_changes": true,
+      "R_flip_pass": false,
+      "R_stable_class_retention_pass": null,
+      "P_gold_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "P_selected_transition": [
+        {
+          "answer": "DETERMINATE"
+        },
+        {
+          "answer": "UNDERDETERMINED"
+        }
+      ],
+      "R_gold_transition": [
+        {
+          "classification": "SUPPORTED_CURRENT_DEFECT"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "R_selected_transition": [
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "classification": "INSUFFICIENT_EVIDENCE"
+        }
+      ],
+      "identity_flip_field": null,
+      "non_target_changes": [],
+      "coupling_explanation": "No non-target primitive truth changes under its frozen scope. A non-reference requirement cell changes decision relevance while input identity, domain size, capture, deployment, mark assertions and reference comparison remain fixed.",
+      "exact_state_delta": [
+        {
+          "path": "/trials/0/required_results/2/result",
+          "before": "hazel-pulse",
+          "after": "hazel-beam"
+        }
+      ]
+    }
+  ],
+  "combined_system_capability": "NOT_TESTED_NO_CHAINING",
+  "rows": [
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s6cdeffc06513",
+      "pair_id": "pcb75442d46cf",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "aa79ac31727e3ec652a4",
+      "gold": {
+        "same_referent": true,
+        "equal_value": true
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s6cdeffc06513",
+      "pair_id": "pcb75442d46cf",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "1d6eb88b84c7c058e665",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s0f8ca39efe1a",
+      "pair_id": "pcb75442d46cf",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "099933e0fbe6a4cb7ea3",
+      "gold": {
+        "same_referent": false,
+        "equal_value": true
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s0f8ca39efe1a",
+      "pair_id": "pcb75442d46cf",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "cc0bf76cf65e2a65055f",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s9a67fca88b40",
+      "pair_id": "pb83de3daa4c9",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "4b9d5aacb8ce18ff1aa6",
+      "gold": {
+        "same_referent": false,
+        "equal_value": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s9a67fca88b40",
+      "pair_id": "pb83de3daa4c9",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "41e44b18ea6bb5d3a2c5",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s86867ae27e30",
+      "pair_id": "pb83de3daa4c9",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "6a7a66dc86a0087f1bf1",
+      "gold": {
+        "same_referent": true,
+        "equal_value": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s86867ae27e30",
+      "pair_id": "pb83de3daa4c9",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "b15585b222092424e481",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s9dd0670c8d6e",
+      "pair_id": "p6a9d06a11205",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "a34ebf2f0b00020b974e",
+      "gold": {
+        "same_referent": true,
+        "equal_value": true
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "s9dd0670c8d6e",
+      "pair_id": "p6a9d06a11205",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "cead8218e812de9934fc",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": true,
+        "equal_value": false
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s9a4508a6b7ca",
+      "pair_id": "p6a9d06a11205",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "500f411285b3627672e8",
+      "gold": {
+        "same_referent": true,
+        "equal_value": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s9a4508a6b7ca",
+      "pair_id": "p6a9d06a11205",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "5504e9cd499a2ac1ae75",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": false,
+        "equal_value": false
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "see461eaf3749",
+      "pair_id": "pc41b9ceb9742",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "c7c2a0776a12ce2a1917",
+      "gold": {
+        "same_referent": false,
+        "equal_value": false
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "see461eaf3749",
+      "pair_id": "pc41b9ceb9742",
+      "side": "A",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "57632a88d8f7682a4c6e",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "same_referent": false,
+        "equal_value": true
+      },
+      "error_category": null,
+      "fields": {
+        "same_referent": true,
+        "equal_value": true
+      },
+      "world_id": "s0a88b08259e2",
+      "pair_id": "pc41b9ceb9742",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "P",
+      "render_id": "61be5c49065bca8897bb",
+      "gold": {
+        "same_referent": false,
+        "equal_value": true
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s0a88b08259e2",
+      "pair_id": "pc41b9ceb9742",
+      "side": "B",
+      "family": "IDENTITY_EQUALITY",
+      "arm": "R",
+      "render_id": "6f3e38d91b956a319f2e",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CURRENT"
+      },
+      "error_category": null,
+      "world_id": "scba9cc461d2b",
+      "pair_id": "p9147188c88d5",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "44bf0696c356528a88c1",
+      "gold": {
+        "answer": "CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "scba9cc461d2b",
+      "pair_id": "p9147188c88d5",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "0566071080f5f6e9f9f3",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s6e13e0d63044",
+      "pair_id": "p9147188c88d5",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "e2240090ad841470d3b9",
+      "gold": {
+        "answer": "NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s6e13e0d63044",
+      "pair_id": "p9147188c88d5",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "23555585082833dc492f",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s45f64a8ae9fd",
+      "pair_id": "p54186fe7d147",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "70b75622dc1d27245460",
+      "gold": {
+        "answer": "CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "s45f64a8ae9fd",
+      "pair_id": "p54186fe7d147",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "f4ed20d607cd295dd9e9",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "sb7e1cc7ef7e3",
+      "pair_id": "p54186fe7d147",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "d0b1a327b6a25146c40c",
+      "gold": {
+        "answer": "NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "sb7e1cc7ef7e3",
+      "pair_id": "p54186fe7d147",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "81f1fcaa6122c49c89f0",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CURRENT"
+      },
+      "error_category": null,
+      "world_id": "sccf2acfbfa18",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "1dcdd3e8aec64e42d220",
+      "gold": {
+        "answer": "CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "sccf2acfbfa18",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "a00347445ee3bd1d9037",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s0bf0c65011cf",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "37a10c203f62fe0d83b2",
+      "gold": {
+        "answer": "NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s0bf0c65011cf",
+      "pair_id": "p6573d8bb3bcc",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "8940cdcaade8d0b3b6df",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s915d60919d64",
+      "pair_id": "p4448c687622e",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "2fd2d8c877b26b8447fa",
+      "gold": {
+        "answer": "CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s915d60919d64",
+      "pair_id": "p4448c687622e",
+      "side": "A",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "a9412fd1fbedea1b11e4",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s839c64090ee5",
+      "pair_id": "p4448c687622e",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "P",
+      "render_id": "d71e29458c115551baf0",
+      "gold": {
+        "answer": "NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s839c64090ee5",
+      "pair_id": "p4448c687622e",
+      "side": "B",
+      "family": "CURRENTNESS",
+      "arm": "R",
+      "render_id": "3137394ad1d4ee1d2616",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "KNOWN"
+      },
+      "error_category": null,
+      "world_id": "s0d42cacc76e1",
+      "pair_id": "pfe5134c8aba6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "1624768f1ca4c5c534ec",
+      "gold": {
+        "answer": "KNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "s0d42cacc76e1",
+      "pair_id": "pfe5134c8aba6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "adb794c7458be53d3cc0",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNKNOWN"
+      },
+      "error_category": null,
+      "world_id": "s8eba35a1979e",
+      "pair_id": "pfe5134c8aba6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "a446beeba42b8de57e9e",
+      "gold": {
+        "answer": "UNKNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s8eba35a1979e",
+      "pair_id": "pfe5134c8aba6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "90b1d43a57ccc7a8ccb1",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "KNOWN"
+      },
+      "error_category": null,
+      "world_id": "sea9358dce992",
+      "pair_id": "pfea0877e44e6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "3d6be4f584b7367f3864",
+      "gold": {
+        "answer": "KNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "sea9358dce992",
+      "pair_id": "pfea0877e44e6",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "b311d24baec73e78b154",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNKNOWN"
+      },
+      "error_category": null,
+      "world_id": "sacf7733e9675",
+      "pair_id": "pfea0877e44e6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "6b3d734f30fab128bb21",
+      "gold": {
+        "answer": "UNKNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "sacf7733e9675",
+      "pair_id": "pfea0877e44e6",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "19f62716c3f685193214",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "KNOWN"
+      },
+      "error_category": null,
+      "world_id": "s2bb230536616",
+      "pair_id": "p85beaefc6d27",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "7db2d90d7dc9c905e9b7",
+      "gold": {
+        "answer": "KNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s2bb230536616",
+      "pair_id": "p85beaefc6d27",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "5e642d45eaf692ffe2c4",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNKNOWN"
+      },
+      "error_category": null,
+      "world_id": "s3d1adf0ce938",
+      "pair_id": "p85beaefc6d27",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "16af95d5beec27fe9b4d",
+      "gold": {
+        "answer": "UNKNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s3d1adf0ce938",
+      "pair_id": "p85beaefc6d27",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "49a1537d8512cdd4e27a",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "KNOWN"
+      },
+      "error_category": null,
+      "world_id": "s5a4643f8f3d5",
+      "pair_id": "p3b126a65a170",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "3326a9b554cb11f7099c",
+      "gold": {
+        "answer": "KNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "s5a4643f8f3d5",
+      "pair_id": "p3b126a65a170",
+      "side": "A",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "1b1cd2973ea4a6d1f192",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNKNOWN"
+      },
+      "error_category": null,
+      "world_id": "s134eea583827",
+      "pair_id": "p3b126a65a170",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "P",
+      "render_id": "98ca05385041e14a939e",
+      "gold": {
+        "answer": "UNKNOWN"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s134eea583827",
+      "pair_id": "p3b126a65a170",
+      "side": "B",
+      "family": "KNOWN_VS_UNKNOWN",
+      "arm": "R",
+      "render_id": "596b9c506d8c47ce8861",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONSISTENT"
+      },
+      "error_category": null,
+      "world_id": "sa7bd8a6a8528",
+      "pair_id": "pe769b04b8bb4",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "e022fc13c4d6c6fa3afe",
+      "gold": {
+        "answer": "CONSISTENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "sa7bd8a6a8528",
+      "pair_id": "pe769b04b8bb4",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "03346a14dd62d02ee8f9",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "error_category": null,
+      "world_id": "s05ec96a2a6dc",
+      "pair_id": "pe769b04b8bb4",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "4304e2b32e9ab648ea81",
+      "gold": {
+        "answer": "CONTRADICTORY"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s05ec96a2a6dc",
+      "pair_id": "pe769b04b8bb4",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "82056f0dc9346defc6ca",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONSISTENT"
+      },
+      "error_category": null,
+      "world_id": "s6dfa7b546adb",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "5789ccb7b5a5817bacec",
+      "gold": {
+        "answer": "CONSISTENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s6dfa7b546adb",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "1d804b814c00198e611c",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "error_category": null,
+      "world_id": "s42de03a09167",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "2efb94d2623d5d34204f",
+      "gold": {
+        "answer": "CONTRADICTORY"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s42de03a09167",
+      "pair_id": "p1b34b0fb1fdb",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "266bb21dfee74cb20d6e",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONSISTENT"
+      },
+      "error_category": null,
+      "world_id": "s2697ff347b99",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "786658eec1bd7d41867b",
+      "gold": {
+        "answer": "CONSISTENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s2697ff347b99",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "57ad5e736df3d2a2e7a4",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "error_category": null,
+      "world_id": "s04e9ee967879",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "1dffd83b0d916ccf7b3e",
+      "gold": {
+        "answer": "CONTRADICTORY"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s04e9ee967879",
+      "pair_id": "pe89e1cbd08fd",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "039d2764039cd4fea0bf",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONSISTENT"
+      },
+      "error_category": null,
+      "world_id": "sb8f321279191",
+      "pair_id": "p9b6e9ea58666",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "09f349cc66910fa6af22",
+      "gold": {
+        "answer": "CONSISTENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "sb8f321279191",
+      "pair_id": "p9b6e9ea58666",
+      "side": "A",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "87981769dfcc9b6628ca",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "CONTRADICTORY"
+      },
+      "error_category": null,
+      "world_id": "s0f2956ae97be",
+      "pair_id": "p9b6e9ea58666",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "P",
+      "render_id": "20e87801730a7bac2c21",
+      "gold": {
+        "answer": "CONTRADICTORY"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s0f2956ae97be",
+      "pair_id": "p9b6e9ea58666",
+      "side": "B",
+      "family": "CONTRADICTION",
+      "arm": "R",
+      "render_id": "56af91b4da9105b30d4a",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "error_category": null,
+      "world_id": "sd96aa46e6676",
+      "pair_id": "pe6150a0d0f53",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "53e85b889315afa0c81a",
+      "gold": {
+        "answer": "NO_ALTERNATIVE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "sd96aa46e6676",
+      "pair_id": "pe6150a0d0f53",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "9b6d3d90765a0a075391",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "error_category": null,
+      "world_id": "saf58342c12c0",
+      "pair_id": "pe6150a0d0f53",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "694acccb0c03eebc81d3",
+      "gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "saf58342c12c0",
+      "pair_id": "pe6150a0d0f53",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "32f68b6ac15459d3b91f",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "error_category": null,
+      "world_id": "sfb25a574ca20",
+      "pair_id": "p290c1440f38a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "587761c0ff3b17cad4c4",
+      "gold": {
+        "answer": "NO_ALTERNATIVE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "sfb25a574ca20",
+      "pair_id": "p290c1440f38a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "d456430386d1ae9f715f",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "error_category": null,
+      "world_id": "s7702e20ad7b4",
+      "pair_id": "p290c1440f38a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "5afe0a67fd35cfa19709",
+      "gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s7702e20ad7b4",
+      "pair_id": "p290c1440f38a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "a3059f6c0f4b0ff0e8cd",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "error_category": null,
+      "world_id": "s0765f4605459",
+      "pair_id": "p09c35169512d",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "2ea1843016b2b6564356",
+      "gold": {
+        "answer": "NO_ALTERNATIVE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s0765f4605459",
+      "pair_id": "p09c35169512d",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "4c89f08dd6188e31f9ce",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "error_category": null,
+      "world_id": "s69eb6a090d10",
+      "pair_id": "p09c35169512d",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "b7da4e8439a92d69c1ac",
+      "gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s69eb6a090d10",
+      "pair_id": "p09c35169512d",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "e15e488f3aa3e09c428d",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "NO_ALTERNATIVE"
+      },
+      "error_category": null,
+      "world_id": "s05ba8d17548c",
+      "pair_id": "p8205c60fcc6a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "8e07a76d4da261f24c1f",
+      "gold": {
+        "answer": "NO_ALTERNATIVE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s05ba8d17548c",
+      "pair_id": "p8205c60fcc6a",
+      "side": "A",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "e616353b017acb27e0d9",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "ALTERNATIVE_EXISTS"
+      },
+      "error_category": null,
+      "world_id": "sab307858b73d",
+      "pair_id": "p8205c60fcc6a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "P",
+      "render_id": "f665a228b987e606472a",
+      "gold": {
+        "answer": "ALTERNATIVE_EXISTS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "sab307858b73d",
+      "pair_id": "p8205c60fcc6a",
+      "side": "B",
+      "family": "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "arm": "R",
+      "render_id": "d309497eb21c263c1367",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MATCH"
+      },
+      "error_category": null,
+      "world_id": "s2dcbcbc31e7d",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "3dff20b3416f0e3b51d5",
+      "gold": {
+        "answer": "MATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s2dcbcbc31e7d",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "00ac3af7ac24d7855918",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MISMATCH"
+      },
+      "error_category": null,
+      "world_id": "s299b5eeddb41",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "51ab6f60c970f16c422d",
+      "gold": {
+        "answer": "MISMATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "error_category": null,
+      "world_id": "s299b5eeddb41",
+      "pair_id": "pa7fdd2bdb981",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "3316e220ebc80abee5e4",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MATCH"
+      },
+      "error_category": null,
+      "world_id": "s37bc9fbd4c28",
+      "pair_id": "p869553eb45c8",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "e9eb10fef51a658be188",
+      "gold": {
+        "answer": "MATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s37bc9fbd4c28",
+      "pair_id": "p869553eb45c8",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "1e33f9374cd6f33331e9",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MISMATCH"
+      },
+      "error_category": null,
+      "world_id": "s95eb3f9311a7",
+      "pair_id": "p869553eb45c8",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "b42cde3a3bea5768f52e",
+      "gold": {
+        "answer": "MISMATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": null,
+      "world_id": "s95eb3f9311a7",
+      "pair_id": "p869553eb45c8",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "4b6c33256b7252737ab0",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MATCH"
+      },
+      "error_category": null,
+      "world_id": "s7074290a7c0e",
+      "pair_id": "pc4e6e87979b9",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "81cfe8c1a65c655714cc",
+      "gold": {
+        "answer": "MATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "s7074290a7c0e",
+      "pair_id": "pc4e6e87979b9",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "46f768b5d4798b0c02fe",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MISMATCH"
+      },
+      "error_category": null,
+      "world_id": "sb576e9584f1c",
+      "pair_id": "pc4e6e87979b9",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "8ff761e9bdd9e3473514",
+      "gold": {
+        "answer": "MISMATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "sb576e9584f1c",
+      "pair_id": "pc4e6e87979b9",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "c594c4b96309463f3bb7",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MATCH"
+      },
+      "error_category": null,
+      "world_id": "sf759b3af8e75",
+      "pair_id": "p9464ebed4ef3",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "8c64b0938d616c32e869",
+      "gold": {
+        "answer": "MATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "sf759b3af8e75",
+      "pair_id": "p9464ebed4ef3",
+      "side": "A",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "ef987dc16beba80f32a4",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "MISMATCH"
+      },
+      "error_category": null,
+      "world_id": "sefdd360d92e4",
+      "pair_id": "p9464ebed4ef3",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "P",
+      "render_id": "86b3dd660c1e990db1ad",
+      "gold": {
+        "answer": "MISMATCH"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "sefdd360d92e4",
+      "pair_id": "p9464ebed4ef3",
+      "side": "B",
+      "family": "OBSERVATION_REQUIREMENT_COMPARISON",
+      "arm": "R",
+      "render_id": "ef543d5a91a4c3ed0cb8",
+      "gold": {
+        "classification": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "DETERMINATE"
+      },
+      "error_category": null,
+      "world_id": "s4e4487eb947a",
+      "pair_id": "pf2edb8d17b19",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "50ca8c0318d1a5182eda",
+      "gold": {
+        "answer": "DETERMINATE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": null,
+      "world_id": "s4e4487eb947a",
+      "pair_id": "pf2edb8d17b19",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "fac912a7bb00ab24ab66",
+      "gold": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "error_category": null,
+      "world_id": "s3619d857b3d1",
+      "pair_id": "pf2edb8d17b19",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "5d99037af734e353665e",
+      "gold": {
+        "answer": "UNDERDETERMINED"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s3619d857b3d1",
+      "pair_id": "pf2edb8d17b19",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "260cc779e9f1c888a930",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "DETERMINATE"
+      },
+      "error_category": null,
+      "world_id": "s88cda4031925",
+      "pair_id": "p2d668f50a4c4",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "b31bb22b644cdbe158d9",
+      "gold": {
+        "answer": "DETERMINATE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s88cda4031925",
+      "pair_id": "p2d668f50a4c4",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "3093343fa89134a29a4f",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "error_category": null,
+      "world_id": "sfea7d23cd93b",
+      "pair_id": "p2d668f50a4c4",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "7c0168d13c78f8cea0a8",
+      "gold": {
+        "answer": "UNDERDETERMINED"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "sfea7d23cd93b",
+      "pair_id": "p2d668f50a4c4",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "968f906b6f6606d1e333",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "DETERMINATE"
+      },
+      "error_category": null,
+      "world_id": "s8c353e553e52",
+      "pair_id": "pb9fcb5be062e",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "6fe2c10639dcc9030a63",
+      "gold": {
+        "answer": "DETERMINATE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s8c353e553e52",
+      "pair_id": "pb9fcb5be062e",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "0b62db030e2cefba3e99",
+      "gold": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "error_category": null,
+      "world_id": "s059455a331cf",
+      "pair_id": "pb9fcb5be062e",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "c56bf8531d8fb6b17581",
+      "gold": {
+        "answer": "UNDERDETERMINED"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s059455a331cf",
+      "pair_id": "pb9fcb5be062e",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "31ffd0d7bdcb365d7d34",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "DETERMINATE"
+      },
+      "error_category": null,
+      "world_id": "s93bb85d7f07a",
+      "pair_id": "p05e943ec08b0",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "19ab1928a69c5775cbe6",
+      "gold": {
+        "answer": "DETERMINATE"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": false,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": "VALUE_MISMATCH",
+      "world_id": "s93bb85d7f07a",
+      "pair_id": "p05e943ec08b0",
+      "side": "A",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "c54f71d19928e1ca8406",
+      "gold": {
+        "classification": "SUPPORTED_CURRENT_DEFECT"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "answer": "UNDERDETERMINED"
+      },
+      "error_category": null,
+      "world_id": "se8ae05e202d5",
+      "pair_id": "p05e943ec08b0",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "P",
+      "render_id": "cd2cd16bf7c01296d99c",
+      "gold": {
+        "answer": "UNDERDETERMINED"
+      }
+    },
+    {
+      "parsed": true,
+      "schema_valid": true,
+      "correct": true,
+      "selected": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      },
+      "error_category": null,
+      "world_id": "se8ae05e202d5",
+      "pair_id": "p05e943ec08b0",
+      "side": "B",
+      "family": "EVIDENCE_SUFFICIENCY",
+      "arm": "R",
+      "render_id": "d71564494f2c87db18d4",
+      "gold": {
+        "classification": "INSUFFICIENT_EVIDENCE"
+      }
+    }
+  ],
+  "attempted": 112,
+  "completed": 112,
+  "raw_commit_before_scoring": "3d9214bf3c9d6e1899aad4475e3deb54c9fe0b8e"
+}
