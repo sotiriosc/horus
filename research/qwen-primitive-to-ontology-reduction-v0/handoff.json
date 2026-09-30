@@ -1,0 +1,22 @@
+{
+  "branch": "research/qwen-primitive-to-ontology-reduction-v0",
+  "base": "67053bb802a7851e91b4e7aeb675a687875b8115",
+  "method_freeze": "e3f07c01b0d4600559dc3b48591586501b329486",
+  "case_freeze": "95ae19a2b2200a68a7db7f9934bb2fe5ac697422",
+  "raw_pre_scoring": "b1b0aad0da0438e1d10c29d6e4fb31cdbf920615",
+  "seed": 739182647,
+  "registered_interpretation": "EXPLICIT_PRIMITIVE_REDUCTION_NOT_ESTABLISHED",
+  "answers": {
+    "Can Qwen map an explicitly supplied correct primitive state?": "Not established under the frozen endpoint gate: 43/50; each class is reported below. This statement is limited to supplied correct primitive states.",
+    "Does it track minimal changes that should change diagnosis?": "11/15 exact changing pairs; fails the frozen 12/15 secondary requirement. Both endpoints and direction must be correct.",
+    "Does it preserve diagnosis under irrelevant changes?": "8/10 exact stable pairs; passes the frozen 8/10 secondary requirement.",
+    "Is sufficiency-to-ontology mapping reliable?": "Sufficiency-only changes: 9/10 endpoints and 4/5 exact pairs. Other fields are held constant. This is a descriptive subset, not a separately registered reliability gate.",
+    "Is contradiction precedence reliable?": "Contradictory endpoints: 10/10. Consistency-toggle pairs: 5/6. Context-specific results appear below; no separate subset gate.",
+    "Is historical/current composition reliable?": "Historical class: 5/10; current defect: 9/10; no diagnosis: 9/10. Direct historical-composition pairs: 0/2. Temporal bindings were supplied explicitly.",
+    "Does removing discovery change the observed boundary?": "Removing discovery did not establish the registered reduction capability on these fresh cases. The changed dataset prevents an isolated causal comparison with prior studies.",
+    "Reduction operator, upstream discovery/composition, or mixed?": "The reduction operator itself remains unresolved even with upstream discovery removed. This does not show upstream difficulty is absent; the broader failure explanation remains mixed.",
+    "What has not been demonstrated?": "No raw-evidence diagnosis, primitive discovery, end-to-end diagnosis, generalization beyond these cases, autonomous Horus reasoning, learning, self-improvement, RSI, or internal causal mechanism has been demonstrated.",
+    "Does this authorize a Horus architecture change?": "No. This result itself authorizes no Horus architecture change. Publish and stop; any engineering consequence requires a separate decision."
+  },
+  "publication_commit": "Verified final remote head is reported by the completion handoff."
+}

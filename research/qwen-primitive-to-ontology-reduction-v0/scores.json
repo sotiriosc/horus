@@ -1,0 +1,870 @@
+{
+  "study": "QWEN_PRIMITIVE_TO_ONTOLOGY_REDUCTION_V0",
+  "scheduled": 50,
+  "attempted": 50,
+  "completed": 50,
+  "schema_valid": 50,
+  "correct": 43,
+  "total": 50,
+  "per_class": {
+    "HISTORICAL_DEFECT_NOT_CURRENT": {
+      "correct": 5,
+      "total": 10
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "correct": 10,
+      "total": 10
+    },
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+      "correct": 10,
+      "total": 10
+    },
+    "NO_SUPPORTED_DIAGNOSIS": {
+      "correct": 9,
+      "total": 10
+    },
+    "SUPPORTED_CURRENT_DEFECT": {
+      "correct": 9,
+      "total": 10
+    }
+  },
+  "confusion": {
+    "SUPPORTED_CURRENT_DEFECT": {
+      "SUPPORTED_CURRENT_DEFECT": 9,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 1,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "NO_SUPPORTED_DIAGNOSIS": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 9,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 10,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "HISTORICAL_DEFECT_NOT_CURRENT": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 4,
+      "INSUFFICIENT_EVIDENCE": 1,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 5,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+      "INVALID_OUTPUT": 0
+    },
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+      "SUPPORTED_CURRENT_DEFECT": 0,
+      "NO_SUPPORTED_DIAGNOSIS": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+      "INVALID_OR_CONTRADICTORY_EVIDENCE": 10,
+      "INVALID_OUTPUT": 0
+    }
+  },
+  "primary_gate": "PRIMITIVE_TO_ONTOLOGY_REDUCTION_NOT_ESTABLISHED",
+  "secondary_pair_gate": false,
+  "pair_groups": {
+    "changing": {
+      "passed": 11,
+      "total": 15
+    },
+    "stable": {
+      "passed": 8,
+      "total": 10
+    }
+  },
+  "strata": {
+    "IRRELEVANT_CHANGE": {
+      "correct": 18,
+      "total": 20
+    },
+    "PRECEDENCE": {
+      "correct": 23,
+      "total": 28
+    },
+    "SIMPLE": {
+      "correct": 2,
+      "total": 2
+    }
+  },
+  "diagnostics": {
+    "SUFFICIENCY": {
+      "correct": 9,
+      "total": 10,
+      "pair_pass": 4,
+      "pairs": 5
+    },
+    "CONTRADICTION": {
+      "correct": 11,
+      "total": 12,
+      "pair_pass": 5,
+      "pairs": 6
+    },
+    "HISTORY": {
+      "correct": 1,
+      "total": 4,
+      "pair_pass": 0,
+      "pairs": 2
+    },
+    "OBSERVATION": {
+      "correct": 4,
+      "total": 4,
+      "pair_pass": 2,
+      "pairs": 2
+    }
+  },
+  "contradiction_contexts": {
+    "current_mismatch": {
+      "correct": 3,
+      "total": 3
+    },
+    "historical_mismatch": {
+      "correct": 4,
+      "total": 4
+    },
+    "current_underdetermined": {
+      "correct": 3,
+      "total": 3
+    }
+  },
+  "registered_interpretation": "EXPLICIT_PRIMITIVE_REDUCTION_NOT_ESTABLISHED",
+  "pair_caveat": null,
+  "endpoints": [
+    {
+      "id": "pro-v0-b18f60c2713da4",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "OBSERVATION"
+    },
+    {
+      "id": "pro-v0-5b072104642754",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "OBSERVATION"
+    },
+    {
+      "id": "pro-v0-c49bc0ead43308",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-736c00a6c1f92e",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-2421271e6a7a31",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-a411e9df3387d4",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-8120fd5d678145",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "HISTORY"
+    },
+    {
+      "id": "pro-v0-b29f71c05fe18e",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "PRECEDENCE",
+      "family": "HISTORY"
+    },
+    {
+      "id": "pro-v0-406aeb2525e616",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "PRECEDENCE",
+      "family": "HISTORY"
+    },
+    {
+      "id": "pro-v0-478acbada2008d",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "PRECEDENCE",
+      "family": "HISTORY"
+    },
+    {
+      "id": "pro-v0-ba0a812f665894",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-8b36e8339f2798",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-0a4962af2de63c",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-7fb20f5f3750bd",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-7b01863a39d2d2",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-5a1a81a55c0e9a",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-22c84c154fdd83",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-0eee59847bc1e5",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-422eb6c501c86a",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-32c2742ec6c06c",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-0c4f0262a3b813",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "SIMPLE",
+      "family": "OBSERVATION"
+    },
+    {
+      "id": "pro-v0-92a26e858ed0bc",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "SIMPLE",
+      "family": "OBSERVATION"
+    },
+    {
+      "id": "pro-v0-c24550bb0f9575",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-cf8cff0a198d74",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-739e5491e691ef",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-397a26ace4c7af",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "SUFFICIENCY"
+    },
+    {
+      "id": "pro-v0-e9fd990aba2acc",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-d2ff6062d3f530",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-94fe16aef7a518",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-b8e92d9b43f18c",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "PRECEDENCE",
+      "family": "CONTRADICTION"
+    },
+    {
+      "id": "pro-v0-05d3f9dc9cff43",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-a05137230c9d09",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-6c3bc06f7ce0e2",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-b38f41b6c14c16",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": "SUPPORTED_CURRENT_DEFECT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-f5b3facd82923a",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-c9fc78b11713f4",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-246658c11d6665",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-d958ff9ff2356c",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": "NO_SUPPORTED_DIAGNOSIS",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-6e54ce7649bbd6",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-8e7929a2939527",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-d36e9c18ac4a20",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_HISTORY"
+    },
+    {
+      "id": "pro-v0-46c2f40fde6217",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_HISTORY"
+    },
+    {
+      "id": "pro-v0-0de2eb47b18912",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-794f1bfcd19ec9",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_IDENTITY"
+    },
+    {
+      "id": "pro-v0-1eb227919e8ed0",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-daa5db3565320c",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": "INSUFFICIENT_EVIDENCE",
+      "schema_valid": true,
+      "correct": false,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_EQUALITY"
+    },
+    {
+      "id": "pro-v0-67de3eda764d9d",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_OBSERVATION"
+    },
+    {
+      "id": "pro-v0-bbbe2ea56d3eb5",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_OBSERVATION"
+    },
+    {
+      "id": "pro-v0-d9f2507122dcd8",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_OBSERVATION"
+    },
+    {
+      "id": "pro-v0-4e55d06030527a",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "schema_valid": true,
+      "correct": true,
+      "stratum": "IRRELEVANT_CHANGE",
+      "family": "IRRELEVANT_OBSERVATION"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "pro-v0-p01",
+      "family": "OBSERVATION",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "SUPPORTED_CURRENT_DEFECT",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "SUPPORTED_CURRENT_DEFECT",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p02",
+      "family": "SUFFICIENCY",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p03",
+      "family": "SUFFICIENCY",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "SUPPORTED_CURRENT_DEFECT",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p04",
+      "family": "HISTORY",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_changes": true,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p05",
+      "family": "HISTORY",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_A": "INSUFFICIENT_EVIDENCE",
+      "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_changes": true,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p06",
+      "family": "SUFFICIENCY",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p07",
+      "family": "CONTRADICTION",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p08",
+      "family": "CONTRADICTION",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "SUPPORTED_CURRENT_DEFECT",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p09",
+      "family": "CONTRADICTION",
+      "gold_A": "INSUFFICIENT_EVIDENCE",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "INSUFFICIENT_EVIDENCE",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p10",
+      "family": "CONTRADICTION",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p11",
+      "family": "OBSERVATION",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "SUPPORTED_CURRENT_DEFECT",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "SUPPORTED_CURRENT_DEFECT",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p12",
+      "family": "SUFFICIENCY",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "SUPPORTED_CURRENT_DEFECT",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p13",
+      "family": "SUFFICIENCY",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p14",
+      "family": "CONTRADICTION",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p15",
+      "family": "CONTRADICTION",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": true,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p16",
+      "family": "IRRELEVANT_IDENTITY",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "SUPPORTED_CURRENT_DEFECT",
+      "selected_A": "SUPPORTED_CURRENT_DEFECT",
+      "selected_B": "SUPPORTED_CURRENT_DEFECT",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p17",
+      "family": "IRRELEVANT_EQUALITY",
+      "gold_A": "SUPPORTED_CURRENT_DEFECT",
+      "gold_B": "SUPPORTED_CURRENT_DEFECT",
+      "selected_A": "SUPPORTED_CURRENT_DEFECT",
+      "selected_B": "SUPPORTED_CURRENT_DEFECT",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p18",
+      "family": "IRRELEVANT_IDENTITY",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_changes": false,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p19",
+      "family": "IRRELEVANT_EQUALITY",
+      "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_B": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+      "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p20",
+      "family": "IRRELEVANT_IDENTITY",
+      "gold_A": "INSUFFICIENT_EVIDENCE",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "INSUFFICIENT_EVIDENCE",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p21",
+      "family": "IRRELEVANT_HISTORY",
+      "gold_A": "INSUFFICIENT_EVIDENCE",
+      "gold_B": "INSUFFICIENT_EVIDENCE",
+      "selected_A": "INSUFFICIENT_EVIDENCE",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p22",
+      "family": "IRRELEVANT_IDENTITY",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p23",
+      "family": "IRRELEVANT_EQUALITY",
+      "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected_B": "INSUFFICIENT_EVIDENCE",
+      "gold_changes": false,
+      "tracks_required_transition": false,
+      "exact_pair_pass": false
+    },
+    {
+      "id": "pro-v0-p24",
+      "family": "IRRELEVANT_OBSERVATION",
+      "gold_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    },
+    {
+      "id": "pro-v0-p25",
+      "family": "IRRELEVANT_OBSERVATION",
+      "gold_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "gold_changes": false,
+      "tracks_required_transition": true,
+      "exact_pair_pass": true
+    }
+  ]
+}
