@@ -1,0 +1,732 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "states": 30,
+  "requests": 90,
+  "class_counts": {
+    "NO_SUPPORTED_DIAGNOSIS": 6,
+    "HISTORICAL_DEFECT_NOT_CURRENT": 6,
+    "SUPPORTED_CURRENT_DEFECT": 6,
+    "INSUFFICIENT_EVIDENCE": 6,
+    "INVALID_OR_CONTRADICTORY_EVIDENCE": 6
+  },
+  "changing_pairs": 5,
+  "stable_pairs": 3,
+  "pair_unique_endpoints": 15,
+  "all_single_field_deltas": true,
+  "identical_state_user_message_and_parameters_across_arms": true,
+  "no_charter_class_labels": true,
+  "prior_objects_or_ids_reused": false,
+  "prior_predictions_used": false,
+  "new_temporal_structures": true,
+  "arm_permutations": {
+    "BAC": 5,
+    "ACB": 5,
+    "CAB": 5,
+    "BCA": 5,
+    "ABC": 5,
+    "CBA": 5
+  },
+  "auditor_proofs": [
+    {
+      "id": "rt-v0-1cc44ec3288a7e",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "8500c1d0354ed08f092ce93b2eb02b0c390d5707aa247c3673379fbf78f4bcb9"
+    },
+    {
+      "id": "rt-v0-2dc375f671f278",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "dfe648e5a74472790dab07236ed3fac1c2b2d83d42b6b29e3980371291339028"
+    },
+    {
+      "id": "rt-v0-9eb8892011584b",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "c0721c1691563e73bf32737557852de7bd6e8c4d15c03346c6a5dbe7fb618935"
+    },
+    {
+      "id": "rt-v0-c1506b1fe9703e",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "9782e31f5356abec57795c6e0a68a040e6832dc3f4ff6d3981fda1c99d9ca37b"
+    },
+    {
+      "id": "rt-v0-fd5fadc4e925f7",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "41e677e296b57e64130869d156252bcfd90212ddd5b2955b7ba2b36f9a97efeb"
+    },
+    {
+      "id": "rt-v0-af729fc63d0636",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "1e0533a846c31e922ae120930b5545dd582156bb190cc6321dbf928a3bab273d"
+    },
+    {
+      "id": "rt-v0-e0a6ac9ed94a7b",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "0e6d980b0ff44143054bc06bea84554efffb20381bbd4a3707cb294b357787dd"
+    },
+    {
+      "id": "rt-v0-bccf6a7602a8fa",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "ae9e531ea38f654f22ca3eb8459578795f3d4dcbc52dc4715915e0e51613421a"
+    },
+    {
+      "id": "rt-v0-a0a4a90564473d",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "8421af1164a6d26264270677267c7303483f8d7c79c5c03b718c048141a856de"
+    },
+    {
+      "id": "rt-v0-38289da8e4a7e5",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "df9f046a7425fd5e90a09998b067f0c5edd0917c397e64cb4b5e7be0cdbe140a"
+    },
+    {
+      "id": "rt-v0-874117a61d630b",
+      "audited_gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "d74ae7b7a31b001a7dc0105577b6cba8ba35bca84f7751ca8d798bdd03ca5285"
+    },
+    {
+      "id": "rt-v0-f13e7880c44234",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "fc06055acef6e8157334b7b146674c9530d7b0e904055a8d70daaa44f602ee9b"
+    },
+    {
+      "id": "rt-v0-40eaf1b673d172",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "f48fefdf1598e89dc08b0bb3deefcd392959af42ba012dcca2fa444166862603"
+    },
+    {
+      "id": "rt-v0-83991af78d099d",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "4b4427f4e217dd07dae2761621b9e6e5b783efca590bc663979cb675e04f4d87"
+    },
+    {
+      "id": "rt-v0-10e9b16d45b619",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "fa689f491ca21b11ddcfcbe6bd78a45044124ec639ef0048e9f2ca37d502e8db"
+    },
+    {
+      "id": "rt-v0-451f83c73053da",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "e409aad28c86eb5d8109a65126919d644ca2dd06af22095472b82323d4231267"
+    },
+    {
+      "id": "rt-v0-858d5ad79018d9",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "c43dc2d04933dba02e7a273eb53fa9c29eaaf11b7ff74d7b5f9d054dfb356701"
+    },
+    {
+      "id": "rt-v0-6621f29d4d885d",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "257a71a64d30d7557f74d8bd4b6bb7721c1a49cbe1c4cb898a3b78e3570b4648"
+    },
+    {
+      "id": "rt-v0-682820e53475e2",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "29e5a5c18d7aad702c541ead3b9ea8ce78fa065ba3bec7b9dc0a8b23083bc458"
+    },
+    {
+      "id": "rt-v0-c75015bbb376ed",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "18351651edaa1f6b45b26698c4637a882f42a262b12e0b6b87ff59c4daec5227"
+    },
+    {
+      "id": "rt-v0-5c0d14b3113e18",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "7019d9a12457648d417fed9fbcaf058d823cbfae13b2cdfa1d050065f4158cef"
+    },
+    {
+      "id": "rt-v0-bf02ae88ee745f",
+      "audited_gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false
+        ],
+        [
+          true
+        ]
+      ],
+      "conflict": true,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "4b473b16b8935a81351f63607f006498ea1173611112dac4167e528f99375a95"
+    },
+    {
+      "id": "rt-v0-b83de2a456510a",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "7a474b16d078ec06842d3850220bfa7c57ba779416fe4f9db293286224985052"
+    },
+    {
+      "id": "rt-v0-0d9cb793780de4",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "ea69ce5589d0908a963f76ab60f06a07812ae1cf2f0dfff44725903be9464f18"
+    },
+    {
+      "id": "rt-v0-ec383ba1726b60",
+      "audited_gold": "INSUFFICIENT_EVIDENCE",
+      "possible_violation_by_trial": [
+        [
+          false,
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "b567de94496e9f6b625157af5f71555a5a50b2fb86a388ec1d52bfec29249a4f"
+    },
+    {
+      "id": "rt-v0-6e74c48cbe02f8",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "9829c16efacdbfa62081aaae25ae2a297477e4778352cb07d0db109085988a76"
+    },
+    {
+      "id": "rt-v0-a97885b7c98c6e",
+      "audited_gold": "SUPPORTED_CURRENT_DEFECT",
+      "possible_violation_by_trial": [
+        [
+          true
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "465d37330b00c6bef33f4c6073edb13c7c30700114e7fdb8c5b789b7802cd7e8"
+    },
+    {
+      "id": "rt-v0-a3e970ac987a74",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "e18d77088ccfd96a3c7275e95ae4f2d10800c08ba5b751eec3e1969e0ec5bfbd"
+    },
+    {
+      "id": "rt-v0-b4d4f79c7ae2dc",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "a0114b909af6f66cc2627cce112167dcb449724c4d9e6ffa25877c51653014f7"
+    },
+    {
+      "id": "rt-v0-0ef72b75ab0cd3",
+      "audited_gold": "NO_SUPPORTED_DIAGNOSIS",
+      "possible_violation_by_trial": [
+        [
+          false
+        ],
+        [
+          false,
+          true
+        ],
+        [
+          false,
+          true
+        ]
+      ],
+      "conflict": false,
+      "proof": "Every primitive was independently recomputed from all finite admissible worlds; exactly one ontology condition holds.",
+      "state_sha256": "7613ff0b88978991399d96ea09f3c99bfeb7cf259f4349926f122b6ade8a64b9"
+    }
+  ],
+  "pair_proofs": [
+    {
+      "id": "rt-p01",
+      "delta": [
+        {
+          "path": ".non_current_trials.0.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "transition": [
+        "NO_SUPPORTED_DIAGNOSIS",
+        "HISTORICAL_DEFECT_NOT_CURRENT"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p02",
+      "delta": [
+        {
+          "path": ".current_trial.observation_requirement",
+          "before": "MISMATCH",
+          "after": "MATCH"
+        }
+      ],
+      "transition": [
+        "SUPPORTED_CURRENT_DEFECT",
+        "HISTORICAL_DEFECT_NOT_CURRENT"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p03",
+      "delta": [
+        {
+          "path": ".current_trial.evidence_sufficiency",
+          "before": "DETERMINATE",
+          "after": "UNDERDETERMINED"
+        }
+      ],
+      "transition": [
+        "HISTORICAL_DEFECT_NOT_CURRENT",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p04",
+      "delta": [
+        {
+          "path": ".package.consistency",
+          "before": "CONSISTENT",
+          "after": "CONTRADICTORY"
+        }
+      ],
+      "transition": [
+        "HISTORICAL_DEFECT_NOT_CURRENT",
+        "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p05",
+      "delta": [
+        {
+          "path": ".non_current_trials.1.evidence_sufficiency",
+          "before": "UNDERDETERMINED",
+          "after": "DETERMINATE"
+        }
+      ],
+      "transition": [
+        "NO_SUPPORTED_DIAGNOSIS",
+        "HISTORICAL_DEFECT_NOT_CURRENT"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p06",
+      "delta": [
+        {
+          "path": ".package.equal_value",
+          "before": true,
+          "after": false
+        }
+      ],
+      "transition": [
+        "HISTORICAL_DEFECT_NOT_CURRENT",
+        "HISTORICAL_DEFECT_NOT_CURRENT"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p07",
+      "delta": [
+        {
+          "path": ".current_trial.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "transition": [
+        "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      ],
+      "coupled_changes": false
+    },
+    {
+      "id": "rt-p08",
+      "delta": [
+        {
+          "path": ".non_current_trials.0.observation_requirement",
+          "before": "MATCH",
+          "after": "MISMATCH"
+        }
+      ],
+      "transition": [
+        "INSUFFICIENT_EVIDENCE",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "coupled_changes": false
+    }
+  ]
+}

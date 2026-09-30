@@ -1,0 +1,3140 @@
+[
+  {
+    "id": "rt-v0-1cc44ec3288a7e",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-2dc375f671f278",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-9eb8892011584b",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-c1506b1fe9703e",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-fd5fadc4e925f7",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-af729fc63d0636",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-e0a6ac9ed94a7b",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-bccf6a7602a8fa",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-a0a4a90564473d",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-38289da8e4a7e5",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-874117a61d630b",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+    "author_proof": "All current completions comply and at least one explicitly older trial demonstrates a violation.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-f13e7880c44234",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-40eaf1b673d172",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-83991af78d099d",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-10e9b16d45b619",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-451f83c73053da",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-858d5ad79018d9",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-6621f29d4d885d",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-682820e53475e2",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-c75015bbb376ed",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-5c0d14b3113e18",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-bf02ae88ee745f",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONTRADICTORY"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+    "author_proof": "Immutable provenance assertions conflict; operational package invalid.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 311
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-b83de2a456510a",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-0d9cb793780de4",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-ec383ba1726b60",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "UNDERDETERMINED"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "INSUFFICIENT_EVIDENCE",
+    "author_proof": "Current violation and compliance both remain possible; old facts do not resolve that uncertainty.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-6e74c48cbe02f8",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103,
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-a97885b7c98c6e",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MISMATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "SUPPORTED_CURRENT_DEFECT",
+    "author_proof": "All current admissible completions violate the scoped requirement.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          103
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-a3e970ac987a74",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            101
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-b4d4f79c7ae2dc",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": true,
+        "equal_value": true,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "KNOWN",
+        "alternative_completion": "NO_ALTERNATIVE",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "rt-v0-0ef72b75ab0cd3",
+    "state": {
+      "proposition_scope": {
+        "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+        "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+        "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+        "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+        "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+        "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+      },
+      "package": {
+        "same_referent": false,
+        "equal_value": false,
+        "consistency": "CONSISTENT"
+      },
+      "current_trial": {
+        "currentness": "CURRENT",
+        "knownness": "UNKNOWN",
+        "alternative_completion": "ALTERNATIVE_EXISTS",
+        "observation_requirement": "MATCH",
+        "evidence_sufficiency": "DETERMINATE"
+      },
+      "non_current_trials": [
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        },
+        {
+          "currentness": "NOT_CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MISMATCH",
+          "evidence_sufficiency": "UNDERDETERMINED"
+        }
+      ]
+    },
+    "gold": "NO_SUPPORTED_DIAGNOSIS",
+    "author_proof": "All current completions comply; no older trial demonstrates a defect in this complete scope.",
+    "witness": {
+      "assertions": [
+        {
+          "subject": "role-mark-1",
+          "value": 211
+        },
+        {
+          "subject": "role-mark-2",
+          "value": 223
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        },
+        {
+          "subject": "role-provenance",
+          "value": 307
+        }
+      ],
+      "current": {
+        "deployed": true,
+        "reference_input": 0,
+        "admissible_inputs": [
+          0,
+          1
+        ],
+        "observed_output": 101,
+        "required_outputs": [
+          101,
+          101
+        ]
+      },
+      "non_current": [
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "deployed": false,
+          "reference_input": 0,
+          "admissible_inputs": [
+            0,
+            1
+          ],
+          "observed_output": 101,
+          "required_outputs": [
+            103,
+            101
+          ]
+        }
+      ]
+    }
+  }
+]

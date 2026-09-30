@@ -1,0 +1,38 @@
+{
+  "proposition_scope": {
+    "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+    "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+    "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+    "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+    "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+    "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+  },
+  "package": {
+    "same_referent": false,
+    "equal_value": false,
+    "consistency": "CONSISTENT"
+  },
+  "current_trial": {
+    "currentness": "CURRENT",
+    "knownness": "UNKNOWN",
+    "alternative_completion": "ALTERNATIVE_EXISTS",
+    "observation_requirement": "MATCH",
+    "evidence_sufficiency": "DETERMINATE"
+  },
+  "non_current_trials": [
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "UNKNOWN",
+      "alternative_completion": "ALTERNATIVE_EXISTS",
+      "observation_requirement": "MATCH",
+      "evidence_sufficiency": "UNDERDETERMINED"
+    },
+    {
+      "currentness": "NOT_CURRENT",
+      "knownness": "UNKNOWN",
+      "alternative_completion": "ALTERNATIVE_EXISTS",
+      "observation_requirement": "MISMATCH",
+      "evidence_sufficiency": "UNDERDETERMINED"
+    }
+  ]
+}

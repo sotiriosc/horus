@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "Select the diagnostic classification justified by the supplied primitive state.\n\nYou are currently performing the epistemic-reduction stage of a diagnostic system.\nThe supplied primitive propositions have already been established and are authoritative inputs for this stage.\nYour responsibility is to determine what diagnostic status those propositions jointly justify.\nDo not re-derive the primitive propositions.\nDo not predict missing evidence.\nDo not choose an action.\nDo not modify the supplied state.\nYour output represents the epistemic status justified by the supplied state."
+    },
+    {
+      "role": "user",
+      "content": "Class definitions:\nSUPPORTED_CURRENT_DEFECT: Available current evidence supports a specific active structural or mechanical defect and distinguishes it from materially plausible benign alternatives.\nNO_SUPPORTED_DIAGNOSIS: The internally valid evidence is sufficient within the declared contract/input scope and supports no current defect. Unusual or undesirable behavior alone is insufficient.\nINSUFFICIENT_EVIDENCE: The evidence is internally valid but a current defect and a materially plausible benign explanation remain observationally indistinguishable.\nHISTORICAL_DEFECT_NOT_CURRENT: A defect is demonstrated for an older version, while supplied current mechanisms and observations show it is no longer active within the stated scope.\nINVALID_OR_CONTRADICTORY_EVIDENCE: The supplied evidence package contains incompatible immutable, version, capture or provenance facts and cannot support a valid operational diagnosis.\n\nPrimitive epistemic state:\n{\n  \"proposition_scope\": {\n    \"package\": \"The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.\",\n    \"trials\": \"All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.\",\n    \"knownness\": \"Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.\",\n    \"alternative_completion\": \"Whether an admissible input other than the reference input exists. The reference input is admissible in these states.\",\n    \"observation_requirement\": \"Already-resolved equality of observed and required output at the reference input.\",\n    \"evidence_sufficiency\": \"Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible.\"\n  },\n  \"package\": {\n    \"same_referent\": false,\n    \"equal_value\": true,\n    \"consistency\": \"CONSISTENT\"\n  },\n  \"current_trial\": {\n    \"currentness\": \"CURRENT\",\n    \"knownness\": \"UNKNOWN\",\n    \"alternative_completion\": \"ALTERNATIVE_EXISTS\",\n    \"observation_requirement\": \"MATCH\",\n    \"evidence_sufficiency\": \"DETERMINATE\"\n  },\n  \"non_current_trials\": [\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"UNKNOWN\",\n      \"alternative_completion\": \"ALTERNATIVE_EXISTS\",\n      \"observation_requirement\": \"MISMATCH\",\n      \"evidence_sufficiency\": \"UNDERDETERMINED\"\n    },\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"KNOWN\",\n      \"alternative_completion\": \"NO_ALTERNATIVE\",\n      \"observation_requirement\": \"MATCH\",\n      \"evidence_sufficiency\": \"DETERMINATE\"\n    },\n    {\n      \"currentness\": \"NOT_CURRENT\",\n      \"knownness\": \"UNKNOWN\",\n      \"alternative_completion\": \"ALTERNATIVE_EXISTS\",\n      \"observation_requirement\": \"MISMATCH\",\n      \"evidence_sufficiency\": \"DETERMINATE\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "response_format": {
+    "type": "json_object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "classification": {
+          "enum": [
+            "SUPPORTED_CURRENT_DEFECT",
+            "NO_SUPPORTED_DIAGNOSIS",
+            "INSUFFICIENT_EVIDENCE",
+            "HISTORICAL_DEFECT_NOT_CURRENT",
+            "INVALID_OR_CONTRADICTORY_EVIDENCE"
+          ]
+        }
+      },
+      "required": [
+        "classification"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "top_k": 40,
+  "min_p": 0.05,
+  "seed": 1846059237,
+  "max_tokens": 2048,
+  "cache_prompt": false,
+  "stream": false,
+  "chat_template_kwargs": {
+    "enable_thinking": true
+  }
+}
