@@ -1,0 +1,23 @@
+{
+  "branch": "research/qwen-role-grounded-temporal-reduction-v0",
+  "verified_base": "01112fa7770ae885418d20e91a3227e15a8c3ba3",
+  "method_freeze": "39934eaf6f14f581089b24f882c2ce57420a6dd9",
+  "case_freeze": "3855137cc51f1b178c50f2672404410ba460914f",
+  "raw_pre_scoring": "f726051278be94ff94b3efe371414b71afb322a9",
+  "seed": 1846059237,
+  "registered_interpretation": "ROLE_GROUNDING_NOT_ESTABLISHED",
+  "primary_gate": false,
+  "answers": {
+    "Does generic role grounding improve reduction?": "Arm B: 22/30 overall; T 1/6; non-T 21/24; historical net change versus A -1. The frozen generic-role descriptive indicator does not pass. This descriptive comparison does not replace the primary C gate.",
+    "Does temporal-role grounding improve historical/current composition?": "Arm C: 21/30 overall; T 1/6; non-T 20/24; historical net change versus A -1. Its temporal changing pairs score 1/5 and stable pairs 2/3. Matched repairs and regressions are reported separately, not inferred from aggregate totals.",
+    "Does the temporal intervention meet its prospective gate?": "No. All six frozen conditions are shown below; no threshold was revised.",
+    "Does it preserve performance on D/N/U/X?": "C minus A non-historical correct counts: D -2, N +0, U +0, X +0. C does not meet the 5/6 floor in every non-historical class. State-level regressions remain visible in the matched table.",
+    "Is the effect temporal-specific or general?": "ROLE_GROUNDING_NOT_ESTABLISHED. The registered evidence does not establish a reliable general improvement; partial gains, regressions and control ceiling effects must be read literally.",
+    "Does Qwen appear to need a clearer representation of what operation it is performing?": "A clearer role description has not met the registered sufficient-repair criterion. This does not identify Qwen\u2019s internal representation or prove that role information is irrelevant.",
+    "Does this justify replacing the reducer with hard-coded logic?": "No. This experiment tests instruction framing; it neither compares a hard-coded reducer nor authorizes installing one.",
+    "Does it justify adding an operational role representation to Horus?": "No. Even a positive task-level result is not evidence of Horus action-selection efficacy and does not authorize an architecture change.",
+    "What remains unresolved?": "The internal failure cause, broader generalization, robustness across cases/seeds, effects beyond this interface, and whether role grounding would improve action selection using authenticated Memory remain unresolved.",
+    "What has NOT been demonstrated?": "No consciousness, subjective self-awareness, persistent identity, general self-model, autonomous introspection, primitive discovery, raw-evidence/end-to-end diagnosis, action-selection improvement, learning, self-improvement or RSI has been demonstrated."
+  },
+  "publication_commit": "Exact verified remote head is reported in the final completion handoff."
+}

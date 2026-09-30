@@ -1,0 +1,1443 @@
+{
+  "study": "QWEN_ROLE_GROUNDED_TEMPORAL_REDUCTION_V0",
+  "scientific_units": 30,
+  "scheduled": 90,
+  "attempted": 90,
+  "completed": 90,
+  "arms": {
+    "A": {
+      "correct": 24,
+      "total": 30,
+      "schema_valid": 30,
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "correct": 5,
+          "total": 6
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "correct": 5,
+          "total": 6
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "correct": 2,
+          "total": 6
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "confusion": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "SUPPORTED_CURRENT_DEFECT": 5,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 5,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 6,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 3,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 2,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 6,
+          "INVALID_OUTPUT": 0
+        }
+      },
+      "historical": {
+        "correct": 2,
+        "total": 6
+      },
+      "non_historical": {
+        "correct": 22,
+        "total": 24
+      },
+      "changing_pairs": {
+        "passed": 2,
+        "total": 5
+      },
+      "stable_pairs": {
+        "passed": 2,
+        "total": 3
+      },
+      "pairs": [
+        {
+          "id": "rt-p01",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "changing": true,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p02",
+          "gold_A": "SUPPORTED_CURRENT_DEFECT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "SUPPORTED_CURRENT_DEFECT",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p03",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p04",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p05",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p06",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "changing": false,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p07",
+          "gold_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p08",
+          "gold_A": "INSUFFICIENT_EVIDENCE",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        }
+      ]
+    },
+    "B": {
+      "correct": 22,
+      "total": 30,
+      "schema_valid": 30,
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "correct": 4,
+          "total": 6
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "correct": 5,
+          "total": 6
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "correct": 1,
+          "total": 6
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "confusion": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "SUPPORTED_CURRENT_DEFECT": 4,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 2,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 5,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 6,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 4,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 6,
+          "INVALID_OUTPUT": 0
+        }
+      },
+      "historical": {
+        "correct": 1,
+        "total": 6
+      },
+      "non_historical": {
+        "correct": 21,
+        "total": 24
+      },
+      "changing_pairs": {
+        "passed": 1,
+        "total": 5
+      },
+      "stable_pairs": {
+        "passed": 2,
+        "total": 3
+      },
+      "pairs": [
+        {
+          "id": "rt-p01",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p02",
+          "gold_A": "SUPPORTED_CURRENT_DEFECT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "SUPPORTED_CURRENT_DEFECT",
+          "selected_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "changing": true,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p03",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p04",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p05",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p06",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": false,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p07",
+          "gold_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p08",
+          "gold_A": "INSUFFICIENT_EVIDENCE",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        }
+      ]
+    },
+    "C": {
+      "correct": 21,
+      "total": 30,
+      "schema_valid": 30,
+      "per_class": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "correct": 3,
+          "total": 6
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "correct": 5,
+          "total": 6
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "correct": 1,
+          "total": 6
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "confusion": {
+        "SUPPORTED_CURRENT_DEFECT": {
+          "SUPPORTED_CURRENT_DEFECT": 3,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 3,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "NO_SUPPORTED_DIAGNOSIS": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 5,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 6,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "HISTORICAL_DEFECT_NOT_CURRENT": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 5,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 1,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 0,
+          "INVALID_OUTPUT": 0
+        },
+        "INVALID_OR_CONTRADICTORY_EVIDENCE": {
+          "SUPPORTED_CURRENT_DEFECT": 0,
+          "NO_SUPPORTED_DIAGNOSIS": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "HISTORICAL_DEFECT_NOT_CURRENT": 0,
+          "INVALID_OR_CONTRADICTORY_EVIDENCE": 6,
+          "INVALID_OUTPUT": 0
+        }
+      },
+      "historical": {
+        "correct": 1,
+        "total": 6
+      },
+      "non_historical": {
+        "correct": 20,
+        "total": 24
+      },
+      "changing_pairs": {
+        "passed": 1,
+        "total": 5
+      },
+      "stable_pairs": {
+        "passed": 2,
+        "total": 3
+      },
+      "pairs": [
+        {
+          "id": "rt-p01",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p02",
+          "gold_A": "SUPPORTED_CURRENT_DEFECT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p03",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p04",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p05",
+          "gold_A": "NO_SUPPORTED_DIAGNOSIS",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": true,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p06",
+          "gold_A": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "gold_B": "HISTORICAL_DEFECT_NOT_CURRENT",
+          "selected_A": "NO_SUPPORTED_DIAGNOSIS",
+          "selected_B": "NO_SUPPORTED_DIAGNOSIS",
+          "changing": false,
+          "tracks_required_transition": false,
+          "exact_pair_pass": false
+        },
+        {
+          "id": "rt-p07",
+          "gold_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "gold_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "selected_B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        },
+        {
+          "id": "rt-p08",
+          "gold_A": "INSUFFICIENT_EVIDENCE",
+          "gold_B": "INSUFFICIENT_EVIDENCE",
+          "selected_A": "INSUFFICIENT_EVIDENCE",
+          "selected_B": "INSUFFICIENT_EVIDENCE",
+          "changing": false,
+          "tracks_required_transition": true,
+          "exact_pair_pass": true
+        }
+      ]
+    }
+  },
+  "gates": {
+    "primary_C_pass": false,
+    "primary_conditions": {
+      "historical_at_least_5": false,
+      "historical_gain_at_least_2": false,
+      "overall_at_least_26": false,
+      "each_nonhistorical_at_least_5": false,
+      "changing_at_least_4": false,
+      "stable_at_least_2": true
+    },
+    "generic_B_descriptive_indicator": false,
+    "tradeoff_arms": [],
+    "registered_interpretation": "ROLE_GROUNDING_NOT_ESTABLISHED",
+    "bare_replication_difference_flag": false,
+    "partial_improvement_without_primary_pass": false
+  },
+  "correctness_patterns_ABC": {
+    "000": 3,
+    "001": 1,
+    "010": 2,
+    "011": 0,
+    "100": 2,
+    "101": 2,
+    "110": 2,
+    "111": 18
+  },
+  "contrasts": {
+    "A\u2192B": {
+      "all": {
+        "total": 30,
+        "wrong_to_correct": 2,
+        "correct_to_wrong": 4,
+        "both_correct": 20,
+        "both_wrong": 4
+      },
+      "historical": {
+        "total": 6,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 2,
+        "both_correct": 0,
+        "both_wrong": 3
+      },
+      "non_historical": {
+        "total": 24,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 2,
+        "both_correct": 20,
+        "both_wrong": 1
+      },
+      "explicit_noncurrent_mismatch": {
+        "total": 22,
+        "wrong_to_correct": 2,
+        "correct_to_wrong": 3,
+        "both_correct": 13,
+        "both_wrong": 4
+      },
+      "no_explicit_noncurrent_mismatch": {
+        "total": 8,
+        "wrong_to_correct": 0,
+        "correct_to_wrong": 1,
+        "both_correct": 7,
+        "both_wrong": 0
+      }
+    },
+    "B\u2192C": {
+      "all": {
+        "total": 30,
+        "wrong_to_correct": 3,
+        "correct_to_wrong": 4,
+        "both_correct": 18,
+        "both_wrong": 5
+      },
+      "historical": {
+        "total": 6,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 1,
+        "both_correct": 0,
+        "both_wrong": 4
+      },
+      "non_historical": {
+        "total": 24,
+        "wrong_to_correct": 2,
+        "correct_to_wrong": 3,
+        "both_correct": 18,
+        "both_wrong": 1
+      },
+      "explicit_noncurrent_mismatch": {
+        "total": 22,
+        "wrong_to_correct": 2,
+        "correct_to_wrong": 4,
+        "both_correct": 11,
+        "both_wrong": 5
+      },
+      "no_explicit_noncurrent_mismatch": {
+        "total": 8,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 0,
+        "both_correct": 7,
+        "both_wrong": 0
+      }
+    },
+    "A\u2192C": {
+      "all": {
+        "total": 30,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 4,
+        "both_correct": 20,
+        "both_wrong": 5
+      },
+      "historical": {
+        "total": 6,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 2,
+        "both_correct": 0,
+        "both_wrong": 3
+      },
+      "non_historical": {
+        "total": 24,
+        "wrong_to_correct": 0,
+        "correct_to_wrong": 2,
+        "both_correct": 20,
+        "both_wrong": 2
+      },
+      "explicit_noncurrent_mismatch": {
+        "total": 22,
+        "wrong_to_correct": 1,
+        "correct_to_wrong": 4,
+        "both_correct": 12,
+        "both_wrong": 5
+      },
+      "no_explicit_noncurrent_mismatch": {
+        "total": 8,
+        "wrong_to_correct": 0,
+        "correct_to_wrong": 0,
+        "both_correct": 8,
+        "both_wrong": 0
+      }
+    }
+  },
+  "state_table": [
+    {
+      "id": "rt-v0-1cc44ec3288a7e",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-2dc375f671f278",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "correctness_pattern_ABC": "100",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": true,
+          "equal_value": true,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-9eb8892011584b",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "SUPPORTED_CURRENT_DEFECT",
+        "B": "SUPPORTED_CURRENT_DEFECT",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": false
+      },
+      "correctness_pattern_ABC": "110",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-c1506b1fe9703e",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": false,
+        "B": true,
+        "C": false
+      },
+      "correctness_pattern_ABC": "010",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": false,
+          "equal_value": false,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-fd5fadc4e925f7",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": true
+      },
+      "correctness_pattern_ABC": "001",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": false,
+          "equal_value": true,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "UNDERDETERMINED"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-af729fc63d0636",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-e0a6ac9ed94a7b",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-bccf6a7602a8fa",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "HISTORICAL_DEFECT_NOT_CURRENT"
+      },
+      "correct": {
+        "A": false,
+        "B": true,
+        "C": false
+      },
+      "correctness_pattern_ABC": "010",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-a0a4a90564473d",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "correctness_pattern_ABC": "000",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": true,
+          "equal_value": true,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "UNKNOWN",
+          "alternative_completion": "ALTERNATIVE_EXISTS",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-38289da8e4a7e5",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "correctness_pattern_ABC": "000",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": false,
+          "equal_value": true,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "UNDERDETERMINED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-874117a61d630b",
+      "gold": "HISTORICAL_DEFECT_NOT_CURRENT",
+      "selected": {
+        "A": "HISTORICAL_DEFECT_NOT_CURRENT",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": false,
+        "C": false
+      },
+      "correctness_pattern_ABC": "100",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": {
+        "proposition_scope": {
+          "package": "The two mark assertions are independent of trial inputs. same_referent compares their immutable subjects; equal_value compares their asserted values. consistency is the already-resolved consistency of the entire package, including other immutable provenance assertions.",
+          "trials": "All component, version and event bindings are already resolved. current_trial is the deployed trial; each non_current_trials entry is an already-bound older trial of the same mechanism and contract scope. List positions carry no identity-resolution task. There are no other trials or defects within this declared scope.",
+          "knownness": "Whether the trial input is uniquely determined by its supplied evidence; no assumption that observations obey requirements.",
+          "alternative_completion": "Whether an admissible input other than the reference input exists. The reference input is admissible in these states.",
+          "observation_requirement": "Already-resolved equality of observed and required output at the reference input.",
+          "evidence_sufficiency": "Whether all admissible inputs imply the same truth value for this trial observation violating its requirement. DETERMINATE means one truth value; UNDERDETERMINED means both violation and compliance remain possible."
+        },
+        "package": {
+          "same_referent": false,
+          "equal_value": false,
+          "consistency": "CONSISTENT"
+        },
+        "current_trial": {
+          "currentness": "CURRENT",
+          "knownness": "KNOWN",
+          "alternative_completion": "NO_ALTERNATIVE",
+          "observation_requirement": "MATCH",
+          "evidence_sufficiency": "DETERMINATE"
+        },
+        "non_current_trials": [
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "KNOWN",
+            "alternative_completion": "NO_ALTERNATIVE",
+            "observation_requirement": "MISMATCH",
+            "evidence_sufficiency": "DETERMINATE"
+          },
+          {
+            "currentness": "NOT_CURRENT",
+            "knownness": "UNKNOWN",
+            "alternative_completion": "ALTERNATIVE_EXISTS",
+            "observation_requirement": "MATCH",
+            "evidence_sufficiency": "UNDERDETERMINED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rt-v0-f13e7880c44234",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-40eaf1b673d172",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-83991af78d099d",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-10e9b16d45b619",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-451f83c73053da",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-858d5ad79018d9",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-6621f29d4d885d",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "SUPPORTED_CURRENT_DEFECT",
+        "B": "SUPPORTED_CURRENT_DEFECT",
+        "C": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-682820e53475e2",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "SUPPORTED_CURRENT_DEFECT",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "correct": {
+        "A": true,
+        "B": false,
+        "C": true
+      },
+      "correctness_pattern_ABC": "101",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-c75015bbb376ed",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-5c0d14b3113e18",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-bf02ae88ee745f",
+      "gold": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+      "selected": {
+        "A": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "B": "INVALID_OR_CONTRADICTORY_EVIDENCE",
+        "C": "INVALID_OR_CONTRADICTORY_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-b83de2a456510a",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "correctness_pattern_ABC": "000",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-0d9cb793780de4",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-ec383ba1726b60",
+      "gold": "INSUFFICIENT_EVIDENCE",
+      "selected": {
+        "A": "INSUFFICIENT_EVIDENCE",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-6e74c48cbe02f8",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "SUPPORTED_CURRENT_DEFECT",
+        "B": "SUPPORTED_CURRENT_DEFECT",
+        "C": "INSUFFICIENT_EVIDENCE"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": false
+      },
+      "correctness_pattern_ABC": "110",
+      "C_regression": true,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-a97885b7c98c6e",
+      "gold": "SUPPORTED_CURRENT_DEFECT",
+      "selected": {
+        "A": "SUPPORTED_CURRENT_DEFECT",
+        "B": "SUPPORTED_CURRENT_DEFECT",
+        "C": "SUPPORTED_CURRENT_DEFECT"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-a3e970ac987a74",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-b4d4f79c7ae2dc",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "NO_SUPPORTED_DIAGNOSIS",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": true,
+        "C": true
+      },
+      "correctness_pattern_ABC": "111",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": false,
+      "temporal_facts": null
+    },
+    {
+      "id": "rt-v0-0ef72b75ab0cd3",
+      "gold": "NO_SUPPORTED_DIAGNOSIS",
+      "selected": {
+        "A": "NO_SUPPORTED_DIAGNOSIS",
+        "B": "INSUFFICIENT_EVIDENCE",
+        "C": "NO_SUPPORTED_DIAGNOSIS"
+      },
+      "correct": {
+        "A": true,
+        "B": false,
+        "C": true
+      },
+      "correctness_pattern_ABC": "101",
+      "C_regression": false,
+      "explicit_noncurrent_mismatch": true,
+      "temporal_facts": null
+    }
+  ],
+  "historical_states_all_explicit_noncurrent_mismatch": true,
+  "c_regressions": [
+    "rt-v0-2dc375f671f278",
+    "rt-v0-9eb8892011584b",
+    "rt-v0-c1506b1fe9703e",
+    "rt-v0-bccf6a7602a8fa",
+    "rt-v0-874117a61d630b",
+    "rt-v0-6e74c48cbe02f8"
+  ]
+}
