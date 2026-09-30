@@ -1,0 +1,384 @@
+{
+  "arm": "B",
+  "authenticated_event_envelope_sha256": "7cb8e41daa74f121cf2af8ea015bf2f5a12fcca9afa1a8ae5278b735051d588a",
+  "decision": {
+    "action_call_id": "C:6:ACTION:1",
+    "action_model_latency_seconds": 37.32595474901609,
+    "action_parse_status": "VALID",
+    "admissible_actions": [
+      "ADVANCE",
+      "HOLD",
+      "RETREAT"
+    ],
+    "decision_id": "C:D06",
+    "decision_source": "MODEL_FOR_UNRESOLVED",
+    "event_identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba\",1,2006,1]",
+    "event_stream_sequence": 6,
+    "grounded_after": {
+      "assessment_status": "GROUNDED",
+      "empirical_frequencies": {
+        "3:-1": {
+          "count": 6,
+          "denominator": 6
+        }
+      },
+      "kind": "EMPIRICALLY_STABLE",
+      "observation_count": 6,
+      "possible_change": null,
+      "recent_receipt_provenance": [
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:4:4cb246b0aad64796\",1,2004,1]",
+          "receipt_sha256": "9570ff64f0a5643a902d897245dc56edce64aa1c7b0dfd7f0f6c48c53cd975a7"
+        },
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:5:1c73a6dabdfed2cf\",1,2005,1]",
+          "receipt_sha256": "3929d46a2d051c8249e3d18c691e9f6292606c4cb25885d02afb6ff52baf3711"
+        },
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba\",1,2006,1]",
+          "receipt_sha256": "88b796871738431237c846fe95d7b5443d7a185e51e3f22f8893c16577862f90"
+        }
+      ],
+      "recent_window": [
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        }
+      ],
+      "relation": "3:ADVANCE",
+      "relation_type": "EMPIRICAL",
+      "segment_counts": {
+        "3:-1": 6
+      }
+    },
+    "grounded_assessments_before": {
+      "ADVANCE": {
+        "assessment_status": "GROUNDED",
+        "empirical_frequencies": {
+          "3:-1": {
+            "count": 5,
+            "denominator": 5
+          }
+        },
+        "kind": "EMPIRICALLY_STABLE",
+        "observation_count": 5,
+        "possible_change": null,
+        "recent_receipt_provenance": [
+          {
+            "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:3:5a001b62ded3caa0\",1,2003,1]",
+            "receipt_sha256": "a28864f4a4fd1d8ab6a81156f479ed6d68eb588c8b4578a9c801dba258618b5b"
+          },
+          {
+            "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:4:4cb246b0aad64796\",1,2004,1]",
+            "receipt_sha256": "9570ff64f0a5643a902d897245dc56edce64aa1c7b0dfd7f0f6c48c53cd975a7"
+          },
+          {
+            "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:5:1c73a6dabdfed2cf\",1,2005,1]",
+            "receipt_sha256": "3929d46a2d051c8249e3d18c691e9f6292606c4cb25885d02afb6ff52baf3711"
+          }
+        ],
+        "recent_window": [
+          {
+            "consequence": -1,
+            "next_state": 3
+          },
+          {
+            "consequence": -1,
+            "next_state": 3
+          },
+          {
+            "consequence": -1,
+            "next_state": 3
+          },
+          {
+            "consequence": -1,
+            "next_state": 3
+          }
+        ],
+        "relation": "3:ADVANCE",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {
+          "3:-1": 5
+        }
+      },
+      "HOLD": {
+        "assessment_status": "UNSEEN",
+        "empirical_frequencies": {},
+        "kind": "UNSEEN",
+        "observation_count": 0,
+        "possible_change": null,
+        "recent_receipt_provenance": [],
+        "recent_window": [],
+        "relation": "3:HOLD",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {}
+      },
+      "RETREAT": {
+        "assessment_status": "UNSEEN",
+        "empirical_frequencies": {},
+        "kind": "UNSEEN",
+        "observation_count": 0,
+        "possible_change": null,
+        "recent_receipt_provenance": [],
+        "recent_window": [],
+        "relation": "3:RETREAT",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {}
+      }
+    },
+    "index": 6,
+    "known_values_before": {
+      "ADVANCE": null,
+      "HOLD": null,
+      "RETREAT": null
+    },
+    "measurement_sha256": "f04acb9a4c5bcec014074638e4db0701c6d569b2edf862bb1435ffd592b148ec",
+    "policy_reason": "UNCERTAINTY_REMAINS",
+    "policy_route": "MODEL",
+    "raw_action_output_sha256": "25e9c97d06cc22b95a3deb31eff5121bd82a09e4be903f69089e747452e8f576",
+    "realized": {
+      "consequence": -1,
+      "next_state": 3
+    },
+    "receipt_identity": [
+      "HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba",
+      1,
+      2006,
+      1
+    ],
+    "receipt_provenance_sha256": "88b796871738431237c846fe95d7b5443d7a185e51e3f22f8893c16577862f90",
+    "selected_action": "ADVANCE",
+    "selected_grounded_before": {
+      "assessment_status": "GROUNDED",
+      "empirical_frequencies": {
+        "3:-1": {
+          "count": 5,
+          "denominator": 5
+        }
+      },
+      "kind": "EMPIRICALLY_STABLE",
+      "observation_count": 5,
+      "possible_change": null,
+      "recent_receipt_provenance": [
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:3:5a001b62ded3caa0\",1,2003,1]",
+          "receipt_sha256": "a28864f4a4fd1d8ab6a81156f479ed6d68eb588c8b4578a9c801dba258618b5b"
+        },
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:4:4cb246b0aad64796\",1,2004,1]",
+          "receipt_sha256": "9570ff64f0a5643a902d897245dc56edce64aa1c7b0dfd7f0f6c48c53cd975a7"
+        },
+        {
+          "identity": "[\"HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:5:1c73a6dabdfed2cf\",1,2005,1]",
+          "receipt_sha256": "3929d46a2d051c8249e3d18c691e9f6292606c4cb25885d02afb6ff52baf3711"
+        }
+      ],
+      "recent_window": [
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        },
+        {
+          "consequence": -1,
+          "next_state": 3
+        }
+      ],
+      "relation": "3:ADVANCE",
+      "relation_type": "EMPIRICAL",
+      "segment_counts": {
+        "3:-1": 5
+      }
+    },
+    "state": 3,
+    "suffix_before": {
+      "count": 0,
+      "relation": null
+    }
+  },
+  "event": {
+    "action_source": "MODEL_FOR_UNRESOLVED",
+    "authorization_reason": "authorized",
+    "authorization_status": "AUTHORIZED",
+    "decision_index": 6,
+    "execution_kind": "AUTONOMOUS_EXECUTION",
+    "global_schedule_index": 24,
+    "measurement_sha256": "f04acb9a4c5bcec014074638e4db0701c6d569b2edf862bb1435ffd592b148ec",
+    "memory_record": {
+      "action": "ADVANCE",
+      "authorization": "AUTHORIZED",
+      "consequence": -1,
+      "epoch": 2006,
+      "measurement_matches": false,
+      "next_state": 3,
+      "observation_a_id": 33655095553,
+      "observation_b_id": 33655095554,
+      "pair_decision_id": 8615704396032,
+      "pre_state": 3,
+      "source_pair": [
+        "SOURCE_A",
+        "SOURCE_B"
+      ],
+      "transaction_id": 1
+    },
+    "receipt": {
+      "action": "ADVANCE",
+      "epoch": 2006,
+      "event_id": 1,
+      "next_state": 3,
+      "pre_state": 3,
+      "realized_consequence": -1,
+      "source_identity": "HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba",
+      "transaction_id": 1
+    },
+    "receipt_identity": [
+      "HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba",
+      1,
+      2006,
+      1
+    ],
+    "receipt_provenance_sha256": "88b796871738431237c846fe95d7b5443d7a185e51e3f22f8893c16577862f90",
+    "runtime_measurement": {
+      "action": "ADVANCE",
+      "cache_erased": true,
+      "completion_tokens": 191,
+      "end_utc": "2026-09-30T04:31:20.199221+00:00",
+      "error": null,
+      "executor_total_seconds": 13.386493546015117,
+      "finish_reason": "stop",
+      "full_gpu_residency": true,
+      "gpu_after": {
+        "driver": "616.92",
+        "name": "NVIDIA GeForce RTX 4090",
+        "temperature_c": 48,
+        "total_mib": 24564,
+        "used_mib": 13112,
+        "utilization": 87,
+        "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+      },
+      "gpu_before": {
+        "driver": "616.92",
+        "name": "NVIDIA GeForce RTX 4090",
+        "temperature_c": 40,
+        "total_mib": 24564,
+        "used_mib": 13100,
+        "utilization": 19,
+        "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+      },
+      "launch_seconds": 2.213552502973471,
+      "monitor_errors": 0,
+      "monitor_samples": 7,
+      "output_bytes": 660,
+      "output_sha256": "7dc697b178ac192c86aaae32f26f758f37ec576d40cdf0d7aad1d4ff0b2df214",
+      "peak_vram_mib": 13112,
+      "prompt_tokens": 4582,
+      "reference_match": false,
+      "request_sha256": "2b22490daff4ac9cf264bfffd5bd9f1e663c97c21c233a89a966f9a2b132fa3b",
+      "resource_violation": false,
+      "server_exit_status": null,
+      "start_utc": "2026-09-30T04:31:16.279779+00:00",
+      "structural_valid": true,
+      "timings": {
+        "cache_n": 0,
+        "predicted_ms": 3104.614,
+        "predicted_n": 191,
+        "predicted_per_second": 61.1992344297874,
+        "predicted_per_token_ms": 16.340073684210527,
+        "prompt_ms": 805.942,
+        "prompt_n": 4582,
+        "prompt_per_second": 5685.27263748508,
+        "prompt_per_token_ms": 0.17589305979921432
+      },
+      "valid": false,
+      "wall_seconds": 3.919423010025639
+    },
+    "session_id": "19a440d96cbe623099e11c38e2c6d65d",
+    "source_scope": {
+      "runtime_index": 6,
+      "source_identity": "HORUS:19a440d96cbe623099e11c38e2c6d65d:runtime:6:c3f30c5e866e1dba"
+    },
+    "study": "HORUS_REAL_TASK_RUNTIME_OPTIMIZATION_V0",
+    "workload": "P3-1"
+  },
+  "global_index": 24,
+  "half": 1,
+  "measurement": {
+    "action": "ADVANCE",
+    "cache_erased": true,
+    "completion_tokens": 191,
+    "end_utc": "2026-09-30T04:31:20.199221+00:00",
+    "error": null,
+    "executor_total_seconds": 13.386493546015117,
+    "finish_reason": "stop",
+    "full_gpu_residency": true,
+    "gpu_after": {
+      "driver": "616.92",
+      "name": "NVIDIA GeForce RTX 4090",
+      "temperature_c": 48,
+      "total_mib": 24564,
+      "used_mib": 13112,
+      "utilization": 87,
+      "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+    },
+    "gpu_before": {
+      "driver": "616.92",
+      "name": "NVIDIA GeForce RTX 4090",
+      "temperature_c": 40,
+      "total_mib": 24564,
+      "used_mib": 13100,
+      "utilization": 19,
+      "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+    },
+    "launch_seconds": 2.213552502973471,
+    "monitor_errors": 0,
+    "monitor_samples": 7,
+    "output_bytes": 660,
+    "output_sha256": "7dc697b178ac192c86aaae32f26f758f37ec576d40cdf0d7aad1d4ff0b2df214",
+    "peak_vram_mib": 13112,
+    "prompt_tokens": 4582,
+    "reference_match": false,
+    "request_sha256": "2b22490daff4ac9cf264bfffd5bd9f1e663c97c21c233a89a966f9a2b132fa3b",
+    "resource_violation": false,
+    "server_exit_status": null,
+    "start_utc": "2026-09-30T04:31:16.279779+00:00",
+    "structural_valid": true,
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 3104.614,
+      "predicted_n": 191,
+      "predicted_per_second": 61.1992344297874,
+      "predicted_per_token_ms": 16.340073684210527,
+      "prompt_ms": 805.942,
+      "prompt_n": 4582,
+      "prompt_per_second": 5685.27263748508,
+      "prompt_per_token_ms": 0.17589305979921432
+    },
+    "valid": false,
+    "wall_seconds": 3.919423010025639
+  },
+  "profile": 3,
+  "realized_consequence": -1,
+  "reference_output_sha256": "db1d50794d44ec6ef09ced1502c97494eabddbc7805cdd71aced52ebb68d8eef",
+  "reference_seconds": 4.825373077997938,
+  "started_at": "2026-09-30T04:30:27.381919+00:00",
+  "workload": "P3-1"
+}

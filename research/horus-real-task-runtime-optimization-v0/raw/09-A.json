@@ -1,0 +1,361 @@
+{
+  "arm": "A",
+  "authenticated_event_envelope_sha256": "e0950c8382b0c7974953f074baf95f29a239679cafcdaa2cec11a73db4fad40b",
+  "decision": {
+    "action_call_id": "C:3:ACTION:1",
+    "action_model_latency_seconds": 33.6418568980298,
+    "action_parse_status": "VALID",
+    "admissible_actions": [
+      "ADVANCE",
+      "HOLD",
+      "RETREAT"
+    ],
+    "decision_id": "C:D03",
+    "decision_source": "MODEL_FOR_UNRESOLVED",
+    "event_identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1\",1,2003,1]",
+    "event_stream_sequence": 3,
+    "grounded_after": {
+      "assessment_status": "GROUNDED",
+      "empirical_frequencies": {
+        "2:-1": {
+          "count": 2,
+          "denominator": 3
+        },
+        "2:0": {
+          "count": 1,
+          "denominator": 3
+        }
+      },
+      "kind": "VARIABLE_RELATION",
+      "observation_count": 3,
+      "possible_change": null,
+      "recent_receipt_provenance": [
+        {
+          "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:1:ac3626f11f5e973a\",1,2001,1]",
+          "receipt_sha256": "911edda289957384a5cce6ee8b8b6e6ab91487113ecb6fd62b8cdb1cba0da34f"
+        },
+        {
+          "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:2:3ec9371509528cbb\",1,2002,1]",
+          "receipt_sha256": "c55837f6d4e4636c70f6a39155e39e4cb926fa44adcb3528dc8177eb5d3fcd86"
+        },
+        {
+          "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1\",1,2003,1]",
+          "receipt_sha256": "4834acc85a3df1a9bc1af24e7b27ca1a42ffe3a085d3f61e75fa213a5db1b72b"
+        }
+      ],
+      "recent_window": [
+        {
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "consequence": 0,
+          "next_state": 2
+        }
+      ],
+      "relation": "2:ADVANCE",
+      "relation_type": "EMPIRICAL",
+      "segment_counts": {
+        "2:-1": 2,
+        "2:0": 1
+      }
+    },
+    "grounded_assessments_before": {
+      "ADVANCE": {
+        "assessment_status": "GROUNDED",
+        "empirical_frequencies": {
+          "2:-1": {
+            "count": 2,
+            "denominator": 2
+          }
+        },
+        "kind": "EMPIRICALLY_STABLE",
+        "observation_count": 2,
+        "possible_change": null,
+        "recent_receipt_provenance": [
+          {
+            "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:1:ac3626f11f5e973a\",1,2001,1]",
+            "receipt_sha256": "911edda289957384a5cce6ee8b8b6e6ab91487113ecb6fd62b8cdb1cba0da34f"
+          },
+          {
+            "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:2:3ec9371509528cbb\",1,2002,1]",
+            "receipt_sha256": "c55837f6d4e4636c70f6a39155e39e4cb926fa44adcb3528dc8177eb5d3fcd86"
+          }
+        ],
+        "recent_window": [
+          {
+            "consequence": -1,
+            "next_state": 2
+          },
+          {
+            "consequence": -1,
+            "next_state": 2
+          }
+        ],
+        "relation": "2:ADVANCE",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {
+          "2:-1": 2
+        }
+      },
+      "HOLD": {
+        "assessment_status": "UNSEEN",
+        "empirical_frequencies": {},
+        "kind": "UNSEEN",
+        "observation_count": 0,
+        "possible_change": null,
+        "recent_receipt_provenance": [],
+        "recent_window": [],
+        "relation": "2:HOLD",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {}
+      },
+      "RETREAT": {
+        "assessment_status": "UNSEEN",
+        "empirical_frequencies": {},
+        "kind": "UNSEEN",
+        "observation_count": 0,
+        "possible_change": null,
+        "recent_receipt_provenance": [],
+        "recent_window": [],
+        "relation": "2:RETREAT",
+        "relation_type": "EMPIRICAL",
+        "segment_counts": {}
+      }
+    },
+    "index": 3,
+    "known_values_before": {
+      "ADVANCE": null,
+      "HOLD": null,
+      "RETREAT": null
+    },
+    "measurement_sha256": "fd9111e56fd1b79d0c4a946997a834835307f6197ff05da1d4363f052d552f7b",
+    "policy_reason": "UNCERTAINTY_REMAINS",
+    "policy_route": "MODEL",
+    "raw_action_output_sha256": "25e9c97d06cc22b95a3deb31eff5121bd82a09e4be903f69089e747452e8f576",
+    "realized": {
+      "consequence": 0,
+      "next_state": 2
+    },
+    "receipt_identity": [
+      "HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1",
+      1,
+      2003,
+      1
+    ],
+    "receipt_provenance_sha256": "4834acc85a3df1a9bc1af24e7b27ca1a42ffe3a085d3f61e75fa213a5db1b72b",
+    "selected_action": "ADVANCE",
+    "selected_grounded_before": {
+      "assessment_status": "GROUNDED",
+      "empirical_frequencies": {
+        "2:-1": {
+          "count": 2,
+          "denominator": 2
+        }
+      },
+      "kind": "EMPIRICALLY_STABLE",
+      "observation_count": 2,
+      "possible_change": null,
+      "recent_receipt_provenance": [
+        {
+          "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:1:ac3626f11f5e973a\",1,2001,1]",
+          "receipt_sha256": "911edda289957384a5cce6ee8b8b6e6ab91487113ecb6fd62b8cdb1cba0da34f"
+        },
+        {
+          "identity": "[\"HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:2:3ec9371509528cbb\",1,2002,1]",
+          "receipt_sha256": "c55837f6d4e4636c70f6a39155e39e4cb926fa44adcb3528dc8177eb5d3fcd86"
+        }
+      ],
+      "recent_window": [
+        {
+          "consequence": -1,
+          "next_state": 2
+        },
+        {
+          "consequence": -1,
+          "next_state": 2
+        }
+      ],
+      "relation": "2:ADVANCE",
+      "relation_type": "EMPIRICAL",
+      "segment_counts": {
+        "2:-1": 2
+      }
+    },
+    "state": 2,
+    "suffix_before": {
+      "count": 0,
+      "relation": null
+    }
+  },
+  "event": {
+    "action_source": "MODEL_FOR_UNRESOLVED",
+    "authorization_reason": "authorized",
+    "authorization_status": "AUTHORIZED",
+    "decision_index": 3,
+    "execution_kind": "AUTONOMOUS_EXECUTION",
+    "global_schedule_index": 9,
+    "measurement_sha256": "fd9111e56fd1b79d0c4a946997a834835307f6197ff05da1d4363f052d552f7b",
+    "memory_record": {
+      "action": "ADVANCE",
+      "authorization": "AUTHORIZED",
+      "consequence": 0,
+      "epoch": 2003,
+      "measurement_matches": true,
+      "next_state": 2,
+      "observation_a_id": 33604763905,
+      "observation_b_id": 33604763906,
+      "pair_decision_id": 8602819494144,
+      "pre_state": 2,
+      "source_pair": [
+        "SOURCE_A",
+        "SOURCE_B"
+      ],
+      "transaction_id": 1
+    },
+    "receipt": {
+      "action": "ADVANCE",
+      "epoch": 2003,
+      "event_id": 1,
+      "next_state": 2,
+      "pre_state": 2,
+      "realized_consequence": 0,
+      "source_identity": "HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1",
+      "transaction_id": 1
+    },
+    "receipt_identity": [
+      "HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1",
+      1,
+      2003,
+      1
+    ],
+    "receipt_provenance_sha256": "4834acc85a3df1a9bc1af24e7b27ca1a42ffe3a085d3f61e75fa213a5db1b72b",
+    "runtime_measurement": {
+      "action": "ADVANCE",
+      "cache_erased": true,
+      "completion_tokens": 101,
+      "end_utc": "2026-09-30T04:02:58.600399+00:00",
+      "error": null,
+      "executor_total_seconds": 11.354227080009878,
+      "finish_reason": "stop",
+      "full_gpu_residency": true,
+      "gpu_after": {
+        "driver": "616.92",
+        "name": "NVIDIA GeForce RTX 4090",
+        "temperature_c": 47,
+        "total_mib": 24564,
+        "used_mib": 13109,
+        "utilization": 97,
+        "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+      },
+      "gpu_before": {
+        "driver": "616.92",
+        "name": "NVIDIA GeForce RTX 4090",
+        "temperature_c": 39,
+        "total_mib": 24564,
+        "used_mib": 13102,
+        "utilization": 19,
+        "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+      },
+      "launch_seconds": 2.2108250949531794,
+      "monitor_errors": 0,
+      "monitor_samples": 6,
+      "output_bytes": 370,
+      "output_sha256": "ba8d1562554cff67f31a281990a27924698c6a1e51055941cc84d62d99a0f170",
+      "peak_vram_mib": 13114,
+      "prompt_tokens": 1934,
+      "reference_match": true,
+      "request_sha256": "78d78d99bad1b1241e7d9cf6e67c6d65256a75921d05e6c3541d3eeeb04887d2",
+      "resource_violation": false,
+      "server_exit_status": null,
+      "start_utc": "2026-09-30T04:02:56.552249+00:00",
+      "structural_valid": true,
+      "timings": {
+        "cache_n": 0,
+        "predicted_ms": 1621.005,
+        "predicted_n": 101,
+        "predicted_per_second": 61.69012433644559,
+        "predicted_per_token_ms": 16.210050000000003,
+        "prompt_ms": 420.518,
+        "prompt_n": 1934,
+        "prompt_per_second": 4599.089694139133,
+        "prompt_per_token_ms": 0.2174343329886246
+      },
+      "valid": true,
+      "wall_seconds": 2.0481318929814734
+    },
+    "session_id": "6c6d5bbde48291beb4656d4409424ce5",
+    "source_scope": {
+      "runtime_index": 3,
+      "source_identity": "HORUS:6c6d5bbde48291beb4656d4409424ce5:runtime:3:a25efb3c6a3ae3f1"
+    },
+    "study": "HORUS_REAL_TASK_RUNTIME_OPTIMIZATION_V0",
+    "workload": "P2-1"
+  },
+  "global_index": 9,
+  "half": 0,
+  "measurement": {
+    "action": "ADVANCE",
+    "cache_erased": true,
+    "completion_tokens": 101,
+    "end_utc": "2026-09-30T04:02:58.600399+00:00",
+    "error": null,
+    "executor_total_seconds": 11.354227080009878,
+    "finish_reason": "stop",
+    "full_gpu_residency": true,
+    "gpu_after": {
+      "driver": "616.92",
+      "name": "NVIDIA GeForce RTX 4090",
+      "temperature_c": 47,
+      "total_mib": 24564,
+      "used_mib": 13109,
+      "utilization": 97,
+      "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+    },
+    "gpu_before": {
+      "driver": "616.92",
+      "name": "NVIDIA GeForce RTX 4090",
+      "temperature_c": 39,
+      "total_mib": 24564,
+      "used_mib": 13102,
+      "utilization": 19,
+      "uuid": "GPU-8ea3bfa9-adb4-dcd8-6c9b-32b29ae99e0f"
+    },
+    "launch_seconds": 2.2108250949531794,
+    "monitor_errors": 0,
+    "monitor_samples": 6,
+    "output_bytes": 370,
+    "output_sha256": "ba8d1562554cff67f31a281990a27924698c6a1e51055941cc84d62d99a0f170",
+    "peak_vram_mib": 13114,
+    "prompt_tokens": 1934,
+    "reference_match": true,
+    "request_sha256": "78d78d99bad1b1241e7d9cf6e67c6d65256a75921d05e6c3541d3eeeb04887d2",
+    "resource_violation": false,
+    "server_exit_status": null,
+    "start_utc": "2026-09-30T04:02:56.552249+00:00",
+    "structural_valid": true,
+    "timings": {
+      "cache_n": 0,
+      "predicted_ms": 1621.005,
+      "predicted_n": 101,
+      "predicted_per_second": 61.69012433644559,
+      "predicted_per_token_ms": 16.210050000000003,
+      "prompt_ms": 420.518,
+      "prompt_n": 1934,
+      "prompt_per_second": 4599.089694139133,
+      "prompt_per_token_ms": 0.2174343329886246
+    },
+    "valid": true,
+    "wall_seconds": 2.0481318929814734
+  },
+  "profile": 2,
+  "realized_consequence": 0,
+  "reference_output_sha256": "ba8d1562554cff67f31a281990a27924698c6a1e51055941cc84d62d99a0f170",
+  "reference_seconds": 2.25318255496677,
+  "started_at": "2026-09-30T04:02:10.755097+00:00",
+  "workload": "P2-1"
+}
