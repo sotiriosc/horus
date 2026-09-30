@@ -1,0 +1,39 @@
+{
+  "status": "PROSPECTIVE",
+  "candidate_selection": "Fixed engineering choices before any completion; no fastest-candidate selection",
+  "candidates": {
+    "HOLD": {
+      "batch": 512,
+      "ubatch": 128,
+      "threads": 8,
+      "threads_batch": 8
+    },
+    "ADVANCE": {
+      "batch": 2048,
+      "ubatch": 512,
+      "threads": 16,
+      "threads_batch": 16
+    },
+    "RETREAT": {
+      "batch": 128,
+      "ubatch": 64,
+      "threads": 4,
+      "threads_batch": 4
+    }
+  },
+  "vram_ceiling_mib": 22000,
+  "context": 8192,
+  "qualification_contexts": [
+    64,
+    1800,
+    6500
+  ],
+  "noise_repetitions": 7,
+  "noise_rule": "margin=max(0.10,ceil(3*maximum relative deviation from median to 0.01)); stop if margin>0.30",
+  "ordinary_digest": "4b33b01bf33672a36945cd5925ffc9e3997a5e4d3119c7d59150bee0d2a0214a",
+  "ordinary": "Preserve dolphin-mixtral:latest decision model, system, options and policy; after decision, empty load-only request with num_gpu=0 releases GPU before target execution. No ordinary inference occurs during target measurement.",
+  "qualification_fixture_selection": "Synthetic parcel text, never scientific workload",
+  "engineering_revision": 1,
+  "gpu_idle_utilization_ceiling_pct": 25,
+  "initial_attempt": "Ordinary synthetic transport passed in 69.8s and parked CPU-only. Initial idle<=10% check failed because existing desktop GPU background was 15-19% with no CUDA compute apps and ~2.75GiB VRAM. Before target qualification, allow <=25% baseline display load, require no competing compute apps and <5GiB baseline memory; calibrate measurement-noise rule unchanged. No target or scientific completion had occurred."
+}

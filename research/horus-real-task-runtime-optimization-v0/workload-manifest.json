@@ -1,0 +1,227 @@
+{
+  "profiles": {
+    "0": {
+      "independent_prompts": 3,
+      "label": "P0",
+      "shape": "structured action"
+    },
+    "1": {
+      "independent_prompts": 3,
+      "label": "P1",
+      "shape": "5-decision review"
+    },
+    "2": {
+      "independent_prompts": 3,
+      "label": "P2",
+      "shape": "11-decision review"
+    },
+    "3": {
+      "independent_prompts": 3,
+      "label": "P3",
+      "shape": "30-decision review"
+    }
+  },
+  "workloads": [
+    {
+      "cap": 64,
+      "derivation": {
+        "decision": 1,
+        "fields": "goal,current_state,available_actions,grounded_assessments; no selected answer or future consequence",
+        "run": "A"
+      },
+      "id": "P0-0",
+      "profile": 0,
+      "prompt_characters": 501,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P0-0.json",
+      "sha256": "87412a1db3e09382837094a6a47cf75c9f448f1f82b4e3cec10787ed1edfc373",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "action"
+    },
+    {
+      "cap": 64,
+      "derivation": {
+        "decision": 6,
+        "fields": "goal,current_state,available_actions,grounded_assessments; no selected answer or future consequence",
+        "run": "B"
+      },
+      "id": "P0-1",
+      "profile": 0,
+      "prompt_characters": 544,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P0-1.json",
+      "sha256": "0b563180a2ffab4b20bb5e25c897932d5b851fc9ac46abe9c3eb2597de54ebfe",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "action"
+    },
+    {
+      "cap": 64,
+      "derivation": {
+        "decision": 11,
+        "fields": "goal,current_state,available_actions,grounded_assessments; no selected answer or future consequence",
+        "run": "C"
+      },
+      "id": "P0-2",
+      "profile": 0,
+      "prompt_characters": 565,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P0-2.json",
+      "sha256": "28520b55bdfd3f9530cd9f0ed16c848f5fb6130efa4f6dc1b0f9c8e4f61c66a9",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "action"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 5,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 1,
+        "run": "A"
+      },
+      "id": "P1-0",
+      "profile": 1,
+      "prompt_characters": 2846,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P1-0.json",
+      "sha256": "f0af10f3a76948844f3e5ac13eedf27fb6e9b47096fdb2682132ad19359a3524",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 5,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 7,
+        "run": "B"
+      },
+      "id": "P1-1",
+      "profile": 1,
+      "prompt_characters": 3102,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P1-1.json",
+      "sha256": "2a621b31f9e2a578398836949fac489ab80cd3e9dcf32139c1b120c23e7c3852",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 5,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 13,
+        "run": "C"
+      },
+      "id": "P1-2",
+      "profile": 1,
+      "prompt_characters": 3095,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P1-2.json",
+      "sha256": "00a31587fb5eb17e5e2740b99cbb11864549994d6939b9be741836d28866b698",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 11,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 1,
+        "run": "A"
+      },
+      "id": "P2-0",
+      "profile": 2,
+      "prompt_characters": 6401,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P2-0.json",
+      "sha256": "f630a4c09abf456204ee90c5212db9c19ca24b616a662ebee62b213bcd25bad8",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 11,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 7,
+        "run": "B"
+      },
+      "id": "P2-1",
+      "profile": 2,
+      "prompt_characters": 6720,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P2-1.json",
+      "sha256": "c1fe75f0142053e0622511cf70e6340a364138834cd7e23547a8e418f2a10ae8",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 11,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 13,
+        "run": "C"
+      },
+      "id": "P2-2",
+      "profile": 2,
+      "prompt_characters": 6665,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P2-2.json",
+      "sha256": "112ee39aa135d051738017ed2c174532aac6d435c032df7b23a2564b0d118ec6",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 26,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 1,
+        "run": "A"
+      },
+      "id": "P3-0",
+      "profile": 3,
+      "prompt_characters": 15366,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P3-0.json",
+      "sha256": "cd4026d0dd49f4dfcb2bde6447cf853914d8c8da60faac624416180271febe83",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 28,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 1,
+        "run": "B"
+      },
+      "id": "P3-1",
+      "profile": 3,
+      "prompt_characters": 16555,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P3-1.json",
+      "sha256": "384fad6ed37dcf2c3e31d0159bbfeaf00a11adca9e7028881f10b497026b1b21",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    },
+    {
+      "cap": 1024,
+      "derivation": {
+        "decision_count": 30,
+        "fields": "public-safe historical review input; no prior review answer or evaluation labels",
+        "first_decision": 1,
+        "run": "C"
+      },
+      "id": "P3-2",
+      "profile": 3,
+      "prompt_characters": 17697,
+      "request_path": "research/horus-real-task-runtime-optimization-v0/workloads/P3-2.json",
+      "sha256": "d7d556ac5c6357fdf243b43568864e773b821fab626a1cc39c0fe62f2cb4a03b",
+      "source": "experiments.grounded_self_diagnosis_v0.protocol.build_inputs",
+      "source_base": "26cdae9de75811dd492d32de8f3337e0b67d09b7",
+      "validator": "review"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "cache_prompt": false,
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "max_tokens": 64,
+  "messages": [
+    {
+      "content": "You are a reasoning component in a bounded world. Authenticated grounded assessments are authoritative for exact experienced deterministic relations. The admissible actions have already excluded inferior known actions. Choose one admissible action using only the shown goal, state, assessments, and bounded history. Unseen relations are unknown; empirical patterns and unresolved changes are not deterministic facts. You may explore a genuinely uncertain relation or select the best known admissible fallback. Return only a JSON object with exactly one selected_action field and no explanation.",
+      "role": "system"
+    },
+    {
+      "content": "{\"available_actions\":[\"ADVANCE\",\"HOLD\",\"RETREAT\"],\"current_state\":1,\"goal\":\"Maximize useful realized consequence over the run using the evidence available to you.\",\"grounded_assessments\":{\"ADVANCE\":{\"kind\":\"UNSEEN\",\"observations\":0,\"relation_type\":\"DETERMINISTIC\",\"status\":\"UNSEEN\"},\"HOLD\":{\"kind\":\"UNSEEN\",\"observations\":0,\"relation_type\":\"EMPIRICAL\",\"status\":\"UNSEEN\"},\"RETREAT\":{\"kind\":\"UNSEEN\",\"observations\":0,\"relation_type\":\"DETERMINISTIC\",\"status\":\"UNSEEN\"}},\"recent_agent_working_context\":[]}",
+      "role": "user"
+    }
+  ],
+  "min_p": 0.0,
+  "response_format": {
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "selected_action": {
+          "enum": [
+            "ADVANCE",
+            "HOLD",
+            "RETREAT"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "selected_action"
+      ],
+      "type": "object"
+    },
+    "type": "json_object"
+  },
+  "seed": 917223,
+  "stream": false,
+  "temperature": 0.0,
+  "top_k": 1,
+  "top_p": 1.0
+}
