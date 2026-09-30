@@ -1,0 +1,44 @@
+{
+  "branch": "research/epistemic-primitive-cross-model-comparator-v0",
+  "verified_base": "2cfcf8097c99d13df2156dde47409af0f65cb42a",
+  "method_freeze": "acc496be7e2005fe43b948686c81ed1503bd13ab",
+  "implementation_request_freeze": "3e66cde0df4908a9f81abde383499dc8714dd5da",
+  "raw_pre_scoring": "48e4802125a81eaaafec0ca30aac77c8d62f935a",
+  "publication_sha_reference": "Final branch HEAD is verified externally after publication; a commit cannot embed its own SHA.",
+  "model_runtime": "model-runtime.json",
+  "scheduled": 112,
+  "attempted": 112,
+  "completed": 112,
+  "schema_valid": 112,
+  "synthetic_qualification_calls": 23,
+  "scientific_qwen_calls": 0,
+  "replay": "PASS_BYTE_IDENTICAL",
+  "registered_interpretation": {
+    "category": "C",
+    "pattern": "COMPARATOR_PRIMITIVE_LIMITATIONS",
+    "failed_primitives": [
+      "KNOWN_VS_UNKNOWN",
+      "ALTERNATIVE_COMPLETION_EXISTENCE",
+      "EVIDENCE_SUFFICIENCY"
+    ],
+    "shared_reduction_errors": 13,
+    "similarity_rule": "At least 8 of the 15 published Qwen reduction-error states also incorrect for comparator; descriptive majority, not significance"
+  },
+  "questions_and_answers": [
+    "No. Four of seven comparator primitive gates are established. KNOWN_VS_UNKNOWN (5/8; 1/4 pairs), ALTERNATIVE_COMPLETION_EXISTENCE (5/8; 1/4), and EVIDENCE_SUFFICIENCY (4/8; 0/4) fail their gates.",
+    "No. Comparator five-class reduction is 27/56 (Qwen 41/56), with 6/28 exact pairs, 3/19 diagnostic flips and 3/9 stable pairs. It fails the overall 48/56 threshold and four of five class floors.",
+    "The clean all-seven-primitives-established / reduction-failed pattern is not replicated. There are 21 comparator P-correct/R-wrong states, but comparator primitive limitations prevent a clean reduction-specific comparison. Thirteen of Qwen\u2019s 15 reduction-error states are also comparator errors; this overlap alone does not override Pattern C.",
+    "The clean evidence-sufficiency dissociation is not replicated. Comparator primitive is 4/8 and 0/4 pairs, with reduction 2/8 and 0/4 pairs; Qwen is 8/8, 4/4, 3/8 and 0/4 respectively. Weak reduction is observed in both, but the comparator primitive itself is not established.",
+    "Unresolved as a Qwen-specific versus shared reduction limitation: registered Pattern C, COMPARATOR_PRIMITIVE_LIMITATIONS. This comparator does not isolate a shared reduction-only problem or establish that Qwen alone has one.",
+    "No Horus change is justified by a tested intervention here: no intervention or combined system was tested. These results describe capability under the frozen interface and do not authorize architecture changes, training, promotion or another study."
+  ],
+  "full_tables": "report.md",
+  "all_matched_scores": "scores.json",
+  "preservation": "postflight.json",
+  "publication_audit": "publication-audit.json",
+  "scientific_reasoning_channels": {
+    "separated": 0,
+    "absent": 112,
+    "note": "Native reasoning remained enabled but optional. No scientific reasoning instruction or prefill was added. No post-result settings change or new call was made. This interface observation does not establish a causal explanation for accuracy."
+  }
+}
