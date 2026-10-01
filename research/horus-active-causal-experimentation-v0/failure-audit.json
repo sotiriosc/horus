@@ -1,0 +1,63 @@
+{
+  "actual_prediction_endpoints_by_arm": {
+    "A": 5,
+    "P": 10
+  },
+  "ambiguous_incomplete_requests": 0,
+  "byte_identical_execution_receipt_replay": "PASS",
+  "classification": "ACTIVE_CAUSAL_STUDY_TERMINATED_INVALID_DISCOVERY_SELECTION",
+  "completed_control_predictions": 0,
+  "completed_model_calls": 34,
+  "completed_sealed_predictions": 15,
+  "control_gate": "NOT_EVALUABLE_PROTOCOL_FAILURE",
+  "discovery_counts": [
+    {
+      "arm": "A",
+      "executed": 12,
+      "world_id": "primary-001"
+    },
+    {
+      "arm": "P",
+      "executed": 12,
+      "world_id": "primary-001"
+    },
+    {
+      "arm": "A",
+      "executed": 6,
+      "world_id": "primary-002"
+    },
+    {
+      "arm": "P",
+      "executed": 12,
+      "world_id": "primary-002"
+    }
+  ],
+  "exact_rendered_template_hash_and_token_decode": "PASS",
+  "exact_semantic_prompt_reconstruction": "PASS",
+  "executed_discovery_probes": 42,
+  "failure_call_id": "primary-002:A:discovery:7",
+  "failure_category": "RESERVED_SEALED_QUERY_SELECTED",
+  "fully_completed_matched_worlds": 1,
+  "interpretation": "This is an interface/protocol failure, not a completed negative comparison of active and passive evidence acquisition.",
+  "invalid_active_discovery_choices": 1,
+  "invalid_probe_executed": false,
+  "new_model_calls_during_replay": 0,
+  "oracle_boundary": "PASS",
+  "planned_control_worlds": 40,
+  "planned_prediction_endpoints_per_arm": 600,
+  "planned_primary_worlds": 120,
+  "primary_gate": "NOT_EVALUABLE_PROTOCOL_FAILURE",
+  "raw_freeze_commit": "de596c5a037b4238a39d852066404b5a83f406b1",
+  "raw_sha256": "3af7e5283863c99879e94d3f5cc8a8d857cace1186b6dff5fe9be7f8f16b11bf",
+  "receipt_authentication": "PASS",
+  "repairs": 0,
+  "reserved_outcome_exposed": false,
+  "retries": 0,
+  "scientific_correctness_and_information_metrics": "NOT_SCORED_INCOMPLETE_REGISTERED_POPULATION",
+  "sealing_boundary": "PASS",
+  "selection_gate": "NOT_EVALUABLE_PROTOCOL_FAILURE",
+  "status": "PROTOCOL_FAILURE_CONFIRMED",
+  "substitute_probes": 0,
+  "training_steps": 0,
+  "valid_active_discovery_choices": 18
+}
