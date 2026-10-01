@@ -1,0 +1,114 @@
+{
+  "scope": "Posthoc descriptive scoring of existing frozen endpoints; no inference, new worlds, new training, candidate selection, or gate changes. Persistence predicts the last observed sensor state, ignoring the proposed action.",
+  "prediction": {
+    "C0-H1": {
+      "n": 960,
+      "model_exact": 177,
+      "model_bit_correct_by_sensor_list_position": [
+        594,
+        567,
+        639,
+        643
+      ],
+      "model_total_bits": 3840,
+      "persistence_baseline_exact": 303,
+      "persistence_baseline_bit_correct": 2889,
+      "actual_sensor_pattern_counts": {
+        "0000": 56,
+        "0001": 65,
+        "0010": 72,
+        "0011": 59,
+        "0100": 55,
+        "0101": 53,
+        "0110": 63,
+        "0111": 54,
+        "1000": 59,
+        "1001": 70,
+        "1010": 75,
+        "1011": 58,
+        "1100": 48,
+        "1101": 63,
+        "1110": 44,
+        "1111": 66
+      }
+    },
+    "C0-T1": {
+      "n": 480,
+      "model_exact": 249,
+      "model_bit_correct_by_sensor_list_position": [
+        390,
+        387,
+        424,
+        413
+      ],
+      "model_total_bits": 1920,
+      "persistence_baseline_exact": 264,
+      "persistence_baseline_bit_correct": 1657,
+      "actual_sensor_pattern_counts": {
+        "0000": 24,
+        "0001": 32,
+        "0010": 28,
+        "0011": 27,
+        "0100": 30,
+        "0101": 32,
+        "0110": 32,
+        "0111": 29,
+        "1000": 28,
+        "1001": 32,
+        "1010": 33,
+        "1011": 29,
+        "1100": 29,
+        "1101": 31,
+        "1110": 27,
+        "1111": 37
+      }
+    },
+    "C1-T1": {
+      "n": 480,
+      "model_exact": 273,
+      "model_bit_correct_by_sensor_list_position": [
+        420,
+        416,
+        423,
+        418
+      ],
+      "model_total_bits": 1920,
+      "persistence_baseline_exact": 264,
+      "persistence_baseline_bit_correct": 1657,
+      "actual_sensor_pattern_counts": {
+        "0000": 24,
+        "0001": 32,
+        "0010": 28,
+        "0011": 27,
+        "0100": 30,
+        "0101": 32,
+        "0110": 32,
+        "0111": 29,
+        "1000": 28,
+        "1001": 32,
+        "1010": 33,
+        "1011": 29,
+        "1100": 29,
+        "1101": 31,
+        "1110": 27,
+        "1111": 37
+      }
+    }
+  },
+  "control": {
+    "C0": {
+      "actual_control_actions": 144,
+      "failures": {
+        "action_budget_exhausted": 32
+      },
+      "selected_schema_invalid": 0
+    },
+    "C1": {
+      "actual_control_actions": 137,
+      "failures": {
+        "action_budget_exhausted": 29
+      },
+      "selected_schema_invalid": 0
+    }
+  }
+}
