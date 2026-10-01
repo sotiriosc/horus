@@ -1,0 +1,413 @@
+{
+  "purpose": "Posthoc descriptive error decomposition, not an additional gate or model-selection rule",
+  "cycles": {
+    "1": {
+      "incumbent_confusion": {
+        "current_violation": {
+          "UNKNOWN -> UNKNOWN": 140,
+          "NO -> NO": 135,
+          "NO -> UNKNOWN": 45,
+          "UNKNOWN -> YES": 40,
+          "YES -> YES": 180
+        },
+        "prior_violation": {
+          "NO -> UNKNOWN": 117,
+          "UNKNOWN -> UNKNOWN": 180,
+          "YES -> UNKNOWN": 171,
+          "NO -> NO": 63,
+          "YES -> YES": 7,
+          "YES -> NO": 2
+        }
+      },
+      "candidate_confusion": {
+        "current_violation": {
+          "UNKNOWN -> UNKNOWN": 180,
+          "NO -> NO": 180,
+          "YES -> YES": 180
+        },
+        "prior_violation": {
+          "NO -> NO": 180,
+          "UNKNOWN -> UNKNOWN": 180,
+          "YES -> YES": 180
+        }
+      },
+      "subset_comparisons": {
+        "current_UNKNOWN": {
+          "joint": {
+            "n": 180,
+            "incumbent_correct": 57,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 0.31666666666666665,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 68.33333333333333,
+            "both_correct": 57,
+            "incumbent_only": 0,
+            "candidate_only": 123,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 180,
+            "incumbent_correct": 140,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 0.7777777777777778,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 22.22222222222222,
+            "both_correct": 140,
+            "incumbent_only": 0,
+            "candidate_only": 40,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 180,
+            "incumbent_correct": 88,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 0.4888888888888889,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 51.111111111111114,
+            "both_correct": 88,
+            "incumbent_only": 0,
+            "candidate_only": 92,
+            "both_wrong": 0
+          }
+        },
+        "prior_UNKNOWN": {
+          "joint": {
+            "n": 180,
+            "incumbent_correct": 139,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 0.7722222222222223,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 22.77777777777778,
+            "both_correct": 139,
+            "incumbent_only": 0,
+            "candidate_only": 41,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 180,
+            "incumbent_correct": 139,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 0.7722222222222223,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 22.77777777777778,
+            "both_correct": 139,
+            "incumbent_only": 0,
+            "candidate_only": 41,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          }
+        },
+        "mixed_prior_aggregation": {
+          "joint": {
+            "n": 355,
+            "incumbent_correct": 142,
+            "candidate_correct": 355,
+            "incumbent_accuracy": 0.4,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 60.0,
+            "both_correct": 142,
+            "incumbent_only": 0,
+            "candidate_only": 213,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 355,
+            "incumbent_correct": 299,
+            "candidate_correct": 355,
+            "incumbent_accuracy": 0.8422535211267606,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 15.774647887323944,
+            "both_correct": 299,
+            "incumbent_only": 0,
+            "candidate_only": 56,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 355,
+            "incumbent_correct": 183,
+            "candidate_correct": 355,
+            "incumbent_accuracy": 0.5154929577464789,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 48.45070422535211,
+            "both_correct": 183,
+            "incumbent_only": 0,
+            "candidate_only": 172,
+            "both_wrong": 0
+          }
+        },
+        "both_arms_schema_valid": {
+          "joint": {
+            "n": 540,
+            "incumbent_correct": 208,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 0.3851851851851852,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 61.48148148148148,
+            "both_correct": 208,
+            "incumbent_only": 0,
+            "candidate_only": 332,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 540,
+            "incumbent_correct": 455,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 0.8425925925925926,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 15.74074074074074,
+            "both_correct": 455,
+            "incumbent_only": 0,
+            "candidate_only": 85,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 540,
+            "incumbent_correct": 250,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 0.46296296296296297,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 53.7037037037037,
+            "both_correct": 250,
+            "incumbent_only": 0,
+            "candidate_only": 290,
+            "both_wrong": 0
+          }
+        }
+      },
+      "harvest_error_breakdown": {
+        "total_errors": 969,
+        "schema_invalid": 0,
+        "current_wrong": 273,
+        "prior_wrong": 815,
+        "field_confusions": {
+          "current_violation": {
+            "NO -> NO": 432,
+            "NO -> UNKNOWN": 228,
+            "UNKNOWN -> UNKNOWN": 615,
+            "YES -> YES": 660,
+            "UNKNOWN -> YES": 45
+          },
+          "prior_violation": {
+            "UNKNOWN -> UNKNOWN": 927,
+            "YES -> UNKNOWN": 731,
+            "NO -> UNKNOWN": 42,
+            "YES -> YES": 208,
+            "YES -> NO": 15,
+            "NO -> NO": 30,
+            "UNKNOWN -> NO": 27
+          }
+        }
+      }
+    },
+    "2": {
+      "incumbent_confusion": {
+        "current_violation": {
+          "UNKNOWN -> UNKNOWN": 180,
+          "NO -> NO": 180,
+          "YES -> YES": 180
+        },
+        "prior_violation": {
+          "UNKNOWN -> UNKNOWN": 180,
+          "YES -> YES": 180,
+          "NO -> NO": 180
+        }
+      },
+      "candidate_confusion": {
+        "current_violation": {
+          "UNKNOWN -> UNKNOWN": 180,
+          "NO -> NO": 180,
+          "YES -> YES": 180
+        },
+        "prior_violation": {
+          "UNKNOWN -> UNKNOWN": 180,
+          "YES -> YES": 180,
+          "NO -> NO": 180
+        }
+      },
+      "subset_comparisons": {
+        "current_UNKNOWN": {
+          "joint": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          }
+        },
+        "prior_UNKNOWN": {
+          "joint": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 180,
+            "incumbent_correct": 180,
+            "candidate_correct": 180,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 180,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          }
+        },
+        "mixed_prior_aggregation": {
+          "joint": {
+            "n": 354,
+            "incumbent_correct": 354,
+            "candidate_correct": 354,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 354,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 354,
+            "incumbent_correct": 354,
+            "candidate_correct": 354,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 354,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 354,
+            "incumbent_correct": 354,
+            "candidate_correct": 354,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 354,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          }
+        },
+        "both_arms_schema_valid": {
+          "joint": {
+            "n": 540,
+            "incumbent_correct": 540,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 540,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "current_violation": {
+            "n": 540,
+            "incumbent_correct": 540,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 540,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          },
+          "prior_violation": {
+            "n": 540,
+            "incumbent_correct": 540,
+            "candidate_correct": 540,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 540,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0
+          }
+        }
+      },
+      "harvest_error_breakdown": {
+        "total_errors": 3,
+        "schema_invalid": 0,
+        "current_wrong": 0,
+        "prior_wrong": 3,
+        "field_confusions": {
+          "current_violation": {
+            "UNKNOWN -> UNKNOWN": 660,
+            "YES -> YES": 660,
+            "NO -> NO": 660
+          },
+          "prior_violation": {
+            "UNKNOWN -> UNKNOWN": 954,
+            "NO -> NO": 72,
+            "YES -> YES": 951,
+            "YES -> UNKNOWN": 3
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1099 @@
+{
+  "branch": "research/qwen-error-driven-qlora-learning-v0",
+  "freezes": {
+    "base": "379912673e692c7b4b7c28aa5b3a17b2bffbc0d3",
+    "method": "9024f4effbea4bfe06f8af393032fb25837964e4",
+    "data": "d8636db079aeaf5b86a5032275dd2e0ab9151b95",
+    "H1_raw": "8c78627a73b1a958bbc5626064a8c106f87d91eb",
+    "M1_artifact": "6ed70c9b57f04b44d1febd0237bd232a61ab4f92",
+    "cycle1_evaluation_raw": "b438b6291a3c2540840a31c2394152dd28f86258",
+    "H2_raw": "66d436124bbe9d790cd8d063ddfd11093a90bfb5",
+    "M2_artifact": "9e91c4ef34b8ed87a93b10068bbbe9e76f3ab88a",
+    "cycle2_evaluation_raw": "7845d8746c6d3633b194718688beab35ed411c5b"
+  },
+  "model_repository": "Qwen/Qwen3-14B",
+  "model_revision": "231c69a380487f6c0e52d02dcf0d5456d1918201",
+  "trainable_parameters": 64225280,
+  "datasets": {
+    "H1": {
+      "count": 1980,
+      "sha256": "9d74a93aa7d845e17008f8f0f9c25276e9fe3914fbddc67b12782eabc31cc1ef",
+      "joint_gold": {
+        "NO/UNKNOWN": 318,
+        "NO/YES": 318,
+        "UNKNOWN/NO": 24,
+        "YES/UNKNOWN": 318,
+        "YES/YES": 318,
+        "UNKNOWN/UNKNOWN": 318,
+        "UNKNOWN/YES": 318,
+        "NO/NO": 24,
+        "YES/NO": 24
+      },
+      "prior_counts": {
+        "6": 551,
+        "7": 813,
+        "5": 345,
+        "2": 29,
+        "4": 164,
+        "3": 78
+      },
+      "families": {
+        "schema": 1980,
+        "current_determinate": 1320,
+        "target_UNKNOWN_or_aggregation": 1914,
+        "all_prior_determinate": 291,
+        "contradiction_independent": 962,
+        "clear_YES": 318,
+        "clear_NO": 24
+      }
+    },
+    "H2": {
+      "count": 1980,
+      "sha256": "13cd4546bd7f09908873da68fb886663a473d6e42504b97b917dad0609537f17",
+      "joint_gold": {
+        "UNKNOWN/UNKNOWN": 318,
+        "YES/UNKNOWN": 318,
+        "NO/NO": 24,
+        "UNKNOWN/YES": 318,
+        "NO/UNKNOWN": 318,
+        "YES/YES": 318,
+        "NO/YES": 318,
+        "YES/NO": 24,
+        "UNKNOWN/NO": 24
+      },
+      "prior_counts": {
+        "10": 499,
+        "11": 612,
+        "12": 869
+      },
+      "families": {
+        "schema": 1980,
+        "target_UNKNOWN_or_aggregation": 1931,
+        "current_determinate": 1320,
+        "contradiction_independent": 958,
+        "all_prior_determinate": 161,
+        "clear_NO": 24,
+        "clear_YES": 318
+      }
+    },
+    "N1": {
+      "count": 3955,
+      "sha256": "35001b87fd528e935e1b74454f75c23e7156bfc9a27b8f51aec7a6f08af1f485",
+      "joint_gold": {
+        "NO/YES": 951,
+        "YES/UNKNOWN": 373,
+        "YES/YES": 1002,
+        "UNKNOWN/YES": 935,
+        "UNKNOWN/UNKNOWN": 258,
+        "NO/UNKNOWN": 367,
+        "UNKNOWN/NO": 33,
+        "NO/NO": 17,
+        "YES/NO": 19
+      },
+      "prior_counts": {
+        "6": 1102,
+        "7": 1624,
+        "5": 689,
+        "2": 56,
+        "4": 328,
+        "3": 156
+      },
+      "families": {
+        "schema": 3955,
+        "current_determinate": 2729,
+        "target_UNKNOWN_or_aggregation": 3890,
+        "all_prior_determinate": 555,
+        "clear_YES": 1002,
+        "contradiction_independent": 1918,
+        "clear_NO": 17
+      }
+    },
+    "N2": {
+      "count": 3960,
+      "sha256": "85a1f1a73c91ae7a8d05d9f7ac3379d032f64bb8d75fcea28fec079ddf82f8ed",
+      "joint_gold": {
+        "UNKNOWN/YES": 1113,
+        "YES/YES": 1111,
+        "NO/YES": 1093,
+        "NO/UNKNOWN": 235,
+        "UNKNOWN/NO": 13,
+        "UNKNOWN/UNKNOWN": 158,
+        "YES/UNKNOWN": 225,
+        "NO/NO": 7,
+        "YES/NO": 5
+      },
+      "prior_counts": {
+        "10": 998,
+        "11": 1224,
+        "12": 1738
+      },
+      "families": {
+        "schema": 3960,
+        "target_UNKNOWN_or_aggregation": 3946,
+        "current_determinate": 2676,
+        "clear_YES": 1111,
+        "contradiction_independent": 1920,
+        "all_prior_determinate": 274,
+        "clear_NO": 7
+      }
+    },
+    "R1": {
+      "count": 360,
+      "sha256": "4c994fd66c76a07144afa1976f7eb8aa4ec3bc79ccf44bb9b5ee8e4c3c6246b3",
+      "joint_gold": {
+        "YES/YES": 120,
+        "NO/YES": 120,
+        "YES/NO": 60,
+        "NO/NO": 60
+      },
+      "prior_counts": {
+        "5": 62,
+        "7": 137,
+        "1": 2,
+        "2": 13,
+        "6": 99,
+        "3": 16,
+        "4": 31
+      },
+      "families": {
+        "schema": 360,
+        "current_determinate": 360,
+        "clear_YES": 120,
+        "contradiction_independent": 182,
+        "target_UNKNOWN_or_aggregation": 230,
+        "all_prior_determinate": 185,
+        "clear_NO": 60
+      }
+    },
+    "R2": {
+      "count": 360,
+      "sha256": "920029283b3b31306ab4005ad93ef3d0b5b1444dacb61887204aa774aa3ca905",
+      "joint_gold": {
+        "NO/NO": 60,
+        "NO/YES": 120,
+        "YES/YES": 120,
+        "YES/NO": 60
+      },
+      "prior_counts": {
+        "10": 78,
+        "12": 153,
+        "11": 129
+      },
+      "families": {
+        "schema": 360,
+        "current_determinate": 360,
+        "all_prior_determinate": 142,
+        "clear_NO": 60,
+        "contradiction_independent": 177,
+        "target_UNKNOWN_or_aggregation": 239,
+        "clear_YES": 120
+      }
+    },
+    "T1": {
+      "count": 540,
+      "sha256": "565a1217f57f7bd40d292d121d249e91216c6bbe0f28fc5c5886792f41176c17",
+      "joint_gold": {
+        "UNKNOWN/NO": 60,
+        "NO/UNKNOWN": 60,
+        "UNKNOWN/YES": 60,
+        "NO/NO": 60,
+        "NO/YES": 60,
+        "UNKNOWN/UNKNOWN": 60,
+        "YES/UNKNOWN": 60,
+        "YES/NO": 60,
+        "YES/YES": 60
+      },
+      "prior_counts": {
+        "9": 325,
+        "8": 215
+      },
+      "families": {
+        "schema": 540,
+        "all_prior_determinate": 202,
+        "contradiction_independent": 267,
+        "target_UNKNOWN_or_aggregation": 419,
+        "current_determinate": 360,
+        "clear_NO": 60,
+        "clear_YES": 60
+      }
+    },
+    "T2": {
+      "count": 540,
+      "sha256": "f08701269f093f37c6cb4c3c06486b85796a4877770dced451eeb97ad9d2eb30",
+      "joint_gold": {
+        "UNKNOWN/UNKNOWN": 60,
+        "NO/UNKNOWN": 60,
+        "NO/YES": 60,
+        "UNKNOWN/NO": 60,
+        "NO/NO": 60,
+        "YES/NO": 60,
+        "UNKNOWN/YES": 60,
+        "YES/YES": 60,
+        "YES/UNKNOWN": 60
+      },
+      "prior_counts": {
+        "14": 183,
+        "13": 138,
+        "15": 219
+      },
+      "families": {
+        "schema": 540,
+        "target_UNKNOWN_or_aggregation": 420,
+        "current_determinate": 360,
+        "contradiction_independent": 277,
+        "all_prior_determinate": 189,
+        "clear_NO": 60,
+        "clear_YES": 60
+      }
+    },
+    "V1": {
+      "count": 360,
+      "sha256": "859bace4282e7717cf2f281322ea559032f28b0478c379762b470e08c749457b",
+      "joint_gold": {
+        "YES/YES": 56,
+        "UNKNOWN/UNKNOWN": 56,
+        "NO/UNKNOWN": 56,
+        "NO/NO": 8,
+        "YES/NO": 8,
+        "NO/YES": 56,
+        "UNKNOWN/YES": 56,
+        "YES/UNKNOWN": 56,
+        "UNKNOWN/NO": 8
+      },
+      "prior_counts": {
+        "6": 94,
+        "5": 58,
+        "7": 145,
+        "3": 20,
+        "4": 35,
+        "2": 8
+      },
+      "families": {
+        "schema": 360,
+        "current_determinate": 240,
+        "all_prior_determinate": 61,
+        "clear_YES": 56,
+        "contradiction_independent": 179,
+        "target_UNKNOWN_or_aggregation": 341,
+        "clear_NO": 8
+      }
+    },
+    "V2": {
+      "count": 360,
+      "sha256": "d7f9b52487a734f5428e55c2d99849033e3f3060983ad28f024f0492f3ddfa1a",
+      "joint_gold": {
+        "UNKNOWN/YES": 56,
+        "YES/YES": 56,
+        "YES/UNKNOWN": 56,
+        "UNKNOWN/UNKNOWN": 56,
+        "NO/NO": 8,
+        "NO/UNKNOWN": 56,
+        "NO/YES": 56,
+        "YES/NO": 8,
+        "UNKNOWN/NO": 8
+      },
+      "prior_counts": {
+        "12": 170,
+        "11": 111,
+        "10": 79
+      },
+      "families": {
+        "schema": 360,
+        "all_prior_determinate": 39,
+        "target_UNKNOWN_or_aggregation": 343,
+        "current_determinate": 240,
+        "clear_YES": 56,
+        "contradiction_independent": 180,
+        "clear_NO": 8
+      }
+    }
+  },
+  "results": {
+    "1": {
+      "comparison": {
+        "joint": {
+          "n": 540,
+          "incumbent_correct": 208,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 0.3851851851851852,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 61.48148148148148,
+          "both_correct": 208,
+          "incumbent_only": 0,
+          "candidate_only": 332,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 2.28597478256455e-100
+        },
+        "current_violation": {
+          "n": 540,
+          "incumbent_correct": 455,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 0.8425925925925926,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 15.74074074074074,
+          "both_correct": 455,
+          "incumbent_only": 0,
+          "candidate_only": 85,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 5.169878828456423e-26
+        },
+        "prior_violation": {
+          "n": 540,
+          "incumbent_correct": 250,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 0.46296296296296297,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 53.7037037037037,
+          "both_correct": 250,
+          "incumbent_only": 0,
+          "candidate_only": 290,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0053823416929744e-87
+        },
+        "schema": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "targeted": {
+          "n": 419,
+          "incumbent_correct": 170,
+          "candidate_correct": 419,
+          "incumbent_accuracy": 0.40572792362768495,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 59.427207637231504,
+          "both_correct": 170,
+          "incumbent_only": 0,
+          "candidate_only": 249,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 2.210859150104178e-75
+        },
+        "candidate_distribution": {
+          "current_violation": {
+            "UNKNOWN": 180,
+            "NO": 180,
+            "YES": 180
+          },
+          "prior_violation": {
+            "NO": 180,
+            "UNKNOWN": 180,
+            "YES": 180
+          }
+        },
+        "noncollapsed": true
+      },
+      "regression": {
+        "clear_YES": {
+          "metric": "joint",
+          "n": 120,
+          "incumbent_correct": 30,
+          "candidate_correct": 120,
+          "incumbent_accuracy": 0.25,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 75.0,
+          "both_correct": 30,
+          "incumbent_only": 0,
+          "candidate_only": 90,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.6155871338926322e-27
+        },
+        "clear_NO": {
+          "metric": "joint",
+          "n": 60,
+          "incumbent_correct": 12,
+          "candidate_correct": 60,
+          "incumbent_accuracy": 0.2,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 80.0,
+          "both_correct": 12,
+          "incumbent_only": 0,
+          "candidate_only": 48,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 7.105427357601002e-15
+        },
+        "contradiction_independent": {
+          "metric": "joint",
+          "n": 182,
+          "incumbent_correct": 37,
+          "candidate_correct": 182,
+          "incumbent_accuracy": 0.2032967032967033,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 79.67032967032966,
+          "both_correct": 37,
+          "incumbent_only": 0,
+          "candidate_only": 145,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 4.484155085839415e-44
+        },
+        "current_determinate": {
+          "metric": "current_violation",
+          "n": 360,
+          "incumbent_correct": 287,
+          "candidate_correct": 360,
+          "incumbent_accuracy": 0.7972222222222223,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 20.27777777777778,
+          "both_correct": 287,
+          "incumbent_only": 0,
+          "candidate_only": 73,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 2.117582368135751e-22
+        },
+        "all_prior_determinate": {
+          "metric": "prior_violation",
+          "n": 185,
+          "incumbent_correct": 72,
+          "candidate_correct": 185,
+          "incumbent_accuracy": 0.3891891891891892,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 61.08108108108108,
+          "both_correct": 72,
+          "incumbent_only": 0,
+          "candidate_only": 113,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.925929944387236e-34
+        },
+        "schema": {
+          "metric": "schema",
+          "n": 360,
+          "incumbent_correct": 360,
+          "candidate_correct": 360,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 360,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        }
+      },
+      "leakage": {
+        "status": "PASS",
+        "normalized_sealed_overlaps": {
+          "T1/H1": 0,
+          "T1/V1": 0,
+          "T1/R1": 0,
+          "T1/H2": 0,
+          "T1/V2": 0,
+          "T1/T2": 0,
+          "T1/R2": 0,
+          "T1/N1": 0,
+          "T1/N2": 0,
+          "T2/H1": 0,
+          "T2/V1": 0,
+          "T2/T1": 0,
+          "T2/R1": 0,
+          "T2/H2": 0,
+          "T2/V2": 0,
+          "T2/R2": 0,
+          "T2/N1": 0,
+          "T2/N2": 0
+        },
+        "package_ignored_sealed_overlaps": {
+          "T1/H1": 0,
+          "T1/V1": 0,
+          "T1/R1": 0,
+          "T1/H2": 0,
+          "T1/V2": 0,
+          "T1/T2": 0,
+          "T1/R2": 0,
+          "T1/N1": 0,
+          "T1/N2": 0,
+          "T2/H1": 0,
+          "T2/V1": 0,
+          "T2/T1": 0,
+          "T2/R1": 0,
+          "T2/H2": 0,
+          "T2/V2": 0,
+          "T2/R2": 0,
+          "T2/N1": 0,
+          "T2/N2": 0
+        },
+        "legacy_states_excluded": 98,
+        "abstract_truth_pattern_overlap_counts": {
+          "T1/H1": 17,
+          "T1/H2": 17,
+          "T2/H1": 18,
+          "T2/H2": 18
+        },
+        "normalization": "Removes IDs, wording, scope decoration and semantically irrelevant prior ordering; retains every resolved primitive and prior multiplicity.",
+        "structural_holdout": "T1 has 8\u20139 prior trials; T2 has 13\u201315; neither count range occurs in either harvest/validation/regression/neighbor pool. Tests use uncertainty at boundaries and reversed determinate order.",
+        "limitation": "The same truth labels, primitive types and existential operation recur. Repeating a compliant prior is logically redundant, so this tests length/composition generalization within a synthetic task, not novel logic or real-task competence.",
+        "training_exposures_audited": 3704
+      },
+      "gate": {
+        "checks": {
+          "joint_gain_at_least_8pp": true,
+          "paired_p_less_than_001": true,
+          "targeted_gain_at_least_10pp": true,
+          "schema_at_least_99percent": true,
+          "no_major_regression": true,
+          "noncollapsed": true,
+          "adapter_changed": true,
+          "base_unchanged": true,
+          "leakage": true
+        },
+        "classification": "ERROR_DRIVEN_PARAMETER_LEARNING_SUPPORTED",
+        "cycle2_authorized": true
+      }
+    },
+    "2": {
+      "comparison": {
+        "joint": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "current_violation": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "prior_violation": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "schema": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "targeted": {
+          "n": 420,
+          "incumbent_correct": 420,
+          "candidate_correct": 420,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 420,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "candidate_distribution": {
+          "current_violation": {
+            "UNKNOWN": 180,
+            "NO": 180,
+            "YES": 180
+          },
+          "prior_violation": {
+            "UNKNOWN": 180,
+            "YES": 180,
+            "NO": 180
+          }
+        },
+        "noncollapsed": true
+      },
+      "retention": {
+        "joint": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "current_violation": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "prior_violation": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "schema": {
+          "n": 540,
+          "incumbent_correct": 540,
+          "candidate_correct": 540,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 540,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "targeted": {
+          "n": 419,
+          "incumbent_correct": 419,
+          "candidate_correct": 419,
+          "incumbent_accuracy": 1.0,
+          "candidate_accuracy": 1.0,
+          "gain_pp": 0.0,
+          "both_correct": 419,
+          "incumbent_only": 0,
+          "candidate_only": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "candidate_distribution": {
+          "current_violation": {
+            "UNKNOWN": 180,
+            "NO": 180,
+            "YES": 180
+          },
+          "prior_violation": {
+            "NO": 180,
+            "UNKNOWN": 180,
+            "YES": 180
+          }
+        },
+        "noncollapsed": true
+      },
+      "regressions": {
+        "R1": {
+          "clear_YES": {
+            "metric": "joint",
+            "n": 120,
+            "incumbent_correct": 120,
+            "candidate_correct": 120,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 120,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "clear_NO": {
+            "metric": "joint",
+            "n": 60,
+            "incumbent_correct": 60,
+            "candidate_correct": 60,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 60,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "contradiction_independent": {
+            "metric": "joint",
+            "n": 182,
+            "incumbent_correct": 182,
+            "candidate_correct": 182,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 182,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "current_determinate": {
+            "metric": "current_violation",
+            "n": 360,
+            "incumbent_correct": 360,
+            "candidate_correct": 360,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 360,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "all_prior_determinate": {
+            "metric": "prior_violation",
+            "n": 185,
+            "incumbent_correct": 185,
+            "candidate_correct": 185,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 185,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "schema": {
+            "metric": "schema",
+            "n": 360,
+            "incumbent_correct": 360,
+            "candidate_correct": 360,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 360,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          }
+        },
+        "R2": {
+          "clear_YES": {
+            "metric": "joint",
+            "n": 120,
+            "incumbent_correct": 120,
+            "candidate_correct": 120,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 120,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "clear_NO": {
+            "metric": "joint",
+            "n": 60,
+            "incumbent_correct": 60,
+            "candidate_correct": 60,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 60,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "contradiction_independent": {
+            "metric": "joint",
+            "n": 177,
+            "incumbent_correct": 176,
+            "candidate_correct": 177,
+            "incumbent_accuracy": 0.9943502824858758,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.5649717514124294,
+            "both_correct": 176,
+            "incumbent_only": 0,
+            "candidate_only": 1,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "current_determinate": {
+            "metric": "current_violation",
+            "n": 360,
+            "incumbent_correct": 360,
+            "candidate_correct": 360,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 360,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "all_prior_determinate": {
+            "metric": "prior_violation",
+            "n": 142,
+            "incumbent_correct": 142,
+            "candidate_correct": 142,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 142,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          },
+          "schema": {
+            "metric": "schema",
+            "n": 360,
+            "incumbent_correct": 360,
+            "candidate_correct": 360,
+            "incumbent_accuracy": 1.0,
+            "candidate_accuracy": 1.0,
+            "gain_pp": 0.0,
+            "both_correct": 360,
+            "incumbent_only": 0,
+            "candidate_only": 0,
+            "both_wrong": 0,
+            "mcnemar_exact_two_sided_p": 1.0
+          }
+        }
+      },
+      "leakage": {
+        "status": "PASS",
+        "normalized_sealed_overlaps": {
+          "T1/H1": 0,
+          "T1/V1": 0,
+          "T1/R1": 0,
+          "T1/H2": 0,
+          "T1/V2": 0,
+          "T1/T2": 0,
+          "T1/R2": 0,
+          "T1/N1": 0,
+          "T1/N2": 0,
+          "T2/H1": 0,
+          "T2/V1": 0,
+          "T2/T1": 0,
+          "T2/R1": 0,
+          "T2/H2": 0,
+          "T2/V2": 0,
+          "T2/R2": 0,
+          "T2/N1": 0,
+          "T2/N2": 0
+        },
+        "package_ignored_sealed_overlaps": {
+          "T1/H1": 0,
+          "T1/V1": 0,
+          "T1/R1": 0,
+          "T1/H2": 0,
+          "T1/V2": 0,
+          "T1/T2": 0,
+          "T1/R2": 0,
+          "T1/N1": 0,
+          "T1/N2": 0,
+          "T2/H1": 0,
+          "T2/V1": 0,
+          "T2/T1": 0,
+          "T2/R1": 0,
+          "T2/H2": 0,
+          "T2/V2": 0,
+          "T2/R2": 0,
+          "T2/N1": 0,
+          "T2/N2": 0
+        },
+        "legacy_states_excluded": 98,
+        "abstract_truth_pattern_overlap_counts": {
+          "T1/H1": 17,
+          "T1/H2": 17,
+          "T2/H1": 18,
+          "T2/H2": 18
+        },
+        "normalization": "Removes IDs, wording, scope decoration and semantically irrelevant prior ordering; retains every resolved primitive and prior multiplicity.",
+        "structural_holdout": "T1 has 8\u20139 prior trials; T2 has 13\u201315; neither count range occurs in either harvest/validation/regression/neighbor pool. Tests use uncertainty at boundaries and reversed determinate order.",
+        "limitation": "The same truth labels, primitive types and existential operation recur. Repeating a compliant prior is logically redundant, so this tests length/composition generalization within a synthetic task, not novel logic or real-task competence.",
+        "training_exposures_audited": 524
+      },
+      "gate": {
+        "checks": {
+          "joint_gain_at_least_4pp": false,
+          "paired_p_less_than_005": false,
+          "t1_retention_loss_at_most_2pp": true,
+          "no_major_regression": true,
+          "schema_at_least_99percent": true,
+          "adapter_changed": true,
+          "base_unchanged": true,
+          "leakage": true
+        },
+        "classification": "SECOND_LEARNING_CYCLE_NOT_ESTABLISHED"
+      }
+    }
+  },
+  "training_compositions": {
+    "1": {
+      "harvest": 1980,
+      "errors": 969,
+      "correct": 1011,
+      "composition": {
+        "error": 969,
+        "counterfactual": 1766,
+        "correct_replay": 969
+      },
+      "total_exposures_per_epoch": 3704,
+      "unique_case_ids": 3287,
+      "replay_sampling": "equal round-robin nonempty joint-gold strata with replacement",
+      "all_errors_admitted": true
+    },
+    "2": {
+      "harvest": 1980,
+      "errors": 3,
+      "correct": 1977,
+      "composition": {
+        "error": 3,
+        "counterfactual": 6,
+        "correct_replay": 3,
+        "cycle1_retained_replay": 512
+      },
+      "total_exposures_per_epoch": 524,
+      "unique_case_ids": 408,
+      "replay_sampling": "equal round-robin nonempty joint-gold strata with replacement",
+      "all_errors_admitted": true
+    }
+  },
+  "answers": {
+    "Did trainable parameters actually change?": "Yes for the scientific adapter(s); initial/final tensor fingerprints and artifact hashes differ.",
+    "Did base weights remain frozen?": "Yes: all loaded base parameters, buffers and NF4 quantization states matched before and after each completed scientific training cycle.",
+    "Did M0 mistake training improve unseen M1 behavior?": "M1 changed sealed T1 joint accuracy by +61.48 points (exact paired p=2.2859748e-100); the full registered learning claim passed.",
+    "Did targeted errors improve?": "The fixed UNKNOWN/aggregation subset changed by +59.43 points. Field and family results above define the scope of that observation.",
+    "Did existing strengths survive?": "The no-major-regression gate passed; interpret it using the measured baseline scores, since not every intended strength probe was strong for M0.",
+    "Is the improvement distinguishable from memorization/leakage?": "No sealed normalized state entered training or replay. Held-out prior counts test composition beyond the harvest lengths; recurring templates and abstract logic remain shared, so broad transfer or absence of all memorization is not established.",
+    "Did M2 learn from M1\u2019s own mistakes?": "M2 parameters were updated from every verified M1 H2 mistake, with fixed neighbors and replay. Further sealed behavioral improvement was not demonstrated when both models reached 540/540; its second-cycle gate did not pass.",
+    "Did M2 retain M1\u2019s gains?": "T1 retention changed by +0.00 points; registered retention gate passed.",
+    "What exact capability is established?": "One-cycle externally supervised error-driven parameter learning on this bounded synthetic task; a second-cycle success is not established.",
+    "What separates this from RSI?": "RSI still requires useful real tasks, authenticated consequences, autonomous diagnosis and bounded change proposals with predictions, protected authorization, implementation, sealed real-task validation, retention and repetition by the improved system. This externally designed pipeline establishes none of that autonomy."
+  },
+  "completed_scientific_cycles": [
+    "1",
+    "2"
+  ],
+  "adapter_hashes": {
+    "1": {
+      "before": "05a49580e58338827c11c149bf829968c6f650f32212c0fa748f0f6bc6da09b4",
+      "after": "ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01"
+    },
+    "2": {
+      "before": "ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01",
+      "after": "309d15f606e9f2c21bedf328d88705b72bacb9d1d49d3aa0198ce7f978ec4e3a"
+    }
+  },
+  "training_recovery": {
+    "status": "PASS",
+    "events": [
+      {
+        "status": "PASS",
+        "event": "User-reported computer restart during scientific training; cause not independently established",
+        "resume_checkpoint": "M1-recovery-step-000250",
+        "checkpoint_files_rehashed": 4,
+        "frozen_files_verified": 33,
+        "base_shards_rehashed": 8,
+        "exact_package_lock_unchanged": true,
+        "last_logged_pre_restart_update": 256,
+        "resume_completed_update": 250,
+        "completed_updates_to_recompute": 6,
+        "recipe_changed": false,
+        "data_changed": false,
+        "completed_harvest_repeated": false,
+        "pre_restart_last_record": {
+          "epoch": 1,
+          "examples_seen": 2048,
+          "gradient_norm": 5.822385719511658e-05,
+          "learning_rate": 7.622298065984074e-05,
+          "loss": 3.214814499941099e-06,
+          "step": 256,
+          "wall_seconds": 8214.22
+        },
+        "pre_restart_last_monitor_record": {
+          "elapsed_seconds": 8198.7,
+          "gpu_free_GiB": 4.119140625,
+          "gpu_temperature_C": 67.0,
+          "linux_available_GiB": 58.8370246887207,
+          "windows_free_GiB": 103.37435150146484,
+          "stop_reason": null
+        },
+        "wall_time_note": "Final frozen runner wall_seconds will cover the resumed process; aggregate recorded active duration must also include the pre-restart recorded interval. Downtime and unlogged in-flight work are not measured.",
+        "initial_adapter_archive": "/mnt/d/horus-research-assets/qwen3-14b-qlora-v0/study-adapters/M1-initial-pre-restart-1"
+      },
+      {
+        "status": "PASS",
+        "event": "GPU telemetry command returned exit 255; unchanged watchdog terminated its child. GPU telemetry responding again; underlying cause not established.",
+        "resume_checkpoint": "M1-recovery-step-000900",
+        "checkpoint_files_rehashed": 4,
+        "frozen_files_verified": 33,
+        "base_shards_rehashed": 8,
+        "exact_package_lock_unchanged": true,
+        "last_logged_pre_restart_update": 913,
+        "resume_completed_update": 900,
+        "completed_updates_to_recompute": 13,
+        "recipe_changed": false,
+        "data_changed": false,
+        "completed_harvest_repeated": false,
+        "pre_restart_last_record": {
+          "epoch": 2,
+          "examples_seen": 7304,
+          "gradient_norm": 4.4380980398273095e-05,
+          "learning_rate": 1.4789533560864619e-06,
+          "loss": 1.9166078160104405e-06,
+          "step": 913,
+          "wall_seconds": 12702.39
+        },
+        "monitor_interruption": {
+          "reason": "Command '['nvidia-smi', '--query-gpu=memory.free,temperature.gpu', '--format=csv,noheader,nounits']' returned non-zero exit status 255.",
+          "child_exit": -15,
+          "elapsed_seconds": 12726.51039892
+        },
+        "initial_adapter_archive": "/mnt/d/horus-research-assets/qwen3-14b-qlora-v0/study-adapters/M1-initial-pre-restart-1"
+      }
+    ],
+    "initial_artifact_files_identical_after_recovery": {
+      "README.md": true,
+      "adapter_config.json": false,
+      "adapter_model.safetensors": true
+    },
+    "initial_adapter_config_semantically_identical": true,
+    "initial_artifact_comparison_note": "Initial adapter tensor file and README are byte-identical. adapter_config.json differs only in ordering of target_modules serialized from an unordered set across processes; normalized configs are identical. The frozen runtime asserted the same exact 280 targeted projections at every load.",
+    "retained_optimizer_updates": 926,
+    "retained_training_exposures": 7408,
+    "logged_discarded_completed_updates": 19,
+    "logged_discarded_completed_exposures": 152,
+    "minimum_physical_completed_updates": 945,
+    "minimum_physical_completed_exposures": 7560,
+    "recorded_pre_restart_training_process_seconds": 20916.61,
+    "resumed_training_process_seconds": 801.77,
+    "combined_recorded_active_seconds": 21718.38,
+    "duration_scope": "Sum of the last logged update elapsed time from each interrupted process and the complete final resumed process elapsed time. Excludes downtime and any unlogged work at interruption; therefore a recorded lower bound, not exact elapsed calendar time.",
+    "recipe_or_data_changed": false,
+    "completed_harvest_repeated": false,
+    "sealed_results_used_for_recovery": false
+  }
+}

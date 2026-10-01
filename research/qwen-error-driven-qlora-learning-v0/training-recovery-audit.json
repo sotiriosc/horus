@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "events": [
+    {
+      "status": "PASS",
+      "event": "User-reported computer restart during scientific training; cause not independently established",
+      "resume_checkpoint": "M1-recovery-step-000250",
+      "checkpoint_files_rehashed": 4,
+      "frozen_files_verified": 33,
+      "base_shards_rehashed": 8,
+      "exact_package_lock_unchanged": true,
+      "last_logged_pre_restart_update": 256,
+      "resume_completed_update": 250,
+      "completed_updates_to_recompute": 6,
+      "recipe_changed": false,
+      "data_changed": false,
+      "completed_harvest_repeated": false,
+      "pre_restart_last_record": {
+        "epoch": 1,
+        "examples_seen": 2048,
+        "gradient_norm": 5.822385719511658e-05,
+        "learning_rate": 7.622298065984074e-05,
+        "loss": 3.214814499941099e-06,
+        "step": 256,
+        "wall_seconds": 8214.22
+      },
+      "pre_restart_last_monitor_record": {
+        "elapsed_seconds": 8198.7,
+        "gpu_free_GiB": 4.119140625,
+        "gpu_temperature_C": 67.0,
+        "linux_available_GiB": 58.8370246887207,
+        "windows_free_GiB": 103.37435150146484,
+        "stop_reason": null
+      },
+      "wall_time_note": "Final frozen runner wall_seconds will cover the resumed process; aggregate recorded active duration must also include the pre-restart recorded interval. Downtime and unlogged in-flight work are not measured.",
+      "initial_adapter_archive": "/mnt/d/horus-research-assets/qwen3-14b-qlora-v0/study-adapters/M1-initial-pre-restart-1"
+    },
+    {
+      "status": "PASS",
+      "event": "GPU telemetry command returned exit 255; unchanged watchdog terminated its child. GPU telemetry responding again; underlying cause not established.",
+      "resume_checkpoint": "M1-recovery-step-000900",
+      "checkpoint_files_rehashed": 4,
+      "frozen_files_verified": 33,
+      "base_shards_rehashed": 8,
+      "exact_package_lock_unchanged": true,
+      "last_logged_pre_restart_update": 913,
+      "resume_completed_update": 900,
+      "completed_updates_to_recompute": 13,
+      "recipe_changed": false,
+      "data_changed": false,
+      "completed_harvest_repeated": false,
+      "pre_restart_last_record": {
+        "epoch": 2,
+        "examples_seen": 7304,
+        "gradient_norm": 4.4380980398273095e-05,
+        "learning_rate": 1.4789533560864619e-06,
+        "loss": 1.9166078160104405e-06,
+        "step": 913,
+        "wall_seconds": 12702.39
+      },
+      "monitor_interruption": {
+        "reason": "Command '['nvidia-smi', '--query-gpu=memory.free,temperature.gpu', '--format=csv,noheader,nounits']' returned non-zero exit status 255.",
+        "child_exit": -15,
+        "elapsed_seconds": 12726.51039892
+      },
+      "initial_adapter_archive": "/mnt/d/horus-research-assets/qwen3-14b-qlora-v0/study-adapters/M1-initial-pre-restart-1"
+    }
+  ],
+  "initial_artifact_files_identical_after_recovery": {
+    "README.md": true,
+    "adapter_config.json": false,
+    "adapter_model.safetensors": true
+  },
+  "initial_adapter_config_semantically_identical": true,
+  "initial_artifact_comparison_note": "Initial adapter tensor file and README are byte-identical. adapter_config.json differs only in ordering of target_modules serialized from an unordered set across processes; normalized configs are identical. The frozen runtime asserted the same exact 280 targeted projections at every load.",
+  "retained_optimizer_updates": 926,
+  "retained_training_exposures": 7408,
+  "logged_discarded_completed_updates": 19,
+  "logged_discarded_completed_exposures": 152,
+  "minimum_physical_completed_updates": 945,
+  "minimum_physical_completed_exposures": 7560,
+  "recorded_pre_restart_training_process_seconds": 20916.61,
+  "resumed_training_process_seconds": 801.77,
+  "combined_recorded_active_seconds": 21718.38,
+  "duration_scope": "Sum of the last logged update elapsed time from each interrupted process and the complete final resumed process elapsed time. Excludes downtime and any unlogged work at interruption; therefore a recorded lower bound, not exact elapsed calendar time.",
+  "recipe_or_data_changed": false,
+  "completed_harvest_repeated": false,
+  "sealed_results_used_for_recovery": false
+}
