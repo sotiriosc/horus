@@ -13,13 +13,21 @@ def messages(ports,reset,ledger,allowed=None,query=None,target=None):
   assert query is not None;data['query_probe']=query;instruction=PREDICT
   if target is not None:data['control_target']=target
  return [{'role':'system','content':instruction},{'role':'user','content':json.dumps(data,separators=(',',':'))}]
+def strict_json(text):
+ def pairs(items):
+  out={}
+  for k,v in items:
+   if k in out:raise ValueError('Duplicate JSON key')
+   out[k]=v
+  return out
+ return json.loads(text,object_pairs_hook=pairs)
 def parse_probe(text,allowed):
- x=json.loads(text)
+ x=strict_json(text)
  assert type(x) is dict and set(x)=={'probe'} and type(x['probe']) is list
  assert all(type(a) is str for a in x['probe']) and x['probe'] in allowed
  return x['probe']
 def parse_prediction(text,sensors,length):
- x=json.loads(text);assert type(x) is dict and set(x)=={'predicted_observations'}
+ x=strict_json(text);assert type(x) is dict and set(x)=={'predicted_observations'}
  obs=x['predicted_observations'];assert type(obs) is list and len(obs)==length
  assert all(type(row) is dict and set(row)==set(sensors) and all(type(v) is int and v in (0,1) for v in row.values()) for row in obs)
  return obs
