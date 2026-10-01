@@ -1,0 +1,297 @@
+{
+  "active_gate": {
+    "all_required": {
+      "baseline_and_integrity_pass": true,
+      "legal_selection_and_short_prediction_schemas_all_valid": true,
+      "mean_uncertainty_area_ratio_at_most": 0.9,
+      "median_paired_information_advantage_bits_at_least": 1.0,
+      "short_exact_gain_at_least_pp": 8,
+      "strictly_smaller_final_H_worlds_at_least": 78,
+      "world_paired_prediction_p_below": 0.01
+    },
+    "comparison": "A-P",
+    "name": "ACTIVE_EVIDENCE_ACQUISITION_SUPPORTED"
+  },
+  "analysis": {
+    "authority": "UNVERIFIED_MODEL_HYPOTHESIS; cannot rewrite observations, Memory or established relations.",
+    "malformed_analysis": "Record schema failure and forward exact raw text as unverified to legal selection. No repair or repeat. Campaign continues; the strict schema gate cannot pass.",
+    "malformed_prediction": "Entire expected trace gets zero exact, bit and step credit. No repair or repeat.",
+    "result_alternatives": "A and B strings begin step=N;sensor=NAME;bit=V;meaning=. A is favored expected outcome; B is contradictory alternative. Meaning prose is never correctness evidence.",
+    "schema": "Exact fields and nested string objects in interface.ANALYSIS_SHAPE."
+  },
+  "arms": {
+    "A": "One model selection per experiment using generic evidence-acquisition instruction and finite legal-ID constraint.",
+    "P": "Fixed twelve-probe schedule, independent of target, observations and outputs. No selection calls.",
+    "T": "One provisional Time/Relation/Direction analysis, then one selection using the same legal-ID constraint as A. Only the selection ID authorizes execution.",
+    "no_enumeration_scientific_arm": "Latest user instruction specifies exactly P/A/T. Offline oracle is qualification/evaluation only.",
+    "prediction_interface": "Identical across all arms: complete twelve-probe authenticated ledger, reset observation and one query; no provisional analyses.",
+    "previous_T_analysis": "Only the immediately preceding analysis is supplied as explicitly unverified model hypothesis to the next analysis. All executed observations remain fully present."
+  },
+  "base_sha": "b4f195ff651fca5b31b2182aa4e56a6cfcd425ad",
+  "contribution_metrics": {
+    "controlled_contrast": "Compared with at least one prior distinct probe: a one-action prefix/suffix extension, an adjacent swap, or a repeated-terminal-action extension. Count at most once per selected decision. Useful iff realized IG>1e-12 and at least one matched comparison has different final sensor observations.",
+    "costs": "Report executed probes, actuator actions, generated/prompt tokens, model calls and wall time separately. Probe-efficiency does not imply compute-efficiency.",
+    "curves": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12
+    ],
+    "direction_control": "Expected mutual information between the selected observation trace and each frozen planner candidate attaining the known target, averaged over the eight candidates. Also report newly resolved target-attainment propositions and realized target-uncertainty change, including negative changes.",
+    "direction_primary": "Reduction of evaluator uncertainty about the fixed sealed short/long predictions; never fed back to model.",
+    "efficiency_area": "Per-world sum over t=1..12 of log2(H_t)/log2(H_0), divided by12. Smaller is better; every step collected without extra inference.",
+    "generic": [
+      "pre/post H",
+      "eliminated count",
+      "realized bits",
+      "expected IG",
+      "best legal IG",
+      "midrank",
+      "regret",
+      "expected/worst posterior size"
+    ],
+    "grounded_falsification_T": "Both stated A/B alternatives parse to the same valid sensor and in-probe step, opposite bits, both possible under H before execution. Count favored-expectation falsification only if actual outcome matches B. Never infer truth of the surrounding causal prose. No comparable A/P prose is collected; do not claim an intent comparison.",
+    "ranks": "Midrank over79; ties tolerance1e-12. Top quartile requires positive IG and midrank<=79/4. All-zero ties do not qualify.",
+    "relation_contrast": "One-action prefix/suffix extension; record nonzero final-observation delta separately. This is a scoped experimental contrast, not proof of a context-free causal rule.",
+    "relations_added": "Increase in number of contextual-endpoint and reversed-order delta cards whose values agree across H. Finite candidate-family entailment only; no global independence claim.",
+    "repetition": "Exact same reset sequence; after a valid first observation it has mathematically zero IG. No anti-repeat policy is encoded.",
+    "temporal_constraints_added": "Increase in number of actuator/sensor onset cards whose value agrees across all consistent roots. Onset is first change from reset on AAA within three steps; 0 means none in this tested horizon, not no possible delayed effect.",
+    "time_contrast": "Reversal/adjacent-order swap or repeated-terminal-action extension with a prior probe; no assertion that elapsed time alone has been isolated."
+  },
+  "control": {
+    "budget": "Four reset control probes, each three actions; report both units.",
+    "gate": "TRIANGULATION_CONTROL_BENEFIT_SUPPORTED",
+    "gate_requirements": {
+      "additional_T_successes_vs_each_comparator_at_least": 6,
+      "all_control_selection_analysis_prediction_schemas_valid": true,
+      "both_two_sided_mcnemar_holm_p_below": 0.05,
+      "integrity_pass": true,
+      "mean_T_minus_comparator_probes_on_common_success_worlds_at_most": 0.5,
+      "no_common_success_worlds": "gate fails"
+    },
+    "planner_candidates": "Eight seeded legal three-action probes. Shared across arms and frozen before inference.",
+    "planner_depth": 3,
+    "planner_width": 8,
+    "predictions": "Eight A0 predictions per arm from that arm frozen discovery ledger and known target. Same prediction prompt for all.",
+    "selection": "Predicted final-state Hamming distance to target; malformed prediction distance5; ties frozen candidate order. Execute top four from reset, stop at actual target. No oracle or replanning.",
+    "target_generation": "Uniform random four-bit target drawn independently of hidden program and candidate order; offline reject whole candidate if target equals reset or not attained by exactly one of eight seeded candidate probes. Target reveals no correct candidate index or program.",
+    "target_revelation": "Identical frozen target provided to P/A/T public arm context BEFORE discovery, as explicitly authorized by user. Passive schedule remains independent."
+  },
+  "decoder": {
+    "decoding": "Greedy; same model, adapter, tokenizer/template, context and constraint for A and T.",
+    "mechanism": "Dynamic token trie over exact JSON {\"probe_id\":\"Pnnn\"} plus EOS for presented legal IDs. HF prefix_allowed_tokens_fn masks every other token to negative infinity.",
+    "not_permitted": [
+      "posthoc correction",
+      "nearest legal probe",
+      "retry poor choice",
+      "deterministic substitute",
+      "oracle action choice"
+    ],
+    "prediction_format": "Same product-token grammar across P/A/T enforces exact JSON, sensor names, trace length and integer bit domain. Only model logits choose bits. This is a prospectively qualified technical change after a synthetic-only length failure.",
+    "runtime_malfunction": "If finite-language invariant fails, stop as technical failure; never execute an invalid action.",
+    "validation": "Assert exact complete legal token path including EOS and every step zero illegal-token support. Audit raw constrained branch probabilities."
+  },
+  "hypotheses": {
+    "class": "Ordered product of four roots from the new full-behavior-deduplicated finite catalogue. Uniform independent root prior conditioned on public reset. Sampling strata and qualification do not further restrict H.",
+    "evaluator": "Exact root-factorized filtering, joint trace partition counts, entropy, expected/worst posterior counts. No evaluator outputs in model prompts.",
+    "root_deduplication": "Exact reachable finite-state Mealy equivalence preserving actuator labels, not equality on short traces.",
+    "sampling": "One root each from interaction, delay, latch and repetition groups, then randomly permute sensor slots."
+  },
+  "incumbent": {
+    "adapter_sha256": "ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01",
+    "base": "Qwen/Qwen3-14B@231c69a380487f6c0e52d02dcf0d5456d1918201",
+    "base_and_adapter_updates": false
+  },
+  "long_gate": {
+    "all_required": {
+      "T_exact_accuracy_at_least": 0.5,
+      "all_long_prediction_schemas_valid": true,
+      "both_world_paired_prediction_holm_p_below": 0.01,
+      "exact_gain_T_minus_A_at_least_pp": 8,
+      "exact_gain_T_minus_P_at_least_pp": 8,
+      "long_baselines_and_integrity_pass": true
+    },
+    "name": "SHORT_TO_LONG_CAUSAL_EXTRAPOLATION_SUPPORTED"
+  },
+  "original_design_commit": "f03613c19ac066056335b4125e478d3bf824d63b",
+  "over_active_gate": {
+    "comparison": "T-A",
+    "definition": "The T-A prediction, information, efficiency, controlled-contrast, schema and integrity components of the primary gate, using its Holm-adjusted prediction p. Report even if T-P fails.",
+    "name": "TRIANGULATION_OVER_ACTIVE_SUPPORTED"
+  },
+  "population": {
+    "arms": [
+      "P",
+      "A",
+      "T"
+    ],
+    "control_worlds": 40,
+    "discovery_probes": 12,
+    "long_endpoints_per_arm": 360,
+    "long_lengths": [
+      4,
+      5,
+      6
+    ],
+    "long_queries_per_primary_world": 3,
+    "planned_model_calls": 9600,
+    "primary_worlds": 120,
+    "short_endpoints_per_arm": 600,
+    "short_queries_per_primary_world": 5
+  },
+  "primary_gate": {
+    "all_required": {
+      "T_analysis_and_all_short_prediction_schemas_valid": true,
+      "T_useful_controlled_contrast_fraction_at_least": 0.25,
+      "all_baselines_at_most": 0.3,
+      "all_legal_selection_outputs_valid": true,
+      "both_world_paired_prediction_holm_p_below": 0.01,
+      "leakage_oracle_auth_replay_audits_pass": true,
+      "mean_normalized_uncertainty_area_ratio_T_to_each_at_most": 0.9,
+      "mean_useful_controlled_contrasts_T_minus_A_per_world_at_least": 1.0,
+      "median_paired_final_information_advantage_bits_each_comparator_at_least": 1.0,
+      "paired_information_sign_p_each_below": 0.01,
+      "short_exact_gain_T_minus_A_at_least_pp": 8,
+      "short_exact_gain_T_minus_P_at_least_pp": 8,
+      "strictly_smaller_final_H_worlds_each_comparator_at_least": 78
+    },
+    "name": "TRIANGULATION_EVIDENCE_ACQUISITION_SUPPORTED"
+  },
+  "prohibitions": [
+    "training",
+    "base/adapter updates",
+    "oracle policy",
+    "post-result method changes",
+    "merge",
+    "promotion",
+    "automatic follow-up training or RSI study"
+  ],
+  "qualification": {
+    "all_prior_worlds_excluded": "All 3440 prior causal worlds, all 160 frozen active-causal worlds including unexecuted ones, and all engineering worlds; graph isomorphism under actuator/sensor renaming.",
+    "candidate_cap_per_population": 50000,
+    "long_baselines_upper_bound": {
+      "last_observation": 0.0,
+      "per_step_marginal_then_hold_step3": 0.0,
+      "repeat_last_executed_probe_trace": 0.0,
+      "reset": 0.0
+    },
+    "long_queries": "Aperiodic for every period 1,2,3; at least one change after step3 relative to step3.",
+    "marginal": "Per-sensor/step majority over observed traces reaching that step; tie0; fallback reset. For query steps beyond3 hold step3 estimate. Same query-independent predictor within an arm/world.",
+    "minimum_passive_minus_oracle_final_bits": 2.0,
+    "oracle_budget": 12,
+    "oracle_catalogue": "Same 79 legal choices; greedy expected IG, ties original sequence catalogue order. Never A/T policy.",
+    "oracle_must_identify": "All five short and all three long reserved query traces.",
+    "registered_baseline_ceiling": 0.3,
+    "short_baselines_upper_bound": {
+      "arbitrary_common_trace": 0.2,
+      "last_observation": 0.0,
+      "reset": 0.0
+    },
+    "short_queries": "All five internally nonconstant and mutually distinct complete traces."
+  },
+  "raw_protocol": {
+    "immutable": "No scientific response or score may change world/query sets, model/adapter, settings, gates, prompts, budget or ID mappings.",
+    "order": [
+      "freeze method and worlds",
+      "execute entire frozen campaign",
+      "hash and commit authenticated raw evidence",
+      "score correctness and all contribution metrics",
+      "zero-inference byte-identical replay",
+      "full history/private/preservation audits",
+      "publish branch only",
+      "STOP"
+    ],
+    "private": [
+      "authority keys",
+      "raw signed streams",
+      "raw analyses and model outputs",
+      "hidden world programs",
+      "model binaries",
+      "private databases"
+    ],
+    "technical_interruption": "Never repeat a durably completed response. A request with a durable intent but no durable complete response may be resumed with identical semantic input, frozen settings and fresh inference state, recording an interruption and attempt number; at most three attempts per logical request. No experiment is executed until one complete response is durable. This is technical recovery only, never triggered by response quality."
+  },
+  "reservation": {
+    "catalogue": "All 84 length-1/2/3 sequences; reserve five length-3 queries first; give IDs only to remaining 79.",
+    "legal_ID_mapping": "Shuffle all 79 legal sequences using prospective world PRNG; enumerate stable opaque P000...P078. IDs do not encode shortest-first or information ranking.",
+    "long_queries": "One independently seeded sequence of each length 4,5,6 per world, fixed before inference. Never legal discovery actions.",
+    "passive_schedule": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ]
+    ],
+    "patterns": [
+      "AAA",
+      "AAB",
+      "ABA",
+      "ABB",
+      "ABC"
+    ],
+    "procedure": "Seeded uniform draw within each equality pattern excluding Passive schedule. Reject whole world/query candidate on offline qualification failure. No replacement after model behavior.",
+    "why_length3": "A shorter reserved query would be exposed by an allowed longer prefix."
+  },
+  "seeds": {
+    "control": 914072,
+    "control_targets_and_candidates": 914073,
+    "engineering": 817031,
+    "primary": 914071,
+    "runtime": 20260930
+  },
+  "status": "PROSPECTIVE_REGISTRATION_BEFORE_SCIENTIFIC_WORLD_SELECTION",
+  "study": "Horus Triangulation Learning v0",
+  "tests": {
+    "control": "Two-sided exact paired McNemar, Holm correction across T-P/T-A at alpha=.05.",
+    "information": "One-sided exact paired sign test on cumulative-bit differences; abs(delta)<=1e-12 ties dropped; all ties p=1.",
+    "multiplicity": "Each named gate is separately reported; primary T contrasts use Holm. Required conjunctions are intersection-union claims, not opportunities to select a favorable component.",
+    "prediction": "One-sided exact paired sign-flip test of per-machine correct-query-count differences; whole machines remain intact. Dynamic programming computes exact tail; zero differences retained as neutral. Holm correction for the T-P/T-A pair at alpha=.01. Endpoint McNemar is descriptive only."
+  }
+}

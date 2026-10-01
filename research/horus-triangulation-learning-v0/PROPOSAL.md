@@ -1,3 +1,5 @@
+> Historical design proposal. The latest execution request and `prospective-registration.json` supersede tentative arm counts, interfaces and gates below. The scientific Time/Relation/Direction principle is retained.
+
 # Horus Triangulation Learning v0 — prospective proposal
 
 **Status: design only; not a Method Freeze. No worlds selected, model calls made, or parameters updated.** The original request is preserved verbatim in `user-request.txt`.

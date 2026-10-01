@@ -1,0 +1,538 @@
+Continue the Horus research program from the current local design branch:
+research/horus-triangulation-learning-v0
+Current local design commit:
+f03613c
+The preceding active-causal study is terminal and published at:
+b4f195ff651fca5b31b2182aa4e56a6cfcd425ad
+Classification:
+ACTIVE_CAUSAL_STUDY_TERMINATED_INVALID_DISCOVERY_SELECTION
+Do not alter that study.
+Its termination established an important interface lesson:
+The scientific question must not be terminated merely because the model attempts to select an unavailable experiment.
+The next study must make illegal experiment selection impossible while preserving model authority over WHICH legal experiment to choose.
+Horus Triangulation Learning v0
+The conceptual framework already preserved at f03613c remains the scientific basis:
+Time + Relation + Direction → controlled contrast → consequence → eliminate possibilities → smallest next useful experiment
+Do not reduce this to ordinary information-gain argmax.
+Do not hard-code the triangulation strategy.
+The model itself must reason about:
+- what remains unresolved,
+- how time constrains it,
+- what relational comparison could expose it,
+- what present direction/objective matters,
+- and which legal experiment should be executed next.
+Reality/evaluator remains external.
+First task: repair the experiment-selection interface before Method Freeze
+Every machine has a finite legal discovery catalogue.
+Assign each legal probe an opaque stable ID:
+P000
+P001
+P002
+...
+
+The mapping from ID → actuator sequence is model-visible.
+Reserved sealed probes must NEVER appear in this legal catalogue.
+Example:
+{
+  "legal_probes": [
+    {"id": "P003", "sequence": ["K7"]},
+    {"id": "P017", "sequence": ["Q2", "K7"]},
+    {"id": "P044", "sequence": ["M4", "K7", "Q2"]}
+  ]
+}
+
+The model must not reconstruct a sequence free-form.
+It chooses only an opaque ID from the presented legal catalogue.
+Constrained legal choice
+Implement a study-local finite-choice constrained decoder.
+At the final action-selection stage, the only syntactically possible outputs must correspond to currently legal probe IDs.
+Preferred implementation:
+- build a dynamic token trie / prefix constraint over all legal JSON outputs;
+- use the frozen HF Qwen inference stack;
+- constrain generation to exactly:
+{"probe_id":"P017"}
+
+where the value must be one of the current legal IDs.
+If a robust dynamic finite-choice constraint cannot be implemented with the current HF stack, STOP before Method Freeze and report the technical issue.
+Do NOT:
+- repair an invalid output afterward,
+- map an illegal probe to the nearest legal probe,
+- retry until the model chooses legally,
+- fall back to a deterministic experiment,
+- let the evaluator choose the experiment.
+The correct solution is to define the model's action space so illegal actions have zero generative support.
+This is analogous to an agent choosing among legal moves in a game.
+It does NOT choose the move for the model.
+Equal interface across scientific arms
+Use three matched arms.
+P — Passive
+Frozen deterministic 12-probe schedule.
+No model experiment selection.
+A — Active
+Same model.
+Same legal catalogue.
+Same 12-experiment budget.
+Generic instruction:
+Choose the legal experiment that you expect will provide the most useful evidence about how this unfamiliar machine works.
+
+Selection uses the exact same constrained finite-choice decoder as Triangulation.
+T — Triangulation
+Same model.
+Same legal catalogue.
+Same 12-experiment budget.
+Same constrained finite-choice decoder.
+But before each choice, perform an explicit triangulation analysis.
+This isolates:
+generic active exploration vs the user's Time/Relation/Direction method.
+Two-stage Triangulation decision
+For Arm T only, each experiment consists of two model stages.
+Stage 1 — Analysis
+Model sees:
+- complete authenticated experiment ledger,
+- legal probe catalogue,
+- remaining budget,
+- current target/direction where applicable.
+Ask for:
+{
+  "unresolved_question": "...",
+  "time": {
+    "known_constraints": "...",
+    "remaining_temporal_uncertainty": "..."
+  },
+  "relation": {
+    "known_relations": "...",
+    "comparison_needed": "..."
+  },
+  "direction": {
+    "current_objective": "...",
+    "why_this_uncertainty_matters": "..."
+  },
+  "candidate_experiment_logic": "...",
+  "what_result_A_would_mean": "...",
+  "what_result_B_would_mean": "..."
+}
+
+This output is a MODEL HYPOTHESIS/PLAN.
+It is not authoritative truth.
+It cannot alter Memory or authenticated observations.
+Stage 2 — Legal experiment selection
+Feed:
+- the same ledger,
+- the Stage-1 triangulation analysis,
+- the legal probe catalogue.
+Then force selection through the finite legal-choice decoder:
+{"probe_id":"P044"}
+
+Only Stage 2 selects the executed experiment.
+Observation vs hypothesis boundary
+Preserve a strict distinction:
+AUTHENTICATED OBSERVATION
+
+versus:
+MODEL HYPOTHESIS
+
+Observations may include:
+- executed probe,
+- reset state,
+- observed sensor trace,
+- timing,
+- experiment index.
+Hypotheses may include:
+- suspected interaction,
+- temporal bound,
+- suppression/amplification,
+- possible order effect,
+- unresolved causal explanation.
+A hypothesis can NEVER become an established relation merely because the model repeats it.
+Only executed consequences constrain what is supportable.
+The user's Triangulation Principle
+Preserve the following operational philosophy.
+A hidden truth may have many observable faces, but truthful observations must remain mutually compatible with one underlying reality.
+Do not attempt to observe the hidden variable directly when controlled differences can constrain it.
+Use three axes:
+TIME
+Ask:
+- when does the effect appear?
+- how long does it persist?
+- does it decay?
+- does order matter?
+- does repetition matter?
+- does prior state change the result?
+Temporal evidence should constrain which explanations remain possible.
+RELATION
+Compare controlled contexts.
+Examples:
+B vs AB
+AB vs BA
+B vs BB
+A vs AC
+
+Use the difference in consequences to identify:
+- direct effects,
+- modifiers,
+- suppression,
+- amplification,
+- interaction,
+- order dependence,
+- independence.
+Distinguish:
+no direct effect
+
+from:
+no relational effect
+
+DIRECTION
+Ask:
+What distinction presently matters?
+
+Do not reconstruct the entire world when the current objective only requires a particular distinction.
+Direction means:
+- unresolved question,
+- competing explanations,
+- target outcome.
+It does not require psychological intention in the machine.
+Controlled-delta principle
+Prefer the smallest experiment whose difference from existing evidence can isolate something meaningful.
+Examples:
+B
+AB
+
+isolates the influence of preceding A.
+AB
+BA
+
+isolates ordering.
+B
+BB
+
+isolates repetition/state.
+Longer probes should be used only when shorter contrasts cannot resolve the important remaining ambiguity.
+Do NOT tell the model which contrast is correct.
+Falsification principle
+Once a candidate explanation exists, do not merely accumulate confirmation.
+Prefer:
+the smallest legal experiment whose possible outcomes distinguish the incumbent explanation from a viable alternative.
+
+Example:
+observed:
+B causes X
+AB does not
+
+hypothesis:
+A suppresses B
+
+alternative:
+effect depends on order
+
+discriminating experiment:
+BA
+
+The actual outcome determines which explanations survive.
+Contribution
+Operationalize the user's concept:
+Contribution = a verified distinction that reduces what can truthfully remain possible or resolves something relevant to the present direction.
+Do not equate contribution with:
+- number of experiments,
+- number of tokens,
+- amount of computation,
+- confirmation of an existing belief.
+Each executed experiment should later be scored independently for:
+- hypothesis elimination,
+- information gained,
+- temporal constraint added,
+- relational distinction added,
+- direction relevance.
+These scores are evaluator-side only.
+The model never sees its oracle contribution score during this study.
+Environment
+Build a fresh population.
+Do NOT reuse scientific worlds from active-causal v0.
+Reuse the general deterministic reset/probe concept where appropriate.
+Each machine:
+- 4 opaque actuators,
+- observable sensors,
+- deterministic hidden dynamics,
+- interaction effects,
+- order effects,
+- delays,
+- simple persistent state,
+- repeated-action effects,
+- modifier relationships.
+Ensure experiment selection matters.
+Legal probe catalogue
+Start from length 1–3 sequences:
+- 4 one-step,
+- 16 two-step,
+- 64 three-step,
+- 84 total.
+Prospectively reserve sealed prediction probes.
+Reserved queries must be removed BEFORE the legal discovery catalogue is constructed.
+Therefore the model never sees them as legal discovery actions.
+Give opaque IDs only to the remaining legal probes.
+The previous study's interface failure must be impossible by construction.
+Sealed prediction design
+Use policy-independent fixed reservation.
+Reserved probes are selected before scientific inference.
+Both A and T and P face the exact same reserved prediction probes on each matched machine.
+Discovery can never execute them.
+Prevent persistence shortcuts prospectively.
+Require:
+- at least one sensor change in true reserved traces;
+- reset persistence weak;
+- last-observation persistence weak;
+- marginal/common-trace predictor weak.
+Freeze baseline ceilings before inference.
+Population
+Suggested:
+120 matched prediction machines
+Each receives:
+- P: 12 probes
+- A: 12 probes
+- T: 12 probes
+Then:
+5 shared sealed prediction probes per machine
+Total:
+600 prediction endpoints per arm
+Also:
+40 matched control machines
+for downstream goal-directed evaluation.
+Adjust counts only before Method Freeze for computational practicality.
+Do not reduce them after seeing outcomes.
+Objective hidden evaluator
+Maintain finite hypothesis set:
+\[
+H_t = \{\text{all machines consistent with executed evidence}\}
+\]
+The evaluator can compute:
+- |H_t|
+- entropy
+- realized hypothesis elimination
+- expected information value of each legal probe
+- selected-probe rank
+- regret versus best legal probe
+This is NEVER model-visible.
+The evaluator never selects A/T's action.
+Triangulation-specific evaluation
+Beyond generic information gain, evaluate whether T actually follows the proposed method.
+For every executed experiment, retrospectively classify whether it formed a useful:
+- TIME contrast,
+- RELATION contrast,
+- DIRECTION-relevant test,
+- controlled matched contrast,
+- falsification attempt.
+Prefer deterministic structural criteria where possible.
+Model prose alone must NOT establish that triangulation occurred.
+Example:
+If ledger contains:
+B
+
+and model later chooses:
+AB
+
+this may qualify structurally as a relation/context contrast.
+If it chooses:
+BA
+
+after AB, this may qualify as an order contrast.
+Score actual structural relationships between probes.
+Efficiency curves
+Evaluate after:
+- 1 probe
+- 2 probes
+- 3 probes
+- 4 probes
+- 6 probes
+- 8 probes
+- 12 probes
+Report by arm:
+- median remaining |H_t|
+- median log2 |H_t|
+- fraction uniquely identified
+- cumulative information
+- useful controlled contrasts
+- zero-information probes
+- redundant exact repeats
+Do not require additional model inference for these curves.
+Short-to-long extrapolation
+This is a central user's idea.
+Ask:
+Can information obtained from short controlled experiments constrain longer unseen sequences so they do not all need to be executed?
+
+Add a separate sealed extrapolation set containing longer probes, prospectively generated before inference.
+Suggested length:
+- 4–6 actuator sequences.
+None may be executed during discovery.
+Score whether P/A/T can predict these longer traces from their 12-probe evidence.
+Register separately:
+SHORT_TO_LONG_CAUSAL_EXTRAPOLATION_SUPPORTED
+Require T to outperform both P and A prospectively.
+Freeze exact gates before inference.
+Primary comparisons
+The most important comparisons are:
+T vs P
+
+and:
+T vs A
+
+P tells us whether active experimentation helps.
+A tells us whether Triangulation itself adds something beyond simply telling a model to choose informative experiments.
+Do not omit Arm A.
+Otherwise a positive result could not be attributed to triangulation.
+Primary scientific gate
+Define:
+TRIANGULATION_EVIDENCE_ACQUISITION_SUPPORTED
+only if T prospectively beats both P and A on a combination of:
+1. sealed exact prediction;
+2. evidence efficiency / remaining hypothesis set;
+3. information acquired per experiment;
+4. controlled-contrast use;
+5. no schema/interface failures;
+6. persistence baselines;
+7. leakage/oracle-boundary checks.
+Before Method Freeze, choose explicit numeric thresholds.
+Make them demanding but realistically powered for the frozen population.
+Do not alter them afterward.
+Separate interpretation gates
+Also preregister separately:
+ACTIVE_EVIDENCE_ACQUISITION_SUPPORTED
+for A vs P.
+TRIANGULATION_OVER_ACTIVE_SUPPORTED
+for T vs A.
+SHORT_TO_LONG_CAUSAL_EXTRAPOLATION_SUPPORTED
+for held-out longer probes.
+TRIANGULATION_CONTROL_BENEFIT_SUPPORTED
+for downstream goal achievement.
+Never collapse all results into one score.
+Control evaluation
+Use matched fresh control machines.
+After discovery, each arm receives the same target observable state.
+Use an identical frozen planner.
+Planner can use that arm's learned/model-inferred transition predictions.
+It cannot see hidden world state/program.
+Report:
+- success,
+- actions used,
+- failed transitions,
+- whether better discovery produced better control.
+No parameter training
+This study remains inference-only.
+Do NOT:
+- update adapters,
+- train selection policy,
+- modify base,
+- train from contribution scores.
+The purpose is to establish whether triangulation itself produces superior evidence acquisition.
+What follows only if Triangulation succeeds
+Do NOT run automatically.
+A future study may then test:
+experiment choice
+      ↓
+authenticated contribution
+      ↓
+learn which experiments were useful
+      ↓
+parameter update
+      ↓
+improved experiment-selection policy
+      ↓
+new worlds
+      ↓
+fewer experiments needed
+
+That would test whether Horus can improve how it learns.
+It requires separate authorization.
+Scientific boundaries
+Do not call success:
+- RSI,
+- consciousness,
+- general causal intelligence,
+- universal truth discovery.
+A positive result establishes only the bounded experimental capability actually measured.
+Raw-first protocol
+Freeze before scientific inference:
+- Method
+- worlds
+- legal catalogues
+- reserved probes
+- passive schedules
+- prompts
+- hypothesis family
+- scoring
+- gates
+Then:
+1. execute complete campaign;
+2. preserve authenticated raw receipts;
+3. freeze raw evidence;
+4. score only afterward;
+5. replay with zero inference;
+6. require byte-identical results.
+No retries for poor scientific choices.
+Because selection is constrained to the legal action space, illegal reserved-query selection must be structurally impossible.
+Before freezing
+Perform engineering qualification only.
+Verify:
+- constrained legal-ID decoder always produces one of the presented IDs;
+- legal-action probabilities genuinely vary with model/context rather than a parser artifact;
+- Passive/A/T prompts fit context;
+- full 12-experiment ledger fits;
+- sealed queries remain absent from discovery catalogues;
+- no oracle information reaches the model;
+- world generator provides meaningful room for T vs A vs P differences;
+- persistence baselines are weak.
+Do NOT use scientific model outcomes to tune the worlds.
+Completion handoff
+Return:
+- branch
+- exact base
+- design commit
+- Method Freeze
+- World/Data Freeze
+- raw pre-score freeze
+- publication SHA
+- model/base/adapter hashes
+- simulator/hypothesis hashes
+- seeds
+- exact population sizes
+For P/A/T:
+- experiment selections
+- learning curves
+- information gain
+- hypothesis-set reduction
+- controlled contrasts
+- time contrasts
+- relation contrasts
+- objective-relevant probes
+- falsification probes
+- repetitions/redundancy
+- sealed short-query prediction
+- sealed long-sequence extrapolation
+- control results
+Report:
+- A vs P
+- T vs P
+- T vs A
+- all preregistered gates
+- paired significance
+- persistence references
+- leakage
+- oracle-boundary audit
+- authentication/replay
+- preservation/publication audit
+Then answer:
+1. Does choosing experiments actively beat passive observation?
+2. Does Triangulation beat generic active exploration?
+3. Does Time constrain later experimentation?
+4. Do Relation contrasts expose conditional interactions?
+5. Does Direction reduce irrelevant experimentation?
+6. Does T preferentially choose controlled contrasts?
+7. Does T seek falsification rather than confirmation?
+8. Does T reduce uncertainty faster per executed experiment?
+9. Can short experiments support prediction of unseen longer sequences?
+10. Does better experimentation improve control?
+11. Which capabilities came from the model and which from deterministic evaluation/bookkeeping?
+12. Does the evidence justify a separate experiment-selection learning study?
+13. What remains between this and bounded recursive self-improvement?
+Then STOP.
+Do not train.
+Do not merge.
+Do not promote.

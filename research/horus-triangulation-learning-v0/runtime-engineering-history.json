@@ -1,0 +1,19 @@
+[
+  {
+    "attempt": "full-interface-1",
+    "status": "FAIL_SYNTHETIC_LONG_PREDICTION_LENGTH",
+    "scientific_model_calls": 0,
+    "synthetic_model_calls": 6,
+    "schemas_valid": 5,
+    "legal_choice_valid": true,
+    "T_analysis_valid": true,
+    "failure": "Six-action prediction had wrong observation-array length; no scientific calls.",
+    "raw_response_retention": "Initial engineering harness aborted before writing responses; failed response text is unavailable. Exact malformed length is not asserted.",
+    "source_hashes": {
+      "runtime.py": "06764af19c8bb918eb6af609bf7e9a5c08fa89a0c2b4ee07d3e75fb1c4ee3a6b",
+      "interface.py": "e28e43e4d63231e22db3ed30e4c864e77b67e9616b202c1ffd931855ea61dcf6",
+      "qualify_interface.py": "043a5cc604eb0977302d880d677160c5cf075f949e7f3e45db2cb02815d9dcb1"
+    },
+    "resolution": "Prospectively constrain prediction syntax and trace length equally for P/A/T; all sensor bits remain model-selected. Persist each engineering response before validation."
+  }
+]
