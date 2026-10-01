@@ -11,7 +11,7 @@ Read the [complete report and ten completion answers](report.md) or the [structu
 - [Frozen method](method.md), [data/split freeze](data-freeze.json), and [materialized manifest](materialized/manifest.json).
 - [Upstream identity](upstream-provenance.json), [runtime settings](runtime-settings.json), [synthetic qualification and package lock](engineering-qualification.json), and [historical LoRA precedent](historical-learning-precedent.json).
 - [M1 artifact freeze](M1-artifact-freeze.json), [M2 artifact freeze](M2-artifact-freeze.json), [Cycle 1 results](cycle1-results.json), and [Cycle 2 results](cycle2-results.json).
-- [Exact replay audit](replay-audit.json), [private evidence hash audit](private-evidence-audit.json), [preservation audit](preservation-audit.json), [training recovery accounting](training-recovery-audit.json), and [resource accounting](resource-accounting.json).
+- [Exact replay audit](replay-audit.json), [private evidence hash audit](private-evidence-audit.json), [preservation audit](preservation-audit.json), [publication history audit](publication-audit.json), [training recovery accounting](training-recovery-audit.json), and [resource accounting](resource-accounting.json).
 - [Posthoc descriptive breakdown](descriptive-error-analysis.json) separates semantic changes from schema validity and does not modify any registered gate.
 
 ## Reproduction boundary

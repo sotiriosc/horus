@@ -18,7 +18,7 @@ for i in [1,2]:
  result=dict(incumbent_confusion=confusion(a),candidate_confusion=confusion(b),subset_comparisons={})
  for name,ids in subsets.items():
   if ids:result['subset_comparisons'][name]={m:paired([x for x in a if x['id'] in ids],[x for x in b if x['id'] in ids],m) for m in ['joint',*FIELDS]}
- 
+
  for comparisons in result['subset_comparisons'].values():
   for comparison in comparisons.values():comparison.pop('mcnemar_exact_two_sided_p',None)
  harvest=rows(P/f'H{i}-scored.jsonl');result['harvest_error_breakdown']=dict(total_errors=sum(not x['joint'] for x in harvest),schema_invalid=sum(not x['schema'] for x in harvest),current_wrong=sum(not x['current_violation'] for x in harvest),prior_wrong=sum(not x['prior_violation'] for x in harvest),field_confusions=confusion(harvest));out['cycles'][str(i)]=result
