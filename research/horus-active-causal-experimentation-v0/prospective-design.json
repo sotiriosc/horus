@@ -1,0 +1,199 @@
+{
+  "authorization": "User selected fixed reservation: five fixed shared sealed queries, 79 discovery choices; no query replacement based on model behavior.",
+  "base_sha": "0325e055f87e9dd24796aeb5d444dfc30b2dcbaa",
+  "control": {
+    "action_regression": "Active minus Passive mean successful reset-probe count on common-success worlds <=0.5 probes; no common successes => gate fail. Also report unpaired successful-world means.",
+    "budget_unit": "At most four reset control probes, each length 3; at most 12 actuator actions. Report both units.",
+    "discovery": "Identical P and A procedures with private reserved probes excluded.",
+    "fresh_worlds": 40,
+    "gate": "ACTIVE_DISCOVERY_CONTROL_BENEFIT_SUPPORTED iff Active success count >= Passive+6, two-sided exact paired McNemar p<.05, and action-regression rule passes.",
+    "independence": "Does not change either primary or selection gate.",
+    "planner_candidates": "Seeded sample of 8 allowed length-3 probes, independent of labels and model behavior, frozen per machine.",
+    "planner_depth": 3,
+    "planner_width": 8,
+    "prediction_errors": "Full trace errors across all eight frozen candidate predictions, plus selected-execution trace errors.",
+    "predictions": "Eight A0 trace predictions per arm conditioned on its immutable 12-probe ledger and target. No oracle or control outcomes fed into predictions.",
+    "selection": "Rank candidates by predicted final-state Hamming distance to target, invalid prediction distance=5; ties candidate order. Execute first four from reset, stopping on actual target success. No replanning.",
+    "target": "Offline choose first candidate-final observation in that frozen order differing from reset. Reject whole candidate world if no such target. Same target for both arms."
+  },
+  "freshness": {
+    "canonicalization": "Exact inherited tree graph normalization under all 24 actuator permutations and sensor-root permutations; synchronous trees have separate storage; shared actuator leaves only.",
+    "compare_prior_causal_worlds": 3440,
+    "primary_control_engineering_graph_separation": true
+  },
+  "hypotheses": {
+    "definition": "Ordered Cartesian product of four roots from the fixed 576-type reset+84-trace-equivalence quotient catalogue. Distinct canonical structural representative selected lexicographically. Uniform product prior conditioned on public reset observation; qualification does not further restrict evaluator H.",
+    "identifiability": "Final greedy oracle version space must agree on every reserved query. Unique full machine identification is descriptive, not required.",
+    "measurement": "Exact factorization over sensor roots, independently tested against explicit joint enumeration. Joint trace partition is Cartesian product of per-sensor partitions. All 79 allowed probe scores are computed only after raw freeze."
+  },
+  "limits": [
+    "No training, policy modification, merge, promotion, next study, or oracle action policy.",
+    "Endpoint McNemar is user-required; five endpoints share each world, so inference must also discuss within-world dependence.",
+    "Qualification favors worlds with room for Active gains. Claims are conditional on this qualified family, not arbitrary deterministic systems."
+  ],
+  "metrics": {
+    "comparisons": "Unordered pairs of distinct executed sequence types: reversal; same multiset/different order; single-action versus longer sequence ending in that actuator; distinct prefixes with same terminal actuator. Report descriptively; cannot infer deliberateness from counts alone.",
+    "cumulative_realized_bits": "log2(initial H) minus log2(current H), nonnegative because observations only filter.",
+    "information_curve_statistics": [
+      "median H",
+      "median log2 H",
+      "fraction H=1",
+      "median cumulative realized bits",
+      "mean cumulative realized bits"
+    ],
+    "information_curve_steps": [
+      0,
+      3,
+      6,
+      9,
+      12
+    ],
+    "rank": "Midrank among 79 current allowed probes; scores tied within 1e-12. Top quartile iff positive expected IG and midrank <=79/4. All-zero ties are not top quartile.",
+    "regret": "Best currently allowed expected IG minus selected expected IG, floored at zero. Pooled median across 1440 discovery decisions per primary arm.",
+    "repeats": "Exact sequence identity; a deterministic repeated reset probe must have zero IG after its first observation. Describe this mathematical property, do not add an anti-repeat rule."
+  },
+  "population": {
+    "control_worlds": 40,
+    "discovery_probes_per_arm": 12,
+    "prediction_endpoints_per_arm": 600,
+    "primary_worlds": 120,
+    "queries_per_primary_world": 5
+  },
+  "primary_gate": {
+    "all_required": {
+      "active_all_primary_output_schema_fraction_at_least": 0.99,
+      "active_exact_gain_percentage_points_at_least": 8,
+      "active_prediction_schema_fraction_at_least": 0.99,
+      "all_baselines_at_most": 0.3,
+      "median_paired_active_minus_passive_cumulative_bits_at_least": 1.0,
+      "no_world_or_query_leakage": true,
+      "oracle_boundary_pass": true,
+      "two_sided_exact_endpoint_mcnemar_p_below": 0.01,
+      "worlds_with_strictly_smaller_active_final_H_at_least": 78
+    },
+    "name": "ACTIVE_CAUSAL_EVIDENCE_ACQUISITION_SUPPORTED"
+  },
+  "raw_first": {
+    "order": [
+      "freeze method and worlds",
+      "execute and authenticate all discovery and prediction calls",
+      "freeze control predictions then execute fixed planner",
+      "hash private raw streams and commit public raw manifest",
+      "score correctness and information metrics",
+      "replay from frozen raw without inference and compare score bytes",
+      "audit preservation and secret-free reachable history",
+      "publish branch only",
+      "STOP"
+    ],
+    "private_only": [
+      "authority key",
+      "raw model outputs and token IDs",
+      "signed raw receipts",
+      "private world programs",
+      "private databases",
+      "adapter and base binary weights"
+    ],
+    "recovery": "No retry of any completed response. A crash after a request is issued but before a durable complete response is recorded is an ambiguous inference: fail closed and report, do not regenerate. Reuse completed durable records only."
+  },
+  "reservation": {
+    "abstract_passive_schedule": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ]
+    ],
+    "discovery_catalogue": "Exactly all 84 length-1/2/3 sequences minus five reserved sequences; model sees only these 79.",
+    "lengths": "All five length 3. Shorter reservations are infeasible with 79 discovery probes and full-trace returns: their outcomes would be exposed by allowed longer prefixes. User allowed length distribution where feasible.",
+    "procedure": "For each candidate machine, draw one three-action sequence uniformly from each equality pattern 000,001,010,011,012, excluding the fixed passive schedule. Ordered PRNG draws and code are committed before scientific selection. Reject a whole world/query candidate on offline qualification failure; never replace a query after model execution. Same five fixed queries for both arms.",
+    "query_order": "000,001,010,011,012 pattern order; no outcome or model-dependent reorder."
+  },
+  "runtime": {
+    "adapter_sha256": "ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01",
+    "base": "Qwen/Qwen3-14B@231c69a380487f6c0e52d02dcf0d5456d1918201",
+    "batch_size": 1,
+    "context": 4096,
+    "decoding": "greedy, thinking disabled, preserved HF tokenizer/template, fresh request KV state",
+    "invalid_discovery": "Immediately stop the entire scientific campaign as a protocol failure; preserve raw outputs and receipts. No replacement probe, retry, substitute policy, or 12-probe completion claim.",
+    "invalid_prediction": "Count exact, bit and step scores as zero for the entire expected trace; retain schema failure; continue fixed endpoints.",
+    "maximum_new_tokens": 256,
+    "schema_mechanism": "Prompt-specified strict JSON and independent exact validation; no constrained decoding, repairs, retries or critics.",
+    "technical_changes": "Increase context from 1536 to 4096 and generation limit from 96 to 256; qualify only synthetically before Method Freeze. Batch reduced from 4 to 1 after synthetic-only prefill exceeded the preserved 75% GPU memory cap; no completed responses or scientific calls in failed attempt.",
+    "weights": "Every parameter requires_grad=False; no optimizer or training. NF4 double quantization and BF16 compute unchanged."
+  },
+  "seeds": {
+    "control": 851704,
+    "control_planner": 851705,
+    "engineering": 715019,
+    "primary": 851703,
+    "runtime": 20260930
+  },
+  "selection_gate": {
+    "all_required": {
+      "active_pooled_median_regret_at_most_fraction_of_passive": 0.8,
+      "active_top_quartile_decision_fraction_at_least": 0.5,
+      "one_sided_exact_paired_sign_test_cumulative_IG_p_below": 0.01,
+      "passive_pooled_median_regret_strictly_positive": true
+    },
+    "name": "INFORMATIVE_EXPERIMENT_SELECTION_SUPPORTED",
+    "test": "Across 120 paired machine cumulative-IG differences. Discard ties abs(delta)<=1e-12; exact binomial upper tail with p=.5. All ties => p=1."
+  },
+  "status": "PROSPECTIVE_SELECTION_RULES_NOT_YET_METHOD_FREEZE",
+  "study": "Horus Active Causal Experimentation v0",
+  "world_qualification": {
+    "all_reserved_traces_distinct": true,
+    "all_reserved_traces_nonconstant_in_time": true,
+    "baseline_ceiling_exact": 0.3,
+    "baseline_guarantee": "Constant reset or last-observation repetition cannot match any internally nonconstant trace. Any actuator-independent predictor producing one common three-step trace across queries can match at most 1/5, including arbitrary ledger-fitted or oracle-fitted predictors.",
+    "failure": "STOP before inference; do not weaken qualifications or change seed after examining A0 results.",
+    "last_observation_predictor": "Repeat the final sensor state of the last executed discovery probe for all three steps.",
+    "marginal_operational_predictor": "Per-step per-sensor majority across executed discovery traces that reach that step, ties zero; fallback reset bit if no sample. Identical predicted sequence for every length-3 query.",
+    "maximum_candidates_per_population": 50000,
+    "minimum_passive_minus_oracle_final_log2_count": 2.0,
+    "oracle": "Greedy maximum expected information gain over the 79 allowed probes; ties catalogue order; 12 reset probes. Offline qualification only, never Active action selection.",
+    "oracle_reserved_query_identifiability_required": true
+  }
+}

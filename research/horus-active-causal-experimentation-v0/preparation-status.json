@@ -1,17 +1,4 @@
 {
-  "status": "PREPARATION_ONLY_NOT_METHOD_FREEZE",
-  "base": "0325e055f87e9dd24796aeb5d444dfc30b2dcbaa",
-  "branch": "research/horus-active-causal-experimentation-v0",
-  "scientific_model_calls": 0,
-  "training_steps": 0,
-  "method_frozen": false,
-  "worlds_selected": false,
-  "publication_performed": false,
-  "pending_user_decision": {
-    "conflict": "All 84 probes are allowed discovery choices, but the same five preselected sealed probes must remain unexecuted in both arms. Unrestricted Active choices can overlap them.",
-    "recommended_amendment": "Precommit an ordered eligible query bank and select its first five probes absent from both discovery ledgers, using only probe identities and no model predictions or post-execution scores. Requires user acceptance because exact five queries become ledger-dependent.",
-    "alternative": "Reserve five fixed sealed probes and remove them from discovery, reducing Active choices to 79. Requires user acceptance because discovery no longer offers all 84."
-  },
   "additional_prospective_requirements": [
     "Baseline qualification must hold for the eventual query-selection mechanism, not merely the whole candidate bank.",
     "Last-observation persistence must be weak for arbitrary Active ledgers; nonconstant within-query traces can rule out all constant-state persistence predictions.",
@@ -19,28 +6,38 @@
     "Context, output length and schema qualification must use synthetic fixtures before Method Freeze.",
     "No scientific result may influence method, world selection, prompts or decoding."
   ],
+  "base": "0325e055f87e9dd24796aeb5d444dfc30b2dcbaa",
+  "branch": "research/horus-active-causal-experimentation-v0",
+  "method_frozen": false,
+  "pending_user_decision": null,
+  "publication_performed": false,
   "registered_gate_thresholds_requested": {
+    "control": {
+      "additional_successes_minimum": 6,
+      "paired_p_strictly_below": 0.05,
+      "successful_action_regression_definition": "Must specify prospectively",
+      "worlds": 40
+    },
     "primary": {
-      "exact_gain_percentage_points": 8,
-      "paired_mcnemar_p_strictly_below": 0.01,
-      "median_information_gain_advantage_bits": 1.0,
-      "smaller_version_space_worlds_minimum": 78,
-      "worlds": 120,
       "active_schema_validity_minimum": 0.99,
-      "trivial_baseline_ceiling_proposed": 0.3,
+      "exact_gain_percentage_points": 8,
+      "median_information_gain_advantage_bits": 1.0,
+      "no_leakage_required": true,
       "oracle_boundary_pass_required": true,
-      "no_leakage_required": true
+      "paired_mcnemar_p_strictly_below": 0.01,
+      "smaller_version_space_worlds_minimum": 78,
+      "trivial_baseline_ceiling_proposed": 0.3,
+      "worlds": 120
     },
     "selection": {
       "median_regret_reduction_minimum": 0.2,
-      "top_quartile_decision_fraction_minimum": 0.5,
-      "paired_nonparametric_test": "Must specify prospectively"
-    },
-    "control": {
-      "worlds": 40,
-      "additional_successes_minimum": 6,
-      "paired_p_strictly_below": 0.05,
-      "successful_action_regression_definition": "Must specify prospectively"
+      "paired_nonparametric_test": "Must specify prospectively",
+      "top_quartile_decision_fraction_minimum": 0.5
     }
-  }
+  },
+  "reservation_decision": "Fixed five-query reservation authorized; remaining 79 allowed. See prospective-design.json.",
+  "scientific_model_calls": 0,
+  "status": "PREPARATION_ONLY_NOT_METHOD_FREEZE",
+  "training_steps": 0,
+  "worlds_selected": false
 }
