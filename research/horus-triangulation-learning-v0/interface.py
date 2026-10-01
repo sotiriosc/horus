@@ -41,6 +41,7 @@ def parse_prediction(text,sensors,length):
  return obs
 
 def messages(ports,reset,ledger,mode,legal=None,analysis=None,previous_analysis=None,query=None,target=None):
+ hypothesis=None;hypothesis_label=None
  data=dict(actuators=ports['actuators'],sensors=ports['sensors'],reset_observation=reset,authenticated_experiments=ledger,exact_probe_repeat_counts=dict(sorted(Counter(','.join(x['probe']) for x in ledger).items())))
  if mode in ('analysis','choice'):
   assert legal is not None
@@ -48,15 +49,18 @@ def messages(ports,reset,ledger,mode,legal=None,analysis=None,previous_analysis=
   if target is not None:data['current_objective']='Learn distinctions useful for reaching the supplied target.';data['target']=target
   if mode=='analysis':
    instruction=ANALYSIS;data['required_analysis_shape']=ANALYSIS_SHAPE
-   if previous_analysis is not None:data['previous_model_hypothesis']=dict(authority='UNVERIFIED_MODEL_HYPOTHESIS',raw_text=previous_analysis)
+   if previous_analysis is not None:hypothesis=previous_analysis;hypothesis_label='previous_model_hypothesis'
   else:
    instruction=CHOICE
-   if analysis is not None:data['triangulation_analysis']=dict(authority='UNVERIFIED_MODEL_HYPOTHESIS',raw_text=analysis)
+   if analysis is not None:hypothesis=analysis;hypothesis_label='triangulation_analysis'
  elif mode=='prediction':
   assert query is not None;instruction=PREDICT;data['query_probe']=query
   if target is not None:data['control_target']=target
  else:raise ValueError(mode)
- return [{'role':'system','content':instruction},{'role':'user','content':json.dumps(data,separators=(',',':'))}]
+ content=json.dumps(data,separators=(',',':'))
+ if hypothesis is not None:
+  content+='\n'+hypothesis_label+' (UNVERIFIED_MODEL_HYPOTHESIS; exact raw text follows):\n'+hypothesis
+ return [{'role':'system','content':instruction},{'role':'user','content':content}]
 
 def synthetic_fixture():
  ports=dict(actuators=['K7','Q2','N4','W8'],sensors=['V9','R3','Z8','M6']);reset=dict.fromkeys(ports['sensors'],0)
