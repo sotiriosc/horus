@@ -1,0 +1,954 @@
+Continue the Horus research program in:
+
+`https://github.com/sotiriosc/horus`
+
+Create a new prospective study:
+
+# Horus Active Causal Experimentation v0
+
+Suggested branch:
+
+`research/horus-active-causal-experimentation-v0`
+
+Base from the exact verified publication:
+
+`0325e055f87e9dd24796aeb5d444dfc30b2dcbaa`
+
+Preserve every prior result unchanged.
+
+---
+
+# Motivation
+
+The immediately preceding study reported:
+
+`CAUSAL_WORLD_MODEL_LEARNING_NOT_ESTABLISHED`
+
+C0 → C1 produced:
+
+- exact prediction: `249/480 → 273/480`
+- sensor-bit accuracy: `84.06% → 87.34%`
+- all three causal families improved
+- control: `8/40 → 11/40`
+- temporal retention: `540/540`
+- adapter changed
+- base stayed frozen
+- leakage/authentication/replay audits passed
+
+However, a posthoc persistence reference scored:
+
+`264/480`
+
+versus C1:
+
+`273/480`
+
+Therefore the previous environment did not cleanly isolate robust causal inference.
+
+More importantly, the previous experiment supplied a **fixed 64-action diagnostic history**.
+
+The model was never allowed to decide:
+
+> What experiment should I perform next to distinguish between competing explanations of this machine?
+
+This study tests that missing capability.
+
+---
+
+# Scientific question
+
+Can a frozen Horus/Qwen incumbent learn an unfamiliar deterministic machine **more efficiently by actively selecting informative experiments** than by receiving the same number of experiments from a fixed passive schedule?
+
+Conceptually:
+
+```text
+observe
+   ↓
+remember what has already been tried
+   ↓
+consider what is still uncertain
+   ↓
+choose an experiment
+   ↓
+execute it
+   ↓
+authenticated observation
+   ↓
+compare with prior experiments
+   ↓
+choose the next experiment differently
+```
+
+This study is about:
+
+**active evidence acquisition**
+
+not parameter learning.
+
+---
+
+# No training in this study
+
+Do NOT:
+
+- fine-tune
+- update LoRA
+- modify model weights
+- train an exploration policy
+- modify S/E
+- promote the prior causal C1 adapter
+
+The exact same frozen model must be used throughout.
+
+If active experimentation works, training the experiment-selection behavior will be a separately authorized follow-up.
+
+---
+
+# Incumbent model
+
+Use the last positively established model, not the failed causal candidate.
+
+Call it:
+
+`A0`
+
+A0 is:
+
+- `Qwen/Qwen3-14B@231c69a380487f6c0e52d02dcf0d5456d1918201`
+- plus the successful temporal-learning M1 adapter:
+  `ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01`
+
+Do NOT use causal C1 adapter:
+
+`9e80029c33e9c0bbfa394be2d5a88de076c70747e57cdd1369b1ad324cb17136`
+
+because its registered causal-learning gate failed.
+
+Verify exact base and adapter identity before Method Freeze.
+
+---
+
+# Core design change: controlled experiments
+
+Instead of one continuous 64-action diagnostic trajectory, give the agent a sequence of **controlled probe experiments**.
+
+Every probe begins from the same known machine reset state.
+
+A probe consists of an actuator sequence of length 1–3.
+
+Example:
+
+```json
+{
+  "probe": ["K7", "Q2", "K7"]
+}
+```
+
+The simulator resets the machine, executes those actions in order, and returns the observable sensor trace:
+
+```json
+{
+  "probe": ["K7", "Q2", "K7"],
+  "observations": [
+    {"V9": 0, "R3": 1, "Z8": 0},
+    {"V9": 1, "R3": 1, "Z8": 0},
+    {"V9": 0, "R3": 0, "Z8": 1}
+  ]
+}
+```
+
+This creates controlled experiments that can be compared directly.
+
+It allows the agent to test questions like:
+
+- What happens when I use B alone?
+- What happens when A precedes B?
+- Does reversing A/B change the result?
+- Does repeating A matter?
+- Does an effect appear only after two steps?
+- Does C alter the effect of B?
+
+Resetting before probes removes accidental confounding from an uncontrolled long trajectory while still allowing stateful/delayed effects within each probe.
+
+---
+
+# Probe catalogue
+
+Use exactly 4 opaque actuators per machine.
+
+For actuator set:
+
+`[A, B, C, D]`
+
+or independently randomized opaque names,
+
+the allowed probe catalogue contains every length:
+
+- 1
+- 2
+- 3
+
+sequence, including repeated actuators.
+
+Therefore:
+
+- 4 one-step probes
+- 16 two-step probes
+- 64 three-step probes
+
+Total:
+
+**84 possible probes**
+
+The model must choose only from this finite allowed catalogue.
+
+Randomize port names independently per machine.
+
+No semantic actuator names.
+
+---
+
+# Machine family
+
+Build new fresh machines.
+
+Do not reuse prior scientific worlds.
+
+The frozen DSL should contain combinations that reward comparative experimentation, for example:
+
+- direct effects
+- NOT effects
+- AND/OR interactions
+- conditional effects
+- action-order interactions
+- delayed effects
+- simple latch/state within a probe
+- effects that occur only after repeated activation
+- one actuator modifying another actuator's effect
+
+Every machine must combine multiple relations.
+
+Do not create trivial single-rule lookup machines.
+
+All dynamics remain deterministic.
+
+Freeze exact synchronous semantics prospectively.
+
+---
+
+# Finite hypothesis family
+
+The world generator must support an independently enumerable finite hypothesis class.
+
+For every machine, the study-side evaluator must be able to maintain:
+
+```text
+H_t = every candidate machine still consistent
+      with all executed probe results so far
+```
+
+This is crucial for measuring information acquisition objectively.
+
+The model MUST NOT see:
+
+- H_t
+- hidden candidate programs
+- hypothesis counts
+- oracle action scores
+- hidden state
+- causal graphs
+
+Those exist only for evaluation.
+
+---
+
+# Matched arms
+
+Each machine is run independently in two matched arms from the identical reset state.
+
+## Arm P — Passive
+
+The model does NOT choose probes.
+
+Use a prospectively frozen fixed schedule of:
+
+**12 probes**
+
+The schedule must:
+
+- include lengths 1, 2 and 3
+- cover all actuators
+- include some interactions
+- be independent of observations
+- be independent of model outputs
+- be identical in abstract form across machines after port renaming
+
+The model receives the resulting 12 executed experiments.
+
+---
+
+## Arm A — Active Horus
+
+A0 chooses each of its 12 probes sequentially.
+
+Before choosing probe `t`, provide:
+
+1. allowed probe catalogue
+2. all prior executed probes
+3. observations from each prior probe
+4. current experiment number
+5. remaining experiment budget
+
+Do not provide hidden information.
+
+Model output:
+
+```json
+{
+  "probe": ["K7", "Q2"]
+}
+```
+
+Optionally allow:
+
+```json
+{
+  "probe": ["K7", "Q2"],
+  "purpose": "free text"
+}
+```
+
+but `purpose` is never authoritative or scored.
+
+Only `probe` selects the experiment.
+
+---
+
+# Active instruction
+
+Use a short frozen operational instruction.
+
+Something similar to:
+
+> You are investigating an unfamiliar deterministic machine.
+>
+> Choose the next experiment that you expect will most reduce uncertainty about how its actuators influence its observable sensors.
+>
+> Use the results of experiments already performed. Compare experiments when useful to distinguish direct effects, interactions, ordering and delays.
+>
+> Repeating an experiment is allowed when repetition itself is informative. Do not repeat an experiment merely because it is familiar.
+>
+> You have a limited experiment budget. Choose one allowed probe.
+
+Do NOT give:
+
+- causal answers
+- decision trees
+- examples with solutions
+- oracle information-gain values
+
+---
+
+# Experiment ledger
+
+The model-visible history must explicitly preserve what has already been tried.
+
+For every previous probe show:
+
+```json
+{
+  "experiment": 4,
+  "probe": ["K7", "Q2"],
+  "observations": [...]
+}
+```
+
+Also provide a deterministic summary:
+
+```json
+{
+  "exact_probe_repeat_counts": {
+    "K7,Q2": 1,
+    "Q2": 2
+  }
+}
+```
+
+This summary contains only executed history.
+
+It is NOT a causal inference.
+
+Its purpose is to prevent the model from having to reconstruct basic experimental bookkeeping from prose.
+
+Do not mark a repeated probe as good or bad.
+
+---
+
+# Authenticated experiment receipts
+
+Every executed probe must create a study receipt binding:
+
+- world ID/hash
+- arm
+- experiment index
+- model identity
+- adapter hash
+- previous ledger hash
+- selected probe
+- reset-state hash
+- complete observed trace
+- resulting ledger hash
+- authorization/authentication data
+
+Only executed experiments become part of history.
+
+No unexecuted probe outcome enters model-visible context.
+
+---
+
+# Objective information-value evaluator
+
+Create an independent evaluator that is NEVER model-visible.
+
+Given current hypothesis set `H_t`, compute for every available probe:
+
+- partition of H_t by predicted observation trace
+- expected posterior hypothesis count
+- expected entropy reduction / information gain
+- worst-case remaining hypothesis count
+
+For the actually chosen probe, preserve:
+
+- pre-probe |H_t|
+- post-probe |H_(t+1)|
+- realized hypothesis elimination
+- expected information gain
+- best available probe information gain
+- information-gain regret
+- rank of selected probe among the 84 candidates
+
+This does NOT select the active action.
+
+It only tells us afterward whether the experiment was informative.
+
+---
+
+# Important anti-hardcoding rule
+
+Do NOT turn the oracle evaluator into the policy.
+
+The active model itself must choose the probe.
+
+Do not implement:
+
+```text
+argmax information_gain
+```
+
+as Horus' decision rule.
+
+That would answer the research question with deterministic software.
+
+The oracle is evaluation only.
+
+---
+
+# World qualification
+
+Before Method/World Freeze, use the oracle only to ensure the environment genuinely rewards active experimentation.
+
+For candidate worlds, compare:
+
+- frozen passive 12-probe schedule
+- greedy oracle 12-probe schedule
+
+Require a meaningful prospective information gap.
+
+For example, accepted worlds should have the greedy oracle reduce final uncertainty materially more than the passive schedule.
+
+Freeze the exact qualification threshold before selecting scientific worlds.
+
+This prevents building worlds where experiment choice does not matter.
+
+Do NOT use A0 performance in world qualification.
+
+---
+
+# Primary scientific population
+
+Use:
+
+**120 fresh matched machines**
+
+Each machine runs:
+
+- Passive arm: 12 probes
+- Active arm: 12 probes
+
+Both then receive the same machine-specific sealed prediction evaluation.
+
+This yields paired comparisons.
+
+---
+
+# Sealed prediction evaluation
+
+After the 12-probe discovery phase, freeze the discovery ledger for that arm.
+
+Then ask the model to predict outcomes for:
+
+**5 sealed probe queries per machine**
+
+Total:
+
+`120 × 5 = 600 prediction endpoints per arm`
+
+These sealed probes:
+
+- were generated before scientific execution
+- were not among that arm's executed discovery probes
+- do not reveal their actual outcome until all predictions are frozen
+- use the same hidden machine in each paired arm
+
+Input contains:
+
+- that arm's 12-experiment discovery ledger
+- one sealed query probe
+
+Required output:
+
+```json
+{
+  "predicted_observations": [
+    {...},
+    {...}
+  ]
+}
+```
+
+matching the query probe length.
+
+Score:
+
+- exact full-trace accuracy
+- sensor-bit accuracy
+- step-wise accuracy
+
+---
+
+# Destroy the persistence shortcut
+
+The prior study was contaminated by a strong persistence reference.
+
+Do not allow that again.
+
+Before World/Data Freeze, construct sealed prediction queries so that:
+
+- at least one observable sensor changes somewhere in the true trace
+- trivial reset-state repetition is not sufficient
+- trivial last-observation persistence remains prospectively weak
+
+Compute deterministic baselines:
+
+- reset-state persistence
+- last-observation persistence where defined
+- actuator-independent marginal predictor
+
+Require all trivial baselines to remain below a prospectively frozen ceiling.
+
+Suggested exact ceiling:
+
+**<=30% exact trace accuracy**
+
+across the complete sealed prediction set.
+
+If candidate world/query construction cannot satisfy this without post-model tuning:
+
+STOP and redesign before scientific inference.
+
+---
+
+# Learning curves
+
+Do NOT add thousands of additional model calls.
+
+Use the independent version-space evaluator to report evidence acquisition after:
+
+- 0 probes
+- 3 probes
+- 6 probes
+- 9 probes
+- 12 probes
+
+For each arm report:
+
+- median |H_t|
+- median log2 |H_t|
+- fraction of machines uniquely identified
+- cumulative realized information gain
+
+This creates a learning curve without extra model inference.
+
+---
+
+# Repetition / exploration metrics
+
+Report descriptively:
+
+- exact repeated probes
+- repeated probes that still produced positive information gain
+- repeated probes with zero information gain
+- unique probe count
+- unique actuator sequences
+- action-order comparisons
+- reversed-order comparisons such as AB vs BA
+- single-action vs contextual comparisons such as B vs AB
+- same-action different-context comparisons
+- mean selected-probe oracle rank
+- mean/median information-gain regret
+
+Do NOT assume repetition is inherently bad.
+
+A repeated experiment that reduces uncertainty is useful.
+
+---
+
+# Primary registered gate
+
+Register:
+
+`ACTIVE_CAUSAL_EVIDENCE_ACQUISITION_SUPPORTED`
+
+only if ALL are true:
+
+1. Active exact sealed prediction accuracy exceeds Passive by at least **8 percentage points**
+2. paired exact prediction McNemar `p < 0.01`
+3. Active cumulative realized information gain exceeds Passive by at least **1.0 median bit per machine**
+4. Active ends with a smaller consistent hypothesis set than Passive on at least **78/120 machines**
+5. Active exact schema validity >=99%
+6. trivial persistence baselines remain below the frozen ceiling
+7. oracle/hidden-program boundary audit passes
+8. no scientific world/query leakage occurs
+
+Freeze these exact thresholds before scientific inference.
+
+Do not weaken them.
+
+---
+
+# Secondary experiment-selection gate
+
+Separately register:
+
+`INFORMATIVE_EXPERIMENT_SELECTION_SUPPORTED`
+
+if:
+
+- Active's median selected-probe information-gain regret is at least 20% lower than the fixed Passive schedule's corresponding probe regret
+- AND Active selects a top-quartile information-value probe on at least 50% of its experiment decisions
+- AND cumulative information gain exceeds Passive significantly under a prospectively frozen paired nonparametric test
+
+This gate is about the **quality of experiments**, not final predictions.
+
+Do not combine the two gates.
+
+---
+
+# Control phase
+
+Use a separate prospective set of:
+
+**40 fresh machines**
+
+Run the same 12-probe discovery procedure under Passive and Active arms.
+
+After discovery, give each arm an observable target sensor state.
+
+Use the SAME fixed deterministic control planner for both arms.
+
+The planner may query A0 for predicted traces conditioned on that arm's discovery ledger.
+
+The planner must not see hidden machine programs.
+
+Freeze:
+
+- search width
+- search depth
+- action budget
+- target metric
+- tie-breaking
+
+before inference.
+
+Suggested action budget:
+
+**4 control probes/actions**
+
+Report:
+
+- target successes /40
+- paired success comparison
+- mean actions among successful worlds
+- prediction errors during control
+
+Register separately:
+
+`ACTIVE_DISCOVERY_CONTROL_BENEFIT_SUPPORTED`
+
+only if:
+
+- Active succeeds on at least 6 more machines than Passive
+- paired p <0.05
+- mean successful action count does not materially regress
+
+Failure here does NOT invalidate evidence-acquisition success.
+
+---
+
+# Interpretation patterns
+
+## Pattern A
+
+Both primary and experiment-selection gates pass:
+
+`ACTIVE_CAUSAL_EVIDENCE_ACQUISITION_SUPPORTED`
+
+Interpretation:
+
+The frozen model can use prior experiments to choose more informative future experiments and the resulting evidence improves its ability to predict unfamiliar machines.
+
+This is active causal evidence acquisition.
+
+It is NOT parameter learning.
+
+---
+
+## Pattern B
+
+Experiment-selection gate passes but prediction gate fails.
+
+Interpretation:
+
+The model chooses measurably better experiments, but does not yet convert the resulting evidence reliably into better predictions.
+
+This would identify the next bottleneck as evidence utilization rather than exploration.
+
+---
+
+## Pattern C
+
+Prediction improves but experiment-selection gate fails.
+
+Interpretation:
+
+The active trajectory helped prediction, but evidence is insufficient to attribute the benefit to systematically informative experiment selection.
+
+Do not claim active scientific reasoning.
+
+---
+
+## Pattern D
+
+Neither passes.
+
+`ACTIVE_CAUSAL_EVIDENCE_ACQUISITION_NOT_ESTABLISHED`
+
+Publish and stop.
+
+Do not immediately add hard-coded information gain to the policy.
+
+---
+
+# Important distinction
+
+This study deliberately separates:
+
+```text
+choosing useful experience
+```
+
+from:
+
+```text
+learning model parameters from experience
+```
+
+The preceding QLoRA study established bounded parameter learning.
+
+This study asks whether the agent can improve the **quality of experience it acquires**.
+
+Only after this is established should we consider training the experiment-selection policy.
+
+---
+
+# What a successful follow-up would eventually test
+
+Do NOT perform this now.
+
+If active evidence acquisition succeeds, a future separately authorized study may test:
+
+```text
+poor experiment choices
+      ↓
+authenticated experiment utility
+      ↓
+training
+      ↓
+improved exploration policy
+      ↓
+fewer experiments needed on new machines
+```
+
+That would begin testing whether Horus can learn **how to learn more efficiently**.
+
+This branch must stop before that step.
+
+---
+
+# Runtime
+
+Use the exact A0 HF stack from the previous learning studies unless engineering qualification requires a purely technical adjustment.
+
+Keep:
+
+- same base
+- same adapter
+- same tokenizer/template
+- deterministic/greedy decoding
+- no tools
+- no web
+- fresh inference state
+- frozen context limit large enough for the 12-probe ledger
+
+If the complete ledger cannot fit safely:
+
+reduce representation verbosity before Method Freeze.
+
+Do NOT truncate scientific history during execution.
+
+---
+
+# Raw-first protocol
+
+Mandatory for every arm:
+
+1. freeze world set
+2. freeze passive schedule
+3. freeze sealed queries
+4. freeze model prompt/interface
+5. execute discovery
+6. preserve authenticated receipts
+7. execute all sealed predictions
+8. commit/hash raw evidence
+9. only then score model correctness and information-value metrics
+10. zero-inference replay
+11. require byte-identical scoring
+
+No retries for poor experiment choices.
+
+No repair.
+
+No critics.
+
+No result-dependent schedule changes.
+
+---
+
+# Audits
+
+Require:
+
+- base/adapter identity
+- world freshness
+- graph-isomorphism separation
+- sealed probe separation
+- prompt leakage audit
+- hidden-program/oracle boundary audit
+- receipt authentication
+- experiment-ledger reconstruction
+- reset-state reproducibility
+- zero-inference scoring replay
+- prior-branch preservation
+- private artifact exclusion
+
+---
+
+# Preservation
+
+Preserve unchanged:
+
+- causal-machine-learning-v0
+- error-driven QLoRA learning
+- temporal learning results
+- S/E
+- Memory
+- grounded state
+- promoted policy
+- main
+- all prior branches
+
+No merge.
+
+No promotion.
+
+No parameter training.
+
+---
+
+# Completion handoff
+
+Return:
+
+- branch
+- verified base SHA
+- Method Freeze SHA
+- World/Data Freeze SHA
+- raw pre-score SHA
+- publication SHA
+- simulator/DSL hash
+- seeds
+- A0 base/adapter hashes
+- exact machine/query counts
+- persistence-baseline results
+
+For Passive and Active report:
+
+- 12-probe learning curves
+- final hypothesis-set sizes
+- cumulative information gain
+- repeated experiment statistics
+- oracle probe-rank/regret statistics
+- 600 sealed prediction results
+- exact/bit/step accuracy
+- confusion/error analysis
+- 40-machine control results
+
+Then report:
+
+- primary evidence-acquisition gate
+- experiment-selection gate
+- control gate
+- paired significance tests
+- oracle boundary audit
+- leakage audit
+- replay status
+- preservation audit
+
+Answer:
+
+1. Did Active choose more informative experiments than Passive?
+2. Did it avoid wasting experiments on already-resolved questions?
+3. Did it deliberately test interactions/order/context more often?
+4. Did its evidence reduce uncertainty faster?
+5. Did better evidence improve sealed prediction?
+6. Did it improve goal-directed control?
+7. Were repeated experiments used intelligently rather than mechanically avoided?
+8. Did the result survive trivial persistence baselines?
+9. What exact capability is established?
+10. What would need to happen before training an experiment-selection policy is justified?
+
+Then STOP.
+
+The sole scientific purpose is:
+
+**Determine whether Horus can actively choose what to try next, use the consequences of prior experiments to acquire more informative evidence, and thereby understand an unfamiliar causal system more efficiently than passive observation.**
