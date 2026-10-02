@@ -71,10 +71,13 @@ def main(world_sha):
   with os.fdopen(fd,'wb') as f:f.write(os.urandom(32));f.flush();os.fsync(f.fileno())
  stream=Stream(private/'campaign-signed.jsonl',key.read_bytes())
  auth=dict(study='Horus Inquiry State Pilot v0',method_freeze_sha=freeze['method_freeze_sha'],world_freeze_sha=world_sha,adapter_sha256=ADAPTER_SHA,operation='Frozen six-probe inference-only A/B/C pilot; no training')
+ timing=private/'collection-timing.json'
+ if not timing.exists():save(timing,dict(start_unix=time.time(),start_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())))
+ started=json.loads(timing.read_text())
  worlds=[json.loads(x) for x in (private/'worlds.jsonl').read_text().splitlines()];worker=Worker()
  try:collect(worlds,stream,worker,auth)
  finally:worker.close()
- save(P/'raw-freeze.json',dict(status='RAW_COMPLETE_UNSCORED',method_freeze_sha=freeze['method_freeze_sha'],world_freeze_sha=world_sha,private_worlds_sha256=filehash(private/'worlds.jsonl'),private_raw_sha256=filehash(stream.path),authenticated_records=len(stream.records),model_responses=sum(e['kind']=='MODEL_RESPONSE' for e in stream.records),correctness_scored=False,contribution_scored=False))
+ save(P/'raw-freeze.json',dict(status='RAW_COMPLETE_UNSCORED',method_freeze_sha=freeze['method_freeze_sha'],world_freeze_sha=world_sha,private_worlds_sha256=filehash(private/'worlds.jsonl'),private_raw_sha256=filehash(stream.path),collection_started_utc=started['start_utc'],collection_finished_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),collection_wall_seconds=round(time.time()-started['start_unix'],3),authenticated_records=len(stream.records),model_responses=sum(e['kind']=='MODEL_RESPONSE' for e in stream.records),correctness_scored=False,contribution_scored=False))
  print('All384 complete; raw manifest must be committed before scoring.',flush=True)
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--world-freeze',required=True);args=ap.parse_args();main(args.world_freeze)
