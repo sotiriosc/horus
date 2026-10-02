@@ -1,0 +1,258 @@
+Yes. Small pilot first. We already have a very specific failure to test, so there’s no reason to spend another 24 hours yet.
+We should isolate one question:
+Does giving the model a grounded state of what has already been tested—and what comparisons remain available—stop the repeat/zero-information collapse?
+
+No training. No full Triangulation claim. Maybe ~16 worlds, 6 probes, three matched conditions. If there’s a strong signal, then we scale it.
+Codex prompt
+Continue Horus from the verified publication:
+50713caf9b95dadefbf3951ed892909e459effd0
+Create a new small diagnostic pilot, not a full confirmatory study:
+research/horus-inquiry-state-pilot-v0
+Do not modify or reinterpret the completed triangulation result.
+Why this pilot exists
+The completed Triangulation study showed a highly specific pattern.
+Generic Active and Triangulation reduced uncertainty faster than Passive during approximately the first 2–4 probes, but later degraded badly.
+Primary-world results included:
+- Active exact repeats: 714
+- Triangulation exact repeats: 717
+- Active zero-information probes: 859
+- Triangulation zero-information probes: 872
+- Passive zero-information probes: 5
+Passive finished with median:
+log2 H = 2.70
+versus:
+- Active: 6.74
+- Triangulation: 8.84
+The new hypothesis is deliberately narrow:
+The model can initially find informative experiments, but it does not maintain a sufficiently usable state of inquiry describing what has already been resolved and what comparisons remain worth testing.
+
+This pilot tests that hypothesis only.
+No training
+Do NOT:
+- update LoRA;
+- modify model parameters;
+- train from oracle information;
+- alter Horus policy;
+- claim Triangulation;
+- run a large campaign.
+Use the exact positively established incumbent:
+Qwen/Qwen3-14B@231c69a380487f6c0e52d02dcf0d5456d1918201
+plus adapter:
+ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01
+Pilot size
+Use 16 fresh matched worlds.
+Three arms per world.
+Each arm receives 6 discovery experiments.
+After discovery, use 2 shared sealed prediction probes per world.
+This is a screening pilot.
+Do not make broad capability claims from it.
+The purpose is only to decide whether a larger preregistered study is justified.
+Fresh worlds
+Use fresh deterministic reset machines from the existing causal-machine family or a directly compatible fresh generator.
+Require each admitted world to contain at least:
+- one direct relation;
+- one interaction/modifier relation;
+- one order/repetition/temporal distinction.
+Do not use model outcomes to select worlds.
+Freeze all worlds before scientific inference.
+Probe interface
+Use the already-qualified legal opaque-ID constrained decoder.
+Reserved sealed probes do not appear in the legal discovery catalogue.
+Illegal action selection must remain impossible by construction.
+The model chooses a legal probe ID.
+The evaluator never chooses for it.
+Arm A — Baseline Active
+Reproduce the generic Active interface from the completed study as closely as practical:
+- complete authenticated experiment ledger;
+- legal probe catalogue;
+- remaining budget;
+- generic instruction to choose a useful experiment.
+No extra inquiry-state representation.
+Arm B — Grounded bookkeeping
+Same model, worlds, budget and legal choices as A.
+Add a compact deterministic inquiry-state representation derived ONLY from authenticated executed history:
+{
+  "tested_probe_ids": ["P003", "P017"],
+  "untried_probe_ids": ["..."],
+  "experiments_completed": 2,
+  "experiments_remaining": 4
+}
+
+Also state the frozen environmental fact:
+Every probe begins from the identical deterministic reset state. Executing an identical probe again therefore reproduces the same trace and cannot provide new evidence about this machine.
+
+This is not hidden causal information.
+It is a property of the experimental interface.
+Do NOT forbid repeats.
+The model remains free to repeat.
+We want to see whether explicit grounded bookkeeping changes its behavior.
+Arm C — Grounded bookkeeping + contrast frontier
+Same as B.
+Additionally compute a structural contrast frontier from probe syntax and executed history.
+This frontier must contain NO hidden-world information, oracle information gain, causal labels, or recommended action.
+It simply surfaces untried probes that form controlled comparisons with probes already executed.
+Example:
+{
+  "available_contrasts": [
+    {
+      "tested": "P012",
+      "untried": "P031",
+      "structural_relation": "order_reversal"
+    },
+    {
+      "tested": "P007",
+      "untried": "P019",
+      "structural_relation": "added_context"
+    }
+  ]
+}
+
+Allowed structural relations may include:
+- order_reversal
+- repetition_extension
+- added_context
+- removed_context
+- single_vs_sequence
+- one_step_extension
+These labels describe only the sequences themselves.
+They do NOT say:
+- which contrast is useful;
+- which one has high information gain;
+- what causal relation exists;
+- what outcome is expected.
+The model still chooses independently.
+Key boundary
+We are NOT testing whether deterministic software can choose good experiments.
+Deterministic code may remember:
+- what actually happened;
+- what exact probes were executed;
+- which legal probes remain untried;
+- which probe sequences structurally form matched contrasts.
+It may NOT determine:
+- which contrast matters;
+- what hidden relation exists;
+- which experiment has highest information gain;
+- which probe the model should choose.
+Do not carry model hypotheses forward
+This is important.
+Do not automatically place previous model causal explanations into the next decision context.
+Carry forward:
+authenticated observations and deterministic inquiry bookkeeping.
+Do NOT carry forward:
+unverified prose hypotheses merely because the model previously produced them.
+Each decision may infer fresh provisional hypotheses from the evidence.
+This tests whether model self-generated narratives were contributing to fixation.
+Outcomes
+The independent evaluator may calculate, after execution:
+- exact repeats;
+- zero-information probes;
+- cumulative information bits;
+- remaining hypothesis-set size;
+- selected-probe oracle rank/regret;
+- useful controlled contrasts;
+- temporal contrasts;
+- relational contrasts;
+- unique probe sequences;
+- sealed prediction accuracy.
+None of these evaluator values are model-visible.
+Learning curves
+Report after probe:
+1, 2, 3, 4, 6
+for A/B/C:
+- median log2(H);
+- cumulative information;
+- exact repeats;
+- zero-information probes;
+- useful contrasts.
+We specifically want to know whether B/C preserve the good early Active trajectory rather than collapsing after the first few experiments.
+Pilot go/no-go criteria
+This is a diagnostic pilot, so do not manufacture a formal competence claim.
+Before inference freeze simple scale-up criteria.
+Recommend authorizing a larger confirmatory study only if B or C, relative to A, shows a coherent pattern including:
+1. at least 50% fewer exact repeats;
+2. materially fewer zero-information selections;
+3. at least 1 median bit lower final log2(H) or equivalent information advantage;
+4. more useful controlled contrasts;
+5. no meaningful sealed-prediction regression.
+Prefer consistency across worlds over one spectacular outlier.
+Do not require conventional statistical significance for this small screening pilot.
+Report exact paired distributions so a later confirmatory study can be powered honestly.
+Particularly important comparison
+Distinguish:
+B > A
+from:
+C > B
+If B alone fixes most of the collapse, the problem was basic inquiry bookkeeping.
+If C adds substantially beyond B, explicit representation of available controlled comparisons appears useful.
+If neither helps, do not scale this intervention.
+Possible interpretations
+Pattern 1
+B strongly improves over A and C adds little.
+Interpretation:
+The main failure was maintaining what had already been tested/resolved, not lack of contrast structure.
+
+Pattern 2
+C clearly improves beyond both A and B.
+Interpretation:
+Grounded inquiry state plus explicit structural comparison opportunities helps the model continue productive experimentation.
+
+Pattern 3
+B/C reduce repeats but do not improve information.
+Interpretation:
+Repetition was a symptom, not the entire bottleneck.
+
+Pattern 4
+No coherent improvement.
+Interpretation:
+Inquiry-state representation does not explain the observed active-exploration collapse under this pilot.
+
+Stop rather than scaling automatically.
+Raw-first
+Freeze:
+- method;
+- 16 worlds;
+- sealed probes;
+- probe catalogues;
+- A/B/C prompts;
+- bookkeeping representation;
+- contrast-frontier algorithm;
+- evaluator;
+- scale-up criteria.
+Then run all calls.
+Raw-freeze before scoring.
+Zero-inference replay.
+Preserve prior branches.
+No training.
+Completion handoff
+Return:
+- branch;
+- exact base SHA;
+- Method Freeze;
+- World/Data Freeze;
+- raw pre-score freeze;
+- publication SHA;
+- total model calls and wall time.
+For A/B/C report:
+- exact repeats;
+- zero-information probes;
+- unique probes;
+- information bits;
+- final H;
+- learning curves at 1/2/3/4/6;
+- useful controlled contrasts;
+- sealed prediction results;
+- selected-probe rank/regret.
+Then answer:
+1. Did explicit bookkeeping stop repeated resolved experiments?
+2. Did fewer repeats actually produce more information?
+3. Did exposing structural contrast opportunities add value beyond bookkeeping?
+4. Did B/C preserve the strong first 2–4 probe behavior seen previously?
+5. Was the collapse caused mainly by inquiry-state management?
+6. Is there enough coherent evidence to justify a larger confirmatory study?
+7. If yes, which intervention should scale: B or C?
+8. If no, what specifically remains unexplained?
+Then STOP.
+Do not train.
+Do not launch the larger study automatically.
+The sole purpose is:
+Determine cheaply whether active exploration failed because the model lost track of what had already been tested and what controlled comparisons remained available.
