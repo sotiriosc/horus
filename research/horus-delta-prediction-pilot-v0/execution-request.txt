@@ -1,0 +1,515 @@
+Continue Horus from the verified publication:
+
+e3aefc6ea33395f7b8fd6dd0d57f7917d774c4ca
+
+Create a small diagnostic pilot:
+
+research/horus-delta-prediction-pilot-v0
+
+Do not modify or reinterpret prior studies.
+
+Relevant result:
+
+Horus Inquiry State Confirmatory v0
+classification: NEITHER_INTERVENTION_CONFIRMED
+
+Observed B vs A behavior was directionally better on:
+- repeats
+- zero-information probes
+- uncertainty area
+- sealed bit accuracy
+
+but the preregistered confirmatory gate did not pass.
+
+The open-inquiry O arm also failed to improve over B.
+
+We now test a new hypothesis.
+
+# New hypothesis
+
+The previous studies may have placed Triangulation too early.
+
+We asked the model to use Time / Relation / Direction while deciding what experiment to run.
+
+A different possibility is:
+
+1. first let reality provide observations;
+2. compare observations;
+3. identify a controlled delta;
+4. infer a provisional relation from that delta;
+5. use that relation to predict an unobserved case;
+6. choose an experiment specifically because its outcome can support or contradict that prediction.
+
+So the proposed loop is:
+
+authenticated observations
+        ↓
+compare
+        ↓
+observed delta
+        ↓
+provisional relation
+        ↓
+prediction about unknown
+        ↓
+discriminating experiment
+        ↓
+reality
+        ↓
+support / contradiction
+        ↓
+repeat
+
+This pilot tests whether that organization improves inquiry.
+
+It does NOT assume the hypothesis is correct.
+
+# Keep it small
+
+Use:
+
+- 16 fresh matched worlds
+- 6 discovery probes per arm
+- 2 shared sealed prediction probes per world
+
+No training.
+
+No architecture integration.
+
+No automatic follow-up.
+
+Target runtime should remain roughly comparable to the earlier 16-world pilot, not another all-day campaign.
+
+# Incumbent
+
+Use the exact same established model stack:
+
+Qwen/Qwen3-14B
+revision:
+231c69a380487f6c0e52d02dcf0d5456d1918201
+
+adapter SHA256:
+ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01
+
+Keep base and adapter frozen.
+
+# Fresh worlds
+
+Use fresh deterministic reset machines from the compatible causal family.
+
+Do not reuse previous scientific worlds.
+
+Each admitted world should prospectively contain enough structure for at least some of the following to matter:
+
+- direct effects
+- conditional/modifier effects
+- order effects
+- repetition/state effects
+- short temporal delay
+
+Do not select worlds based on model performance.
+
+# Legal probe interface
+
+Reuse the constrained opaque legal-ID action interface.
+
+Reserved sealed probes must be absent from discovery choices.
+
+Illegal selection must be impossible by construction.
+
+# Arms
+
+Use three matched arms.
+
+## Arm B — Grounded bookkeeping baseline
+
+Use the grounded bookkeeping intervention from the previous studies.
+
+Model sees:
+
+- authenticated executed probes
+- authenticated outcomes
+- tested probe IDs
+- known legal untried probe IDs
+- remaining budget
+- deterministic reset fact
+
+No model hypotheses are carried forward.
+
+Generic instruction:
+
+Choose the next legal experiment that will provide useful evidence.
+
+This is the baseline.
+
+---
+
+## Arm D — Delta → Relation → Prediction
+
+Start from B.
+
+Before each experiment after the first probe, run one analysis call.
+
+The model must select actual prior observations to compare.
+
+Require structured output:
+
+{
+  "evidence_A": "<executed probe id>",
+  "evidence_B": "<executed probe id or NONE>",
+  "observed_input_delta": "...",
+  "observed_output_delta": "...",
+  "provisional_relation": "...",
+  "prediction": {
+    "untested_probe_id": "<legal untried probe id>",
+    "predicted_difference": "..."
+  },
+  "why_this_test_matters": "..."
+}
+
+Rules:
+
+- evidence_A/B must refer only to authenticated executed observations;
+- if only one observation exists, B may be NONE;
+- the relation is explicitly provisional;
+- the prediction must concern an unexecuted legal probe;
+- the prediction is NOT truth;
+- do not score eloquence;
+- do not carry arbitrary prose forward.
+
+Then perform a second model call that sees:
+
+- authenticated ledger
+- grounded bookkeeping
+- the fresh D analysis
+- legal probe catalogue
+
+and selects one legal probe ID.
+
+The model is free not to choose its own proposed test.
+
+The executed action is always determined by the constrained legal selector.
+
+---
+
+## Arm T — Delta → Triangulate → Prediction
+
+Start from D.
+
+The difference is where Triangulation is applied.
+
+Do NOT ask Time / Relation / Direction to choose broadly among all experiments.
+
+Apply it specifically to the evidence-derived relation and its proposed extrapolation.
+
+Require:
+
+{
+  "evidence_A": "...",
+  "evidence_B": "...",
+
+  "observed_delta": {
+    "input_or_context": "...",
+    "outcome": "..."
+  },
+
+  "time": {
+    "what_temporal_difference_is_supported": "...",
+    "what_temporal_part_remains_unknown": "..."
+  },
+
+  "relation": {
+    "what_changed_with_what": "...",
+    "candidate_relation": "..."
+  },
+
+  "direction": {
+    "which unknown distinction should be resolved next": "..."
+  },
+
+  "prediction": {
+    "untested_probe_id": "...",
+    "expected_outcome_or_delta": "..."
+  },
+
+  "alternative_prediction": "...",
+
+  "what_result_would_separate_them": "..."
+}
+
+Then use the same second-stage legal probe selector as D.
+
+The T analysis may guide selection but cannot execute anything itself.
+
+# Important conceptual boundary
+
+Triangulation here is not:
+
+"search the world using three abstract axes."
+
+It is:
+
+"given a real observed difference, use Time / Relation / Direction to determine what that difference predicts somewhere we have not looked yet."
+
+This is the placement being tested.
+
+# What persists
+
+Persist only:
+
+AUTHENTICATED REALITY
+- executed probes
+- observed traces
+
+and deterministic bookkeeping:
+- tested IDs
+- known legal untried IDs
+- remaining budget
+
+Do NOT automatically persist previous model explanations.
+
+However, preserve model predictions externally for later scoring.
+
+At the next step, the model may reconstruct a new relation from all authenticated evidence.
+
+# Prediction receipts
+
+Every D/T analysis prediction must be recorded as a non-authoritative prediction object containing:
+
+- world
+- arm
+- decision index
+- evidence references
+- predicted probe
+- predicted outcome/delta
+- timestamp/sequence
+- model identity
+
+When the predicted probe is eventually executed, independently mark the prediction:
+
+- supported
+- contradicted
+- partially matched
+- never tested
+
+The model does not perform this scoring.
+
+# Core scientific question
+
+Does grounding inquiry in:
+
+observed difference → relation → prediction → test
+
+produce better experiment choices than bookkeeping alone?
+
+And separately:
+
+Does Time / Relation / Direction improve that operation when applied at the relation-to-prediction stage?
+
+# Evaluator metrics
+
+For B/D/T measure after probes:
+
+1, 2, 3, 4, 6
+
+Report:
+
+- exact repeats
+- zero-information probes
+- cumulative information
+- median log2(H)
+- useful controlled contrasts
+- unique probes
+- selected-probe oracle rank/regret
+- sealed prediction bit/exact accuracy
+
+For D/T additionally report:
+
+- valid evidence-linked comparisons
+- predictions generated
+- predictions eventually tested
+- prediction accuracy
+- contradicted predictions
+- predictions that discriminated between two different outcomes
+- fraction of selected experiments that actually tested the current prediction
+- information gained when testing a prediction
+- information gained when ignoring the prediction
+
+Do not expose evaluator values to the model.
+
+# Critical test of the idea
+
+We specifically want to know whether the model can move:
+
+KNOWN:
+B produced X
+
+KNOWN:
+A→B produced not-X
+
+to:
+
+SUPPORTED DELTA:
+adding / ordering A changed B's observed effect
+
+to:
+
+UNKNOWN PREDICTION:
+what should B→A do?
+
+and choose B→A because different explanations predict different outcomes.
+
+That is the target pattern.
+
+Do not hard-code that example into scientific prompts.
+
+Use only synthetic qualification fixtures before freeze.
+
+# No complete hypothesis space
+
+The finite evaluator H remains hidden.
+
+The model must not see:
+
+- all candidate programs
+- all possible explanations
+- oracle best probe
+- information gain
+- remaining true hypotheses
+
+The model generates its extrapolation from observed deltas.
+
+This is important for eventual open-world use.
+
+# Do not force closure
+
+Allow analyses to return:
+
+INSUFFICIENT_DELTA
+
+when the currently observed evidence does not justify a meaningful relation/prediction.
+
+Do not penalize this automatically.
+
+Track how often it occurs and whether it is used appropriately.
+
+The model should not invent a relation merely because the schema asks for one.
+
+# Pilot screening criteria
+
+This is exploratory screening, not a competence claim.
+
+Freeze scale-up criteria before inference.
+
+Recommend a larger study only if D or T shows a coherent advantage over B such as:
+
+1. materially more information per probe;
+2. lower final uncertainty;
+3. more useful controlled contrasts;
+4. prediction-linked probes outperform non-prediction probes;
+5. no meaningful sealed-prediction regression;
+6. fewer or no additional zero-information probes.
+
+For T over D, require an actual additional benefit.
+
+Do not scale T merely because it contains the preferred framework.
+
+If D works and T does not, prefer D.
+
+If T adds value, report exactly where.
+
+If neither helps, stop.
+
+# Especially important interpretations
+
+Pattern 1:
+D > B, T ≈ D
+
+Interpretation:
+The important operation is evidence comparison → prediction.
+Explicit Triangulation adds no established benefit.
+
+Pattern 2:
+T > D > B
+
+Interpretation:
+Triangulation appears useful when applied to the relation/prediction stage rather than broad experiment selection.
+
+Pattern 3:
+D/T generate plausible relations but information does not improve
+
+Interpretation:
+The model can narrate causal hypotheses but does not use them effectively to acquire evidence.
+
+Pattern 4:
+Predictions are frequently contradicted and later experiments adapt
+
+Interpretation:
+Potentially useful falsification behavior; quantify it, do not romanticize it.
+
+Pattern 5:
+Neither D nor T helps
+
+Interpretation:
+This placement hypothesis is unsupported.
+
+STOP.
+
+# Raw-first
+
+Freeze:
+
+- method
+- worlds
+- prompts
+- legal catalogues
+- sealed probes
+- schemas
+- scoring
+- screening criteria
+
+before scientific inference.
+
+Then:
+
+- execute complete population
+- freeze raw evidence
+- score afterward
+- zero-inference replay
+- authentication audit
+- leakage/oracle audit
+- preservation audit
+- publish
+
+No training.
+
+No retries for bad reasoning.
+
+No follow-up automatically.
+
+# Completion questions
+
+Answer:
+
+1. Did comparing actual observations before selecting the next experiment improve inquiry?
+2. Did the model identify meaningful deltas rather than inventing unsupported relations?
+3. Did evidence-grounded relations produce testable predictions?
+4. Did experiments chosen to test predictions provide more information?
+5. Did contradictions lead to different subsequent predictions/experiments?
+6. Did D outperform bookkeeping B?
+7. Did applying Time / Relation / Direction at the prediction stage improve over D?
+8. Did either method improve sealed prediction?
+9. Does this mechanism work without access to a complete hypothesis space?
+10. Which piece, if any, deserves a larger confirmatory test?
+
+Then STOP.
+
+The sole purpose is:
+
+Test whether the missing inquiry operation is not "know everything left to try," but instead:
+
+compare what reality already showed,
+identify the delta,
+form a provisional relation,
+predict something not yet observed,
+and ask reality to test that prediction.

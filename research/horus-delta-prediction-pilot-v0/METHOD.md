@@ -1,0 +1,47 @@
+# Horus Delta Prediction Pilot v0
+
+This separate diagnostic pilot starts from verified publication e3aefc6ea33395f7b8fd6dd0d57f7917d774c4ca. The preceding NEITHER_INTERVENTION_CONFIRMED result and every earlier branch remain unchanged. The attached execution request and prospective-registration.json govern the study. No training, architecture integration, merge, promotion or automatic follow-up.
+
+## Population and call order
+
+Sixteen fresh matched deterministic reset machines receive B/D/T, six discovery probes each, and two shared sealed predictions: 288 legal choices and96 sealed predictions. D/T each make a fresh analysis before decisions2–6, adding160 calls. Total544 scientific responses. The first probe has identical bookkeeping-only messages in all arms. World and arm order are fixed prospectively. Scientific worlds are selected only after committing generator/admission rules and seeds; no model output selects a world.
+
+The compatible656-root family and independent ordered product evaluator from the earlier pilot are unchanged. Sampling requires direct, interaction, delay/latch and repetition roots; admission verifies direct/modifier/temporal distinctions, no prior scientific/engineering graph overlap, and offline six-probe identifiability. The complete evaluator H is not conditioned on admission strata. Two seeded length-three query patterns are reserved and excluded from all82 discovery IDs; no discovery sequence can contain a reserved query as a prefix. Shared catalogues and sealed probes are never replaced after inference. Repeats remain legal.
+
+## Model-visible intervention
+
+B receives the full authenticated experiment ledger, observed traces, tested/untried known legal IDs, remaining budget, deterministic-reset fact and a nonexhaustive-catalogue scope statement. D freshly compares cited executed observations, describes a provisional delta/relation, and forecasts a legal unexecuted probe. T applies Time/Relation/Direction specifically to that relation and extrapolation and supplies a distinct alternative trace. Neither scientific prompt contains the user's illustrative action-order example.
+
+The current fresh analysis enters its own separate constrained legal-ID selector, explicitly marked unverified. It cannot execute an action; the model is free to ignore its proposed test. Prior analyses, predictions, confidence, receipt outcomes and hypotheses never enter subsequent contexts. Every next analysis reconstructs from the authenticated ledger again. Sealed prediction messages are identical across arms and omit analyses and extra bookkeeping.
+
+## Syntax-only analysis qualification
+
+The first synthetic qualification exposed malformed direction/trace dimensions; its six completed synthetic outputs are preserved privately and their hash/failure is public. No scientific data were used. A public-only autoregressive grammar now constrains JSON fields, executed evidence references, legal untested target IDs and trace dimensions. It never receives a hidden program, hypothetical outcome, H, utility, recommended action or best probe. The model chooses every referenced observation, target, copied endpoint claim, comparison label, prose value and predicted bit. Prose permits up to12 safe ASCII tokens/120 characters per field. Maximum output512 tokens. T alternatives must differ in at least one bit; this is a syntax/consistency requirement, not an oracle forecast.
+
+The model freely selects PREDICTION or INSUFFICIENT_DELTA. NONE is allowed for the second evidence reference when only one distinct executed probe exists, including repeated identical observations. Abstention is valid and never counted as incorrect prediction. The grammar does not force a relation.64 random complete token paths passed, including both status branches; the model then passed15 synthetic interface calls with nonabstaining D and T examples. Complete responses are never retried for poor reasoning. Any unexpected transport/language violation stops for review with all raw evidence preserved.
+
+## Non-authoritative prediction receipts
+
+After each D/T analysis response and before its selector, the collector signs a prediction receipt with world, arm, decision, source-response sequence, model/base/adapter identity, analysis hash, cited evidence, proposed trace and T alternative when present. This authenticates who predicted what and when, not its truth. Correctness remains null throughout collection. INSUFFICIENT_DELTA receipts have no prediction. All previous receipt content remains external to the model's future context.
+
+After complete raw freeze, only actual later execution of the exact proposed probe ID scores a forecast. Full bit agreement is supported, no agreement is contradicted, and intermediate agreement is partially matched. Any-bit contradiction includes partial matches and is also counted. Never-tested proposals receive no correctness credit. T discrimination requires the actual complete trace to match exactly one distinct forecast. Matching neither is never forced into a winner. A prediction about an unexecuted ID can still be uninformative; the independent information metric detects that without feeding it back.
+
+Evidence-linked comparison credit requires distinct executed references, accurate copied endpoints and a correct public sequence-relation label. A controlled observed endpoint delta additionally requires a one-step extension or adjacent swap plus changed endpoints. This does not establish the causal prose as true. Insufficient-delta use is reported with and without available simple controlled endpoint differences; availability alone does not make abstention wrong. Post-contradiction changes in next selected probes and next prediction targets/traces are counted descriptively, not credited as causal learning.
+
+## Frozen screening
+
+D-B and T-B each require the full registration conjunction: at least0.25 mean information bits/probe advantage, at least1 median paired final bit, wins in at least10/16 worlds, at least0.5 additional useful contrasts/world, no additional zero-information probes, sealed exact regression at most one endpoint and bit regression at most2 percentage points, at least16 prediction-testing choices across8 worlds, at least0.25 bits advantage over matched B choices on those steps, at least90% valid analyses, at least12 valid evidence-linked comparisons, and integrity. Valid abstentions count as valid analyses; mechanism coverage is needed to justify scaling but abstention is not automatically wrong.
+
+The prediction-link benchmark uses B choices at the same world/step. Within-arm testing versus ignoring a valid prediction is reported separately, excluding first probes and distinguishing abstentions/no prediction. These selected-case comparisons do not establish causal mediation. A missing group stays unmeasured; the model is not forced to ignore a proposal to create a comparator.
+
+T-D additionally requires at least1/12 mean bits/probe, at least0.5 median paired bit, gains on10/16 worlds, at least0.25 more useful contrasts/world, no extra zero-information, the same sealed-retention bounds, and integrity. Recommend T only when T-B and T-D pass; otherwise recommend D if D-B passes; otherwise NO_SCALE_UP. No significance requirement or competence claim is invented for this small screen. Publish every paired world difference and curves1/2/3/4/6.
+
+## Runtime, replay and publication
+
+The exact frozen base is Qwen/Qwen3-14B@231c69a380487f6c0e52d02dcf0d5456d1918201 with M1 adapter ba679e10cac31b5b17c8589c0740d74ac98c2db1882d7edd39419cb9110a0b01. The inherited HF/NF4-double-quant/BF16/SDPA stack uses greedy decoding, seed20260930, batch one, disabled thinking, fresh cache and6144 context. No truncation. All parameters remain CUDA-resident and frozen. Independent disk/package hashes and loaded tensor fingerprints verify identity. The opaque-ID choice trie and sealed-prediction product grammar are unchanged. New analysis constraints affect only public schema, not predicted truth.
+
+Freeze method source, schemas, prompts, decoder, evaluator, gates, dependencies and worlds before scientific calls. All requests, attempts, durable responses, proposals and executed traces are HMAC-authenticated. Resume only an incomplete technical request with identical frozen inputs/settings and at most three attempts; never regenerate a durable complete response. A resource watchdog runs throughout and a separate operational monitor checks every30 minutes without reading early scientific scores.
+
+Complete all544 responses, commit the raw manifest, then score. Reconstruct all prompts, constraints, receipts and execution with zero inference. Require two byte-identical scoring outputs, identity and preservation checks, oracle/leakage boundaries and full reachable-history publication audit. Keep private worlds, keys, signed raw streams and raw model prose private. Push only this branch and verify its exact remote SHA. Answer all ten requested completion questions, then STOP.
+
+D/T versus B includes extra inference; T versus D includes different prompt/output structure and explicit alternative predictions. Finite fixed-action machines do not establish unrestricted open-world capability. A correct forecast does not prove its causal explanation. Sealed retention has only32 endpoints/arm and is not powered noninferiority. No favorable metric can replace a failed gate.
