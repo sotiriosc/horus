@@ -88,7 +88,7 @@ def audit(raw_commit):
  assert visited==set(records),'Unexpected/unaccounted authenticated records'
  assert response_count==544 and choices==288 and predictions==96 and analyses==160
  assert sum(k=='MODEL_RESPONSE' for k,_ in records)==544
- return raw,worlds,records,dict(receipt_authentication=True,byte_identical_durable_execution_replay=True,full_ledger_and_prompt_reconstruction=True,rendered_template_and_generated_tokens=True,legal_ID_support=True,prediction_shape_language=True,no_reserved_probe_execution=True,bookkeeping_and_frontier_reconstructed=True,oracle_boundary=True,complete_population=True,new_inference_calls=0,technical_interrupted_attempts=interrupted,model_responses=544)
+ return raw,worlds,records,dict(receipt_authentication=True,byte_identical_durable_execution_replay=True,full_ledger_and_prompt_reconstruction=True,rendered_template_and_generated_tokens=True,legal_ID_support=True,prediction_shape_language=True,no_reserved_probe_execution=True,evidence_analysis_and_prediction_receipts_reconstructed=True,oracle_boundary=True,complete_population=True,new_inference_calls=0,technical_interrupted_attempts=interrupted,model_responses=544)
 
 def summarize(rows,preds):
  curves={}

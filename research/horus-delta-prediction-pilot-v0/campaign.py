@@ -1,4 +1,4 @@
-"""Raw-first six-probe matched A/B/C collection; no scientific scores."""
+"""Raw-first six-probe matched B/D/T collection; no scientific scores."""
 import argparse,os,subprocess,sys,time
 from common import *
 from machines import outcomes,reset_observation
@@ -84,6 +84,6 @@ def main(world_sha):
  try:collect(worlds,stream,worker,auth)
  finally:worker.close()
  save(P/'raw-freeze.json',dict(status='RAW_COMPLETE_UNSCORED',method_freeze_sha=freeze['method_freeze_sha'],world_freeze_sha=world_sha,private_worlds_sha256=filehash(private/'worlds.jsonl'),private_raw_sha256=filehash(stream.path),collection_started_utc=started['start_utc'],collection_finished_utc=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),collection_wall_seconds=round(time.time()-started['start_unix'],3),authenticated_records=len(stream.records),model_responses=sum(e['kind']=='MODEL_RESPONSE' for e in stream.records),correctness_scored=False,contribution_scored=False))
- print('All544 complete; raw manifest must be committed before scoring.',flush=True)
+ print('All 544 complete; raw manifest must be committed before scoring.',flush=True)
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--world-freeze',required=True);args=ap.parse_args();main(args.world_freeze)
