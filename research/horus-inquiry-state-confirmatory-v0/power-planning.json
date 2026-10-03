@@ -1,0 +1,54 @@
+{
+  "limitations": [
+    "Empirical pilot resampling is optimistic about population generalization; this is planning, not a new significance result.",
+    "Assume no additional information and two zero-information selections in either arm on probes7/8; no invented extrapolation benefit.",
+    "Prediction exact rate and bit effects are carried from two to three queries only as rates; additional queries are not treated as independent worlds.",
+    "Planning bit interval is a normal approximation; the frozen outcome gate uses a paired world bootstrap interval.",
+    "No O pilot exists. No claimed O power; O comparison can be underpowered.",
+    "Effects shrunk by50% and75% for sensitivity; no threshold chosen from scientific confirmatory outcomes."
+  ],
+  "pilot_median_paired_information_bits": 6.338166662962173,
+  "pilot_numeric_source_sha256": "1abcb018d5a64de7555553fe2d0bd0e43bd0b2c687ce6f018086f1bbe8b5be7b",
+  "pilot_publication": "dd681039bdd6e2c20837e1f5ac6cec7957ca35b3",
+  "pilot_worlds": 16,
+  "planned_worlds": 48,
+  "resamples": 20000,
+  "scenarios": {
+    "0.25": {
+      "component_pass_frequency": {
+        "area": 0.0,
+        "information": 0.9493,
+        "prediction_bit_noninferiority_normal_approx": 1.0,
+        "prediction_exact_nonnegative": 1.0,
+        "repeats": 0.0,
+        "zero": 0.0
+      },
+      "joint_pass_frequency": 0.0
+    },
+    "0.5": {
+      "component_pass_frequency": {
+        "area": 5e-05,
+        "information": 0.99525,
+        "prediction_bit_noninferiority_normal_approx": 0.99745,
+        "prediction_exact_nonnegative": 1.0,
+        "repeats": 1.0,
+        "zero": 0.0
+      },
+      "joint_pass_frequency": 0.0
+    },
+    "1.0": {
+      "component_pass_frequency": {
+        "area": 1.0,
+        "information": 0.99975,
+        "prediction_bit_noninferiority_normal_approx": 0.9433,
+        "prediction_exact_nonnegative": 1.0,
+        "repeats": 1.0,
+        "zero": 0.98785
+      },
+      "joint_pass_frequency": 0.93275
+    }
+  },
+  "scientific_model_calls": 0,
+  "seed": 100305,
+  "status": "PASS"
+}

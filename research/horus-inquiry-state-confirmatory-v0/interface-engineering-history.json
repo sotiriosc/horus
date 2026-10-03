@@ -1,0 +1,10 @@
+{
+  "scientific_model_calls": 0,
+  "round1": {
+    "synthetic_calls": 3,
+    "status": "SCHEMA_QUALIFICATION_FAILED",
+    "reason": "Model used scalar strings and a singleton question object instead of singleton arrays.",
+    "responses_sha256": "5b7cdc5cdf66d88ef01b4fadbfbdc73784962d83ece9aa2dbc2962211c6a9d4b"
+  },
+  "prospective_repair": "Canonical parser accepts empty/scalar strings and singleton question objects as their unambiguous list equivalents; retains exact raw output, performs no semantic repair, and caps each prose string at512 characters inside the384-token generation budget."
+}
